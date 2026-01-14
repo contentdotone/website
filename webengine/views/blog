@@ -1,0 +1,159 @@
+<main class="blog-index">
+  <section class="blog-hero">
+    <div class="container">
+      <div class="blog-hero__content">
+        <p class="blog-hero__eyebrow">Content.One Journal</p>
+        <h1 class="blog-hero__title">Latest perspectives on content, AI, and delivery.</h1>
+        <p class="blog-hero__subtitle">Fresh thinking from the teams building modern digital experiences.</p>
+      </div>
+    </div> 
+  </section>
+
+  <section class="blog-grid-section">
+    <div class="container">
+      <div class="blog-grid">
+        {{each articles as article}}
+        <article class="blog-card">
+          <a href="{{article.getURL()}}" class="blog-card__link">
+            {{if {article.main_image} }}
+            <div class="blog-card__media">
+              <img src="{{article.main_image.getImage(800,520,crop)}}" alt="{{article.title}} cover image">
+            </div>
+            {{/if}} 
+            <div class="blog-card__body">
+              <div class="blog-card__meta">
+                {{if {article.publish_date} }}
+                <span>{{article.publish_date.date(Y-m-d)}}</span>
+                {{/if}}
+                {{if {article.authors} }}
+                <span>
+                  {{each {article.authors} as author}}
+                  {{author.name}}{{author._arraycomma}}
+                  {{/each}}
+                </span>
+                {{/if}}
+              </div>
+              <h2 class="blog-card__title">{{article.title}}</h2>
+              {{if {article.body} }}
+              <p class="blog-card__excerpt">{{article.body.striptags().subwords(28)}}...</p>
+              {{/if}}
+              <span class="blog-card__cta">Read article</span>
+            </div>
+          </a>
+        </article>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+  @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap");
+
+  .blog-index {
+    --ink: #111827;
+    --muted: #4b5563;
+    --card: #ffffff;
+    --brand-dark: #0f172a;
+    --brand-mid: #3f51b5;
+    --brand-bright: #6f7bf7;
+    font-family: "Satoshi", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.06) 0%, rgba(63, 81, 181, 0.08) 50%, rgba(111, 123, 247, 0.05) 100%);
+  }
+
+  .blog-hero {
+    padding: 4.5rem 0 3rem;
+  }
+
+  .blog-hero__content {
+    max-width: 720px;
+  }
+
+  .blog-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .blog-hero__title {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    margin: 1rem 0;
+  }
+
+  .blog-hero__subtitle {
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .blog-grid-section {
+    padding: 0 0 4rem;
+  }
+
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .blog-card {
+    background: var(--card);
+    border-radius: 4px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+  }
+
+  .blog-card__link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .blog-card__media img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .blog-card__body {
+    padding: 1.6rem;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .blog-card__meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+
+  .blog-card__title {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .blog-card__excerpt {
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .blog-card__cta {
+    font-weight: 600;
+    color: var(--brand-mid);
+  }
+
+  @media (max-width: 640px) {
+    .blog-hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+  }
+</style>

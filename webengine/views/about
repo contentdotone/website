@@ -239,7 +239,7 @@
                   <div class="row g-4">
                      {{each leadership as leader order by leader.sort_order ASC}}
                      <div class="col-md-6 col-lg-3">
-                        <div class="card border-0 shadow-sm h-100 leadership-card" data-bs-toggle="tooltip"
+                        <a href="{{leader.getURL()}}" class="card border-0 shadow-sm h-100 leadership-card" data-bs-toggle="tooltip"
                            data-bs-placement="top" title="{{leader.bio.striptags()}}">
                            <div class="rounded-top overflow-hidden">
                               <img src="{{leader.image.getImage()}}" alt="{{leader.name}} headshot"
@@ -249,7 +249,7 @@
                               <h3 class="h5 fw-semibold mb-1">{{leader.name}}</h3>
                               <p class="text-primary small mb-0">{{leader.title}}</p>
                            </div>
-                        </div>
+                        </a>
                      </div>
                      {{/each}}
                   </div>
