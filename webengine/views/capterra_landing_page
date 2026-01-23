@@ -8,13 +8,12 @@
           <p class="lead text-white-75 mb-4">Content.One pairs visual authoring, agentic AI, granular workflows, and personalization in a single platform. Launch campaigns in days, not months, without adding developer backlog.</p>
           <div class="d-flex flex-wrap gap-3">
             <a href="#capterra-demo-form" class="btn btn-light btn-lg text-capterra">Book a tailored tour</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore the platform</a>
           </div> 
         </div>
-        <div class="col-lg-6">
-          <a href="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg" data-capterra-lightbox="hero" aria-label="Expand Content.One drag &amp; drop preview">
-            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag &amp; drop canvas" class="w-100 h-100 object-fit-cover">
-          </a>
+        <div class="col-lg-6 ">
+          <div class="bg-white m-3 rounded-3 py-2">
+          {{include /components/forms/zoho-form.html}}
+          </div>
         </div>
       </div> 
     </div>

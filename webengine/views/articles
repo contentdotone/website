@@ -4,7 +4,7 @@
     <div class="container">
       <div class="article-hero__inner"> 
         <div class="article-hero__content">
-          <div class="article-hero__eyebrow">Journal</div>
+          <div class="article-hero__eyebrow">{{categories.filter({this.category}).name}}</div>
           <h1 class="article-hero__title">{{this.title}}</h1>
           <div class="article-hero__meta">
             {{if {this.publish_date} }}
@@ -27,7 +27,7 @@
                 {{/if}}
               </div>
             </a>
-            {{/each}}
+            {{/each}} 
           </div>
         </div>
         {{if {this.main_image} }}
@@ -50,7 +50,7 @@
             <h2>Meet the Author{{if preg_match('/,/',{this.authors})}}s{{/if}}</h2>
             
               {{each {this.authors} as author}}
-              <div class="article-author-card">
+              <div class="article-author-card mb-3">
                 <a class="article-author-image" href="{{author.getURL()}}">
                   {{if {author.image} }}
                   <img src="{{author.image.getImage(200,220,crop)}}" alt="{{author.name}} headshot">
@@ -99,7 +99,7 @@
             </div>
           </div>
 
-           <div class="article-panel">
+           <div class="article-panel article-panel--sticky">
             <h2>Partner with Content.One</h2>
             <div class="article-panel filled">
               <p>Let's work together to solve for {{this.title}} and improve your organizations digital ROI</p>
@@ -126,7 +126,7 @@
     --accent: #4255bd;
     --accent-strong: #1f2b6b;
     --card: #ffffff;
-    --brand-dark: #0b0f1a;
+    --brand-dark: #0b0f1a; 
     --brand-mid: #4255bd;
     --brand-bright: #6f7bf7;
     font-family: "Satoshi", "Segoe UI", sans-serif;
@@ -332,7 +332,8 @@
   }
 
   .article-aside {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: 1.5rem;
     align-self: start;
   }
@@ -340,6 +341,13 @@
   .article-panel {
     
     padding: 1.6rem 0 0 0;
+  }
+
+  .article-panel--sticky {
+    position: sticky;
+    top: 2rem;
+    align-self: start;
+    height: fit-content;
   }
 
   .article-panel.filled {
@@ -479,6 +487,10 @@
     .article-hero__media {
       max-width: 280px;
       justify-self: start;
+    }
+
+    .article-panel--sticky {
+      position: static;
     }
   }
 

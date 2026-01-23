@@ -5,10 +5,23 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    position: relative;
     min-height: 768px;
     @media (max-width: 768px) {
         min-height: 500px;
     }
+} 
+
+.hero-agency-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, #121739 0%, #121739 25%, rgba(18, 23, 57, 0) 100%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.hero-agency-content {
+    z-index: 2;
 }
 
 // Hero for IT Homepage

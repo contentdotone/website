@@ -42,13 +42,13 @@
                 "zuid": "11-9680efe6c2-1zp3dq",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T21:08:54Z",
-                "createdAt": "2026-01-12T02:57:29Z"
+                "createdAt": "2026-01-14T00:51:53Z"
             },
             "about": {
                 "zuid": "11-80e197a7b7-g6vb89",
                 "type": "templateset",
                 "updatedAt": "2025-05-21T20:20:18Z",
-                "createdAt": "2025-11-12T23:30:00Z"
+                "createdAt": "2026-01-16T04:36:32Z"
             },
             "/-/block/review_block.html": {
                 "zuid": "11-cecdcbc1d3-px5wrz",
@@ -168,13 +168,13 @@
                 "zuid": "11-90d199fa87-qlhfqb",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-06T12:26:43Z",
-                "createdAt": "2025-12-22T01:38:13Z"
+                "createdAt": "2026-01-16T17:49:52Z"
             },
             "customers": {
                 "zuid": "11-c2d1dbefac-mn7q8n",
                 "type": "templateset",
                 "updatedAt": "2025-10-06T14:39:05Z",
-                "createdAt": "2025-10-23T17:00:30Z"
+                "createdAt": "2026-01-16T17:34:09Z"
             },
             "customer": {
                 "zuid": "11-94b8f4b98c-lrdw00",
@@ -186,25 +186,25 @@
                 "zuid": "11-a885c7f3c6-7t5zvp",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-07T20:16:42Z",
-                "createdAt": "2025-12-16T02:48:33Z"
+                "createdAt": "2026-01-16T17:35:48Z"
             },
             "/components/casestudy/sony.html": {
                 "zuid": "11-82afb7999e-nn45tn",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-10T18:16:30Z",
-                "createdAt": "2025-12-16T02:44:06Z"
+                "createdAt": "2026-01-16T17:35:39Z"
             },
             "/components/casestudy/tsa-odd.html": {
                 "zuid": "11-e6b18590fd-skdhqg",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-10T20:41:53Z",
-                "createdAt": "2025-12-18T04:44:33Z"
+                "createdAt": "2026-01-16T17:53:48Z"
             },
             "/components/casestudy/tsa-federated-franchise.html": {
                 "zuid": "11-dce3a9e389-2lqbsq",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-12T19:27:41Z",
-                "createdAt": "2025-12-16T02:44:07Z"
+                "createdAt": "2026-01-16T17:51:14Z"
             },
             "/components/casestudy/petdesk.html": {
                 "zuid": "11-b4cf9285f4-3x2590",
@@ -216,25 +216,25 @@
                 "zuid": "11-aaaaa08694-q0zmg9",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-21T21:08:59Z",
-                "createdAt": "2025-12-16T02:44:03Z"
+                "createdAt": "2026-01-16T17:35:43Z"
             },
             "/components/casestudy/wattpad.html": {
                 "zuid": "11-e6f5f1f1b9-n7pnzt",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-21T21:53:10Z",
-                "createdAt": "2025-12-16T02:44:16Z"
+                "createdAt": "2026-01-16T17:35:59Z"
             },
             "/components/casestudy/draftkings.html": {
                 "zuid": "11-b28c9cc689-vff28h",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-22T21:57:36Z",
-                "createdAt": "2025-12-16T02:43:55Z"
+                "createdAt": "2026-01-16T17:35:51Z"
             },
             "/components/casestudy/uber.html": {
                 "zuid": "11-a8a5a0b58b-mmt4vn",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-23T00:07:35Z",
-                "createdAt": "2025-12-16T02:44:14Z"
+                "createdAt": "2026-01-16T17:35:57Z"
             },
             "/components/casestudy/side-cta.html": {
                 "zuid": "11-acacd6a6bf-3k9h7p",
@@ -264,7 +264,7 @@
                 "zuid": "11-acd88add98-gpl6qs",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-23T20:18:48Z",
-                "createdAt": "2025-10-24T02:56:15Z"
+                "createdAt": "2026-01-16T17:50:49Z"
             },
             "/page_html/solutions/org-ai-chatbot.html": {
                 "zuid": "11-c4e1e8a6fc-dxww4d",
@@ -378,19 +378,19 @@
                 "zuid": "11-bcb09498bf-xnvgzh",
                 "type": "templateset",
                 "updatedAt": "2025-10-30T15:38:00Z",
-                "createdAt": "2025-12-08T23:08:44Z"
+                "createdAt": "2026-01-16T17:39:23Z"
             },
             "/page_html/industries/cms-for-insurance.html": {
                 "zuid": "11-949de5c894-q3793f",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-30T18:04:47Z",
-                "createdAt": "2025-10-31T14:40:17Z"
+                "createdAt": "2026-01-16T17:34:27Z"
             },
             "/page_html/industries/cms-for-non-profits.html": {
                 "zuid": "11-d2d895afaf-dpr2gk",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-30T19:03:33Z",
-                "createdAt": "2025-10-31T14:40:28Z"
+                "createdAt": "2026-01-16T17:36:54Z"
             },
             "/page_html/features/workflow-automation-and-approvals.html": {
                 "zuid": "11-faceefdbfa-jv54j4",
@@ -408,13 +408,13 @@
                 "zuid": "11-c0e9f3d497-zznr4v",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-30T20:05:38Z",
-                "createdAt": "2025-10-31T14:40:02Z"
+                "createdAt": "2026-01-16T17:34:24Z"
             },
             "/page_html/industries/cms-for-financial-institutions-and-fintech-banks.html": {
                 "zuid": "11-c2ddcebf8c-z8513d",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-30T20:31:57Z",
-                "createdAt": "2025-10-31T14:29:46Z"
+                "createdAt": "2026-01-16T17:34:21Z"
             },
             "/components/ctas/customer-button.html": {
                 "zuid": "11-88df8a978c-590c3c",
@@ -462,7 +462,7 @@
                 "zuid": "11-d496f0e9aa-374w3d",
                 "type": "pageset",
                 "updatedAt": "2025-11-03T20:30:25Z",
-                "createdAt": "2026-01-12T03:00:28Z"
+                "createdAt": "2026-01-12T19:05:05Z"
             },
             "solutions": {
                 "zuid": "11-e8d98fa7e8-s1s7z4",
@@ -534,19 +534,61 @@
                 "zuid": "11-e0ca88aeaf-bw5gk9",
                 "type": "templateset",
                 "updatedAt": "2026-01-09T22:06:12Z",
-                "createdAt": "2026-01-10T00:00:10Z"
+                "createdAt": "2026-01-12T19:04:59Z"
             },
             "blog": {
                 "zuid": "11-f8d5e0bee5-vh0d2w",
                 "type": "templateset",
                 "updatedAt": "2026-01-10T22:20:53Z",
-                "createdAt": "2026-01-12T02:56:17Z"
+                "createdAt": "2026-01-12T19:04:55Z"
             },
             "articles": {
                 "zuid": "11-e0ff84a99c-ncgvf2",
                 "type": "pageset",
                 "updatedAt": "2026-01-10T22:21:18Z",
-                "createdAt": "2026-01-12T02:32:23Z"
+                "createdAt": "2026-01-15T00:29:38Z"
+            },
+            "categories": {
+                "zuid": "11-9693c6e6e6-ksphq9",
+                "type": "pageset",
+                "updatedAt": "2026-01-14T22:55:57Z",
+                "createdAt": "2026-01-14T22:55:57Z"
+            },
+            "landing_pages": {
+                "zuid": "11-dad783f6e6-7b3zj2",
+                "type": "pageset",
+                "updatedAt": "2026-01-18T21:08:08Z",
+                "createdAt": "2026-01-18T21:22:23Z"
+            },
+            "lp": {
+                "zuid": "11-9294fdb2ab-c0bx98",
+                "type": "templateset",
+                "updatedAt": "2026-01-18T21:16:01Z",
+                "createdAt": "2026-01-18T21:16:01Z"
+            },
+            "/page_html/landing_pages/linkedin.html": {
+                "zuid": "11-fc9997fc84-blpxs0",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-18T21:23:39Z",
+                "createdAt": "2026-01-18T21:29:00Z"
+            },
+            "/-/block/mission_driven_success.html": {
+                "zuid": "11-a2bcd8fbd6-b6phqr",
+                "type": "block",
+                "updatedAt": "2026-01-18T21:37:01Z",
+                "createdAt": "2026-01-18T21:43:26Z"
+            },
+            "/-/block/connected_tech_stack_.html": {
+                "zuid": "11-9ac3d7feed-rf1m5x",
+                "type": "block",
+                "updatedAt": "2026-01-18T22:10:17Z",
+                "createdAt": "2026-01-18T22:33:04Z"
+            },
+            "/page_html/industries/cms-for-franchise-chains.html": {
+                "zuid": "11-cee1f493e7-1hbwqf",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-23T17:28:19.000691053Z",
+                "createdAt": "2026-01-23T17:28:19.000682547Z"
             }
         },
         "styles": {

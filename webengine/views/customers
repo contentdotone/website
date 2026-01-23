@@ -8,7 +8,7 @@
           <p class="lead text-white-75 mb-4">Discover how modern organizations launch, scale, and share their missions with Content.One</p>
           <div class="d-inline-flex flex-wrap gap-3 justify-content-center">
             <a class="btn btn-light btn-lg text-primary shadow" href="/contact/">Book an Exploratory Call</a>
-            <a class="btn btn-outline-light btn-lg" href="/solutions/">Explore solutions</a>
+            
           </div>
         </div>
       </div>
