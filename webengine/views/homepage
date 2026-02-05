@@ -2,9 +2,9 @@
 <!-- <div class="pattern-square"></div> -->
 <!--Pageheader end-->
  
-{{include /components/homepage/hero-ai-cool.html}}
+NO HEROS HERE!
 <!-- {{include /components/homepage/home-hero.html}} -->
-
+ 
 {{ block('/-/block/client_logos.html') }}
 
 {{ include /components/features/block_highlight.html }}
