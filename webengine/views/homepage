@@ -4,7 +4,7 @@
  
 {{include /components/homepage/hero-ai-cool.html}}
 <!-- {{include /components/homepage/home-hero.html}} -->
-
+ 
 {{ block('/-/block/client_logos.html') }}
 
 {{ include /components/features/block_highlight.html }}
