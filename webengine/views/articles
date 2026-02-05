@@ -105,7 +105,13 @@
               <p>Let's work together to solve for {{this.title}} and improve your organizations digital ROI</p>
               <a href="/contact-us/" class="btn btn-lg btn-primary">Book a Call</a>
             </div>
+
+            <div class="article-panel filled">
+              {{blocks({this.side_bar_cta})}}
+            </div>
           </div>
+
+
 
           
         </aside>
@@ -113,6 +119,7 @@
     </div>
   </section>
   
+  {{blocks({this.bottom_cta})}}
 </main>
 
 <style>

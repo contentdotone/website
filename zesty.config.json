@@ -18,7 +18,7 @@
                 "zuid": "11-d2b1c58ff3-1dm88s",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T19:29:05Z",
-                "createdAt": "2025-11-10T18:26:55Z"
+                "createdAt": "2026-01-23T18:54:42Z"
             },
             "/assets/theme.css": {
                 "zuid": "11-9ad6dec9d3-9znmtm",
@@ -36,7 +36,7 @@
                 "zuid": "11-c4f9fce9d6-shm8f4",
                 "type": "pageset",
                 "updatedAt": "2025-03-14T19:53:56Z",
-                "createdAt": "2025-10-30T21:01:47Z"
+                "createdAt": "2026-01-23T18:27:00Z"
             },
             "/components/footer.html": {
                 "zuid": "11-9680efe6c2-1zp3dq",
@@ -72,7 +72,7 @@
                 "zuid": "11-a0d6a781d2-nrmlvb",
                 "type": "block",
                 "updatedAt": "2025-05-27T21:00:47Z",
-                "createdAt": "2025-05-27T21:04:20Z"
+                "createdAt": "2026-01-30T19:38:25Z"
             },
             "product_tour": {
                 "zuid": "11-aecfc5f3c0-tgxk51",
@@ -144,7 +144,7 @@
                 "zuid": "11-ccdfe5b99a-cw11dh",
                 "type": "ajax-json",
                 "updatedAt": "2025-09-05T20:37:39Z",
-                "createdAt": "2025-11-14T22:31:42Z"
+                "createdAt": "2026-01-30T19:18:24Z"
             },
             "/components/ctas/email-subscription-form.html": {
                 "zuid": "11-b2c7e88eb3-s3jf4m",
@@ -474,7 +474,7 @@
                 "zuid": "11-f0f5dfc6a1-6cs92r",
                 "type": "ajax-json",
                 "updatedAt": "2025-11-05T20:04:50Z",
-                "createdAt": "2025-11-06T18:46:10Z"
+                "createdAt": "2026-01-18T22:54:43Z"
             },
             "/components/ctas/book-button copy.html": {
                 "zuid": "11-94ec9ca6bb-q99qlb",
@@ -546,7 +546,7 @@
                 "zuid": "11-e0ff84a99c-ncgvf2",
                 "type": "pageset",
                 "updatedAt": "2026-01-10T22:21:18Z",
-                "createdAt": "2026-01-15T00:29:38Z"
+                "createdAt": "2026-01-28T00:03:51Z"
             },
             "categories": {
                 "zuid": "11-9693c6e6e6-ksphq9",
@@ -558,7 +558,7 @@
                 "zuid": "11-dad783f6e6-7b3zj2",
                 "type": "pageset",
                 "updatedAt": "2026-01-18T21:08:08Z",
-                "createdAt": "2026-01-18T21:22:23Z"
+                "createdAt": "2026-01-30T19:22:41Z"
             },
             "lp": {
                 "zuid": "11-9294fdb2ab-c0bx98",
@@ -570,7 +570,7 @@
                 "zuid": "11-fc9997fc84-blpxs0",
                 "type": "ajax-json",
                 "updatedAt": "2026-01-18T21:23:39Z",
-                "createdAt": "2026-01-18T21:29:00Z"
+                "createdAt": "2026-01-21T16:42:36Z"
             },
             "/-/block/mission_driven_success.html": {
                 "zuid": "11-a2bcd8fbd6-b6phqr",
@@ -582,13 +582,31 @@
                 "zuid": "11-9ac3d7feed-rf1m5x",
                 "type": "block",
                 "updatedAt": "2026-01-18T22:10:17Z",
-                "createdAt": "2026-01-18T22:33:04Z"
+                "createdAt": "2026-01-18T22:45:48Z"
             },
             "/page_html/industries/cms-for-franchise-chains.html": {
                 "zuid": "11-cee1f493e7-1hbwqf",
                 "type": "ajax-json",
-                "updatedAt": "2026-01-23T17:28:19.000691053Z",
-                "createdAt": "2026-01-23T17:28:19.000682547Z"
+                "updatedAt": "2026-01-23T17:28:18Z",
+                "createdAt": "2026-01-23T17:29:07Z"
+            },
+            "/-/block/download_side_cta.html": {
+                "zuid": "11-90a6f5c9a7-lrnglf",
+                "type": "block",
+                "updatedAt": "2026-01-27T23:31:21Z",
+                "createdAt": "2026-01-30T19:09:15Z"
+            },
+            "/page_html/landing_pages/kin.html": {
+                "zuid": "11-94819adcf2-v3s5c9",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-30T19:21:43Z",
+                "createdAt": "2026-01-30T19:26:30Z"
+            },
+            "/-/block/download_cta_full.html": {
+                "zuid": "11-92ecf2b19a-z1swtw",
+                "type": "block",
+                "updatedAt": "2026-01-30T19:45:52Z",
+                "createdAt": "2026-01-30T19:45:52Z"
             }
         },
         "styles": {

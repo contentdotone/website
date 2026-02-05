@@ -1,0 +1,39 @@
+<section class="download-cta-full min-vh-100 d-flex align-items-center position-relative overflow-hidden">
+  <div class="position-absolute top-0 start-0 w-100 h-100">
+    <img src="{{this.image.getImage()}}" alt="{{this.title}}" class="w-100 h-100 object-fit-cover" />
+    <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark" style="opacity: 0.6;"></div>
+  </div> 
+
+  <div class="container position-relative text-white py-6">
+    <div class="row align-items-center g-5"> 
+      <div class="col-lg-6">
+        <span class="text-uppercase text-white-50 small d-block mb-3">Download the guide</span>
+        <h1 class="display-5 fw-semibold mb-3">{{this.title}}</h1>
+        <p class="lead text-white-50 mb-4">{{this.description}}</p>
+        <ul class="list-unstyled d-grid gap-3 mb-4">
+          <li class="d-flex gap-3">
+            <i class="bi bi-check-circle-fill text-white fs-4"></i>
+            <span>Actionable frameworks for modern content teams</span>
+          </li>
+          <li class="d-flex gap-3">
+            <i class="bi bi-check-circle-fill text-white fs-4"></i>
+            <span>Benchmarks for performance, governance, and velocity</span>
+          </li>
+          <li class="d-flex gap-3">
+            <i class="bi bi-check-circle-fill text-white fs-4"></i>
+            <span>Templates your team can deploy immediately</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="card border-0 shadow-lg rounded-4">
+          <div class="card-body p-4 p-lg-5 text-dark">
+            <h3 class="h4 mb-3">Get instant access</h3>
+            <p class="text-grey mb-4">Fill out the form and we will send the download link right away.</p>
+            {{include /components/forms/zoho-form.html}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
