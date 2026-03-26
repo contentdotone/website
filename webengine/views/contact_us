@@ -10,7 +10,6 @@
                             <div>{{this.body}}</div>
                         </div>
                       
-                       {{blocks('/-/block/client_logos.html')}}
                     </div>
                 </div>
                 <div class="col-lg-6 col-12 mb-lg-n9">
@@ -23,5 +22,7 @@
             </div>
         </div>
     </section>
+    {{blocks('/-/block/client_logos.html')}}
+
     <!--Pageheader end-->
 </main>

@@ -1,0 +1,1 @@
+bootstrap for css styling, parsley from Zesty.io for templating and dynamic content

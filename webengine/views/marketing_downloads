@@ -1,0 +1,196 @@
+(** Marketing Downloads - Two Column Layout with Zoho Form **)
+
+<section class="py-5 py-lg-6">
+  <div class="container">
+    <div class="row gy-5 align-items-start">
+
+      (** Left Column - Content **)
+      <div class="col-lg-6 col-12">
+        {{if {!this.thumbnail_image} }}
+          <img src="{{this.thumbnail_image.getImage(600)}}" alt="{{this.title}}" class="img-fluid rounded-3 mb-4 w-100" />
+        {{/if}}
+
+        <h1 class="display-6 fw-bold mb-3">{{this.title}}</h1>
+ 
+        {{if {!this.description} }}
+          <p class="lead text-muted mb-4">{{this.description}}</p>
+        {{/if}}
+
+        {{if {!this.download_type} }}
+          <span class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2 mb-4 d-inline-block">
+            <i class="bi bi-tag me-1"></i> {{this.download_type}}
+          </span>
+        {{/if}} 
+
+        {{if {!this.full_description} }}
+          <div class="content mb-4">
+            {{this.full_description}}
+          </div>
+        {{/if}}
+
+        (** Download link shown after form submission **)
+        {{if {!this.download_file} }}
+          <div id="download-section" class="d-none">
+          </div>
+        {{/if}}
+      </div>
+
+      (** Right Column - Zoho Form / Download Button **)
+      <div class="col-lg-6 col-12" style="position: sticky; top: 2rem; align-self: flex-start;">
+        <div class="card border-0 shadow-sm rounded-4 p-4 p-lg-5 bg-light">
+
+          (** Form Section **)
+          <div id="zoho-form-container">
+            <h2 class="h4 fw-bold mb-2">Get Your Free Download</h2>
+            <p class="text-muted mb-4">Fill out the form below to access this resource.</p>
+
+            <div class="container my-4">
+              <div class="row justify-content-center">
+                  <div data-cue="slideInRight" data-show="true"
+                      style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+
+                      <form
+                          action='https://forms.zohopublic.com/zestyio/form/ContentOneDemoForm/formperma/v5yu682DcRoFs5WJHMyNPgq30kitbSqJXuQGEZkwoVw/htmlRecords/submit'
+                          name='form' method='POST'
+                          accept-charset='UTF-8' enctype='multipart/form-data' id='form' class="row needs-validation g-3"
+                          novalidate>
+                          <input type="hidden" name="zf_referrer_name" value="">
+                          <input type="hidden" name="zf_redirect_url" value="">
+                          <input type="hidden" name="zc_gad" value="">
+
+                          <!-- First Name -->
+                          <div class="col-md-6 col-12">
+                              <label for="ScheduleFirstnameInput" class="form-label">
+                                  First Name <span class="text-danger">*</span>
+                              </label>
+                              <input type="text" class="form-control" id="ScheduleFirstnameInput" name="Name_First"
+                                  maxlength="255" fieldType=7 placeholder="First Name" required />
+                              <div class="invalid-feedback">Please enter firstname.</div>
+                          </div>
+
+                          <!-- Last Name -->
+                          <div class="col-md-6 col-12">
+                              <label for="scheduleLastnameInput" class="form-label">
+                                  Last Name <span class="text-danger">*</span>
+                              </label>
+                              <input type="text" class="form-control" id="scheduleLastnameInput" name="Name_Last" maxlength="255"
+                                  fieldType=7 placeholder="Last Name" required />
+                              <div class="invalid-feedback">Please enter lastname.</div>
+                          </div>
+
+                          <!-- Email -->
+                          <div class="col-md-12">
+                              <label for="scheduleEmailInput" class="form-label">
+                                  Email <span class="text-danger">*</span>
+                              </label>
+                              <input type="email" class="form-control" id="scheduleEmailInput" name="Email" checktype="c5"
+                                  value="" maxlength="255" fieldType=9 placeholder="Email" required />
+                              <div class="invalid-feedback">Please enter email.</div>
+                          </div>
+
+                          <!-- Company -->
+                          <div class="col-md-12">
+                              <label for="scheduleCompanyInput" class="form-label">
+                                  Company <span class="text-danger">*</span>
+                              </label>
+                              <input type="text" class="form-control" id="scheduleCompanyInput" name="SingleLine" checktype="c1"
+                                  value="" maxlength="255" fieldType=1 placeholder="Company" required />
+                              <div class="invalid-feedback">Please enter company.</div>
+                          </div>
+
+                          <!-- Message -->
+                          <div class="col-md-12">
+                              <label for="scheduleTextarea" class="form-label">Message</label>
+                              <textarea class="form-control" id="scheduleTextarea" name="MultiLine" checktype="c1"
+                                  maxlength="65535" placeholder="Please tell us about your project. (Optional)" rows="3"></textarea>
+                          </div>
+
+                          <div class="d-grid">
+                              <button onclick="gtag_report_conversion(); linkedin_conversion();" class="btn btn-primary" type="submit">Submit</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          (** Download Button Section - hidden until form submit **)
+          <div id="download-button-section" class="d-none text-center py-5">
+            <i class="bi bi-check-circle-fill text-success" style="font-size: 3rem;"></i>
+            <h2 class="h4 fw-bold mt-3 mb-2">Thank You!</h2>
+            <p class="text-muted mb-4">Your resource is ready to download.</p>
+            <a id="download-now-btn" href="{{this.download_file.getImage()}}" target="_blank" rel="noopener noreferrer"
+               class="btn btn-success btn-lg px-5 py-3 rounded-pill fw-bold shadow" style="font-size: 1.25rem;">
+              <i class="bi bi-download me-2"></i> Download Now
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+      <script>
+        (function () {
+          'use strict';
+
+          var form = document.getElementById('form');
+          if (!form) return;
+
+          form.addEventListener('submit', function (event) {
+            // Bootstrap validation
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+              form.classList.add('was-validated');
+              return;
+            }
+
+            // Prevent default form navigation
+            event.preventDefault();
+            form.classList.add('was-validated');
+
+            // Submit form data via fetch so we stay on page
+            var formData = new FormData(form);
+
+            fetch(form.action, {
+              method: 'POST',
+              body: formData,
+              mode: 'no-cors'
+            }).then(function() {
+              // Hide form, show download button
+              document.getElementById('zoho-form-container').classList.add('d-none');
+              document.getElementById('download-button-section').classList.remove('d-none');
+              // Also show the left-column download section if it exists
+              var ds = document.getElementById('download-section');
+              if (ds) ds.classList.remove('d-none');
+            }).catch(function() {
+              // Even on error (no-cors returns opaque), show download
+              document.getElementById('zoho-form-container').classList.add('d-none');
+              document.getElementById('download-button-section').classList.remove('d-none');
+              var ds = document.getElementById('download-section');
+              if (ds) ds.classList.remove('d-none');
+            });
+          }, false);
+
+          {{if {!this.requires_form} == 0 }}
+          // If form is not required, show download directly
+          document.getElementById('zoho-form-container').style.display = 'none';
+          document.getElementById('download-button-section').classList.remove('d-none');
+          var ds = document.getElementById('download-section');
+          if (ds) ds.classList.remove('d-none');
+          {{/if}}
+        })();
+      </script>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  #zoho-form-container iframe {
+    border-radius: 8px;
+    min-height: 460px;
+  }
+  #download-section .alert {
+    border: 1px solid rgba(25, 135, 84, 0.2);
+  }
+</style>

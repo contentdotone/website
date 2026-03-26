@@ -1,8 +1,166 @@
 <!--Pageheader start-->
 <!-- <div class="pattern-square"></div> -->
 <!--Pageheader end-->
+
+<!-- Content.One Hero Section -->
+<section class="co-hero position-relative overflow-hidden py-5 py-lg-6">
+  <div class="co-hero__bg position-absolute top-0 start-0 w-100 h-100"></div>
+  <div class="container position-relative" style="z-index:2">
+    <div class="row align-items-center gy-5">
+      <!-- Left Column -->
+      <div class="col-lg-6 col-12 text-center text-lg-start">
+        <span class="co-hero__badge d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4">
+          
+          <span class="small fw-semibold">Rethinking Content Management for Modern Teams</span>
+        </span>
+        <h1 class="display-3 fw-bold text-white mb-4">AI-Driven <span class="rotate">Content</span> Marketing at Scale</h1>
+        <p class="lead mb-4" style="color:rgba(255,255,255,.75)">
+            A platform to orchestrate website, mobile, and headless content experiences—empowering marketing teams to manage, scale, and deliver campaigns seamlessly across local and global markets.
  
-{{include /components/homepage/hero-ai-cool.html}}
+        </p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
+          <!-- <a href="https://accounts.zesty.io/signup" class="btn btn-primary btn-lg rounded-pill px-4">Start for free</a> -->
+          <a href="/contact-us/" class="btn btn-outline-light btn-lg rounded-pill px-4">
+            Setup a Custom Demo
+            <i class="bi bi-chevron-right small"></i>
+          </a>
+        </div>
+      </div>
+      <!-- Right Column: Feature Cards -->
+      <div class="col-lg-5 offset-lg-1 col-12">
+        <div class="d-flex flex-column gap-3">
+          <!-- Feature 1 -->
+          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
+            <div class="co-hero__icon co-hero__icon--blue d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-gear fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Your Central Control Hub</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Define re-usable blocks for marketers and developers to use organization-wide.</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
+            <div class="co-hero__icon co-hero__icon--pink d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-bag fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Agentic Page Building</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Write your prompt and watch as AI builds your website.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
+            <div class="co-hero__icon co-hero__icon--green d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-globe2 fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Headless APIs &amp; Realtime Webhooks</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Publish anywhere, trigger custom workflows, and integrate with freedom.</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
+            <div class="co-hero__icon co-hero__icon--orange d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-bar-chart-line fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Powerful Analytics</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Measure and test in real-time with our built-in analytics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Content.One Hero */
+  .co-hero { background-color: #0b0f1f; }
+  .co-hero__bg {
+    background: linear-gradient(135deg, #0b0f1f 0%, #1a1545 35%, #2a1d6b 60%, #1a1545 80%, #0b0f1f 100%);
+    z-index: 0;
+  }
+  .co-hero__bg::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 30% 50%, rgba(99, 60, 255, 0.18) 0%, transparent 65%),
+                radial-gradient(ellipse at 70% 30%, rgba(56, 189, 248, 0.10) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  .co-hero__badge {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: #a78bfa;
+  }
+  .co-hero__badge-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #a78bfa;
+    display: inline-block;
+  }
+  .co-hero__features {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 1rem;
+    padding: 1.25rem;
+  }
+  .co-hero__feature-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    transition: background .2s ease;
+  }
+  .co-hero__feature-card:hover {
+    background: rgba(255,255,255,0.07);
+  }
+  .co-hero__icon {
+    width: 44px; height: 44px;
+    border-radius: 10px;
+    min-width: 44px;
+  }
+  .co-hero__icon--blue  { background: rgba(59,130,246,0.18); color: #60a5fa; }
+  .co-hero__icon--pink  { background: rgba(236,72,153,0.18); color: #f472b6; }
+  .co-hero__icon--green { background: rgba(34,197,94,0.18);  color: #4ade80; }
+  .co-hero__icon--orange{ background: rgba(249,115,22,0.18); color: #fb923c; }
+
+  .rotate {
+    display: inline-block;
+    transition: opacity .2s ease, transform .2s ease;
+  }
+  .rotate.is-fading {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+</style>
+<!-- End Content.One Hero Section -->
+
+<script>
+  (function () {
+    var rotateEl = document.querySelector('.rotate');
+    if (!rotateEl) return;
+
+    var words = ['Content', 'Website', 'Mobile', 'Headless'];
+    var colors = ['#a78bfa', '#38bdf8', '#34d399', '#f59e0b'];
+    var index = 0;
+
+    rotateEl.textContent = words[index];
+    rotateEl.style.color = colors[index];
+
+    window.setInterval(function () {
+      rotateEl.classList.add('is-fading');
+
+      window.setTimeout(function () {
+        index = (index + 1) % words.length;
+        rotateEl.textContent = words[index];
+        rotateEl.style.color = colors[index];
+        rotateEl.classList.remove('is-fading');
+      }, 200);
+    }, 2000);
+  })();
+</script>
+
 <!-- {{include /components/homepage/home-hero.html}} -->
  
 {{ block('/-/block/client_logos.html') }}

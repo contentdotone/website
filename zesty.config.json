@@ -6,19 +6,19 @@
                 "zuid": "11-a8b694fbef-kq7ds0",
                 "type": "templateset",
                 "updatedAt": "2018-08-13T22:56:07Z",
-                "createdAt": "2025-11-10T16:46:05Z"
+                "createdAt": "2026-03-05T02:21:36Z"
             },
             "loader": {
                 "zuid": "11-e4fe95fbef-b3kn74",
                 "type": "snippet",
                 "updatedAt": "2018-08-13T22:56:07Z",
-                "createdAt": "2025-12-30T03:15:53Z"
+                "createdAt": "2026-03-04T23:53:59Z"
             },
             "/components/nav.html": {
                 "zuid": "11-d2b1c58ff3-1dm88s",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T19:29:05Z",
-                "createdAt": "2026-01-23T18:54:42Z"
+                "createdAt": "2026-03-05T00:58:27Z"
             },
             "/assets/theme.css": {
                 "zuid": "11-9ad6dec9d3-9znmtm",
@@ -42,7 +42,7 @@
                 "zuid": "11-9680efe6c2-1zp3dq",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T21:08:54Z",
-                "createdAt": "2026-01-14T00:51:53Z"
+                "createdAt": "2026-02-26T20:14:50Z"
             },
             "about": {
                 "zuid": "11-80e197a7b7-g6vb89",
@@ -138,13 +138,13 @@
                 "zuid": "11-a287c0abd6-kdv7gl",
                 "type": "templateset",
                 "updatedAt": "2025-09-05T20:26:37Z",
-                "createdAt": "2025-10-31T18:25:24Z"
+                "createdAt": "2026-03-05T00:28:20Z"
             },
             "/components/ctas/book-button.html": {
                 "zuid": "11-ccdfe5b99a-cw11dh",
                 "type": "ajax-json",
                 "updatedAt": "2025-09-05T20:37:39Z",
-                "createdAt": "2026-01-30T19:18:24Z"
+                "createdAt": "2026-03-13T15:13:35Z"
             },
             "/components/ctas/email-subscription-form.html": {
                 "zuid": "11-b2c7e88eb3-s3jf4m",
@@ -168,7 +168,7 @@
                 "zuid": "11-90d199fa87-qlhfqb",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-06T12:26:43Z",
-                "createdAt": "2026-01-16T17:49:52Z"
+                "createdAt": "2026-02-13T17:48:31Z"
             },
             "customers": {
                 "zuid": "11-c2d1dbefac-mn7q8n",
@@ -204,7 +204,7 @@
                 "zuid": "11-dce3a9e389-2lqbsq",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-12T19:27:41Z",
-                "createdAt": "2026-01-16T17:51:14Z"
+                "createdAt": "2026-02-13T17:47:41Z"
             },
             "/components/casestudy/petdesk.html": {
                 "zuid": "11-b4cf9285f4-3x2590",
@@ -476,12 +476,6 @@
                 "updatedAt": "2025-11-05T20:04:50Z",
                 "createdAt": "2026-01-18T22:54:43Z"
             },
-            "/components/ctas/book-button copy.html": {
-                "zuid": "11-94ec9ca6bb-q99qlb",
-                "type": "ajax-json",
-                "updatedAt": "2025-11-06T21:21:53Z",
-                "createdAt": "2025-11-06T21:21:53Z"
-            },
             "/components/homepage/personas.html": {
                 "zuid": "11-aac888abbc-m0rljq",
                 "type": "ajax-json",
@@ -534,7 +528,7 @@
                 "zuid": "11-e0ca88aeaf-bw5gk9",
                 "type": "templateset",
                 "updatedAt": "2026-01-09T22:06:12Z",
-                "createdAt": "2026-01-12T19:04:59Z"
+                "createdAt": "2026-03-13T19:44:48Z"
             },
             "blog": {
                 "zuid": "11-f8d5e0bee5-vh0d2w",
@@ -546,7 +540,7 @@
                 "zuid": "11-e0ff84a99c-ncgvf2",
                 "type": "pageset",
                 "updatedAt": "2026-01-10T22:21:18Z",
-                "createdAt": "2026-01-28T00:03:51Z"
+                "createdAt": "2026-01-30T19:53:59Z"
             },
             "categories": {
                 "zuid": "11-9693c6e6e6-ksphq9",
@@ -564,7 +558,7 @@
                 "zuid": "11-9294fdb2ab-c0bx98",
                 "type": "templateset",
                 "updatedAt": "2026-01-18T21:16:01Z",
-                "createdAt": "2026-01-18T21:16:01Z"
+                "createdAt": "2026-02-26T18:27:11Z"
             },
             "/page_html/landing_pages/linkedin.html": {
                 "zuid": "11-fc9997fc84-blpxs0",
@@ -606,7 +600,49 @@
                 "zuid": "11-92ecf2b19a-z1swtw",
                 "type": "block",
                 "updatedAt": "2026-01-30T19:45:52Z",
-                "createdAt": "2026-01-30T19:45:52Z"
+                "createdAt": "2026-01-30T19:51:26Z"
+            },
+            "/page_html/landing_pages/linkedin-tsa.html": {
+                "zuid": "11-84f0bbff9f-t14psp",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-19T23:20:57Z",
+                "createdAt": "2026-02-19T23:25:30Z"
+            },
+            "privacy_policy": {
+                "zuid": "11-c8aaaa88b3-gjjg15",
+                "type": "templateset",
+                "updatedAt": "2026-02-26T16:40:43Z",
+                "createdAt": "2026-02-26T18:30:06Z"
+            },
+            "/-/ai/context/brand.md": {
+                "zuid": "11-f4a29898af-x024l3",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-03-03T17:09:57Z"
+            },
+            "/-/ai/context/writing.md": {
+                "zuid": "11-b6adf2daaf-01k32l",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-03-03T18:08:34Z"
+            },
+            "/-/ai/context/images.md": {
+                "zuid": "11-94ece099b0-3lt6pm",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-02-26T18:23:07Z"
+            },
+            "/-/ai/context/coding.md": {
+                "zuid": "11-acb4b8d5b0-zm0f9r",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-02-26T18:22:57Z"
+            },
+            "marketing_downloads": {
+                "zuid": "11-d881ada0ae-tp2c6m",
+                "type": "pageset",
+                "updatedAt": "2026-03-13T17:26:11Z",
+                "createdAt": "2026-03-13T17:53:32Z"
             }
         },
         "styles": {

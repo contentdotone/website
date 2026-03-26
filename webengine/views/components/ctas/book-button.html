@@ -1,1 +1,30 @@
-<a href="/contact-us/" class="btn btn-primary me-2">Contact Us</a> 
+<a href="https://launch.content.one" class="btn btn-primary me-2" id="book-button">
+    <span class="bi bi-lightning-charge-fill text-warning mr-2"></span>
+    <span class="book-button-text">Launch Now</span>
+</a>
+<script>
+    (function () {
+        var el = document.getElementById("book-button");
+        if (!el) return;
+
+        var variants = [
+            { text: "Analyze My Website", campaign: "analyze_my_website" },
+            { text: "Free AI Analysis", campaign: "ai_analysis" },
+            { text: "Instant Analysis", campaign: "instant_analysis" }
+        ];
+
+        var index = Math.abs(Date.now()) % 3;
+        var choice = variants[index];
+
+        var textEl = el.querySelector(".book-button-text");
+        if (textEl) textEl.textContent = choice.text;
+
+        try {
+            var url = new URL(el.getAttribute("href"), window.location.origin);
+            url.searchParams.set("utm_campaign", choice.campaign);
+            el.setAttribute("href", url.toString());
+        } catch (e) {
+            // If URL parsing fails, leave href unchanged.
+        }
+    })();
+</script>

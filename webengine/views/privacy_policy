@@ -1,0 +1,12 @@
+<main class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="mb-4">{{this.title}}</h1>
+                <div class="content">
+                    {{this.body}}
+                </div>
+            </div>
+        </div>
+    </div>
+</main>

@@ -156,6 +156,7 @@
                   <a class="nav-link" href="#storytelling">Local Storytelling</a>
                   <a class="nav-link" href="#discovery">Service Discovery</a>
                   <a class="nav-link" href="#productivity">Productivity Apps</a>
+                  <a class="nav-link" href="#federation-blueprint">Federation Blueprint</a>
                   <a class="nav-link" href="#reliability">Reliability &amp; Support</a>
                   <a class="nav-link" href="#impact">Organizational Impact</a>
                 </nav> 
@@ -503,6 +504,68 @@
                 </div>
               </div> 
             </section>
+
+            <section id="federation-blueprint" class="py-5 border-bottom fade-section">
+              <div class="row g-4 align-items-center">
+                <div class="col-lg-6">
+                  <h3 class="h2">The Federation Blueprint</h3>
+                  <p class="text-grey">Concise points to consider while unifying your nonprofit locations — built for national teams who need consistency without losing local identity.</p>
+                  <div class="d-grid gap-3 mt-4">
+                    <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-circle bg-primary-subtle text-primary"><i class="bi bi-layers"></i></div>
+                          <div>
+                            <h4 class="h6 mb-1">Define the federation rules</h4>
+                            <p class="mb-0 text-grey">Clarify which decisions are national, regional, and local — and codify them in your CMS.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card border-0 shadow-sm">
+                      <div class="card-body">
+                        <div class="d-flex align-items-center gap-3">
+                          <div class="icon-circle bg-primary-subtle text-primary"><i class="bi bi-diagram-3"></i></div>
+                          <div>
+                            <h4 class="h6 mb-1">Unify data, not just pages</h4>
+                            <p class="mb-0 text-grey">Standardize locations, services, and contacts so experiences stay accurate everywhere.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="card border-0 shadow-lg h-100">
+                    <div class="card-body p-4 p-lg-5">
+                      <h4 class="h6 text-uppercase text-primary mb-3">Blueprint Checklist</h4>
+                      <ul class="list-unstyled d-grid gap-3 mb-0">
+                        <li class="d-flex align-items-start gap-3">
+                          <span class="badge bg-primary">1</span>
+                          <span>Establish a shared design system and reusable components.</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                          <span class="badge bg-primary">2</span>
+                          <span>Create cascades for campaigns, policies, and core content.</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                          <span class="badge bg-primary">3</span>
+                          <span>Protect local flexibility with approved content zones.</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                          <span class="badge bg-primary">4</span>
+                          <span>Instrument reporting so national teams see adoption in real time.</span>
+                        </li>
+                        <li class="d-flex align-items-start gap-3">
+                          <span class="badge bg-primary">5</span>
+                          <span>Align roles, training, and support to match the new structure.</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
                         {{include /components/features/ven-diagram.html}}
 
 
@@ -780,7 +843,7 @@
     margin-bottom:0 !important;
   }
 </style>
-
+ 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // ScrollSpy bootstrap init for the sidebar nav
@@ -844,7 +907,7 @@
         var iframe = videoModal.querySelector('iframe');
         if (!iframe) return;
         var src = iframe.getAttribute('src');
-        iframe.setAttribute('src', src);
+        iframe.setAttribute('src', src); 
       });
     }
   });

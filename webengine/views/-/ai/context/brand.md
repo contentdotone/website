@@ -1,0 +1,1 @@
+Content.One is a tech forward content management system focus on AI automation, agentic creation, and mass marketing technology for large organizations
