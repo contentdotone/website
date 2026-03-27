@@ -154,9 +154,37 @@
                      <div class="mt-3 mt-lg-0 d-flex align-items-center">
                         <!-- <a href="https://www.zesty.io/login/" rel="nofollow" class="btn btn-light mx-2">
                             Login <i class="bi bi-box-arrow-in-right"></i>
-                        </a> -->
+                        </a> --> 
                         <button type="button" onclick="window.chatbase.open();" id="talk-to-agent" class="btn btn-link text-decoration-none me-2"><span class="bi bi-chat-dots text-primary mr-2"></span> Talk to Agent</button>
-                        {{include /components/ctas/book-button.html}}
+                        <div class="dropdown">
+                           <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              <i class="bi bi-lightning-charge-fill text-warning me-1"></i> Get Started
+                           </button>
+                           <ul class="dropdown-menu dropdown-menu-end" id="nav-cta-dropdown">
+                              <li><a class="dropdown-item" href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link><i class="bi bi-lightning-charge-fill me-2"></i>Start Demo</a></li>
+                              <li><a class="dropdown-item" href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link><i class="bi bi-bar-chart-line me-2"></i>Agentic Report</a></li>
+                              <li><a class="dropdown-item" href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link><i class="bi bi-truck me-2"></i>Migration Plan</a></li>
+                           </ul>
+                        </div>
+                        <script>
+                        (function () {
+                           function getCookie(name) {
+                              var match = document.cookie.match(new RegExp('(?:^|; )' + name + '=([^;]*)'));
+                              return match ? decodeURIComponent(match[1]) : '';
+                           }
+                           var campaign = getCookie('utm_campaign');
+                           var source = getCookie('utm_source');
+                           if (!campaign && !source) return;
+                           document.querySelectorAll('[data-utm-link]').forEach(function (a) {
+                              try {
+                                 var url = new URL(a.getAttribute('href'));
+                                 if (campaign) url.searchParams.set('utm_campaign', campaign);
+                                 if (source) url.searchParams.set('utm_source', source);
+                                 a.setAttribute('href', url.toString());
+                              } catch (e) { /* ignore */ }
+                           });
+                        })();
+                        </script>
                      </div>
                   </div>
                </div>

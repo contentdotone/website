@@ -3,7 +3,7 @@
 <link rel="stylesheet" id="theme-css" href="https://www.content.one/assets/theme.css" media="print" onload="this.media='all'" crossorigin="anonymous">
 
 <noscript><link rel="stylesheet" href="https://www.content.one/assets/theme.css" crossorigin="anonymous"></noscript>
-
+ 
 <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-955374362/FhacCNqOoMAbEJq2x8cD', 'event_callback': callback }); return false; } </script>
 
 <!-- Fullscreen white cover that fades away after styles load -->
@@ -35,6 +35,28 @@
   @media (min-width: 1200px) { .container { max-width: 1140px; } }
   @media (min-width: 1400px) { .container { max-width: 1320px; } }
 </style>
+
+<script>
+(function () {
+  try {
+    var params = new URLSearchParams(window.location.search);
+    var campaign = params.get('utm_campaign') || params.get('UTM_Campaign');
+    var source = params.get('utm_source') || params.get('UTM_Source');
+    if (campaign) {
+      document.cookie = 'utm_campaign=' + encodeURIComponent(campaign) + ';path=/;max-age=2592000;SameSite=Lax';
+    }
+    if (source) {
+      document.cookie = 'utm_source=' + encodeURIComponent(source) + ';path=/;max-age=2592000;SameSite=Lax';
+    }
+  } catch (e) { /* ignore */ }
+  try {
+    var referrer = document.referrer;
+    if (referrer) {
+      document.cookie = 'URL_REFERRER=' + encodeURIComponent(referrer) + ';path=/;max-age=2592000;SameSite=Lax';
+    }
+  } catch (e) { /* ignore */ }
+})();
+</script>
 
 {{include /components/nav.html}}
 
