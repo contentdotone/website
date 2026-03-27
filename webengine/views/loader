@@ -8,7 +8,7 @@
 
 <!-- Fullscreen white cover that fades away after styles load -->
 <div id="page-cover"></div>
-<style>
+<style> 
   /* Fullscreen white cover for first paint */
   #page-cover{
     position: fixed;
@@ -73,12 +73,14 @@
   <img id="fullscreenImg" class="fullscreen-img" />
 </div>
  
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+<link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous"></noscript>
 
 <script type="text/javascript" src="{{instance.getJsUrl()}}" defer></script>
 (** <script type="text/javascript" src="/assets/theme.min.js"></script> **)
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
-<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
 
 <script>
   (function () {
@@ -265,7 +267,18 @@
       });
     }
 
+    function lazyLoadImages(context) {
+      var scope = context || document;
+      scope.querySelectorAll('img:not([loading])').forEach(function (img) {
+        img.setAttribute('loading', 'lazy');
+        if (!img.getAttribute('decoding')) {
+          img.setAttribute('decoding', 'async');
+        }
+      });
+    }
+
     function enhanceContent(context) {
+      lazyLoadImages(context);
       refreshTables(context);
       bindFullscreenImages(context);
       upgradeLoopingVideos(context);

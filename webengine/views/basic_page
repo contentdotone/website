@@ -20,7 +20,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </section>
 <!--Hero start-->
@@ -34,10 +34,3 @@
 </section>
 
 <!-- Event snippet for Content One Demo Form Sign-Up conversion page --> <script> gtag('event', 'conversion', { 'send_to': 'AW-955374362/XaLWCJ3Cwr0bEJq2x8cD', 'value': 1.0, 'currency': 'USD' }); </script>
-
-
-if(window.ct.sendEvent){
-  window.ct.sendEvent({
-    installationId:'06bfc63d-5ab0-40ab-828d-6ea681769cc0',
-  });
-}
