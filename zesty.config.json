@@ -12,13 +12,13 @@
                 "zuid": "11-e4fe95fbef-b3kn74",
                 "type": "snippet",
                 "updatedAt": "2018-08-13T22:56:07Z",
-                "createdAt": "2026-03-04T23:53:59Z"
+                "createdAt": "2026-03-27T16:59:42Z"
             },
             "/components/nav.html": {
                 "zuid": "11-d2b1c58ff3-1dm88s",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T19:29:05Z",
-                "createdAt": "2026-03-05T00:58:27Z"
+                "createdAt": "2026-03-27T17:33:30Z"
             },
             "/assets/theme.css": {
                 "zuid": "11-9ad6dec9d3-9znmtm",
@@ -126,7 +126,7 @@
                 "zuid": "11-cc93e38af9-rmfgk1",
                 "type": "ajax-json",
                 "updatedAt": "2025-09-04T20:04:41Z",
-                "createdAt": "2025-12-30T03:15:59Z"
+                "createdAt": "2026-03-26T20:35:05Z"
             },
             "/-/block/demo_form_signup.html": {
                 "zuid": "11-becd95ad87-f010pv",
@@ -156,7 +156,7 @@
                 "zuid": "11-c6a381a0f9-vx91vm",
                 "type": "templateset",
                 "updatedAt": "2025-09-06T02:04:34Z",
-                "createdAt": "2025-12-08T23:09:18Z"
+                "createdAt": "2026-03-27T17:00:49Z"
             },
             "404-page": {
                 "zuid": "11-e691afacc8-nxl051",
@@ -168,7 +168,7 @@
                 "zuid": "11-90d199fa87-qlhfqb",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-06T12:26:43Z",
-                "createdAt": "2026-02-13T17:48:31Z"
+                "createdAt": "2026-03-27T17:01:04Z"
             },
             "customers": {
                 "zuid": "11-c2d1dbefac-mn7q8n",
@@ -186,19 +186,19 @@
                 "zuid": "11-a885c7f3c6-7t5zvp",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-07T20:16:42Z",
-                "createdAt": "2026-01-16T17:35:48Z"
+                "createdAt": "2026-03-27T17:01:22Z"
             },
             "/components/casestudy/sony.html": {
                 "zuid": "11-82afb7999e-nn45tn",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-10T18:16:30Z",
-                "createdAt": "2026-01-16T17:35:39Z"
+                "createdAt": "2026-03-27T17:01:09Z"
             },
             "/components/casestudy/tsa-odd.html": {
                 "zuid": "11-e6b18590fd-skdhqg",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-10T20:41:53Z",
-                "createdAt": "2026-01-16T17:53:48Z"
+                "createdAt": "2026-03-27T17:01:06Z"
             },
             "/components/casestudy/tsa-federated-franchise.html": {
                 "zuid": "11-dce3a9e389-2lqbsq",
@@ -210,37 +210,37 @@
                 "zuid": "11-b4cf9285f4-3x2590",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-15T15:33:34Z",
-                "createdAt": "2025-12-16T02:43:57Z"
+                "createdAt": "2026-03-27T17:01:25Z"
             },
             "/components/casestudy/singlife.html": {
                 "zuid": "11-aaaaa08694-q0zmg9",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-21T21:08:59Z",
-                "createdAt": "2026-01-16T17:35:43Z"
+                "createdAt": "2026-03-27T17:01:14Z"
             },
             "/components/casestudy/wattpad.html": {
                 "zuid": "11-e6f5f1f1b9-n7pnzt",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-21T21:53:10Z",
-                "createdAt": "2026-01-16T17:35:59Z"
+                "createdAt": "2026-03-27T17:00:59Z"
             },
             "/components/casestudy/draftkings.html": {
                 "zuid": "11-b28c9cc689-vff28h",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-22T21:57:36Z",
-                "createdAt": "2026-01-16T17:35:51Z"
+                "createdAt": "2026-03-27T17:01:27Z"
             },
             "/components/casestudy/uber.html": {
                 "zuid": "11-a8a5a0b58b-mmt4vn",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-23T00:07:35Z",
-                "createdAt": "2026-01-16T17:35:57Z"
+                "createdAt": "2026-03-27T17:01:02Z"
             },
             "/components/casestudy/side-cta.html": {
                 "zuid": "11-acacd6a6bf-3k9h7p",
                 "type": "ajax-json",
                 "updatedAt": "2025-10-23T02:51:12Z",
-                "createdAt": "2025-12-16T02:15:11Z"
+                "createdAt": "2026-03-27T17:01:16Z"
             },
             "/page_html/solutions/marketing-website.html": {
                 "zuid": "11-e288a6b38f-6k2q6g",
@@ -492,7 +492,7 @@
                 "zuid": "11-daf4e4d7f8-rhvd89",
                 "type": "ajax-json",
                 "updatedAt": "2025-12-16T02:30:31Z",
-                "createdAt": "2025-12-16T02:30:34Z"
+                "createdAt": "2026-03-27T17:01:12Z"
             },
             "components/features/hybrid": {
                 "zuid": "11-a084bc87cf-kb8bs1",
@@ -600,7 +600,7 @@
                 "zuid": "11-92ecf2b19a-z1swtw",
                 "type": "block",
                 "updatedAt": "2026-01-30T19:45:52Z",
-                "createdAt": "2026-01-30T19:51:26Z"
+                "createdAt": "2026-03-26T19:59:42Z"
             },
             "/page_html/landing_pages/linkedin-tsa.html": {
                 "zuid": "11-84f0bbff9f-t14psp",
@@ -642,13 +642,13 @@
                 "zuid": "11-d881ada0ae-tp2c6m",
                 "type": "pageset",
                 "updatedAt": "2026-03-13T17:26:11Z",
-                "createdAt": "2026-03-13T17:53:32Z"
+                "createdAt": "2026-04-08T19:54:18Z"
             },
             "/components/forms/zoho-form-dl.html": {
                 "zuid": "11-c4b984d7ef-xlpzzv",
                 "type": "ajax-json",
-                "updatedAt": "2026-03-26T19:56:25.608675729Z",
-                "createdAt": "2026-03-26T19:56:25.608668253Z"
+                "updatedAt": "2026-03-26T19:56:25Z",
+                "createdAt": "2026-04-08T19:54:28Z"
             }
         },
         "styles": {
