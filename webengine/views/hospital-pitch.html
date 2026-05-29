@@ -101,6 +101,14 @@
         <span class="hairline rounded-full px-5 py-2.5 text-warning">99.99% uptime</span>
         <span class="hairline rounded-full px-5 py-2.5 text-royalLite">ADA / WCAG 2.2 built in</span>
       </div>
+      <div class="rise mt-10" style="animation-delay:.42s">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-muted mb-4">Trusted by leading organizations</p>
+        <div class="flex flex-wrap items-center gap-x-9 gap-y-5">
+          {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}} logo" class="h-7 md:h-8 w-auto object-contain opacity-70 brightness-0 invert" />
+          {{/each}}
+        </div>
+      </div>
     </div>
   </section>
 
@@ -199,8 +207,8 @@
       <p class="text-muted mt-5 max-w-3xl text-lg">Content.One is the website layer — it <span class="text-chalk">connects to the systems you already run</span>, it doesn't replace them. API-first with real-time webhooks gives one consistent front door to payments, patient &amp; staff portals, careers, price transparency, and giving — kept in sync, no brittle custom builds.</p>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-9">
         <a href="https://www.clearbalance.com" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
-          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=clearbalance.com&sz=128" alt="Clear Balance" class="w-7 h-7" /></span>
-          <span><span class="block font-mono text-xs text-info">Payment Portal</span><span class="font-display font-bold">Clear Balance</span></span>
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=clearbalance.com&sz=128" alt="ClearBalance" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Payment Portal</span><span class="font-display font-bold">ClearBalance</span></span>
         </a>
         <a href="https://www.mycarecorner.com" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
           <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=mycarecorner.com&sz=128" alt="My Care Corner" class="w-7 h-7" /></span>

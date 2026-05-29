@@ -116,6 +116,14 @@
         <span class="hairline rounded-full px-5 py-2.5 text-warning">99.99% uptime</span>
         <span class="hairline rounded-full px-5 py-2.5 text-royalLite">5 CMSs → 1</span>
       </div>
+      <div class="rise mt-10" style="animation-delay:.42s">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-muted mb-4">Trusted by leading organizations</p>
+        <div class="flex flex-wrap items-center gap-x-9 gap-y-5">
+          {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}} logo" class="h-7 md:h-8 w-auto object-contain opacity-70 brightness-0 invert" />
+          {{/each}}
+        </div>
+      </div>
     </div>
   </section>
 
