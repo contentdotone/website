@@ -2,3 +2,4 @@ node_modules
 .zesty
 .DS_Store
 .vscode
+zesty-report.md
