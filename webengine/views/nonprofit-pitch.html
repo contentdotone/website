@@ -102,19 +102,37 @@
     <div class="absolute inset-0 royalfade"></div>
     <div class="relative max-w-6xl mx-auto px-6 w-full">
       <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="rise h-9 w-auto" style="animation-delay:.04s" />
-      <p class="rise kicker text-royalLite mt-8" style="animation-delay:.1s">Non-Profit Pitch</p>
       <h1 class="rise font-display font-bold leading-[0.95] mt-5 text-[12vw] md:text-[6.5rem]" style="animation-delay:.16s">
-        The platform for<br /><span class="text-royalLite">federated</span> missions.
+        The Content System for<br /><span class="text-royalLite">federated</span> non-profits.
       </h1>
       <p class="rise max-w-2xl text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.24s">
-        One platform for every location, every donor, every story — proven at national scale with
-        <span class="text-chalk font-medium">The Salvation Army</span>: 3,000+ locations, unified.
+        One Content System for every location, every donor, every story — proven at national scale with
+        <span class="text-chalk font-medium">The Salvation Army</span>: 3,000+ locations, unified — at a fraction of the cost.
       </p>
-      <div class="rise mt-9 flex flex-wrap gap-3 font-mono text-xs" style="animation-delay:.32s">
-        <span class="hairline rounded-full px-4 py-2 text-success">+53% traffic</span>
-        <span class="hairline rounded-full px-4 py-2 text-info">+115% service clicks</span>
-        <span class="hairline rounded-full px-4 py-2 text-warning">99.99% uptime</span>
-        <span class="hairline rounded-full px-4 py-2 text-royalLite">5 CMSs → 1</span>
+      <div class="rise mt-9 flex flex-wrap gap-3 font-mono text-sm md:text-base" style="animation-delay:.32s">
+        <span class="hairline rounded-full px-5 py-2.5 text-success">lower cost</span>
+        <span class="hairline rounded-full px-5 py-2.5 text-success">+53% traffic</span>
+        <span class="hairline rounded-full px-5 py-2.5 text-info">+115% service clicks</span>
+        <span class="hairline rounded-full px-5 py-2.5 text-warning">99.99% uptime</span>
+        <span class="hairline rounded-full px-5 py-2.5 text-royalLite">5 CMSs → 1</span>
+      </div>
+      <div class="rise mt-10" style="animation-delay:.42s">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-muted mb-4">Trusted by</p>
+        <div class="flex flex-wrap items-center gap-x-9 gap-y-5">
+          {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}} logo" class="h-7 md:h-8 w-auto object-contain opacity-70 brightness-0 invert" />
+          {{/each}}
+        </div>
+      </div>
+      <div class="rise mt-7" style="animation-delay:.5s">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-muted mb-4">Partnered with leading organizations</p>
+        <div class="flex flex-wrap items-center gap-x-8 gap-y-5 text-white/70">
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="h-6 md:h-7 w-auto"><title>Fastly</title><path d="M13.919 3.036V1.3h.632V0H9.377v1.3h.631v1.749a10.572 10.572 0 00-8.575 10.384C1.433 19.275 6.17 24 12 24c5.842 0 10.567-4.737 10.567-10.567 0-5.186-3.729-9.486-8.648-10.397zm-1.628 15.826v-.607h-.619v.607c-2.757-.158-4.955-2.38-5.101-5.137h.607v-.62h-.607a5.436 5.436 0 015.101-5.089v.607h.62v-.607a5.435 5.435 0 015.137 5.114h-.607v.619h.607a5.444 5.444 0 01-5.138 5.113zm2.26-7.712l-.39-.389-1.979 1.725a.912.912 0 00-.316-.06c-.534 0-.971.448-.971.995 0 .547.437.996.971.996.535 0 .972-.45.972-.996a.839.839 0 00-.049-.304Z"/></svg>
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="h-6 md:h-7 w-auto"><title>Google Cloud</title><path d="M12.19 2.38a9.344 9.344 0 0 0-9.234 6.893c.053-.02-.055.013 0 0-3.875 2.551-3.922 8.11-.247 10.941l.006-.007-.007.03a6.717 6.717 0 0 0 4.077 1.356h5.173l.03.03h5.192c6.687.053 9.376-8.605 3.835-12.35a9.365 9.365 0 0 0-2.821-4.552l-.043.043.006-.05A9.344 9.344 0 0 0 12.19 2.38zm-.358 4.146c1.244-.04 2.518.368 3.486 1.15a5.186 5.186 0 0 1 1.862 4.078v.518c3.53-.07 3.53 5.262 0 5.193h-5.193l-.008.009v-.04H6.785a2.59 2.59 0 0 1-1.067-.23h.001a2.597 2.597 0 1 1 3.437-3.437l3.013-3.012A6.747 6.747 0 0 0 8.11 8.24c.018-.01.04-.026.054-.023a5.186 5.186 0 0 1 3.67-1.69z"/></svg>
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="h-5 md:h-6 w-auto"><title>Microsoft</title><path d="M0 0v11.408h11.408V0zm12.594 0v11.408H24V0zM0 12.594V24h11.408V12.594zm12.594 0V24H24V12.594z"/></svg>
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="h-6 md:h-7 w-auto"><title>Akamai</title><path d="M13.0548 0C6.384 0 .961 5.3802.961 12.0078.961 18.6354 6.3698 24 13.0548 24c.6168 0 .6454-.3572.0859-.5293-4.9349-1.5063-8.5352-6.069-8.5352-11.4629 0-5.4656 3.6725-10.0706 8.6934-11.5195C13.8153.3448 13.6716 0 13.0548 0Zm2.3242 1.8223c-5.2648 0-9.5254 4.2606-9.5254 9.5254 0 1.2193.2285 2.3818.6445 3.4433.1722.459.4454.4584.4024.0137-.0287-.3156-.0567-.6447-.0567-.9746 0-5.2648 4.2606-9.5254 9.5254-9.5254 4.9779 0 6.4698 2.2235 6.6563 2.08.2008-.1577-1.808-4.5624-7.6465-4.5624zm.4687 4.0703c-1.8622.0592-3.651.7168-5.1035 1.8554-.2582.2009-.1567.3284.1445.1993 2.4675-1.076 5.5812-1.1046 8.6368-.043 2.0514.7173 3.2413 1.7364 3.3418 1.6934.1578-.0718-1.1915-2.2226-3.6446-3.1407-1.1135-.4196-2.2576-.6-3.375-.5644z"/></svg>
+          <svg role="img" viewBox="0 0 24 24" fill="currentColor" class="h-6 md:h-7 w-auto"><title>Amazon Web Services</title><path d="M6.763 10.036c0 .296.032.535.088.71.064.176.144.368.256.576.04.063.056.127.056.183 0 .08-.048.16-.152.24l-.503.335a.383.383 0 0 1-.208.072c-.08 0-.16-.04-.239-.112a2.47 2.47 0 0 1-.287-.375 6.18 6.18 0 0 1-.248-.471c-.622.734-1.405 1.101-2.347 1.101-.67 0-1.205-.191-1.596-.574-.391-.384-.59-.894-.59-1.533 0-.678.239-1.23.726-1.644.487-.415 1.133-.623 1.955-.623.272 0 .551.024.846.064.296.04.6.104.918.176v-.583c0-.607-.127-1.03-.375-1.277-.255-.248-.686-.367-1.3-.367-.28 0-.568.031-.863.103-.295.072-.583.16-.862.272a2.287 2.287 0 0 1-.28.104.488.488 0 0 1-.127.023c-.112 0-.168-.08-.168-.247v-.391c0-.128.016-.224.056-.28a.597.597 0 0 1 .224-.167c.279-.144.614-.264 1.005-.36a4.84 4.84 0 0 1 1.246-.151c.95 0 1.644.216 2.091.647.439.43.662 1.085.662 1.963v2.586zm-3.24 1.214c.263 0 .534-.048.822-.144.287-.096.543-.271.758-.51.128-.152.224-.32.272-.512.047-.191.08-.423.08-.694v-.335a6.66 6.66 0 0 0-.735-.136 6.02 6.02 0 0 0-.75-.048c-.535 0-.926.104-1.19.32-.263.215-.39.518-.39.917 0 .375.095.655.295.846.191.2.47.296.838.296zm6.41.862c-.144 0-.24-.024-.304-.08-.064-.048-.12-.16-.168-.311L7.586 5.55a1.398 1.398 0 0 1-.072-.32c0-.128.064-.2.191-.2h.783c.151 0 .255.025.31.08.065.048.113.16.16.312l1.342 5.284 1.245-5.284c.04-.16.088-.264.151-.312a.549.549 0 0 1 .32-.08h.638c.152 0 .256.025.32.08.063.048.12.16.151.312l1.261 5.348 1.381-5.348c.048-.16.104-.264.16-.312a.52.52 0 0 1 .311-.08h.743c.127 0 .2.065.2.2 0 .04-.009.08-.017.128a1.137 1.137 0 0 1-.056.2l-1.923 6.17c-.048.16-.104.263-.168.311a.51.51 0 0 1-.303.08h-.687c-.151 0-.255-.024-.32-.08-.063-.056-.119-.16-.15-.32l-1.238-5.148-1.23 5.14c-.04.16-.087.264-.15.32-.065.056-.177.08-.32.08zm10.256.215c-.415 0-.83-.048-1.229-.143-.399-.096-.71-.2-.918-.32-.128-.071-.215-.151-.247-.223a.563.563 0 0 1-.048-.224v-.407c0-.167.064-.247.183-.247.048 0 .096.008.144.024.048.016.12.048.2.08.271.12.566.215.878.279.319.064.63.096.95.096.502 0 .894-.088 1.165-.264a.86.86 0 0 0 .415-.758.777.777 0 0 0-.215-.559c-.144-.151-.416-.287-.807-.415l-1.157-.36c-.583-.183-1.014-.454-1.277-.813a1.902 1.902 0 0 1-.4-1.158c0-.335.073-.63.216-.886.144-.255.335-.479.575-.654.24-.184.51-.32.83-.415.32-.096.655-.136 1.006-.136.175 0 .359.008.535.032.183.024.35.056.518.088.16.04.312.08.455.127.144.048.256.096.336.144a.69.69 0 0 1 .24.2.43.43 0 0 1 .071.263v.375c0 .168-.064.256-.184.256a.83.83 0 0 1-.303-.096 3.652 3.652 0 0 0-1.532-.311c-.455 0-.815.071-1.062.223-.248.152-.375.383-.375.71 0 .224.08.416.24.567.159.152.454.304.877.44l1.134.358c.574.184.99.44 1.237.767.247.327.367.702.367 1.117 0 .343-.072.655-.207.926-.144.272-.336.511-.583.703-.248.2-.543.343-.886.447-.36.111-.734.167-1.142.167zM21.698 16.207c-2.626 1.94-6.442 2.969-9.722 2.969-4.598 0-8.74-1.7-11.87-4.526-.247-.223-.024-.527.272-.351 3.384 1.963 7.559 3.153 11.877 3.153 2.914 0 6.114-.607 9.06-1.852.439-.2.814.287.383.607zM22.792 14.961c-.336-.43-2.22-.207-3.074-.103-.255.032-.295-.192-.063-.36 1.5-1.053 3.967-.75 4.254-.399.287.36-.08 2.826-1.485 4.007-.215.184-.423.088-.327-.151.32-.79 1.03-2.57.695-2.994z"/></svg>
+        </div>
       </div>
     </div>
   </section>
@@ -143,8 +161,8 @@
         <span class="text-ink/40 text-sm">×</span>
         <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto invert" />
       </div>
-      <h2 class="font-display text-4xl md:text-6xl font-bold mt-6 max-w-4xl">3,000+ locations, unified on one platform.</h2>
-      <p class="text-muted mt-6 max-w-2xl text-lg leading-relaxed">Five legacy CMSs and thousands of local editors became one scalable platform — so every visitor, from donor to family in need, can find help in seconds.</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-6 max-w-4xl">3,000+ locations, unified on one Content System.</h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg leading-relaxed">Five legacy CMSs and thousands of local editors became one scalable Content System — so every visitor, from donor to family in need, can find help in seconds.</p>
       <blockquote class="mt-8 max-w-2xl hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
         <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
         <div>
@@ -198,7 +216,7 @@
       <p class="kicker text-success">Security at global scale</p>
       <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Protecting non-profits, by design.</h2>
       <p class="text-muted mt-6 max-w-3xl text-lg">Non-profits hold donor trust and sensitive data — but rarely a security team. Content.One ships enterprise-grade protection with every environment, no add-ons.</p>
-      <p class="mt-5 text-lg text-chalk"><span class="font-display text-3xl font-bold text-success">99.99%</span> uptime in production for <span class="font-semibold">The Salvation Army</span> — "night and day" vs the old platform.</p>
+      <p class="mt-5 text-lg text-chalk"><span class="font-display text-3xl font-bold text-success">99.99%</span> uptime in production for <span class="font-semibold">The Salvation Army</span> — "night and day" vs the old system.</p>
       <div class="grid md:grid-cols-4 gap-4 mt-10">
         <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">SOC 2 Type II</div><p class="text-muted text-sm mt-2 leading-relaxed">Controls across security, availability &amp; confidentiality — validated annually, evidence collected continuously.</p></div>
         <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">Encryption everywhere</div><p class="text-muted text-sm mt-2 leading-relaxed">AES-256 at rest, TLS 1.2+ in transit, vaulted secrets, encrypted geo-redundant backups.</p></div>
@@ -220,7 +238,7 @@
           <li class="flex gap-3"><span class="text-danger">✕</span> Version drift across regional sites — no two the same, none fully secure.</li>
           <li class="flex gap-3"><span class="text-danger">✕</span> The burden lands on a tiny (or volunteer) team that should be on mission.</li>
         </ul>
-        <p class="mt-6 text-lg text-chalk"><span class="font-display text-3xl font-bold text-royalLite">5 → 1</span> CMSs for <span class="font-semibold">The Salvation Army</span> — one secure, always-current platform.</p>
+        <p class="mt-6 text-lg text-chalk"><span class="font-display text-3xl font-bold text-royalLite">5 → 1</span> CMSs for <span class="font-semibold">The Salvation Army</span> — one secure, always-current Content System.</p>
       </div>
       <div class="hairline rounded-2xl p-7 bg-ink">
         <p class="kicker text-success">The Content.One way</p>
@@ -308,13 +326,13 @@
   <section class="slide relative flex items-center bg-panel gridbg" data-i="11">
     <div class="max-w-6xl mx-auto px-6 w-full py-16">
       <p class="kicker text-royalLite">The federated model</p>
-      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">HQ governance. Local autonomy. One platform.</h2>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">HQ governance. Local autonomy. One Content System.</h2>
       <div class="grid md:grid-cols-3 gap-4 mt-10">
         <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Model once</div><p class="text-muted mt-3 leading-relaxed">HQ sets brand, templates, compliance &amp; structured data from a single domain.</p></div>
         <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Deploy everywhere</div><p class="text-muted mt-3 leading-relaxed">Campaigns cascade instantly across thousands of locations; local teams adapt without reinventing.</p></div>
         <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Ship from the field</div><p class="text-muted mt-3 leading-relaxed">Mobile-first authoring lets field teams post shelter openings or alerts in seconds — no enterprise-CMS training.</p></div>
       </div>
-      <p class="mt-8 text-lg text-chalk"><span class="font-display text-3xl font-bold text-royalLite">3,000+</span> locations unified for <span class="font-semibold">The Salvation Army</span> on a single platform.</p>
+      <p class="mt-8 text-lg text-chalk"><span class="font-display text-3xl font-bold text-royalLite">3,000+</span> locations unified for <span class="font-semibold">The Salvation Army</span> on a single Content System.</p>
     </div>
   </section>
 
@@ -325,7 +343,7 @@
     <div class="absolute inset-0 bg-ink/60"></div>
     <div class="relative max-w-4xl mx-auto px-6 w-full py-16 text-center">
       <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-9 w-auto mx-auto" />
-      <p class="kicker text-royalLite mt-7">Beyond websites — a platform for mission</p>
+      <p class="kicker text-royalLite mt-7">Beyond websites — a Content System for mission</p>
       <h2 class="font-display text-4xl md:text-7xl font-bold mt-5">Run your mission on Content.One.</h2>
       <blockquote class="mt-8 max-w-2xl mx-auto hairline rounded-2xl bg-panel/80 backdrop-blur p-6 flex gap-4 items-center text-left">
         <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
