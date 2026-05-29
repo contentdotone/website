@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content.One for Federated Non-Profits · Pitch</title>
+  <meta name="description" content="Why large federated non-profits run their digital mission on Content.One — proven with The Salvation Army: more traffic, more donations, global security and speed, and ease of use for every local team." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: {
+          display: ['"DM Sans"', 'sans-serif'],
+          sans: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
+          mono: ['"DM Mono"', 'monospace'],
+        },
+        colors: {
+          ink: '#080b18', panel: '#10162b', panel2: '#171f3a',
+          line: 'rgba(124,140,240,0.18)',
+          royal: '#4255BD', royalLite: '#9aa6f4',
+          success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          chalk: '#eef1fc', muted: '#9aa2c8',
+        },
+      } },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap');
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+    :root { color-scheme: dark; }
+    html { scroll-behavior: smooth; }
+    body { background:#080b18; }
+    h1,h2,h3 { letter-spacing:-0.025em; }
+    h1 { letter-spacing:-0.04em; }
+    /* deck scroll-snap */
+    .deck { scroll-snap-type: y proximity; }
+    .slide { scroll-snap-align: start; min-height: 100svh; }
+    .hairline { border:1px solid rgba(124,140,240,0.18); }
+    .gridbg {
+      background-image:
+        linear-gradient(rgba(124,140,240,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,140,240,0.05) 1px, transparent 1px);
+      background-size: 48px 48px;
+    }
+    .royalfade { background:
+      radial-gradient(900px 500px at 80% -10%, rgba(66,85,189,0.45), transparent 60%),
+      radial-gradient(700px 420px at -5% 110%, rgba(13,202,240,0.12), transparent 55%); }
+    @keyframes rise { from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:none;} }
+    .rise { opacity:0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @media (prefers-reduced-motion: reduce){ .rise{animation:none;opacity:1;} }
+    .kicker { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; }
+    .diagram { background:
+      repeating-linear-gradient(45deg, rgba(154,166,244,0.06) 0 12px, transparent 12px 24px); }
+    ::selection{ background:#4255BD; color:#fff; }
+  </style>
+</head>
+
+<body class="font-sans text-chalk antialiased">
+
+  <!-- progress / counter -->
+  <div class="fixed top-0 left-0 right-0 h-1 bg-royal/20 z-50"><div id="bar" class="h-full bg-royal w-0 transition-all"></div></div>
+  <div class="fixed bottom-5 right-5 z-50 font-mono text-xs text-muted hairline rounded-full px-3 py-1.5 bg-ink/70 backdrop-blur">
+    <span id="cur">01</span> <span class="text-royalLite">/</span> 12
+  </div>
+
+  <main class="deck">
+
+  <!-- 01 TITLE -->
+  <section class="slide relative flex items-center gridbg" data-i="1">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="rise kicker text-royalLite" style="animation-delay:.05s">Content.One · Non-Profit Pitch</p>
+      <h1 class="rise font-display font-bold leading-[0.95] mt-6 text-[12vw] md:text-[7rem]" style="animation-delay:.12s">
+        The platform for<br /><span class="text-royalLite">federated</span> missions.
+      </h1>
+      <p class="rise max-w-2xl text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.2s">
+        One platform for every location, every donor, every story — proven at national scale with
+        <span class="text-chalk font-medium">The Salvation Army</span>: 3,000+ locations, unified.
+      </p>
+      <div class="rise mt-10 flex flex-wrap gap-3 font-mono text-xs" style="animation-delay:.28s">
+        <span class="hairline rounded-full px-4 py-2 text-success">+53% traffic</span>
+        <span class="hairline rounded-full px-4 py-2 text-info">+115% service clicks</span>
+        <span class="hairline rounded-full px-4 py-2 text-warning">99.99% uptime</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">5 CMSs → 1</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CHALLENGE -->
+  <section class="slide relative flex items-center border-t border-line" data-i="2">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-danger">The challenge</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Federated non-profits outgrow their CMS.</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-12">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Fragmentation</div><p class="text-muted mt-3 leading-relaxed">Dozens of regional sites on separate systems — no shared brand, no shared data, no single source of truth.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Fragility</div><p class="text-muted mt-3 leading-relaxed">WordPress &amp; Drupal stacks pile up plugins and security patches — exactly the maintenance burden lean non-profit teams can't carry.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Friction</div><p class="text-muted mt-3 leading-relaxed">Every edit waits on a developer. Local teams can't move; mission moments pass before content goes live.</p></div>
+      </div>
+      <p class="text-muted mt-8 max-w-3xl text-lg">When help has to reach people <em class="not-italic text-chalk">now</em>, a slow, brittle website isn't a marketing problem — it's a mission problem.</p>
+    </div>
+  </section>
+
+  <!-- 03 CASE STUDY INTRO -->
+  <section class="slide relative flex items-center overflow-hidden border-t border-line" data-i="3">
+    <img src="https://8hxvw8tw.media.zestyio.com/FoodPantry-7jpg.jpg" alt="Salvation Army food pantry" class="absolute inset-0 w-full h-full object-cover opacity-25" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-royalLite">Case study</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">The Salvation Army unified 3,000+ locations on Content.One.</h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg leading-relaxed">Five legacy CMSs and thousands of local editors became one scalable platform — so every visitor, from donor to family in need, can find help in seconds.</p>
+      <blockquote class="mt-8 max-w-2xl hairline rounded-2xl bg-panel/80 backdrop-blur p-6">
+        <p class="text-lg text-chalk leading-relaxed">"Load times have improved dramatically, and stability has been night and day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."</p>
+        <footer class="mt-3 font-mono text-xs text-muted">Andrew Dobney · Director of Digital Strategy, The Salvation Army USA</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 04 RESULTS -->
+  <section class="slide relative flex items-center bg-royal" data-i="4">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-white/70">The results</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 text-white">Measured mission impact.</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/15 mt-12 rounded-2xl overflow-hidden">
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">+53%</div><p class="text-white/70 mt-2">Web traffic growth</p></div>
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">+98%</div><p class="text-white/70 mt-2">Location searches</p></div>
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">+115%</div><p class="text-white/70 mt-2">Service clicks</p></div>
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">99.99%</div><p class="text-white/70 mt-2">Uptime</p></div>
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">4×</div><p class="text-white/70 mt-2">Faster campaigns</p></div>
+        <div class="bg-royal p-7"><div class="font-display text-5xl md:text-6xl font-bold text-white">5→1</div><p class="text-white/70 mt-2">CMSs consolidated</p></div>
+      </div>
+      <p class="text-white/80 mt-8 font-mono text-sm">Publishing turnaround went from weeks &amp; months → hours &amp; days.</p>
+    </div>
+  </section>
+
+  <!-- 05 SPEED + CDN -->
+  <section class="slide relative flex items-center border-t border-line gridbg" data-i="5">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="kicker text-info">Speed at global scale</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">A global CDN, built in.</h2>
+        <p class="text-muted mt-5 text-lg leading-relaxed">Points of presence sit inside major internet exchange hubs worldwide — fewer hops, lower latency, faster pages for every donor on every device. Traffic auto-reroutes around outages and auto-scales for campaign surges.</p>
+        <p class="text-muted mt-4 leading-relaxed">Faster pages don't just feel better — they convert. The Salvation Army's traffic and engagement jumped the moment performance stopped being the bottleneck.</p>
+      </div>
+      <div class="grid grid-cols-2 gap-4">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-display text-4xl font-bold text-info">99.999%</div><p class="text-muted text-sm mt-2">Enterprise uptime SLA — most months, 100%.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-display text-4xl font-bold text-info">Global</div><p class="text-muted text-sm mt-2">POPs across continents at high-density exchange points.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel col-span-2 diagram">
+          <p class="font-mono text-xs text-royalLite">◇ DIAGRAM SPOT — Global CDN / edge map</p>
+          <p class="text-muted text-sm mt-2">Suggested: a world map of POPs with HQ → edge → visitor latency. (I can wire in a final diagram here.)</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 SECURITY -->
+  <section class="slide relative flex items-center border-t border-line" data-i="6">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-success">Security at global scale</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Protecting non-profits, by design.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Non-profits hold donor trust and sensitive data — but rarely a security team. Content.One ships enterprise-grade protection with every environment, no add-ons.</p>
+      <div class="grid md:grid-cols-4 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">SOC 2 Type II</div><p class="text-muted text-sm mt-2 leading-relaxed">Controls across security, availability &amp; confidentiality — validated annually, evidence collected continuously.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">Encryption everywhere</div><p class="text-muted text-sm mt-2 leading-relaxed">AES-256 at rest, TLS 1.2+ in transit, vaulted secrets, encrypted geo-redundant backups.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">Isolated environments</div><p class="text-muted text-sm mt-2 leading-relaxed">Dedicated sandbox, staging &amp; production; signed builds and checksum validation prevent tampering.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-success font-mono text-sm">SSO &amp; roles</div><p class="text-muted text-sm mt-2 leading-relaxed">Single sign-on and granular roles keep thousands of local editors safely scoped.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 WORDPRESS / DRUPAL -->
+  <section class="slide relative flex items-center border-t border-line bg-panel" data-i="7">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24 grid md:grid-cols-2 gap-12">
+      <div>
+        <p class="kicker text-danger">The WordPress / Drupal tax</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">Stop patching. Start serving.</h2>
+        <ul class="mt-6 space-y-4 text-muted leading-relaxed">
+          <li class="flex gap-3"><span class="text-danger">✕</span> Plugin sprawl — every add-on is a new vulnerability and a new thing to update.</li>
+          <li class="flex gap-3"><span class="text-danger">✕</span> Constant security patches and version upgrades, often with downtime.</li>
+          <li class="flex gap-3"><span class="text-danger">✕</span> Version drift across regional sites — no two the same, none fully secure.</li>
+          <li class="flex gap-3"><span class="text-danger">✕</span> The burden lands on a tiny (or volunteer) team that should be on mission.</li>
+        </ul>
+      </div>
+      <div class="hairline rounded-2xl p-7 bg-ink">
+        <p class="kicker text-success">The Content.One way</p>
+        <h3 class="font-display text-2xl font-bold mt-3">Automatic, continuous, drift-free.</h3>
+        <ul class="mt-5 space-y-4 text-muted leading-relaxed">
+          <li class="flex gap-3"><span class="text-success">✓</span> Hybrid PaaS/SaaS with <span class="text-chalk">rolling weekly updates</span> — UI, hosting, infra, security.</li>
+          <li class="flex gap-3"><span class="text-success">✓</span> Security patches deploy automatically — no tickets, no maintenance windows.</li>
+          <li class="flex gap-3"><span class="text-success">✓</span> <span class="text-chalk">Zero version drift</span>: everyone runs the same secure footprint.</li>
+          <li class="flex gap-3"><span class="text-success">✓</span> No upgrade fees, no scheduled downtime.</li>
+        </ul>
+        <p class="mt-6 font-display text-xl font-bold text-success">"Focus on storytelling, not patching."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 SEO + GEO -->
+  <section class="slide relative flex items-center border-t border-line gridbg" data-i="8">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-warning">SEO + GEO automation</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Found by people — and by AI.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Optimization is baked into the foundation, so every page is discoverable the moment it's published — no plugins, no fire drills. That consistency is what keeps visibility (and donations) stable as you scale.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">Automated schema</div><p class="text-muted text-sm mt-2">JSON-LD for articles, events &amp; programs → rich results, automatically.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">Clean by default</div><p class="text-muted text-sm mt-2">SEO-friendly URLs, canonical tags, duplicate-content prevention built in.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">GEO + hreflang</div><p class="text-muted text-sm mt-2">Geo-targeting and automatic hreflang put the right local help in front of each community.</p></div>
+      </div>
+      <p class="text-muted mt-8 max-w-3xl leading-relaxed"><span class="text-chalk">GEO (Generative Engine Optimization)</span> prepares content to be surfaced, cited, and recommended by AI search — so your mission shows up where people increasingly look first.</p>
+    </div>
+  </section>
+
+  <!-- 09 EASE OF USE -->
+  <section class="slide relative flex items-center overflow-hidden border-t border-line" data-i="9">
+    <img src="https://hj5v68xn.media.zestyio.com/salvation-army-youth-program.jpg" alt="Local youth program" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-gradient-to-l from-ink via-ink/85 to-ink/40"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="kicker text-royalLite">Ease of use</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">Every local team can contribute.</h2>
+        <p class="text-muted mt-5 text-lg leading-relaxed">Not every editor is a developer — and they don't need to be. Guided templates and structured layouts let volunteers and staff publish accurate, on-brand content without breaking design. Built-in version control is a safety net for every edit.</p>
+      </div>
+      <div class="space-y-4">
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"Swapping four YouTube embeds took a month and cost $1,500 — something I can do in 10 minutes now."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager</footer></div>
+        </blockquote>
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"Spinning up a site is absolutely faster… For me, as a non-webmaster, it's easier now."</p><footer class="font-mono text-xs text-muted mt-2">Andrew Dobney · Director of Digital Strategy</footer></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 DONATIONS -->
+  <section class="slide relative flex items-center border-t border-line" data-i="10">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-success">Donations &amp; conversion</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Turn visits into giving.</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-10 items-start">
+        <div class="space-y-4">
+          <div class="hairline rounded-2xl p-6 bg-panel"><h3 class="font-display text-xl font-bold">Cascading donation forms</h3><p class="text-muted mt-2 leading-relaxed">Centrally managed yet locally contextual — donors always give to the right place, with the right campaign, automatically.</p></div>
+          <div class="hairline rounded-2xl p-6 bg-panel"><h3 class="font-display text-xl font-bold">Integrate your donation stack</h3><p class="text-muted mt-2 leading-relaxed">API-first architecture connects payment and donor-management tools so giving flows are fast, branded, and frictionless.</p></div>
+          <div class="hairline rounded-2xl p-6 bg-panel"><h3 class="font-display text-xl font-bold">Speed → conversion</h3><p class="text-muted mt-2 leading-relaxed">Faster, always-on pages remove the drop-off that costs donations — the same lift that drove +53% traffic and +115% service clicks.</p></div>
+        </div>
+        <div class="hairline rounded-2xl overflow-hidden bg-panel">
+          <img src="https://hj5v68xn.media.zestyio.com/salvation-army-location-screenshot.png" alt="Service locator that doubles as a mission tool" class="w-full object-cover" />
+          <div class="p-6"><p class="text-muted leading-relaxed">The public Location Finder became so reliable the call center uses it for real dispatch — a marketing tool turned mission tool.</p></div>
+        </div>
+      </div>
+      <div class="diagram hairline rounded-2xl p-5 mt-6"><p class="font-mono text-xs text-royalLite">◇ DIAGRAM SPOT — Donation conversion funnel</p><p class="text-muted text-sm mt-1">Suggested: visit → fast page → contextual donation form → completed gift, with the lift at each step.</p></div>
+    </div>
+  </section>
+
+  <!-- 11 FEDERATED MODEL -->
+  <section class="slide relative flex items-center border-t border-line bg-panel gridbg" data-i="11">
+    <div class="max-w-6xl mx-auto px-6 w-full py-24">
+      <p class="kicker text-royalLite">The federated model</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">HQ governance. Local autonomy. One platform.</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Model once</div><p class="text-muted mt-3 leading-relaxed">HQ sets brand, templates, compliance &amp; structured data from a single domain.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Deploy everywhere</div><p class="text-muted mt-3 leading-relaxed">Campaigns cascade instantly across thousands of locations; local teams adapt without reinventing.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-ink"><div class="font-mono text-royalLite text-sm">Ship from the field</div><p class="text-muted mt-3 leading-relaxed">Mobile-first authoring lets field teams post shelter openings or alerts in seconds — no enterprise-CMS training.</p></div>
+      </div>
+      <div class="diagram hairline rounded-2xl p-5 mt-6"><p class="font-mono text-xs text-royalLite">◇ DIAGRAM SPOT — Federated architecture</p><p class="text-muted text-sm mt-1">Suggested: National HQ → territories/divisions → 3,000+ local sites, all on one platform with shared assets &amp; governance.</p></div>
+    </div>
+  </section>
+
+  <!-- 12 CLOSE -->
+  <section class="slide relative flex items-center overflow-hidden border-t border-line" data-i="12">
+    <img src="https://8hxvw8tw.media.zestyio.com/holidaygiving-hero.jpg" alt="Holiday giving" class="absolute inset-0 w-full h-full object-cover opacity-25" />
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="absolute inset-0 bg-ink/60"></div>
+    <div class="relative max-w-4xl mx-auto px-6 w-full py-24 text-center">
+      <p class="kicker text-royalLite">Beyond websites — a platform for mission</p>
+      <h2 class="font-display text-4xl md:text-7xl font-bold mt-5">Run your mission on Content.One.</h2>
+      <blockquote class="mt-8 max-w-2xl mx-auto"><p class="text-xl text-chalk leading-relaxed">"We don't need to build websites — we need to tell stories. Partnering with Content.One means we can finally focus on that mission again."</p><footer class="font-mono text-xs text-muted mt-3">Jon Aren · National Web Manager, The Salvation Army</footer></blockquote>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/contact-us/" class="bg-royal hover:bg-royalLite hover:text-ink transition text-white font-medium rounded-full px-7 py-3">Talk with our team</a>
+        <a href="/contact-us/" class="hairline hover:border-royalLite transition rounded-full px-7 py-3 text-chalk">Book a demo</a>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <script>
+    const slides = [...document.querySelectorAll('.slide')];
+    const cur = document.getElementById('cur'), bar = document.getElementById('bar');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          const i = +e.target.dataset.i;
+          cur.textContent = String(i).padStart(2, '0');
+          bar.style.width = (i / slides.length * 100) + '%';
+        }
+      });
+    }, { threshold: 0.5 });
+    slides.forEach((s) => io.observe(s));
+  </script>
+</body>
+</html>
