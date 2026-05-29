@@ -1,35 +1,18 @@
-  <style>
- .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
- .logo-card__image {
-    max-height: 48px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.65;
-    transition: filter .2s ease, opacity .2s ease;
-  }
- .logo-card:hover,
- .logo-card:focus {
-    transform: translateY(-4px);
-    box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.15);
-  }
- .logo-card:hover .logo-card__image,
- .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
-    opacity: 1;
-  }
-  </style>
+<style>
+  .logo-card { min-height: 96px; transition: transform .2s ease, box-shadow .2s ease; }
+  .logo-card__image { max-height: 48px; width: auto; filter: grayscale(100%); opacity: 0.65; transition: filter .2s ease, opacity .2s ease; }
+  .logo-card:hover, .logo-card:focus { transform: translateY(-4px); box-shadow: 0 1.5rem 3rem rgba(15, 23, 42, 0.15); }
+  .logo-card:hover .logo-card__image, .logo-card:focus .logo-card__image { filter: grayscale(0%); opacity: 1; }
+</style>
 
- <div class="row row-cols-2 row-cols-md-3 g-3">
+<div class="grid grid-cols-2 md:grid-cols-3 gap-3">
 {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
-    <div class="col">
-        <div class="border rounded-4 p-3 h-100 logo-card">
-        <a href="{{cus.getURL()}}" class="d-flex align-items-center justify-content-center h-100">
-            <img src="{{cus.logo.getImage(140)}}" class="logo-card__image" alt="{{cus.name}} logo">
-        </a>
-        </div>
+  <div>
+    <div class="border border-gray-200 rounded-2xl p-3 h-full logo-card">
+      <a href="{{cus.getURL()}}" class="flex items-center justify-center h-full">
+        <img src="{{cus.logo.getImage(140)}}" class="logo-card__image" alt="{{cus.name}} logo">
+      </a>
     </div>
-    {{/each}}
+  </div>
+{{/each}}
 </div>

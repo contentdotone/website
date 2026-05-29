@@ -1,100 +1,64 @@
-<div class="container my-4">
-    <div class="row justify-content-center">
-        <div data-cue="slideInRight" data-show="true"
-            style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
+<div class="my-6">
+  <form action='https://forms.zohopublic.com/zestyio/form/ContentOneDemoForm/formperma/v5yu682DcRoFs5WJHMyNPgq30kitbSqJXuQGEZkwoVw/htmlRecords/submit'
+        name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
+        accept-charset='UTF-8' enctype='multipart/form-data' id='form' class="grid grid-cols-1 md:grid-cols-2 gap-3 needs-validation"
+        novalidate>
+    <input type="hidden" name="zf_referrer_name" value="">
+    <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=demo">
+    <input type="hidden" name="zc_gad" value="">
 
-            <form
-                action='https://forms.zohopublic.com/zestyio/form/ContentOneDemoForm/formperma/v5yu682DcRoFs5WJHMyNPgq30kitbSqJXuQGEZkwoVw/htmlRecords/submit'
-                name='form' method='POST' onSubmit='javascript:document.charset="UTF-8"; return zf_ValidateAndSubmit();'
-                accept-charset='UTF-8' enctype='multipart/form-data' id='form' class="row needs-validation g-3"
-                novalidate>
-                <input type="hidden" name="zf_referrer_name" value="">
-                <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=demo">
-                <input type="hidden" name="zc_gad" value="">
-
-
-                <!-- First Name -->
-                <div class="col-md-6 col-12">
-                    <label for="ScheduleFirstnameInput" class="form-label">
-                        First Name <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" class="form-control" id="ScheduleFirstnameInput" name="Name_First"
-                        maxlength="255" fieldType=7 placeholder="First Name" required />
-                    <div class="invalid-feedback">Please enter firstname.</div>
-                </div>
-
-                <!-- Last Name -->
-                <div class="col-md-6 col-12">
-                    <label for="scheduleLastnameInput" class="form-label">
-                        Last Name <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" class="form-control" id="scheduleLastnameInput" name="Name_Last" maxlength="255"
-                        fieldType=7 placeholder="Last Name" required />
-                    <div class="invalid-feedback">Please enter lastname.</div>
-                </div>
-
-                <!-- Email -->
-                <div class="col-md-12">
-                    <label for="scheduleEmailInput" class="form-label">
-                        Email <span class="text-danger">*</span>
-                    </label>
-                    <input type="email" class="form-control" id="scheduleEmailInput" name="Email" checktype="c5"
-                        value="" maxlength="255" fieldType=9 placeholder="Email" required />
-                    <div class="invalid-feedback">Please enter email.</div>
-                </div>
- 
-                <!-- Company -->
-                <div class="col-md-12">
-                    <label for="scheduleCompanyInput" class="form-label">
-                        Company <span class="text-danger">*</span>
-                    </label>
-                    <input type="text" class="form-control" id="scheduleCompanyInput" name="SingleLine" checktype="c1"
-                        value="" maxlength="255" fieldType=1 placeholder="Company" required />
-                    <div class="invalid-feedback">Please enter company.</div>
-                </div>
-
-                <!-- Message -->
-                <div class="col-md-12">
-                    <label for="scheduleTextarea" class="form-label">Message</label>
-                    <textarea class="form-control" id="scheduleTextarea" name="MultiLine" checktype="c1"
-                        maxlength="65535" placeholder="Please tell us about your project. (Optional)" rows="3"></textarea>
-                </div>
-
-                <div class="d-grid">
-                    <button onclick="gtag_report_conversion(); linkedin_conversion();" class="btn btn-primary" type="submit">Submit</button>
-                </div>
-            </form>
-            <script>
-                // Enable Bootstrap validation styles
-                (function () {
-                    'use strict';
-
-                    // Fetch all forms we want to apply custom Bootstrap validation to
-                    const forms = document.querySelectorAll('.needs-validation');
-
-                    Array.from(forms).forEach(function (form) {
-                        form.addEventListener('submit', function (event) {
-                            if (!form.checkValidity()) {
-                                // Prevent submission if invalid
-                                event.preventDefault();
-                                event.stopPropagation();
-                            }
-                            // Add the Bootstrap validation class
-                            form.classList.add('was-validated');
-                        }, false);
-                    });
-                })();
-            </script>
-            <script>
-                (function () {
-                    var match = document.cookie.match(/(?:^|; )URL_REFERRER=([^;]*)/);
-                    if (match) {
-                        var referrer = decodeURIComponent(match[1]);
-                        var field = document.querySelector('input[name="zf_redirect_url"]');
-                        if (field) field.value = referrer;
-                    }
-                })();
-            </script>
-        </div>
+    <div>
+      <label for="ScheduleFirstnameInput" class="block text-sm font-medium text-gray-700 mb-1">First Name <span class="text-danger">*</span></label>
+      <input type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="ScheduleFirstnameInput" name="Name_First" maxlength="255" fieldType=7 placeholder="First Name" required />
     </div>
+
+    <div>
+      <label for="scheduleLastnameInput" class="block text-sm font-medium text-gray-700 mb-1">Last Name <span class="text-danger">*</span></label>
+      <input type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="scheduleLastnameInput" name="Name_Last" maxlength="255" fieldType=7 placeholder="Last Name" required />
+    </div>
+
+    <div class="md:col-span-2">
+      <label for="scheduleEmailInput" class="block text-sm font-medium text-gray-700 mb-1">Email <span class="text-danger">*</span></label>
+      <input type="email" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="scheduleEmailInput" name="Email" checktype="c5" value="" maxlength="255" fieldType=9 placeholder="Email" required />
+    </div>
+
+    <div class="md:col-span-2">
+      <label for="scheduleCompanyInput" class="block text-sm font-medium text-gray-700 mb-1">Company <span class="text-danger">*</span></label>
+      <input type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="scheduleCompanyInput" name="SingleLine" checktype="c1" value="" maxlength="255" fieldType=1 placeholder="Company" required />
+    </div>
+
+    <div class="md:col-span-2">
+      <label for="scheduleTextarea" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+      <textarea class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="scheduleTextarea" name="MultiLine" checktype="c1" maxlength="65535" placeholder="Please tell us about your project. (Optional)" rows="3"></textarea>
+    </div>
+
+    <div class="md:col-span-2">
+      <button onclick="gtag_report_conversion(); linkedin_conversion();" class="w-full inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition" type="submit">Submit</button>
+    </div>
+  </form>
+  <script>
+    (function () {
+      'use strict';
+      const forms = document.querySelectorAll('.needs-validation');
+      Array.from(forms).forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+          if (!form.checkValidity()) {
+            event.preventDefault();
+            event.stopPropagation();
+          }
+          form.classList.add('was-validated');
+        }, false);
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      var match = document.cookie.match(/(?:^|; )URL_REFERRER=([^;]*)/);
+      if (match) {
+        var referrer = decodeURIComponent(match[1]);
+        var field = document.querySelector('input[name="zf_redirect_url"]');
+        if (field) field.value = referrer;
+      }
+    })();
+  </script>
 </div>
