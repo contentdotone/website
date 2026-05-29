@@ -6,7 +6,9 @@ const INSTANCE_ZUID = process.env.ZESTY_INSTANCE_ZUID;
 const TOKEN = process.env.ZESTY_DEVELOPER_TOKEN;
 const BRANCH = process.env.BRANCH || 'stage';
 const MANUAL_PUBLISH = process.env.MANUAL_PUBLISH === 'true';
-const DRY_RUN = process.env.DRY_RUN === 'true' || process.argv.includes('--dry-run');
+// REPORT emits a Markdown summary of what would change and never writes (implies dry-run).
+const REPORT = process.env.REPORT === 'true' || process.argv.includes('--report');
+const DRY_RUN = REPORT || process.env.DRY_RUN === 'true' || process.argv.includes('--dry-run');
 // Branch model: merges into `stage` save files; merges into `production`
 // save+publish them. By default only files changed by the push are touched
 // (DIFF_BASE = the pre-push SHA); FULL_SYNC=true processes every mapped file.
@@ -238,7 +240,7 @@ async function saveItem(item, publish, instanceCode) {
   const rel = path.relative(process.cwd(), item.localPath);
   if (!fs.existsSync(item.localPath)) {
     console.warn(`⚠️  Missing local file, skipping: ${rel}`);
-    return false;
+    return null;
   }
   const code = fs.readFileSync(item.localPath, 'utf8');
   const dry = DRY_RUN ? '[dry-run] ' : '';
@@ -250,7 +252,7 @@ async function saveItem(item, publish, instanceCode) {
     const current = instanceCode.get(item.zuid);
     if (current !== undefined && norm(current) === norm(code)) {
       console.log(`✓ ${dry}${publish ? 'Already live, skip' : 'Unchanged, skip'} ${rel} → ${item.endpoint}/${item.zuid}`);
-      return false;
+      return null;
     }
     const why = current === undefined ? 'not in instance' : 'differs';
     console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} (${why}) ${rel} → ${item.endpoint}/${item.zuid}`);
@@ -262,7 +264,32 @@ async function saveItem(item, publish, instanceCode) {
     const query = publish ? '?action=publish&purge_cache=true' : '';
     await apiRequest('PUT', `/web/${item.endpoint}/${item.zuid}${query}`, { code });
   }
-  return true;
+  return rel;
+}
+
+// Markdown summary for a PR comment. Labels reflect the target: stage shows
+// what would be added/updated (vs dev); production shows what would publish (vs live).
+function reportMarkdown({ created, written, skipped, publish, total }) {
+  const list = (arr) => (arr.length ? arr.map((r) => `- \`${r}\``).join('\n') : '_none_');
+  const head = publish ? '### 🚀 Production publish preview' : '### 💾 Stage sync preview';
+  const writtenLabel = publish
+    ? `Will publish — differ from live (${written.length})`
+    : `Will add/update — differ from dev (${written.length})`;
+  const skipLabel = publish ? 'Already live, skipped' : 'Unchanged, skipped';
+  return [
+    head,
+    '',
+    `**New files to create (${created.length}):**`,
+    list(created),
+    '',
+    `**${writtenLabel}:**`,
+    list(written),
+    '',
+    `**${skipLabel}:** ${skipped}`,
+    '',
+    `<sub>${total} mapped resources analyzed · zesty-sync</sub>`,
+    '<!-- zesty-sync-report -->',
+  ].join('\n');
 }
 
 async function main() {
@@ -299,8 +326,10 @@ async function main() {
 
   // Create new resources first so they exist + get ZUIDs, then map them back.
   const created = [];
+  const createdRels = [];
   for (const nf of newFiles) {
     created.push(await createNew(nf, shouldPublish));
+    createdRels.push(path.relative(process.cwd(), nf.localPath));
   }
   if (created.length && !DRY_RUN) {
     addToConfig(config, created);
@@ -310,13 +339,22 @@ async function main() {
 
   // Update existing mapped resources, comparing to dev (stage) or live (prod).
   const instanceCode = CAN_CHECK ? await fetchInstanceCode(shouldPublish ? 'live' : 'dev') : null;
-  let synced = 0;
+  const written = [];
+  let skipped = 0;
   for (const item of items) {
-    if (await saveItem(item, shouldPublish, instanceCode)) synced++;
+    const r = await saveItem(item, shouldPublish, instanceCode);
+    if (r) written.push(r);
+    else skipped++;
+  }
+
+  if (REPORT) {
+    const md = reportMarkdown({ created: createdRels, written, skipped, publish: shouldPublish, total: manifest.length });
+    fs.writeFileSync(path.join(process.cwd(), 'zesty-report.md'), md + '\n');
+    console.log('\n' + md);
   }
 
   console.log(
-    `\n🎉 Zesty sync complete — created ${created.length}, ${shouldPublish ? 'saved+published' : 'saved'} ${synced}/${items.length} mapped file(s).`
+    `\n🎉 Zesty sync complete — created ${created.length}, ${shouldPublish ? 'saved+published' : 'saved'} ${written.length}/${items.length} mapped file(s).`
   );
 }
 
