@@ -19,6 +19,9 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    # Needed so the job can commit new-resource ZUID mappings back to the branch.
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout code
@@ -40,3 +43,13 @@ jobs:
           FULL_SYNC: ${{ inputs.full_sync }}
           DIFF_BASE: ${{ github.event.before }}
         run: node scripts/sync-to-zesty.js
+
+      - name: Commit new-resource ZUID mappings
+        run: |
+          if ! git diff --quiet -- zesty.config.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add zesty.config.json
+            git commit -m "chore: map new Zesty resource ZUIDs [skip ci]"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
