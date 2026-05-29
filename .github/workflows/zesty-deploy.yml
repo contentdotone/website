@@ -10,6 +10,11 @@ on:
         required: false
         default: false
         type: boolean
+      full_sync:
+        description: 'Sync every mapped file instead of only changed files'
+        required: false
+        default: false
+        type: boolean
 
 jobs:
   deploy:
@@ -32,4 +37,6 @@ jobs:
           ZESTY_DEVELOPER_TOKEN: ${{ secrets.ZESTY_DEVELOPER_TOKEN }}
           BRANCH: ${{ github.ref_name }}
           MANUAL_PUBLISH: ${{ inputs.publish }}
+          FULL_SYNC: ${{ inputs.full_sync }}
+          DIFF_BASE: ${{ github.event.before }}
         run: node scripts/sync-to-zesty.js

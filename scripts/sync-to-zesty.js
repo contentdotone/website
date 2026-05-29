@@ -1,11 +1,16 @@
 const fs = require('fs');
 const path = require('path');
+const { execFileSync } = require('child_process');
 
 const INSTANCE_ZUID = process.env.ZESTY_INSTANCE_ZUID;
 const TOKEN = process.env.ZESTY_DEVELOPER_TOKEN;
 const BRANCH = process.env.BRANCH || 'stage';
 const MANUAL_PUBLISH = process.env.MANUAL_PUBLISH === 'true';
 const DRY_RUN = process.env.DRY_RUN === 'true' || process.argv.includes('--dry-run');
+// Branch model: merges into `stage` save files; merges into `production`
+// save+publish them. By default only files changed by the push are touched
+// (DIFF_BASE = the pre-push SHA); FULL_SYNC=true processes every mapped file.
+const FULL_SYNC = process.env.FULL_SYNC === 'true' || process.argv.includes('--full');
 
 const CONFIG_PATH = path.join(process.cwd(), 'zesty.config.json');
 const WEBENGINE_DIR = path.join(process.cwd(), 'webengine');
@@ -60,6 +65,25 @@ function buildManifest(config) {
   return items;
 }
 
+// Repo-relative paths changed between DIFF_BASE and DIFF_HEAD. Returns null if
+// the range can't be determined (first push, shallow clone) so the caller can
+// fall back to a full sync. execFileSync (no shell) avoids any injection.
+function changedFilePaths() {
+  const base = process.env.DIFF_BASE;
+  const head = process.env.DIFF_HEAD || 'HEAD';
+  const isZero = (s) => !s || /^0+$/.test(s);
+  const from = isZero(base) ? `${head}^` : base;
+  try {
+    const out = execFileSync('git', ['diff', '--name-only', from, head], {
+      cwd: process.cwd(),
+      encoding: 'utf8',
+    });
+    return new Set(out.split('\n').map((s) => s.trim()).filter(Boolean));
+  } catch {
+    return null;
+  }
+}
+
 async function apiRequest(method, endpointPath, body) {
   const url = `https://${INSTANCE_ZUID}.api.zesty.io/v1${endpointPath}`;
   const res = await fetch(url, {
@@ -106,17 +130,29 @@ async function main() {
   const manifest = buildManifest(config);
   const shouldPublish = BRANCH === 'production' || MANUAL_PUBLISH;
 
+  let items = manifest;
+  let scope = `full (${manifest.length} mapped)`;
+  if (!FULL_SYNC) {
+    const changed = changedFilePaths();
+    if (changed === null) {
+      console.warn('⚠️  Could not determine changed files — falling back to a full sync.');
+    } else {
+      items = manifest.filter((it) => changed.has(path.relative(process.cwd(), it.localPath)));
+      scope = `changed (${items.length} of ${manifest.length} mapped)`;
+    }
+  }
+
   console.log(
-    `🚀 Zesty sync | branch=${BRANCH} | publish=${shouldPublish} | dry-run=${DRY_RUN} | mapped=${manifest.length}`
+    `🚀 Zesty sync | branch=${BRANCH} | publish=${shouldPublish} | dry-run=${DRY_RUN} | scope=${scope}`
   );
 
   let synced = 0;
-  for (const item of manifest) {
+  for (const item of items) {
     if (await saveItem(item, shouldPublish)) synced++;
   }
 
   console.log(
-    `\n🎉 Zesty sync complete — ${shouldPublish ? 'saved+published' : 'saved'} ${synced}/${manifest.length} mapped file(s).`
+    `\n🎉 Zesty sync complete — ${shouldPublish ? 'saved+published' : 'saved'} ${synced}/${items.length} selected file(s).`
   );
 }
 
