@@ -1,172 +1,123 @@
+<!-- uber / cornershop case study — Tailwind-converted. Same pattern as petdesk/wattpad/sony/draftkings. -->
 <div class="cornershop-case-study">
-  <section class="py-6 py-lg-7 bg-gradient-cornershop text-white overflow-hidden position-relative">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5 cornershop-hero-foreground position-relative">
-        <div class="col-lg-6">
-          <span class="badge bg-white text-primary mb-3">Customer Highlight</span>
-          <h1 class="display-5 fw-bold mb-4 text-white">Cornershop by Uber partners with Content.One to drive global expansion.</h1>
-          <p class="lead text-white-75 mb-4">From Santiago to San Francisco, Cornershop needed a CMS that matched Uber’s pace. Content.One unlocked multi-language control, rapid deployments, and the SEO horsepower required to scale same-day grocery delivery worldwide.</p>
-          <div class="row row-cols-3 row-cols-sm-3 g-3 mt-5">
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1"><span data-cornershop-count="99.999" data-cornershop-suffix="%" data-cornershop-format="decimal">0</span></p>
-                  <p class="small text-white-75 mb-0">Uptime achieved</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1"><span data-cornershop-count="60" data-cornershop-suffix=" days">0</span></p>
-                  <p class="small text-white-75 mb-0">Migration timeline</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1"><span data-cornershop-count="10">0</span></p>
-                  <p class="small text-white-75 mb-0">Languages supported</p>
-                </div>
-              </div>
-            </div>
-            
+
+  <section class="bg-gradient-cornershop text-white overflow-hidden relative py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center cornershop-hero-foreground relative">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Customer Highlight</span>
+          <h1 class="font-display text-3xl md:text-5xl font-bold mb-4 text-white">Cornershop by Uber partners with Content.One to drive global expansion.</h1>
+          <p class="text-lg text-white/75 mb-4">From Santiago to San Francisco, Cornershop needed a CMS that matched Uber's pace. Content.One unlocked multi-language control, rapid deployments, and the SEO horsepower required to scale same-day grocery delivery worldwide.</p>
+          <div class="grid grid-cols-3 gap-3 mt-8">
+            <div class="bg-white border border-white/50 text-center rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal"><span data-cornershop-count="99.999" data-cornershop-suffix="%" data-cornershop-format="decimal">0</span></p><p class="text-xs text-gray-500 m-0">Uptime achieved</p></div></div>
+            <div class="bg-white border border-white/50 text-center rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal"><span data-cornershop-count="60" data-cornershop-suffix=" days">0</span></p><p class="text-xs text-gray-500 m-0">Migration timeline</p></div></div>
+            <div class="bg-white border border-white/50 text-center rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal"><span data-cornershop-count="10">0</span></p><p class="text-xs text-gray-500 m-0">Languages supported</p></div></div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden cornershop-hero-media">
-            <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" alt="Cornershop by Uber digital experience" class="w-100 h-100 object-fit-cover">
+        <div>
+          <div class="rounded-3xl shadow-lg overflow-hidden cornershop-hero-media aspect-video">
+            <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" alt="Cornershop by Uber digital experience" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="cornershop-hero-glow d-none d-lg-block">
-      <div class="cornershop-hero-glow__image"></div>
+    <div class="cornershop-hero-glow hidden lg:block"><div class="cornershop-hero-glow__image"></div></div>
+  </section>
+
+  <section class="bg-gray-50 py-12 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-5">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <img src="{{this.logo.getImage()}}" width="200" alt="{{this.name}}" class="mb-4 bg-white p-3 rounded-xl shadow-sm">
+              <p class="text-gray-600 mb-4">Cornershop, founded in 2015 in Chile, operates across Latin America with a mission to bring grocery aisles to customers' doorsteps. Following Uber's acquisition, the team required a platform built for global scale.</p>
+              <div class="quote-card bg-gray-100 rounded-2xl">
+                <div class="p-6">
+                  <p class="quote-text mb-3">"Congratulations Team Content.One! It is the first time that a CMS does not limit me in everything I want to do. I have achieved everything I have set out to do so far."</p>
+                  <p class="quote-meta m-0">Head of SEO, Cornershop by Uber</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <h3 class="text-base text-royal uppercase tracking-widest mb-3 font-semibold">Customer profile</h3>
+              <p class="text-gray-600">Operating in Mexico, Chile, Peru, Costa Rica, and beyond, Cornershop's acquisition by Uber accelerated the need for agile content governance. Recipes, product stories, and multi-language blogs needed to deploy fast across markets.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                <div class="border border-gray-200 rounded-2xl p-3 h-full"><p class="font-semibold text-royal mb-1">Challenge</p><p class="text-gray-600 m-0">Custom tech stack demanded heavy maintenance, limiting global expansion and causing SEO and availability risks.</p></div>
+                <div class="border border-gray-200 rounded-2xl p-3 h-full"><p class="font-semibold text-royal mb-1">Solution</p><p class="text-gray-600 m-0">Implement Content.One for multi-site, multi-language delivery with automated optimizations and enterprise uptime.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="bg-light py-5 border-bottom">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-lg-5">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <img src="{{this.logo.getImage()}}" width="200" height="auto" alt="{{this.name}}" class="mb-4 bg-white p-3 rounded-3 shadow-sm">
-              <p class="text-grey mb-4">Cornershop, founded in 2015 in Chile, operates across Latin America with a mission to bring grocery aisles to customers’ doorsteps. Following Uber’s acquisition, the team required a platform built for global scale.</p>
-              <div class="card quote-card border-0 bg-light">
-                <div class="card-body">
-                  <p class="quote-text mb-3">“Congratulations Team Content.One! It is the first time that a CMS does not limit me in everything I want to do. I have achieved everything I have set out to do so far.”</p>
-                  <p class="quote-meta mb-0">Head of SEO, Cornershop by Uber</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-12 col-lg-7">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h3 class="h5 text-primary text-uppercase mb-3">Customer profile</h3>
-              <p class="text-grey">Operating in Mexico, Chile, Peru, Costa Rica, and beyond, Cornershop’s acquisition by Uber accelerated the need for agile content governance. Recipes, product stories, and multi-language blogs needed to deploy fast across markets.</p>
-              <div class="row row-cols-1 row-cols-sm-2 g-3 mt-3">
-                <div class="col">
-                  <div class="border rounded-4 p-3 h-100">
-                    <p class="fw-semibold text-primary mb-1">Challenge</p>
-                    <p class="text-grey mb-0">Custom tech stack demanded heavy maintenance, limiting global expansion and causing SEO and availability risks.</p>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="border rounded-4 p-3 h-100">
-                    <p class="fw-semibold text-primary mb-1">Solution</p>
-                    <p class="text-grey mb-0">Implement Content.One for multi-site, multi-language delivery with automated optimizations and enterprise uptime.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> 
-    </div>
-  </section>
-  
-  <section class="py-5 py-lg-6">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3"> 
-          <div class="position-sticky" style="top: 6rem;">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-3">
-                <h2 class="h5 mb-3">Expansion Playbook</h2>
-                <nav id="cornershopNav" class="nav nav-pills flex-column gap-2">
-                  <a class="nav-link active" href="#cornershop-problem">The problem</a>
-                  <a class="nav-link" href="#cornershop-challenge">The challenge</a>
-                  <a class="nav-link" href="#cornershop-solution">The solution</a>
-                  <a class="nav-link" href="#cornershop-languages">Languages supported</a>
-                  <a class="nav-link" href="#cornershop-results">The results</a>
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3">
+          <div class="sticky" style="top: 6rem;">
+            <div class="bg-white shadow-sm rounded-2xl">
+              <div class="p-3">
+                <h2 class="text-base font-semibold mb-3">Expansion Playbook</h2>
+                <nav id="cornershopNav" class="flex flex-col gap-2">
+                  <a class="nav-link active block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#cornershop-problem">The problem</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#cornershop-challenge">The challenge</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#cornershop-solution">The solution</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#cornershop-languages">Languages supported</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#cornershop-results">The results</a>
                 </nav>
               </div>
               {{include /components/casestudy/side-cta.html}}
             </div>
-            
           </div>
         </div>
-        <div class="col-lg-9">
-          <div id="cornershopSections" data-bs-spy="scroll" data-bs-target="#cornershopNav" data-bs-offset="160" tabindex="0" class="pe-lg-3">
-            <section id="cornershop-problem" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                  <h3 class="h2 mb-3">The problem</h3>
-                  <p class="text-grey mb-4">Managing a custom stack across multiple countries stretched engineering thin. From uptime to SEO to multilingual support, Cornershop’s web presence required constant upkeep.</p>
-                  <ul class="list-unstyled d-grid gap-3 text-grey">
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-tools text-warning fs-4"></i>
-                      <span>Heavy maintenance across apps and sites slowed feature releases.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-globe2 text-warning fs-4"></i>
-                      <span>Scaling internationally demanded multi-language management and uptime aligned with Uber’s SLA.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-images text-warning fs-4"></i>
-                      <span>Recipe-driven content required automated image optimization and accessibility tagging.</span>
-                    </li>
+
+        <div class="lg:col-span-9">
+          <div id="cornershopSections" data-bs-spy="scroll" data-bs-target="#cornershopNav" data-bs-offset="160" tabindex="0" class="lg:pr-3">
+
+            <section id="cornershop-problem" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">The problem</h3>
+                  <p class="text-gray-600 mb-4">Managing a custom stack across multiple countries stretched engineering thin. From uptime to SEO to multilingual support, Cornershop's web presence required constant upkeep.</p>
+                  <ul class="grid gap-3 text-gray-600">
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><span>Heavy maintenance across apps and sites slowed feature releases.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg><span>Scaling internationally demanded multi-language management and uptime aligned with Uber's SLA.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Recipe-driven content required automated image optimization and accessibility tagging.</span></li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <div class="rounded-4 overflow-hidden shadow-lg cornershop-image-frame">
-                    <img src="https://kfg6bckb.media.zestyio.com/cornershop-by-uber-header-2.jpeg" alt="Cornershop by Uber storefront" class="w-100 h-100 object-fit-cover">
+                <div>
+                  <div class="rounded-3xl overflow-hidden shadow-lg cornershop-image-frame">
+                    <img src="https://kfg6bckb.media.zestyio.com/cornershop-by-uber-header-2.jpeg" alt="Cornershop by Uber storefront" class="w-full h-full object-cover">
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="cornershop-challenge" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-start">
-                <div class="col-lg-6">
-                  <h3 class="h2 mb-3">The challenge</h3>
-                  <p class="text-grey mb-4">A trial on dotCMS exposed gaps in multilingual governance. Publishing required filling every translation, leading to missing pages and SEO damage.</p>
-                  <div class="card border-0 shadow-sm">
-                    <div class="card-body">
-                      <ul class="list-unstyled d-grid gap-2 text-grey mb-0">
-                        <li class="d-flex gap-3">
-                          <i class="bi bi-translate text-primary fs-4"></i>
-                          <span>Multi-language forced into single records caused failures when teams couldn’t populate every locale.</span>
-                        </li>
-                        <li class="d-flex gap-3">
-                          <i class="bi bi-bar-chart text-primary fs-4"></i>
-                          <span>Missing translations meant broken experiences and lost SEO equity.</span>
-                        </li>
-                        <li class="d-flex gap-3">
-                          <i class="bi bi-shield-lock text-primary fs-4"></i>
-                          <span>Uber-level reliability required resilient hosting beyond custom infrastructure.</span>
-                        </li>
+            <section id="cornershop-challenge" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-start">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">The challenge</h3>
+                  <p class="text-gray-600 mb-4">A trial on dotCMS exposed gaps in multilingual governance. Publishing required filling every translation, leading to missing pages and SEO damage.</p>
+                  <div class="bg-white shadow-sm rounded-2xl">
+                    <div class="p-6">
+                      <ul class="grid gap-2 text-gray-600 m-0">
+                        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8l6 6m-6 0l6-6m6 14l-3-7-3 7m-1-4h8"/></svg><span>Multi-language forced into single records caused failures when teams couldn't populate every locale.</span></li>
+                        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg><span>Missing translations meant broken experiences and lost SEO equity.</span></li>
+                        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg><span>Uber-level reliability required resilient hosting beyond custom infrastructure.</span></li>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="rounded-4 overflow-hidden shadow-sm bg-white p-4 text-center">
-                    <img src="https://hj5v68xn.media.zestyio.com/cornershop-app-1200x642-1-800x500.jpg" alt="Cornershop mobile app" class="img-fluid">
+                <div>
+                  <div class="rounded-3xl overflow-hidden shadow-sm bg-white p-4 text-center">
+                    <img src="https://hj5v68xn.media.zestyio.com/cornershop-app-1200x642-1-800x500.jpg" alt="Cornershop mobile app" class="w-full">
                   </div>
                 </div>
               </div>
@@ -174,260 +125,137 @@
 
             {{include /components/casestudy/sliver-cta.html}}
 
-            <section id="cornershop-solution" class="py-5 border-bottom fade-section">
-              <div class="row g-4">
-                <div class="col-lg-7">
-                  <h3 class="h2 mb-3">The solution</h3>
-                  <p class="text-grey mb-4">Content.One became the backbone for Cornershop’s global content operations, combining native hosting, automated optimization, and true multi-site control.</p>
-                  <ul class="list-unstyled d-grid gap-3 text-grey">
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-diagram-3 text-primary fs-4"></i>
-                      <span>Multi-site, multi-language architecture with independent records prevents missing assets.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-lightning-charge text-primary fs-4"></i>
-                      <span>Automated CSS/JS optimization and image conversions keep recipe content fast and accessible.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-hdd-network text-primary fs-4"></i>
-                      <span>Native hosting and deployment meets 99.999% uptime expectations.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-megaphone text-primary fs-4"></i>
-                      <span>Schema.org support powers accessibility and rich search results.</span>
-                    </li>
+            <section id="cornershop-solution" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-7">
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">The solution</h3>
+                  <p class="text-gray-600 mb-4">Content.One became the backbone for Cornershop's global content operations, combining native hosting, automated optimization, and true multi-site control.</p>
+                  <ul class="grid gap-3 text-gray-600">
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Multi-site, multi-language architecture with independent records prevents missing assets.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg><span>Automated CSS/JS optimization and image conversions keep recipe content fast and accessible.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="6" width="20" height="6" rx="1"/><rect x="2" y="14" width="20" height="6" rx="1"/><circle cx="6" cy="9" r="1" fill="currentColor"/><circle cx="6" cy="17" r="1" fill="currentColor"/></svg><span>Native hosting and deployment meets 99.999% uptime expectations.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11l18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span>Schema.org support powers accessibility and rich search results.</span></li>
                   </ul>
                 </div>
-                <div class="col-lg-5">
-                  <div class="card border-0 shadow-lg h-100 cornershop-solution-card text-white">
-                    <div class="card-body d-flex flex-column gap-3">
-                      <h4 class="h5 text-uppercase text-white-75 mb-0">Migration highlights</h4>
-                      <p class="mb-0">A 60-day migration moved legacy content into Content.One while enabling a redesigned blog and campaign structure.</p>
-                      <div class="d-flex gap-3 align-items-start">
-                        <div class="badge rounded-circle bg-white text-primary fw-semibold p-3">60</div>
-                        <span class="text-white-75">Days from project kickoff to launch.</span>
-                      </div>
-                      <div class="d-flex gap-3 align-items-start">
-                        <div class="badge rounded-circle bg-white text-primary fw-semibold p-3">0</div>
-                        <span class="text-white-75">Engineering hours spent maintaining custom infrastructure post-launch.</span>
-                      </div>
+                <div class="lg:col-span-5">
+                  <div class="shadow-lg h-full cornershop-solution-card text-white rounded-2xl">
+                    <div class="p-6 flex flex-col gap-3">
+                      <h4 class="text-sm uppercase text-white/75 m-0 font-semibold">Migration highlights</h4>
+                      <p class="m-0">A 60-day migration moved legacy content into Content.One while enabling a redesigned blog and campaign structure.</p>
+                      <div class="flex gap-3 items-start"><div class="rounded-full bg-white text-royal font-semibold px-3 py-1.5 shrink-0 text-sm">60</div><span class="text-white/75">Days from project kickoff to launch.</span></div>
+                      <div class="flex gap-3 items-start"><div class="rounded-full bg-white text-royal font-semibold px-3 py-1.5 shrink-0 text-sm">0</div><span class="text-white/75">Engineering hours spent maintaining custom infrastructure post-launch.</span></div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="cornershop-languages" class="py-5 border-bottom fade-section">
-              <h3 class="h2 mb-4">Languages supported</h3>
-              <p class="text-grey mb-4">Cornershop’s blogs and landing pages run in ten languages across North and Latin America, each with localized SEO configurations.</p>
-              <div class="card border-0 shadow-sm">
-                <div class="card-body">
-                  <div class="row row-cols-1 row-cols-md-2 row-cols-xl-5 g-3 text-center text-grey">
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">English</p>
-                        <p class="small mb-0 text-muted">United States</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">United States</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">French</p>
-                        <p class="small mb-0 text-muted">Canada</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">English</p>
-                        <p class="small mb-0 text-muted">Canada</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">Mexico</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">Colombia</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">Chile</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">Peru</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Portuguese</p>
-                        <p class="small mb-0 text-muted">Brazil</p>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="p-3 border rounded-4 h-100">
-                        <p class="fw-semibold mb-1">Spanish</p>
-                        <p class="small mb-0 text-muted">Costa Rica</p>
-                      </div>
-                    </div>
+            <section id="cornershop-languages" class="py-10 border-b border-gray-200 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-4">Languages supported</h3>
+              <p class="text-gray-600 mb-4">Cornershop's blogs and landing pages run in ten languages across North and Latin America, each with localized SEO configurations.</p>
+              <div class="bg-white shadow-sm rounded-2xl">
+                <div class="p-6">
+                  <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-3 text-center text-gray-600">
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">English</p><p class="text-xs m-0 text-gray-500">United States</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">United States</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">French</p><p class="text-xs m-0 text-gray-500">Canada</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">English</p><p class="text-xs m-0 text-gray-500">Canada</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">Mexico</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">Colombia</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">Chile</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">Peru</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Portuguese</p><p class="text-xs m-0 text-gray-500">Brazil</p></div>
+                    <div class="p-3 border border-gray-200 rounded-2xl h-full"><p class="font-semibold mb-1">Spanish</p><p class="text-xs m-0 text-gray-500">Costa Rica</p></div>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="cornershop-results" class="py-5 fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                  <div class="rounded-4 overflow-hidden shadow-lg cornershop-image-frame">
-                    <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" alt="Cornershop results" class="w-100 h-100 object-fit-cover">
+            <section id="cornershop-results" class="py-10 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div>
+                  <div class="rounded-3xl overflow-hidden shadow-lg cornershop-image-frame">
+                    <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" alt="Cornershop results" class="w-full h-full object-cover">
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <h3 class="h2 mb-3">The results</h3>
-                  <p class="text-grey mb-3">Within 60 days, Cornershop relaunched their blogs and landing pages on Content.One. Teams now publish campaigns and recipes without waiting on development sprints.</p>
-                  <div class="card border-0 shadow-sm mb-4">
-                    <div class="card-body d-flex gap-3 align-items-center">
-                      <div class="badge rounded-circle bg-primary text-white fw-semibold p-3">60</div>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">The results</h3>
+                  <p class="text-gray-600 mb-3">Within 60 days, Cornershop relaunched their blogs and landing pages on Content.One. Teams now publish campaigns and recipes without waiting on development sprints.</p>
+                  <div class="bg-white shadow-sm rounded-2xl mb-4">
+                    <div class="p-6 flex gap-3 items-center">
+                      <div class="rounded-full bg-royal text-white font-semibold px-3 py-1.5 shrink-0 text-sm">60</div>
                       <div>
-                        <p class="mb-1 text-grey fw-semibold">Days from migration to go-live</p>
-                        <p class="mb-0 text-muted small">Global content strategy unlocked for Uber’s markets.</p>
+                        <p class="mb-1 text-gray-600 font-semibold">Days from migration to go-live</p>
+                        <p class="m-0 text-gray-500 text-xs">Global content strategy unlocked for Uber's markets.</p>
                       </div>
                     </div>
                   </div>
-                  <p class="text-grey mb-4">Next, Cornershop will extend Content.One’s headless capabilities to mobile apps, ensuring consistent experiences across every digital touchpoint.</p>
-                  <div class="d-flex flex-wrap gap-3">
-                    <a href="/contact/" class="btn btn-primary btn-lg">Talk to Content.One</a>
-                    <a href="/customers/" class="btn btn-outline-primary btn-lg">Discover more stories</a>
+                  <p class="text-gray-600 mb-4">Next, Cornershop will extend Content.One's headless capabilities to mobile apps, ensuring consistent experiences across every digital touchpoint.</p>
+                  <div class="flex flex-wrap gap-3">
+                    <a href="/contact/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-5 py-3 transition">Talk to Content.One</a>
+                    <a href="/customers/" class="inline-flex items-center rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-5 py-3 transition">Discover more stories</a>
                   </div>
                 </div>
               </div>
             </section>
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white text-center position-relative overflow-hidden">
-    <div class="container py-5 position-relative z-2">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-4">“Content.One gives us the freedom to launch in every market without limits.”</h2>
-          <p class="lead text-white-75 mb-5">Cornershop delivers recipes, offers, and onboarding content in record time — and keeps expanding with Uber’s platform.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a class="btn btn-light btn-lg text-primary" href="/book-a-demo/">Book a consultation</a>
-            <a class="btn btn-outline-light btn-lg" href="/solutions/">See the platform</a>
+  <section class="py-16 bg-gray-900 text-white text-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <div class="flex justify-center">
+        <div class="lg:max-w-3xl">
+          <h2 class="text-3xl md:text-5xl font-display font-semibold mb-4">"Content.One gives us the freedom to launch in every market without limits."</h2>
+          <p class="text-lg text-white/75 mb-8">Cornershop delivers recipes, offers, and onboarding content in record time — and keeps expanding with Uber's platform.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition" href="/book-a-demo/">Book a consultation</a>
+            <a class="inline-flex items-center rounded-lg border border-white text-white hover:bg-white/10 font-semibold px-6 py-3 transition" href="/solutions/">See the platform</a>
           </div>
         </div>
       </div>
     </div>
-    <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" class="position-absolute z-0 bottom-0 start-50 translate-middle-x opacity-25 w-100" alt="Cornershop grocery background">
+    <img src="https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png" class="absolute z-0 bottom-0 left-1/2 -translate-x-1/2 opacity-25 w-full" alt="Cornershop grocery background">
   </section>
 </div>
 
 <style>
   .cornershop-case-study .cornershop-hero-foreground,
-  .cornershop-case-study .cornershop-hero-media {
-    position: relative;
-    z-index: 2;
-  }
-  .cornershop-case-study .cornershop-hero-glow {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    max-width: 760px;
-    pointer-events: none;
-    z-index: 1;
-  }
+  .cornershop-case-study .cornershop-hero-media { position: relative; z-index: 2; }
+  .cornershop-case-study .cornershop-hero-glow { position: absolute; top: 0; bottom: 0; right: 0; width: 60%; max-width: 760px; pointer-events: none; z-index: 1; }
   .cornershop-case-study .cornershop-hero-glow__image {
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100%;
     background-image: linear-gradient(90deg, rgba(16, 29, 41, 0) 0%, rgba(16, 29, 41, 0) 25%, rgba(16, 29, 41, 0.6) 55%, rgba(16, 29, 41, 0.9) 100%), url('https://hj5v68xn.media.zestyio.com/cornershop-uber-background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.75;
-    border-top-left-radius: 32px;
+    background-size: cover; background-position: center; background-repeat: no-repeat;
+    opacity: 0.75; border-top-left-radius: 32px;
   }
-  .cornershop-case-study .fade-section {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .6s ease, transform .6s ease;
-    scroll-margin-top: 160px;
-  }
-  .cornershop-case-study .fade-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .bg-gradient-cornershop {
-    background: linear-gradient(135deg, #10212e 0%, #1b3f53 40%, #2db573 100%);
-  }
-  .cornershop-case-study .quote-card {
-    border-radius: 1rem;
-  }
-  .cornershop-case-study .quote-text {
-    font-size: 1.05rem;
-    font-style: italic;
-  }
-  .cornershop-case-study .quote-meta {
-    font-size: 0.9rem;
-    color: #555;
-    text-transform: none;
-  }
-  .cornershop-case-study .cornershop-image-frame img {
-    transition: transform .6s ease;
-  }
-  .cornershop-case-study .cornershop-image-frame:hover img {
-    transform: scale(1.03);
-  }
-  .cornershop-solution-card {
-    background: linear-gradient(145deg, rgba(45, 181, 115, 0.8) 0%, rgba(16, 29, 41, 0.9) 100%);
-  }
-  @media (max-width: 991.98px) {
-    .cornershop-case-study .cornershop-hero-glow {
-      display: none;
-    }
-  }
+  .cornershop-case-study .fade-section { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; scroll-margin-top: 160px; }
+  .cornershop-case-study .fade-section.is-visible { opacity: 1; transform: translateY(0); }
+  .bg-gradient-cornershop { background: linear-gradient(135deg, #10212e 0%, #1b3f53 40%, #2db573 100%); }
+  .cornershop-case-study .nav-link.active { background: rgba(66, 85, 189, 0.1); color: #4255BD; font-weight: 600; }
+  .cornershop-case-study .quote-text { font-size: 1.05rem; font-style: italic; }
+  .cornershop-case-study .quote-meta { font-size: 0.9rem; color: #555; text-transform: none; }
+  .cornershop-case-study .cornershop-image-frame img { transition: transform .6s ease; }
+  .cornershop-case-study .cornershop-image-frame:hover img { transform: scale(1.03); }
+  .cornershop-solution-card { background: linear-gradient(145deg, rgba(45, 181, 115, 0.8) 0%, rgba(16, 29, 41, 0.9) 100%); }
+  @media (max-width: 991.98px) { .cornershop-case-study .cornershop-hero-glow { display: none; } }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var sectionsEl = document.getElementById('cornershopSections');
-    if (sectionsEl) {
-      new bootstrap.ScrollSpy(sectionsEl, {
-        target: '#cornershopNav',
-        offset: 180
-      });
+    if (sectionsEl && typeof bootstrap !== 'undefined') {
+      new bootstrap.ScrollSpy(sectionsEl, { target: '#cornershopNav', offset: 180 });
     }
-
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.2 });
-
-    document.querySelectorAll('.cornershop-case-study .fade-section').forEach(function (section) {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll('.cornershop-case-study .fade-section').forEach(function (section) { observer.observe(section); });
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -437,38 +265,24 @@
           var suffix = el.getAttribute('data-cornershop-suffix') || '';
           var prefix = el.getAttribute('data-cornershop-prefix') || '';
           var format = el.getAttribute('data-cornershop-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
+          var duration = 1600; var startTimestamp = null;
           var step = function (timestamp) {
             if (!startTimestamp) startTimestamp = timestamp;
             var progress = Math.min((timestamp - startTimestamp) / duration, 1);
             var value = progress * endValue;
-            var display;
-            if (format === 'decimal') {
-              display = value.toFixed(3);
-            } else {
-              display = Math.floor(value).toLocaleString();
-            }
+            var display = format === 'decimal' ? value.toFixed(3) : Math.floor(value).toLocaleString();
             el.textContent = prefix + display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(3)
-                : Math.round(endValue).toLocaleString();
+            if (progress < 1) { window.requestAnimationFrame(step); }
+            else {
+              var finalValue = format === 'decimal' ? endValue.toFixed(3) : Math.round(endValue).toLocaleString();
               el.textContent = prefix + finalValue + suffix;
             }
           };
-
           window.requestAnimationFrame(step);
           counterObserver.unobserve(el);
         }
       });
     }, { threshold: 0.4 });
-
-    document.querySelectorAll('[data-cornershop-count]').forEach(function (counter) {
-      counterObserver.observe(counter);
-    });
+    document.querySelectorAll('[data-cornershop-count]').forEach(function (counter) { counterObserver.observe(counter); });
   });
 </script>
