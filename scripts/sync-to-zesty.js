@@ -124,7 +124,9 @@ async function fetchInstanceCode(status) {
       if (!res.ok) continue;
       const json = await res.json();
       for (const item of json.data || []) {
-        if (item && item.ZUID && typeof item.code === 'string') map.set(item.ZUID, item.code);
+        if (item && item.ZUID && typeof item.code === 'string') {
+          map.set(item.ZUID, { code: item.code, version: item.version });
+        }
       }
     } catch {
       /* leave map partial */
@@ -245,7 +247,7 @@ async function saveDevItem(item, devMap) {
   const dry = DRY_RUN ? '[dry-run] ' : '';
   if (devMap) {
     const current = devMap.get(item.zuid);
-    if (current !== undefined && norm(current) === norm(code)) {
+    if (current && norm(current.code) === norm(code)) {
       console.log(`✓ ${dry}Unchanged, skip ${rel} → ${item.endpoint}/${item.zuid}`);
       return null;
     }
@@ -267,20 +269,24 @@ async function publishItem(item, devMap, liveMap) {
     console.warn(`⚠️  ${dry}No dev/live data (token?), skip ${rel}`);
     return null;
   }
-  const devCode = devMap.get(item.zuid);
-  if (devCode === undefined) {
+  const dev = devMap.get(item.zuid);
+  if (!dev) {
     console.warn(`⚠️  ${dry}Not on dev yet — promote via stage, skip ${rel} → ${item.zuid}`);
     return null;
   }
-  const liveCode = liveMap.get(item.zuid);
-  if (liveCode !== undefined && norm(liveCode) === norm(devCode)) {
+  const live = liveMap.get(item.zuid);
+  if (live && norm(live.code) === norm(dev.code)) {
     console.log(`✓ ${dry}Already live, skip ${rel} → ${item.endpoint}/${item.zuid}`);
     return null;
   }
-  console.log(`🚀 ${dry}Publish dev→live ${rel} → ${item.endpoint}/${item.zuid}`);
+  if (dev.version === undefined || dev.version === null) {
+    console.warn(`⚠️  ${dry}No dev version number, skip ${rel} → ${item.zuid}`);
+    return null;
+  }
+  console.log(`🚀 ${dry}Publish v${dev.version} (dev→live) ${rel} → ${item.endpoint}/${item.zuid}`);
   if (!DRY_RUN) {
-    // Publish the dev version as-is (no repo content is introduced on production).
-    await apiRequest('PUT', `/web/${item.endpoint}/${item.zuid}?action=publish&purge_cache=true`, { code: devCode });
+    // Publish the existing dev version by number — no re-save, no new version.
+    await apiRequest('POST', `/web/${item.endpoint}/${item.zuid}/versions/${dev.version}?purge_cache=true`, {});
   }
   return rel;
 }
