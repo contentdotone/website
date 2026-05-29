@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub → Zesty WebEngine · Git-native content deployment</title>
+  <meta name="description" content="How the GitHub → Zesty.io deployment integration works: branch-based promotion, webengine previews, PR impact comments, and hybrid save/publish sync." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['"Bricolage Grotesque"', 'sans-serif'],
+            sans: ['"IBM Plex Sans"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          colors: {
+            ink: '#070b0a',
+            panel: '#0f1614',
+            panel2: '#141d1a',
+            line: 'rgba(198,242,78,0.14)',
+            lime: '#c6f24e',
+            amber: '#ffb86b',
+            sky: '#7ad7f0',
+            chalk: '#e9f0ea',
+            muted: '#8a988f',
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+    :root { color-scheme: dark; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: #070b0a;
+      background-image:
+        linear-gradient(rgba(198,242,78,0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(198,242,78,0.05) 1px, transparent 1px),
+        radial-gradient(1200px 600px at 80% -10%, rgba(198,242,78,0.10), transparent 60%),
+        radial-gradient(900px 500px at -10% 20%, rgba(122,215,240,0.07), transparent 55%);
+      background-size: 44px 44px, 44px 44px, 100% 100%, 100% 100%;
+    }
+    /* grain overlay */
+    body::before {
+      content: "";
+      position: fixed; inset: 0; z-index: 1; pointer-events: none; opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+    .wrap { position: relative; z-index: 2; }
+
+    @keyframes rise { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
+    .rise { opacity: 0; animation: rise 0.7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @media (prefers-reduced-motion: reduce) { .rise { animation: none; opacity: 1; } }
+
+    .hairline { border: 1px solid rgba(198,242,78,0.14); }
+    .glow { box-shadow: 0 0 0 1px rgba(198,242,78,0.18), 0 30px 80px -40px rgba(198,242,78,0.35); }
+    .tick { background-image: repeating-linear-gradient(90deg, rgba(198,242,78,0.25) 0 1px, transparent 1px 10px); }
+    mark { background: rgba(198,242,78,0.18); color: #eaffc2; padding: 0 .25em; border-radius: 3px; }
+    .lift { transition: transform .25s ease, border-color .25s ease, background .25s ease; }
+    .lift:hover { transform: translateY(-4px); border-color: rgba(198,242,78,0.45); background: #141d1a; }
+  </style>
+</head>
+
+<body class="font-sans text-chalk antialiased selection:bg-lime selection:text-ink">
+<div class="wrap">
+
+  <!-- ░░ NAV ░░ -->
+  <header class="max-w-6xl mx-auto px-6 pt-7 flex items-center justify-between text-sm">
+    <div class="font-mono tracking-tight text-chalk flex items-center gap-2">
+      <span class="inline-block w-2.5 h-2.5 bg-lime rounded-full"></span>
+      git<span class="text-muted">·</span>zesty
+    </div>
+    <nav class="hidden sm:flex gap-7 font-mono text-xs text-muted uppercase tracking-widest">
+      <a href="#flow" class="hover:text-lime transition">Flow</a>
+      <a href="#setup" class="hover:text-lime transition">Setup</a>
+      <a href="#hybrid" class="hover:text-lime transition">Hybrid</a>
+      <a href="#cicd" class="hover:text-lime transition">CI/CD</a>
+    </nav>
+  </header>
+
+  <!-- ░░ HERO ░░ -->
+  <section class="max-w-6xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-24">
+    <p class="rise font-mono text-xs uppercase tracking-[0.35em] text-lime" style="animation-delay:.05s">
+      GitHub Actions → Zesty.io WebEngine
+    </p>
+    <h1 class="rise font-display font-extrabold leading-[0.92] tracking-tight mt-6 text-[13vw] md:text-[8.5rem]"
+        style="animation-delay:.12s">
+      Ship your<br />
+      <span class="text-lime">site like</span><br />
+      software.
+    </h1>
+    <p class="rise max-w-2xl text-lg md:text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.2s">
+      A git-native pipeline that treats your Zesty content as code. Branch it, preview it,
+      review the exact impact on a PR, then promote <span class="text-chalk font-medium">local → stage → production</span> —
+      where only what genuinely changed ever gets written or published.
+    </p>
+    <div class="rise mt-10 flex flex-wrap gap-3 font-mono text-xs" style="animation-delay:.28s">
+      <span class="hairline rounded-full px-4 py-2 text-lime">push → auto-sync</span>
+      <span class="hairline rounded-full px-4 py-2 text-sky">per-branch previews</span>
+      <span class="hairline rounded-full px-4 py-2 text-amber">PR impact comments</span>
+      <span class="hairline rounded-full px-4 py-2 text-chalk">publish only real diffs</span>
+    </div>
+  </section>
+
+  <!-- ░░ 01 · WHAT IT IS ░░ -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-4">
+        <span class="font-mono text-xs text-lime">01</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">What it is</h2>
+      </div>
+      <div class="md:col-span-8 space-y-5 text-muted text-lg leading-relaxed">
+        <p>
+          The <span class="text-chalk">webengine/</span> folder of this repo is the source of truth for the
+          Zesty instance. A GitHub Action maps every file to its Zesty resource by ZUID
+          (<span class="font-mono text-sm text-chalk">zesty.config.json</span>) and syncs it over the Instance API.
+        </p>
+        <p>
+          You stop copy-pasting code into the Zesty Manager. Instead you work in git, open a pull request,
+          see a comment spelling out <em class="text-chalk not-italic">exactly</em> what the merge will change,
+          and promote through branches. The CMS becomes a deploy target — versioned, reviewable, reversible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ 02 · THE FLOW ░░ -->
+  <section id="flow" class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <span class="font-mono text-xs text-lime">02</span>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">The promotion flow</h2>
+    <p class="text-muted mt-3 max-w-2xl">Three branches, two gates. Each step is previewable before it acts.</p>
+
+    <div class="grid md:grid-cols-3 gap-4 mt-10 font-mono text-sm">
+      <!-- local -->
+      <div class="lift hairline rounded-2xl p-6 bg-panel">
+        <div class="flex items-center justify-between">
+          <span class="text-chalk text-lg">local</span>
+          <span class="text-xs text-muted">work branch</span>
+        </div>
+        <p class="text-muted mt-4 leading-relaxed font-sans">Where you build. No automation runs here — but the branch is still live-previewable.</p>
+      </div>
+      <!-- stage -->
+      <div class="lift hairline rounded-2xl p-6 bg-panel">
+        <div class="flex items-center justify-between">
+          <span class="text-sky text-lg">stage</span>
+          <span class="text-xs text-muted">save · no publish</span>
+        </div>
+        <p class="text-muted mt-4 leading-relaxed font-sans">Merging a PR here <span class="text-chalk">saves</span> changed files to the instance's dev version. Preview, then promote.</p>
+      </div>
+      <!-- production -->
+      <div class="lift hairline rounded-2xl p-6 bg-panel">
+        <div class="flex items-center justify-between">
+          <span class="text-lime text-lg">production</span>
+          <span class="text-xs text-muted">save + publish</span>
+        </div>
+        <p class="text-muted mt-4 leading-relaxed font-sans">Merging here <span class="text-chalk">publishes live</span> — but only the resources that actually differ from what's already published.</p>
+      </div>
+    </div>
+
+    <div class="mt-6 font-mono text-xs text-muted flex flex-wrap items-center gap-3">
+      <span class="text-chalk">local</span><span class="text-lime">──PR──▶</span>
+      <span class="text-sky">stage</span><span class="text-lime">──PR──▶</span>
+      <span class="text-lime">production</span>
+      <span class="ml-2 h-px w-16 tick"></span>
+      <span>every arrow gets an impact comment</span>
+    </div>
+  </section>
+
+  <!-- ░░ 03 · SETUP / KEYS ░░ -->
+  <section id="setup" class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-4">
+        <span class="font-mono text-xs text-lime">03</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">Setup &amp; keys</h2>
+        <p class="text-muted mt-3">Two secrets and three branches. That's the whole footprint.</p>
+      </div>
+      <div class="md:col-span-8 space-y-6">
+
+        <div class="hairline rounded-2xl bg-panel overflow-hidden">
+          <div class="px-5 py-3 border-b border-line font-mono text-xs text-muted flex items-center gap-2">
+            <span class="w-2 h-2 rounded-full bg-amber"></span>
+            GitHub → Settings → Secrets and variables → Actions
+          </div>
+          <div class="p-5 font-mono text-sm space-y-3">
+            <div>
+              <span class="text-lime">ZESTY_INSTANCE_ZUID</span>
+              <span class="text-muted"> = the instance id (e.g. </span><span class="text-chalk">8-xxxxxxxx-xxxxxx</span><span class="text-muted">)</span>
+            </div>
+            <div>
+              <span class="text-lime">ZESTY_DEVELOPER_TOKEN</span>
+              <span class="text-muted"> = an instance API token with </span><span class="text-chalk">write</span><span class="text-muted"> access</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-3 gap-4 font-mono text-sm">
+          <div class="hairline rounded-xl p-4 bg-panel"><span class="text-chalk">contents: write</span><p class="font-sans text-muted text-xs mt-2">so the Action can commit new-resource ZUIDs back</p></div>
+          <div class="hairline rounded-xl p-4 bg-panel"><span class="text-chalk">pull-requests: write</span><p class="font-sans text-muted text-xs mt-2">so it can post the impact comment</p></div>
+          <div class="hairline rounded-xl p-4 bg-panel"><span class="text-chalk">branches</span><p class="font-sans text-muted text-xs mt-2">local · stage · production</p></div>
+        </div>
+
+        <div class="hairline rounded-2xl bg-panel overflow-hidden">
+          <div class="px-5 py-3 border-b border-line font-mono text-xs text-muted">.github/workflows/</div>
+          <div class="p-5 font-mono text-xs leading-relaxed">
+            <div><span class="text-amber">zesty-deploy.yml</span><span class="text-muted">      on: push → [stage, production]   # the real sync (writes)</span></div>
+            <div><span class="text-sky">zesty-pr-preview.yml</span><span class="text-muted">  on: pull_request → [stage, production]   # read-only impact comment</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ 04 · PREVIEWS ░░ -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <div class="grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="font-mono text-xs text-lime">04</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">A live URL for every branch</h2>
+        <p class="text-muted mt-4 text-lg leading-relaxed">
+          Zesty's WebEngine serves each git branch at its own preview domain — pulled straight from GitHub.
+          Push a branch, open its URL, see the real rendered site before anything touches the instance.
+        </p>
+      </div>
+      <div class="hairline rounded-2xl bg-panel p-6 font-mono text-sm glow">
+        <div class="text-muted text-xs mb-3">// per-branch preview pattern</div>
+        <div class="text-chalk break-all">https://<span class="text-lime">&lt;hash&gt;</span>-<span class="text-amber">&lt;branch&gt;</span>.webengine.zesty.io</div>
+        <div class="mt-4 space-y-1 text-xs">
+          <div class="text-muted">…-<span class="text-amber">local</span>.webengine.zesty.io</div>
+          <div class="text-muted">…-<span class="text-amber">stage</span>.webengine.zesty.io</div>
+          <div class="text-muted">…-<span class="text-amber">github-integrations</span>.webengine.zesty.io <span class="text-lime">← this page</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ 05 · PR COMMENTS ░░ -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <span class="font-mono text-xs text-lime">05</span>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">The PR tells you what will happen</h2>
+    <p class="text-muted mt-3 max-w-2xl">Open a PR into stage or production and a read-only bot comment lands automatically — analyzing the diff against the instance, no writes.</p>
+
+    <div class="mt-8 hairline rounded-2xl bg-panel overflow-hidden glow">
+      <div class="px-5 py-3 border-b border-line font-mono text-xs text-muted flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-lime"></span> github-actions commented · auto-updates on every push
+      </div>
+      <div class="p-6 font-mono text-sm leading-relaxed">
+        <div class="text-chalk text-base">🚀 Production publish preview</div>
+        <div class="mt-4 text-muted"><span class="text-amber">New files to create (6):</span></div>
+        <div class="text-muted pl-3">• /components/product-section.html · /test.html · …</div>
+        <div class="mt-3 text-muted"><span class="text-lime">Will publish — differ from live (10):</span></div>
+        <div class="text-muted pl-3">• homepage · articles · hero-ai-cool.html · …</div>
+        <div class="mt-3 text-muted"><span class="text-sky">Already live, skipped:</span> 117</div>
+      </div>
+    </div>
+    <p class="text-muted text-sm mt-4 font-mono">PRs into <span class="text-sky">stage</span> show “added / updated vs dev” · PRs into <span class="text-lime">production</span> show “published vs live”.</p>
+  </section>
+
+  <!-- ░░ 06 · STAGE vs PROD ░░ -->
+  <section class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <span class="font-mono text-xs text-lime">06</span>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">Stage vs production</h2>
+    <div class="grid md:grid-cols-2 gap-4 mt-8">
+      <div class="lift hairline rounded-2xl p-7 bg-panel">
+        <div class="font-mono text-sky text-sm">PR ▶ stage</div>
+        <h3 class="font-display text-2xl font-bold mt-2">Save</h3>
+        <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+          <li><span class="text-chalk">→</span> writes changed files to the instance's <span class="text-chalk">dev</span> version</li>
+          <li><span class="text-chalk">→</span> compared against the current <span class="text-chalk">dev</span> content</li>
+          <li><span class="text-chalk">→</span> nothing goes live — preview on the stage domain</li>
+        </ul>
+      </div>
+      <div class="lift hairline rounded-2xl p-7 bg-panel">
+        <div class="font-mono text-lime text-sm">PR ▶ production</div>
+        <h3 class="font-display text-2xl font-bold mt-2">Save + publish</h3>
+        <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+          <li><span class="text-chalk">→</span> publishes changed files <span class="text-chalk">live</span> (+ purges cache)</li>
+          <li><span class="text-chalk">→</span> compared against the current <span class="text-chalk">live</span> version</li>
+          <li><span class="text-chalk">→</span> already-live, identical resources are skipped</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░ 07 · HYBRID SYNC ░░ -->
+  <section id="hybrid" class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <span class="font-mono text-xs text-lime">07</span>
+    <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">How the hybrid sync works</h2>
+    <p class="text-muted mt-3 max-w-2xl">Git tells us <em class="not-italic text-chalk">what was touched</em>; the API tells us <em class="not-italic text-chalk">what actually differs</em>. Only the intersection acts.</p>
+
+    <div class="grid md:grid-cols-4 gap-4 mt-10">
+      <div class="hairline rounded-2xl p-6 bg-panel">
+        <div class="font-mono text-2xl text-lime">01</div>
+        <h3 class="font-display text-xl font-bold mt-2">Candidate diff</h3>
+        <p class="text-muted text-sm mt-2 leading-relaxed">A git diff against the pre-push commit lists the files the merge changed.</p>
+      </div>
+      <div class="hairline rounded-2xl p-6 bg-panel">
+        <div class="font-mono text-2xl text-sky">02</div>
+        <h3 class="font-display text-xl font-bold mt-2">Status-aware compare</h3>
+        <p class="text-muted text-sm mt-2 leading-relaxed">Each candidate is fetched from the instance — <span class="text-chalk">dev</span> for stage, <span class="text-chalk">live</span> for production — and compared to the repo.</p>
+      </div>
+      <div class="hairline rounded-2xl p-6 bg-panel">
+        <div class="font-mono text-2xl text-amber">03</div>
+        <h3 class="font-display text-xl font-bold mt-2">Act on real diffs</h3>
+        <p class="text-muted text-sm mt-2 leading-relaxed">Identical resources are skipped. No needless saves, no blind republishing — and Manager-side drift is caught.</p>
+      </div>
+      <div class="hairline rounded-2xl p-6 bg-panel">
+        <div class="font-mono text-2xl text-chalk">04</div>
+        <h3 class="font-display text-xl font-bold mt-2">Auto-create new files</h3>
+        <p class="text-muted text-sm mt-2 leading-relaxed">A file with no ZUID yet is created in the instance and its new ZUID is written back to <span class="font-mono text-xs">zesty.config.json</span>.</p>
+      </div>
+    </div>
+
+    <div class="mt-8 hairline rounded-2xl bg-panel p-6 font-mono text-xs leading-relaxed glow">
+      <div class="text-muted">// a real production full-sync, with the hybrid in effect</div>
+      <div class="mt-2"><span class="text-lime">created 5</span> <span class="text-muted">·</span> <span class="text-amber">published 7</span> <span class="text-muted">(differ from live)</span> <span class="text-muted">·</span> <span class="text-sky">121 already-live → skipped</span></div>
+    </div>
+  </section>
+
+  <!-- ░░ 08 · TEAMS + CI/CD ░░ -->
+  <section id="cicd" class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <div class="grid md:grid-cols-12 gap-8">
+      <div class="md:col-span-4">
+        <span class="font-mono text-xs text-lime">08</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mt-3">Why teams want this</h2>
+      </div>
+      <div class="md:col-span-8 grid sm:grid-cols-2 gap-4">
+        <div class="hairline rounded-xl p-5 bg-panel lift"><h3 class="font-display text-lg font-bold">Review before live</h3><p class="text-muted text-sm mt-2">Previews + an impact comment mean no one publishes blind.</p></div>
+        <div class="hairline rounded-xl p-5 bg-panel lift"><h3 class="font-display text-lg font-bold">Only real changes ship</h3><p class="text-muted text-sm mt-2">Idempotent — re-running never republishes identical content.</p></div>
+        <div class="hairline rounded-xl p-5 bg-panel lift"><h3 class="font-display text-lg font-bold">Full audit trail</h3><p class="text-muted text-sm mt-2">Every content change is a commit, diffable and revertible.</p></div>
+        <div class="hairline rounded-xl p-5 bg-panel lift"><h3 class="font-display text-lg font-bold">Drift detection</h3><p class="text-muted text-sm mt-2">Edits made directly in the Manager surface as a diff.</p></div>
+      </div>
+    </div>
+
+    <div class="mt-12 hairline rounded-2xl bg-gradient-to-br from-panel to-panel2 p-8 md:p-10">
+      <h3 class="font-display text-2xl md:text-3xl font-bold">CI and CD, end to end</h3>
+      <p class="text-muted mt-4 max-w-3xl leading-relaxed text-lg">
+        Because every change is a PR, you get real CI/CD for a website CMS with nothing but GitHub Actions:
+      </p>
+      <div class="grid md:grid-cols-2 gap-4 mt-6 font-mono text-sm">
+        <div class="hairline rounded-xl p-5 bg-ink/40">
+          <span class="text-sky">CI</span> <span class="text-muted">— tests &amp; checks</span>
+          <p class="font-sans text-muted mt-2 leading-relaxed">Run linters, HTML/CSS validation, link checks, visual diffs or Lighthouse on the PR. Gate the merge on green.</p>
+        </div>
+        <div class="hairline rounded-xl p-5 bg-ink/40">
+          <span class="text-lime">CD</span> <span class="text-muted">— the save/publish sync</span>
+          <p class="font-sans text-muted mt-2 leading-relaxed">Merge is the deploy. Stage saves; production publishes — automatically, scoped to real diffs. Roll back by reverting a commit.</p>
+        </div>
+      </div>
+      <p class="text-muted mt-6 leading-relaxed">
+        Tests flow naturally into the same pipeline: a check on the PR, a preview URL to eyeball, an impact comment to confirm scope — then a one-merge deploy. Production-grade delivery, built into the website with ease.
+      </p>
+    </div>
+  </section>
+
+  <!-- ░░ FOOTER ░░ -->
+  <footer class="max-w-6xl mx-auto px-6 py-16 border-t border-line">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+      <div>
+        <div class="font-display text-3xl font-extrabold">git<span class="text-lime">·</span>zesty</div>
+        <p class="text-muted mt-2 max-w-md">Git-native content deployment for Zesty.io WebEngine — branch it, preview it, review it, publish only what changed.</p>
+      </div>
+      <div class="font-mono text-xs text-muted">
+        <div>local <span class="text-lime">→</span> stage <span class="text-lime">→</span> production</div>
+        <div class="mt-1">© <span id="yr"></span> · content.one</div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+</body>
+</html>
