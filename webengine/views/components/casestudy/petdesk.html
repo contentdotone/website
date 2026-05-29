@@ -1,97 +1,89 @@
+<!-- petdesk case study — Tailwind-converted.
+     Bootstrap layout/utilities → Tailwind; quote cards + counter animation
+     + scrollspy + fade-section JS preserved verbatim. data-bs-spy="scroll"
+     stays Bootstrap-driven; init guarded so missing Bootstrap JS degrades. -->
 <div class="petdesk-case-study">
-  <section class="py-6 py-lg-7 bg-gradient-petdesk text-white overflow-hidden position-relative">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5 petdesk-hero-foreground position-relative">
-        <div class="col-lg-6">
-          <span class="badge bg-white text-primary mb-3">Customer Highlight</span>
-          <h1 class="display-4 fw-bold mb-4 text-white">Content.One helps PetDesk launch hundreds of client sites without adding headcount.</h1>
-          <p class="lead text-white-75 mb-4">PetDesk powers pet care providers nationwide. With Content.One’s multisite platform, the team now delivers enterprise-quality websites alongside their engagement software — fast, scalable, and on brand.</p>
-          <div class="row row-cols-2 row-cols-sm-4 g-3 mt-5">
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-petdesk-count="350" data-petdesk-suffix="+">0</p>
-                  <p class="small text-white-75 mb-0">Client sites managed</p>
-                </div>
+
+  <!-- HERO -->
+  <section class="bg-gradient-petdesk text-white overflow-hidden relative py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center petdesk-hero-foreground relative">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Customer Highlight</span>
+          <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-white">Content.One helps PetDesk launch hundreds of client sites without adding headcount.</h1>
+          <p class="text-lg text-white/75 mb-4">PetDesk powers pet care providers nationwide. With Content.One's multisite platform, the team now delivers enterprise-quality websites alongside their engagement software — fast, scalable, and on brand.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+            <div class="bg-white border border-white/50 text-center rounded-xl">
+              <div class="p-3">
+                <p class="text-2xl font-bold m-0 text-royal" data-petdesk-count="350" data-petdesk-suffix="+">0</p>
+                <p class="text-xs text-gray-500 m-0">Client sites managed</p>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-petdesk-count="25" data-petdesk-suffix="%">0</p>
-                  <p class="small text-white-75 mb-0">Revenue lift per bundle</p>
-                </div>
+            <div class="bg-white border border-white/50 text-center rounded-xl">
+              <div class="p-3">
+                <p class="text-2xl font-bold m-0 text-royal" data-petdesk-count="25" data-petdesk-suffix="%">0</p>
+                <p class="text-xs text-gray-500 m-0">Revenue lift per bundle</p>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-petdesk-count="4" data-petdesk-suffix="×">0</p>
-                  <p class="small text-white-75 mb-0">Faster go-live</p>
-                </div>
+            <div class="bg-white border border-white/50 text-center rounded-xl">
+              <div class="p-3">
+                <p class="text-2xl font-bold m-0 text-royal" data-petdesk-count="4" data-petdesk-suffix="×">0</p>
+                <p class="text-xs text-gray-500 m-0">Faster go-live</p>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1"><span data-petdesk-count="0">0</span>x</p>
-                  <p class="small text-white-75 mb-0">Added headcount</p>
-                </div>
+            <div class="bg-white border border-white/50 text-center rounded-xl">
+              <div class="p-3">
+                <p class="text-2xl font-bold m-0 text-royal"><span data-petdesk-count="0">0</span>x</p>
+                <p class="text-xs text-gray-500 m-0">Added headcount</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden petdesk-hero-media">
-            <img src="{{this.header_image.getImage()}}" alt="PetDesk digital experience" class="w-100 h-100 object-fit-cover">
+        <div>
+          <div class="rounded-3xl shadow-lg overflow-hidden petdesk-hero-media aspect-video">
+            <img src="{{this.header_image.getImage()}}" alt="PetDesk digital experience" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="petdesk-hero-glow d-none d-lg-block">
+    <div class="petdesk-hero-glow hidden lg:block">
       <div class="petdesk-hero-glow__image"></div>
     </div>
   </section>
 
-  <section class="bg-light py-5 border-bottom">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-lg-5">
-          
-            <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <img src="{{this.logo.getImage()}}" class="w-100 d-block mx-auto" alt="{{this.name}}" />  
-              <div class="card quote-card border-0 bg-light mt-4">
-                <div class="card-body d-flex gap-3 align-items-center">
+  <!-- AT-A-GLANCE -->
+  <section class="bg-gray-50 py-12 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-5">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <img src="{{this.logo.getImage()}}" class="w-full block mx-auto" alt="{{this.name}}" />
+              <div class="quote-card mt-4">
+                <div class="card-body flex gap-3 items-center">
                   <img src="https://media.licdn.com/dms/image/v2/C4E03AQF-BikZUK3-qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581624830040?e=2147483647&v=beta&t=_VKL_m2O4zE0jN3nc7HskoeFdPWfHVToM1vbTv1maf4" alt="Taylor Cavanah" class="quote-avatar">
                   <div>
-                    <p class="quote-text">“Practically overnight we could make our customers happier while growing revenue. The Content.One integration is now a key differentiator in our sales pitch.”</p>
-                    <p class="quote-meta mb-0">Taylor Cavanah, CEO, PetDesk</p>
+                    <p class="quote-text">"Practically overnight we could make our customers happier while growing revenue. The Content.One integration is now a key differentiator in our sales pitch."</p>
+                    <p class="quote-meta m-0">Taylor Cavanah, CEO, PetDesk</p>
                   </div>
                 </div>
               </div>
-              
             </div>
           </div>
-          
         </div>
-        <div class="col-12 col-lg-7">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <h3 class="h5 text-primary text-uppercase mb-3">PetDesk at a glance</h3>
-              <p class="text-grey">Headquartered in San Diego, PetDesk improves the quality of life for pets by using technology to connect pet care providers and pet parents. Businesses rely on PetDesk’s software to manage scheduling, reminders, and communications — while pet parents enjoy 24/7 access to records and updates in one place.</p>
-              <div class="row row-cols-1 row-cols-sm-2 g-3 mt-3">
-                <div class="col">
-                  <div class="border rounded-4 p-3 h-100">
-                    <p class="fw-semibold text-primary mb-1">Challenge</p>
-                    <p class="text-grey mb-0">Clients struggled to maintain modern websites—outdated content, no internal teams, and brittle infrastructure slowed business growth.</p>
-                  </div>
+        <div class="lg:col-span-7">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <h3 class="text-base text-royal uppercase tracking-widest mb-3 font-semibold">PetDesk at a glance</h3>
+              <p class="text-gray-600">Headquartered in San Diego, PetDesk improves the quality of life for pets by using technology to connect pet care providers and pet parents. Businesses rely on PetDesk's software to manage scheduling, reminders, and communications — while pet parents enjoy 24/7 access to records and updates in one place.</p>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-3">
+                <div class="border border-gray-200 rounded-2xl p-3 h-full">
+                  <p class="font-semibold text-royal mb-1">Challenge</p>
+                  <p class="text-gray-600 m-0">Clients struggled to maintain modern websites—outdated content, no internal teams, and brittle infrastructure slowed business growth.</p>
                 </div>
-                <div class="col">
-                  <div class="border rounded-4 p-3 h-100">
-                    <p class="fw-semibold text-primary mb-1">Solution</p>
-                    <p class="text-grey mb-0">PetDesk partnered with Content.One to provide turnkey, multisite web experiences bundled with its engagement platform.</p>
-                  </div>
+                <div class="border border-gray-200 rounded-2xl p-3 h-full">
+                  <p class="font-semibold text-royal mb-1">Solution</p>
+                  <p class="text-gray-600 m-0">PetDesk partnered with Content.One to provide turnkey, multisite web experiences bundled with its engagement platform.</p>
                 </div>
               </div>
             </div>
@@ -101,51 +93,54 @@
     </div>
   </section>
 
-  <section class="py-5 py-lg-6">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3">
-          <div class="position-sticky" style="top: 6rem;">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-3">
-                <h2 class="h5 mb-3">Transformation Themes</h2>
-                <nav id="petdeskNav" class="nav nav-pills flex-column gap-2">
-                  <a class="nav-link active" href="#petdesk-revenue">New Revenue &amp; Value</a>
-                  <a class="nav-link" href="#petdesk-scale">Scalable Management</a>
-                  <a class="nav-link" href="#petdesk-templates">Templates &amp; Speed</a>
-                  <a class="nav-link" href="#petdesk-tailored">Tailored Experiences</a>
-                  <a class="nav-link" href="#petdesk-impact">Outcomes &amp; Next Steps</a>
+  <!-- MAIN CONTENT (scrollspy nav + sections) -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3">
+          <div class="sticky" style="top: 6rem;">
+            <div class="bg-white shadow-sm rounded-2xl border-0">
+              <div class="p-3">
+                <h2 class="text-base font-semibold mb-3">Transformation Themes</h2>
+                <nav id="petdeskNav" class="flex flex-col gap-2">
+                  <a class="nav-link active block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#petdesk-revenue">New Revenue &amp; Value</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#petdesk-scale">Scalable Management</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#petdesk-templates">Templates &amp; Speed</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#petdesk-tailored">Tailored Experiences</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#petdesk-impact">Outcomes &amp; Next Steps</a>
                 </nav>
               </div>
               {{include /components/casestudy/side-cta.html}}
             </div>
           </div>
         </div>
-        <div class="col-lg-9">
-          <div id="petdeskSections" data-bs-spy="scroll" data-bs-target="#petdeskNav" data-bs-offset="160" tabindex="0" class="pe-lg-3">
-            <section id="petdesk-revenue" class="py-5 border-bottom fade-section">
-              <h3 class="h2 mb-3">New Revenue &amp; Added Client Value</h3>
-              <p class="text-grey mb-4">PetDesk provides engagement tools and reminders for pet care businesses. Websites were often the missing link. By bundling Content.One-powered sites, PetDesk delivers a complete retention and acquisition solution — and opens a new revenue stream.</p>
-              <div class="card quote-card border-0 bg-light">
+
+        <div class="lg:col-span-9">
+          <div id="petdeskSections" data-bs-spy="scroll" data-bs-target="#petdeskNav" data-bs-offset="160" tabindex="0" class="lg:pr-3">
+
+            <section id="petdesk-revenue" class="py-10 border-b border-gray-200 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">New Revenue &amp; Added Client Value</h3>
+              <p class="text-gray-600 mb-4">PetDesk provides engagement tools and reminders for pet care businesses. Websites were often the missing link. By bundling Content.One-powered sites, PetDesk delivers a complete retention and acquisition solution — and opens a new revenue stream.</p>
+              <div class="quote-card">
                 <div class="card-body">
                   <img src="https://media.licdn.com/dms/image/v2/C4E03AQF-BikZUK3-qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581624830040?e=2147483647&v=beta&t=_VKL_m2O4zE0jN3nc7HskoeFdPWfHVToM1vbTv1maf4" alt="Taylor Cavanah" class="quote-avatar">
                   <div>
-                    <p class="quote-text">“Content.One enabled us to drive immediate revenue while providing tangible value to our customers. Practically overnight we could make our customers happier while growing revenue.”</p>
-                    <p class="quote-meta mb-0">Taylor Cavanah, CEO</p>
+                    <p class="quote-text">"Content.One enabled us to drive immediate revenue while providing tangible value to our customers. Practically overnight we could make our customers happier while growing revenue."</p>
+                    <p class="quote-meta m-0">Taylor Cavanah, CEO</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="petdesk-scale" class="py-5 border-bottom fade-section">
-              <h3 class="h2 mb-3">Scalable Multi-site Management</h3>
-              <p class="text-grey mb-4">No plugins or headaches. PetDesk doubled website builds and services using existing staff. Sales sold the bundled websites immediately while account managers fulfilled implementations in Content.One.</p>
-              <div class="card quote-card border-0 bg-light">
+            <section id="petdesk-scale" class="py-10 border-b border-gray-200 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Scalable Multi-site Management</h3>
+              <p class="text-gray-600 mb-4">No plugins or headaches. PetDesk doubled website builds and services using existing staff. Sales sold the bundled websites immediately while account managers fulfilled implementations in Content.One.</p>
+              <div class="quote-card">
                 <div class="card-body">
                   <img src="https://media.licdn.com/dms/image/v2/C4E03AQF-BikZUK3-qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581624830040?e=2147483647&v=beta&t=_VKL_m2O4zE0jN3nc7HskoeFdPWfHVToM1vbTv1maf4" alt="Taylor Cavanah" class="quote-avatar">
                   <div>
-                    <p class="quote-text">“The platform allowed us to double our website builds and services using our existing staff. Every account manager became proficient in a few days.”</p>
-                    <p class="quote-meta mb-0">Taylor Cavanah</p>
+                    <p class="quote-text">"The platform allowed us to double our website builds and services using our existing staff. Every account manager became proficient in a few days."</p>
+                    <p class="quote-meta m-0">Taylor Cavanah</p>
                   </div>
                 </div>
               </div>
@@ -153,80 +148,83 @@
 
             {{include /components/casestudy/sliver-cta.html}}
 
-            <section id="petdesk-templates" class="py-5 border-bottom fade-section">
-              <h3 class="h2 mb-3">Templates Drive Faster Success</h3>
-              <p class="text-grey mb-4">PetDesk leverages pre-built, industry-aligned templates combined with Content.One’s SaaS platform to spin up sites in seconds — not weeks or months.</p>
-              <div class="card quote-card border-0 bg-light">
+            <section id="petdesk-templates" class="py-10 border-b border-gray-200 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Templates Drive Faster Success</h3>
+              <p class="text-gray-600 mb-4">PetDesk leverages pre-built, industry-aligned templates combined with Content.One's SaaS platform to spin up sites in seconds — not weeks or months.</p>
+              <div class="quote-card">
                 <div class="card-body">
                   <img src="https://media.licdn.com/dms/image/v2/C4E03AQF-BikZUK3-qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581624830040?e=2147483647&v=beta&t=_VKL_m2O4zE0jN3nc7HskoeFdPWfHVToM1vbTv1maf4" alt="Taylor Cavanah" class="quote-avatar">
                   <div>
-                    <p class="quote-text">“Practically overnight we could make our customers happier while growing revenue. The Content.One integration is now a key differentiator in our sales pitch.”</p>
-                    <p class="quote-meta mb-0">Taylor Cavanah</p>
+                    <p class="quote-text">"Practically overnight we could make our customers happier while growing revenue. The Content.One integration is now a key differentiator in our sales pitch."</p>
+                    <p class="quote-meta m-0">Taylor Cavanah</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="petdesk-tailored" class="py-5 border-bottom fade-section">
-              <h3 class="h2 mb-3">Tailored to Our Customers</h3>
-              <p class="text-grey mb-4">Working alongside the Content.One team, PetDesk created unique website designs that match pet care demographics. Templates can be customized quickly, and new designs roll out without costly rebuilds.</p>
-              <div class="card quote-card border-0 bg-light">
+            <section id="petdesk-tailored" class="py-10 border-b border-gray-200 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Tailored to Our Customers</h3>
+              <p class="text-gray-600 mb-4">Working alongside the Content.One team, PetDesk created unique website designs that match pet care demographics. Templates can be customized quickly, and new designs roll out without costly rebuilds.</p>
+              <div class="quote-card">
                 <div class="card-body">
                   <img src="https://media.licdn.com/dms/image/v2/C4E03AQF-BikZUK3-qQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1581624830040?e=2147483647&v=beta&t=_VKL_m2O4zE0jN3nc7HskoeFdPWfHVToM1vbTv1maf4" alt="Taylor Cavanah" class="quote-avatar">
                   <div>
-                    <p class="quote-text">“When we started, we worked with Content.One’s team to create website designs that matched our customer demographic. There’s no limit to how many designs we can have, and they can be built quickly.”</p>
-                    <p class="quote-meta mb-0">Taylor Cavanah</p>
+                    <p class="quote-text">"When we started, we worked with Content.One's team to create website designs that matched our customer demographic. There's no limit to how many designs we can have, and they can be built quickly."</p>
+                    <p class="quote-meta m-0">Taylor Cavanah</p>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="petdesk-impact" class="py-5 fade-section">
-              <h3 class="h2 mb-3">Proven Results &amp; Next Steps</h3>
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                  <ul class="list-unstyled d-grid gap-2 text-grey mb-4">
+            <section id="petdesk-impact" class="py-10 fade-section">
+              <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Proven Results &amp; Next Steps</h3>
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
+                <div>
+                  <ul class="grid gap-2 text-gray-600 mb-4">
                     <li>100+ client websites managed without adding staff</li>
                     <li>+25% revenue increase when bundled with existing offerings</li>
                     <li>4× faster launches using SaaS templates</li>
                     <li>Clients gain a turnkey acquisition &amp; retention solution</li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <div class="card border-0 shadow-sm">
-                    <div class="card-body p-4 p-lg-5 text-center text-lg-start">
-                      <h4 class="h5 text-uppercase text-primary mb-3">Ready to scale multisite?</h4>
-                      <p class="text-grey mb-4">Bundle Content.One with your services to create new revenue streams and deliver consistent, on-brand digital experiences at scale.</p>
-                      <div class="d-flex flex-wrap justify-content-center justify-content-lg-start gap-3">
-                        <a href="/contact/" class="btn btn-primary btn-lg">Talk with our team</a>
-                        <a href="/solutions/" class="btn btn-outline-primary btn-lg">See platform features</a>
+                <div>
+                  <div class="bg-white shadow-sm rounded-2xl">
+                    <div class="p-6 lg:p-10 text-center lg:text-left">
+                      <h4 class="text-base uppercase text-royal mb-3 font-semibold">Ready to scale multisite?</h4>
+                      <p class="text-gray-600 mb-4">Bundle Content.One with your services to create new revenue streams and deliver consistent, on-brand digital experiences at scale.</p>
+                      <div class="flex flex-wrap justify-center lg:justify-start gap-3">
+                        <a href="/contact/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-5 py-3 transition">Talk with our team</a>
+                        <a href="/solutions/" class="inline-flex items-center rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-5 py-3 transition">See platform features</a>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+
           </div>
         </div>
       </div>
     </div>
-  </section> 
+  </section>
 
-  <section class="py-6 bg-dark  text-center position-relative overflow-hidden">
-    <div class="container py-5 position-relative z-2">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 text-white fw-semibold mb-4">“Content.One enables us to deliver digital value at scale — no plugins, no headaches, no new hires.”</h2>
-          <p class="lead text-white-75 mb-5">PetDesk and Content.One prove that multisite doesn’t have to be complicated. Launch faster, grow revenue, and keep your customers focused on caring for their communities.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a class="btn btn-light btn-lg text-primary" href="/customers/">Explore more stories</a>
-            <a class="btn btn-outline-light btn-lg" href="/contact/">Start a project</a>
+  <!-- FINAL CTA WITH QUOTE -->
+  <section class="py-16 bg-gray-900 text-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <div class="flex justify-center">
+        <div class="lg:max-w-3xl">
+          <h2 class="text-3xl md:text-5xl text-white font-display font-semibold mb-4">"Content.One enables us to deliver digital value at scale — no plugins, no headaches, no new hires."</h2>
+          <p class="text-lg text-white/75 mb-8">PetDesk and Content.One prove that multisite doesn't have to be complicated. Launch faster, grow revenue, and keep your customers focused on caring for their communities.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition" href="/customers/">Explore more stories</a>
+            <a class="inline-flex items-center rounded-lg border border-white text-white hover:bg-white/10 font-semibold px-6 py-3 transition" href="/contact/">Start a project</a>
           </div>
         </div>
-      </div>  
+      </div>
     </div>
-    <img src="https://hj5v68xn.media.zestyio.com/pauline-loroy-U3aF7hgUSrk-unsplash.jpg" class="position-absolute z-0 bottom-0 start-50 translate-middle-x opacity-25 w-100" alt="Pet care in action">
+    <img src="https://hj5v68xn.media.zestyio.com/pauline-loroy-U3aF7hgUSrk-unsplash.jpg" class="absolute z-0 bottom-0 left-1/2 -translate-x-1/2 opacity-25 w-full" alt="Pet care in action">
   </section>
+
 </div>
 
 <style>
@@ -274,6 +272,11 @@
   .bg-gradient-petdesk {
     background: linear-gradient(135deg, #051326 0%, #1c3d72 45%, #2a9df4 100%);
   }
+  .petdesk-case-study .nav-link.active {
+    background: rgba(66, 85, 189, 0.1);
+    color: #4255BD;
+    font-weight: 600;
+  }
   .quote-card {
     border-radius: 1rem;
     background: rgba(241, 245, 249, 0.88);
@@ -307,8 +310,9 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Bootstrap ScrollSpy — guard for missing Bootstrap JS during migration
     var sectionsEl = document.getElementById('petdeskSections');
-    if (sectionsEl) {
+    if (sectionsEl && typeof bootstrap !== 'undefined') {
       new bootstrap.ScrollSpy(sectionsEl, {
         target: '#petdeskNav',
         offset: 180
