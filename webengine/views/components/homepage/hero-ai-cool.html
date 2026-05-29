@@ -1,58 +1,71 @@
-<section class="hero-ai-cool position-relative overflow-hidden text-white pb-6 pb-lg-7  pt-3 pt-lg-4">
+<section class="hero-ai-cool position-relative overflow-hidden text-white pb-6 pb-lg-7 pt-3 pt-lg-4">
   <div class="hero-ai-cool__glow hero-ai-cool__glow--one" aria-hidden="true"></div>
-  <div class="hero-ai-cool__glow hero-ai-cool__glow--two" aria-hidden="true"></div> 
+  <div class="hero-ai-cool__glow hero-ai-cool__glow--two" aria-hidden="true"></div>
   <div class="container position-relative">
-    <span class="badge align-items-center p-2 pe-3 ps-3 fs-6 text-white border border-primary-subtle rounded-pill mb-2" style="background-color: rgba(0, 0, 0, 0.55);">Introducting Content.One</span>
-    <h1 class="display-4 h2 fw-semibold text-white mb-3">{{if {!this.main_h1_line} }}{{this.main_h1_line}}{{else}}One AI-Native Content Platform for the Entire Organization{{/if}}</h1>
-    <div class="row align-items-start g-5">
-      <div class="col-lg-5">
-        
-        <div class="h5 text-secondary mb-4">{{this.main_title_byline.striptags()}}</div>
-        <!-- <span class="badge bg-white text-primary mb-3">Hover to see Content.One Feature Spotlights</span> -->
-
-        <div class="hero-ai-feature-list" id="heroFeatureTabs" role="tablist" aria-label="Content.One feature previews">
-          <button type="button" class="hero-ai-feature-pill" role="tab" aria-selected="true" aria-controls="heroFeatureOverlay" data-feature="generative-ai-content-acceleration" data-feature-title="Generative AI Studio" data-feature-summary="AI prompts, localization, and governance." data-feature-description="Spin up channel-ready content with AI prompts, localization, and governance built directly into every workflow." data-feature-image="https://hj5v68xn.media.zestyio.com/Blocks.png" data-feature-alt="Generative AI experience inside Content.One" data-feature-link="/features/generative-ai-content-acceleration/" data-feature-accent="#6366f1">
-            <span class="hero-ai-feature-pill__label">Agentic Content and Page Building</span>
-            <span class="hero-ai-feature-pill__summary">Prompt AI to make content and pages with contextual.</span>
-          </button>
-          <button type="button" class="hero-ai-feature-pill" role="tab" aria-selected="false" aria-controls="heroFeatureOverlay" data-feature="webhooks-for-real-time-integrations" data-feature-title="Real-time Webhooks" data-feature-summary="Trigger downstream workflows instantly." data-feature-description="Keep every system in sync when content changes&mdash;trigger downstream workflows, alerts, and automations with zero polling." data-feature-image="https://hj5v68xn.media.zestyio.com/api-access-options.png" data-feature-alt="Webhook configuration in Content.One" data-feature-link="/features/webhooks-for-real-time-integrations/" data-feature-accent="#0ea5e9">
-            <span class="hero-ai-feature-pill__label">Headless APIs &amp; Real-time Webhooks</span>
-            <span class="hero-ai-feature-pill__summary">Custom apps, build integrations, trigger remote workflows.</span>
-          </button>
-          <button type="button" class="hero-ai-feature-pill" role="tab" aria-selected="false" aria-controls="heroFeatureOverlay" data-feature="visual-code-based-templating" data-feature-title="Visual + Code Templating" data-feature-summary="Reusable Blocks for marketers and devs." data-feature-description="Empower marketers with drag-and-drop Blocks while developers keep the underlying code, Git workflows, and environments in lockstep." data-feature-image="https://hj5v68xn.media.zestyio.com/Freestyle.HJeXgrY85gl.png" data-feature-alt="Visual and code templating workflow" data-feature-link="/features/visual-code-based-templating/" data-feature-accent="#f97316">
-            <span class="hero-ai-feature-pill__label">Visual Editing + Cascading Templating</span>
-            <span class="hero-ai-feature-pill__summary">Reusable Blocks for marketers and developers.</span>
-          </button>
-          <button type="button" class="hero-ai-feature-pill active" role="tab" aria-selected="false" aria-controls="heroFeatureOverlay" data-feature="audit-logs-and-activity-tracking" data-feature-title="Audit Logs &amp; Tracking" data-feature-summary="Every change captured in real time." data-feature-description="Stay compliant with exportable activity logs, side-by-side diffs, and instant rollbacks across every team and region." data-feature-image="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" data-feature-alt="Audit trail dashboard in Content.One" data-feature-link="/features/audit-logs-and-activity-tracking/" data-feature-accent="#14b8a6">
-            <span class="hero-ai-feature-pill__label">Marketing Analytics &amp; Audit Tracking</span>
-            <span class="hero-ai-feature-pill__summary">Analytics integrations, Every change captured in real time.</span>
-          </button>
-        </div> 
-      </div>
+    <div class="row align-items-center g-5">
+      <!-- Left Column -->
       <div class="col-lg-7">
-        <div class="hero-ai-gallery" data-feature-root>
-          <div class="hero-ai-gallery__backdrop" aria-hidden="true"></div>
-          <figure class="hero-ai-gallery__main shadow-lg" data-feature-frame>
-            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Generative AI experience inside Content.One" class="hero-ai-gallery__image" data-feature-image>
-            <figcaption class="visually-hidden" data-feature-caption>Content.One Generative AI Studio screenshot</figcaption>
-          </figure>
-          <!-- <div class="hero-ai-gallery__overlay" id="heroFeatureOverlay" data-feature-overlay role="tabpanel" aria-live="polite">
-            <div class="hero-ai-gallery__overlay-content">
-              <div class="hero-ai-gallery__overlay-title" data-feature-title-display>Generative AI Studio</div>
-              <p class="hero-ai-gallery__overlay-description mb-3" data-feature-description-display>Spin up channel-ready content with AI prompts, localization, and governance built directly into every workflow.</p>
-              <div class="hero-ai-gallery__overlay-actions">
-                <a href="/product-tour/generative-ai-content-acceleration/" class="btn btn-light btn-sm text-primary shadow-sm" data-feature-link>View feature spotlight</a>
-                <span class="hero-ai-gallery__overlay-status">
-                  <i class="bi bi-stars" aria-hidden="true"></i>
-                  <span data-feature-status>Preview sourced from “Generative AI Studio”</span>
-                </span>
-              </div>
+        <span class="hero-ai-cool__badge d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4">
+          <i class="bi bi-stars" aria-hidden="true"></i>
+          <span class="small fw-semibold">The intelligent alternative to legacy CMS</span>
+        </span>
+        <h1 class="hero-ai-cool__headline display-4 fw-bold text-white mb-4">Agentic Content Operations<br>
+          <span class="hero-ai-cool__headline-sub">for Franchises and <span class="text-primary">Multi-brand Organizations</span></span>
+        </h1>
+        <p class="lead mb-5" style="color:rgba(255,255,255,.7); max-width: 620px;">
+          Build with our on-demand engineers, orchestrate every experience with our headless APIs, and scale to new heights with our AI agents.
+        </p>
+        <div class="d-flex flex-wrap gap-3">
+          <a href="/contact-us/" class="btn btn-primary btn-lg rounded-pill px-4 fw-semibold">
+            Request Demo
+          </a>
+          <a href="/calculator/" class="btn btn-outline-light btn-lg rounded-pill px-4 fw-semibold">
+            Calculate Migration Cost
+          </a>
+        </div>
+      </div>
+      <!-- Right Column: Feature Cards -->
+      <div class="col-lg-5">
+        <div class="hero-ai-cool__card-stack d-flex flex-column gap-0">
+          <!-- Feature 1 -->
+          <div class="hero-ai-cool__feature-card d-flex align-items-start gap-3 p-4">
+            <div class="hero-ai-cool__icon hero-ai-cool__icon--purple d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-pencil-square fs-5"></i>
             </div>
-          </div> -->
-          <div class="hero-ai-gallery__trail" aria-hidden="true">
-            <div class="hero-ai-gallery__trail-item" data-trail-item></div>
-            <div class="hero-ai-gallery__trail-item" data-trail-item></div>
-            <div class="hero-ai-gallery__trail-item" data-trail-item></div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Agentic Website Building</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.6)">Your website builds itself. Describe what you need, and AI generates complete, on-brand pages instantly.</p>
+            </div>
+          </div>
+          <!-- Feature 2 -->
+          <div class="hero-ai-cool__feature-card d-flex align-items-start gap-3 p-4">
+            <div class="hero-ai-cool__icon hero-ai-cool__icon--blue d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-cpu fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Engineer On-Demand</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.6)">We embed real engineers with your team. No consultancy fees, no partner network guessing games.</p>
+            </div>
+          </div>
+          <!-- Feature 3 -->
+          <div class="hero-ai-cool__feature-card d-flex align-items-start gap-3 p-4">
+            <div class="hero-ai-cool__icon hero-ai-cool__icon--teal d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-heart fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">Personal &amp; Bespoke</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.6)">Configured for your exact workflow and brand. Support from actual humans who know your account.</p>
+            </div>
+          </div>
+          <!-- Feature 4 -->
+          <div class="hero-ai-cool__feature-card d-flex align-items-start gap-3 p-4">
+            <div class="hero-ai-cool__icon hero-ai-cool__icon--cyan d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
+              <i class="bi bi-lightning-charge fs-5"></i>
+            </div>
+            <div>
+              <h3 class="h6 fw-bold text-white mb-1">High-Performance APIs</h3>
+              <p class="mb-0 small" style="color:rgba(255,255,255,.6)">Lightning-fast GraphQL and REST APIs to deliver content seamlessly to any frontend.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -63,7 +76,6 @@
 <style>
   .hero-ai-cool {
     --hero-accent: #6366f1;
-    --hero-active-shadow: rgba(99, 102, 241, 0.45);
     background:
       radial-gradient(circle at top left, rgba(99, 102, 241, 0.25), transparent 45%),
       radial-gradient(circle at bottom right, rgba(14, 165, 233, 0.18), transparent 35%),
@@ -94,376 +106,74 @@
     top: -160px;
     right: 8%;
     background: rgba(99, 102, 241, 0.55);
-  } 
+  }
   .hero-ai-cool__glow--two {
     bottom: -200px;
     left: -120px;
     background: rgba(14, 165, 233, 0.45);
   }
-  .hero-ai-feature-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.85rem;
+
+  /* Badge */
+  .hero-ai-cool__badge {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #a78bfa;
   }
-  .hero-ai-feature-pill {
-    position: relative;
-    width: 100%;
-    text-align: left;
-    background: rgba(15, 23, 42, 0.55);
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    color: inherit;
+
+  /* Headline */
+  .hero-ai-cool__headline {
+    line-height: 1.1;
+  }
+  .hero-ai-cool__headline-sub {
+    font-size: inherit;
+  }
+
+  /* Card Stack */
+  .hero-ai-cool__card-stack {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 1.25rem;
-    padding: 1rem 1.25rem 1rem 1.15rem;
-    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease, box-shadow 0.3s ease;
-  }
-  .hero-ai-feature-pill:focus {
-    outline: none;
-    box-shadow: 0 0 0 0.2rem rgba(148, 163, 255, 0.25);
-  }
-  .hero-ai-feature-pill:hover,
-  .hero-ai-feature-pill:focus-visible {
-    border-color: rgba(255, 255, 255, 0.35);
-  }
-  .hero-ai-feature-pill.active {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0));
-    border-color: var(--hero-accent);
-    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08), 0 20px 40px -24px var(--hero-accent);
-  }
-  .hero-ai-feature-pill__label {
-    display: block;
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin-bottom: 0.15rem;
-  }
-  .hero-ai-feature-pill__summary {
-    display: block;
-    font-size: 0.9rem;
-    color: rgba(226, 232, 240, 0.78);
-  }
-  .hero-ai-gallery__overlay {
-    --hero-overlay-accent: var(--hero-accent);
-    position: absolute;
-    inset-inline: clamp(1.25rem, 4vw, 2.75rem);
-    bottom: clamp(1rem, 4vw, 2.5rem);
-    border-radius: 1.35rem;
-    padding: clamp(1.25rem, 3vw, 1.8rem) clamp(1.35rem, 3.5vw, 2rem);
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.05) 0%, rgba(15, 23, 42, 0.75) 70%, rgba(15, 23, 42, 0.92) 100%);
-    border: 1px solid rgba(148, 163, 184, 0.2);
-    border-inline-start: 3px solid var(--hero-overlay-accent);
-    backdrop-filter: blur(16px);
-    box-shadow: 0 24px 46px -36px rgba(15, 23, 42, 0.85);
-  }
-  .hero-ai-gallery__overlay-content {
-    color: #e2e8f0;
-  }
-  .hero-ai-gallery__overlay-title {
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #fff;
-    margin-bottom: 0.35rem;
-  }
-  .hero-ai-gallery__overlay-description {
-    color: rgba(248, 250, 252, 0.78);
-    font-size: 0.95rem;
-    line-height: 1.45;
-  }
-  .hero-ai-gallery__overlay-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.65rem 1rem;
-    align-items: center;
-  }
-  .hero-ai-gallery__overlay-actions .btn {
-    border-radius: 999px;
-  }
-  .hero-ai-gallery__overlay-status {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.85rem;
-    color: rgba(226, 232, 240, 0.72);
-  }
-  .hero-ai-gallery__overlay-status .bi {
-    color: var(--hero-overlay-accent);
-  }
-  .hero-ai-gallery {
-    position: relative;
-    border-radius: 2rem;
-    /* padding: clamp(1.5rem, 4vw, 2.5rem); */
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.3));
-    border: 1px solid rgba(148, 163, 184, 0.18);
-    backdrop-filter: blur(18px);
-    box-shadow: 0 25px 60px -35px rgba(15, 23, 42, 0.8);
-    overflow: visible;
-  }
-  .hero-ai-gallery__backdrop {
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.12), transparent 55%);
-    opacity: 0.5;
-  }
-  .hero-ai-gallery__main {
-    position: relative;
-    margin: 0;
-    border-radius: 0.5rem;
     overflow: hidden;
-    transform-origin: center;
-    transition: transform 0.45s ease, box-shadow 0.45s ease;
-    box-shadow: 0 45px 65px -45px var(--hero-active-shadow, rgba(99, 102, 241, 0.3));
-    border: 1px solid var(--hero-accent);
   }
-  .hero-ai-gallery__main.is-animating {
-    animation: heroAiFlip 0.6s ease both;
+
+  /* Feature Cards */
+  .hero-ai-cool__feature-card {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    transition: background 0.2s ease;
   }
-  .hero-ai-gallery__image { 
-    display: block; 
-    width: 100%;
-    height: clamp(286px, 35.2vw, 462px);
-    object-fit: cover;
+  .hero-ai-cool__feature-card:last-child {
+    border-bottom: none;
   }
-  .hero-ai-gallery__trail {
-    position: absolute;
-    inset-inline-end: clamp(-2.5rem, -5vw, -3.5rem);
-    top: clamp(2.5rem, 8vw, 3.5rem);
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  .hero-ai-cool__feature-card:hover {
+    background: rgba(255, 255, 255, 0.05);
   }
-  .hero-ai-gallery__trail-item {
-    width: clamp(120px, 14vw, 160px);
-    height: clamp(80px, 10vw, 110px);
-    border-radius: 1.1rem;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 12px 26px -16px rgba(15, 23, 42, 0.85);
-    transform: translate3d(0, 0, 0);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    opacity: 0.85;
+
+  /* Icons */
+  .hero-ai-cool__icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    min-width: 44px;
   }
-  .hero-ai-gallery__pulse {
-    position: absolute;
-    bottom: clamp(1rem, 6vw, 2.75rem);
-    left: clamp(1rem, 4vw, 2.25rem);
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.82), rgba(255, 255, 255, 0.05));
-    opacity: 0.5;
-    pointer-events: none;
-    animation: heroAiPulse 4.5s infinite ease-in-out;
-  }
-  @keyframes heroAiPulse {
-    0%, 100% {
-      transform: scale(1);
-      opacity: 0.4;
-    }
-    40% {
-      transform: scale(1.12);
-      opacity: 0.7;
-    }
-  }
-  @keyframes heroAiFlip {
-    0% {
-      transform: perspective(1200px) rotateY(-6deg) translateY(0);
-    }
-    50% {
-      transform: perspective(1200px) rotateY(5deg) translateY(-6px);
-    }
-    100% {
-      transform: perspective(1200px) rotateY(0deg) translateY(0);
-    }
-  }
+  .hero-ai-cool__icon--purple { background: rgba(99, 102, 241, 0.18); color: #a78bfa; }
+  .hero-ai-cool__icon--blue   { background: rgba(59, 130, 246, 0.18); color: #60a5fa; }
+  .hero-ai-cool__icon--teal   { background: rgba(20, 184, 166, 0.18); color: #2dd4bf; }
+  .hero-ai-cool__icon--cyan   { background: rgba(14, 165, 233, 0.18); color: #38bdf8; }
+
   @media (max-width: 991.98px) {
-    .hero-ai-gallery {
+    .hero-ai-cool__card-stack {
       margin-top: 2rem;
     }
-    .hero-ai-gallery__overlay {
-      position: static;
-      inset: auto;
-      margin-top: 1.5rem;
-      border-inline-start: 4px solid var(--hero-overlay-accent);
-    }
-    .hero-ai-gallery__trail {
-      position: static;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 1.5rem;
-      gap: 0.75rem;
-    }
-    .hero-ai-gallery__trail-item {
-      width: clamp(90px, 18vw, 120px);
-      height: clamp(70px, 12vw, 90px);
-    }
-    .hero-ai-gallery__pulse {
-      display: none;
+    .hero-ai-cool__headline {
+      font-size: 2.25rem;
     }
   }
   @media (max-width: 575.98px) {
-    .hero-ai-feature-pill {
-      border-radius: 1rem;
+    .hero-ai-cool__headline {
+      font-size: 1.85rem;
+    }
+    .hero-ai-cool__feature-card {
       padding: 0.85rem 1rem;
-    }
-    .hero-ai-gallery__overlay {
-      padding: 1.15rem 1.25rem;
-      border-radius: 1.15rem;
-    }
-    .hero-ai-feature-pill__label {
-      font-size: 1rem;
-    }
-    .hero-ai-feature-pill__summary {
-      font-size: 0.85rem;
-    }
-    .hero-ai-gallery__image {
-      height: clamp(220px, 60vw, 320px);
     }
   }
 </style>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var hero = document.querySelector('.hero-ai-cool');
-    if (!hero) return;
-
-    var buttons = Array.prototype.slice.call(hero.querySelectorAll('[data-feature]'));
-    if (!buttons.length) return;
-
-    var imageEl = hero.querySelector('.hero-ai-gallery__image');
-    var captionEl = hero.querySelector('[data-feature-caption]');
-    var overlayEl = hero.querySelector('[data-feature-overlay]');
-    var titleEl = hero.querySelector('[data-feature-title-display]');
-    var descriptionEl = hero.querySelector('[data-feature-description-display]');
-    var linkEl = hero.querySelector('[data-feature-link]');
-    var statusEl = hero.querySelector('[data-feature-status]');
-    var galleryRoot = hero.querySelector('[data-feature-root]');
-    var stageEl = hero.querySelector('.hero-ai-gallery__main');
-    var trailItems = Array.prototype.slice.call(hero.querySelectorAll('[data-trail-item]'));
-
-    var activeIndex = Math.max(buttons.findIndex(function (btn) {
-      return btn.classList.contains('active');
-    }), 0);
-
-    function getFeatureData(button) {
-      return {
-        slug: button.getAttribute('data-feature') || '',
-        title: button.getAttribute('data-feature-title') || button.textContent.trim(),
-        summary: button.getAttribute('data-feature-summary') || '',
-        description: button.getAttribute('data-feature-description') || button.getAttribute('data-feature-summary') || '',
-        image: button.getAttribute('data-feature-image') || '',
-        alt: button.getAttribute('data-feature-alt') || button.getAttribute('data-feature-title') || '',
-        link: button.getAttribute('data-feature-link') || '#',
-        accent: button.getAttribute('data-feature-accent') || '#6366f1'
-      };
-    }
-
-    function updateTrailItems() {
-      if (!trailItems.length) return;
-      trailItems.forEach(function (item, idx) {
-        var nextIndex = (activeIndex + idx + 1) % buttons.length;
-        var data = getFeatureData(buttons[nextIndex]);
-        item.style.backgroundImage = data.image
-          ? 'linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.35)), url(' + data.image + ')'
-          : 'linear-gradient(135deg, rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.35))';
-        item.style.boxShadow = '0 18px 32px -26px ' + (data.accent || 'rgba(99, 102, 241, 0.45)');
-        item.setAttribute('title', data.title);
-      });
-    }
-
-    function activateFeature(index, opts) {
-      if (index === activeIndex && !(opts && opts.force)) return;
-      if (!buttons[index]) return;
-      var button = buttons[index];
-      var data = getFeatureData(button);
-      var shouldAnimate = !(opts && opts.skipAnimation);
-
-      buttons.forEach(function (btn) {
-        var isActive = btn === button;
-        btn.classList.toggle('active', isActive);
-        btn.setAttribute('aria-selected', String(isActive));
-      });
-
-      hero.style.setProperty('--hero-accent', data.accent || '#6366f1');
-      hero.style.setProperty('--hero-active-shadow', (data.accent || '#6366f1') + '4d');
-      if (stageEl) {
-        stageEl.style.setProperty('--hero-accent', data.accent || '#6366f1');
-      }
-
-      if (imageEl && data.image) {
-        if (shouldAnimate && stageEl) {
-          stageEl.classList.remove('is-animating');
-          void stageEl.offsetWidth;
-          stageEl.classList.add('is-animating');
-        }
-        imageEl.src = data.image;
-      }
-      if (imageEl && data.alt) {
-        imageEl.alt = data.alt;
-      }
-      if (captionEl) {
-        captionEl.textContent = data.title + ' screenshot';
-      }
-      if (titleEl) {
-        titleEl.textContent = data.title;
-      }
-      if (descriptionEl) {
-        descriptionEl.textContent = data.description;
-      }
-      if (linkEl) {
-        linkEl.href = data.link;
-        linkEl.setAttribute('aria-label', 'View the ' + data.title + ' feature spotlight');
-      }
-      if (statusEl) {
-        statusEl.textContent = 'Preview sourced from “' + data.title + '”';
-      }
-      if (galleryRoot) {
-        galleryRoot.style.setProperty('--hero-active-shadow', data.accent || '#6366f1');
-      }
-      if (overlayEl) {
-        overlayEl.style.setProperty('--hero-overlay-accent', data.accent || '#6366f1');
-      }
-
-      activeIndex = index;
-      updateTrailItems();
-    }
-
-    var autoPaused = false;
-    var autoDelay = 8000;
-    var autoTimer;
-
-    function queueAutoAdvance() {
-      clearInterval(autoTimer);
-      autoTimer = setInterval(function () {
-        if (autoPaused) return;
-        var nextIndex = (activeIndex + 1) % buttons.length;
-        activateFeature(nextIndex);
-      }, autoDelay);
-    }
-
-    buttons.forEach(function (button, index) {
-      button.addEventListener('click', function () {
-        activateFeature(index, { force: true });
-        autoPaused = true;
-        setTimeout(function () {
-          autoPaused = false;
-        }, autoDelay * 1.5);
-      });
-      button.addEventListener('mouseenter', function () {
-        activateFeature(index);
-      });
-      button.addEventListener('focus', function () {
-        activateFeature(index, { force: true });
-      });
-    });
-
-    hero.addEventListener('mouseenter', function () {
-      autoPaused = true;
-    });
-    hero.addEventListener('mouseleave', function () {
-      autoPaused = false;
-    });
-
-    activateFeature(activeIndex, { force: true, skipAnimation: true });
-    queueAutoAdvance();
-  });
-</script>

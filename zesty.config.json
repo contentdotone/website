@@ -6,19 +6,19 @@
                 "zuid": "11-a8b694fbef-kq7ds0",
                 "type": "templateset",
                 "updatedAt": "2018-08-13T22:56:07Z",
-                "createdAt": "2026-03-05T02:21:36Z"
+                "createdAt": "2026-04-23T19:39:30Z"
             },
             "loader": {
                 "zuid": "11-e4fe95fbef-b3kn74",
                 "type": "snippet",
                 "updatedAt": "2018-08-13T22:56:07Z",
-                "createdAt": "2026-03-27T16:59:42Z"
+                "createdAt": "2026-04-23T19:39:44Z"
             },
             "/components/nav.html": {
                 "zuid": "11-d2b1c58ff3-1dm88s",
                 "type": "ajax-json",
                 "updatedAt": "2025-03-14T19:29:05Z",
-                "createdAt": "2026-03-27T17:33:30Z"
+                "createdAt": "2026-04-20T15:11:19Z"
             },
             "/assets/theme.css": {
                 "zuid": "11-9ad6dec9d3-9znmtm",
@@ -474,7 +474,7 @@
                 "zuid": "11-f0f5dfc6a1-6cs92r",
                 "type": "ajax-json",
                 "updatedAt": "2025-11-05T20:04:50Z",
-                "createdAt": "2026-01-18T22:54:43Z"
+                "createdAt": "2026-04-23T19:09:27Z"
             },
             "/components/homepage/personas.html": {
                 "zuid": "11-aac888abbc-m0rljq",
@@ -630,7 +630,7 @@
                 "zuid": "11-94ece099b0-3lt6pm",
                 "type": "ajax-json",
                 "updatedAt": "2026-02-26T18:22:38Z",
-                "createdAt": "2026-02-26T18:23:07Z"
+                "createdAt": "2026-04-23T18:48:40Z"
             },
             "/-/ai/context/coding.md": {
                 "zuid": "11-acb4b8d5b0-zm0f9r",
@@ -642,13 +642,25 @@
                 "zuid": "11-d881ada0ae-tp2c6m",
                 "type": "pageset",
                 "updatedAt": "2026-03-13T17:26:11Z",
-                "createdAt": "2026-04-08T19:54:18Z"
+                "createdAt": "2026-04-08T19:58:19Z"
             },
             "/components/forms/zoho-form-dl.html": {
                 "zuid": "11-c4b984d7ef-xlpzzv",
                 "type": "ajax-json",
                 "updatedAt": "2026-03-26T19:56:25Z",
                 "createdAt": "2026-04-08T19:54:28Z"
+            },
+            "/afp-icon.html": {
+                "zuid": "11-c0aee3dbf3-w7hh4d",
+                "type": "ajax-json",
+                "updatedAt": "2026-04-23T17:09:30Z",
+                "createdAt": "2026-04-26T18:01:45Z"
+            },
+            "/components/product-section.html": {
+                "zuid": "11-e0b8b6eeb5-16dr1g",
+                "type": "ajax-json",
+                "updatedAt": "2026-04-23T18:57:36Z",
+                "createdAt": "2026-04-23T19:01:05Z"
             }
         },
         "styles": {

@@ -1,12 +1,12 @@
 <!--Pageheader start-->
 <!-- <div class="pattern-square"></div> -->
 <!--Pageheader end-->
-
+(** {{include /components/homepage/hero-ai-cool.html}} **)
 <!-- Content.One Hero Section -->
 <section class="co-hero position-relative overflow-hidden py-5 py-lg-6">
   <div class="co-hero__bg position-absolute top-0 start-0 w-100 h-100"></div>
   <div class="container position-relative" style="z-index:2">
-    <div class="row align-items-center gy-5">
+    <div class="row align-items-center gy-5"> 
       <!-- Left Column -->
       <div class="col-lg-6 col-12 text-center text-lg-start">
         <span class="co-hero__badge d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4">
@@ -222,6 +222,8 @@
 
 {{ include /components/features/analytics_highlight.html }}
 
+{{include /components/product-section.html}}
+
 <div class="quote-wrapper mb-lg-8 mb-6">
     <div class="quote-banner">
         <div class="quote-content" id="quoteContent">
@@ -370,3 +372,4 @@
 
 
 </script>
+

@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NQVPK7VR');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFP ICON San Diego · Weekend Navigator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Mono:wght@400;500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── TOKENS ─── */
+:root {
+  --navy:   #0f1228;
+  --ink:    #1a1d3a;
+  --accent: #4B5BE0;
+  --blue:   #2B7FFF;
+  --lavender: #E8EAFF;
+  --gold:   #E8A838;
+  --white:  #ffffff;
+  --offwhite: #F7F7FB;
+  --rule:   #E4E4EE;
+  --muted:  #7a7a9a;
+  --red:    #E84040;
+  --green:  #1DB87A;
+  --bar-h:  52px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--offwhite);
+  color: var(--ink);
+  line-height: 1.6;
+}
+
+/* ─── STICKY URGENCY BAR ─── */
+.urgency-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--navy);
+  height: var(--bar-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+  gap: 16px;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+.ub-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+}
+.ub-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--red);
+  flex-shrink: 0;
+  animation: pulse-red 1.4s ease-in-out infinite;
+}
+@keyframes pulse-red {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,64,64,0.6); }
+  50% { box-shadow: 0 0 0 6px rgba(232,64,64,0); }
+}
+.ub-text {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ub-text strong { color: var(--white); font-weight: 500; }
+.ub-cta {
+  flex-shrink: 0;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 8px 16px;
+  border-radius: 4px;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+}
+.ub-cta:hover { background: #5d6ef0; transform: translateY(-1px); }
+.ub-divider {
+  width: 1px; height: 20px;
+  background: rgba(255,255,255,0.12);
+  flex-shrink: 0;
+}
+.ub-booth {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.5);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.ub-booth strong { color: rgba(255,255,255,0.85); }
+
+/* ─── MASTHEAD ─── */
+.masthead {
+  background: var(--navy);
+  padding: 56px 40px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.masthead-inner {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 48px;
+  align-items: end;
+  padding-bottom: 48px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.masthead-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.masthead-kicker::before {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--accent);
+}
+.masthead h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 4vw, 52px);
+  font-weight: 900;
+  line-height: 1.08;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.masthead h1 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.masthead-meta {
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.04em;
+  margin-bottom: 32px;
+}
+
+/* Hero CTA card */
+.hero-cta-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+.hcc-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+}
+.hcc-badge {
+  background: rgba(232,64,64,0.15);
+  border: 1px solid rgba(232,64,64,0.3);
+  color: #ff8080;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+}
+.hcc-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+.hcc-body {
+  font-size: 13px;
+  color: rgba(255,255,255,0.55);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.hcc-cta {
+  display: block;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: background 0.15s, transform 0.1s;
+}
+.hcc-cta:hover { background: #5d6ef0; transform: translateY(-1px); }
+.hcc-sub {
+  font-size: 11px;
+  color: rgba(255,255,255,0.3);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+.hcc-sub strong { color: rgba(255,255,255,0.55); }
+
+/* ─── NAV BAR ─── */
+.nav-bar {
+  background: var(--white);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: var(--bar-h);
+  z-index: 90;
+  box-shadow: 0 1px 0 var(--rule);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  padding: 0 40px;
+}
+.nav-tab {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 24px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: color 0.15s;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
+}
+.nav-tab::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 2px;
+  background: var(--accent);
+  transform: scaleX(0);
+  transition: transform 0.2s cubic-bezier(0.4,0,0.2,1);
+}
+.nav-tab.active { color: var(--accent); }
+.nav-tab.active::after { transform: scaleX(1); }
+.nav-tab:hover { color: var(--ink); }
+.nav-icon { font-size: 16px; }
+.nav-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+/* ─── PANELS ─── */
+.panel { display: none; }
+.panel.active { display: block; }
+.panel-wrap { max-width: 1200px; margin: 0 auto; }
+
+/* ─── PANEL HERO ─── */
+.panel-hero {
+  padding: 48px 40px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  border-bottom: 1px solid var(--rule);
+}
+.panel-hero-left { flex: 1; }
+.panel-hero-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.panel-hero-kicker::before {
+  content: '';
+  display: block;
+  width: 20px; height: 2px;
+  background: currentColor;
+}
+.panel-hero h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(26px, 3vw, 40px);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+.panel-hero-desc {
+  font-size: 15px;
+  color: #4a4a5a;
+  line-height: 1.7;
+  max-width: 560px;
+}
+.panel-hero-count {
+  text-align: right;
+  flex-shrink: 0;
+}
+.panel-hero-count-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(0,0,0,0.05);
+}
+.panel-hero-count-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+/* ─── ITEM LIST ─── */
+.items-list { padding: 0 40px 40px; }
+
+.item {
+  border-bottom: 1px solid var(--rule);
+  padding: 36px 0;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.item-badge {
+  display: inline-block;
+  padding: 4px 9px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  border: 1px solid currentColor;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.b-keynote   { color: var(--gold); }
+.b-ai        { color: var(--accent); }
+.b-major     { color: #1DB87A; }
+.b-equity    { color: #E84040; }
+.b-digital   { color: #9B8FE8; }
+.b-strategy  { color: #2B7FFF; }
+.b-evening   { color: var(--gold); }
+.b-official  { color: var(--accent); }
+.b-community { color: var(--green); }
+.b-invite    { color: var(--red); }
+.b-tech      { color: #9B8FE8; }
+.b-culture   { color: #2B7FFF; }
+
+.item-time {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.item-day {
+  display: block;
+  font-weight: 500;
+  color: var(--ink);
+  font-size: 11px;
+}
+.item-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 8px;
+  color: var(--ink);
+}
+.item-desc {
+  font-size: 14px;
+  color: #4a4a5a;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+.item-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.meta-chip {
+  background: var(--lavender);
+  color: var(--accent);
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+.item-link {
+  font-size: 12px;
+  color: var(--accent);
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+.item-link:hover { text-decoration: underline; }
+.item-note {
+  font-size: 12px;
+  color: #7a7a9a;
+  border-left: 2px solid var(--accent);
+  padding-left: 10px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ─── EXCLUSIVE OFFER CARD ─── */
+.excl-card {
+  margin: 40px 40px 0;
+  background: linear-gradient(135deg, #141830 0%, #1a1d4a 50%, #0f1228 100%);
+  border-radius: 12px;
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(75,91,224,0.2);
+}
+.excl-card::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(75,91,224,0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+.excl-inner {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 40px;
+  align-items: center;
+  position: relative;
+}
+.excl-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+.excl-badge {
+  background: rgba(232,64,64,0.12);
+  border: 1px solid rgba(232,64,64,0.25);
+  color: #ff8080;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.excl-badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse-red 1.4s infinite;
+}
+.excl-headline {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 12px;
+}
+.excl-headline em {
+  font-style: italic;
+  color: var(--gold);
+}
+.excl-body {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.7;
+  margin-bottom: 14px;
+  max-width: 460px;
+}
+.excl-proof {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.35);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 14px;
+  line-height: 1.6;
+}
+.excl-right {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 24px;
+}
+.excl-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 64px;
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255,255,255,0.06);
+  text-align: center;
+  margin-bottom: 4px;
+}
+.excl-number-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.3);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.excl-cta {
+  display: block;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 13px 20px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 10px;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.02em;
+}
+.excl-cta:hover { background: #5d6ef0; transform: translateY(-1px); }
+.excl-cta-sec {
+  display: block;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  font-size: 12px;
+  padding: 11px 20px;
+  border-radius: 6px;
+  text-align: center;
+  transition: border-color 0.15s, color 0.15s;
+}
+.excl-cta-sec:hover { border-color: rgba(255,255,255,0.35); color: rgba(255,255,255,0.9); }
+.excl-elig {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.2);
+  text-align: center;
+  margin-top: 12px;
+  text-transform: uppercase;
+}
+
+/* ─── URGENCY NUDGE CARD ─── */
+.nudge-card {
+  margin: 40px 40px 0;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 10px 10px 0;
+  padding: 28px 32px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 32px;
+  align-items: center;
+}
+.nc-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 8px;
+}
+.nc-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--red);
+  animation: pulse-red 1.4s infinite;
+}
+.nc-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.nc-body {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: 560px;
+}
+.nc-cta {
+  flex-shrink: 0;
+  display: inline-block;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 20px;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background 0.15s, transform 0.1s;
+  letter-spacing: 0.03em;
+}
+.nc-cta:hover { background: #5d6ef0; transform: translateY(-1px); }
+.nc-sub {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-top: 6px;
+  white-space: nowrap;
+}
+
+/* ─── FEATURED INVITE CARD (Union Kitchen & Tap) ─── */
+.invite-card {
+  margin: 40px 40px 0;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(75,91,224,0.16) 0%, transparent 55%),
+    linear-gradient(135deg, #0c0f24 0%, #141838 100%);
+  border: 1px solid rgba(75,91,224,0.22);
+  border-radius: 12px;
+  padding: 28px 32px;
+  position: relative;
+  overflow: hidden;
+}
+.ic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+.ic-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+.ic-eyebrow strong { color: rgba(255,255,255,0.85); font-weight: 500; }
+.ic-status {
+  background: rgba(232,168,56,0.12);
+  border: 1px solid rgba(232,168,56,0.4);
+  color: var(--gold);
+  padding: 3px 10px;
+  border-radius: 3px;
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+}
+.ic-when {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--white);
+  font-weight: 500;
+}
+.ic-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 900;
+  line-height: 1.15;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+.ic-title em {
+  font-style: italic;
+  font-weight: 700;
+  color: #B5BEFF;
+}
+.ic-body {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.65;
+  margin-bottom: 18px;
+  max-width: 720px;
+}
+.ic-body strong { color: var(--white); font-weight: 500; }
+.ic-meta-row {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.02em;
+  margin-bottom: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 10px;
+  align-items: baseline;
+}
+.ic-meta-k {
+  color: rgba(255,255,255,0.32);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 9px;
+  margin-right: 6px;
+}
+.ic-meta-sep { color: rgba(255,255,255,0.2); }
+.ic-booth-cta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(75,91,224,0.14);
+  border: 1px solid rgba(75,91,224,0.4);
+  border-radius: 6px;
+  padding: 14px 18px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+}
+.ic-booth-dot {
+  width: 7px; height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  animation: pulse-gold 1.6s ease-in-out infinite;
+}
+@keyframes pulse-gold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232,168,56,0.6); }
+  50% { box-shadow: 0 0 0 5px rgba(232,168,56,0); }
+}
+.ic-booth-text { flex: 1; line-height: 1.4; }
+.ic-booth-text strong {
+  color: var(--gold);
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 16px;
+  letter-spacing: 0.01em;
+  margin: 0 1px;
+}
+.ic-booth-arrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 18px;
+  color: var(--white);
+  flex-shrink: 0;
+}
+
+/* ─── PANEL SPACING ─── */
+.panel-end { height: 60px; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  .urgency-bar { padding: 0 16px; }
+  .ub-divider, .ub-booth { display: none; }
+  .masthead { padding: 36px 20px 0; }
+  .masthead-inner { grid-template-columns: 1fr; gap: 32px; }
+  .nav-inner { padding: 0 8px; overflow-x: auto; }
+  .nav-tab { padding: 0 14px; }
+  .panel-hero { padding: 28px 20px; flex-direction: column; gap: 0; }
+  .panel-hero-count { display: none; }
+  .items-list { padding: 0 20px 40px; }
+  .item { grid-template-columns: 1fr; gap: 8px; }
+  .excl-card { margin: 24px 20px 0; padding: 28px 20px; }
+  .excl-inner { grid-template-columns: 1fr; }
+  .excl-number { display: none; }
+  .nudge-card { margin: 24px 20px 0; grid-template-columns: 1fr; gap: 16px; padding: 24px 20px; }
+  .invite-card { margin: 24px 20px 0; padding: 22px 20px; }
+  .ic-title { font-size: 22px; }
+  .ic-body { font-size: 13px; }
+  .ic-meta-row { font-size: 10px; }
+  .ic-booth-cta { padding: 12px 14px; font-size: 12px; }
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQVPK7VR"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- ════════════ STICKY URGENCY BAR ════════════ -->
+<div class="urgency-bar">
+  <div class="ub-left">
+    <span class="ub-dot"></span>
+    <span class="ub-text">
+      <strong>AFP ICON ONLY:</strong> Are donors finding your org when they ask AI? · Free in-person walkthrough this weekend only
+    </span>
+  </div>
+  <a href="https://analysis.content.one/non-profits/" target="_blank" class="ub-cta">See your score →</a>
+  <div class="ub-divider"></div>
+  <div class="ub-booth">Booth <strong>803</strong> · CauseCircle</div>
+</div>
+
+<!-- ════════════ MASTHEAD ════════════ -->
+<div style="background:var(--navy);">
+<header class="masthead">
+  <div class="masthead-inner">
+    
+    <div class="masthead-left">
+     <div class="logos" style="display: flex; flex-wrap: wrap; justify-content: left; align-items: center; gap: 30px;">
+  <img 
+    src="https://hj5v68xn.media.zestyio.com/AFP_Icon26_Horizontal_4C.webp" 
+    alt="afp canada" 
+    style="width: 150px; height: auto; max-width: 100%;" />
+  
+  <img 
+    src="https://hj5v68xn.media.zestyio.com/CC-Light-Logo.png" 
+    alt="cause-circle" 
+    style="width: 150px; height: auto; max-width: 100%;" />
+  
+  <img 
+    src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" 
+    alt="content one" 
+    style="width: 150px; height: auto; max-width: 100%;" />
+</div>
+      <div class="masthead-kicker">AFP ICON 2026 · San Diego · Insider Guide</div>
+      <h1>Everything You Need<br>to <em style="color:var(--accent);font-style:italic;">Make This Weekend Count</em></h1>
+      <div class="masthead-meta">April 26–28, 2026 · San Diego Convention Center · Presented by CauseCircle</div>
+    </div>
+    <div class="masthead-right">
+      <div class="hero-cta-card">
+        <div class="hcc-eyebrow">
+          <span class="hcc-badge">AFP ICON ONLY</span>
+          Free · No login required
+        </div>
+        <div class="hcc-headline">Are donors finding you when they ask AI?</div>
+        <p class="hcc-body">Get your free Donor Visibility in AI Answers snapshot. See your score before you leave San Diego.</p>
+        <a href="https://analysis.content.one/non-profits/" target="_blank" class="hcc-cta">See your score before you leave →</a>
+        <div class="hcc-sub">In-person walkthrough <strong>only at Booth 803</strong> this weekend</div>
+      </div>
+    </div>
+  </div>
+</header>
+</div>
+
+<!-- ════════════ NAV TABS ════════════ -->
+<nav class="nav-bar" role="tablist">
+  <div class="nav-inner">
+    <button class="nav-tab active" onclick="switchTab('sessions')" role="tab" aria-selected="true">
+      <span class="nav-icon">🎤</span>
+      <span class="nav-label">Sessions</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('receptions')" role="tab">
+      <span class="nav-icon">🥂</span>
+      <span class="nav-label">Receptions</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('tech')" role="tab">
+      <span class="nav-icon">💡</span>
+      <span class="nav-label">Tech Offers</span>
+    </button>
+    <button class="nav-tab" onclick="switchTab('sandiego')" role="tab">
+      <span class="nav-icon">🌊</span>
+      <span class="nav-label">City Gems</span>
+    </button>
+  </div>
+</nav>
+
+<!-- ════════════ PANEL: SESSIONS ════════════ -->
+<section class="panel active" id="panel-sessions" role="tabpanel">
+<div class="panel-wrap">
+  <div class="panel-hero">
+    <div class="panel-hero-left">
+      <div class="panel-hero-kicker">🎤 Must-Visit Sessions</div>
+      <h2>The Sessions Worth<br>Protecting Time For</h2>
+      <p class="panel-hero-desc">AFP ICON's programming covers everything from AI to major gifts to equity in fundraising. These are the sessions with the highest strategic signal-to-noise ratio for development professionals this weekend.</p>
+    </div>
+    <div class="panel-hero-count"><div class="panel-hero-count-num">7</div><div class="panel-hero-count-label">Curated picks</div></div>
+  </div>
+
+  <div class="items-list">
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-keynote">Opening Keynote</span>
+        <div class="item-time"><span class="item-day">SUN 4/26</span>Morning</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AFP ICON Opening General Session</div>
+        <p class="item-desc">The conference opener sets the tone for everything that follows. The opening session's framing of uncertainty and change will directly shape how you think about donor behavior in an AI-transformed world.</p>
+        <div class="item-meta"><span class="meta-chip">Main Hall · SDCC</span><span class="meta-chip">Don't miss</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-ai">AI + Fundraising</span>
+        <div class="item-time"><span class="item-day">SUN 4/26</span>Morning</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">How To Build a Fundraising AI Strategy Your Board Will Love (Presented by Salesforce)</div>
+        <p class="item-desc">The sessions covering AI in fundraising are where the room gets split between theory and practice. Go to the ones that promise case studies, not frameworks. <strong>Tip: run your free Donor Visibility snapshot before this session</strong> — you'll have real data from your own org to pressure-test against what you hear.</p>
+        <div class="item-meta"><span class="meta-chip">Room 16 B · 9:00 AM</span><span class="meta-chip">Bring your snapshot results</span></div>
+        <div class="item-note">⚡ Run your <a href="https://analysis.content.one/non-profits/" target="_blank" class="item-link">free AI visibility snapshot</a> first — your data makes this session land personally.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-strategy">Tech + Strategy</span>
+        <div class="item-time"><span class="item-day">TUE 4/28</span>Morning</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AI Agents for Nonprofit Fundraising (Learning Lab) (Presented by Microsoft Elevate)</div>
+        <p class="item-desc">Hands-on lab format. Microsoft Elevate brings a practitioner's lens to nonprofit tech adoption — this is the rare session that moves past case studies into actual tool usage. Limited seats, arrive early.</p>
+        <div class="item-meta"><span class="meta-chip">Learning Lab 2 · 10:00 AM</span><span class="meta-chip">Hands-on</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-major">Major Gifts</span>
+        <div class="item-time"><span class="item-day">TUE 4/28</span>Morning</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Major Gift Fundraising: Timing Is Everything (But Not the Only Thing!)</div>
+        <p class="item-desc">Major gift strategy sessions at ICON consistently draw some of the most experienced practitioners in the room. This session brings sharp, evidence-grounded perspectives on donor cultivation at scale — focused on the timing dynamics that make or break a transformational ask.</p>
+        <div class="item-meta"><span class="meta-chip">Room 28 A-C · 8:00 AM</span><span class="meta-chip">Major gifts track</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-equity">Equity + Impact</span>
+        <div class="item-time"><span class="item-day">TUE 4/28</span>Morning</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Continuing the Conversation on Being an Equitable, Inclusive, and Diverse Leader</div>
+        <p class="item-desc">Equity work in fundraising is genuinely paradigm-shifting for many practitioners. This session tends to generate more carry-home impact than most technically-focused ones — the frame it provides changes how you think about donor relationships long after the conference.</p>
+        <div class="item-meta"><span class="meta-chip">Room 31 A/B · 10:00 AM</span><span class="meta-chip">Equity track</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-digital">Digital + Annual</span>
+        <div class="item-time"><span class="item-day">MON 4/27</span>Afternoon</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">The State of Recurring Giving 2026: Benchmarks, Behavior Shifts + What's Next (Presented by CharityEngine)</div>
+        <p class="item-desc">The sessions on digital fundraising and donor retention are where AI visibility becomes most concrete — donors are increasingly using AI to discover and vet nonprofits before they give. If you've run your free snapshot, you'll know exactly where your org stands before you walk in.</p>
+        <div class="item-meta"><span class="meta-chip">Room 29 C/D · 1:45 PM</span><span class="meta-chip">Digital track</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-keynote">Closing Keynote</span>
+        <div class="item-time"><span class="item-day">TUE 4/28</span>Closing</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AFP ICON Closing General Session</div>
+        <p class="item-desc">The closing session features four closing keynote speakers — a format ICON has used to powerful effect in past years. It's the right moment to synthesize everything you've absorbed and set your intentions for what you're bringing back to your organization.</p>
+        <div class="item-meta"><span class="meta-chip">Main Hall · SDCC</span><span class="meta-chip">Do not skip</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NUDGE CARD -->
+  <div class="nudge-card">
+    <div>
+      <div class="nc-eyebrow"><span class="nc-dot"></span> AFP ICON ONLY · In-person walkthrough at Booth 803</div>
+      <div class="nc-title">Make these sessions land — bring your own data.</div>
+      <p class="nc-body">The AI fundraising sessions hit different when you walk in knowing your own org's score. Run your free Donor Visibility snapshot now — takes 60 seconds — and Team CauseCircle at Booth 803 will walk you through what it means in person, this weekend only.</p>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://analysis.content.one/non-profits/" target="_blank" class="nc-cta">See your score before you leave San Diego →</a>
+      <div class="nc-sub">Free walkthrough · Booth 803 · CauseCircle</div>
+    </div>
+  </div>
+
+  <div class="panel-end"></div>
+</div>
+</section>
+
+<!-- ════════════ PANEL: RECEPTIONS ════════════ -->
+<section class="panel" id="panel-receptions" role="tabpanel">
+<div class="panel-wrap">
+  <div class="panel-hero">
+    <div class="panel-hero-left">
+      <div class="panel-hero-kicker">🥂 Receptions & Happy Hours</div>
+      <h2>Where the Real<br>Conversations Happen</h2>
+      <p class="panel-hero-desc">The conference floor closes. The real AFP networking continues after hours. Here are the receptions and events worth your evening — including the invite-only ones most attendees won't hear about.</p>
+    </div>
+    <div class="panel-hero-count"><div class="panel-hero-count-num">7</div><div class="panel-hero-count-label">Evening picks</div></div>
+  </div>
+
+  <!-- FEATURED INVITE CARD -->
+  <div class="invite-card">
+    <div class="ic-header">
+      <div class="ic-eyebrow">
+        <span><strong>INVITE ONLY</strong> · NONPROFITS ONLY · CAUSECIRCLE HOSTS</span>
+        <span class="ic-status">ALMOST FULL</span>
+      </div>
+      <div class="ic-when">Mon 4/27 · 5:45 PM</div>
+    </div>
+    <div class="ic-title">Drinks &amp; Bites at <em>Union Kitchen &amp; Tap</em></div>
+    <p class="ic-body">A small gathering for nonprofit leaders who want to think out loud about AI, donor discovery, and what's genuinely changing. No agenda. No decks. <strong>Seats are almost gone.</strong></p>
+    <div class="ic-meta-row">
+      <span class="ic-meta-item"><span class="ic-meta-k">Venue</span> Union Kitchen &amp; Tap, Gaslamp</span>
+      <span class="ic-meta-sep">·</span>
+      <span class="ic-meta-item"><span class="ic-meta-k">Walk</span> 5 min from SDCC</span>
+      <span class="ic-meta-sep">·</span>
+      <span class="ic-meta-item"><span class="ic-meta-k">Address</span> 333 Fifth Ave</span>
+    </div>
+    <div class="ic-booth-cta">
+      <span class="ic-booth-dot"></span>
+      <span class="ic-booth-text">Close to capacity — stop by Booth <strong>803</strong> to hold your spot</span>
+      <span class="ic-booth-arrow">→</span>
+    </div>
+  </div>
+
+  <div class="items-list">
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-official">Official · AFP</span>
+        <div class="item-time"><span class="item-day">SUN 4/26</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AFP ICON Welcome Reception</div>
+        <p class="item-desc">The official conference opener. Held at the San Diego Convention Center — this is where the first introductions happen, badges are spotted, and the energy of ICON officially begins. Don't skip this one just because it's "official" — the room is uniquely open on night one.</p>
+        <div class="item-meta"><span class="meta-chip">San Diego Convention Center</span><span class="meta-chip">Sunday evening</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-community">Affinity Group</span>
+        <div class="item-time"><span class="item-day">SUN 4/26</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AFP Affinity Group Meetings</div>
+        <p class="item-desc">AFP's affinity groups gather by sector, role, identity, and interest — these are small, high-trust circles where conversations go deeper than the main conference floor. Check the AFP app for your groups and meeting times. Some of the most valuable relationship-building at ICON happens here.</p>
+        <div class="item-meta"><span class="meta-chip">Check AFP app for locations</span><span class="meta-chip">Sunday evening</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-evening">⚾ Sold Out</span>
+        <div class="item-time"><span class="item-day">MON 4/27</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Take Me Out to the Ballgame, San Diego Style</div>
+        <p class="item-desc">This AFP-hosted evening at Petco Park (6:00 PM – 10:00 PM) is <strong>sold out</strong> — but tickets sometimes surface on the AFP conference app closer to the date. The rooftop of the historic Western Metal Supply Co. building is worth seeking out if you get in. Petco Park is a 12-minute walk from SDCC.</p>
+        <div class="item-meta"><span class="meta-chip">Petco Park · 100 Park Blvd</span><span class="meta-chip">~12 min walk from SDCC</span><span class="meta-chip">Sold out — check AFP app</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-community">Community</span>
+        <div class="item-time"><span class="item-day">MON 4/27</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Exchange Happy Hour (Sponsored by Allegiance Group, Amazon Business, Greater Giving, and PNC Institutional Asset Management)</div>
+        <p class="item-desc">Monday evening is the peak social night. The Exchange Happy Hour (4:30 PM – 5:30 PM on the AFP Exchange floor) leads into multiple community group receptions running simultaneously across the Gaslamp Quarter and nearby venues. Check the AFP mobile app under "Receptions" — these shift and fill up quickly.</p>
+        <div class="item-meta"><span class="meta-chip">AFP Exchange · 4:30 PM</span><span class="meta-chip">Monday evening</span><span class="meta-chip">Check AFP app</span></div>
+        <a href="https://afpglobal.org/afp-icon/sessions-schedule" target="_blank" class="item-link">AFP reception listings →</a>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-invite">Invite Only</span>
+        <div class="item-time"><span class="item-day">SUN–TUE</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">The AFP App Nightlife Section — Your Secret Weapon</div>
+        <p class="item-desc">Most attendees don't know this exists. The AFP ICON mobile app has a dedicated Nightlife section that surfaces invite-only events, pop-up receptions, and sponsor gatherings not listed anywhere else. Open the app → Nightlife → check nightly throughout the conference. This is how you find the events that don't make the program.</p>
+        <div class="item-meta"><span class="meta-chip">AFP mobile app → Nightlife tab</span><span class="meta-chip">All weekend</span></div>
+        <div class="item-note">💡 The best after-hours AFP events are not in the printed program — they're in the app.</div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-community">Canadian 🍁</span>
+        <div class="item-time"><span class="item-day">MON 4/27</span>Evening</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">AFP Red & White Reception</div>
+        <p class="item-desc">The Canadian community's traditional gathering at ICON — a warm, high-energy event that regularly draws attendees from well outside the Canadian chapters. Welcoming to all, great networking, and a distinctly collaborative atmosphere.</p>
+        <div class="item-meta"><span class="meta-chip">Monday evening</span><span class="meta-chip">All welcome</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NUDGE CARD -->
+  <div class="nudge-card">
+    <div>
+      <div class="nc-eyebrow"><span class="nc-dot"></span> AFP ICON ONLY · In-person walkthrough at Booth 803</div>
+      <div class="nc-title">Between receptions — 60 seconds could change how you think about donor discovery.</div>
+      <p class="nc-body">Donors are asking AI which nonprofits to trust right now. If your org isn't showing up in those answers, you're invisible to a growing slice of your donor base. Take 60 seconds to find out where you stand — and Team CauseCircle at Booth 803 will walk you through what to do about it.</p>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://analysis.content.one/non-profits/" target="_blank" class="nc-cta">See your score before you leave San Diego →</a>
+      <div class="nc-sub">Free walkthrough · Booth 803 · CauseCircle</div>
+    </div>
+  </div>
+
+  <div class="panel-end"></div>
+</div>
+</section>
+
+<!-- ════════════ PANEL: TECH OFFERS ════════════ -->
+<section class="panel" id="panel-tech" role="tabpanel">
+<div class="panel-wrap">
+  <div class="panel-hero">
+    <div class="panel-hero-left">
+      <div class="panel-hero-kicker">💡 Tech Offers & Discounts</div>
+      <h2>The Offers Actually<br>Worth Stopping For</h2>
+      <p class="panel-hero-desc">The AFP Exchange floor has 200+ vendors. There are some amazing offers that you only get this weekend. We have put together a few that you must not miss, and will keep adding to these as we hear learn more.</p>
+    </div>
+    <div class="panel-hero-count"><div class="panel-hero-count-num">5</div><div class="panel-hero-count-label">Curated picks</div></div>
+  </div>
+
+  <!-- EXCLUSIVE OFFER CARD -->
+  <div class="excl-card">
+    <div class="excl-inner">
+      <div class="excl-left">
+        <div class="excl-eyebrow">
+          <span class="excl-badge"><span class="excl-badge-dot"></span> AFP ICON EXCLUSIVE</span>
+        </div>
+        <div class="excl-headline">We're giving away<br><em>20 websites</em> this weekend.</div>
+        <p class="excl-body">For nonprofits under $5M annual revenue: a fully built website on Content.One CMS, free migration included, free for a full year. 20 spots. First come, first served — only available at Booth 803 this weekend.</p>
+        <div class="excl-proof">The Salvation Army USA — all national and local websites across 3,000+ locations — runs on Content.One.</div>
+      </div>
+      <div class="excl-right">
+        <div class="excl-number">20</div>
+        <div class="excl-number-label">Spots remaining</div>
+        <a href="https://www.content.one/cms-for-non-profits/?utm_source=afp-icon&utm_medium=afp-icon&utm_campaign=afp-icon" target="_blank" class="excl-cta">Stop by Booth 803 · CauseCircle by Content.One</a>
+        <a href="https://www.content.one/cms-for-non-profits/?utm_source=afp-icon&utm_medium=afp-icon&utm_campaign=afp-icon" target="_blank" class="excl-cta-sec">Learn more about Content.One →</a>
+        <div class="excl-elig">Nonprofits under $5M · AFP ICON 2026 only</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="items-list" style="margin-top:40px;">
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-tech">Donor Research</span>
+        <div class="item-time"><span class="item-day">All Weekend</span>Exchange</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Free Donor Visibility in AI Answers — CauseCircle · Booth 803</div>
+        <p class="item-desc">Before you visit any other tech vendor, run this. It's a free 60-second snapshot showing whether AI tools (ChatGPT, Claude, Gemini) are recommending your org to donors when they ask. You'll walk away with real data about your own organization — something most vendors won't give you until you're already a customer.</p>
+        <div class="item-meta"><span class="meta-chip">Booth 803 · AFP Exchange</span><span class="meta-chip">Free · No commitment</span><span class="meta-chip">60 seconds</span></div>
+        <div class="item-note">⚡ Start here before the expo floor. You'll have real data for every vendor conversation that follows. <a href="https://analysis.content.one/non-profits/" target="_blank" class="item-link">Free snapshot →</a></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-tech">CRM + Data</span>
+        <div class="item-time"><span class="item-day">All Weekend</span>Exchange</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Fundraising CRM & Donor Management Vendors</div>
+        <p class="item-desc">Salesforce Nonprofit, Bloomerang, Blackbaud, and Virtuous all have strong Exchange presences. If you're evaluating CRMs, use ICON to get side-by-side demos in a single day — that's genuinely rare and worth planning for. Bring your current pain points written down; the best demos happen when you lead with your specific problem.</p>
+        <div class="item-meta"><span class="meta-chip">AFP Exchange floor</span><span class="meta-chip">Multiple vendors</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-tech">Digital Giving</span>
+        <div class="item-time"><span class="item-day">All Weekend</span>Exchange</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Digital Giving & Payment Processing</div>
+        <p class="item-desc">Stripe, Donorbox, and Fundraise Up are among the digital giving tools with Exchange presence this year. If you're looking to reduce friction in your online giving flow, ICON is the right place to ask the hard questions: what are your actual processing fees, and what's your nonprofit discount?</p>
+        <div class="item-meta"><span class="meta-chip">AFP Exchange floor</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-tech">Prospect Research</span>
+        <div class="item-time"><span class="item-day">All Weekend</span>Exchange</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Wealth Screening & Prospect Research Tools</div>
+        <p class="item-desc">DonorSearch, iWave, and WealthEngine are all present. ICON is one of the few places you can get a live demo using your actual prospect list (anonymized is fine). If you're doing major gift work, this is worth your time — prospect research tools have gotten significantly better in the last 18 months.</p>
+        <div class="item-meta"><span class="meta-chip">AFP Exchange floor</span><span class="meta-chip">Bring your prospect questions</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NUDGE CARD -->
+  <div class="nudge-card">
+    <div>
+      <div class="nc-eyebrow"><span class="nc-dot"></span> AFP ICON ONLY · In-person walkthrough at Booth 803</div>
+      <div class="nc-title">Start your expo floor visit here — bring data, not just questions.</div>
+      <p class="nc-body">Most vendor conversations go nowhere because you're reacting to their pitch. Run your free Donor Visibility snapshot first and you'll walk into every booth knowing exactly where your org stands — and what you actually need. Team CauseCircle at Booth 803 will walk you through your results in person, this weekend only.</p>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://analysis.content.one/non-profits/" target="_blank" class="nc-cta">See your score before you leave San Diego →</a>
+      <div class="nc-sub">Free walkthrough · Booth 803 · CauseCircle</div>
+    </div>
+  </div>
+
+  <div class="panel-end"></div>
+</div>
+</section>
+
+<!-- ════════════ PANEL: SAN DIEGO GEMS ════════════ -->
+<section class="panel" id="panel-sandiego" role="tabpanel">
+<div class="panel-wrap">
+  <div class="panel-hero">
+    <div class="panel-hero-left">
+      <div class="panel-hero-kicker">🌊 San Diego Gems</div>
+      <h2>San Diego Beyond<br>the Convention Center</h2>
+      <p class="panel-hero-desc">You're in one of America's best cities. These are the spots worth making time for — a few minutes away, or a short drive, if you build them around conference gaps.</p>
+    </div>
+    <div class="panel-hero-count"><div class="panel-hero-count-num">5</div><div class="panel-hero-count-label">City picks</div></div>
+  </div>
+
+  <div class="items-list">
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-culture">Walkable</span>
+        <div class="item-time"><span class="item-day">Any time</span>5 min walk</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">The Gaslamp Quarter</div>
+        <p class="item-desc">San Diego's historic Victorian commercial district, right at the SDCC doorstep. The best blocks for dinner are 4th and 5th Avenue between Broadway and Harbor. For a quieter post-session meal away from conference crowds, head one block east of 5th to <strong>Market Street</strong> — better restaurants, fewer lanyards.</p>
+        <div class="item-meta"><span class="meta-chip">Adjacent to SDCC</span><span class="meta-chip">5-min walk</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-culture">Museums + Park</span>
+        <div class="item-time"><span class="item-day">Morning/Evening</span>~15 min drive</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Balboa Park</div>
+        <p class="item-desc">One of the country's great urban parks. The <strong>Mingei International Museum</strong> (reopened after a major renovation) is exceptional — its collection of folk art and craftsmanship from around the world is a rare experience. The <strong>San Diego Museum of Art</strong> and the surrounding Spanish Colonial architecture make this worth a morning or evening trip.</p>
+        <div class="item-meta"><span class="meta-chip">Balboa Park, San Diego</span><span class="meta-chip">~15 min drive or Uber from SDCC</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-culture">Harbor + Views</span>
+        <div class="item-time"><span class="item-day">Any morning</span>Adjacent</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">San Diego Bay Embarcadero</div>
+        <p class="item-desc">The waterfront walk along Harbor Drive is one of the most restorative 30 minutes you can have between conference sessions. The <strong>USS Midway Museum</strong> is right there if you have 90 minutes — it's genuinely remarkable. Early morning walk along the harbor before day sessions is underrated for clearing your head.</p>
+        <div class="item-meta"><span class="meta-chip">Harbor Drive · adjacent to SDCC</span><span class="meta-chip">Walkable</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-culture">Food + Market</span>
+        <div class="item-time"><span class="item-day">Any lunch/dinner</span>10 min drive</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">Little Italy</div>
+        <p class="item-desc">San Diego's best neighborhood for a meal away from the conference energy. <strong>Herb & Wood</strong> is excellent for a dinner that feels like a genuine treat. The <strong>Little Italy Mercato</strong> (Saturdays, 8am–2pm on Date St) is one of California's best farmers' markets — worth an early Saturday morning if you can make it work.</p>
+        <div class="item-meta"><span class="meta-chip">Little Italy, San Diego</span><span class="meta-chip">~10 min drive or Uber</span></div>
+      </div>
+    </div>
+
+    <div class="item">
+      <div class="item-sidebar">
+        <span class="item-badge b-culture">Coastal</span>
+        <div class="item-time"><span class="item-day">Half-day</span>20 min drive</div>
+      </div>
+      <div class="item-main">
+        <div class="item-title">La Jolla Cove & Torrey Pines</div>
+        <p class="item-desc">La Jolla Cove is a protected marine reserve — sea lions on the rocks, snorkeling, dramatic cliff walks. <strong>Torrey Pines State Natural Reserve</strong> offers short spectacular coastal hikes above the Pacific. For cultivation dinners with San Diego-based major gift prospects, <strong>The Lodge at Torrey Pines</strong> is a Craftsman masterpiece.</p>
+        <div class="item-meta"><span class="meta-chip">La Jolla, CA 92037</span><span class="meta-chip">~14 miles north of SDCC · 20–30 min drive</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- NUDGE CARD -->
+  <div class="nudge-card">
+    <div>
+      <div class="nc-eyebrow"><span class="nc-dot"></span> AFP ICON ONLY · In-person walkthrough at Booth 803</div>
+      <div class="nc-title">Before you leave San Diego — find out if donors can find you.</div>
+      <p class="nc-body">Donors are asking AI which nonprofits to trust. Run a free 60-second snapshot to see your Donor Visibility score. The in-person walkthrough with Team CauseCircle at Booth 803 is only available this weekend — it's the fastest way to understand your results and know what to do next.</p>
+    </div>
+    <div style="text-align:center;">
+      <a href="https://analysis.content.one/non-profits/" target="_blank" class="nc-cta">See your score before you leave San Diego →</a>
+      <div class="nc-sub">Free walkthrough · Booth 803 · CauseCircle</div>
+    </div>
+  </div>
+
+  <div class="panel-end"></div>
+</div>
+</section>
+
+<script>
+function switchTab(id) {
+  const map = { sessions:'panel-sessions', receptions:'panel-receptions', tech:'panel-tech', sandiego:'panel-sandiego' };
+  document.querySelectorAll('.nav-tab').forEach(t => { t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+  document.querySelector(`[onclick="switchTab('${id}')"]`).classList.add('active');
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById(map[id]).classList.add('active');
+  window.scrollTo({ top: document.querySelector('.nav-bar').offsetTop - parseInt(getComputedStyle(document.documentElement).getPropertyValue('--bar-h')), behavior: 'smooth' });
+}
+</script>
+</body>
+</html>

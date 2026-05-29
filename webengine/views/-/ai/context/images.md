@@ -1,1 +1,1 @@
-Line art with watercolors
+Generate a 16:9 line art image playful sharpie style, using water coloring wide fill style, show a human an AI robot playing battleship while the search engine browser watch from the stands
