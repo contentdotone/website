@@ -1,27 +1,40 @@
-<section class="flexstack-section py-6 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-6 fw-bold text-dark mb-3">
-        Content.One Hybrid Advantage: <span class="text-primary">Flexstack</span>
+<!-- flexstack — Tailwind-converted. Custom decoration kept in scoped <style>;
+     data-bs-toggle="tooltip" attrs preserved so Bootstrap JS tooltips keep
+     working during the migration. -->
+<section class="flexstack-section py-12 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-10 max-w-3xl mx-auto">
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-white mb-3">
+        Content.One Hybrid Advantage: <span class="text-royalLite">Flexstack</span>
       </h2>
-      <p class="lead text-muted mb-0">
+      <p class="text-base md:text-lg" style="color:rgba(255,255,255,0.82);">
         Any tech stack is available with the added hybrid option to launch instant web experiences without any technical setup.
       </p>
     </div>
 
-    <div class="row g-4 align-items-start">
-      <div class="col-lg-4">
-        <div class="stack-card shadow-sm mb-3">
-          <div class="fw-semibold text-dark mb-3">Any JS Framework</div>
-          <div class="d-flex align-items-center justify-content-start gap-3 flex-wrap">
-            <div class="badge bg-white border text-dark d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm" data-bs-toggle="tooltip" title="Vue.js front-end framework"><i class="bi bi-triangle text-primary"></i><span>Vue.js</span></div>
-            <div class="badge bg-white border text-dark d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm" data-bs-toggle="tooltip" title="React component-based UI library"><i class="bi bi-braces text-primary"></i><span>React</span></div>
-            <div class="badge bg-white border text-dark d-inline-flex align-items-center gap-2 px-3 py-2 shadow-sm" data-bs-toggle="tooltip" title="Angular full-featured SPA framework"><i class="bi bi-bezier text-primary"></i><span>Angular</span></div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 items-start">
+
+      <!-- LEFT: stack cards -->
+      <div class="space-y-4">
+
+        <div class="stack-card shadow-sm">
+          <div class="font-semibold text-gray-900 mb-3">Any JS Framework</div>
+          <div class="flex items-center justify-start gap-3 flex-wrap">
+            <div class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-white border border-gray-200 text-gray-900 text-sm shadow-sm" data-bs-toggle="tooltip" title="Vue.js front-end framework">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-royal" fill="currentColor" aria-hidden="true"><path d="M12 2L2 22h20L12 2z"/></svg><span>Vue.js</span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-white border border-gray-200 text-gray-900 text-sm shadow-sm" data-bs-toggle="tooltip" title="React component-based UI library">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-royal" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 4l-4 8 4 8M16 4l4 8-4 8M14 4l-4 16"/></svg><span>React</span>
+            </div>
+            <div class="inline-flex items-center gap-2 px-3 py-2 rounded-md bg-white border border-gray-200 text-gray-900 text-sm shadow-sm" data-bs-toggle="tooltip" title="Angular full-featured SPA framework">
+              <svg viewBox="0 0 24 24" class="w-4 h-4 text-royal" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 8c4-4 14-4 18 0M3 16c4 4 14 4 18 0"/></svg><span>Angular</span>
+            </div>
           </div>
-        </div>     
-     
-        <div class="stack-card shadow-sm mb-3">
-          <div class="fw-semibold text-dark mb-3">Any Marketplace Integration</div>
+        </div>
+
+        <div class="stack-card shadow-sm">
+          <div class="font-semibold text-gray-900 mb-3">Any Marketplace Integration</div>
           <div class="integration-logos">
             <img src="https://www.gstatic.com/analytics-suite/header/suite/v2/ic_analytics.svg" alt="Google Analytics logo" data-bs-toggle="tooltip" title="Google Analytics">
             <img src="https://cdn.worldvectorlogo.com/logos/salesforce-2.svg" alt="Salesforce logo" data-bs-toggle="tooltip" title="Salesforce">
@@ -32,7 +45,7 @@
         </div>
 
         <div class="stack-card shadow-sm">
-          <div class="fw-semibold text-dark mb-3">Any Private Cloud</div>
+          <div class="font-semibold text-gray-900 mb-3">Any Private Cloud</div>
           <div class="private-cloud-logos">
             <div class="logo-tile" data-bs-toggle="tooltip" title="Microsoft Azure private cloud">
               <img src="https://cdn.worldvectorlogo.com/logos/azure-2.svg" alt="Azure logo" class="logo-azure">
@@ -44,56 +57,60 @@
               <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS logo">
             </div>
             <div class="logo-tile" data-bs-toggle="tooltip" title="Bring your own private cloud">
-              <span class="fw-semibold text-dark">Custom</span>
+              <span class="font-semibold text-gray-900">Custom</span>
             </div>
           </div>
         </div>
-      </div> 
 
-      <div class="col-lg-4 d-flex flex-column align-items-center gap-4">
+      </div>
+
+      <!-- CENTER: core card -->
+      <div class="flex flex-col items-center gap-4">
         <div class="core-card text-white text-center shadow-lg">
-          <div class="fw-semibold mb-2">Content API &amp; Agentic Page Rendering</div>
-          <div class="">
-            <div class="badge bg-white text-dark px-3 py-2" data-bs-toggle="tooltip" title="Content.One Agentic Studio for instant page generation">Content.One Agentic Studio</div>
-            <div class="badge bg-white text-dark px-3 py-2 mt-2" data-bs-toggle="tooltip" title="Server-Side Rendering">SSR</div>
-            <div class="badge bg-white text-dark px-3 py-2 mt-2" data-bs-toggle="tooltip" title="Static Site Generation">SSG</div>
-            <div class="badge bg-white text-dark px-3 py-2 mt-2" data-bs-toggle="tooltip" title="Client-Side Rendering">CSR</div>
-            <div class="badge bg-white text-dark px-3 py-2 mt-2" data-bs-toggle="tooltip" title="Custom templating engines of your choice">Any Custom Templating</div>
-          </div> 
-          <div class="fw-semibold text-white mt-3 mb-3 text-center">On Any CDN</div>
-          <div class="d-flex align-items-center justify-content-center gap-3 flex-wrap">
+          <div class="font-semibold mb-2">Content API &amp; Agentic Page Rendering</div>
+          <div>
+            <div class="inline-block px-3 py-2 rounded-md bg-white text-gray-900 text-sm font-medium" data-bs-toggle="tooltip" title="Content.One Agentic Studio for instant page generation">Content.One Agentic Studio</div>
+            <div class="inline-block px-3 py-2 rounded-md bg-white text-gray-900 text-sm font-medium mt-2" data-bs-toggle="tooltip" title="Server-Side Rendering">SSR</div>
+            <div class="inline-block px-3 py-2 rounded-md bg-white text-gray-900 text-sm font-medium mt-2" data-bs-toggle="tooltip" title="Static Site Generation">SSG</div>
+            <div class="inline-block px-3 py-2 rounded-md bg-white text-gray-900 text-sm font-medium mt-2" data-bs-toggle="tooltip" title="Client-Side Rendering">CSR</div>
+            <div class="inline-block px-3 py-2 rounded-md bg-white text-gray-900 text-sm font-medium mt-2" data-bs-toggle="tooltip" title="Custom templating engines of your choice">Any Custom Templating</div>
+          </div>
+          <div class="font-semibold text-white mt-4 mb-3 text-center">On Any CDN</div>
+          <div class="flex items-center justify-center gap-3 flex-wrap">
             <span class="pill" data-bs-toggle="tooltip" title="Fastly CDN delivery">Fastly</span>
             <span class="pill" data-bs-toggle="tooltip" title="Akamai CDN delivery">Akamai</span>
             <span class="pill" data-bs-toggle="tooltip" title="Cloudflare CDN delivery">Cloudflare</span>
-            <span class="pill" data-bs-toggle="tooltip" title="Your preferred CDN">Your CDN </span>
+            <span class="pill" data-bs-toggle="tooltip" title="Your preferred CDN">Your CDN</span>
           </div>
-        </div> 
+        </div>
       </div>
 
-      <div class="col-lg-4">
+      <!-- RIGHT: outputs rail -->
+      <div>
         <div class="outputs rail">
           <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Launch full-stack Content.One sites">
-            <i class="bi bi-globe2 fs-4"></i>
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
             <span>Content.One Websites</span>
           </div>
           <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Power headless front-ends with Content.One APIs">
-            <i class="bi bi-globe fs-4"></i>
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c2.5 3 4 6.5 4 10s-1.5 7-4 10c-2.5-3-4-6.5-4-10s1.5-7 4-10z"/></svg>
             <span>Headless Websites</span>
-          </div> 
-          <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Deliver content to native or hybrid mobile apps"> 
-            <i class="bi bi-phone fs-4"></i>
+          </div>
+          <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Deliver content to native or hybrid mobile apps">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><circle cx="12" cy="18" r="1" fill="currentColor"/></svg>
             <span>Mobile Apps</span>
           </div>
           <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Feed content into smart devices and IoT surfaces">
-            <i class="bi bi-wifi fs-4"></i>
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 12.55a11 11 0 0 1 14.08 0M8.5 16.43a6 6 0 0 1 7 0M2 8.82a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1" fill="currentColor"/></svg>
             <span>Smart Devices</span>
           </div>
           <div class="output-card shadow-sm" data-bs-toggle="tooltip" title="Push experiences to signage and kiosks">
-            <i class="bi bi-easel fs-4"></i>
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="1"/><path d="M12 17v4M8 21h8"/></svg>
             <span>Digital Signage</span>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -105,12 +122,6 @@
     border: 1px solid #d7e0eb;
     border-radius: 10px;
     overflow: hidden;
-  }
-  .flexstack-section .text-primary {
-    color: var(--bs-primary) !important;
-  }
-  .flexstack-section .lead {
-    color: rgba(255,255,255,0.82);
   }
   .flexstack-section .stack-card {
     background: #f7f7fb;
@@ -138,15 +149,8 @@
     min-height: 56px;
     box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
   }
-  .flexstack-section .logo-tile img {
-    max-width: 120px;
-    max-height: 36px;
-    object-fit: contain;
-  }
-  .flexstack-section .logo-tile .logo-azure {
-    max-width: 90px;
-    max-height: 32px;
-  }
+  .flexstack-section .logo-tile img { max-width: 120px; max-height: 36px; object-fit: contain; }
+  .flexstack-section .logo-tile .logo-azure { max-width: 90px; max-height: 32px; }
   .flexstack-section .private-cloud-logos {
     display: grid;
     grid-template-columns: repeat(2, minmax(120px, 1fr));
@@ -156,7 +160,7 @@
   .flexstack-section .core-card {
     width: 100%;
     background: #3b4868;
-    border: 6px solid var(--bs-primary);
+    border: 6px solid #4255BD;
     border-radius: 20px;
     padding: 2rem 1.5rem;
   }
@@ -166,9 +170,8 @@
     gap: 0.85rem 0.85rem;
     align-items: center;
     justify-items: center;
-    justify-content: center;
     width: 100%;
-  } 
+  }
   .flexstack-section .integration-logos img {
     max-width: 95px;
     max-height: 40px;
@@ -180,11 +183,7 @@
     border: 1px solid #e2e8f0;
     box-sizing: border-box;
   }
-  .flexstack-section .outputs {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
+  .flexstack-section .outputs { display: flex; flex-direction: column; gap: 0.75rem; }
   .flexstack-section .output-card {
     background: #3b4868;
     border-radius: 12px;
@@ -195,26 +194,26 @@
     color: #fff;
     border: 1px solid rgba(255,255,255,0.08);
   }
-  .flexstack-section .rail {
-    position: relative;
-  }
+  .flexstack-section .rail { position: relative; }
   .flexstack-section .rail::before {
     content: "";
     position: absolute;
     left: -0.75rem;
     top: 0.5rem;
     bottom: 0.5rem;
-    border-left: 2px dotted var(--bs-primary);
-  } 
+    border-left: 2px dotted #4255BD;
+  }
   @media (max-width: 991.98px) {
-    .flexstack-section .rail::before {
-      display: none;
-    }
+    .flexstack-section .rail::before { display: none; }
   }
 </style>
 
 <script>
+  // Bootstrap tooltip init — preserved during migration since data-bs-toggle
+  // tooltips depend on Bootstrap JS. Drops out once tooltips are replaced
+  // with a Tailwind-friendly approach (e.g. CSS-only or alpine.js).
   document.addEventListener('DOMContentLoaded', function () {
+    if (typeof bootstrap === 'undefined') return;
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.forEach(function (el) {
       new bootstrap.Tooltip(el);
