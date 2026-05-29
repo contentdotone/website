@@ -56,6 +56,16 @@
     .navbtn:hover:not(:disabled){ background:#4255BD; border-color:#4255BD; transform:translateY(-2px); }
     .navbtn:disabled{ opacity:.3; cursor:default; }
     ::selection{ background:#4255BD; color:#fff; }
+    /* Print: each slide on its own page (un-fix the deck) */
+    @media print {
+      @page { size: landscape; margin: 0; }
+      html, body { height: auto; overflow: visible; }
+      #deck { position: static; transform: none !important; transition: none; }
+      .slide { height: auto; min-height: 100vh; overflow: visible; break-inside: avoid; break-after: page; page-break-after: always; }
+      .slide:last-child { break-after: auto; page-break-after: auto; }
+      .fixed { display: none !important; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
   </style>
 </head>
 
