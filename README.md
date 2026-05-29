@@ -115,3 +115,37 @@ While the steps above use a manual copy/paste for the CSS, the VS Code extension
 
 If your team prefers manual pasting for theme.css, keep using the steps in section 9 to avoid accidental overwrites.
 
+⸻
+
+## Deployment Automation
+
+Instead of pasting code by hand, this repo can sync `webengine/` files to the Zesty instance automatically via a GitHub Action (`.github/workflows/zesty-deploy.yml` + `scripts/sync-to-zesty.js`). The script reads `zesty.config.json`, which maps each local file to its Zesty resource ZUID, and `PUT`s the file contents to the Instance API.
+
+### Branch model
+
+Work flows `local → stage → production`:
+
+* **`local`** — where you do your work. No automation runs here.
+* **`stage`** — merge `local` (or any branch) into `stage` to **save/update** the changed files on the instance (no publish). Preview them on the dev domain.
+* **`production`** — merge `stage` into `production` to **save *and* publish** the changed files live.
+
+### Changed files only
+
+On each push the Action diffs against the pre-push commit (`github.event.before`) and only touches files that actually changed in that merge — so promoting `stage → production` publishes just the changed files. Edge cases are handled safely:
+
+* First push to a branch (no previous commit to diff against) falls back to a **full sync**.
+* Run the workflow manually (Actions → *Deploy to Zesty.io* → *Run workflow*) with **full_sync = true** to re-sync every mapped file, or **publish = true** to force a publish.
+
+### Required GitHub Actions secrets
+
+Set these in repo → Settings → Secrets and variables → Actions:
+
+* `ZESTY_INSTANCE_ZUID` — the instance ID (`8-98969f9fe2-5w3x3g`)
+* `ZESTY_DEVELOPER_TOKEN` — a Zesty developer/instance-API token with write access to that instance
+
+### Local testing
+
+```
+npm run deploy:dry    # dry run — resolves files, makes no API calls
+```
+
