@@ -673,6 +673,36 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-05-29T13:41:31Z",
                 "createdAt": "2026-05-29T13:41:31Z"
+            },
+            "/-/block/connected_tech_stack.html": {
+                "zuid": "11-b6e483edd1-fx73ph",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/-/block/connected_text_stack.html": {
+                "zuid": "11-e6d8fe84d4-nx2r4l",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/assets/theme.css.map": {
+                "zuid": "11-ceb68fcfd6-w7s9g2",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/components/ctas/solutions-button.html": {
+                "zuid": "11-90c292c8d9-004nz5",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/page_html/features/ai-content-acceleration.html": {
+                "zuid": "11-eeb4c8aadb-2wjc8r",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
             }
         },
         "styles": {
