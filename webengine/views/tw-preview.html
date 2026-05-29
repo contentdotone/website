@@ -55,16 +55,26 @@
     </div>
   </div>
 
-  <!-- The converted component -->
+  <!-- Converted components — visual fidelity demo -->
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">01 · on_demand_developers.html</p></div></div>
   {{include /components/features/on_demand_developers.html}}
 
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">02 · analytics_highlight.html</p></div></div>
+  {{include /components/features/analytics_highlight.html}}
+
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">03 · block_highlight.html</p></div></div>
+  {{include /components/features/block_highlight.html}}
+
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">04 · hybrid_advantage.html</p></div></div>
+  {{include /components/features/hybrid_advantage.html}}
+
   <!-- After / status strip -->
-  <div class="border-t border-gray-200 bg-white">
+  <div class="border-t border-gray-200 bg-white mt-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Migration status</p>
-      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3">Component-level conversion working at fidelity.</h2>
-      <p class="text-gray-600 max-w-2xl">This page is standalone Tailwind. The component above is the only file converted in this commit — same layout, same copy, same dark trust panel, same three pillars (Trusted / Best Practices / Success Guarantee), with all Bootstrap classes swapped for Tailwind equivalents and <code class="text-royal">bi-*</code> icons replaced with inline SVGs.</p>
-      <p class="text-gray-500 text-sm mt-4">119 view files total. Pure visual components like this convert cleanly. Components with Bootstrap-JS interactions (nav offcanvas + dropdowns, footer mobile collapse, accordions) need an interaction-migration plan first.</p>
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Migration status — batch 1</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3">4 pure-visual feature components converted at fidelity.</h2>
+      <p class="text-gray-600 max-w-2xl">All four use Tailwind utilities + brand tokens loaded inline. <code class="text-royal">bi-*</code> icons replaced with inline SVGs. <code class="text-royal">{{include}}</code> templates preserved verbatim. The only nested Bootstrap leftover is the <code class="text-royal">book-button.html</code> CTA include used in analytics + block — queued for the next batch.</p>
+      <p class="text-gray-500 text-sm mt-4">Working through the codebase in batches. Components with JS interactions (nav offcanvas + dropdowns, footer collapse, accordions) deferred until a JS interaction strategy is locked in.</p>
     </div>
   </div>
 
