@@ -11,6 +11,12 @@ const DRY_RUN = process.env.DRY_RUN === 'true' || process.argv.includes('--dry-r
 // save+publish them. By default only files changed by the push are touched
 // (DIFF_BASE = the pre-push SHA); FULL_SYNC=true processes every mapped file.
 const FULL_SYNC = process.env.FULL_SYNC === 'true' || process.argv.includes('--full');
+// Hybrid verification: git diff picks candidates, then (when a token is present)
+// the instance's current content is fetched and compared so no-op saves are
+// skipped. NO_API_CHECK disables it.
+const CAN_CHECK = !!(INSTANCE_ZUID && TOKEN) && process.env.NO_API_CHECK !== 'true';
+const norm = (s) =>
+  s == null ? '' : String(s).replace(/\r\n/g, '\n').replace(/[ \t]+$/gm, '').replace(/\n+$/, '');
 
 const CONFIG_PATH = path.join(process.cwd(), 'zesty.config.json');
 const WEBENGINE_DIR = path.join(process.cwd(), 'webengine');
@@ -100,6 +106,20 @@ async function apiRequest(method, endpointPath, body) {
     throw new Error(`${method} ${endpointPath} → ${res.status} ${text}`);
   }
   return res;
+}
+
+// Read-only GET of a resource's current code in the instance (null if missing).
+async function fetchCurrentCode(endpoint, zuid) {
+  try {
+    const url = `https://${INSTANCE_ZUID}.api.zesty.io/v1/web/${endpoint}/${zuid}`;
+    const res = await fetch(url, { headers: { Authorization: `Bearer ${TOKEN}` } });
+    if (!res.ok) return null;
+    const json = await res.json().catch(() => null);
+    const d = (json && json.data) || {};
+    return typeof d.code === 'string' ? d.code : null;
+  } catch {
+    return null;
+  }
 }
 
 // Every file currently on disk under webengine/<section>/ (skips dotfiles).
@@ -212,10 +232,27 @@ async function saveItem(item, publish) {
     return false;
   }
   const code = fs.readFileSync(item.localPath, 'utf8');
-  const query = publish ? '?action=publish&purge_cache=true' : '';
-  const verb = publish ? 'Save+publish' : 'Save';
-  console.log(`${publish ? '🚀' : '💾'} ${DRY_RUN ? '[dry-run] ' : ''}${verb} ${rel} → ${item.endpoint}/${item.zuid}`);
+  const dry = DRY_RUN ? '[dry-run] ' : '';
+
+  // Hybrid check: compare repo content to the instance's current content.
+  // On stage (no publish) an identical resource is skipped entirely. On
+  // production we still publish identical content (the saved version may not be
+  // live yet — stage/production share one instance, so it's already saved).
+  if (CAN_CHECK) {
+    const current = await fetchCurrentCode(item.endpoint, item.zuid);
+    const same = current !== null && norm(current) === norm(code);
+    if (same && !publish) {
+      console.log(`✓ ${dry}Unchanged, skip ${rel} → ${item.endpoint}/${item.zuid}`);
+      return false;
+    }
+    const why = same ? 'already saved' : 'differs';
+    console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} (${why}) ${rel} → ${item.endpoint}/${item.zuid}`);
+  } else {
+    console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} ${rel} → ${item.endpoint}/${item.zuid}`);
+  }
+
   if (!DRY_RUN) {
+    const query = publish ? '?action=publish&purge_cache=true' : '';
     await apiRequest('PUT', `/web/${item.endpoint}/${item.zuid}${query}`, { code });
   }
   return true;
