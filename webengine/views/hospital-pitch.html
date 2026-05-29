@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content.One for Hospitals · Pitch</title>
+  <meta name="description" content="Why modern health systems run their digital presence on Content.One: ~20% lower cost, easy updates and discoverability for doctor networks and services, accolades that drive giving, portal & payment integrations, and security with built-in ADA compliance." />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: {
+          display: ['"DM Sans"', 'sans-serif'],
+          sans: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
+          mono: ['"DM Mono"', 'monospace'],
+        },
+        colors: {
+          ink: '#080b18', panel: '#10162b', panel2: '#171f3a',
+          line: 'rgba(124,140,240,0.18)',
+          royal: '#4255BD', royalLite: '#9aa6f4',
+          success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          chalk: '#eef1fc', muted: '#9aa2c8',
+        },
+      } },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap');
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+    :root { color-scheme: dark; }
+    html, body { height: 100%; overflow: hidden; background:#080b18; }
+    h1,h2,h3 { letter-spacing:-0.025em; } h1 { letter-spacing:-0.04em; }
+    #deck { position: fixed; inset: 0; transition: transform .72s cubic-bezier(.76,0,.24,1); will-change: transform; }
+    .slide { height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .slide::-webkit-scrollbar { width: 0; }
+    .hairline { border:1px solid rgba(124,140,240,0.18); }
+    .gridbg { background-image:
+      linear-gradient(rgba(124,140,240,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,140,240,0.05) 1px, transparent 1px);
+      background-size: 48px 48px; }
+    .royalfade { background:
+      radial-gradient(900px 500px at 80% -10%, rgba(66,85,189,0.45), transparent 60%),
+      radial-gradient(700px 420px at -5% 110%, rgba(13,202,240,0.12), transparent 55%); }
+    @keyframes rise { from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:none;} }
+    .rise { opacity:0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @media (prefers-reduced-motion: reduce){ .rise{animation:none;opacity:1;} #deck{transition:none;} }
+    .kicker { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; }
+    .diagram { background: repeating-linear-gradient(45deg, rgba(154,166,244,0.06) 0 12px, transparent 12px 24px); }
+    .navbtn { width:3.5rem; height:3.5rem; display:grid; place-items:center; border-radius:9999px;
+      border:1px solid rgba(124,140,240,0.3); background:rgba(8,11,24,0.75); backdrop-filter:blur(8px); color:#eef1fc; transition:all .2s ease; }
+    .navbtn:hover:not(:disabled){ background:#4255BD; border-color:#4255BD; transform:translateY(-2px); }
+    .navbtn:disabled{ opacity:.3; cursor:default; }
+    ::selection{ background:#4255BD; color:#fff; }
+  </style>
+</head>
+
+<body class="font-sans text-chalk antialiased">
+
+  <a href="#" class="fixed top-5 left-6 z-50"><img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-6 w-auto opacity-90" /></a>
+  <div class="fixed top-0 left-0 right-0 h-1 bg-royal/20 z-50"><div id="bar" class="h-full bg-royal w-0 transition-all duration-700"></div></div>
+  <div class="fixed bottom-7 right-6 z-50 font-mono text-xs text-muted hairline rounded-full px-3 py-1.5 bg-ink/70 backdrop-blur"><span id="cur" class="text-chalk">01</span> <span class="text-royalLite">/</span> 11</div>
+  <div class="fixed bottom-6 left-6 z-50 flex gap-3">
+    <button id="prev" class="navbtn" aria-label="Previous slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+    <button id="next" class="navbtn" aria-label="Next slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+  </div>
+
+  <div id="deck">
+
+  <!-- 01 TITLE -->
+  <section class="slide relative flex items-center gridbg" data-i="1">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="rise h-9 w-auto" style="animation-delay:.04s" />
+      <p class="rise kicker text-royalLite mt-8" style="animation-delay:.1s">Healthcare Pitch</p>
+      <h1 class="rise font-display font-bold leading-[0.95] mt-5 text-[12vw] md:text-[6.5rem]" style="animation-delay:.16s">
+        The platform for<br /><span class="text-royalLite">modern health</span> systems.
+      </h1>
+      <p class="rise max-w-2xl text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.24s">
+        One platform for every service line, every physician, every patient and donor — faster to update,
+        easy to find, secure and accessible by design, at <span class="text-chalk font-medium">~20% lower cost</span>.
+      </p>
+      <div class="rise mt-9 flex flex-wrap gap-3 font-mono text-xs" style="animation-delay:.32s">
+        <span class="hairline rounded-full px-4 py-2 text-success">~20% lower cost</span>
+        <span class="hairline rounded-full px-4 py-2 text-info">2.25× faster launches</span>
+        <span class="hairline rounded-full px-4 py-2 text-warning">99.99% uptime</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">ADA / WCAG 2.2 built in</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 CHALLENGE → EASE -->
+  <section class="slide relative flex items-center" data-i="2">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-danger">What was hard is now easy</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">The hard parts, handled.</h2>
+      <div class="mt-10 grid md:grid-cols-2 gap-px bg-line rounded-2xl overflow-hidden">
+        <div class="bg-panel p-6"><div class="font-mono text-xs text-danger">Integrations — before</div><p class="text-muted mt-2 leading-relaxed">Brittle custom builds, expensive to connect, easy to break.</p></div>
+        <div class="bg-panel2 p-6"><div class="font-mono text-xs text-success">On Content.One</div><p class="text-chalk mt-2 leading-relaxed">API-first + real-time webhooks — connect portals &amp; payments fast.</p></div>
+        <div class="bg-panel p-6"><div class="font-mono text-xs text-danger">Website updates — before</div><p class="text-muted mt-2 leading-relaxed">Slow, developer-dependent, risky to change.</p></div>
+        <div class="bg-panel2 p-6"><div class="font-mono text-xs text-success">On Content.One</div><p class="text-chalk mt-2 leading-relaxed">Guided publishing in minutes — no developer needed.</p></div>
+        <div class="bg-panel p-6"><div class="font-mono text-xs text-danger">New design — before</div><p class="text-muted mt-2 leading-relaxed">A costly, months-long redesign project.</p></div>
+        <div class="bg-panel2 p-6"><div class="font-mono text-xs text-success">On Content.One</div><p class="text-chalk mt-2 leading-relaxed">Reusable components &amp; templates — a redesign, not a re-platform.</p></div>
+        <div class="bg-panel p-6"><div class="font-mono text-xs text-danger">Security &amp; compliance — before</div><p class="text-muted mt-2 leading-relaxed">Legacy WordPress/Drupal — prime targets for AI-driven attacks and unpatched exploits.</p></div>
+        <div class="bg-panel2 p-6"><div class="font-mono text-xs text-success">On Content.One</div><p class="text-chalk mt-2 leading-relaxed">SOC 2, encryption &amp; automated updates — no legacy attack surface to exploit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 KEY: 20% COST -->
+  <section class="slide relative flex items-center bg-royal" data-i="3">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-white/70">The bottom line</p>
+      <div class="flex flex-col md:flex-row md:items-end gap-6 mt-4">
+        <div class="font-display text-[28vw] md:text-[13rem] font-extrabold leading-[0.8] text-white">20%</div>
+        <p class="font-display text-3xl md:text-4xl font-bold text-white pb-4">lower total cost<br/>of ownership.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-white/15 mt-10 rounded-2xl overflow-hidden">
+        <div class="bg-royal p-6"><h3 class="font-display font-bold text-white">Consolidate platforms</h3><p class="text-white/70 text-sm mt-2">Many sites &amp; CMSs → one. Fewer licenses, fewer vendors.</p></div>
+        <div class="bg-royal p-6"><h3 class="font-display font-bold text-white">No plugins or patching</h3><p class="text-white/70 text-sm mt-2">Automated weekly updates — no maintenance team, no downtime.</p></div>
+        <div class="bg-royal p-6"><h3 class="font-display font-bold text-white">No upgrade fees</h3><p class="text-white/70 text-sm mt-2">SaaS pricing; everyone on one secure, current version.</p></div>
+        <div class="bg-royal p-6"><h3 class="font-display font-bold text-white">Less dev dependency</h3><p class="text-white/70 text-sm mt-2">Non-technical teams publish — fewer agency &amp; contractor hours.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 UPDATES + DISCOVERABILITY -->
+  <section class="slide relative flex items-center gridbg" data-i="4">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-info">Easy updates &amp; discoverability</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Doctors and services, found in seconds.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Update a physician, a specialty, or a location once — and it cascades across every page automatically. Built-in SEO + GEO means patients (and AI search) surface the right care, the moment it's published.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Update once</div><p class="text-muted text-sm mt-2">Structured content cascades a change everywhere it appears — no duplicate edits.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Auto SEO + GEO</div><p class="text-muted text-sm mt-2">Schema for physicians, services &amp; locations, generated automatically for rich, AI-ready results.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Local relevance</div><p class="text-muted text-sm mt-2">Geo-targeting puts the nearest location and right service in front of each patient.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 HOSPITAL MODULES -->
+  <section class="slide relative flex items-center" data-i="5">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Purpose-built modules</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Built for how hospitals are organized.</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-display text-2xl font-bold">Board &amp; leadership</div><p class="text-muted mt-3 leading-relaxed">A structured directory of your board and key members — profiles update once and cascade across every site.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-display text-2xl font-bold">Searchable doctor network</div><p class="text-muted mt-3 leading-relaxed">A filterable physician finder — by specialty, location, language, accepting-new-patients — powered by structured data.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-display text-2xl font-bold">Services &amp; specialties</div><p class="text-muted mt-3 leading-relaxed">A services finder that maps conditions → care → location → the right physician, all interlinked automatically.</p></div>
+      </div>
+      <p class="text-muted mt-6 max-w-3xl">The same engine that lets The Salvation Army cascade leadership profiles and a public locator across 3,000+ locations powers your physician network and service lines.</p>
+    </div>
+  </section>
+
+  <!-- 06 ACCOLADES -> GIVING -->
+  <section class="slide relative flex items-center bg-panel gridbg" data-i="6">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-warning">Accolades that drive giving</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Trust is the case for donations.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Showcase accreditations, rankings, and awards as reusable, structured badges across the site — the credibility that turns visitors into donors to your foundation.</p>
+      <div class="flex flex-wrap gap-3 mt-8">
+        <span class="hairline rounded-xl px-5 py-3 bg-ink font-display font-bold">★ Accreditations</span>
+        <span class="hairline rounded-xl px-5 py-3 bg-ink font-display font-bold">▲ "Best Hospitals" rankings</span>
+        <span class="hairline rounded-xl px-5 py-3 bg-ink font-display font-bold">✦ Quality &amp; safety awards</span>
+        <span class="hairline rounded-xl px-5 py-3 bg-ink font-display font-bold">♥ Patient outcomes</span>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-8">
+        <div class="hairline rounded-2xl p-6 bg-ink"><h3 class="font-display text-xl font-bold">Manage once, prove everywhere</h3><p class="text-muted mt-2 leading-relaxed">Update an award or stat in one place; it appears on every relevant page, campaign, and the giving site.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-ink"><h3 class="font-display text-xl font-bold">Cascading donation forms</h3><p class="text-muted mt-2 leading-relaxed">Centrally managed, locally contextual giving — donors always reach the right fund or campaign.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 INTEGRATIONS -->
+  <section class="slide relative flex items-center" data-i="7">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-info">Integrations</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Every system, connected — easily.</h2>
+      <p class="text-muted mt-5 max-w-3xl text-lg">API-first with real-time webhooks: one consistent front door to portals, payments, careers, price transparency, and giving — kept in sync automatically, no brittle custom builds.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-9">
+        <a href="https://www.clearbalance.com" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=clearbalance.com&sz=128" alt="Clear Balance" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Payment Portal</span><span class="font-display font-bold">Clear Balance</span></span>
+        </a>
+        <a href="https://www.mycarecorner.com" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=mycarecorner.com&sz=128" alt="My Care Corner" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Patient Portal</span><span class="font-display font-bold">My Care Corner</span></span>
+        </a>
+        <a href="https://www.rpmh.net/staff-portal" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=rpmh.net&sz=128" alt="Staff Portal" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Staff Portal</span><span class="font-display font-bold">Staff Portal</span></span>
+        </a>
+        <a href="https://www.paycomonline.net" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=paycom.com&sz=128" alt="Paycom" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Career Portal</span><span class="font-display font-bold">Paycom</span></span>
+        </a>
+        <a href="https://www.claraprice.com" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=claraprice.com&sz=128" alt="ClaraPrice" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Price Transparency</span><span class="font-display font-bold">ClaraPrice</span></span>
+        </a>
+        <a href="https://www.paypal.com/US/fundraiser/charity/1787632" target="_blank" rel="noopener" class="hairline rounded-2xl p-5 bg-panel hover:bg-panel2 transition flex items-center gap-4">
+          <span class="bg-white rounded-xl p-2 inline-grid place-items-center flex-shrink-0"><img src="https://www.google.com/s2/favicons?domain=paypal.com&sz=128" alt="PayPal" class="w-7 h-7" /></span>
+          <span><span class="block font-mono text-xs text-info">Donate</span><span class="font-display font-bold">PayPal Giving</span></span>
+        </a>
+      </div>
+      <p class="text-muted text-sm mt-5 font-mono">Webhooks + API keep these — and your CRM, EHR &amp; donor tools — synchronized in real time.</p>
+    </div>
+  </section>
+
+  <!-- 08 SECURITY + ADA -->
+  <section class="slide relative flex items-center gridbg" data-i="8">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-success">Security + accessibility</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Secure and ADA-compliant by design.</h2>
+      <div class="grid md:grid-cols-2 gap-8 mt-10">
+        <div>
+          <h3 class="font-display text-2xl font-bold text-success">Enterprise security</h3>
+          <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-success">✓</span> SOC 2 Type II controls; AES-256 at rest, TLS 1.2+ in transit.</li>
+            <li class="flex gap-3"><span class="text-success">✓</span> Two-factor auth + SSO and granular roles for large teams.</li>
+            <li class="flex gap-3"><span class="text-success">✓</span> Automated security updates — no patching, no version drift.</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-display text-2xl font-bold text-info">Built-in ADA compliance</h3>
+          <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-info">✓</span> Templates engineered to <span class="text-chalk">WCAG 2.2</span> — accessible by default, not as an afterthought.</li>
+            <li class="flex gap-3"><span class="text-info">✓</span> Semantic structure, alt text, and contrast guided at authoring time.</li>
+            <li class="flex gap-3"><span class="text-info">✓</span> Reduces ADA legal exposure that plagues healthcare sites.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 PROOF: SONY + BEYOND -->
+  <section class="slide relative flex items-center overflow-hidden" data-i="9">
+    <img src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-WIMB-Zack-Knudsen-2.webp" alt="Enterprise launch on Content.One" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Proven across the enterprise</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Fast, secure, global — for brands like Sony.</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 mt-8 rounded-2xl overflow-hidden max-w-3xl">
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-info">2.25×</div><p class="text-muted text-xs mt-1">Faster go-live</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-success">164%</div><p class="text-muted text-xs mt-1">QoQ engagement</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-warning">99.99%</div><p class="text-muted text-xs mt-1">Uptime</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-royalLite">6 wks</div><p class="text-muted text-xs mt-1">To soft launch</p></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-8 max-w-4xl">
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/matt.jpg" alt="Matthew Parnell" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months."</p><footer class="font-mono text-xs text-muted mt-2">Matthew Parnell · MARCOM Manager, Sony Electronics</footer></div>
+        </blockquote>
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6">
+          <p class="text-chalk leading-relaxed">"We need software that's both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable."</p>
+          <footer class="font-mono text-xs text-muted mt-2">Ben Johnson · Director of Technology Operations, Bluepixel (Sony's agency)</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 EASE OF USE -->
+  <section class="slide relative flex items-center" data-i="10">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Ease of use</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Your comms team ships — no developer required.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Guided templates and structured layouts let marketing, communications, and service-line owners publish accurate, on-brand, accessible content — with version control as a safety net on every edit.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-display text-xl font-bold">Guided, not freeform</div><p class="text-muted text-sm mt-2">Structured templates keep every page on-brand and compliant.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-display text-xl font-bold">Safe by default</div><p class="text-muted text-sm mt-2">Version control + roles mean edits are reversible and scoped.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-display text-xl font-bold">Launch in weeks</div><p class="text-muted text-sm mt-2">New service-line sites and campaigns spin up fast on reusable components.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CLOSE -->
+  <section class="slide relative flex items-center gridbg" data-i="11">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-4xl mx-auto px-6 w-full py-16 text-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-9 w-auto mx-auto" />
+      <p class="kicker text-royalLite mt-7">Care, connected</p>
+      <h2 class="font-display text-4xl md:text-7xl font-bold mt-5">Run your health system on Content.One.</h2>
+      <p class="text-muted mt-6 max-w-2xl mx-auto text-lg leading-relaxed">Lower cost, easy updates, discoverable care, accolades that drive giving, connected portals — secure and accessible by design.</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/contact-us/" class="bg-royal hover:bg-royalLite hover:text-ink transition text-white font-medium rounded-full px-7 py-3">Talk with our team</a>
+        <a href="/contact-us/" class="hairline hover:border-royalLite transition rounded-full px-7 py-3 text-chalk">Book a demo</a>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /deck -->
+
+  <script>
+    const deck = document.getElementById('deck');
+    const slides = [...deck.querySelectorAll('.slide')];
+    const cur = document.getElementById('cur'), bar = document.getElementById('bar');
+    const prevBtn = document.getElementById('prev'), nextBtn = document.getElementById('next');
+    let idx = 0, lock = false;
+    function render() {
+      deck.style.transform = `translateY(${-idx * 100}vh)`;
+      cur.textContent = String(idx + 1).padStart(2, '0');
+      bar.style.width = ((idx + 1) / slides.length * 100) + '%';
+      prevBtn.disabled = idx === 0; nextBtn.disabled = idx === slides.length - 1;
+    }
+    function goTo(i) { i = Math.max(0, Math.min(slides.length - 1, i)); if (i === idx) return; idx = i; lock = true; render(); setTimeout(() => { lock = false; }, 720); }
+    prevBtn.addEventListener('click', () => goTo(idx - 1));
+    nextBtn.addEventListener('click', () => goTo(idx + 1));
+    window.addEventListener('wheel', (e) => {
+      const s = slides[idx];
+      const canDown = s.scrollHeight - s.scrollTop - s.clientHeight > 2, canUp = s.scrollTop > 2;
+      if ((e.deltaY > 0 && canDown) || (e.deltaY < 0 && canUp)) return;
+      e.preventDefault(); if (lock) return;
+      if (e.deltaY > 6) goTo(idx + 1); else if (e.deltaY < -6) goTo(idx - 1);
+    }, { passive: false });
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); goTo(idx + 1); }
+      else if (['ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); goTo(idx - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+      else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+    });
+    let ty = null;
+    window.addEventListener('touchstart', (e) => { ty = e.touches[0].clientY; }, { passive: true });
+    window.addEventListener('touchend', (e) => {
+      if (ty === null) return; const dy = ty - e.changedTouches[0].clientY; const s = slides[idx];
+      const atBottom = s.scrollHeight - s.scrollTop - s.clientHeight < 4, atTop = s.scrollTop < 4;
+      if (dy > 50 && atBottom) goTo(idx + 1); else if (dy < -50 && atTop) goTo(idx - 1); ty = null;
+    }, { passive: true });
+    render();
+  </script>
+</body>
+</html>
