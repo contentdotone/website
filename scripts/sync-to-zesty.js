@@ -65,16 +65,17 @@ function buildManifest(config) {
   return items;
 }
 
-// Repo-relative paths changed between DIFF_BASE and DIFF_HEAD. Returns null if
-// the range can't be determined (first push, shallow clone) so the caller can
-// fall back to a full sync. execFileSync (no shell) avoids any injection.
+// Repo-relative paths changed between DIFF_BASE and DIFF_HEAD. Returns null when
+// there is no usable base to diff against (first push to a branch → DIFF_BASE is
+// all-zeros; shallow clone; manual dispatch) so the caller falls back to a full
+// sync. execFileSync (no shell) avoids any injection.
 function changedFilePaths() {
   const base = process.env.DIFF_BASE;
   const head = process.env.DIFF_HEAD || 'HEAD';
   const isZero = (s) => !s || /^0+$/.test(s);
-  const from = isZero(base) ? `${head}^` : base;
+  if (isZero(base)) return null;
   try {
-    const out = execFileSync('git', ['diff', '--name-only', from, head], {
+    const out = execFileSync('git', ['diff', '--name-only', base, head], {
       cwd: process.cwd(),
       encoding: 'utf8',
     });
