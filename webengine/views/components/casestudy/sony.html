@@ -1,96 +1,65 @@
+<!-- sony case study — Tailwind-converted. Same pattern as petdesk/wattpad.
+     Modal kept with .modal class + data-bs-dismiss for Bootstrap JS during
+     transition; progress bars rebuilt as Tailwind divs; bi-* → inline SVGs. -->
 <div class="sony-case-study">
-  <section class="py-6 py-lg-7 bg-gradient-sony text-white overflow-hidden position-relative">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5 sony-hero-foreground position-relative">
-        <div class="col-lg-6">
-          <span class="badge bg-white text-primary mb-3">Customer Highlight</span>
-          <h1 class="display-4 fw-bold mb-4 text-white">Sony’s Alpha Universe launches 2.25× faster with Content.One.</h1>
-          <p class="lead text-white-75 mb-4">From global community experiences to secure customer portals, Sony’s content team ships artistry at the speed of inspiration.</p>
-  
-          <div class="row row-cols-2 row-cols-sm-4 g-3 mt-5">
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h3 mb-1" data-sony-count="2.25" data-sony-format="decimal" data-sony-suffix="×">0</p>
-                  <p class="small text-white-75 mb-0">Faster to market</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h3 mb-1" data-sony-count="164" data-sony-suffix="%">0</p>
-                  <p class="small text-white-75 mb-0">QoQ growth</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h3 mb-1" data-sony-count="99.99" data-sony-format="decimal" data-sony-suffix="%">0</p>
-                  <p class="small text-white-75 mb-0">Uptime</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h3 mb-1" data-sony-count="500" data-sony-suffix="k+">0</p>
-                  <p class="small text-white-75 mb-0">Launch Visits</p>
-                </div>
-              </div>
-            </div>
+
+  <!-- HERO -->
+  <section class="bg-gradient-sony text-white overflow-hidden relative py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center sony-hero-foreground relative">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Customer Highlight</span>
+          <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-white">Sony's Alpha Universe launches 2.25× faster with Content.One.</h1>
+          <p class="text-lg text-white/75 mb-4">From global community experiences to secure customer portals, Sony's content team ships artistry at the speed of inspiration.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+            <div class="bg-white border border-white/50 text-left rounded-xl"><div class="p-3"><p class="text-xl font-bold m-0 text-royal" data-sony-count="2.25" data-sony-format="decimal" data-sony-suffix="×">0</p><p class="text-xs text-gray-500 m-0">Faster to market</p></div></div>
+            <div class="bg-white border border-white/50 text-left rounded-xl"><div class="p-3"><p class="text-xl font-bold m-0 text-royal" data-sony-count="164" data-sony-suffix="%">0</p><p class="text-xs text-gray-500 m-0">QoQ growth</p></div></div>
+            <div class="bg-white border border-white/50 text-left rounded-xl"><div class="p-3"><p class="text-xl font-bold m-0 text-royal" data-sony-count="99.99" data-sony-format="decimal" data-sony-suffix="%">0</p><p class="text-xs text-gray-500 m-0">Uptime</p></div></div>
+            <div class="bg-white border border-white/50 text-left rounded-xl"><div class="p-3"><p class="text-xl font-bold m-0 text-royal" data-sony-count="500" data-sony-suffix="k+">0</p><p class="text-xs text-gray-500 m-0">Launch Visits</p></div></div>
           </div>
         </div>
-        <div class="col-lg-6">
+        <div>
           <div class="overflow-hidden sony-hero-media">
-            <img width="200" height="150" src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-Sony-Alpha-7S-III.webp" alt="Sony Alpha Universe showcase" class="bg-white p-3 rounded-4 shadow-lg">
+            <img width="200" height="150" src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-Sony-Alpha-7S-III.webp" alt="Sony Alpha Universe showcase" class="bg-white p-3 rounded-2xl shadow-lg">
           </div>
         </div>
       </div>
     </div>
-    <div class="sony-hero-glow d-none d-lg-block">
-      <div class="sony-hero-glow__image"></div>
-    </div>
+    <div class="sony-hero-glow hidden lg:block"><div class="sony-hero-glow__image"></div></div>
   </section>
 
-  <section class="bg-light py-5 border-bottom">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-lg-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body d-flex flex-column flex-md-row align-items-start gap-3">
-              <img src="https://hj5v68xn.media.zestyio.com/matt.jpg" alt="Matthew Parnell" class="rounded-3 shadow-sm flex-shrink-0" style="width:96px;height:96px;object-fit:cover;">
+  <!-- IN THEIR WORDS / VELOCITY BAR -->
+  <section class="bg-gray-50 py-12 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-4">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
+              <img src="https://hj5v68xn.media.zestyio.com/matt.jpg" alt="Matthew Parnell" class="rounded-xl shadow-sm shrink-0" style="width:96px;height:96px;object-fit:cover;">
               <div>
-                <h2 class="h4">In their words</h2>
-                <p class="text-grey mb-0">“By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months.”</p>
-                <p class="small text-muted mb-0 mt-2">Matthew Parnell, MARCOM Manager, Sony Electronics</p>
+                <h2 class="text-xl font-semibold mb-2">In their words</h2>
+                <p class="text-gray-600 m-0">"By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months."</p>
+                <p class="text-xs text-gray-500 m-0 mt-2">Matthew Parnell, MARCOM Manager, Sony Electronics</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-8">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <div class="d-flex flex-wrap align-items-center gap-4">
-                <div class="d-flex align-items-center gap-3">
-                  <img src="{{this.logo.getImage()}}" width="120" height="auto" alt="Sony" class="bg-white p-2">
+        <div class="lg:col-span-8">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <div class="flex flex-wrap items-center gap-4">
+                <div class="flex items-center gap-3">
+                  <img src="{{this.logo.getImage()}}" width="120" alt="Sony" class="bg-white p-2">
                   <div>
-                    <h3 class="h5 mb-1">Creative velocity unlocked</h3>
-                    <p class="mb-0 text-grey">Sony’s agency partner Bluepixel ships global campaigns on a secure, flexible foundation.</p>
+                    <h3 class="text-base font-semibold mb-1">Creative velocity unlocked</h3>
+                    <p class="m-0 text-gray-600 text-sm">Sony's agency partner Bluepixel ships global campaigns on a secure, flexible foundation.</p>
                   </div>
                 </div>
-                <div class="flex-grow-1">
-                  <div class="d-flex flex-column gap-2">
-                    <div class="progress rounded-pill" style="height: 32px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Launch velocity 2.25× faster</div>
-                    </div>
-                    <div class="progress rounded-pill" style="height: 32px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100">Uptime 99.99%</div>
-                    </div>
-                    <div class="progress rounded-pill" style="height: 32px;">
-                      <div class="progress-bar bg-info" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">164% QoQ engagement growth</div>
-                    </div>
+                <div class="flex-grow w-full">
+                  <div class="flex flex-col gap-2">
+                    <div class="rounded-full overflow-hidden bg-gray-200" style="height:32px;"><div class="h-full bg-danger text-white text-sm font-medium flex items-center px-3" style="width:100%;">Launch velocity 2.25× faster</div></div>
+                    <div class="rounded-full overflow-hidden bg-gray-200" style="height:32px;"><div class="h-full bg-success text-white text-sm font-medium flex items-center px-3" style="width:99%;">Uptime 99.99%</div></div>
+                    <div class="rounded-full overflow-hidden bg-gray-200" style="height:32px;"><div class="h-full bg-info text-white text-sm font-medium flex items-center px-3" style="width:100%;">164% QoQ engagement growth</div></div>
                   </div>
                 </div>
               </div>
@@ -101,99 +70,73 @@
     </div>
   </section>
 
-  <section class="py-5 py-lg-6">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3">
-          <div class="position-sticky top-0" style="z-index:2; top: 6rem;">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-3">
-                <h2 class="h5 mb-3">Highlights</h2>
-                <nav id="sonyCaseNav" class="nav nav-pills flex-column gap-2">
-                  <a class="nav-link active" href="#sony-origins">Origins &amp; Vision</a>
-                  <a class="nav-link" href="#sony-secure">Secure Foundation</a>
-                  <a class="nav-link" href="#sony-speed">Speed to Market</a>
-                  <a class="nav-link" href="#sony-growth">Growth &amp; Community</a>
-                  <a class="nav-link" href="#sony-partners">Partner Perspective</a>
+  <!-- MAIN -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3">
+          <div class="sticky" style="top: 6rem;">
+            <div class="bg-white shadow-sm rounded-2xl">
+              <div class="p-3">
+                <h2 class="text-base font-semibold mb-3">Highlights</h2>
+                <nav id="sonyCaseNav" class="flex flex-col gap-2">
+                  <a class="nav-link active block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#sony-origins">Origins &amp; Vision</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#sony-secure">Secure Foundation</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#sony-speed">Speed to Market</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#sony-growth">Growth &amp; Community</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#sony-partners">Partner Perspective</a>
                 </nav>
               </div>
               {{include /components/casestudy/side-cta.html}}
             </div>
           </div>
         </div>
-        <div class="col-lg-9">
-          <div id="sonySections" data-bs-spy="scroll" data-bs-target="#sonyCaseNav" data-bs-offset="160" tabindex="0" class="pe-lg-3">
-            <section id="sony-origins" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-md-6">
-                  <h3 class="h2">Alpha Universe: concept to community</h3>
-                  <p class="lead text-grey">Sony envisioned a global showcase for Alpha creators. They budgeted four months — Content.One let them deliver in half the time.</p>
-                  <ul class="list-unstyled d-grid gap-3">
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-camera text-warning fs-4"></i>
-                      <span>Customer portal integrates repair workflows with Microsoft Dynamics.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-people text-warning fs-4"></i>
-                      <span>Influencer storytelling celebrates artisans, stories, and the gear they trust.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-broadcast text-warning fs-4"></i>
-                      <span>Live event streaming keeps fans connected to new launches and workshops.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-image text-warning fs-4"></i>
-                      <span>Customer photo showcases spotlight every frame captured with Alpha.</span>
-                    </li>
+
+        <div class="lg:col-span-9">
+          <div id="sonySections" data-bs-spy="scroll" data-bs-target="#sonyCaseNav" data-bs-offset="160" tabindex="0" class="lg:pr-3">
+
+            <section id="sony-origins" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Alpha Universe: concept to community</h3>
+                  <p class="text-lg text-gray-600 mb-4">Sony envisioned a global showcase for Alpha creators. They budgeted four months — Content.One let them deliver in half the time.</p>
+                  <ul class="grid gap-3">
+                    <li class="flex gap-3 text-gray-600"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="13" rx="2"/><circle cx="12" cy="13.5" r="3.5"/><path d="M8 7l2-3h4l2 3"/></svg><span>Customer portal integrates repair workflows with Microsoft Dynamics.</span></li>
+                    <li class="flex gap-3 text-gray-600"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg><span>Influencer storytelling celebrates artisans, stories, and the gear they trust.</span></li>
+                    <li class="flex gap-3 text-gray-600"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4.93 19.07A10 10 0 0 1 4.93 4.93M19.07 4.93a10 10 0 0 1 0 14.14M7.76 16.24a6 6 0 0 1 0-8.48M16.24 7.76a6 6 0 0 1 0 8.48"/><circle cx="12" cy="12" r="2"/></svg><span>Live event streaming keeps fans connected to new launches and workshops.</span></li>
+                    <li class="flex gap-3 text-gray-600"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg><span>Customer photo showcases spotlight every frame captured with Alpha.</span></li>
                   </ul>
                 </div>
-                <div class="col-md-6">
-                  <div class="rounded-4 overflow-hidden shadow-sm">
-                    <img src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-WIMB-Zack-Knudsen-2.webp" alt="Sony Alpha gallery" class="w-100 h-100 object-fit-cover">
+                <div>
+                  <div class="rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-WIMB-Zack-Knudsen-2.webp" alt="Sony Alpha gallery" class="w-full h-full object-cover">
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="sony-secure" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                  <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                      <h4 class="h5 mb-3">Security stats</h4>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>99.99% uptime</span>
-                        <span class="fw-semibold text-warning">Always-on</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 99%;" aria-valuenow="99" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>Two-factor adoption</span>
-                        <span class="fw-semibold text-warning">100%</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>Patch/plugs required</span>
-                        <span class="fw-semibold text-warning">0</span>
-                      </div>
-                      <div class="progress" style="height: 8px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 5%;" aria-valuenow="5" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+            <section id="sony-secure" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div class="lg:order-2">
+                  <div class="bg-white shadow-sm rounded-2xl h-full">
+                    <div class="p-6">
+                      <h4 class="text-base font-semibold mb-3">Security stats</h4>
+                      <div class="flex items-center justify-between mb-2"><span>99.99% uptime</span><span class="font-semibold text-warning">Always-on</span></div>
+                      <div class="h-2 bg-gray-200 rounded-full overflow-hidden mb-3"><div class="h-full bg-warning" style="width:99%;"></div></div>
+                      <div class="flex items-center justify-between mb-2"><span>Two-factor adoption</span><span class="font-semibold text-warning">100%</span></div>
+                      <div class="h-2 bg-gray-200 rounded-full overflow-hidden mb-3"><div class="h-full bg-success" style="width:100%;"></div></div>
+                      <div class="flex items-center justify-between mb-2"><span>Patch/plugs required</span><span class="font-semibold text-warning">0</span></div>
+                      <div class="h-2 bg-gray-200 rounded-full overflow-hidden"><div class="h-full bg-info" style="width:5%;"></div></div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <h3 class="h2">Enterprise-grade security out of the box</h3>
-                  <p class="text-grey">Sony selected Content.One to safeguard a global creator community. Two-factor authentication stops social engineering, while SaaS infrastructure eliminates patching.</p>
-                  <div class="alert alert-warning-soft" role="alert">
-                    <div class="d-flex gap-3 align-items-start">
-                      <i class="bi bi-shield-lock-fill fs-4 text-warning"></i>
-                      <div>
-                        <strong>Result:</strong> Sony focuses on storytelling, not security maintenance.
-                      </div>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Enterprise-grade security out of the box</h3>
+                  <p class="text-gray-600">Sony selected Content.One to safeguard a global creator community. Two-factor authentication stops social engineering, while SaaS infrastructure eliminates patching.</p>
+                  <div role="alert" class="alert-warning-soft rounded-lg px-4 py-3 mt-3">
+                    <div class="flex gap-3 items-start">
+                      <svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg>
+                      <div><strong>Result:</strong> Sony focuses on storytelling, not security maintenance.</div>
                     </div>
                   </div>
                 </div>
@@ -202,129 +145,93 @@
 
             {{include /components/casestudy/sliver-cta.html}}
 
-            <section id="sony-speed" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-7">
-                  <h3 class="h2">2.25× faster go-live, endless creative freedom</h3>
-                  <p class="text-grey">Sony’s Alpha Universe launched from concept to soft launch in six weeks — with the room to build complex experiences without plugins.</p>
-                  <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">6-week soft launch</h4>
-                          <p class="mb-3">From brief to live community in record time.</p>
-                          <span class="badge bg-warning-subtle text-warning">Speed</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">Custom workflows</h4>
-                          <p class="mb-3">Repair portal integrates seamlessly with Microsoft Dynamics.</p>
-                          <span class="badge bg-warning-subtle text-warning">Integration</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">Creative widgets</h4>
-                          <p class="mb-3">Social curation, influencer features, and galleries stay on brand.</p>
-                          <span class="badge bg-warning-subtle text-warning">Creative</span>
-                        </div>
-                      </div>
-                    </div>
+            <section id="sony-speed" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-7">
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">2.25× faster go-live, endless creative freedom</h3>
+                  <p class="text-gray-600 mb-4">Sony's Alpha Universe launched from concept to soft launch in six weeks — with the room to build complex experiences without plugins.</p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-white shadow-sm rounded-2xl"><div class="p-6"><h4 class="text-base font-semibold mb-1">6-week soft launch</h4><p class="mb-3 text-gray-600">From brief to live community in record time.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Speed</span></div></div>
+                    <div class="bg-white shadow-sm rounded-2xl"><div class="p-6"><h4 class="text-base font-semibold mb-1">Custom workflows</h4><p class="mb-3 text-gray-600">Repair portal integrates seamlessly with Microsoft Dynamics.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Integration</span></div></div>
+                    <div class="bg-white shadow-sm rounded-2xl"><div class="p-6"><h4 class="text-base font-semibold mb-1">Creative widgets</h4><p class="mb-3 text-gray-600">Social curation, influencer features, and galleries stay on brand.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Creative</span></div></div>
                   </div>
                 </div>
-                <div class="col-lg-5">
-                  <div class="rounded-4 overflow-hidden shadow-sm mb-4">
-                    <img src="https://hj5v68xn.media.zestyio.com/Zesty.io-sony-social-curator-frontend.JPG" alt="Sony live event" class="w-100 h-100 object-fit-cover">
-                  </div>
-                  <div class="rounded-4 overflow-hidden shadow-sm">
-                    <img src="https://hj5v68xn.media.zestyio.com/alphauniverse-photo-Hannah-Alexander.png" alt="Sony live event" class="w-100 h-100 object-fit-cover">
-                  </div>
+                <div class="lg:col-span-5 space-y-4">
+                  <div class="rounded-3xl overflow-hidden shadow-sm"><img src="https://hj5v68xn.media.zestyio.com/Zesty.io-sony-social-curator-frontend.JPG" alt="Sony live event" class="w-full h-full object-cover"></div>
+                  <div class="rounded-3xl overflow-hidden shadow-sm"><img src="https://hj5v68xn.media.zestyio.com/alphauniverse-photo-Hannah-Alexander.png" alt="Sony live event" class="w-full h-full object-cover"></div>
                 </div>
               </div>
             </section>
 
-            <section id="sony-growth" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                  <div class="rounded-4 overflow-hidden shadow-sm">
-                    <img src="https://hj5v68xn.media.zestyio.com/Screenshot-2025-10-10-at-3.30.08-PM.png" alt="Sony Alpha community" class="w-100 h-100 object-fit-cover">
+            <section id="sony-growth" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div class="lg:order-2">
+                  <div class="rounded-3xl overflow-hidden shadow-sm">
+                    <img src="https://hj5v68xn.media.zestyio.com/Screenshot-2025-10-10-at-3.30.08-PM.png" alt="Sony Alpha community" class="w-full h-full object-cover">
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <h3 class="h2">Global growth, measured quarterly</h3>
-                  <p class="text-grey">Alpha Universe saw 164% average QoQ growth after launch, reaching half a million visits within months — and the momentum continues worldwide.</p>
-                  <ul class="list-unstyled d-grid gap-3">
-                    <li class="d-flex gap-3 align-items-start">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">164%</div>
-                      <span>Quarter-over-quarter engagement surge powered by fresh influencer content.</span>
-                    </li>
-                    <li class="d-flex gap-3 align-items-start">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">500k+</div>
-                      <span>Visits in the first months as fans discovered the new hub.</span>
-                    </li>
-                    <li class="d-flex gap-3 align-items-start">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">Global</div>
-                      <span>Rollouts continue across regions, showcasing local creators and events.</span>
-                    </li>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Global growth, measured quarterly</h3>
+                  <p class="text-gray-600">Alpha Universe saw 164% average QoQ growth after launch, reaching half a million visits within months — and the momentum continues worldwide.</p>
+                  <ul class="grid gap-3 mt-3">
+                    <li class="flex gap-3 items-start"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">164%</div><span>Quarter-over-quarter engagement surge powered by fresh influencer content.</span></li>
+                    <li class="flex gap-3 items-start"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">500k+</div><span>Visits in the first months as fans discovered the new hub.</span></li>
+                    <li class="flex gap-3 items-start"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">Global</div><span>Rollouts continue across regions, showcasing local creators and events.</span></li>
                   </ul>
-                  <blockquote class="blockquote border-start border-warning ps-3 mt-4">
-                    <p class="mb-2">“Content.One has quickly developed into a global benchmark for Sony’s content marketing.”</p>
-                    <footer class="blockquote-footer text-warning">Matthew Parnell</footer>
+                  <blockquote class="border-l-4 border-warning pl-3 mt-4">
+                    <p class="m-0 mb-2">"Content.One has quickly developed into a global benchmark for Sony's content marketing."</p>
+                    <footer class="text-warning text-sm">Matthew Parnell</footer>
                   </blockquote>
                 </div>
               </div>
             </section>
 
-            <section id="sony-partners" class="py-5 fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                  <h3 class="h2">Agency partner perspective</h3>
-                  <p class="lead text-grey">Bluepixel delivers enterprise-grade experiences faster because Content.One keeps their team agile, supported, and secure.</p>
-                  <p class="text-grey">“When working with clients like Sony, we need software that’s both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable.”</p>
-                  <p class="small text-muted mb-0">— Ben Johnson, Director of Technology Operations, Bluepixel</p>
+            <section id="sony-partners" class="py-10 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">Agency partner perspective</h3>
+                  <p class="text-lg text-gray-600 mb-2">Bluepixel delivers enterprise-grade experiences faster because Content.One keeps their team agile, supported, and secure.</p>
+                  <p class="text-gray-600">"When working with clients like Sony, we need software that's both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable."</p>
+                  <p class="text-xs text-gray-500 m-0 mt-2">— Ben Johnson, Director of Technology Operations, Bluepixel</p>
                 </div>
-                <div class="col-lg-6">
-                  <div class="card border-0 shadow-lg">
-                    <div class="card-body p-4 p-lg-5">
-                      <h4 class="h5 text-uppercase text-warning mb-3">Next Steps</h4>
-                      <p class="mb-4 text-grey">Bring your creative community to life with secure, scalable content tooling.</p>
-                      <div class="d-flex flex-wrap gap-3">
-                        <a href="/contact/" class="btn btn-warning btn-lg text-dark">Connect with us</a>
-                        
-                      </div> 
+                <div>
+                  <div class="bg-white shadow-lg rounded-2xl">
+                    <div class="p-6 lg:p-10">
+                      <h4 class="text-base uppercase text-warning mb-3 font-semibold">Next Steps</h4>
+                      <p class="mb-4 text-gray-600">Bring your creative community to life with secure, scalable content tooling.</p>
+                      <div class="flex flex-wrap gap-3">
+                        <a href="/contact/" class="inline-flex items-center rounded-lg bg-warning hover:bg-warning/80 text-gray-900 font-semibold px-5 py-3 transition">Connect with us</a>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-center position-relative overflow-hidden">
-    <img src="https://hj5v68xn.media.zestyio.com/alphauniverse-photo-Hannah-Alexander.png" class="position-absolute z-1 bottom-0 start-50 translate-middle-x opacity-25 w-100" alt="Sony Alpha background">
-    <div class="container py-5 position-relative z-2">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 text-white fw-semibold mb-4">“Content.One’s UI and features are the backbone of our customer engagement success.”</h2>
-          <p class="lead text-white-75 mb-5">Sony’s Alpha Universe inspires tens of thousands of creators — and Content.One keeps every launch fast, secure, and globally consistent.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a class="btn btn-light btn-lg text-primary" href="/customers/">See more success stories</a>
-            <a class="btn btn-outline-light btn-lg" href="/book-a-demo/">Start your project</a>
+  <!-- FINAL CTA -->
+  <section class="py-16 bg-gray-900 text-center relative overflow-hidden">
+    <img src="https://hj5v68xn.media.zestyio.com/alphauniverse-photo-Hannah-Alexander.png" class="absolute z-0 bottom-0 left-1/2 -translate-x-1/2 opacity-25 w-full" alt="Sony Alpha background">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
+      <div class="flex justify-center">
+        <div class="lg:max-w-3xl">
+          <h2 class="text-3xl md:text-5xl text-white font-display font-semibold mb-4">"Content.One's UI and features are the backbone of our customer engagement success."</h2>
+          <p class="text-lg text-white/75 mb-8">Sony's Alpha Universe inspires tens of thousands of creators — and Content.One keeps every launch fast, secure, and globally consistent.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition" href="/customers/">See more success stories</a>
+            <a class="inline-flex items-center rounded-lg border border-white text-white hover:bg-white/10 font-semibold px-6 py-3 transition" href="/book-a-demo/">Start your project</a>
           </div>
         </div>
       </div>
     </div>
-    
   </section>
 
+  <!-- VIDEO MODAL (Bootstrap modal class kept for JS+CSS during migration) -->
   <div class="modal fade" id="sonyOverviewVideo" tabindex="-1" aria-labelledby="sonyOverviewVideoLabel" aria-hidden="true">
     <div class="modal-dialog modal-xl modal-dialog-centered">
       <div class="modal-content">
@@ -333,8 +240,8 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body p-0">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/zf9VwAvWs_E" title="Sony Alpha Universe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <div class="aspect-video">
+            <iframe src="https://www.youtube.com/embed/zf9VwAvWs_E" title="Sony Alpha Universe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
           </div>
         </div>
       </div>
@@ -344,72 +251,32 @@
 
 <style>
   .sony-case-study .sony-hero-foreground,
-  .sony-case-study .sony-hero-media {
-    position: relative;
-    z-index: 2;
-  }
-  .sony-case-study .sony-hero-glow {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    max-width: 760px;
-    pointer-events: none;
-    z-index: 1;
-  }
+  .sony-case-study .sony-hero-media { position: relative; z-index: 2; }
+  .sony-case-study .sony-hero-glow { position: absolute; top: 0; bottom: 0; right: 0; width: 60%; max-width: 760px; pointer-events: none; z-index: 1; }
   .sony-case-study .sony-hero-glow__image {
-    width: 100%; 
-    height: 100%; 
+    width: 100%; height: 100%;
     background-image: linear-gradient(90deg, rgba(12, 17, 31, 1) 0%, rgba(12, 17, 31, 1) 20%, rgba(12, 17, 31, 0) 55%, rgba(12, 17, 31, 0) 85%), url('https://hj5v68xn.media.zestyio.com/Zesty.io-sony-home-page-2.JPG');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 1;
+    background-size: cover; background-position: center; background-repeat: no-repeat; opacity: 1;
   }
-  .sony-case-study .fade-section {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .6s ease, transform .6s ease;
-    scroll-margin-top: 160px;
-  }
-  .sony-case-study .fade-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .bg-gradient-sony {
-    background: linear-gradient(135deg, #05070d 0%, #121f3b 45%, #1a3d7c 100%);
-  }
-  .alert-warning-soft {
-    background-color: rgba(255, 193, 7, 0.12);
-    border: 1px solid rgba(255, 193, 7, 0.24);
-    color: #111827;
-  }
+  .sony-case-study .fade-section { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; scroll-margin-top: 160px; }
+  .sony-case-study .fade-section.is-visible { opacity: 1; transform: translateY(0); }
+  .bg-gradient-sony { background: linear-gradient(135deg, #05070d 0%, #121f3b 45%, #1a3d7c 100%); }
+  .alert-warning-soft { background-color: rgba(255, 193, 7, 0.12); border: 1px solid rgba(255, 193, 7, 0.24); color: #111827; }
+  .sony-case-study .nav-link.active { background: rgba(66, 85, 189, 0.1); color: #4255BD; font-weight: 600; }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     var sectionsEl = document.getElementById('sonySections');
-    if (sectionsEl) {
-      new bootstrap.ScrollSpy(sectionsEl, {
-        target: '#sonyCaseNav',
-        offset: 180
-      });
+    if (sectionsEl && typeof bootstrap !== 'undefined') {
+      new bootstrap.ScrollSpy(sectionsEl, { target: '#sonyCaseNav', offset: 180 });
     }
-
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.2 });
-
-    document.querySelectorAll('.sony-case-study .fade-section').forEach(function (section) {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll('.sony-case-study .fade-section').forEach(function (section) { observer.observe(section); });
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -418,37 +285,24 @@
           if (isNaN(endValue)) return;
           var suffix = el.getAttribute('data-sony-suffix') || '';
           var format = el.getAttribute('data-sony-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
+          var duration = 1600; var startTimestamp = null;
           var step = function (timestamp) {
             if (!startTimestamp) startTimestamp = timestamp;
             var progress = Math.min((timestamp - startTimestamp) / duration, 1);
             var value = progress * endValue;
-            if (format === 'decimal') {
-              el.textContent = value.toFixed(2) + suffix;
-            } else {
-              el.textContent = Math.floor(value).toLocaleString() + suffix;
-            }
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              el.textContent = format === 'decimal'
-                ? endValue.toFixed(2) + suffix
-                : Math.round(endValue).toLocaleString() + suffix;
+            if (format === 'decimal') { el.textContent = value.toFixed(2) + suffix; }
+            else { el.textContent = Math.floor(value).toLocaleString() + suffix; }
+            if (progress < 1) { window.requestAnimationFrame(step); }
+            else {
+              el.textContent = format === 'decimal' ? endValue.toFixed(2) + suffix : Math.round(endValue).toLocaleString() + suffix;
             }
           };
-
           window.requestAnimationFrame(step);
           counterObserver.unobserve(el);
         }
       });
     }, { threshold: 0.4 });
-
-    document.querySelectorAll('[data-sony-count]').forEach(function (counter) {
-      counterObserver.observe(counter);
-    });
-
+    document.querySelectorAll('[data-sony-count]').forEach(function (counter) { counterObserver.observe(counter); });
     var videoModal = document.getElementById('sonyOverviewVideo');
     if (videoModal) {
       videoModal.addEventListener('hidden.bs.modal', function () {
