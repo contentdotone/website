@@ -108,18 +108,27 @@ async function apiRequest(method, endpointPath, body) {
   return res;
 }
 
-// Read-only GET of a resource's current code in the instance (null if missing).
-async function fetchCurrentCode(endpoint, zuid) {
-  try {
-    const url = `https://${INSTANCE_ZUID}.api.zesty.io/v1/web/${endpoint}/${zuid}`;
-    const res = await fetch(url, { headers: { Authorization: `Bearer ${TOKEN}` } });
-    if (!res.ok) return null;
-    const json = await res.json().catch(() => null);
-    const d = (json && json.data) || {};
-    return typeof d.code === 'string' ? d.code : null;
-  } catch {
-    return null;
+// Each resource exists in two statuses: "dev" (the stage/working copy) and
+// "live" (what's published to production), each with its own code. Fetch the
+// one the run needs (stage→dev, production→live) via ?status=, one list call
+// per section, and build a zuid→code map. Resources missing from the map fall
+// through to a write.
+async function fetchInstanceCode(status) {
+  const map = new Map();
+  for (const meta of Object.values(SECTIONS)) {
+    try {
+      const url = `https://${INSTANCE_ZUID}.api.zesty.io/v1/web/${meta.endpoint}?status=${status}`;
+      const res = await fetch(url, { headers: { Authorization: `Bearer ${TOKEN}` } });
+      if (!res.ok) continue;
+      const json = await res.json();
+      for (const item of json.data || []) {
+        if (item && item.ZUID && typeof item.code === 'string') map.set(item.ZUID, item.code);
+      }
+    } catch {
+      /* leave map partial */
+    }
   }
+  return map;
 }
 
 // Every file currently on disk under webengine/<section>/ (skips dotfiles).
@@ -225,7 +234,7 @@ function addToConfig(config, created) {
 // Zesty saves a web resource with PUT /web/<type>/<zuid> and publishes it in
 // the same call via ?action=publish&purge_cache=true (a {code} body retains
 // the resource's existing filename/type).
-async function saveItem(item, publish) {
+async function saveItem(item, publish, instanceCode) {
   const rel = path.relative(process.cwd(), item.localPath);
   if (!fs.existsSync(item.localPath)) {
     console.warn(`⚠️  Missing local file, skipping: ${rel}`);
@@ -234,18 +243,16 @@ async function saveItem(item, publish) {
   const code = fs.readFileSync(item.localPath, 'utf8');
   const dry = DRY_RUN ? '[dry-run] ' : '';
 
-  // Hybrid check: compare repo content to the instance's current content.
-  // On stage (no publish) an identical resource is skipped entirely. On
-  // production we still publish identical content (the saved version may not be
-  // live yet — stage/production share one instance, so it's already saved).
-  if (CAN_CHECK) {
-    const current = await fetchCurrentCode(item.endpoint, item.zuid);
-    const same = current !== null && norm(current) === norm(code);
-    if (same && !publish) {
-      console.log(`✓ ${dry}Unchanged, skip ${rel} → ${item.endpoint}/${item.zuid}`);
+  // Compare to the instance's current code for this run's status — dev on stage,
+  // live on production. Identical → skip (no needless save, and on production no
+  // needless republish of already-live content).
+  if (instanceCode) {
+    const current = instanceCode.get(item.zuid);
+    if (current !== undefined && norm(current) === norm(code)) {
+      console.log(`✓ ${dry}${publish ? 'Already live, skip' : 'Unchanged, skip'} ${rel} → ${item.endpoint}/${item.zuid}`);
       return false;
     }
-    const why = same ? 'already saved' : 'differs';
+    const why = current === undefined ? 'not in instance' : 'differs';
     console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} (${why}) ${rel} → ${item.endpoint}/${item.zuid}`);
   } else {
     console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} ${rel} → ${item.endpoint}/${item.zuid}`);
@@ -301,10 +308,11 @@ async function main() {
     console.log(`📝 Mapped ${created.length} new resource(s) into zesty.config.json.`);
   }
 
-  // Update existing mapped resources.
+  // Update existing mapped resources, comparing to dev (stage) or live (prod).
+  const instanceCode = CAN_CHECK ? await fetchInstanceCode(shouldPublish ? 'live' : 'dev') : null;
   let synced = 0;
   for (const item of items) {
-    if (await saveItem(item, shouldPublish)) synced++;
+    if (await saveItem(item, shouldPublish, instanceCode)) synced++;
   }
 
   console.log(
