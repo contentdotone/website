@@ -1,15 +1,15 @@
- <section class="py-6 section-padding">
-    <div class="container">
-      <div class="row g-5 align-items-start">
-        <div class="col-lg-4">
-          <span class="badge bg-nonprofit-subtle text-nonprofit mb-3">Mission-driven success</span>
-          <h2 class="h1 fw-semibold mb-3">{{this.title}}</h2>
-          <p class="text-grey mb-4">{{this.sub_title}}</p>
-          {{include /components/ctas/book-button.html}}
-        </div>
-        <div class="col-lg-8">
-         {{include /components/widgets/random_quotes_micro.html}}
-        </div>
+<section class="py-16 md:py-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div class="lg:col-span-4">
+        <span class="inline-flex items-center bg-success/10 text-success rounded-full px-3 py-1 text-xs font-semibold mb-3">Mission-driven success</span>
+        <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">{{this.title}}</h2>
+        <p class="text-gray-600 mb-5">{{this.sub_title}}</p>
+        {{include /components/ctas/book-button.html}}
+      </div>
+      <div class="lg:col-span-8">
+        {{include /components/widgets/random_quotes_micro.html}}
       </div>
     </div>
-  </section>
+  </div>
+</section>

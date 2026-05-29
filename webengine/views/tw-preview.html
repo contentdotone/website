@@ -68,13 +68,40 @@
   <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">04 · hybrid_advantage.html</p></div></div>
   {{include /components/features/hybrid_advantage.html}}
 
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">05 · -/block/review_block.html <span class="text-gray-400 normal-case tracking-normal ml-1">(static block, no instance data needed)</span></p></div></div>
+  {{include /components/-/block/review_block.html}}
+
   <!-- After / status strip -->
   <div class="border-t border-gray-200 bg-white mt-10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Migration status — batch 1</p>
-      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3">4 pure-visual feature components converted at fidelity.</h2>
-      <p class="text-gray-600 max-w-2xl">All four use Tailwind utilities + brand tokens loaded inline. <code class="text-royal">bi-*</code> icons replaced with inline SVGs. <code class="text-royal">{{include}}</code> templates preserved verbatim. The only nested Bootstrap leftover is the <code class="text-royal">book-button.html</code> CTA include used in analytics + block — queued for the next batch.</p>
-      <p class="text-gray-500 text-sm mt-4">Working through the codebase in batches. Components with JS interactions (nav offcanvas + dropdowns, footer collapse, accordions) deferred until a JS interaction strategy is locked in.</p>
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Migration status — batches 1 + 2</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3">13 files converted so far.</h2>
+      <div class="grid md:grid-cols-2 gap-x-10 gap-y-2 text-sm text-gray-700 max-w-3xl">
+        <ul class="space-y-1">
+          <li class="font-semibold text-gray-900">Feature components</li>
+          <li>· components/features/on_demand_developers.html</li>
+          <li>· components/features/analytics_highlight.html</li>
+          <li>· components/features/block_highlight.html</li>
+          <li>· components/features/hybrid_advantage.html</li>
+        </ul>
+        <ul class="space-y-1">
+          <li class="font-semibold text-gray-900">CTAs</li>
+          <li>· components/ctas/book-button.html</li>
+          <li>· components/ctas/customer-button.html</li>
+          <li>· components/ctas/solutions-button.html</li>
+          <li>· components/ctas/email-subscription-form.html</li>
+        </ul>
+        <ul class="space-y-1 mt-4 md:mt-0">
+          <li class="font-semibold text-gray-900">Blocks</li>
+          <li>· -/block/client_logos.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/mission_driven_success.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/review_block.html ✓ rendered above</li>
+          <li>· -/block/form_capture.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/download_cta_full.html <span class="text-gray-400">(needs block-instance data)</span></li>
+        </ul>
+      </div>
+      <p class="text-gray-500 text-sm mt-6 max-w-3xl">VQA note: blocks driven by <code class="text-royal">{{this.X}}</code> instance fields render fully only on a parent page that has block-instance data; on the standalone preview only their layout would show (with empty content). They're fidelity-checked once their parent pages are converted.</p>
+      <p class="text-gray-500 text-sm mt-2 max-w-3xl">Components with JS interactions (nav offcanvas + dropdowns, footer collapse, accordions) deferred until a JS interaction strategy is locked in.</p>
     </div>
   </div>
 
