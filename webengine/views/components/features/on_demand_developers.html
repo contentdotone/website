@@ -1,68 +1,63 @@
-<section class="on-demand-developers py-6">
-  <div class="container">
-    <div class="row g-0 shadow-lg overflow-hidden rounded-4 bg-white">
-      <div class="col-lg-5 p-4 p-lg-5"> 
-        <p class="text-uppercase fw-bold text-primary mb-2 small">On-Demand</p>
-        <h2 class="display-6 fw-bold mb-3">Developers: <span class="text-primary">Optional</span></h2>
-        <p class="fw-semibold mb-3 text-dark">Dedicated developers available to work directly with you.</p>
-        <p class="text-grey mb-4">Content.One offers one or many dedicated developers to bolster your efforts and support your digital marketing needs.</p>
-        <ul class="list-unstyled text-dark mb-0 d-grid gap-2">
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Works directly with your team</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Trained on Content.One</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Part-time or Full-Time</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Versatile skill-sets</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Controlled costs</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>No HR costs or needs</span></li>
-          <li class="d-flex gap-2 align-items-start"><span class="text-primary">•</span><span>Fully managed by Zesty</span></li>
-        </ul> 
+<!--
+  on_demand_developers — Tailwind-converted version.
+  Pure visual component. Assumes parent page loads Tailwind with the brand
+  tokens defined (colors.royal, colors.ink, fontFamily.display, etc.).
+  Original Bootstrap version: see git history for the prior bi-* + col-lg-*
+  implementation.
+-->
+<section class="py-12 md:py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 shadow-2xl overflow-hidden rounded-3xl bg-white">
+
+      <!-- LEFT: copy + bullets -->
+      <div class="lg:col-span-5 p-6 lg:p-10">
+        <p class="text-xs font-bold text-royal uppercase tracking-[0.2em] mb-2">On-Demand</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold leading-tight mb-3">Developers: <span class="text-royal">Optional</span></h2>
+        <p class="font-semibold mb-3 text-gray-900">Dedicated developers available to work directly with you.</p>
+        <p class="text-gray-600 mb-5 leading-relaxed">Content.One offers one or many dedicated developers to bolster your efforts and support your digital marketing needs.</p>
+        <ul class="grid gap-2.5 text-gray-900">
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Works directly with your team</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Trained on Content.One</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Part-time or Full-Time</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Versatile skill-sets</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Controlled costs</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>No HR costs or needs</span></li>
+          <li class="flex gap-2 items-start"><span class="text-royal mt-0.5">•</span><span>Fully managed by Zesty</span></li>
+        </ul>
       </div>
 
-      <div class="col-lg-4">
-        <div class="h-100 w-100">
-          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80" class="w-100 h-100 object-fit-cover" alt="Developer working at a desk">
+      <!-- MIDDLE: image -->
+      <div class="lg:col-span-4 min-h-[260px]">
+        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=1200&q=80"
+             alt="Developer working at a desk"
+             class="w-full h-full object-cover" />
+      </div>
+
+      <!-- RIGHT: dark trust panel -->
+      <div class="lg:col-span-3 bg-ink text-white p-6 lg:p-10 flex flex-col gap-6 justify-center">
+        <div class="flex flex-col gap-2 text-center">
+          <div class="w-14 h-14 rounded-full border-2 border-white/60 grid place-items-center mx-auto">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Trusted</h3>
+          <p class="text-xs text-white/75">Over 60+ combined years of experience building advanced websites and applications.</p>
+        </div>
+        <div class="flex flex-col gap-2 text-center">
+          <div class="w-14 h-14 rounded-full border-2 border-white/60 grid place-items-center mx-auto">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Best Practices</h3>
+          <p class="text-xs text-white/75">Ensure best practices are followed from day one.</p>
+        </div>
+        <div class="flex flex-col gap-2 text-center">
+          <div class="w-14 h-14 rounded-full border-2 border-white/60 grid place-items-center mx-auto">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 2l2.39 4.84L20 7.27l-4 3.9.94 5.5L12 14.77 7.06 16.67 8 11.17l-4-3.9 5.61-.43L12 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Success Guarantee</h3>
+          <p class="text-xs text-white/75">Our team guarantees successful migrations.</p>
         </div>
       </div>
 
-      <div class="col-lg-3 bg-dark text-white p-4 p-lg-5 d-flex flex-column gap-4 justify-content-center">
-        <div class="d-flex flex-column gap-2 text-center">
-          <div class="icon-circle-outline mx-auto"><i class="bi bi-shield-check fs-4"></i></div>
-          <h3 class="h5 mb-1 font-bold text-white">Trusted</h3>
-          <p class="small text-white-75 mb-0">Over 60+ combined years of experience building advanced websites and applications.</p>
-        </div>
-        <div class="d-flex flex-column gap-2 text-center">
-          <div class="icon-circle-outline mx-auto"><i class="bi bi-send fs-4"></i></div>
-          <h3 class="h5 mb-1 font-bold text-white">Best Practices</h3>
-          <p class="small text-white-75 mb-0">Ensure best practices are followed from day one.</p>
-        </div>
-        <div class="d-flex flex-column gap-2 text-center">
-          <div class="icon-circle-outline mx-auto"><i class="bi bi-lightbulb fs-4"></i></div>
-          <h3 class="h5 mb-1 font-bold text-white">Success Guarantee</h3>
-          <p class="small text-white-75 mb-0">Our team guarantees successful migrations.</p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
-
-<style>
-  .on-demand-developers .text-grey { color: #4b5563; }
-  .on-demand-developers .icon-circle-outline {
-    width: 56px;
-    height: 56px;
-    border: 2px solid rgba(255,255,255,0.6);
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-  }
-  .on-demand-developers ul li span:first-child {
-    font-weight: 700;
-  }
-  @media (max-width: 991.98px) {
-    .on-demand-developers .row.g-0 > [class*="col-"] + [class*="col-"] {
-      border-top: 1px solid #e5e7eb;
-    }
-    .on-demand-developers .row.g-0 > [class*="col-"].bg-dark {
-      border-top: none;
-    }
-  }
-</style>
