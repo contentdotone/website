@@ -124,7 +124,9 @@ async function fetchInstanceCode(status) {
       if (!res.ok) continue;
       const json = await res.json();
       for (const item of json.data || []) {
-        if (item && item.ZUID && typeof item.code === 'string') map.set(item.ZUID, item.code);
+        if (item && item.ZUID && typeof item.code === 'string') {
+          map.set(item.ZUID, { code: item.code, version: item.version });
+        }
       }
     } catch {
       /* leave map partial */
@@ -233,10 +235,9 @@ function addToConfig(config, created) {
   }
 }
 
-// Zesty saves a web resource with PUT /web/<type>/<zuid> and publishes it in
-// the same call via ?action=publish&purge_cache=true (a {code} body retains
-// the resource's existing filename/type).
-async function saveItem(item, publish, instanceCode) {
+// STAGE: write the repo file to the resource's dev (working) version. Compares
+// to current dev content and skips if identical. Never publishes.
+async function saveDevItem(item, devMap) {
   const rel = path.relative(process.cwd(), item.localPath);
   if (!fs.existsSync(item.localPath)) {
     console.warn(`⚠️  Missing local file, skipping: ${rel}`);
@@ -244,52 +245,136 @@ async function saveItem(item, publish, instanceCode) {
   }
   const code = fs.readFileSync(item.localPath, 'utf8');
   const dry = DRY_RUN ? '[dry-run] ' : '';
-
-  // Compare to the instance's current code for this run's status — dev on stage,
-  // live on production. Identical → skip (no needless save, and on production no
-  // needless republish of already-live content).
-  if (instanceCode) {
-    const current = instanceCode.get(item.zuid);
-    if (current !== undefined && norm(current) === norm(code)) {
-      console.log(`✓ ${dry}${publish ? 'Already live, skip' : 'Unchanged, skip'} ${rel} → ${item.endpoint}/${item.zuid}`);
+  if (devMap) {
+    const current = devMap.get(item.zuid);
+    if (current && norm(current.code) === norm(code)) {
+      console.log(`✓ ${dry}Unchanged, skip ${rel} → ${item.endpoint}/${item.zuid}`);
       return null;
     }
-    const why = current === undefined ? 'not in instance' : 'differs';
-    console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} (${why}) ${rel} → ${item.endpoint}/${item.zuid}`);
-  } else {
-    console.log(`${publish ? '🚀' : '💾'} ${dry}${publish ? 'Save+publish' : 'Save'} ${rel} → ${item.endpoint}/${item.zuid}`);
   }
-
+  console.log(`💾 ${dry}Save ${rel} → ${item.endpoint}/${item.zuid}`);
   if (!DRY_RUN) {
-    const query = publish ? '?action=publish&purge_cache=true' : '';
-    await apiRequest('PUT', `/web/${item.endpoint}/${item.zuid}${query}`, { code });
+    await apiRequest('PUT', `/web/${item.endpoint}/${item.zuid}`, { code });
   }
   return rel;
 }
 
-// Markdown summary for a PR comment. Labels reflect the target: stage shows
-// what would be added/updated (vs dev); production shows what would publish (vs live).
-function reportMarkdown({ created, written, skipped, publish, total }) {
+// PRODUCTION: publish only — promote the resource's dev version to live where
+// they differ. Never writes repo content, never creates. A resource not yet on
+// dev is skipped (it must be saved via stage first).
+async function publishItem(item, devMap, liveMap) {
+  const rel = path.relative(process.cwd(), item.localPath);
+  const dry = DRY_RUN ? '[dry-run] ' : '';
+  if (!devMap || !liveMap) {
+    console.warn(`⚠️  ${dry}No dev/live data (token?), skip ${rel}`);
+    return null;
+  }
+  const dev = devMap.get(item.zuid);
+  if (!dev) {
+    console.warn(`⚠️  ${dry}Not on dev yet — promote via stage, skip ${rel} → ${item.zuid}`);
+    return null;
+  }
+  const live = liveMap.get(item.zuid);
+  if (live && norm(live.code) === norm(dev.code)) {
+    console.log(`✓ ${dry}Already live, skip ${rel} → ${item.endpoint}/${item.zuid}`);
+    return null;
+  }
+  if (dev.version === undefined || dev.version === null) {
+    console.warn(`⚠️  ${dry}No dev version number, skip ${rel} → ${item.zuid}`);
+    return null;
+  }
+  console.log(`🚀 ${dry}Publish v${dev.version} (dev→live) ${rel} → ${item.endpoint}/${item.zuid}`);
+  if (!DRY_RUN) {
+    // Publish the existing dev version by number — no re-save, no new version.
+    await apiRequest('POST', `/web/${item.endpoint}/${item.zuid}/versions/${dev.version}?purge_cache=true`, {});
+  }
+  return rel;
+}
+
+// Markdown summary for a PR comment. Stage shows what gets added/updated (vs
+// dev); production is publish-only and shows what gets promoted dev→live.
+function reportMarkdown({ created, written, skipped, publish, total, newCount = 0 }) {
   const list = (arr) => (arr.length ? arr.map((r) => `- \`${r}\``).join('\n') : '_none_');
-  const head = publish ? '### 🚀 Production publish preview' : '### 💾 Stage sync preview';
-  const writtenLabel = publish
-    ? `Will publish — differ from live (${written.length})`
-    : `Will add/update — differ from dev (${written.length})`;
-  const skipLabel = publish ? 'Already live, skipped' : 'Unchanged, skipped';
+  if (publish) {
+    const lines = [
+      '### 🚀 Production publish preview (publish-only)',
+      '',
+      `**Will publish — promote dev → live (${written.length}):**`,
+      list(written),
+      '',
+      `**Already live, skipped:** ${skipped}`,
+    ];
+    if (newCount) {
+      lines.push('', `> ⚠️ ${newCount} new file(s) in this diff won't be created on production (publish-only). Promote them via \`stage\` first.`);
+    }
+    lines.push('', `<sub>${total} mapped resources · publish-only · zesty-sync</sub>`, '<!-- zesty-sync-report -->');
+    return lines.join('\n');
+  }
   return [
-    head,
+    '### 💾 Stage sync preview',
     '',
     `**New files to create (${created.length}):**`,
     list(created),
     '',
-    `**${writtenLabel}:**`,
+    `**Will add/update — differ from dev (${written.length}):**`,
     list(written),
     '',
-    `**${skipLabel}:** ${skipped}`,
+    `**Unchanged, skipped:** ${skipped}`,
     '',
-    `<sub>${total} mapped resources analyzed · zesty-sync</sub>`,
+    `<sub>${total} mapped resources · zesty-sync</sub>`,
     '<!-- zesty-sync-report -->',
   ].join('\n');
+}
+
+function emitReport(args) {
+  if (!REPORT) return;
+  const md = reportMarkdown(args);
+  fs.writeFileSync(path.join(process.cwd(), 'zesty-report.md'), md + '\n');
+  console.log('\n' + md);
+}
+
+// STAGE: create new resources, then save changed files to their dev version. No publish.
+async function runStage(items, newFiles, manifest, config, indent) {
+  const created = [];
+  const createdRels = [];
+  for (const nf of newFiles) {
+    created.push(await createNew(nf, false));
+    createdRels.push(path.relative(process.cwd(), nf.localPath));
+  }
+  if (created.length && !DRY_RUN) {
+    addToConfig(config, created);
+    fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, indent) + '\n');
+    console.log(`📝 Mapped ${created.length} new resource(s) into zesty.config.json.`);
+  }
+  const devMap = CAN_CHECK ? await fetchInstanceCode('dev') : null;
+  const written = [];
+  let skipped = 0;
+  for (const item of items) {
+    const r = await saveDevItem(item, devMap);
+    if (r) written.push(r);
+    else skipped++;
+  }
+  emitReport({ created: createdRels, written, skipped, publish: false, total: manifest.length });
+  console.log(`\n🎉 Stage sync complete — created ${created.length}, saved ${written.length}/${items.length} to dev.`);
+}
+
+// PRODUCTION: publish only — promote dev→live for changed resources. No creates, no content writes.
+async function runProduction(items, newFiles, manifest) {
+  if (newFiles.length) {
+    console.warn(`⚠️  ${newFiles.length} new file(s) in scope won't be created on production (publish-only) — promote via stage first:`);
+    for (const nf of newFiles) console.warn(`   - ${path.relative(process.cwd(), nf.localPath)}`);
+  }
+  const devMap = CAN_CHECK ? await fetchInstanceCode('dev') : null;
+  const liveMap = CAN_CHECK ? await fetchInstanceCode('live') : null;
+  const published = [];
+  let skipped = 0;
+  for (const item of items) {
+    const r = await publishItem(item, devMap, liveMap);
+    if (r) published.push(r);
+    else skipped++;
+  }
+  emitReport({ created: [], written: published, skipped, publish: true, total: manifest.length, newCount: newFiles.length });
+  console.log(`\n🎉 Production publish complete — promoted ${published.length}/${items.length} dev→live.`);
 }
 
 async function main() {
@@ -321,41 +406,12 @@ async function main() {
   }
 
   console.log(
-    `🚀 Zesty sync | branch=${BRANCH} | publish=${shouldPublish} | dry-run=${DRY_RUN} | scope=${scope}`
+    `🚀 Zesty ${shouldPublish ? 'publish' : 'sync'} | branch=${BRANCH} | dry-run=${DRY_RUN} | scope=${scope}`
   );
 
-  // Create new resources first so they exist + get ZUIDs, then map them back.
-  const created = [];
-  const createdRels = [];
-  for (const nf of newFiles) {
-    created.push(await createNew(nf, shouldPublish));
-    createdRels.push(path.relative(process.cwd(), nf.localPath));
-  }
-  if (created.length && !DRY_RUN) {
-    addToConfig(config, created);
-    fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, indent) + '\n');
-    console.log(`📝 Mapped ${created.length} new resource(s) into zesty.config.json.`);
-  }
-
-  // Update existing mapped resources, comparing to dev (stage) or live (prod).
-  const instanceCode = CAN_CHECK ? await fetchInstanceCode(shouldPublish ? 'live' : 'dev') : null;
-  const written = [];
-  let skipped = 0;
-  for (const item of items) {
-    const r = await saveItem(item, shouldPublish, instanceCode);
-    if (r) written.push(r);
-    else skipped++;
-  }
-
-  if (REPORT) {
-    const md = reportMarkdown({ created: createdRels, written, skipped, publish: shouldPublish, total: manifest.length });
-    fs.writeFileSync(path.join(process.cwd(), 'zesty-report.md'), md + '\n');
-    console.log('\n' + md);
-  }
-
-  console.log(
-    `\n🎉 Zesty sync complete — created ${created.length}, ${shouldPublish ? 'saved+published' : 'saved'} ${written.length}/${items.length} mapped file(s).`
-  );
+  // stage = create + save (repo→dev); production = publish only (dev→live).
+  if (shouldPublish) await runProduction(items, newFiles, manifest);
+  else await runStage(items, newFiles, manifest, config, indent);
 }
 
 main().catch((err) => {
