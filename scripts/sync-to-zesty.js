@@ -65,16 +65,17 @@ function buildManifest(config) {
   return items;
 }
 
-// Repo-relative paths changed between DIFF_BASE and DIFF_HEAD. Returns null if
-// the range can't be determined (first push, shallow clone) so the caller can
-// fall back to a full sync. execFileSync (no shell) avoids any injection.
+// Repo-relative paths changed between DIFF_BASE and DIFF_HEAD. Returns null when
+// there is no usable base to diff against (first push to a branch → DIFF_BASE is
+// all-zeros; shallow clone; manual dispatch) so the caller falls back to a full
+// sync. execFileSync (no shell) avoids any injection.
 function changedFilePaths() {
   const base = process.env.DIFF_BASE;
   const head = process.env.DIFF_HEAD || 'HEAD';
   const isZero = (s) => !s || /^0+$/.test(s);
-  const from = isZero(base) ? `${head}^` : base;
+  if (isZero(base)) return null;
   try {
-    const out = execFileSync('git', ['diff', '--name-only', from, head], {
+    const out = execFileSync('git', ['diff', '--name-only', base, head], {
       cwd: process.cwd(),
       encoding: 'utf8',
     });
@@ -99,6 +100,106 @@ async function apiRequest(method, endpointPath, body) {
     throw new Error(`${method} ${endpointPath} → ${res.status} ${text}`);
   }
   return res;
+}
+
+// Every file currently on disk under webengine/<section>/ (skips dotfiles).
+function walkFiles(dir) {
+  let entries;
+  try {
+    entries = fs.readdirSync(dir, { withFileTypes: true });
+  } catch {
+    return [];
+  }
+  const out = [];
+  for (const e of entries) {
+    if (e.name.startsWith('.')) continue;
+    const full = path.join(dir, e.name);
+    if (e.isDirectory()) out.push(...walkFiles(full));
+    else if (e.isFile()) out.push(full);
+  }
+  return out;
+}
+
+// Files present on disk but not yet mapped in zesty.config.json — these need
+// to be CREATED as instance resources (the branch preview renders them from
+// GitHub, but they don't exist in the instance until created).
+function findNewFiles(mappedPaths) {
+  const news = [];
+  for (const [section, meta] of Object.entries(SECTIONS)) {
+    const base = path.join(WEBENGINE_DIR, meta.dir);
+    for (const full of walkFiles(base)) {
+      if (mappedPaths.has(full)) continue;
+      news.push({ section, endpoint: meta.endpoint, localPath: full, rel: path.relative(base, full) });
+    }
+  }
+  return news;
+}
+
+// Derive the Zesty fileName, resource type, and config key for a new file.
+// Views with an extension are "endpoint" views (ajax-json, path-style fileName);
+// extensionless views are snippets. Styles/scripts type comes from the extension.
+function inferResource(section, rel) {
+  const posix = rel.split(path.sep).join('/');
+  const ext = path.extname(rel).toLowerCase();
+  if (section === 'styles') {
+    const type = ext === '.scss' ? 'text/scss' : ext === '.css' ? 'text/css' : 'text/less';
+    return { fileName: posix, type, configKey: posix };
+  }
+  if (section === 'scripts') {
+    return { fileName: posix, type: 'text/javascript', configKey: posix };
+  }
+  if (ext) {
+    return { fileName: `/${posix}`, type: 'ajax-json', configKey: `/${posix}` };
+  }
+  return { fileName: posix, type: undefined, configKey: posix };
+}
+
+// Zesty wraps responses as { data: {...} } in most cases; be lenient.
+function extractZuid(json) {
+  const d = (json && json.data) || json || {};
+  return d.ZUID || d.zuid || json.ZUID || json.zuid || null;
+}
+
+// POST /web/<endpoint> to create a brand-new resource, returning its new ZUID.
+async function createNew(nf, publish) {
+  const code = fs.readFileSync(nf.localPath, 'utf8');
+  const { fileName, type, configKey } = inferResource(nf.section, nf.rel);
+  const rel = path.relative(process.cwd(), nf.localPath);
+  console.log(`✨ ${DRY_RUN ? '[dry-run] ' : ''}Create ${rel} → ${nf.endpoint} (fileName=${fileName}${type ? `, type=${type}` : ''})`);
+  if (DRY_RUN) return { section: nf.section, configKey, zuid: 'DRYRUN-ZUID', type };
+  const payload = type ? { code, fileName, type } : { code, fileName };
+  const res = await apiRequest('POST', `/web/${nf.endpoint}`, payload);
+  const json = await res.json().catch(() => ({}));
+  const zuid = extractZuid(json);
+  if (!zuid) {
+    throw new Error(`Created ${rel} but no ZUID in response: ${JSON.stringify(json).slice(0, 200)}`);
+  }
+  console.log(`   → new ZUID ${zuid}`);
+  if (publish) {
+    await apiRequest('PUT', `/web/${nf.endpoint}/${zuid}?action=publish&purge_cache=true`, { code });
+    console.log(`   → published ${zuid}`);
+  }
+  return { section: nf.section, configKey, zuid, type };
+}
+
+// Match the existing config's indentation so the writeback diff stays small.
+function detectIndent(raw) {
+  const m = raw.match(/\n([ \t]+)"/);
+  return m ? m[1] : '  ';
+}
+
+function addToConfig(config, created) {
+  const now = new Date().toISOString().replace(/\.\d{3}Z$/, 'Z');
+  config.instance = config.instance || {};
+  for (const c of created) {
+    config.instance[c.section] = config.instance[c.section] || {};
+    config.instance[c.section][c.configKey] = {
+      zuid: c.zuid,
+      type: c.type || 'snippet',
+      updatedAt: now,
+      createdAt: now,
+    };
+  }
 }
 
 // Zesty saves a web resource with PUT /web/<type>/<zuid> and publishes it in
@@ -127,18 +228,24 @@ async function main() {
   }
 
   const config = loadConfig();
+  const indent = detectIndent(fs.readFileSync(CONFIG_PATH, 'utf8'));
   const manifest = buildManifest(config);
+  const mappedPaths = new Set(manifest.map((m) => m.localPath));
   const shouldPublish = BRANCH === 'production' || MANUAL_PUBLISH;
 
+  // Updates = files already mapped by ZUID; creates = on disk but not yet mapped.
   let items = manifest;
-  let scope = `full (${manifest.length} mapped)`;
+  let newFiles = findNewFiles(mappedPaths);
+  let scope = `full (${manifest.length} mapped + ${newFiles.length} new)`;
   if (!FULL_SYNC) {
     const changed = changedFilePaths();
     if (changed === null) {
       console.warn('⚠️  Could not determine changed files — falling back to a full sync.');
     } else {
-      items = manifest.filter((it) => changed.has(path.relative(process.cwd(), it.localPath)));
-      scope = `changed (${items.length} of ${manifest.length} mapped)`;
+      const inScope = (p) => changed.has(path.relative(process.cwd(), p));
+      items = manifest.filter((it) => inScope(it.localPath));
+      newFiles = newFiles.filter((nf) => inScope(nf.localPath));
+      scope = `changed (${items.length} update + ${newFiles.length} new, of ${manifest.length} mapped)`;
     }
   }
 
@@ -146,13 +253,25 @@ async function main() {
     `🚀 Zesty sync | branch=${BRANCH} | publish=${shouldPublish} | dry-run=${DRY_RUN} | scope=${scope}`
   );
 
+  // Create new resources first so they exist + get ZUIDs, then map them back.
+  const created = [];
+  for (const nf of newFiles) {
+    created.push(await createNew(nf, shouldPublish));
+  }
+  if (created.length && !DRY_RUN) {
+    addToConfig(config, created);
+    fs.writeFileSync(CONFIG_PATH, JSON.stringify(config, null, indent) + '\n');
+    console.log(`📝 Mapped ${created.length} new resource(s) into zesty.config.json.`);
+  }
+
+  // Update existing mapped resources.
   let synced = 0;
   for (const item of items) {
     if (await saveItem(item, shouldPublish)) synced++;
   }
 
   console.log(
-    `\n🎉 Zesty sync complete — ${shouldPublish ? 'saved+published' : 'saved'} ${synced}/${items.length} selected file(s).`
+    `\n🎉 Zesty sync complete — created ${created.length}, ${shouldPublish ? 'saved+published' : 'saved'} ${synced}/${items.length} mapped file(s).`
   );
 }
 
