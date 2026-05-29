@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compilecss": "sass scss/theme.scss webengine/views/assets/theme.css --style=compressed"
+    "compilecss": "sass scss/theme.scss webengine/views/assets/theme.css --style=compressed",
+    "deploy": "node scripts/sync-to-zesty.js",
+    "deploy:dry": "DRY_RUN=true node scripts/sync-to-zesty.js"
   },
   "author": "",
   "license": "ISC",

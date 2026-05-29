@@ -1,0 +1,35 @@
+name: Deploy to Zesty.io
+
+on:
+  push:
+    branches: [stage, production]
+  workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Also publish to production (overrides branch logic)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Run Zesty Sync & Deploy
+        env:
+          ZESTY_INSTANCE_ZUID: ${{ secrets.ZESTY_INSTANCE_ZUID }}
+          ZESTY_DEVELOPER_TOKEN: ${{ secrets.ZESTY_DEVELOPER_TOKEN }}
+          BRANCH: ${{ github.ref_name }}
+          MANUAL_PUBLISH: ${{ inputs.publish }}
+        run: node scripts/sync-to-zesty.js
