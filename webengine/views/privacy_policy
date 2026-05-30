@@ -1,12 +1,8 @@
-<main class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="mb-4">{{this.title}}</h1>
-                <div class="content">
-                    {{this.body}}
-                </div>
-            </div>
+<main class="py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="font-display text-4xl md:text-5xl font-bold mb-4">{{this.title}}</h1>
+        <div class="content prose prose-slate max-w-none">
+            {{this.body}}
         </div>
     </div>
 </main>

@@ -1,22 +1,20 @@
-<main class="w-100">
-   <!--404 error start-->
-   <div class="container d-flex flex-column overflow-hidden py-5">
-      <div class="row align-items-center justify-content-center mt-8 text-center">
-         <div class="col-lg-8 col-12">
-            <div class="mb-8">
-               <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" alt="Content.One Logo" class="img-fluid" style="max-height:70px;">
+<main class="w-full">
+   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col overflow-hidden py-12">
+      <div class="flex items-center justify-center mt-16 text-center">
+         <div class="max-w-2xl">
+            <div class="mb-16">
+               <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" alt="Content.One Logo" class="mx-auto" style="max-height:70px;">
             </div>
-            <h1 class="display-3 fw-bold text-primary mb-3">404</h1>
-            <h2 class="h4 mb-3">Oops! Page not found</h2>
-            <p class="lead mb-4 text-muted">
+            <h1 class="text-6xl md:text-7xl font-bold text-royal mb-3 font-display">404</h1>
+            <h2 class="text-2xl font-display font-semibold mb-3">Oops! Page not found</h2>
+            <p class="text-lg mb-6 text-gray-500">
                The page you are looking for might have been moved, deleted, or never existed.<br>
-               But don’t worry—you can always get back on track.
+               But don't worry—you can always get back on track.
             </p>
-            <a href="/" class="btn btn-primary btn-lg px-4">
+            <a href="/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition text-lg">
                Go Back Home
             </a>
          </div>
       </div>
    </div>
-   <!--404 error end-->
 </main>
