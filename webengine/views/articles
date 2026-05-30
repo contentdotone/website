@@ -1,7 +1,7 @@
 <main class="article-page">
   <section class="article-hero">
     <div class="article-hero__backdrop"></div>
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="article-hero__inner"> 
         <div class="article-hero__content">
           <div class="article-hero__eyebrow">{{categories.filter({this.category}).name}}</div>
@@ -40,7 +40,7 @@
   </section>
 
   <section class="article-body-section">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="article-grid">
         <article class="article-content">
           {{this.body}}
