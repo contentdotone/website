@@ -1,85 +1,78 @@
 <div class="product-tour-page">
-  <section class="product-tour-hero position-relative overflow-hidden text-white py-6 py-lg-7">
-    <div class="product-tour-hero__background position-absolute top-0 start-0 w-100 h-100">
-      <div class="product-tour-hero__image" style="background-image:
-        linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 64, 175, 0.72) 55%, rgba(59, 130, 246, 0.48) 100%),
-        url('{{if {this.hero_image} }}{{this.hero_image.getImage(1920,1080)}}{{else}}https://hj5v68xn.media.zestyio.com/content-one-background-pattern-10p.png{{end-if}}');">
-      </div>
+  <section class="product-tour-hero relative overflow-hidden text-white py-16 lg:py-24">
+    <div class="product-tour-hero__background absolute top-0 left-0 w-full h-full">
+      <div class="product-tour-hero__image" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.85) 0%, rgba(30, 64, 175, 0.72) 55%, rgba(59, 130, 246, 0.48) 100%), url('{{if {this.hero_image} }}{{this.hero_image.getImage(1920,1080)}}{{else}}https://hj5v68xn.media.zestyio.com/content-one-background-pattern-10p.png{{end-if}}');"></div>
     </div>
-    <div class="container position-relative">
-      <div class="row justify-content-center text-center text-lg-start">
-        <div class="">
-          <span class="badge bg-white text-primary mb-3">Guided tours for every team</span>
-          <h1 class="display-4 fw-semibold mb-3 text-white">{{this.title}}</h1>
-          <div class="lead text-white-75 mb-4">{{this.body}}</div>
-        
-        </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center lg:text-left">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Guided tours for every team</span>
+        <h1 class="text-4xl md:text-5xl font-display font-semibold mb-3 text-white">{{this.title}}</h1>
+        <div class="text-lg text-white/75 mb-4">{{this.body}}</div>
       </div>
     </div>
   </section>
 
-  <section class="py-5 py-lg-6 bg-body border-bottom">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-7">
-          <h2 class="h1 mb-3">Discover every corner of Content.One</h2>
-          <p class="text-grey mb-0">Search by capability or filter by product area to jump into the tour that fits your team. Each walkthrough highlights value stories, feature deep dives, and next steps.</p>
+  <section class="py-12 lg:py-16 bg-white border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+        <div class="lg:col-span-7">
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Discover every corner of Content.One</h2>
+          <p class="text-gray-600 m-0">Search by capability or filter by product area to jump into the tour that fits your team. Each walkthrough highlights value stories, feature deep dives, and next steps.</p>
         </div>
-        <div class="col-lg-5">
-          <div class="card border-0 shadow-sm p-3">
-            <label for="tourSearch" class="form-label small text-uppercase text-muted mb-2">Search Product Features</label>
-            <div class="input-group input-group-lg shadow-sm rounded-3 overflow-hidden">
-              <span class="input-group-text bg-white border-0">
-                <svg class="text-primary" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="lg:col-span-5">
+          <div class="bg-white shadow-sm rounded-2xl p-3">
+            <label for="tourSearch" class="block text-xs uppercase text-gray-500 mb-2 font-semibold">Search Product Features</label>
+            <div class="flex shadow-sm rounded-lg overflow-hidden border border-gray-200">
+              <span class="bg-white px-3 flex items-center">
+                <svg class="text-royal w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="11" cy="11" r="7"></circle>
                   <line x1="16.65" y1="16.65" x2="21" y2="21"></line>
-                </svg> 
+                </svg>
               </span>
-              <input type="search" id="tourSearch" class="form-control border-0" placeholder="Search by feature, workflow, or keyword" aria-describedby="tourSearchHelp">
+              <input type="search" id="tourSearch" class="flex-1 px-3 py-2.5 text-base focus:outline-none" placeholder="Search by feature, workflow, or keyword" aria-describedby="tourSearchHelp">
             </div>
-            <div id="tourSearchHelp" class="form-text text-muted mt-2">Results update live as you type.</div>
+            <div id="tourSearchHelp" class="text-xs text-gray-500 mt-2">Results update live as you type.</div>
           </div>
         </div>
       </div>
       <div class="product-tour-filters mt-4" id="tourFilters" role="group" aria-label="Product tour filters">
-        <button type="button" class="btn btn-outline-primary btn-sm active" data-filter="all">All</button>
+        <button type="button" class="inline-flex items-center rounded-full border border-royal text-royal hover:bg-royal/10 font-semibold px-3 py-1.5 text-sm transition active" data-filter="all">All</button>
         {{each product_sections as section order by section.sort_order}}
-        <button type="button" class="btn btn-outline-primary btn-sm" data-filter="{{section.zuid}}">{{section.section_name}}</button>
+        <button type="button" class="inline-flex items-center rounded-full border border-royal text-royal hover:bg-royal/10 font-semibold px-3 py-1.5 text-sm transition" data-filter="{{section.zuid}}">{{section.section_name}}</button>
         {{/each}}
       </div>
     </div>
   </section>
 
-  <section class="py-5 py-lg-6 bg-body-tertiary">
-    <div class="container">
-      <div class="row g-4" id="tourGrid"> 
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="tourGrid">
         {{each product_tour_pages as tour_page order by tour_page.position asc}}
-        <div class="col-12 col-md-6 col-xl-4" data-tour-card data-category="{{tour_page.product_section}}">
-          <article class="tour-card card h-100 border-0 shadow-sm overflow-hidden">
+        <div data-tour-card data-category="{{tour_page.product_section}}">
+          <article class="tour-card bg-white shadow-sm rounded-2xl overflow-hidden flex flex-col h-full">
             {{if {tour_page.hero_image} }}
             <div class="tour-card__media">
-              <img src="{{tour_page.hero_image.getImage(640,360,crop)}}" alt="{{tour_page.title}} hero" class="tour-card__image">
+              <img src="{{tour_page.hero_image.getImage(640,360,crop)}}" alt="{{tour_page.title}} hero" class="tour-card__image w-full h-full object-cover">
             </div>
             {{else}}
-            <div class="tour-card__media tour-card__media--placeholder d-flex align-items-center justify-content-center">
-              <span class="tour-card__placeholder-text text-uppercase fw-semibold">Content.One</span>
+            <div class="tour-card__media tour-card__media--placeholder flex items-center justify-center">
+              <span class="tour-card__placeholder-text uppercase font-semibold tracking-widest">Content.One</span>
             </div>
             {{/if}}
-            <div class="card-body">
+            <div class="p-6 flex-1">
               {{if {tour_page.product_section} }}
-              <span class="badge bg-primary-subtle text-primary-emphasis rounded-pill mb-3">{{product_sections.filter({tour_page.product_section}).section_name}}</span>
+              <span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 mb-3 text-xs font-semibold">{{product_sections.filter({tour_page.product_section}).section_name}}</span>
               {{/if}}
-              
-              <h3 class="h4 mb-2" data-tour-title>
+              <h3 class="font-display text-xl font-bold mb-2" data-tour-title>
                 {{if {tour_page.bootstrap_icon_name} }}
-                    <i class="bi bi-{{tour_page.bootstrap_icon_name}} text-primary" aria-hidden="true"></i>
+                  <i class="bi bi-{{tour_page.bootstrap_icon_name}} text-royal mr-1" aria-hidden="true"></i>
                 {{/if}}
                 {{tour_page.title}}
-            </h3>
-              <p class="text-grey mb-3" data-tour-description>{{tour_page.body.striptags().subwords(24)}}</p>
+              </h3>
+              <p class="text-gray-600 mb-3" data-tour-description>{{tour_page.body.striptags().subwords(24)}}</p>
             </div>
-            <footer class="card-footer border-0 bg-transparent pt-0">
-              <a href="{{tour_page.getURL()}}" class="btn btn-outline-primary w-100">
+            <footer class="px-6 pb-6 bg-transparent">
+              <a href="{{tour_page.getURL()}}" class="inline-flex items-center justify-center w-full rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-4 py-2.5 transition">
                 {{if {tour_page.seo_link_title} }}{{tour_page.seo_link_title}}{{else}}Explore {{tour_page.title}}{{/if}}
               </a>
             </footer>
@@ -87,10 +80,10 @@
         </div>
         {{/each}}
       </div>
-      <div class="text-center d-none" id="tourEmpty">
-        <div class="card border-0 shadow-sm p-5">
-          <h3 class="h4 mb-2">No tours match your search yet.</h3>
-          <p class="text-grey mb-0">Try a different keyword or clear your filter to view all product tours.</p>
+      <div class="text-center hidden" id="tourEmpty">
+        <div class="bg-white shadow-sm rounded-2xl p-10">
+          <h3 class="font-display text-xl font-bold mb-2">No tours match your search yet.</h3>
+          <p class="text-gray-600 m-0">Try a different keyword or clear your filter to view all product tours.</p>
         </div>
       </div>
     </div>
@@ -98,73 +91,30 @@
 </div>
 
 <style>
-  .product-tour-page .product-tour-hero {
-    background-color: #0f172a;
-  }
-  .product-tour-page .product-tour-hero__background {
-    z-index: 0;
-  }
+  .product-tour-page .product-tour-hero { background-color: #0f172a; }
+  .product-tour-page .product-tour-hero__background { z-index: 0; }
   .product-tour-page .product-tour-hero__image {
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: saturate(120%);
-    transform: scale(1.05);
+    position: absolute; inset: 0;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    filter: saturate(120%); transform: scale(1.05);
   }
   .product-tour-page .product-tour-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content: ""; position: absolute; inset: 0;
     background: radial-gradient(circle at top right, rgba(148, 163, 255, 0.28), transparent 45%);
     pointer-events: none;
   }
-  .product-tour-page .product-tour-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .product-tour-page .product-tour-filters { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .product-tour-page .tour-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .product-tour-page .tour-card:hover, .product-tour-page .tour-card:focus-within {
+    transform: translateY(-4px); box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.12);
   }
-  .product-tour-page .product-tour-filters .btn {
-    border-radius: 999px;
-  }
-  .product-tour-page .tour-card {
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .product-tour-page .tour-card:hover,
-  .product-tour-page .tour-card:focus-within {
-    transform: translateY(-4px);
-    box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.12);
-  }
-  .product-tour-page .tour-card__media {
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15));
-  }
-  .product-tour-page .tour-card__media img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .product-tour-page .tour-card__media--placeholder {
-    min-height: 220px;
-  }
-  .product-tour-page .tour-card__placeholder-text {
-    letter-spacing: 0.2em;
-    color: rgba(15, 23, 42, 0.55);
-  }
-  .product-tour-page .tour-card__icon {
-    font-size: 2rem;
-    line-height: 1;
-  }
-  .product-tour-page .tour-card .badge {
-    letter-spacing: 0.04em;
-  }
+  .product-tour-page .tour-card__media { background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); }
+  .product-tour-page .tour-card__media--placeholder { min-height: 220px; }
+  .product-tour-page .tour-card__placeholder-text { color: rgba(15, 23, 42, 0.55); }
+  .product-tour-page .product-tour-filters button.active { background: rgba(66, 85, 189, 0.1); color: #4255BD; }
   @media (max-width: 767.98px) {
-    .product-tour-page .product-tour-hero::after {
-      background: radial-gradient(circle at top, rgba(148, 163, 255, 0.35), transparent 50%);
-    }
-    .product-tour-page .product-tour-hero__image {
-      transform: none;
-    }
+    .product-tour-page .product-tour-hero::after { background: radial-gradient(circle at top, rgba(148, 163, 255, 0.35), transparent 50%); }
+    .product-tour-page .product-tour-hero__image { transform: none; }
   }
 </style>
 
@@ -175,45 +125,32 @@
     var filtersContainer = document.getElementById('tourFilters');
     var emptyState = document.getElementById('tourEmpty');
     if (!grid) return;
-
     var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-tour-card]'));
     if (!cards.length) return;
-
     var activeFilter = 'all';
-
     function applyFilters() {
       var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
       var visibleCount = 0;
-
       cards.forEach(function (card) {
         var titleEl = card.querySelector('[data-tour-title]');
         var descriptionEl = card.querySelector('[data-tour-description]');
         var titleText = titleEl ? titleEl.textContent.toLowerCase() : '';
         var descriptionText = descriptionEl ? descriptionEl.textContent.toLowerCase() : '';
         var category = (card.getAttribute('data-category') || '').trim();
-
         var matchesSearch = !query || titleText.indexOf(query) !== -1 || descriptionText.indexOf(query) !== -1;
         var matchesFilter = activeFilter === 'all' || category === activeFilter;
         var isVisible = matchesSearch && matchesFilter;
-
-        card.classList.toggle('d-none', !isVisible);
-        if (isVisible) {
-          visibleCount += 1;
-        }
+        card.classList.toggle('hidden', !isVisible);
+        if (isVisible) { visibleCount += 1; }
       });
-
-      if (emptyState) {
-        emptyState.classList.toggle('d-none', visibleCount !== 0);
-      }
+      if (emptyState) { emptyState.classList.toggle('hidden', visibleCount !== 0); }
     }
-
     if (filtersContainer) {
       filtersContainer.addEventListener('click', function (event) {
         var target = event.target.closest('[data-filter]');
         if (!target) return;
         var value = target.getAttribute('data-filter');
         if (!value) return;
-
         activeFilter = value;
         filtersContainer.querySelectorAll('[data-filter]').forEach(function (button) {
           button.classList.toggle('active', button === target);
@@ -221,13 +158,11 @@
         applyFilters();
       });
     }
-
     if (searchInput) {
       searchInput.addEventListener('input', function () {
         window.requestAnimationFrame(applyFilters);
       });
     }
-
     applyFilters();
   });
 </script>
