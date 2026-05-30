@@ -181,7 +181,7 @@
 <div class="modal fade capterra-lightbox-modal" id="capterraLightboxModal" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content bg-transparent border-0">
-      <button type="button" class="btn-close btn-close-white ms-auto me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
+      <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="modal-body p-0">
         <img src="" alt="" class="capterra-lightbox-image rounded-2xl shadow-lg w-full h-auto">
       </div>

@@ -64,7 +64,7 @@
                   {{if {author.bio} }}
                   <p>{{author.bio.subwords(24)}}</p>
                   {{/if}}
-                  <a href="/contact-us/" class="btn btn-primary mt-2">Book a call with {{author.name}}</a>
+                  <a href="/contact-us/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-royal text-white hover:bg-royalDark mt-2">Book a call with {{author.name}}</a>
                 </div>
               </div>
  
@@ -103,7 +103,7 @@
             <h2>Partner with Content.One</h2>
             <div class="article-panel filled">
               <p>Let's work together to solve for {{this.title}} and improve your organizations digital ROI</p>
-              <a href="/contact-us/" class="btn btn-lg btn-primary">Book a Call</a>
+              <a href="/contact-us/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-base px-6 py-3 bg-royal text-white hover:bg-royalDark">Book a Call</a>
             </div>
 
             <div class="article-panel filled">
