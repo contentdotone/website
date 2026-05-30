@@ -1,4 +1,4 @@
-<!-- Footer -->
+<!-- Footer — pure HTML/CSS mobile accordion via <details>; no JS, no Bootstrap. -->
 <footer class="pt-12 mt-12">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -12,60 +12,46 @@
         </div>
       </div>
       <div class="md:col-span-4 md:col-start-9 lg:col-span-6 lg:col-start-7">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6" id="ft-links">
-          <div>
-            <div class="relative">
-              <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0">
-                <h5 class="font-display font-semibold">Industries</h5>
-                <a class="block lg:hidden stretched-link text-inherit" data-bs-toggle="collapse" href="#collapseLanding" role="button" aria-expanded="false" aria-controls="collapseLanding">
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-                </a>
-              </div>
-              <div class="collapse lg:block" id="collapseLanding" data-bs-parent="#ft-links">
-                <ul class="list-none m-0 py-3 lg:py-0">
-                  {{each industries as indy}}
-                  <li class="mb-2">
-                    <a href="{{indy.getUrl()}}" class="no-underline text-current">{{indy.seo_link_title}}</a>
-                  </li>
-                  {{/each}}
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0 relative">
-              <h5 class="font-display font-semibold">Solutions</h5>
-              <a class="block lg:hidden stretched-link text-inherit" data-bs-toggle="collapse" href="#collapseAccounts" role="button" aria-expanded="false" aria-controls="collapseAccounts">
-                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-              </a>
-            </div>
-            <div class="collapse lg:block" id="collapseAccounts" data-bs-parent="#ft-links">
-              <ul class="list-none m-0 py-3 lg:py-0">
-                {{each product_solutions as solution}}
-                <li class="mb-2">
-                  <a href="{{indy.getUrl()}}" class="no-underline text-current">{{solution.seo_link_title}}</a>
-                </li>
-                {{/each}}
-              </ul>
-            </div>
-          </div>
-          <div>
-            <div class="mb-3 pb-2 flex justify-between border-b border-gray-200 lg:border-b-0 relative">
-              <h5 class="font-display font-semibold">Resources</h5>
-              <a class="block lg:hidden stretched-link text-inherit" data-bs-toggle="collapse" href="#collapseResources" role="button" aria-expanded="false" aria-controls="collapseResources">
-                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-              </a>
-            </div>
-            <div class="collapse lg:block" id="collapseResources" data-bs-parent="#ft-links">
-              <ul class="list-none m-0 py-3 lg:py-0">
-                <li class="mb-2"><a href="https://docs.zesty.io/" target="_blank" class="no-underline text-current">Docs</a></li>
-                <li class="mb-2"><a href="/about/" class="no-underline text-current">About</a></li>
-                <li class="mb-2"><a href="/blog/" class="no-underline text-current">Blog</a></li>
-                <li class="mb-2"><a href="/brand/" class="no-underline text-current">Brand</a></li>
-                <li class="mb-2"><a href="/contact-us/" class="no-underline text-current">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          <details class="footer-col" open>
+            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
+              <h5 class="font-display font-semibold m-0">Industries</h5>
+              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <ul class="list-none m-0 py-3 lg:py-0">
+              {{each industries as indy}}
+              <li class="mb-2">
+                <a href="{{indy.getUrl()}}" class="no-underline text-current">{{indy.seo_link_title}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </details>
+          <details class="footer-col" open>
+            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
+              <h5 class="font-display font-semibold m-0">Solutions</h5>
+              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <ul class="list-none m-0 py-3 lg:py-0">
+              {{each product_solutions as solution}}
+              <li class="mb-2">
+                <a href="{{indy.getUrl()}}" class="no-underline text-current">{{solution.seo_link_title}}</a>
+              </li>
+              {{/each}}
+            </ul>
+          </details>
+          <details class="footer-col" open>
+            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
+              <h5 class="font-display font-semibold m-0">Resources</h5>
+              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <ul class="list-none m-0 py-3 lg:py-0">
+              <li class="mb-2"><a href="https://docs.zesty.io/" target="_blank" class="no-underline text-current">Docs</a></li>
+              <li class="mb-2"><a href="/about/" class="no-underline text-current">About</a></li>
+              <li class="mb-2"><a href="/blog/" class="no-underline text-current">Blog</a></li>
+              <li class="mb-2"><a href="/brand/" class="no-underline text-current">Brand</a></li>
+              <li class="mb-2"><a href="/contact-us/" class="no-underline text-current">Contact Us</a></li>
+            </ul>
+          </details>
         </div>
       </div>
     </div>
@@ -87,6 +73,24 @@
     </div>
   </div>
 </footer>
+
+<style>
+  .footer-col > summary::-webkit-details-marker, .footer-col > summary::marker { display: none; content: ""; }
+  .footer-col > .footer-caret { transition: transform .2s; }
+  .footer-col[open] > summary > .footer-caret { transform: rotate(180deg); }
+  /* On desktop: always expanded, regardless of [open] state */
+  @media (min-width: 1024px) {
+    .footer-col > summary { pointer-events: none; }
+    .footer-col > summary > .footer-caret { display: none; }
+    .footer-col > ul { display: block !important; }
+  }
+  /* On mobile: start collapsed (override `open`), expand on tap */
+  @media (max-width: 1023.98px) {
+    .footer-col:not([data-keep-open]) { /* default closed on mobile */ }
+    .footer-col > ul { display: none; }
+    .footer-col[open] > ul { display: block; }
+  }
+</style>
 
 <!-- Scroll top -->
 <div class="btn-scroll-top">
