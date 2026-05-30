@@ -1,7 +1,4 @@
-<!-- petdesk case study — Tailwind-converted.
-     Bootstrap layout/utilities → Tailwind; quote cards + counter animation
-     + scrollspy + fade-section JS preserved verbatim. data-bs-spy="scroll"
-     stays Bootstrap-driven; init guarded so missing Bootstrap JS degrades. -->
+<!-- petdesk case study — full Tailwind. Pure-JS scroll-spy, no Bootstrap. -->
 <div class="petdesk-case-study">
 
   <!-- HERO -->
@@ -116,7 +113,7 @@
         </div>
 
         <div class="lg:col-span-9">
-          <div id="petdeskSections" data-bs-spy="scroll" data-bs-target="#petdeskNav" data-bs-offset="160" tabindex="0" class="lg:pr-3">
+          <div id="petdeskSections" tabindex="0" class="lg:pr-3">
 
             <section id="petdesk-revenue" class="py-10 border-b border-gray-200 fade-section">
               <h3 class="text-2xl md:text-3xl font-display font-bold mb-3">New Revenue &amp; Added Client Value</h3>
@@ -310,14 +307,14 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    // Bootstrap ScrollSpy — guard for missing Bootstrap JS during migration
-    var sectionsEl = document.getElementById('petdeskSections');
-    if (sectionsEl && typeof bootstrap !== 'undefined') {
-      new bootstrap.ScrollSpy(sectionsEl, {
-        target: '#petdeskNav',
-        offset: 180
-      });
-    }
+    // Pure-JS scroll-spy
+    (function () {
+      var navLinks = document.querySelectorAll('#petdeskNav .nav-link');
+      var spy = [];
+      navLinks.forEach(function (l) { var id = l.getAttribute('href'); if (id && id.charAt(0)==='#') { var t = document.querySelector(id); if (t) spy.push({link:l,target:t}); } });
+      function on() { var y = window.scrollY + 180; var c = spy[0]; spy.forEach(function(e){ if (e.target.offsetTop <= y) c = e; }); navLinks.forEach(function(l){l.classList.remove('active');}); if (c) c.link.classList.add('active'); }
+      window.addEventListener('scroll', on, {passive:true}); on();
+    })();
 
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {

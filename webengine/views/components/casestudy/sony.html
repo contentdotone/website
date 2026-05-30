@@ -1,6 +1,4 @@
-<!-- sony case study — Tailwind-converted. Same pattern as petdesk/wattpad.
-     Modal kept with .modal class + data-bs-dismiss for Bootstrap JS during
-     transition; progress bars rebuilt as Tailwind divs; bi-* → inline SVGs. -->
+<!-- sony case study — full Tailwind. Native <dialog> for modal, no Bootstrap. -->
 <div class="sony-case-study">
 
   <!-- HERO -->
@@ -93,7 +91,7 @@
         </div>
 
         <div class="lg:col-span-9">
-          <div id="sonySections" data-bs-spy="scroll" data-bs-target="#sonyCaseNav" data-bs-offset="160" tabindex="0" class="lg:pr-3">
+          <div id="sonySections" tabindex="0" class="lg:pr-3">
 
             <section id="sony-origins" class="py-10 border-b border-gray-200 fade-section">
               <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -231,22 +229,16 @@
     </div>
   </section>
 
-  <!-- VIDEO MODAL (Bootstrap modal class kept for JS+CSS during migration) -->
-  <div class="modal fade" id="sonyOverviewVideo" tabindex="-1" aria-labelledby="sonyOverviewVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title h5" id="sonyOverviewVideoLabel">Sony Alpha Universe x Content.One</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <div class="aspect-video">
-            <iframe src="https://www.youtube.com/embed/zf9VwAvWs_E" title="Sony Alpha Universe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
-          </div>
-        </div>
+  <!-- VIDEO DIALOG (native, no Bootstrap) -->
+  <dialog id="sonyOverviewVideo" aria-labelledby="sonyOverviewVideoLabel" class="rounded-2xl shadow-2xl p-0 max-w-5xl w-full backdrop:bg-black/50 border-0">
+    <div class="bg-white rounded-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-gray-200">
+        <h2 class="text-base font-semibold m-0" id="sonyOverviewVideoLabel">Sony Alpha Universe x Content.One</h2>
+        <button type="button" onclick="document.getElementById('sonyOverviewVideo').close(); var f=document.querySelector('#sonyOverviewVideo iframe'); if(f){f.src=f.src;}" aria-label="Close" class="text-gray-500 hover:text-gray-900 text-2xl leading-none">&times;</button>
       </div>
+      <div class="p-0"><div class="aspect-video"><iframe src="https://www.youtube.com/embed/zf9VwAvWs_E" title="Sony Alpha Universe" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe></div></div>
     </div>
-  </div>
+  </dialog>
 </div>
 
 <style>
@@ -267,10 +259,14 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var sectionsEl = document.getElementById('sonySections');
-    if (sectionsEl && typeof bootstrap !== 'undefined') {
-      new bootstrap.ScrollSpy(sectionsEl, { target: '#sonyCaseNav', offset: 180 });
-    }
+    // Pure-JS scroll-spy
+    (function () {
+      var navLinks = document.querySelectorAll('#sonyCaseNav .nav-link');
+      var spy = [];
+      navLinks.forEach(function (l) { var id = l.getAttribute('href'); if (id && id.charAt(0)==='#') { var t = document.querySelector(id); if (t) spy.push({link:l,target:t}); } });
+      function on() { var y = window.scrollY + 180; var c = spy[0]; spy.forEach(function(e){ if (e.target.offsetTop <= y) c = e; }); navLinks.forEach(function(l){l.classList.remove('active');}); if (c) c.link.classList.add('active'); }
+      window.addEventListener('scroll', on, {passive:true}); on();
+    })();
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
@@ -303,14 +299,5 @@
       });
     }, { threshold: 0.4 });
     document.querySelectorAll('[data-sony-count]').forEach(function (counter) { counterObserver.observe(counter); });
-    var videoModal = document.getElementById('sonyOverviewVideo');
-    if (videoModal) {
-      videoModal.addEventListener('hidden.bs.modal', function () {
-        var iframe = videoModal.querySelector('iframe');
-        if (!iframe) return;
-        var src = iframe.getAttribute('src');
-        iframe.setAttribute('src', src);
-      });
-    }
   });
 </script>
