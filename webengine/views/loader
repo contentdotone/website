@@ -1,3 +1,30 @@
+<!-- Tailwind Play CDN — loads first so utility classes are styled before paint -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          royal:     '#4255BD',
+          royalDark: '#2F3F94',
+          royalLite: '#8C9BE6',
+          ink:       '#0B0F1C',
+          paper:     '#FAFAFC',
+          success:   '#36B37E',
+          info:      '#0DCAF0',
+          warning:   '#FFAB00',
+          danger:    '#FF5630',
+          capterra:  '#2563eb',
+        },
+        fontFamily: {
+          display: ['"DM Sans"','system-ui','sans-serif'],
+          sans:    ['"Satoshi"','"DM Sans"','system-ui','sans-serif'],
+          mono:    ['"DM Mono"','ui-monospace','monospace'],
+        },
+      }
+    }
+  }
+</script>
 
 <link rel="preload" as="style" href="https://www.content.one/assets/theme.css" crossorigin="anonymous">
 <link rel="stylesheet" id="theme-css" href="https://www.content.one/assets/theme.css" media="print" onload="this.media='all'" crossorigin="anonymous">
