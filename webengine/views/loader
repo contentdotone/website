@@ -92,6 +92,37 @@
     }
   });
 
+  // Expose window.bootstrap shim so existing `new bootstrap.X(el, opts)` calls keep working.
+  // Methods route to the shim's own DOM behavior; no Bootstrap JS is loaded.
+  window.bootstrap = window.bootstrap || {};
+  window.bootstrap.Modal = function (el) {
+    this.el = el;
+    this.show = function () { if (el.showModal) { try { el.showModal(); return; } catch (e) {} } el.classList.add('is-open', 'show'); el.style.display = 'flex'; };
+    this.hide = function () { if (el.close) el.close(); el.classList.remove('is-open', 'show'); el.style.display = ''; };
+    this.toggle = function () { if (el.classList.contains('is-open') || el.hasAttribute('open')) this.hide(); else this.show(); };
+    this.dispose = function () {};
+  };
+  window.bootstrap.Modal.getInstance = function (el) { return new window.bootstrap.Modal(el); };
+  window.bootstrap.Modal.getOrCreateInstance = window.bootstrap.Modal.getInstance;
+  window.bootstrap.Tooltip = function (el) { this.show=function(){}; this.hide=function(){}; this.dispose=function(){}; };
+  window.bootstrap.Tooltip.getInstance = function () { return null; };
+  window.bootstrap.Popover = window.bootstrap.Tooltip;
+  window.bootstrap.Dropdown = function (el) { this.show=function(){ if(el) el.closest('.dropdown,.nav-dropdown')?.classList.add('is-open'); }; this.hide=function(){ if(el) el.closest('.dropdown,.nav-dropdown')?.classList.remove('is-open'); }; this.toggle=function(){ if(el) el.closest('.dropdown,.nav-dropdown')?.classList.toggle('is-open'); }; this.dispose=function(){}; };
+  window.bootstrap.Collapse = function (el) { this.show=function(){ if(el) el.classList.add('show'); }; this.hide=function(){ if(el) el.classList.remove('show'); }; this.toggle=function(){ if(el) el.classList.toggle('show'); }; this.dispose=function(){}; };
+  window.bootstrap.Offcanvas = function (el) { this.show=function(){ if(el) el.classList.add('is-open'); }; this.hide=function(){ if(el) el.classList.remove('is-open'); }; this.toggle=function(){ if(el) el.classList.toggle('is-open'); }; this.dispose=function(){}; };
+  window.bootstrap.Tab = function (el) { this.show=function(){ if(el) el.click(); }; this.dispose=function(){}; };
+  window.bootstrap.Carousel = function (el) { this.next=function(){ if(el) qa('.carousel-item.active', el).forEach(function(s){ var nxt=s.nextElementSibling||el.querySelector('.carousel-item'); if(nxt){ s.classList.remove('active'); s.style.display='none'; nxt.classList.add('active'); nxt.style.display='';}}); }; this.prev=function(){}; this.pause=function(){}; this.cycle=function(){}; this.to=function(i){ qa('.carousel-item', el).forEach(function(s,idx){ s.classList.toggle('active', idx===i); s.style.display=idx===i?'':'none';}); }; this.dispose=function(){}; };
+  window.bootstrap.ScrollSpy = function (sectionsEl, opts) {
+    opts = opts || {};
+    var target = opts.target; var offset = opts.offset || 180;
+    var navLinks = qa(target + ' a, ' + target + ' [href^="#"]');
+    var spy = [];
+    navLinks.forEach(function (l) { var id = l.getAttribute('href'); if (id && id.charAt(0)==='#') { var t = q(id); if (t) spy.push({link:l,target:t}); } });
+    function on() { var y = window.scrollY + offset; var c = spy[0]; spy.forEach(function(e){ if (e.target.offsetTop <= y) c = e; }); navLinks.forEach(function(l){l.classList.remove('active');}); if (c) c.link.classList.add('active'); }
+    window.addEventListener('scroll', on, {passive:true}); on();
+    this.dispose = function () { window.removeEventListener('scroll', on); };
+  };
+
   // Auto-init carousels (data-bs-ride="carousel" autoplay)
   function initCarousels() {
     qa('[data-bs-ride="carousel"]').forEach(function (carousel) {
