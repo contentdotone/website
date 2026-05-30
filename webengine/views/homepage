@@ -1,72 +1,60 @@
-<!--Pageheader start-->
-<!-- <div class="pattern-square"></div> -->
-<!--Pageheader end-->
 (** {{include /components/homepage/hero-ai-cool.html}} **)
 <!-- Content.One Hero Section -->
-<section class="co-hero position-relative overflow-hidden py-5 py-lg-6">
-  <div class="co-hero__bg position-absolute top-0 start-0 w-100 h-100"></div>
-  <div class="container position-relative" style="z-index:2">
-    <div class="row align-items-center gy-5"> 
-      <!-- Left Column -->
-      <div class="col-lg-6 col-12 text-center text-lg-start">
-        <span class="co-hero__badge d-inline-flex align-items-center gap-2 rounded-pill px-3 py-2 mb-4">
-          
-          <span class="small fw-semibold">Rethinking Content Management for Modern Teams</span>
+<section class="co-hero relative overflow-hidden py-12 lg:py-16">
+  <div class="co-hero__bg absolute top-0 left-0 w-full h-full"></div>
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="lg:col-span-6 text-center lg:text-left">
+        <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-2 mb-4">
+          <span class="text-sm font-semibold">Rethinking Content Management for Modern Teams</span>
         </span>
-        <h1 class="display-3 fw-bold text-white mb-4">AI-Driven <span class="rotate">Content</span> Marketing at Scale</h1>
-        <p class="lead mb-4" style="color:rgba(255,255,255,.75)">
-            A platform to orchestrate website, mobile, and headless content experiences—empowering marketing teams to manage, scale, and deliver campaigns seamlessly across local and global markets.
- 
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4">AI-Driven <span class="rotate">Content</span> Marketing at Scale</h1>
+        <p class="text-lg mb-4" style="color:rgba(255,255,255,.75)">
+          A platform to orchestrate website, mobile, and headless content experiences—empowering marketing teams to manage, scale, and deliver campaigns seamlessly across local and global markets.
         </p>
-        <div class="d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start">
-          <!-- <a href="https://accounts.zesty.io/signup" class="btn btn-primary btn-lg rounded-pill px-4">Start for free</a> -->
-          <a href="/contact-us/" class="btn btn-outline-light btn-lg rounded-pill px-4">
+        <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
+          <a href="/contact-us/" class="inline-flex items-center rounded-full border border-white text-white hover:bg-white/10 font-semibold px-6 py-3 transition text-lg">
             Setup a Custom Demo
-            <i class="bi bi-chevron-right small"></i>
+            <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="9 18 15 12 9 6"/></svg>
           </a>
         </div>
       </div>
-      <!-- Right Column: Feature Cards -->
-      <div class="col-lg-5 offset-lg-1 col-12">
-        <div class="d-flex flex-column gap-3">
-          <!-- Feature 1 -->
-          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
-            <div class="co-hero__icon co-hero__icon--blue d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
-              <i class="bi bi-gear fs-5"></i>
+      <div class="lg:col-span-5 lg:col-start-8">
+        <div class="flex flex-col gap-3">
+          <div class="co-hero__feature-card flex items-start gap-3 p-3 rounded-2xl">
+            <div class="co-hero__icon co-hero__icon--blue flex items-center justify-center shrink-0 rounded-xl">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
             </div>
             <div>
-              <h3 class="h6 fw-bold text-white mb-1">Your Central Control Hub</h3>
-              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Define re-usable blocks for marketers and developers to use organization-wide.</p>
+              <h3 class="text-base font-bold text-white mb-1">Your Central Control Hub</h3>
+              <p class="m-0 text-sm" style="color:rgba(255,255,255,.65)">Define re-usable blocks for marketers and developers to use organization-wide.</p>
             </div>
           </div>
-          <!-- Feature 2 -->
-          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
-            <div class="co-hero__icon co-hero__icon--pink d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
-              <i class="bi bi-bag fs-5"></i>
+          <div class="co-hero__feature-card flex items-start gap-3 p-3 rounded-2xl">
+            <div class="co-hero__icon co-hero__icon--pink flex items-center justify-center shrink-0 rounded-xl">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
             </div>
             <div>
-              <h3 class="h6 fw-bold text-white mb-1">Agentic Page Building</h3>
-              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Write your prompt and watch as AI builds your website.</p>
+              <h3 class="text-base font-bold text-white mb-1">Agentic Page Building</h3>
+              <p class="m-0 text-sm" style="color:rgba(255,255,255,.65)">Write your prompt and watch as AI builds your website.</p>
             </div>
           </div>
-          <!-- Feature 3 -->
-          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
-            <div class="co-hero__icon co-hero__icon--green d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
-              <i class="bi bi-globe2 fs-5"></i>
+          <div class="co-hero__feature-card flex items-start gap-3 p-3 rounded-2xl">
+            <div class="co-hero__icon co-hero__icon--green flex items-center justify-center shrink-0 rounded-xl">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
             </div>
             <div>
-              <h3 class="h6 fw-bold text-white mb-1">Headless APIs &amp; Realtime Webhooks</h3>
-              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Publish anywhere, trigger custom workflows, and integrate with freedom.</p>
+              <h3 class="text-base font-bold text-white mb-1">Headless APIs &amp; Realtime Webhooks</h3>
+              <p class="m-0 text-sm" style="color:rgba(255,255,255,.65)">Publish anywhere, trigger custom workflows, and integrate with freedom.</p>
             </div>
           </div>
-          <!-- Feature 4 -->
-          <div class="co-hero__feature-card d-flex align-items-start gap-3 p-3 rounded-3">
-            <div class="co-hero__icon co-hero__icon--orange d-flex align-items-center justify-content-center flex-shrink-0 rounded-3">
-              <i class="bi bi-bar-chart-line fs-5"></i>
+          <div class="co-hero__feature-card flex items-start gap-3 p-3 rounded-2xl">
+            <div class="co-hero__icon co-hero__icon--orange flex items-center justify-center shrink-0 rounded-xl">
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg>
             </div>
             <div>
-              <h3 class="h6 fw-bold text-white mb-1">Powerful Analytics</h3>
-              <p class="mb-0 small" style="color:rgba(255,255,255,.65)">Measure and test in real-time with our built-in analytics.</p>
+              <h3 class="text-base font-bold text-white mb-1">Powerful Analytics</h3>
+              <p class="m-0 text-sm" style="color:rgba(255,255,255,.65)">Measure and test in real-time with our built-in analytics.</p>
             </div>
           </div>
         </div>
@@ -76,81 +64,40 @@
 </section>
 
 <style>
-  /* Content.One Hero */
   .co-hero { background-color: #0b0f1f; }
   .co-hero__bg {
     background: linear-gradient(135deg, #0b0f1f 0%, #1a1545 35%, #2a1d6b 60%, #1a1545 80%, #0b0f1f 100%);
     z-index: 0;
   }
   .co-hero__bg::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content: ""; position: absolute; inset: 0;
     background: radial-gradient(ellipse at 30% 50%, rgba(99, 60, 255, 0.18) 0%, transparent 65%),
                 radial-gradient(ellipse at 70% 30%, rgba(56, 189, 248, 0.10) 0%, transparent 55%);
     pointer-events: none;
   }
-  .co-hero__badge {
-    background: rgba(255,255,255,0.08);
-    border: 1px solid rgba(255,255,255,0.12);
-    color: #a78bfa;
-  }
-  .co-hero__badge-dot {
-    width: 8px; height: 8px;
-    border-radius: 50%;
-    background: #a78bfa;
-    display: inline-block;
-  }
-  .co-hero__features {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 1rem;
-    padding: 1.25rem;
-  }
-  .co-hero__feature-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.06);
-    transition: background .2s ease;
-  }
-  .co-hero__feature-card:hover {
-    background: rgba(255,255,255,0.07);
-  }
-  .co-hero__icon {
-    width: 44px; height: 44px;
-    border-radius: 10px;
-    min-width: 44px;
-  }
-  .co-hero__icon--blue  { background: rgba(59,130,246,0.18); color: #60a5fa; }
-  .co-hero__icon--pink  { background: rgba(236,72,153,0.18); color: #f472b6; }
-  .co-hero__icon--green { background: rgba(34,197,94,0.18);  color: #4ade80; }
-  .co-hero__icon--orange{ background: rgba(249,115,22,0.18); color: #fb923c; }
-
-  .rotate {
-    display: inline-block;
-    transition: opacity .2s ease, transform .2s ease;
-  }
-  .rotate.is-fading {
-    opacity: 0;
-    transform: translateY(-6px);
-  }
+  .co-hero__badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: #a78bfa; }
+  .co-hero__feature-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); transition: background .2s ease; }
+  .co-hero__feature-card:hover { background: rgba(255,255,255,0.07); }
+  .co-hero__icon { width: 44px; height: 44px; border-radius: 10px; min-width: 44px; }
+  .co-hero__icon--blue   { background: rgba(59,130,246,0.18); color: #60a5fa; }
+  .co-hero__icon--pink   { background: rgba(236,72,153,0.18); color: #f472b6; }
+  .co-hero__icon--green  { background: rgba(34,197,94,0.18);  color: #4ade80; }
+  .co-hero__icon--orange { background: rgba(249,115,22,0.18); color: #fb923c; }
+  .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
+  .rotate.is-fading { opacity: 0; transform: translateY(-6px); }
 </style>
-<!-- End Content.One Hero Section -->
 
 <script>
   (function () {
     var rotateEl = document.querySelector('.rotate');
     if (!rotateEl) return;
-
     var words = ['Content', 'Website', 'Mobile', 'Headless'];
     var colors = ['#a78bfa', '#38bdf8', '#34d399', '#f59e0b'];
     var index = 0;
-
     rotateEl.textContent = words[index];
     rotateEl.style.color = colors[index];
-
     window.setInterval(function () {
       rotateEl.classList.add('is-fading');
-
       window.setTimeout(function () {
         index = (index + 1) % words.length;
         rotateEl.textContent = words[index];
@@ -162,214 +109,146 @@
 </script>
 
 <!-- {{include /components/homepage/home-hero.html}} -->
- 
+
 {{ block('/-/block/client_logos.html') }}
 
 {{ include /components/features/block_highlight.html }}
 
-<!--Priority--> 
-<section class="py-xl-6 py-3">
-  <div class="container">
-    <div class="row mb-6">
-      <div class="col-lg-8 offset-lg-2 col-md-10 offset-md-1 col-12">
-        <div class="d-flex flex-column gap-4 text-center">
-          <!-- <div class="d-flex justify-content-center">
-            <span class="badge bg-white text-muted border border-light-subtle rounded-pill text-uppercase fw-semibold py-2 px-3 small ls-md">Why Content.One</span>
-          </div> -->
-          <div class="d-flex flex-column gap-2">
-            <h2 class="mb-0 display-6">Why Choose Content.One</h2>
-            <p class="mb-0">
-              Plan, secure, and manage your content seamlessly across all channels with 
-              <span class="text-primary">Content.One</span>.
-            </p>
+<!--Priority-->
+<section class="py-6 xl:py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 mb-12">
+      <div class="lg:col-span-8 lg:col-start-3 md:col-span-10 md:col-start-2">
+        <div class="flex flex-col gap-4 text-center">
+          <div class="flex flex-col gap-2">
+            <h2 class="m-0 font-display text-4xl md:text-5xl font-semibold">Why Choose Content.One</h2>
+            <p class="m-0 text-gray-600">Plan, secure, and manage your content seamlessly across all channels with <span class="text-royal">Content.One</span>.</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row gy-lg-6 gy-4">
-      <div class="col-lg-4 col-md-6">
-        <div class="d-flex flex-column gap-5 p-xxl-6 text-center p-3 card card-lift">
-          <div><i class="bi bi-lightning-charge fs-1 text-primary"></i></div>
-          <div class="d-flex flex-column gap-2">
-            <h3 class="h4">Agentic Page Building</h3>
-            <p class="mb-0">Plan, generate, and refine content at scale with AI-powered workflows.</p>
-          </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="flex flex-col gap-5 xxl:p-12 text-center p-3 bg-white shadow-sm rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-md">
+        <div><svg viewBox="0 0 16 16" class="w-10 h-10 text-royal mx-auto" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-display text-xl font-bold">Agentic Page Building</h3>
+          <p class="m-0 text-gray-600">Plan, generate, and refine content at scale with AI-powered workflows.</p>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="d-flex flex-column gap-5 p-xxl-6 text-center p-3 card card-lift">
-          <div><i class="bi bi-shield-lock fs-1 text-primary"></i></div>
-          <div class="d-flex flex-column gap-2">
-            <h3 class="h4">Enterprise Scale &amp; Security</h3>
-            <p class="mb-0">Control governance and structure while scaling across departments securely.</p>
-          </div>
+      <div class="flex flex-col gap-5 xxl:p-12 text-center p-3 bg-white shadow-sm rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-md">
+        <div><svg viewBox="0 0 24 24" class="w-10 h-10 text-royal mx-auto" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-display text-xl font-bold">Enterprise Scale &amp; Security</h3>
+          <p class="m-0 text-gray-600">Control governance and structure while scaling across departments securely.</p>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
-        <div class="d-flex flex-column gap-5 p-xxl-6 text-center p-3 card card-lift">
-          <div><i class="bi bi-diagram-3 fs-1 text-primary"></i></div>
-          <div class="d-flex flex-column gap-2">
-            <h3 class="h4">Multisite Management</h3>
-            <p class="mb-0">Launch and manage content seamlessly across all channels.</p>
-          </div>
+      <div class="flex flex-col gap-5 xxl:p-12 text-center p-3 bg-white shadow-sm rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-md">
+        <div><svg viewBox="0 0 24 24" class="w-10 h-10 text-royal mx-auto" fill="currentColor"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="9" y="16" width="6" height="6" rx="1"/></svg></div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-display text-xl font-bold">Multisite Management</h3>
+          <p class="m-0 text-gray-600">Launch and manage content seamlessly across all channels.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!--Priority-->
-
 
 {{ include /components/features/analytics_highlight.html }}
 
 {{include /components/product-section.html}}
 
-<div class="quote-wrapper mb-lg-8 mb-6">
-    <div class="quote-banner">
-        <div class="quote-content" id="quoteContent">
-             <div class="quote-text">
-                <h3 class="ubuntu-medium" id="quoteText"></h3>
-                <p class="ubuntu-light"  id="personName"></p>
-                
-            </div>
-            <img src="Face of the quote" alt="Person Image" id="personImage">
-           
-        </div>
+<div class="quote-wrapper mb-12 lg:mb-20">
+  <div class="quote-banner">
+    <div class="quote-content" id="quoteContent">
+      <div class="quote-text">
+        <h3 class="ubuntu-medium" id="quoteText"></h3>
+        <p class="ubuntu-light" id="personName"></p>
+      </div>
+      <img src="" alt="Person Image" id="personImage">
     </div>
+  </div>
 </div>
 
 {{include /components/homepage/personas.html}}
 
-<!-- Achievements start -->
-<section class="py-6 py-xl-9 bg-dark text-light">
-  <div class="container">
-    <div class="row mb-5 mb-xl-6">
-      <div class="col-lg-10 offset-lg-1">
+<!-- Explore More -->
+<section class="py-12 xl:py-20 bg-gray-900 text-gray-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-12 mb-12 xl:mb-16">
+      <div class="lg:col-span-10 lg:col-start-2">
         <div class="text-center">
-          <h2 class="display-5 fw-bold mb-3 text-white">Explore More of <span class="text-primary">Content.One</span></h2>
-          <p class="lead text-light mb-0">
-            Discover how <span class="text-primary">Content.One</span> can transform your organization
-          </p>
+          <h2 class="text-4xl md:text-5xl font-display font-bold mb-3 text-white">Explore More of <span class="text-royal">Content.One</span></h2>
+          <p class="text-lg m-0">Discover how <span class="text-royal">Content.One</span> can transform your organization</p>
         </div>
       </div>
     </div>
- 
-    <div class="row g-4 g-xl-5">
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6">
-        <a href="/product_tour/" class="security-card h-100 rounded-4 p-4 p-xxl-5 text-center text-decoration-none d-block position-relative overflow-hidden">
-          <div class="d-inline-flex align-items-center justify-content-center bg-white icon-tile mb-4">
-            <i class="bi bi-layers fs-2 text-primary"></i>
-          </div>
-          <h3 class="h3 fw-semibold mb-3 text-white">Features</h3>
-          <p class="mb-0 text-light">We have you and your team covered with features marketing teams need</p>
-        </a>
-      </div>
 
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6">
-        <a href="/solutions/" class="security-card h-100 rounded-4 p-4 p-xxl-5 text-center text-decoration-none d-block position-relative overflow-hidden">
-          <div class="d-inline-flex align-items-center justify-content-center bg-white icon-tile mb-4">
-            <i class="bi bi-puzzle fs-2 text-primary"></i>
-          </div>
-          <h3 class="h3 fw-semibold mb-3 text-white">Solutions</h3>
-          <p class="mb-0 text-light">From Marketing Website to custom AI Content Applications</p>
-        </a>
-      </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
+      <a href="/product_tour/" class="security-card h-full rounded-2xl p-6 xxl:p-12 text-center no-underline block relative overflow-hidden">
+        <div class="inline-flex items-center justify-center bg-white icon-tile mb-4">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Features</h3>
+        <p class="m-0 text-gray-300">We have you and your team covered with features marketing teams need</p>
+      </a>
 
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6">
-        <a href="/customers/" class="security-card h-100 rounded-4 p-4 p-xxl-5 text-center text-decoration-none d-block position-relative overflow-hidden">
-          <div class="d-inline-flex align-items-center justify-content-center icon-tile bg-white mb-4">
-            <i class="bi bi-building fs-2 text-primary"></i>
-          </div>
-          <h3 class="h3 fw-semibold mb-3 text-white">Customers</h3>
-          <p class="mb-0 text-light">We Serve Multi-Faceted Large Organizations</p>
-        </a>
-      </div>
+      <a href="/solutions/" class="security-card h-full rounded-2xl p-6 xxl:p-12 text-center no-underline block relative overflow-hidden">
+        <div class="inline-flex items-center justify-center bg-white icon-tile mb-4">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19.439 7.85c-.049.322.059.648.289.878l1.568 1.568c.47.47.62 1.137.42 1.766l-.41 1.235a4.005 4.005 0 0 1-2.422 2.42l-1.235.41c-.628.2-1.297.052-1.766-.42L14.314 14.14c-.23-.23-.556-.337-.878-.289-.317.06-.604.142-.878.246a1.998 1.998 0 0 0-1.196 1.196c-.104.274-.187.561-.246.878-.048.322-.337.604-.658.658a3.997 3.997 0 0 1-1.766-.42l-1.235-.41a4.005 4.005 0 0 1-2.42-2.422l-.41-1.235a3.997 3.997 0 0 1 .42-1.766l1.568-1.568c.23-.23.337-.556.289-.878a4.018 4.018 0 0 0-.246-.878 1.998 1.998 0 0 0-1.196-1.196 4.018 4.018 0 0 0-.878-.246c-.322-.048-.604-.337-.658-.658a3.997 3.997 0 0 1 .42-1.766l.41-1.235a4.005 4.005 0 0 1 2.422-2.42l1.235-.41a3.997 3.997 0 0 1 1.766.42l1.568 1.568c.23.23.556.337.878.289.317-.06.604-.142.878-.246a1.998 1.998 0 0 0 1.196-1.196c.104-.274.187-.561.246-.878.048-.322.337-.604.658-.658.628-.2 1.297-.052 1.766.42l.41 1.235c.2.628.05 1.297-.42 1.766l-1.568 1.568c-.23.23-.337.556-.289.878z"/></svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Solutions</h3>
+        <p class="m-0 text-gray-300">From Marketing Website to custom AI Content Applications</p>
+      </a>
+
+      <a href="/customers/" class="security-card h-full rounded-2xl p-6 xxl:p-12 text-center no-underline block relative overflow-hidden">
+        <div class="inline-flex items-center justify-center icon-tile bg-white mb-4">
+          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 6h6M9 10h6M9 14h6M9 18h2"/></svg>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Customers</h3>
+        <p class="m-0 text-gray-300">We Serve Multi-Faceted Large Organizations</p>
+      </a>
     </div>
   </div>
 </section>
-<!-- Achievements end -->
 
 {{blocks('/-/block/sales_personal_cta.html') }}
 
 <style>
-  /* Optional: subtle shadow like the reference */
-  .shadow-sm-sm { box-shadow: 0 .25rem .75rem rgba(0,0,0,.04); }
-  /* Optional: make the icon tile a fixed size on larger screens */
-  @media (min-width: 768px){
-    .bg-primary-subtle.p-4 { width: 96px; height: 96px; }
-  }
-  .security-card{ background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset; }
-  .security-card:hover{ background: rgba(255,255,255,0);}
-  .icon-tile{ width: 72px; height: 72px; border-radius: 16px; background: rgba(255, 255, 255, 0.1); color: var(--bs-primary); }
+  .security-card{ background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 0 0 1px rgba(255,255,255,0.02) inset; transition: background 0.2s ease; }
+  .security-card:hover{ background: rgba(255,255,255,0.06);}
+  .icon-tile{ width: 72px; height: 72px; border-radius: 16px; background: rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: center; }
   @media (min-width: 992px){ .icon-tile{ width: 80px; height: 80px; } }
+  .card-lift { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .card-lift:hover { transform: translateY(-4px); }
 </style>
 
-
 <script>
-
-  
-
-    // quote banner
-
-     const quotes = [
-            {
-                name: "Bill Gates",
-                quote: "Content is king.",
-                image: "https://pbs.twimg.com/profile_images/1879013694367252480/Gxa-Pspq_400x400.jpg"
-            },
-            {
-                name: "Seth Godin",
-                quote: "Marketing is no longer about the stuff that you make, but about the stories you tell.",
-                image: "https://brianondrako.com/wp-content/uploads/2020/10/Seth-Godin-web_headshot_template.jpg"
-            },
-            {
-                name: "Steve Jobs",
-                quote: "The most powerful person in the world is the storyteller. The storyteller sets the vision, values, and agenda of an entire generation that is to come.",
-                image: "https://www.hollywoodreporter.com/wp-content/uploads/2015/03/steve_jobs_the_man_in_the_machine_still.jpg?w=1440&h=810&crop=1"
-            },
-            {
-                name: "Jeff Bezos",
-                quote: "Your brand is what people say about you when you're not in the room.",
-                image: "https://static01.nyt.com/images/2024/11/06/multimedia/06jeff-bezos-ktmj/06jeff-bezos-ktmj-mediumSquareAt3X.jpg"
-            },
-            {
-                name: "Gary Vaynerchuk",
-                quote: "No matter what you do, your job is to tell a story.",
-                image: "https://s.hdnux.com/photos/01/23/60/14/21955385/4/ratio3x2_1920.jpg"
-            }
-        ];
-        
-         let currentIndex = 0;
-        const quoteContent = document.getElementById('quoteContent');
-        const personImage = document.getElementById('personImage');
-        const personName = document.getElementById('personName');
-        const quoteText = document.getElementById('quoteText');
-
-        function updateQuote(index) {
-            personName.innerText = quotes[index].name;
-            quoteText.innerText = quotes[index].quote;
-            personImage.src = quotes[index].image;
-        }
-
-        // Display the first quote immediately
-        updateQuote(currentIndex);
-
-        function rotateQuotes() {
-            const nextIndex = (currentIndex + 1) % quotes.length;
-            quoteContent.style.opacity = '0';
-            setTimeout(() => {
-                updateQuote(nextIndex);
-                quoteContent.style.opacity = '1';
-                currentIndex = nextIndex;
-            }, 800);
-        }
-
-        // Rotate quotes every 5 seconds
-        setInterval(rotateQuotes, 4000);
-
-
+  const quotes = [
+    { name: "Bill Gates", quote: "Content is king.", image: "https://pbs.twimg.com/profile_images/1879013694367252480/Gxa-Pspq_400x400.jpg" },
+    { name: "Seth Godin", quote: "Marketing is no longer about the stuff that you make, but about the stories you tell.", image: "https://brianondrako.com/wp-content/uploads/2020/10/Seth-Godin-web_headshot_template.jpg" },
+    { name: "Steve Jobs", quote: "The most powerful person in the world is the storyteller. The storyteller sets the vision, values, and agenda of an entire generation that is to come.", image: "https://www.hollywoodreporter.com/wp-content/uploads/2015/03/steve_jobs_the_man_in_the_machine_still.jpg?w=1440&h=810&crop=1" },
+    { name: "Jeff Bezos", quote: "Your brand is what people say about you when you're not in the room.", image: "https://static01.nyt.com/images/2024/11/06/multimedia/06jeff-bezos-ktmj/06jeff-bezos-ktmj-mediumSquareAt3X.jpg" },
+    { name: "Gary Vaynerchuk", quote: "No matter what you do, your job is to tell a story.", image: "https://s.hdnux.com/photos/01/23/60/14/21955385/4/ratio3x2_1920.jpg" }
+  ];
+  let currentIndex = 0;
+  const quoteContent = document.getElementById('quoteContent');
+  const personImage = document.getElementById('personImage');
+  const personName = document.getElementById('personName');
+  const quoteText = document.getElementById('quoteText');
+  function updateQuote(index) {
+    personName.innerText = quotes[index].name;
+    quoteText.innerText = quotes[index].quote;
+    personImage.src = quotes[index].image;
+  }
+  updateQuote(currentIndex);
+  function rotateQuotes() {
+    const nextIndex = (currentIndex + 1) % quotes.length;
+    quoteContent.style.opacity = '0';
+    setTimeout(() => {
+      updateQuote(nextIndex);
+      quoteContent.style.opacity = '1';
+      currentIndex = nextIndex;
+    }, 800);
+  }
+  setInterval(rotateQuotes, 4000);
 </script>
-
