@@ -1,6 +1,6 @@
 <main class="blog-index">
   <section class="blog-hero">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="blog-hero__content">
         <p class="blog-hero__eyebrow">Content.One Journal</p>
         <h1 class="blog-hero__title">Latest perspectives on content, AI, and delivery.</h1>
@@ -10,7 +10,7 @@
   </section>
 
   <section class="blog-grid-section">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="blog-grid">
         {{each articles as article}}
         <article class="blog-card">
