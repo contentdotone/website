@@ -1,38 +1,38 @@
 <div class="wysiwyg-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-wysiwyg text-white position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 text-white fw-bold mb-4">Visual tools for marketers, structure for developers—together in Content.One.</h1>
-          <p class="lead text-white-75 mb-4">Content.One’s authoring experience, Editor Suite, gives every team the freedom to create rich content while safeguarding structure, compliance, and omnichannel reuse.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Tour the editor</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore Content.One</a>
+  <section class="py-6 py-lg-7 bg-gradient-wysiwyg text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold text-white font-bold mb-4">Visual tools for marketers, structure for developers—together in Content.One.</h1>
+          <p class="text-lg text-white/75 mb-4">Content.One’s authoring experience, Editor Suite, gives every team the freedom to create rich content while safeguarding structure, compliance, and omnichannel reuse.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Tour the editor</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Content.One WYSIWYG editor" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Content.One WYSIWYG editor" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section> 
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-wysiwyg-subtle text-wysiwyg mb-3">Authoring for every workflow</span>
-          <h2 class="h1 fw-semibold mb-3">Rich text, Markdown, structured Blocks—work how you want.</h2>
-          <p class="text-grey mb-0">Launch campaigns, update pages, and manage headless content from one intuitive interface. Duo Mode lets writers toggle Editor Suite and Markdown; developers trust the underlying schema.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Authoring for every workflow</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Rich text, Markdown, structured Blocks—work how you want.</h2>
+          <p class="text-gray-600 mb-0">Launch campaigns, update pages, and manage headless content from one intuitive interface. Duo Mode lets writers toggle Editor Suite and Markdown; developers trust the underlying schema.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,28 +45,28 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-wysiwyg-subtle text-wysiwyg mb-3">Customer voices</span>
-          <h2 class="h1 fw-semibold mb-2">Marketers who move faster with Content.One</h2>
-          <p class="text-grey mb-0">Teams across industries rely on Content.One’s editor to keep content fresh and campaigns on schedule.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Customer voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Marketers who move faster with Content.One</h2>
+          <p class="text-gray-600 mb-0">Teams across industries rely on Content.One’s editor to keep content fresh and campaigns on schedule.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-wysiwyg btn-lg">See customer wins</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-wysiwyg text-base px-6 py-3">See customer wins</a>
       </div>
       {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
   <section class="py-6 bg-wysiwyg text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Ready to give your authors superpowers?</h2>
-          <p class="lead text-white-75 mb-4">Bring visual creation and structured governance together with Editor Suite inside Content.One.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-wysiwyg">Talk to our team</a>
-            <a href="/solutions/" class="btn btn-outline-light btn-lg">See all solutions</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to give your authors superpowers?</h2>
+          <p class="text-lg text-white/75 mb-4">Bring visual creation and structured governance together with Editor Suite inside Content.One.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-wysiwyg">Talk to our team</a>
+            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
           </div>
         </div>
       </div>
@@ -160,66 +160,66 @@
 </script>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-wysiwyg-subtle text-wysiwyg mb-3">Editor Suite + Content.One</span>
-          <h2 class="h1 fw-semibold mb-3">Everything marketers love about Editor Suite - supercharged with Content.One</h2>
-          <p class="text-grey fs-5 mb-0">Create rich articles, product updates, and influencer stories with Editor Suite’s familiar toolbar while tapping structured data, reusable Blocks, and omnichannel publishing.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Editor Suite + Content.One</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Everything marketers love about Editor Suite - supercharged with Content.One</h2>
+          <p class="text-gray-600 text-lg mb-0">Create rich articles, product updates, and influencer stories with Editor Suite’s familiar toolbar while tapping structured data, reusable Blocks, and omnichannel publishing.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">Rich Editor Suite toolbar</h3>
-              <p class="text-grey mb-0">Headings, tables, embeds, media manager, and brand-safe styles keep marketers productive.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">Rich Editor Suite toolbar</h3>
+              <p class="text-gray-600 mb-0">Headings, tables, embeds, media manager, and brand-safe styles keep marketers productive.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Markdown &amp; Duo Mode</h3>
-              <p class="text-grey mb-0">Toggle between visual editing, Markdown, or side-by-side views for technical writers and content ops teams.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Markdown &amp; Duo Mode</h3>
+              <p class="text-gray-600 mb-0">Toggle between visual editing, Markdown, or side-by-side views for technical writers and content ops teams.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Reusable Blocks &amp; components</h3>
-              <p class="text-grey mb-0">Insert pre-built CTAs, testimonial sliders, or custom design system Blocks directly into the editor.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Reusable Blocks &amp; components</h3>
+              <p class="text-gray-600 mb-0">Insert pre-built CTAs, testimonial sliders, or custom design system Blocks directly into the editor.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">Design system aware</h3>
-              <p class="text-grey mb-0">Keep every entry on-brand by binding tokens, spacing rules, and color palettes to Editor Suite controls.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">Design system aware</h3>
+              <p class="text-gray-600 mb-0">Keep every entry on-brand by binding tokens, spacing rules, and color palettes to Editor Suite controls.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">SEO &amp; metadata tabs</h3>
-              <p class="text-grey mb-0">Dedicated tabs for meta tags, OpenGraph, schema, and localization keep stories ready for search.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">SEO &amp; metadata tabs</h3>
+              <p class="text-gray-600 mb-0">Dedicated tabs for meta tags, OpenGraph, schema, and localization keep stories ready for search.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-wysiwyg text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Omnichannel preview</h3>
-              <p class="text-grey mb-0">Preview responsive layouts and headless renderings before publishing across web, mobile, and AI touchpoints.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Omnichannel preview</h3>
+              <p class="text-gray-600 mb-0">Preview responsive layouts and headless renderings before publishing across web, mobile, and AI touchpoints.</p>
             </div>
           </div>
         </div>
@@ -227,50 +227,50 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Empower teams without bottlenecks</h2>
-          <p class="text-grey mb-4">Editor Suite inside Content.One combines visual editing with structured governance. Drag-and-drop Freestyle pages, structured collections, and workflow approvals work as one.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Flexible editing modes</h3>
-                  <p class="text-grey small mb-0">Switch between Editor Suite, Markdown, or JSON views to match each contributor’s comfort level.</p>
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Empower teams without bottlenecks</h2>
+          <p class="text-gray-600 mb-4">Editor Suite inside Content.One combines visual editing with structured governance. Drag-and-drop Freestyle pages, structured collections, and workflow approvals work as one.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Flexible editing modes</h3>
+                  <p class="text-gray-600 text-sm mb-0">Switch between Editor Suite, Markdown, or JSON views to match each contributor’s comfort level.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Freestyle synergy</h3>
-                  <p class="text-grey small mb-0">Compose content in , then drop it into Freestyle layouts for a full no-code experience.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Freestyle synergy</h3>
+                  <p class="text-gray-600 text-sm mb-0">Compose content in , then drop it into Freestyle layouts for a full no-code experience.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Collaboration built-in</h3>
-                  <p class="text-grey small mb-0">Invite stakeholders to comment, review, or approve content before it goes live.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Collaboration built-in</h3>
+                  <p class="text-gray-600 text-sm mb-0">Invite stakeholders to comment, review, or approve content before it goes live.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Audit-ready</h3>
-                  <p class="text-grey small mb-0">Audit trails record every change—ideal for regulated industries and enterprise compliance.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Audit-ready</h3>
+                  <p class="text-gray-600 text-sm mb-0">Audit trails record every change—ideal for regulated industries and enterprise compliance.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---Edit-Content-Tab-with-DUO-Mode.jpg" alt="Authoring Duo Mode" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://hj5v68xn.media.zestyio.com/Content---Edit-Content-Tab-with-DUO-Mode.jpg" alt="Authoring Duo Mode" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -278,32 +278,32 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="SEO tab in Content.One" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="SEO tab in Content.One" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-wysiwyg-subtle text-wysiwyg mb-3">Scale with structure</span>
-          <h2 class="h1 fw-semibold mb-4">Consistent storytelling across every channel</h2>
-          <p class="text-grey fs-5 mb-4">Reusable templates, structured content models, and localization controls ensure everything authored in Editor Suite is ready for web, mobile, kiosks, and AI experiences.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-columns-gap text-wysiwyg fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Scale with structure</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Consistent storytelling across every channel</h2>
+          <p class="text-gray-600 text-lg mb-4">Reusable templates, structured content models, and localization controls ensure everything authored in Editor Suite is ready for web, mobile, kiosks, and AI experiences.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <i class="bi bi-columns-gap text-wysiwyg text-xl"></i>
               <span>Reusable Blocks accelerate landing page launches while maintaining visual consistency.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-boxes text-wysiwyg fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-boxes text-wysiwyg text-xl"></i>
               <span>Structured models feed headless experiences, voice assistants, and partner portals.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-translate text-wysiwyg fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-translate text-wysiwyg text-xl"></i>
               <span>Localization tabs streamline translating and approving content across regions.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-clipboard-data text-wysiwyg fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-clipboard-data text-wysiwyg text-xl"></i>
               <span>SEO, metadata, and accessibility fields travel with every entry for unified governance.</span>
             </li>
           </ul>
@@ -312,53 +312,53 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Author faster, publish smarter</h2>
-          <p class="lead text-white-75 mb-4">Editor Suite inside Content.One boosts marketer productivity while giving engineering teams confidence in structure and compliance.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-wysiwyg-count="50" data-wysiwyg-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Increase in marketer output</p>
+  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Author faster, publish smarter</h2>
+          <p class="text-lg text-white/75 mb-4">Editor Suite inside Content.One boosts marketer productivity while giving engineering teams confidence in structure and compliance.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="50" data-wysiwyg-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Increase in marketer output</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-wysiwyg-count="40" data-wysiwyg-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Reduction in dev support requests</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="40" data-wysiwyg-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Reduction in dev support requests</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-wysiwyg-count="99.99" data-wysiwyg-suffix="%" data-wysiwyg-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime for authoring operations</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="99.99" data-wysiwyg-suffix="%" data-wysiwyg-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime for authoring operations</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-wysiwyg-count="150" data-wysiwyg-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Integrations across analytics &amp; automation</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="150" data-wysiwyg-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics &amp; automation</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail screenshot" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail screenshot" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-wysiwyg-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-wysiwyg-dark" style="opacity:0.35;"></div>
   </section>

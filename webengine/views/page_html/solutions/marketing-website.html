@@ -1,38 +1,38 @@
 <div class="marketing-websites-page">
-  <section class="py-6 py-lg-7 bg-gradient-primary position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 text-white fw-bold mb-4">Marketing websites that launch fast, scale globally, and convert better.</h1>
-          <p class="lead text-secondary mb-4">Content.One gives modern marketing teams a composable, cloud-native platform to ship high-performing websites without waiting on engineering sprints.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Schedule a strategy call</a>
-            <a href="/customers/" class="btn btn-outline-light btn-lg">See customer wins</a>
+  <section class="py-6 py-lg-7 bg-gradient-primary relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold text-white font-bold mb-4">Marketing websites that launch fast, scale globally, and convert better.</h1>
+          <p class="text-lg text-gray-600 mb-4">Content.One gives modern marketing teams a composable, cloud-native platform to ship high-performing websites without waiting on engineering sprints.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Schedule a strategy call</a>
+            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See customer wins</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Marketing team collaborating" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Marketing team collaborating" class="w-full h-full object-cover">
           </div>
         </div>
       </div> 
     </div>
   </section> 
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-primary-subtle text-primary mb-3">Trusted by innovators</span>
-          <h2 class="h1 fw-semibold mb-3">Trusted by brands who move fast and scale big</h2>
-          <p class="text-grey mb-0">From global campaigns to complex multi-site ecosystems, Content.One powers marketing websites for some of the most recognizable brands in gaming, fintech, healthcare, and beyond.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal mb-3">Trusted by innovators</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Trusted by brands who move fast and scale big</h2>
+          <p class="text-gray-600 mb-0">From global campaigns to complex multi-site ecosystems, Content.One powers marketing websites for some of the most recognizable brands in gaming, fintech, healthcare, and beyond.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,74 +45,74 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-primary-subtle text-primary mb-3">Fast, Flexible Websites</span>
-          <h2 class="h1 fw-semibold mb-3">Fast, flexible websites for modern teams on modern software</h2>
-          <p class="text-grey fs-5 mb-0">Content.One delivers an intuitive, marketer-led experience while giving developers the extensibility they need. Build visually, reuse assets, preview instantly, and analyze performance without leaving the platform.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal mb-3">Fast, Flexible Websites</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Fast, flexible websites for modern teams on modern software</h2>
+          <p class="text-gray-600 text-lg mb-0">Content.One delivers an intuitive, marketer-led experience while giving developers the extensibility they need. Build visually, reuse assets, preview instantly, and analyze performance without leaving the platform.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/Freestyle.png" alt="Content.One Drag and Drop builder" />
-            <div class="card-body text-start text-md-start">
+            <div class="p-6 text-left md:text-left">
             
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">No-code drag-and-drop page builder</h3>
-              <p class="text-grey mb-0">Create professional pages in minutes. Launch campaigns, product updates, and microsites with an accessible visual editor—no developer ticket required.</p>
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">No-code drag-and-drop page builder</h3>
+              <p class="text-gray-600 mb-0">Create professional pages in minutes. Launch campaigns, product updates, and microsites with an accessible visual editor—no developer ticket required.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" alt="Content.One Drag and Drop builder" />
             
-            <div class="card-body">
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Reusable Blocks &amp; global styles</h3>
-              <p class="text-grey mb-0">Design once, use everywhere. Govern typography, colors, and layout through global style controls while letting teams assemble on-brand pages quickly.</p>
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Reusable Blocks &amp; global styles</h3>
+              <p class="text-gray-600 mb-0">Design once, use everywhere. Govern typography, colors, and layout through global style controls while letting teams assemble on-brand pages quickly.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/ContentManagement.png" alt="Content.One Marketing Friendly" />
-            <div class="card-body">
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Developer-ready, marketer-friendly</h3>
-              <p class="text-grey mb-0">Developers craft custom widgets, data integrations, or interactive modules that marketers can drag-and-drop, ensuring brand consistency with creative freedom.</p>
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Developer-ready, marketer-friendly</h3>
+              <p class="text-gray-600 mb-0">Developers craft custom widgets, data integrations, or interactive modules that marketers can drag-and-drop, ensuring brand consistency with creative freedom.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/Media.png" alt="Content.One Drag and Drop builder" />
-            <div class="card-body">
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Built-in SEO &amp; real-time previews</h3>
-              <p class="text-grey mb-0">Optimize titles, meta descriptions, schema, and keywords without leaving the page builder. Preview changes live before publishing globally.</p>
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Built-in SEO &amp; real-time previews</h3>
+              <p class="text-gray-600 mb-0">Optimize titles, meta descriptions, schema, and keywords without leaving the page builder. Preview changes live before publishing globally.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.png" alt="Collaboration and workflows" />
-            <div class="card-body">
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Collaboration &amp; version control</h3>
-              <p class="text-grey mb-0">Share drafts for feedback, manage approvals, and roll back instantly with built-in version history and activity logs.</p>
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Collaboration &amp; version control</h3>
+              <p class="text-gray-600 mb-0">Share drafts for feedback, manage approvals, and roll back instantly with built-in version history and activity logs.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100 overflow-hidden">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full overflow-hidden">
             <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png" alt="Content.One Drag and Drop builder" />
-            <div class="card-body">
-              <span class="badge bg-primary text-white rounded-pill px-3 py-2 mb-3">07</span>
-              <h3 class="h5 mb-2">Integrated testing &amp; analytics</h3>
-              <p class="text-grey mb-0">Experiment with A/B testing, personalize experiences, and connect first-party data or analytics tools to understand conversion impact.</p>
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2 mb-3">07</span>
+              <h3 class="text-lg font-semibold mb-2">Integrated testing &amp; analytics</h3>
+              <p class="text-gray-600 mb-0">Experiment with A/B testing, personalize experiences, and connect first-party data or analytics tools to understand conversion impact.</p>
             </div>
           </div>
         </div>
@@ -121,207 +121,102 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <span class="badge bg-primary-subtle text-primary mb-3">Website Experience</span>
-          <h2 class="display-6 fw-semibold mb-3">Launch high-performing, beautiful websites—fast, flexible, no code required.</h2>
-          <p class="text-grey fs-5 mb-4">Your website is your brand’s front door and your most powerful marketing channel. Content.One empowers teams with an intuitive drag-and-drop experience backed by enterprise-grade governance, so you can design, iterate, and scale without waiting on developers.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-mouse text-primary fs-4"></i>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal mb-3">Website Experience</span>
+          <h2 class="text-2xl font-bold font-semibold mb-3">Launch high-performing, beautiful websites—fast, flexible, no code required.</h2>
+          <p class="text-gray-600 text-lg mb-4">Your website is your brand’s front door and your most powerful marketing channel. Content.One empowers teams with an intuitive drag-and-drop experience backed by enterprise-grade governance, so you can design, iterate, and scale without waiting on developers.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <i class="bi bi-mouse text-royal text-xl"></i>
               <span>Build landing pages, microsites, and campaigns visually with reusable Blocks and global style controls.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-cpu text-primary fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-cpu text-royal text-xl"></i>
               <span>Blend marketer-friendly editing with developer-ready components to deliver bespoke experiences at scale.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-phone text-primary fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-phone text-royal text-xl"></i>
               <span>Ship responsive, SEO-optimized pages that look flawless on every device—without extra plugins or maintenance.</span>
             </li>
           </ul>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Designing a marketing website" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Designing a marketing website" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-5 bg-light border-bottom">
-    <div class="container">
-      <div class="row g-4 align-items-start">
-        <div class="col-lg-5">
-          <h2 class="h1 fw-semibold mb-4">Why teams choose Content.One for marketing websites</h2>
-          <p class="text-grey mb-4">Content.One combines structured content, visual authoring, and automated delivery so marketers can build, test, and deploy campaigns in record time. No plugins, no maintenance headaches, just a scalable DXP built for growth.</p>
-          <div class="d-flex gap-3">
-            <div class="badge bg-primary text-white rounded-pill px-3 py-2">99.9%+ uptime</div>
-            <div class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">SEO automation</div>
-            <div class="badge bg-primary text-white rounded-pill px-3 py-2">Global CDNs</div>
+  <section class="py-5 bg-gray-100 border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-start">
+        <div class="lg:col-span-5">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Why teams choose Content.One for marketing websites</h2>
+          <p class="text-gray-600 mb-4">Content.One combines structured content, visual authoring, and automated delivery so marketers can build, test, and deploy campaigns in record time. No plugins, no maintenance headaches, just a scalable DXP built for growth.</p>
+          <div class="flex gap-3">
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2">99.9%+ uptime</div>
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal rounded-full px-3 py-2">SEO automation</div>
+            <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal text-white rounded-full px-3 py-2">Global CDNs</div>
           </div>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="icon-square bg-primary text-white rounded-3 p-3">
-                      <i class="bi bi-lightning-charge-fill fs-4"></i>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="icon-square bg-royal text-white rounded-lg p-3">
+                      <i class="bi bi-lightning-charge-fill text-xl"></i>
                     </div>
-                    <h3 class="h5 mb-0">Launch in weeks</h3>
+                    <h3 class="text-lg font-semibold mb-0">Launch in weeks</h3>
                   </div>
-                  <p class="text-grey mb-0">Spin up net-new sites or landing pages without custom builds. Content architects model once and reuse across markets.</p>
+                  <p class="text-gray-600 mb-0">Spin up net-new sites or landing pages without custom builds. Content architects model once and reuse across markets.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="icon-square bg-primary text-white rounded-3 p-3">
-                      <i class="bi bi-diagram-3-fill fs-4"></i>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="icon-square bg-royal text-white rounded-lg p-3">
+                      <i class="bi bi-diagram-3-fill text-xl"></i>
                     </div>
-                    <h3 class="h5 mb-0">Composable by design</h3>
+                    <h3 class="text-lg font-semibold mb-0">Composable by design</h3>
                   </div>
-                  <p class="text-grey mb-0">Structured content models power web, microsites, campaigns, partner portals, and headless experiences from a single source.</p>
+                  <p class="text-gray-600 mb-0">Structured content models power web, microsites, campaigns, partner portals, and headless experiences from a single source.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="icon-square bg-primary text-white rounded-3 p-3">
-                      <i class="bi bi-people-fill fs-4"></i>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="icon-square bg-royal text-white rounded-lg p-3">
+                      <i class="bi bi-people-fill text-xl"></i>
                     </div>
-                    <h3 class="h5 mb-0">Built for collaboration</h3>
+                    <h3 class="text-lg font-semibold mb-0">Built for collaboration</h3>
                   </div>
-                  <p class="text-grey mb-0">Content workflows, commenting, and approvals keep marketers, designers, and developers aligned in real time.</p>
+                  <p class="text-gray-600 mb-0">Content workflows, commenting, and approvals keep marketers, designers, and developers aligned in real time.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <div class="d-flex align-items-center gap-3 mb-3">
-                    <div class="icon-square bg-primary text-white rounded-3 p-3">
-                      <i class="bi bi-shield-lock-fill fs-4"></i>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <div class="flex items-center gap-3 mb-3">
+                    <div class="icon-square bg-royal text-white rounded-lg p-3">
+                      <i class="bi bi-shield-lock-fill text-xl"></i>
                     </div>
-                    <h3 class="h5 mb-0">Enterprise-grade security</h3>
+                    <h3 class="text-lg font-semibold mb-0">Enterprise-grade security</h3>
                   </div>
-                  <p class="text-grey mb-0">SOC2 compliant, SSO ready, and backed by managed hosting so IT never worries about patches or downtime.</p>
+                  <p class="text-gray-600 mb-0">SOC2 compliant, SSO ready, and backed by managed hosting so IT never worries about patches or downtime.</p>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-5">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Team reviewing marketing workflows" class="w-100 h-100 object-fit-cover">
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <span class="badge bg-primary-subtle text-primary mb-3">Marketing Workflows</span>
-          <h2 class="h1 fw-semibold mb-4">Deliver content velocity with guided workflows</h2>
-          <p class="text-grey fs-5 mb-4">Model content types, define workflows, and let teams create without friction. With Content.One, approvals, staging, and deployment are baked into every save so marketing can ship campaigns confidently.</p>
-          <div class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-              <div class="d-flex gap-3">
-                <div class="text-primary fs-3 lh-1">1</div>
-                <div>
-                  <h3 class="h5 mb-1">Plan & model</h3>
-                  <p class="text-grey mb-0 small">Design modular blocks that match your brand system. Developers build once; marketers reuse forever.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="d-flex gap-3">
-                <div class="text-primary fs-3 lh-1">2</div>
-                <div>
-                  <h3 class="h5 mb-1">Create & collaborate</h3>
-                  <p class="text-grey mb-0 small">Inline editing, media libraries, and Live Preview keep teams aligned across markets and languages.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="d-flex gap-3">
-                <div class="text-primary fs-3 lh-1">3</div>
-                <div>
-                  <h3 class="h5 mb-1">Approve & stage</h3>
-                  <p class="text-grey mb-0 small">Route updates through tiered approvals with audit trails and version history on every component.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="d-flex gap-3">
-                <div class="text-primary fs-3 lh-1">4</div>
-                <div>
-                  <h3 class="h5 mb-1">Launch & optimize</h3>
-                  <p class="text-grey mb-0 small">Deploy globally in seconds with edge caching, experiment with A/B content, and roll back instantly if needed.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">SEO and performance engineered in, not bolted on</h2>
-          <p class="text-grey mb-4">From automated schema to responsive images and lightning-fast rendering, Content.One ensures every marketing page loads quickly and ranks higher—without chasing plugins or manual fixes.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Automatic SEO scaffolding</h3>
-                  <p class="text-grey small mb-0">Meta tags, OpenGraph, structured data, XML sitemaps, and hreflang all managed centrally.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Blazing-fast delivery</h3>
-                  <p class="text-grey small mb-0">Global CDN, on-the-fly image optimization, and progressive rendering maintain Core Web Vitals excellence.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Accessibility by default</h3>
-                  <p class="text-grey small mb-0">Schema tagging and component-level controls make inclusive experiences a standard, not an option.</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Actionable analytics</h3>
-                  <p class="text-grey small mb-0">Integrate GA4, Looker, Segment, or your platform of choice to connect content to conversions.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="SEO analytics dashboard" class="w-100 h-100 object-fit-cover">
           </div>
         </div>
       </div>
@@ -329,58 +224,163 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-5">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Team reviewing marketing workflows" class="w-full h-full object-cover">
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal mb-3">Marketing Workflows</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Deliver content velocity with guided workflows</h2>
+          <p class="text-gray-600 text-lg mb-4">Model content types, define workflows, and let teams create without friction. With Content.One, approvals, staging, and deployment are baked into every save so marketing can ship campaigns confidently.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="flex-1">
+              <div class="flex gap-3">
+                <div class="text-royal text-2xl leading-none">1</div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Plan & model</h3>
+                  <p class="text-gray-600 mb-0 text-sm">Design modular blocks that match your brand system. Developers build once; marketers reuse forever.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="flex gap-3">
+                <div class="text-royal text-2xl leading-none">2</div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Create & collaborate</h3>
+                  <p class="text-gray-600 mb-0 text-sm">Inline editing, media libraries, and Live Preview keep teams aligned across markets and languages.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="flex gap-3">
+                <div class="text-royal text-2xl leading-none">3</div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Approve & stage</h3>
+                  <p class="text-gray-600 mb-0 text-sm">Route updates through tiered approvals with audit trails and version history on every component.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="flex gap-3">
+                <div class="text-royal text-2xl leading-none">4</div>
+                <div>
+                  <h3 class="text-lg font-semibold mb-1">Launch & optimize</h3>
+                  <p class="text-gray-600 mb-0 text-sm">Deploy globally in seconds with edge caching, experiment with A/B content, and roll back instantly if needed.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">SEO and performance engineered in, not bolted on</h2>
+          <p class="text-gray-600 mb-4">From automated schema to responsive images and lightning-fast rendering, Content.One ensures every marketing page loads quickly and ranks higher—without chasing plugins or manual fixes.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Automatic SEO scaffolding</h3>
+                  <p class="text-gray-600 text-sm mb-0">Meta tags, OpenGraph, structured data, XML sitemaps, and hreflang all managed centrally.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Blazing-fast delivery</h3>
+                  <p class="text-gray-600 text-sm mb-0">Global CDN, on-the-fly image optimization, and progressive rendering maintain Core Web Vitals excellence.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Accessibility by default</h3>
+                  <p class="text-gray-600 text-sm mb-0">Schema tagging and component-level controls make inclusive experiences a standard, not an option.</p>
+                </div>
+              </div>
+            </div>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Actionable analytics</h3>
+                  <p class="text-gray-600 text-sm mb-0">Integrate GA4, Looker, Segment, or your platform of choice to connect content to conversions.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1200&q=80" alt="SEO analytics dashboard" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-primary-subtle text-primary mb-3">Customer Voices</span>
-          <h2 class="h1 fw-semibold mb-2">Loved by content leaders across industries</h2>
-          <p class="text-grey mb-0">Hear how fast-moving teams deliver marketing sites, blogs, and digital experiences with Content.One.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal mb-3">Customer Voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Loved by content leaders across industries</h2>
+          <p class="text-gray-600 mb-0">Hear how fast-moving teams deliver marketing sites, blogs, and digital experiences with Content.One.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-primary btn-lg">Explore more case studies</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-royal text-royal hover:bg-royal/10 text-base px-6 py-3">Explore more case studies</a>
       </div>
-      <div class="row row-cols-1 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/joseph-attanasio-jackpocket.jpeg" alt="Joseph Attanasio" class="rounded-circle shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/joseph-attanasio-jackpocket.jpeg" alt="Joseph Attanasio" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Joseph Attanasio</p>
-                  <span class="text-muted small">Lead Product Manager, Jackpocket</span>
+                  <p class="text-gray-600 font-semibold mb-0">Joseph Attanasio</p>
+                  <span class="text-gray-500 text-sm">Lead Product Manager, Jackpocket</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“Our headless integration powered by Zesty has given marketing the tools to create and release customer-facing websites swiftly.”</p>
-              <div class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">Jackpocket by DraftKings</div>
+              <p class="text-lg text-gray-600 mb-4">“Our headless integration powered by Zesty has given marketing the tools to create and release customer-facing websites swiftly.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal rounded-full px-3 py-2">Jackpocket by DraftKings</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png" alt="Singlife digital experience" class="rounded-3 shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png" alt="Singlife digital experience" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Brian Nilayan</p>
-                  <span class="text-muted small">Head of Business Development, Rebar Solutions</span>
+                  <p class="text-gray-600 font-semibold mb-0">Brian Nilayan</p>
+                  <span class="text-gray-500 text-sm">Head of Business Development, Rebar Solutions</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“The learning curve was surprisingly easy… we met our deadlines early and had a seamless launch.”</p>
-              <div class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">Singlife Insurance</div>
+              <p class="text-lg text-gray-600 mb-4">“The learning curve was surprisingly easy… we met our deadlines early and had a seamless launch.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal rounded-full px-3 py-2">Singlife Insurance</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/pia-aliperti-director-of-content-jackpocket.webp" alt="Pia Aliperti" class="rounded-circle shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/pia-aliperti-director-of-content-jackpocket.webp" alt="Pia Aliperti" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Pia Aliperti</p>
-                  <span class="text-muted small">Director of Content, Jackpocket</span>
+                  <p class="text-gray-600 font-semibold mb-0">Pia Aliperti</p>
+                  <span class="text-gray-500 text-sm">Director of Content, Jackpocket</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“I was worried about traffic drop-offs after our CMS migration, and we didn’t see any of that with Zesty. Traffic is 4× what we were doing before.”</p>
-              <div class="badge bg-primary-subtle text-primary rounded-pill px-3 py-2">Lottery &amp; Gaming</div>
+              <p class="text-lg text-gray-600 mb-4">“I was worried about traffic drop-offs after our CMS migration, and we didn’t see any of that with Zesty. Traffic is 4× what we were doing before.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-royal/10 text-royal rounded-full px-3 py-2">Lottery &amp; Gaming</div>
             </div>
           </div>
         </div>
@@ -388,66 +388,66 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark  position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Marketing websites that scale with every product launch</h2>
-          <p class="lead text-secondary mb-4">Whether you manage one brand or a global portfolio, Content.One powers the content supply chain so teams spend more time crafting stories and less time wrangling infrastructure.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-5 fw-semibold text-white mb-1" data-cornershop-count="350" data-cornershop-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Marketing sites launched through Content.One</p>
+  <section class="py-6 bg-gray-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Marketing websites that scale with every product launch</h2>
+          <p class="text-lg text-gray-600 mb-4">Whether you manage one brand or a global portfolio, Content.One powers the content supply chain so teams spend more time crafting stories and less time wrangling infrastructure.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-3xl font-bold font-semibold text-white mb-1" data-cornershop-count="350" data-cornershop-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Marketing sites launched through Content.One</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-5 fw-semibold text-white mb-1" data-cornershop-count="70" data-cornershop-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Average reduction in time-to-publish</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-3xl font-bold font-semibold text-white mb-1" data-cornershop-count="70" data-cornershop-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Average reduction in time-to-publish</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-5 fw-semibold text-white mb-1" data-cornershop-count="185" data-cornershop-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Traffic lift seen by customers like Singlife</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-3xl font-bold font-semibold text-white mb-1" data-cornershop-count="185" data-cornershop-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Traffic lift seen by customers like Singlife</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-5 fw-semibold text-white mb-1" data-cornershop-count="1" data-cornershop-suffix="-click">0</p>
-                  <p class="text-white-75 mb-0 small">Deployments to push content live</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-3xl font-bold font-semibold text-white mb-1" data-cornershop-count="1" data-cornershop-suffix="-click">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Deployments to push content live</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Global marketing expansion" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Global marketing expansion" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-dark" style="opacity:0.25;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-dark" style="opacity:0.25;"></div>
   </section>
 
-  <section class="py-6 bg-primary text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Ready to modernize your marketing website stack?</h2>
-          <p class="lead text-white-75 mb-4">See how Content.One helps teams capture more demand, build future-proof SEO foundations, and deliver experiences your customers love.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Talk to an expert</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore the platform</a>
+  <section class="py-6 bg-royal text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to modernize your marketing website stack?</h2>
+          <p class="text-lg text-white/75 mb-4">See how Content.One helps teams capture more demand, build future-proof SEO foundations, and deliver experiences your customers love.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Talk to an expert</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore the platform</a>
           </div>
         </div>
       </div>

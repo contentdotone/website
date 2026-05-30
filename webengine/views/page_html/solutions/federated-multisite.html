@@ -1,47 +1,47 @@
 <div class="federated-page">
-  <section class="py-6 py-lg-7 bg-gradient-federated position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 text-white fw-bold mb-4">One platform. Unlimited websites. Unified control.</h1>
-          <p class="lead text-white-75 mb-4">Content.One helps federated organizations launch, scale, and govern multisite ecosystems across brands, regions, and business units. Share content from a single domain, keep governance tight, and let local teams ship experiences fast.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Request a multisite consult</a>
-            <a href="/customers/" class="btn btn-outline-light btn-lg">See federated success stories</a>
+  <section class="py-6 py-lg-7 bg-gradient-federated relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold text-white font-bold mb-4">One platform. Unlimited websites. Unified control.</h1>
+          <p class="text-lg text-white/75 mb-4">Content.One helps federated organizations launch, scale, and govern multisite ecosystems across brands, regions, and business units. Share content from a single domain, keep governance tight, and let local teams ship experiences fast.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Request a multisite consult</a>
+            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See federated success stories</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/NY-CS875_BELL_P_20131212181402.jpg" alt="Unified web teams collaborating" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://hj5v68xn.media.zestyio.com/NY-CS875_BELL_P_20131212181402.jpg" alt="Unified web teams collaborating" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-federated-subtle text-federated mb-3">Federated web operations</span>
-          <h2 class="h1 fw-semibold mb-3">Global oversight, local freedom—on a single domain.</h2>
-          <p class="text-grey mb-0">Multisite leaders—from nonprofits and franchises to enterprise networks—rely on Content.One to centralize governance while empowering local authors. Share content, data, and design systems across hundreds of sites without compromising agility.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated mb-3">Federated web operations</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Global oversight, local freedom—on a single domain.</h2>
+          <p class="text-gray-600 mb-0">Multisite leaders—from nonprofits and franchises to enterprise networks—rely on Content.One to centralize governance while empowering local authors. Share content, data, and design systems across hundreds of sites without compromising agility.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name like '%tsa%' limit 6 sort by rand() }}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
             </div>
             {{/each}}
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%tsa%' limit 3 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -54,66 +54,66 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-federated-subtle text-federated mb-3">Enterprise-ready multisite</span>
-          <h2 class="h1 fw-semibold mb-3">Launch, govern, and reuse content across every brand</h2>
-          <p class="text-grey fs-5 mb-0">Model once, deploy everywhere. Content.One federates assets, templates, and workflows so headquarters can set standards while local teams ship relevant content on demand.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated mb-3">Enterprise-ready multisite</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Launch, govern, and reuse content across every brand</h2>
+          <p class="text-gray-600 text-lg mb-0">Model once, deploy everywhere. Content.One federates assets, templates, and workflows so headquarters can set standards while local teams ship relevant content on demand.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">Launch in minutes</h3>
-              <p class="text-grey mb-0">Spin up microsites, campaigns, or new subsidiary sites using reusable templates, content models, and shared design systems.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">Launch in minutes</h3>
+              <p class="text-gray-600 mb-0">Spin up microsites, campaigns, or new subsidiary sites using reusable templates, content models, and shared design systems.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Global + local governance</h3>
-              <p class="text-grey mb-0">Local teams manage their content with guardrails for brand, compliance, and accessibility—ensuring consistent experiences everywhere.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Global + local governance</h3>
+              <p class="text-gray-600 mb-0">Local teams manage their content with guardrails for brand, compliance, and accessibility—ensuring consistent experiences everywhere.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Role-based access</h3>
-              <p class="text-grey mb-0">Manage permissions across HQ, regions, and franchisees with SSO, approval workflows, and activity logs purpose-built for multisite teams.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Role-based access</h3>
+              <p class="text-gray-600 mb-0">Manage permissions across HQ, regions, and franchisees with SSO, approval workflows, and activity logs purpose-built for multisite teams.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">Shared content hub</h3>
-              <p class="text-grey mb-0">Publish content once and syndicate to every regional site. Manage menus, campaigns, and product data from a central domain.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">Shared content hub</h3>
+              <p class="text-gray-600 mb-0">Publish content once and syndicate to every regional site. Manage menus, campaigns, and product data from a central domain.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Mobile content app</h3>
-              <p class="text-grey mb-0">Give field teams a mobile-first authoring experience so they can publish updates, photos, and events without learning enterprise software.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Mobile content app</h3>
+              <p class="text-gray-600 mb-0">Give field teams a mobile-first authoring experience so they can publish updates, photos, and events without learning enterprise software.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-federated text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Scale without limits</h3>
-              <p class="text-grey mb-0">Whether managing ten sites or thousands, Content.One’s WebEngine and managed hosting keep your portfolio performant, secure, and compliant.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Scale without limits</h3>
+              <p class="text-gray-600 mb-0">Whether managing ten sites or thousands, Content.One’s WebEngine and managed hosting keep your portfolio performant, secure, and compliant.</p>
             </div>
           </div>
         </div>
@@ -121,50 +121,50 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Share once, reuse everywhere</h2>
-          <p class="text-grey mb-4">Federate around a primary domain to centralize assets, stories, and structured data. HQ publishes evergreen campaigns, product catalogs, and compliance updates, while local teams adapt and distribute without reinventing the wheel.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Central content pools</h3>
-                  <p class="text-grey small mb-0">Curate core messaging, fundraising stories, or product collections for automatic syndication to every site in the network.</p>
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Share once, reuse everywhere</h2>
+          <p class="text-gray-600 mb-4">Federate around a primary domain to centralize assets, stories, and structured data. HQ publishes evergreen campaigns, product catalogs, and compliance updates, while local teams adapt and distribute without reinventing the wheel.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Central content pools</h3>
+                  <p class="text-gray-600 text-sm mb-0">Curate core messaging, fundraising stories, or product collections for automatic syndication to every site in the network.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Localization controls</h3>
-                  <p class="text-grey small mb-0">Translate, localize, or override content while preserving corporate-approved components and data.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Localization controls</h3>
+                  <p class="text-gray-600 text-sm mb-0">Translate, localize, or override content while preserving corporate-approved components and data.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">API + MCP distribution</h3>
-                  <p class="text-grey small mb-0">Extend central content to apps, partner portals, or AI copilots using APIs and MCP servers for real-time syndication.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">API + MCP distribution</h3>
+                  <p class="text-gray-600 text-sm mb-0">Extend central content to apps, partner portals, or AI copilots using APIs and MCP servers for real-time syndication.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Compliance guardrails</h3>
-                  <p class="text-grey small mb-0">Automated review cycles, expiry notifications, and audit trails ensure regulated content stays accurate everywhere.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Compliance guardrails</h3>
+                  <p class="text-gray-600 text-sm mb-0">Automated review cycles, expiry notifications, and audit trails ensure regulated content stays accurate everywhere.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Shared content management" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Shared content management" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -172,32 +172,32 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="Mobile authoring experience" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="Mobile authoring experience" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-federated-subtle text-federated mb-3">Mobile-first authoring</span>
-          <h2 class="h1 fw-semibold mb-4">Mobile content app built for local creators</h2>
-          <p class="text-grey fs-5 mb-4">Give field teams instant access to Content.One via a mobile application purpose-built for federated networks. Publish stories, update hours, or post urgent alerts in seconds—no training on enterprise CMS required.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-phone text-federated fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated mb-3">Mobile-first authoring</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Mobile content app built for local creators</h2>
+          <p class="text-gray-600 text-lg mb-4">Give field teams instant access to Content.One via a mobile application purpose-built for federated networks. Publish stories, update hours, or post urgent alerts in seconds—no training on enterprise CMS required.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <i class="bi bi-phone text-federated text-xl"></i>
               <span>Capture photos, testimonials, and event updates from any location and sync automatically with web, app, and social channels.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-broadcast-pin text-federated fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-broadcast-pin text-federated text-xl"></i>
               <span>Push HQ-approved content to local editors, who can localize and publish within minutes.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-chat-check text-federated fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-chat-check text-federated text-xl"></i>
               <span>Support in-app approvals and notifications so managers review and release content on the go.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-people text-federated fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-people text-federated text-xl"></i>
               <span>Equip volunteers or franchise operators with guided authoring—no login to the full enterprise UI required.</span>
             </li>
           </ul>
@@ -206,110 +206,110 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Scale multisite operations without slowing down</h2>
-          <p class="lead text-white-75 mb-4">Content.One delivers managed infrastructure, structured workflows, and shared design systems so you can grow your web portfolio with confidence.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-federated-count="3000" data-federated-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Locations federated on Content.One</p>
+  <section class="py-6 bg-gray-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Scale multisite operations without slowing down</h2>
+          <p class="text-lg text-white/75 mb-4">Content.One delivers managed infrastructure, structured workflows, and shared design systems so you can grow your web portfolio with confidence.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-federated-count="3000" data-federated-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Locations federated on Content.One</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-federated-count="115" data-federated-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Increase in service clicks after unifying domains</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-federated-count="115" data-federated-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Increase in service clicks after unifying domains</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-federated-count="50" data-federated-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Traffic growth reported by TSA</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-federated-count="50" data-federated-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Traffic growth reported by TSA</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-federated-count="99.99" data-federated-suffix="%" data-federated-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime backed by Content.One WebEngine</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-federated-count="99.99" data-federated-suffix="%" data-federated-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime backed by Content.One WebEngine</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Federated web infrastructure" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Federated web infrastructure" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-federated-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-federated-dark" style="opacity:0.35;"></div>
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-federated-subtle text-federated mb-3">Customer voices</span>
-          <h2 class="h1 fw-semibold mb-2">Federated teams thriving on Content.One</h2>
-          <p class="text-grey mb-0">Hear how The Salvation Army and other multisite leaders modernized governance, accelerated launches, and empowered local storytellers.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated mb-3">Customer voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Federated teams thriving on Content.One</h2>
+          <p class="text-gray-600 mb-0">Hear how The Salvation Army and other multisite leaders modernized governance, accelerated launches, and empowered local storytellers.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-federated btn-lg">Explore more stories</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-federated text-base px-6 py-3">Explore more stories</a>
       </div>
-      <div class="row row-cols-1 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="rounded-circle shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Andrew Dobney</p>
-                  <span class="text-muted small">Director of Digital Strategy, The Salvation Army</span>
+                  <p class="text-gray-600 font-semibold mb-0">Andrew Dobney</p>
+                  <span class="text-gray-500 text-sm">Director of Digital Strategy, The Salvation Army</span>
                 </div> 
               </div>
-              <p class="fs-5 text-grey mb-4">“Load times improved dramatically, and we saw a 50% traffic increase with double the location-search activity since launch.”</p>
-              <div class="badge bg-federated-subtle text-federated rounded-pill px-3 py-2">National nonprofit</div>
+              <p class="text-lg text-gray-600 mb-4">“Load times improved dramatically, and we saw a 50% traffic increase with double the location-search activity since launch.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated rounded-full px-3 py-2">National nonprofit</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="rounded-circle shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Jon Aren</p>
-                  <span class="text-muted small">National Web Manager, The Salvation Army</span>
+                  <p class="text-gray-600 font-semibold mb-0">Jon Aren</p>
+                  <span class="text-gray-500 text-sm">National Web Manager, The Salvation Army</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“We didn’t have to build software ourselves—Content.One gave us shared goals, standards, and continuous support.”</p>
-              <div class="badge bg-federated-subtle text-federated rounded-pill px-3 py-2">Federated governance</div>
+              <p class="text-lg text-gray-600 mb-4">“We didn’t have to build software ourselves—Content.One gave us shared goals, standards, and continuous support.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated rounded-full px-3 py-2">Federated governance</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/taylor.jpg" alt="PetDesk hero" class="rounded-3 shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/taylor.jpg" alt="PetDesk hero" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">PetDesk</p>
-                  <span class="text-muted small">CEO</span>
+                  <p class="text-gray-600 font-semibold mb-0">PetDesk</p>
+                  <span class="text-gray-500 text-sm">CEO</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“Our multisite framework lets us grow clinics without adding headcount—shared templates and content pools make local launches effortless.”</p>
-              <div class="badge bg-federated-subtle text-federated rounded-pill px-3 py-2">Vetinarian network</div>
+              <p class="text-lg text-gray-600 mb-4">“Our multisite framework lets us grow clinics without adding headcount—shared templates and content pools make local launches effortless.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-federated-subtle text-federated rounded-full px-3 py-2">Vetinarian network</div>
             </div>
           </div>
         </div>
@@ -318,14 +318,14 @@
   </section>
 
   <section class="py-6 bg-federated">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 text-white fw-semibold mb-3">Ready to unify your multisite portfolio?</h2>
-          <p class="lead text-white-75 mb-4">Centralize governance, empower local teams, and launch new sites faster with Content.One’s federated multisite platform.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-federated">Talk to our team</a>
-            <a href="/solutions/" class="btn btn-outline-light btn-lg">See all solutions</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-3">Ready to unify your multisite portfolio?</h2>
+          <p class="text-lg text-white/75 mb-4">Centralize governance, empower local teams, and launch new sites faster with Content.One’s federated multisite platform.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-federated">Talk to our team</a>
+            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
           </div>
         </div>
       </div>

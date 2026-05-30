@@ -1,38 +1,38 @@
 <div class="drag-drop-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-drag position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 fw-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
-          <p class="lead text-secondary mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">See Freestyle in action</a>
-            <a href="/customers/" class="btn btn-outline-light btn-lg">Explore customer stories</a>
+  <section class="py-6 py-lg-7 bg-gradient-drag relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold font-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
+          <p class="text-lg text-gray-600 mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See Freestyle in action</a>
+            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore customer stories</a>
           </div> 
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-drag-subtle text-drag mb-3">Trusted by fast-moving teams</span>
-          <h2 class="h1 fw-semibold mb-3">Build once, reuse everywhere.</h2>
-          <p class="text-grey mb-0">Freestyle turns components into reusable Blocks that marketers can drag, drop, and publish across any page. Pair your headless content models with design tokens or use Content.One’s templating—either way, brand consistency stays locked in.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Trusted by fast-moving teams</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Build once, reuse everywhere.</h2>
+          <p class="text-gray-600 mb-0">Freestyle turns components into reusable Blocks that marketers can drag, drop, and publish across any page. Pair your headless content models with design tokens or use Content.One’s templating—either way, brand consistency stays locked in.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,66 +45,66 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-drag-subtle text-drag mb-3">Freestyle capabilities</span>
-          <h2 class="h1 fw-semibold mb-3">Create stunning pages in seconds—no engineering ticket required</h2>
-          <p class="text-grey fs-5 mb-0">Drag &amp; drop curated Blocks, configure layouts, and publish instantly. Freestyle is purpose-built for growth teams who need speed without sacrificing governance.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Freestyle capabilities</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Create stunning pages in seconds—no engineering ticket required</h2>
+          <p class="text-gray-600 text-lg mb-0">Drag &amp; drop curated Blocks, configure layouts, and publish instantly. Freestyle is purpose-built for growth teams who need speed without sacrificing governance.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">Visual editing canvas</h3>
-              <p class="text-grey mb-0">Drag hero sections, galleries, forms, or CTA strips into place and fine-tune spacing, backgrounds, and copy in real time.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">Visual editing canvas</h3>
+              <p class="text-gray-600 mb-0">Drag hero sections, galleries, forms, or CTA strips into place and fine-tune spacing, backgrounds, and copy in real time.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Reusable Blocks</h3>
-              <p class="text-grey mb-0">Developers build Blocks using Content.One templating or headless component libraries. Marketers reuse them across any experience.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Reusable Blocks</h3>
+              <p class="text-gray-600 mb-0">Developers build Blocks using Content.One templating or headless component libraries. Marketers reuse them across any experience.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Layouts &amp; canvases</h3>
-              <p class="text-grey mb-0">Start from approved layouts or craft custom canvases for campaigns, microsites, and product launches.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Layouts &amp; canvases</h3>
+              <p class="text-gray-600 mb-0">Start from approved layouts or craft custom canvases for campaigns, microsites, and product launches.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">Collaboration-friendly</h3>
-              <p class="text-grey mb-0">Share pages for feedback without publishing. Commenting, version history, and audit trails keep teams aligned.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">Collaboration-friendly</h3>
+              <p class="text-gray-600 mb-0">Share pages for feedback without publishing. Commenting, version history, and audit trails keep teams aligned.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Works with headless or templated</h3>
-              <p class="text-grey mb-0">Use Freestyle with Content.One’s WebEngine templates or expose layouts via APIs for headless frontends.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Works with headless or templated</h3>
+              <p class="text-gray-600 mb-0">Use Freestyle with Content.One’s WebEngine templates or expose layouts via APIs for headless frontends.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-drag text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Design system friendly</h3>
-              <p class="text-grey mb-0">Hook Blocks into your tokens, Tailwind utilities, or CSS variables so every landing page stays on-brand.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Design system friendly</h3>
+              <p class="text-gray-600 mb-0">Hook Blocks into your tokens, Tailwind utilities, or CSS variables so every landing page stays on-brand.</p>
             </div>
           </div>
         </div>
@@ -112,50 +112,50 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">How digital teams ship faster with Freestyle</h2>
-          <p class="text-grey mb-4">Content.One gives marketers the control of a visual builder and developers the governance they need. Drag-and-drop pages are powered by the same structured content that drives your entire ecosystem.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Structured first</h3>
-                  <p class="text-grey small mb-0">Avoid one-off pages by pairing Freestyle layouts with structured content collections and automated listings.</p>
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">How digital teams ship faster with Freestyle</h2>
+          <p class="text-gray-600 mb-4">Content.One gives marketers the control of a visual builder and developers the governance they need. Drag-and-drop pages are powered by the same structured content that drives your entire ecosystem.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Structured first</h3>
+                  <p class="text-gray-600 text-sm mb-0">Avoid one-off pages by pairing Freestyle layouts with structured content collections and automated listings.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Developer-crafted Blocks</h3>
-                  <p class="text-grey small mb-0">Engineers design Blocks with HTML/Handlebars, React, or Vue frontends—Freestyle renders them in the visual interface.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Developer-crafted Blocks</h3>
+                  <p class="text-gray-600 text-sm mb-0">Engineers design Blocks with HTML/Handlebars, React, or Vue frontends—Freestyle renders them in the visual interface.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Instant previews</h3>
-                  <p class="text-grey small mb-0">See responsive previews for mobile, tablet, and desktop while you build. Publish or stage with one click.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Instant previews</h3>
+                  <p class="text-gray-600 text-sm mb-0">See responsive previews for mobile, tablet, and desktop while you build. Publish or stage with one click.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Audit &amp; approvals</h3>
-                  <p class="text-grey small mb-0">Audit logs and workflow approvals ensure every page is reviewed before it goes live.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Audit &amp; approvals</h3>
+                  <p class="text-gray-600 text-sm mb-0">Audit logs and workflow approvals ensure every page is reviewed before it goes live.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Freestyle.HJeXgrY85gl.png" alt="Content.One audit trail screenshot" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://hj5v68xn.media.zestyio.com/Freestyle.HJeXgrY85gl.png" alt="Content.One audit trail screenshot" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -163,32 +163,32 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Freestyle WYSIWYG editor" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Freestyle WYSIWYG editor" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-drag-subtle text-drag mb-3">Create together</span>
-          <h2 class="h1 fw-semibold mb-4">Collaboration, feedback, and publishing in one place</h2>
-          <p class="text-grey fs-5 mb-4">Share drafts, collect feedback, and push pages live without leaving Freestyle. Designers, copywriters, and stakeholders stay aligned.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-people text-drag fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Create together</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Collaboration, feedback, and publishing in one place</h2>
+          <p class="text-gray-600 text-lg mb-4">Share drafts, collect feedback, and push pages live without leaving Freestyle. Designers, copywriters, and stakeholders stay aligned.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <i class="bi bi-people text-drag text-xl"></i>
               <span>Invite stakeholders to comment or suggest updates directly on Blocks and sections.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-clipboard-check text-drag fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-clipboard-check text-drag text-xl"></i>
               <span>Route pages through approval workflows before they publish to production.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-cloud-arrow-up text-drag fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-cloud-arrow-up text-drag text-xl"></i>
               <span>Stage pages, run QA, and push live with one click—no releases or developer queues.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-arrow-repeat text-drag fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-arrow-repeat text-drag text-xl"></i>
               <span>A/B test variations and iterate quickly using reusable Blocks and content pulls.</span>
             </li>
           </ul>
@@ -197,130 +197,130 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Measure success across every campaign</h2>
-          <p class="text-grey mb-4">Connect Freestyle pages to analytics, personalization, and marketing automation platforms to prove impact.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Analytics-ready</h3>
-                  <p class="text-grey small mb-0">Embed GA4, HubSpot, Marketo, or Segment snippets at the Block or page level.</p>
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Measure success across every campaign</h2>
+          <p class="text-gray-600 mb-4">Connect Freestyle pages to analytics, personalization, and marketing automation platforms to prove impact.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Analytics-ready</h3>
+                  <p class="text-gray-600 text-sm mb-0">Embed GA4, HubSpot, Marketo, or Segment snippets at the Block or page level.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Performance insights</h3>
-                  <p class="text-grey small mb-0">Track conversions and engagement, then iterate on top-performing Blocks.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Performance insights</h3>
+                  <p class="text-gray-600 text-sm mb-0">Track conversions and engagement, then iterate on top-performing Blocks.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Content reuse metrics</h3>
-                  <p class="text-grey small mb-0">Understand where Blocks are used across channels to optimize design systems.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Content reuse metrics</h3>
+                  <p class="text-gray-600 text-sm mb-0">Understand where Blocks are used across channels to optimize design systems.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">SEO-friendly</h3>
-                  <p class="text-grey small mb-0">Meta tags, schema, and hreflang stay in sync even when marketers update layouts.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">SEO-friendly</h3>
+                  <p class="text-gray-600 text-sm mb-0">Meta tags, schema, and hreflang stay in sync even when marketers update layouts.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Analytics dashboard" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Analytics dashboard" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Why teams love Freestyle</h2>
-          <p class="lead text-white-75 mb-4">Marketers ship faster, developers focus on higher-value work, and leadership sees consistent results.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-drag-count="70" data-drag-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Faster page launches reported by customers</p>
+  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Why teams love Freestyle</h2>
+          <p class="text-lg text-white/75 mb-4">Marketers ship faster, developers focus on higher-value work, and leadership sees consistent results.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-drag-count="70" data-drag-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Faster page launches reported by customers</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-drag-count="50" data-drag-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Reduction in dev requests for marketing teams</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-drag-count="50" data-drag-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Reduction in dev requests for marketing teams</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-drag-count="99.99" data-drag-suffix="%" data-drag-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime delivering Freestyle-powered pages</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-drag-count="99.99" data-drag-suffix="%" data-drag-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime delivering Freestyle-powered pages</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-drag-count="200" data-drag-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Integrations across analytics, ABM, and personalization</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-drag-count="200" data-drag-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics, ABM, and personalization</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/Freestyle.HJeXgrY85gl.png" alt="Freestyle drag interface" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://hj5v68xn.media.zestyio.com/Freestyle.HJeXgrY85gl.png" alt="Freestyle drag interface" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-drag-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-drag-dark" style="opacity:0.35;"></div>
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-drag-subtle text-drag mb-3">Customer voices</span>
-          <h2 class="h1 fw-semibold mb-2">Digital teams thriving with Freestyle</h2>
-          <p class="text-grey mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Customer voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Digital teams thriving with Freestyle</h2>
+          <p class="text-gray-600 mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-drag btn-lg">Read customer wins</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-drag text-base px-6 py-3">Read customer wins</a>
       </div>
      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
   <section class="py-6 bg-drag text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Ready to design pages at the speed of your ideas?</h2>
-          <p class="lead text-white-75 mb-4">Give your team Freestyle—the drag &amp; drop page designer built into Content.One.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-drag">Talk to an expert</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore the platform</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to design pages at the speed of your ideas?</h2>
+          <p class="text-lg text-white/75 mb-4">Give your team Freestyle—the drag &amp; drop page designer built into Content.One.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-drag">Talk to an expert</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore the platform</a>
           </div>
         </div>
       </div>

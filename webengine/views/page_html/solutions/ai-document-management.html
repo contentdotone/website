@@ -1,38 +1,38 @@
 <div class="ai-doc-page">
-  <section class="py-6 py-lg-7 bg-gradient-ai position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 text-white fw-bold mb-4">Organize, search, and govern content at scale—powered by AI.</h1>
-          <p class="lead text-white-75 mb-4">Content.One’s AI Document Management centralizes assets, documents, and unstructured content for marketing, sales, and operations. Catalog everything automatically, keep governance tight, and connect approved content to every channel.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Request a content ops consult</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore Content.One</a>
+  <section class="py-6 py-lg-7 bg-gradient-ai relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold text-white font-bold mb-4">Organize, search, and govern content at scale—powered by AI.</h1>
+          <p class="text-lg text-white/75 mb-4">Content.One’s AI Document Management centralizes assets, documents, and unstructured content for marketing, sales, and operations. Catalog everything automatically, keep governance tight, and connect approved content to every channel.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Request a content ops consult</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team organizing digital content" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team organizing digital content" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
   </section> 
 
-  <section class="py-6 border-top">
-    <div class="container"> 
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-ai-subtle text-ai mb-3">Trusted across industries</span>
-          <h2 class="h1 fw-semibold mb-3">Content excellence for marketing, sales, and operations.</h2>
-          <p class="text-grey mb-0">Global brands rely on Content.One to catalog documents, manage regulated content, and distribute approved assets to every touchpoint—from corporate sites to partner portals and sales enablement hubs.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">Trusted across industries</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Content excellence for marketing, sales, and operations.</h2>
+          <p class="text-gray-600 mb-0">Global brands rely on Content.One to catalog documents, manage regulated content, and distribute approved assets to every touchpoint—from corporate sites to partner portals and sales enablement hubs.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,66 +45,66 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-ai-subtle text-ai mb-3">Smarter document management</span>
-          <h2 class="h1 fw-semibold mb-3">Bring AI intelligence to every asset, document, and data point</h2>
-          <p class="text-grey fs-5 mb-0">Automated tagging, intelligent search, and enterprise governance ensure the right teams find the right content instantly—while your brand stays consistent across regions, products, and channels.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">Smarter document management</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Bring AI intelligence to every asset, document, and data point</h2>
+          <p class="text-gray-600 text-lg mb-0">Automated tagging, intelligent search, and enterprise governance ensure the right teams find the right content instantly—while your brand stays consistent across regions, products, and channels.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">AI-powered search &amp; tagging</h3>
-              <p class="text-grey mb-0">Leverage Content.One’s AI services to classify assets, apply metadata, and surface relevant documents across marketing sites, sales tools, and partner hubs.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">AI-powered search &amp; tagging</h3>
+              <p class="text-gray-600 mb-0">Leverage Content.One’s AI services to classify assets, apply metadata, and surface relevant documents across marketing sites, sales tools, and partner hubs.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Enterprise document hub</h3>
-              <p class="text-grey mb-0">Store, govern, and secure all documents and media inside a single environment with role-based access and geographic controls.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Enterprise document hub</h3>
+              <p class="text-gray-600 mb-0">Store, govern, and secure all documents and media inside a single environment with role-based access and geographic controls.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Versioning &amp; compliance</h3>
-              <p class="text-grey mb-0">Maintain audit trails, approvals, and regulatory compliance with granular permissions, content freeze states, and immutable history.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Versioning &amp; compliance</h3>
+              <p class="text-gray-600 mb-0">Maintain audit trails, approvals, and regulatory compliance with granular permissions, content freeze states, and immutable history.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">Connected ecosystem</h3>
-              <p class="text-grey mb-0">Sync approved documents with websites, mobile apps, CRM, learning systems, and enablement tools via APIs, webhooks, or MCP servers.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">Connected ecosystem</h3>
+              <p class="text-gray-600 mb-0">Sync approved documents with websites, mobile apps, CRM, learning systems, and enablement tools via APIs, webhooks, or MCP servers.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Accelerated reuse</h3>
-              <p class="text-grey mb-0">Eliminate duplication by modeling reusable fragments, bundling document kits, and automating distribution to campaigns and microsites.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Accelerated reuse</h3>
+              <p class="text-gray-600 mb-0">Eliminate duplication by modeling reusable fragments, bundling document kits, and automating distribution to campaigns and microsites.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-ai text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Insight-driven governance</h3>
-              <p class="text-grey mb-0">Monitor usage, engagement, and content freshness with analytics dashboards that inform content strategy and compliance cycles.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Insight-driven governance</h3>
+              <p class="text-gray-600 mb-0">Monitor usage, engagement, and content freshness with analytics dashboards that inform content strategy and compliance cycles.</p>
             </div>
           </div>
         </div>
@@ -112,50 +112,50 @@
     </div>
   </section>
  
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Catalog once, syndicate everywhere</h2>
-          <p class="text-grey mb-4">Content.One’s document schemas and workflows bridge marketing and sales teams. Build central catalog entries that drive product pages, partner portals, and sales collateral—without recreating content.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Schema-driven catalogs</h3>
-                  <p class="text-grey small mb-0">Model brochures, certifications, FAQs, and legal disclosures with reusable fields for product, geography, and audience targeting.</p>
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Catalog once, syndicate everywhere</h2>
+          <p class="text-gray-600 mb-4">Content.One’s document schemas and workflows bridge marketing and sales teams. Build central catalog entries that drive product pages, partner portals, and sales collateral—without recreating content.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Schema-driven catalogs</h3>
+                  <p class="text-gray-600 text-sm mb-0">Model brochures, certifications, FAQs, and legal disclosures with reusable fields for product, geography, and audience targeting.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Sales enablement sync</h3>
-                  <p class="text-grey small mb-0">Feed approved assets into CRM, outreach tools, and partner portals—keeping reps aligned with the latest messaging and assets.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Sales enablement sync</h3>
+                  <p class="text-gray-600 text-sm mb-0">Feed approved assets into CRM, outreach tools, and partner portals—keeping reps aligned with the latest messaging and assets.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Campaign-ready kits</h3>
-                  <p class="text-grey small mb-0">Bundle documents, media, and CTAs into launch kits that marketing can deploy across landing pages, ads, and email sequences.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Campaign-ready kits</h3>
+                  <p class="text-gray-600 text-sm mb-0">Bundle documents, media, and CTAs into launch kits that marketing can deploy across landing pages, ads, and email sequences.</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card border-0 shadow-sm h-100">
-                <div class="card-body">
-                  <h3 class="h5">Governance automation</h3>
-                  <p class="text-grey small mb-0">Automated reminders and review cycles ensure expiring assets are refreshed before they go live anywhere in your ecosystem.</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+                <div class="p-6">
+                  <h3 class="text-lg font-semibold">Governance automation</h3>
+                  <p class="text-gray-600 text-sm mb-0">Automated reminders and review cycles ensure expiring assets are refreshed before they go live anywhere in your ecosystem.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="Content catalog dashboard" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="Content catalog dashboard" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -163,32 +163,32 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="{{this.hero_image.getImage(1200)}}" alt="AI search interface" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="{{this.hero_image.getImage(1200)}}" alt="AI search interface" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-ai-subtle text-ai mb-3">MCP-powered intelligence</span>
-          <h2 class="h1 fw-semibold mb-4">Connect MCP servers to power omnichannel discovery</h2>
-          <p class="text-grey fs-5 mb-4">Leverage Model Context Protocol (MCP) servers to bridge Content.One’s structured content with AI copilots, sales tools, and custom experiences. Deliver the right document or offer in seconds.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-diagram-3 text-ai fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">MCP-powered intelligence</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Connect MCP servers to power omnichannel discovery</h2>
+          <p class="text-gray-600 text-lg mb-4">Leverage Model Context Protocol (MCP) servers to bridge Content.One’s structured content with AI copilots, sales tools, and custom experiences. Deliver the right document or offer in seconds.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <i class="bi bi-diagram-3 text-ai text-xl"></i>
               <span>MCP endpoints expose approved content to AI assistants while respecting governance and permissions.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-plug text-ai fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-plug text-ai text-xl"></i>
               <span>Integrate with ChatGPT-style copilots, call center tools, and partner portals to answer questions with verified assets.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-cart-check text-ai fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-cart-check text-ai text-xl"></i>
               <span>Trigger cross-sell and upsell recommendations by matching customer context with existing collateral, case studies, or pricing sheets.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-graph-up text-ai fs-4"></i>
+            <li class="flex gap-3">
+              <i class="bi bi-graph-up text-ai text-xl"></i>
               <span>Track which documents drive conversions and pipeline velocity through analytics connected via MCP events.</span>
             </li>
           </ul>
@@ -197,110 +197,110 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">AI document management that scales with your teams</h2>
-          <p class="lead text-white-75 mb-4">Deliver compliant, up-to-date content to every stakeholder. Content.One’s managed hosting, multi-environment workflows, and AI toolset keep your knowledge base ready for growth.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-ai-count="85" data-ai-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Average reduction in time spent locating documents</p>
+  <section class="py-6 bg-gray-900 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">AI document management that scales with your teams</h2>
+          <p class="text-lg text-white/75 mb-4">Deliver compliant, up-to-date content to every stakeholder. Content.One’s managed hosting, multi-environment workflows, and AI toolset keep your knowledge base ready for growth.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="85" data-ai-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Average reduction in time spent locating documents</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-ai-count="50" data-ai-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Increase in asset reuse across marketing &amp; sales</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="50" data-ai-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Increase in asset reuse across marketing &amp; sales</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-ai-count="99.99" data-ai-suffix="%" data-ai-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime backed by Content.One managed infrastructure</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="99.99" data-ai-suffix="%" data-ai-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime backed by Content.One managed infrastructure</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-ai-count="200" data-ai-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Integrations supported via APIs, webhooks, and MCP servers</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="200" data-ai-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Integrations supported via APIs, webhooks, and MCP servers</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Distributed teams collaborating" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Distributed teams collaborating" class="w-full h-full object-cover">
           </div>
         </div> 
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-ai-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-ai-dark" style="opacity:0.35;"></div>
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-ai-subtle text-ai mb-3">Customer voices</span>
-          <h2 class="h1 fw-semibold mb-2">Teams modernizing content operations on Content.One</h2>
-          <p class="text-grey mb-0">Content-heavy organizations—financial services, healthcare, retail marketplaces, and more—trust Content.One to manage documents and accelerate go-to-market cycles.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">Customer voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Teams modernizing content operations on Content.One</h2>
+          <p class="text-gray-600 mb-0">Content-heavy organizations—financial services, healthcare, retail marketplaces, and more—trust Content.One to manage documents and accelerate go-to-market cycles.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-ai btn-lg">See how they scale</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-ai text-base px-6 py-3">See how they scale</a>
       </div>
-      <div class="row row-cols-1 row-cols-lg-3 g-4">
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/joseph-attanasio-jackpocket.jpeg" alt="Joseph Attanasio" class="rounded-circle shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/joseph-attanasio-jackpocket.jpeg" alt="Joseph Attanasio" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Joseph Attanasio</p>
-                  <span class="text-muted small">Lead Product Manager, Jackpocket</span>
+                  <p class="text-gray-600 font-semibold mb-0">Joseph Attanasio</p>
+                  <span class="text-gray-500 text-sm">Lead Product Manager, Jackpocket</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“Our headless integration ensures marketing assets reach every channel instantly—we control versions and approvals in one place.”</p>
-              <div class="badge bg-ai-subtle text-ai rounded-pill px-3 py-2">Gaming &amp; lotteries</div>
+              <p class="text-lg text-gray-600 mb-4">“Our headless integration ensures marketing assets reach every channel instantly—we control versions and approvals in one place.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai rounded-full px-3 py-2">Gaming &amp; lotteries</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png" alt="Singlife digital experience" class="rounded-3 shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png" alt="Singlife digital experience" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">Brian Nilayan</p>
-                  <span class="text-muted small">Head of Business Development, Rebar Solutions</span>
+                  <p class="text-gray-600 font-semibold mb-0">Brian Nilayan</p>
+                  <span class="text-gray-500 text-sm">Head of Business Development, Rebar Solutions</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“Compliance-ready workflows mean our sales teams always use the latest documents—no more back-and-forth with engineering.”</p>
-              <div class="badge bg-ai-subtle text-ai rounded-pill px-3 py-2">Financial services</div>
+              <p class="text-lg text-gray-600 mb-4">“Compliance-ready workflows mean our sales teams always use the latest documents—no more back-and-forth with engineering.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai rounded-full px-3 py-2">Financial services</div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-              <div class="d-flex align-items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/petdesk-hero-media.jpg" alt="PetDesk hero" class="rounded-3 shadow-sm" style="width:64px;height:64px;object-fit:cover;">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
+            <div class="p-6">
+              <div class="flex items-center gap-3 mb-4">
+                <img src="https://hj5v68xn.media.zestyio.com/petdesk-hero-media.jpg" alt="PetDesk hero" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
                 <div>
-                  <p class="text-grey fw-semibold mb-0">PetDesk</p>
-                  <span class="text-muted small">Director of Marketing</span>
+                  <p class="text-gray-600 font-semibold mb-0">PetDesk</p>
+                  <span class="text-gray-500 text-sm">Director of Marketing</span>
                 </div>
               </div>
-              <p class="fs-5 text-grey mb-4">“Drag-and-drop document kits and MCP integrations give us a real-time catalogue for clinics and partners.”</p>
-              <div class="badge bg-ai-subtle text-ai rounded-pill px-3 py-2">Healthcare &amp; services</div>
+              <p class="text-lg text-gray-600 mb-4">“Drag-and-drop document kits and MCP integrations give us a real-time catalogue for clinics and partners.”</p>
+              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai rounded-full px-3 py-2">Healthcare &amp; services</div>
             </div>
           </div>
         </div>
@@ -309,14 +309,14 @@
   </section>
 
   <section class="py-6 bg-ai text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Ready to modernize your document management with AI?</h2>
-          <p class="lead text-white-75 mb-4">Partner with Content.One to centralize assets, automate governance, and deliver content wherever your teams engage customers.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-ai">Talk to an expert</a>
-            <a href="/solutions/" class="btn btn-outline-light btn-lg">See all solutions</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8">
+          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to modernize your document management with AI?</h2>
+          <p class="text-lg text-white/75 mb-4">Partner with Content.One to centralize assets, automate governance, and deliver content wherever your teams engage customers.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-ai">Talk to an expert</a>
+            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
           </div>
         </div>
       </div>

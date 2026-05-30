@@ -15,22 +15,22 @@
     <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
       <!-- Right: Tab previews -->
       <div class="md:col-span-6 xl:col-span-6 xl:col-start-7 order-2 md:order-1">
-        <div class="tab-content" id="persona-pills-content">
-          <div class="tab-pane fade active show" id="v-pills-content" role="tabpanel" aria-labelledby="v-pills-content-tab" tabindex="0">
+        <div class="mt-3" id="persona-pills-content">
+          <div class="hidden fade active show" id="v-pills-content" role="tabpanel" aria-labelledby="v-pills-content-tab" tabindex="0">
             <div class="relative scene" data-relative-input="true">
               <figure class="m-0">
                 <img src="https://hj5v68xn.media.zestyio.com/linkedin-sales-solutions-46bom4lObsA-unsplash.jpg?width=800" alt="Content team collaborating" class="w-full rounded-2xl">
               </figure>
             </div>
           </div>
-          <div class="tab-pane fade" id="v-pills-cmo" role="tabpanel" aria-labelledby="v-pills-cmo-tab" tabindex="0">
+          <div class="hidden fade" id="v-pills-cmo" role="tabpanel" aria-labelledby="v-pills-cmo-tab" tabindex="0">
             <div class="relative scene" data-relative-input="true">
               <figure class="m-0">
                 <img src="https://hj5v68xn.media.zestyio.com/amy-hirschi-W7aXY5F2pBo-unsplash.jpg?width=800" alt="Marketing team collaborating" class="w-full rounded-2xl">
               </figure>
             </div>
           </div>
-          <div class="tab-pane fade" id="v-pills-cio" role="tabpanel" aria-labelledby="v-pills-cio-tab" tabindex="0">
+          <div class="hidden fade" id="v-pills-cio" role="tabpanel" aria-labelledby="v-pills-cio-tab" tabindex="0">
             <div class="relative scene" data-relative-input="true">
               <figure class="m-0">
                 <img src="https://hj5v68xn.media.zestyio.com/campaign-creators-qCi_MzVODoU-unsplash.jpg?width=800" alt="Secure infrastructure" class="w-full rounded-2xl">
@@ -42,8 +42,8 @@
 
       <!-- Left: Persona tabs -->
       <div class="md:col-span-6 xl:col-span-5 order-1 md:order-2">
-        <div class="nav flex flex-col nav-pills mb-12 lg:mb-0 gap-2" id="persona-pills" role="tablist" aria-orientation="vertical">
-          <a href="#" class="nav-link active flex text-left p-3 xl:p-4 items-start rounded-lg" id="v-pills-content-tab" data-bs-toggle="pill" data-bs-target="#v-pills-content" role="tab" aria-controls="v-pills-content" aria-selected="false">
+        <div class="nav flex flex-col flex gap-1 mb-12 lg:mb-0 gap-2" id="persona-pills" role="tablist" aria-orientation="vertical">
+          <a href="#" class="px-3 py-2 hover:text-royal active flex text-left p-3 xl:p-4 items-start rounded-lg" id="v-pills-content-tab" data-bs-toggle="pill" data-bs-target="#v-pills-content" role="tab" aria-controls="v-pills-content" aria-selected="false">
             <div class="flex">
               <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
                 <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal" fill="currentColor"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="9" y="16" width="6" height="6" rx="1"/></svg>
@@ -54,7 +54,7 @@
               <p class="m-0 mt-2 hidden lg:block text-gray-600">Launch content and updates instantly with visual workflows and AI-powered tools.</p>
             </div>
           </a>
-          <a href="#" class="nav-link flex text-left items-start p-3 xl:p-4 rounded-lg" id="v-pills-cmo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cmo" role="tab" aria-controls="v-pills-cmo" aria-selected="true">
+          <a href="#" class="px-3 py-2 hover:text-royal flex text-left items-start p-3 xl:p-4 rounded-lg" id="v-pills-cmo-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cmo" role="tab" aria-controls="v-pills-cmo" aria-selected="true">
             <div class="flex">
               <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
                 <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal" fill="currentColor"><path d="M3 11l18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg>
@@ -65,7 +65,7 @@
               <p class="m-0 mt-2 hidden lg:block text-gray-600">Create more content with fewer resources using AI-assisted planning and production.</p>
             </div>
           </a>
-          <a href="#" class="nav-link flex text-left items-start p-3 xl:p-4 rounded-lg" id="v-pills-cio-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cio" role="tab" aria-controls="v-pills-cio" aria-selected="false">
+          <a href="#" class="px-3 py-2 hover:text-royal flex text-left items-start p-3 xl:p-4 rounded-lg" id="v-pills-cio-tab" data-bs-toggle="pill" data-bs-target="#v-pills-cio" role="tab" aria-controls="v-pills-cio" aria-selected="false">
             <div class="flex">
               <div class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center">
                 <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg>
