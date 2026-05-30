@@ -1,75 +1,32 @@
 <main>
-
-   
-    
     {{include /page_html/solutions/{this.path_part}.html }}
- 
-<!-- 
-    <section class="py-md-10 pt-5 bg-primary bg-opacity-10 position-relative">
-        <div class="container">
-            <div class="row align-items-center py-lg-8">
-                <div class="col-md-6 col-12">
-                    <div class="text-center text-md-start">
-                        <div class="mb-6 pe-xl-8">
-                            <h1 class="display-5">{{this.title}}</h1>
-                            <p class="lead">{{this.solution_short_description}}</p>
-                        </div>
-                        <div class="mb-7">
-                            <div class="mb-3">
-                                {{include /components/ctas/book-button.html}}
-                                <a href="#!" class="btn btn-white">How it works</a>
-                            </div>
-                        </div>
 
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 position-md-absolute top-0 end-0 left-0 h-100 mt-6 mt-md-0 px-0"
-                    style="background-image: url('{{this.hero_image.getImage()}}'); background-size: cover; background-position: center">
-                    <div class="d-block d-md-none">
-                        <figure class="figure">
-                            <img src="{{this.hero_image.getImage()}}" alt="" class="img-fluid" />
-                        </figure>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="my-xl-9 my-5">
-        <div class="container">
-            <div class="content">
-                {{this.body}}
-            </div>
-        </div>
-    </section> -->
-     
-    <section class="bg-secondary p-5">
-        <div class="container">
-            
-            <h3 class="h3 mb-5">Explore Successes from Customers who've implemented a {{this.title}} solution with Content.One</h3>
-            <div class="row g-4" id="customersGrid">
-            {{each customer as customer where related_solutions LIKE '%{this.zuid}%'}} 
-            <div class="col-12 col-md-6 col-xl-3" data-customer-card data-code="{{customer.short_code}}">
-                <article class="customer-card card h-100 border-0 shadow-sm overflow-hidden">
-                <div class="customer-card__media position-relative">
-                    <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="w-100 h-100 object-fit-cover">
-                    <div class="customer-card__overlay position-absolute inset-0"></div>
-                    <div class="customer-card__logo position-absolute">
+    <section class="bg-gray-100 p-5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="font-display text-2xl md:text-3xl font-semibold mb-5">Explore Successes from Customers who've implemented a {{this.title}} solution with Content.One</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" id="customersGrid">
+            {{each customer as customer where related_solutions LIKE '%{this.zuid}%'}}
+            <div data-customer-card data-code="{{customer.short_code}}">
+              <article class="customer-card bg-white shadow-sm h-full rounded-2xl overflow-hidden flex flex-col">
+                <div class="customer-card__media relative">
+                    <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="w-full h-full object-cover">
+                    <div class="customer-card__overlay absolute inset-0"></div>
+                    <div class="customer-card__logo absolute inset-0 flex items-center justify-center">
                     {{if {customer.logo} }}
                         <img src="{{customer.logo.getImage(220,120)}}" alt="{{customer.name}} logo">
                     {{else}}
-                        <span class="fw-semibold">{{customer.short_code}}</span>
+                        <span class="font-semibold text-white">{{customer.short_code}}</span>
                     {{end-if}}
                     </div>
                 </div>
-                <div class="card-body">
-                    <h3 class="h4 mb-2">{{customer.name}}</h3>
-                    <p class="text-grey mb-3">{{customer.short_description.subwords(20)}}...</p>
-                 
+                <div class="p-6 flex-1">
+                    <h3 class="font-display text-xl font-bold mb-2">{{customer.name}}</h3>
+                    <p class="text-gray-600 mb-3">{{customer.short_description.subwords(20)}}...</p>
                 </div>
-                <footer class="card-footer border-0 pt-0 bg-transparent">
-                    <a href="{{customer.getURL()}}" class="btn btn-outline-primary w-100">Learn More</a>
+                <footer class="px-6 pb-6 bg-transparent">
+                    <a href="{{customer.getURL()}}" class="inline-flex items-center justify-center w-full rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-4 py-2.5 transition">Learn More</a>
                 </footer>
-                </article>
+              </article>
             </div>
             {{/each}}
             </div>
@@ -77,7 +34,5 @@
     </section>
 
     {{ block('/-/block/client_logos.html') }}
-   
-
     {{blocks('/-/block/sales_personal_cta.html') }}
 </main>
