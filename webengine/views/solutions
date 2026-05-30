@@ -1,63 +1,56 @@
 <div class="solutions-page">
-  <section class="solutions-hero position-relative overflow-hidden text-white py-6 py-lg-7">
-    <div class="solutions-hero__background position-absolute top-0 start-0 w-100 h-100">
-      <div class="solutions-hero__image" style="background-image:
-        linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(30, 64, 175, 0.68) 55%, rgba(59, 130, 246, 0.52) 100%),
-        url('{{if {this.hero_image} }}{{this.hero_image.getImage(1920,1080)}}{{else}}https://hj5v68xn.media.zestyio.com/content-one-background-pattern-10p.png{{end-if}}');">
-      </div>
+  <section class="solutions-hero relative overflow-hidden text-white py-16 lg:py-24">
+    <div class="solutions-hero__background absolute top-0 left-0 w-full h-full">
+      <div class="solutions-hero__image" style="background-image: linear-gradient(135deg, rgba(15, 23, 42, 0.82) 0%, rgba(30, 64, 175, 0.68) 55%, rgba(59, 130, 246, 0.52) 100%), url('{{if {this.hero_image} }}{{this.hero_image.getImage(1920,1080)}}{{else}}https://hj5v68xn.media.zestyio.com/content-one-background-pattern-10p.png{{end-if}}');"></div>
     </div>
-    <div class="container position-relative">
-      <div class="row justify-content-center text-center text-lg-start">
-        
-          <span class="badge bg-white text-primary mb-3">Purpose-built for modern teams</span>
-          <h1 class="display-4 fw-semibold text-white mb-3">{{this.title}}</h1>
-          <div class="lead text-white-75 mb-4">{{this.body}}</div>
-        
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center lg:text-left">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Purpose-built for modern teams</span>
+        <h1 class="text-4xl md:text-5xl font-display font-semibold text-white mb-3">{{this.title}}</h1>
+        <div class="text-lg text-white/75 mb-4">{{this.body}}</div>
       </div>
     </div>
   </section>
 
-  
-
-  <section class="py-5 py-lg-6 bg-body-tertiary">
-    <div class="container">
-      <div class="row g-4" id="solutionsGrid">
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4" id="solutionsGrid">
         {{each product_solutions as solution}}
-        <div class="col-12 col-md-6 col-xl-4" data-solution-card data-category="{{solution.bootstrap_icon}}">
-          <article class="solution-card card h-100 border-0 shadow-sm overflow-hidden">
+        <div data-solution-card data-category="{{solution.bootstrap_icon}}">
+          <article class="solution-card bg-white shadow-sm h-full rounded-2xl overflow-hidden flex flex-col">
             {{if {solution.hero_image} }}
             <div class="solution-card__media">
-              <img src="{{solution.hero_image.getImage(640,360,crop)}}" alt="{{solution.title}} illustration" class="solution-card__image">
+              <img src="{{solution.hero_image.getImage(640,360,crop)}}" alt="{{solution.title}} illustration" class="solution-card__image w-full h-full object-cover">
             </div>
-            {{else}} 
-            <div class="solution-card__media solution-card__media--placeholder d-flex align-items-center justify-content-center bg-gradient">
-              <span class="solution-card__placeholder-text text-uppercase fw-semibold">Content.One</span>
+            {{else}}
+            <div class="solution-card__media solution-card__media--placeholder flex items-center justify-center">
+              <span class="solution-card__placeholder-text uppercase font-semibold tracking-widest">Content.One</span>
             </div>
             {{/if}}
-            <div class="card-body">
+            <div class="p-6 flex-1">
               {{if {solution.bootstrap_icon} }}
-              <div class="solution-card__icon text-primary mb-3">
+              <div class="solution-card__icon text-royal mb-3">
                 <i class="bi {{solution.bootstrap_icon}}" aria-hidden="true"></i>
               </div>
               {{/if}}
-              <h3 class="h4 mb-2">{{solution.title}}</h3>
+              <h3 class="font-display text-xl font-bold mb-2">{{solution.title}}</h3>
               {{if {solution.solution_short_description} }}
-              <p class="text-grey mb-3">{{solution.solution_short_description}}</p>
+              <p class="text-gray-600 mb-3">{{solution.solution_short_description}}</p>
               {{/if}}
-              <p class="solution-card__excerpt text-muted small mb-0">{{solution.body.striptags().subwords(24)}}</p>
+              <p class="solution-card__excerpt text-gray-500 text-sm m-0">{{solution.body.striptags().subwords(24)}}</p>
             </div>
-            <span class="d-none" data-solution-keywords aria-hidden="true">{{solution.title}} {{solution.solution_short_description}} {{solution.body.striptags()}}</span>
-            <footer class="card-footer border-0 bg-transparent pt-0">
-              <a href="{{solution.getURL()}}" class="btn btn-outline-primary w-100">Explore {{solution.title}}</a>
+            <span class="hidden" data-solution-keywords aria-hidden="true">{{solution.title}} {{solution.solution_short_description}} {{solution.body.striptags()}}</span>
+            <footer class="px-6 pb-6 bg-transparent">
+              <a href="{{solution.getURL()}}" class="inline-flex items-center justify-center w-full rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-4 py-2.5 transition">Explore {{solution.title}}</a>
             </footer>
           </article>
         </div>
         {{/each}}
       </div>
-      <div class="text-center d-none" id="solutionsEmpty">
-        <div class="card border-0 shadow-sm p-5">
-          <h3 class="h4 mb-2">No solutions match your search yet.</h3>
-          <p class="text-grey mb-0">Try a different keyword or clear your filter to browse the full library.</p>
+      <div class="text-center hidden" id="solutionsEmpty">
+        <div class="bg-white shadow-sm rounded-2xl p-10">
+          <h3 class="font-display text-xl font-bold mb-2">No solutions match your search yet.</h3>
+          <p class="text-gray-600 m-0">Try a different keyword or clear your filter to browse the full library.</p>
         </div>
       </div>
     </div>
@@ -65,74 +58,30 @@
 </div>
 
 <style>
-  .solutions-page .solutions-hero {
-    background-color: #0f172a;
-  }
-  .solutions-page .solutions-hero__background {
-    z-index: 0;
-  }
+  .solutions-page .solutions-hero { background-color: #0f172a; }
+  .solutions-page .solutions-hero__background { z-index: 0; }
   .solutions-page .solutions-hero__image {
-    position: absolute;
-    inset: 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    filter: saturate(120%);
-    transform: scale(1.08);
+    position: absolute; inset: 0;
+    background-repeat: no-repeat; background-size: cover; background-position: center;
+    filter: saturate(120%); transform: scale(1.08);
   }
   .solutions-page .solutions-hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
+    content: ""; position: absolute; inset: 0;
     background: radial-gradient(circle at top right, rgba(148, 163, 255, 0.28), transparent 45%);
     pointer-events: none;
   }
-  .solutions-page .solutions-filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem;
+  .solutions-page .solution-card { transition: transform 0.18s ease, box-shadow 0.18s ease; }
+  .solutions-page .solution-card:hover, .solutions-page .solution-card:focus-within {
+    transform: translateY(-4px); box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.12);
   }
-  .solutions-page .solutions-filters .btn {
-    border-radius: 999px;
-  }
-  .solutions-page .solution-card {
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
-  }
-  .solutions-page .solution-card:hover,
-  .solutions-page .solution-card:focus-within {
-    transform: translateY(-4px);
-    box-shadow: 0 1.25rem 2.5rem rgba(15, 23, 42, 0.12);
-  }
-  .solutions-page .solution-card__media {
-    background-color: rgba(15, 23, 42, 0.06);
-  }
-  .solutions-page .solution-card__media img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-  }
-  .solutions-page .solution-card__media--placeholder {
-    min-height: 220px;
-    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15));
-  }
-  .solutions-page .solution-card__placeholder-text {
-    letter-spacing: 0.2em;
-    color: rgba(15, 23, 42, 0.55);
-  }
-  .solutions-page .solution-card__icon {
-    font-size: 2rem;
-    line-height: 1;
-  }
-  .solutions-page .solution-card__excerpt {
-    line-height: 1.5;
-  }
+  .solutions-page .solution-card__media { background-color: rgba(15, 23, 42, 0.06); }
+  .solutions-page .solution-card__media--placeholder { min-height: 220px; background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(99, 102, 241, 0.15)); }
+  .solutions-page .solution-card__placeholder-text { color: rgba(15, 23, 42, 0.55); }
+  .solutions-page .solution-card__icon { font-size: 2rem; line-height: 1; }
+  .solutions-page .solution-card__excerpt { line-height: 1.5; }
   @media (max-width: 767.98px) {
-    .solutions-page .solutions-hero::after {
-      background: radial-gradient(circle at top, rgba(148, 163, 255, 0.35), transparent 50%);
-    }
-    .solutions-page .solutions-hero__image {
-      transform: none;
-    }
+    .solutions-page .solutions-hero::after { background: radial-gradient(circle at top, rgba(148, 163, 255, 0.35), transparent 50%); }
+    .solutions-page .solutions-hero__image { transform: none; }
   }
 </style>
 
@@ -143,21 +92,17 @@
     var filtersContainer = document.getElementById('solutionFilters');
     var emptyState = document.getElementById('solutionsEmpty');
     if (!grid) return;
-
     var cards = Array.prototype.slice.call(grid.querySelectorAll('[data-solution-card]'));
     if (!cards.length) return;
-
     var activeFilter = 'all';
-
     function createFilterButton(label, value, isActive) {
       var button = document.createElement('button');
       button.type = 'button';
-      button.className = 'btn btn-outline-primary btn-sm' + (isActive ? ' active' : '');
+      button.className = 'inline-flex items-center rounded-full border border-royal text-royal hover:bg-royal/10 font-semibold px-3 py-1.5 text-sm transition' + (isActive ? ' active' : '');
       button.textContent = label;
       button.setAttribute('data-filter', value);
       return button;
     }
-
     function normalizeCategory(value) {
       if (!value) return '';
       return value.toLowerCase()
@@ -165,17 +110,9 @@
         .replace(/[^a-z0-9]+/g, '-')
         .replace(/^-+|-+$/g, '');
     }
-
     function toTitle(text) {
-      return text
-        .replace(/^\s*bi[\s-]+/i, '')
-        .replace(/\bbi\b/gi, '')
-        .replace(/[-_]+/g, ' ')
-        .replace(/\s{2,}/g, ' ')
-        .replace(/\b\w/g, function (char) { return char.toUpperCase(); })
-        .trim();
+      return text.replace(/^\s*bi[\s-]+/i, '').replace(/\bbi\b/gi, '').replace(/[-_]+/g, ' ').replace(/\s{2,}/g, ' ').replace(/\b\w/g, function (char) { return char.toUpperCase(); }).trim();
     }
-
     var categories = new Set();
     var categoryLabels = {};
     cards.forEach(function (card) {
@@ -184,14 +121,11 @@
         var normalized = normalizeCategory(category);
         if (!normalized) return;
         categories.add(normalized);
-        if (!categoryLabels[normalized]) {
-          categoryLabels[normalized] = toTitle(category);
-        }
+        if (!categoryLabels[normalized]) { categoryLabels[normalized] = toTitle(category); }
       }
     });
-
     if (filtersContainer && categories.size) {
-      filtersContainer.classList.remove('d-none');
+      filtersContainer.classList.remove('hidden');
       filtersContainer.innerHTML = '';
       filtersContainer.appendChild(createFilterButton('All', 'all', true));
       Array.from(categories).sort().forEach(function (category) {
@@ -199,39 +133,28 @@
         filtersContainer.appendChild(createFilterButton(label, category, false));
       });
     }
-
     function applyFilters() {
       var query = searchInput ? searchInput.value.trim().toLowerCase() : '';
       var visibleCount = 0;
-
       cards.forEach(function (card) {
-      var keywordsEl = card.querySelector('[data-solution-keywords]');
-      var keywords = keywordsEl ? keywordsEl.textContent.toLowerCase() : '';
+        var keywordsEl = card.querySelector('[data-solution-keywords]');
+        var keywords = keywordsEl ? keywordsEl.textContent.toLowerCase() : '';
         var category = (card.getAttribute('data-category') || '').trim();
         var normalizedCategory = normalizeCategory(category);
-
         var matchesSearch = !query || keywords.indexOf(query) !== -1;
         var matchesFilter = activeFilter === 'all' || normalizedCategory === activeFilter;
         var isVisible = matchesSearch && matchesFilter;
-
-        card.classList.toggle('d-none', !isVisible);
-        if (isVisible) {
-          visibleCount += 1;
-        }
+        card.classList.toggle('hidden', !isVisible);
+        if (isVisible) { visibleCount += 1; }
       });
-
-      if (emptyState) {
-        emptyState.classList.toggle('d-none', visibleCount !== 0);
-      }
+      if (emptyState) { emptyState.classList.toggle('hidden', visibleCount !== 0); }
     }
-
     if (filtersContainer && categories.size) {
       filtersContainer.addEventListener('click', function (event) {
         var target = event.target;
         if (!target.matches('[data-filter]')) return;
         var value = target.getAttribute('data-filter');
         if (!value) return;
-
         activeFilter = value;
         filtersContainer.querySelectorAll('[data-filter]').forEach(function (button) {
           button.classList.toggle('active', button === target);
@@ -239,13 +162,7 @@
         applyFilters();
       });
     }
-
-    if (searchInput) {
-      searchInput.addEventListener('input', function () {
-        window.requestAnimationFrame(applyFilters);
-      });
-    }
-
+    if (searchInput) { searchInput.addEventListener('input', function () { window.requestAnimationFrame(applyFilters); }); }
     applyFilters();
   });
 </script>
