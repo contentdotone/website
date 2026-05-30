@@ -1,5 +1,144 @@
 <!-- Tailwind Play CDN — loads first so utility classes are styled before paint -->
 <script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Bootstrap-shim — vanilla JS that activates data-bs-* attrs without Bootstrap JS.
+     Handles: collapse, modal, dropdown, offcanvas, carousel, tab/pill, dismiss. -->
+<script>
+(function () {
+  function q(sel, root) { return (root || document).querySelector(sel); }
+  function qa(sel, root) { return (root || document).querySelectorAll(sel); }
+
+  document.addEventListener('click', function (e) {
+    var t = e.target.closest('[data-bs-toggle], [data-bs-dismiss], [data-bs-slide], [data-bs-slide-to]');
+    if (!t) return;
+
+    // dismiss
+    var dismiss = t.getAttribute('data-bs-dismiss');
+    if (dismiss === 'modal') { var d = t.closest('dialog,[role="dialog"],.modal'); if (d) { if (d.close) d.close(); else d.classList.remove('is-open'); } return; }
+    if (dismiss === 'offcanvas') { var oc = t.closest('.offcanvas'); if (oc) oc.classList.remove('is-open'); return; }
+    if (dismiss === 'alert') { var al = t.closest('[role="alert"]'); if (al) al.remove(); return; }
+
+    var toggle = t.getAttribute('data-bs-toggle');
+    var target = t.getAttribute('data-bs-target') || t.getAttribute('href');
+
+    if (toggle === 'collapse' && target) {
+      e.preventDefault();
+      qa(target).forEach(function (el) {
+        var parent = el.getAttribute('data-bs-parent');
+        if (parent) qa(parent + ' .collapse.show, ' + parent + ' [data-bs-collapse-open]').forEach(function (sib) { if (sib !== el) sib.classList.remove('show'); });
+        el.classList.toggle('show');
+      });
+      return;
+    }
+    if (toggle === 'modal' && target) {
+      var m = q(target); if (m) { if (m.showModal) m.showModal(); else m.classList.add('is-open'); }
+      return;
+    }
+    if (toggle === 'dropdown') {
+      e.preventDefault();
+      var dropdown = t.closest('.dropdown, .nav-dropdown');
+      qa('.dropdown.is-open, .nav-dropdown.is-open').forEach(function (d) { if (d !== dropdown) d.classList.remove('is-open'); });
+      if (dropdown) dropdown.classList.toggle('is-open');
+      return;
+    }
+    if (toggle === 'offcanvas' && target) {
+      var oc = q(target); if (oc) oc.classList.add('is-open');
+      return;
+    }
+    if ((toggle === 'tab' || toggle === 'pill') && target) {
+      e.preventDefault();
+      var pane = q(target);
+      if (!pane) return;
+      var container = pane.parentElement;
+      qa('.tab-pane, [role="tabpanel"]', container).forEach(function (p) { p.classList.remove('show', 'active'); p.style.display = 'none'; });
+      pane.classList.add('show', 'active'); pane.style.display = '';
+      // toggle siblings of t
+      var navList = t.closest('[role="tablist"]') || t.parentElement.parentElement;
+      if (navList) qa('[data-bs-toggle="tab"], [data-bs-toggle="pill"]', navList).forEach(function (n) { n.classList.remove('active'); });
+      t.classList.add('active');
+      return;
+    }
+
+    // Carousel controls
+    var slideTarget = t.getAttribute('data-bs-target');
+    var slideTo = t.getAttribute('data-bs-slide-to');
+    var slide = t.getAttribute('data-bs-slide');
+    if (slideTarget && (slideTo !== null || slide)) {
+      var c = q(slideTarget); if (!c) return;
+      var slides = qa('.carousel-item, .tw-carousel-slide', c);
+      var current = -1;
+      slides.forEach(function (s, i) { if (s.classList.contains('active') || s.classList.contains('is-active')) current = i; });
+      if (current < 0) current = 0;
+      var next = current;
+      if (slideTo !== null) next = parseInt(slideTo, 10);
+      else if (slide === 'next') next = (current + 1) % slides.length;
+      else if (slide === 'prev') next = (current - 1 + slides.length) % slides.length;
+      slides.forEach(function (s, i) {
+        s.classList.toggle('active', i === next);
+        s.classList.toggle('is-active', i === next);
+        s.style.display = i === next ? '' : 'none';
+      });
+      qa('.carousel-indicators [data-bs-target="' + slideTarget + '"], .tw-carousel-dot', c).forEach(function (d, i) {
+        d.classList.toggle('active', i === next);
+        d.classList.toggle('is-active', i === next);
+      });
+    }
+  });
+
+  // Outside click closes dropdowns
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.dropdown, .nav-dropdown')) {
+      qa('.dropdown.is-open, .nav-dropdown.is-open').forEach(function (d) { d.classList.remove('is-open'); });
+    }
+  });
+
+  // Auto-init carousels (data-bs-ride="carousel" autoplay)
+  function initCarousels() {
+    qa('[data-bs-ride="carousel"]').forEach(function (carousel) {
+      if (carousel.dataset.tlInit === '1') return;
+      carousel.dataset.tlInit = '1';
+      var slides = qa('.carousel-item', carousel);
+      if (!slides.length) return;
+      slides.forEach(function (s, i) { if (i !== 0 && !s.classList.contains('active')) s.style.display = 'none'; });
+      var interval = parseInt(carousel.getAttribute('data-bs-interval'), 10) || 6000;
+      setInterval(function () {
+        var current = -1;
+        slides.forEach(function (s, i) { if (s.classList.contains('active')) current = i; });
+        var next = (current + 1) % slides.length;
+        slides.forEach(function (s, i) {
+          s.classList.toggle('active', i === next);
+          s.style.display = i === next ? '' : 'none';
+        });
+        qa('.carousel-indicators [data-bs-slide-to]', carousel).forEach(function (d, i) {
+          d.classList.toggle('active', i === next);
+        });
+      }, interval);
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initCarousels);
+  } else {
+    initCarousels();
+  }
+})();
+</script>
+
+<!-- Lightweight CSS rules so the shim classes render correctly without theme.css -->
+<style>
+  .collapse:not(.show) { display: none; }
+  .collapse.show { display: block; }
+  .dropdown-menu, .nav-dropdown-menu { display: none; }
+  .dropdown.is-open > .dropdown-menu, .nav-dropdown.is-open > .nav-dropdown-menu,
+  .dropdown:hover > .dropdown-menu { display: block; }
+  .offcanvas { transition: transform .25s ease; transform: translateX(-100%); }
+  .offcanvas.is-open { transform: translateX(0); }
+  .tab-pane:not(.active):not(.show) { display: none; }
+  .carousel-item:not(.active) { display: none; }
+  .tw-carousel-slide:not(.is-active) { display: none; }
+  .tw-carousel-dot.is-active { background-color: rgba(255,255,255,1); }
+  details[open] > summary > svg { transform: rotate(180deg); }
+</style>
 <script>
   tailwind.config = {
     theme: {
