@@ -1,75 +1,66 @@
 <div class="capterra-landing-page">
-  <section class="py-6 py-lg-7 bg-gradient-capterra text-white position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <span class="badge bg-white text-capterra mb-3">For Capterra visitors</span>
-          <h1 class="display-4 fw-bold text-white mb-4">Composable content ops for teams that need results fast.</h1>
-          <p class="lead text-white-75 mb-4">Content.One pairs visual authoring, agentic AI, granular workflows, and personalization in a single platform. Launch campaigns in days, not months, without adding developer backlog.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="#capterra-demo-form" class="btn btn-light btn-lg text-capterra">Book a tailored tour</a>
-          </div> 
-        </div>
-        <div class="col-lg-6 ">
-          <div class="bg-white m-3 rounded-3 py-2">
-          {{include /components/forms/zoho-form.html}}
+  <section class="py-16 lg:py-24 bg-gradient-capterra text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="inline-flex items-center bg-white text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">For Capterra visitors</span>
+          <h1 class="text-4xl md:text-5xl font-display font-bold text-white mb-4">Composable content ops for teams that need results fast.</h1>
+          <p class="text-lg text-white/75 mb-4">Content.One pairs visual authoring, agentic AI, granular workflows, and personalization in a single platform. Launch campaigns in days, not months, without adding developer backlog.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="#capterra-demo-form" class="inline-flex items-center rounded-lg bg-white text-capterra hover:bg-gray-100 font-semibold px-6 py-3 transition text-lg">Book a tailored tour</a>
           </div>
         </div>
-      </div> 
+        <div>
+          <div class="bg-white m-3 rounded-2xl py-2">
+            {{include /components/forms/zoho-form.html}}
+          </div>
+        </div>
+      </div>
     </div>
     <div class="capterra-glow capterra-glow--one"></div>
-    <div class="capterra-glow capterra-glow--two d-none d-md-block"></div>
+    <div class="capterra-glow capterra-glow--two hidden md:block"></div>
   </section>
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <a href="https://hj5v68xn.media.zestyio.com/Blocks.png" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg mb-4 mb-lg-0" data-capterra-lightbox="drag-drop" aria-label="Expand visual drag and drop screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" alt="Reusable Blocks in Content.One" class="w-100 h-100 object-fit-cover">
+  <section class="py-16 border-t border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <a href="https://hj5v68xn.media.zestyio.com/Blocks.png" class="capterra-lightbox-trigger block rounded-2xl overflow-hidden shadow-lg mb-4 lg:mb-0" data-capterra-lightbox="drag-drop" aria-label="Expand visual drag and drop screenshot">
+            <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" alt="Reusable Blocks in Content.One" class="w-full h-full object-cover">
           </a>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">Visual drag &amp; drop</span>
-          <h2 class="h1 fw-semibold mb-3">Design gorgeous experiences without leaving marketing.</h2>
-          <p class="text-grey mb-4">Give marketers a visual canvas that respects your design system. Freestyle Blocks plug into headless models, so teams drag, drop, and publish pages in minutes while developers define the guardrails.</p>
-          <ul class="list-unstyled d-grid gap-3 text-grey mb-0">
-            <li class="d-flex gap-3">
-              <i class="bi bi-grid-1x2 text-capterra fs-4"></i>
-              <span>Reusable Blocks, brand tokens, and layout templates stay in sync across every team.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-lightning-charge text-capterra fs-4"></i>
-              <span>Launch curated landing pages in hours without an extra sprint or ticket.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-check2-circle text-capterra fs-4"></i>
-              <span>Governance baked in: role-based approvals and staging before anything goes live.</span>
-            </li>
+        <div>
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">Visual drag &amp; drop</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Design gorgeous experiences without leaving marketing.</h2>
+          <p class="text-gray-600 mb-4">Give marketers a visual canvas that respects your design system. Freestyle Blocks plug into headless models, so teams drag, drop, and publish pages in minutes while developers define the guardrails.</p>
+          <ul class="grid gap-3 text-gray-600 m-0">
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="currentColor"><rect x="2" y="2" width="6" height="6" rx="1"/><rect x="16" y="2" width="6" height="6" rx="1"/><rect x="9" y="16" width="6" height="6" rx="1"/></svg><span>Reusable Blocks, brand tokens, and layout templates stay in sync across every team.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 16 16" class="w-6 h-6 text-capterra shrink-0" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg><span>Launch curated landing pages in hours without an extra sprint or ticket.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Governance baked in: role-based approvals and staging before anything goes live.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <a href="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg mb-4 mb-lg-0" data-capterra-lightbox="authoring" aria-label="Expand authoring without developers screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" alt="Authoring interface for marketers" class="w-100 h-100 object-fit-cover">
+  <section class="py-16 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="lg:order-2">
+          <a href="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" class="capterra-lightbox-trigger block rounded-2xl overflow-hidden shadow-lg mb-4 lg:mb-0" data-capterra-lightbox="authoring" aria-label="Expand authoring without developers screenshot">
+            <img src="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" alt="Authoring interface for marketers" class="w-full h-full object-cover">
           </a>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">Authoring without developers</span>
-          <h2 class="h1 fw-semibold mb-3">Publish faster with structured content models and inline editing.</h2>
-          <p class="text-grey mb-4">Marketers update content, imagery, and CTAs directly in the CMS while developers focus on high-impact work. Structured content models keep every channel aligned across web, mobile, signage, and more.</p>
-          <div class="card border-0 shadow-sm">
-            <div class="card-body">
-              <ul class="list-unstyled d-grid gap-2 text-grey small mb-0">
-                <li><i class="bi bi-pencil text-capterra me-2"></i>Inline editing with live preview for real-time feedback.</li>
-                <li><i class="bi bi-columns-gap text-capterra me-2"></i>Reusable layouts, snippets, and tokens for omnichannel reuse.</li>
-                <li><i class="bi bi-rocket-takeoff text-capterra me-2"></i>Approval workflows guarantee only approved content ships.</li>
+        <div class="lg:order-1">
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">Authoring without developers</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Publish faster with structured content models and inline editing.</h2>
+          <p class="text-gray-600 mb-4">Marketers update content, imagery, and CTAs directly in the CMS while developers focus on high-impact work. Structured content models keep every channel aligned across web, mobile, signage, and more.</p>
+          <div class="bg-white shadow-sm rounded-2xl">
+            <div class="p-6">
+              <ul class="grid gap-2 text-gray-600 text-sm m-0">
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 20h9M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg><span>Inline editing with live preview for real-time feedback.</span></li>
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="18" rx="1"/><rect x="14" y="3" width="7" height="11" rx="1"/></svg><span>Reusable layouts, snippets, and tokens for omnichannel reuse.</span></li>
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg><span>Approval workflows guarantee only approved content ships.</span></li>
               </ul>
             </div>
           </div>
@@ -78,55 +69,46 @@
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <a href="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg mb-4 mb-lg-0" data-capterra-lightbox="ai" aria-label="Expand agentic AI screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" alt="Agentic AI assisting content teams" class="w-100 h-100 object-fit-cover">
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <a href="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" class="capterra-lightbox-trigger block rounded-2xl overflow-hidden shadow-lg mb-4 lg:mb-0" data-capterra-lightbox="ai" aria-label="Expand agentic AI screenshot">
+            <img src="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" alt="Agentic AI assisting content teams" class="w-full h-full object-cover">
           </a>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">Agentic AI</span>
-          <h2 class="h1 fw-semibold mb-3">Automate ideation, localization, and optimization.</h2>
-          <p class="text-grey mb-4">Generate outlines, translate content, and surface insights with AI tuned to your brand. Agentic AI accelerates production while respecting your structured data and approvals.</p>
-          <ul class="list-unstyled d-grid gap-3 text-grey mb-0">
-            <li class="d-flex gap-3">
-              <i class="bi bi-robot text-capterra fs-4"></i>
-              <span>AI co-pilot drafts copy, headlines, metadata, and campaign variants on demand.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-translate text-capterra fs-4"></i>
-              <span>Localize for new markets in minutes with built-in translation suggestions.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-bar-chart text-capterra fs-4"></i>
-              <span>Data-driven prompts recommend topics based on performance trends.</span>
-            </li>
+        <div>
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">Agentic AI</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Automate ideation, localization, and optimization.</h2>
+          <p class="text-gray-600 mb-4">Generate outlines, translate content, and surface insights with AI tuned to your brand. Agentic AI accelerates production while respecting your structured data and approvals.</p>
+          <ul class="grid gap-3 text-gray-600 m-0">
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="currentColor"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16h.01M16 16h.01"/></svg><span>AI co-pilot drafts copy, headlines, metadata, and campaign variants on demand.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 8l6 6m-6 0l6-6m6 14l-3-7-3 7m-1-4h8"/></svg><span>Localize for new markets in minutes with built-in translation suggestions.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg><span>Data-driven prompts recommend topics based on performance trends.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <a href="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg mb-4 mb-lg-0" data-capterra-lightbox="workflow" aria-label="Expand workflows and publishing screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Publishing workflows and scheduling" class="w-100 h-100 object-fit-cover">
+  <section class="py-16 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div class="lg:order-2">
+          <a href="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="capterra-lightbox-trigger block rounded-2xl overflow-hidden shadow-lg mb-4 lg:mb-0" data-capterra-lightbox="workflow" aria-label="Expand workflows and publishing screenshot">
+            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Publishing workflows and scheduling" class="w-full h-full object-cover">
           </a>
         </div>
-        <div class="col-lg-6 order-lg-1">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">Workflows, versions &amp; publishing</span>
-          <h2 class="h1 fw-semibold mb-3">Keep every release auditable and launch-ready.</h2>
-          <p class="text-grey mb-4">Version history, side-by-side diffs, and environment staging give you total confidence. Schedule launches, automate expirations, and push to production when stakeholders approve.</p>
-          <div class="card border-0 shadow-sm">
-            <div class="card-body">
-              <ul class="list-unstyled d-grid gap-2 text-grey small mb-0">
-                <li><i class="bi bi-clock-history text-capterra me-2"></i>Version history with rollbacks and approvals.</li>
-                <li><i class="bi bi-calendar2-check text-capterra me-2"></i>Automated scheduling and expiry to align campaigns.</li>
-                <li><i class="bi bi-shield-check text-capterra me-2"></i>Cross-environment publishing guardrails for QA and compliance.</li>
+        <div class="lg:order-1">
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">Workflows, versions &amp; publishing</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Keep every release auditable and launch-ready.</h2>
+          <p class="text-gray-600 mb-4">Version history, side-by-side diffs, and environment staging give you total confidence. Schedule launches, automate expirations, and push to production when stakeholders approve.</p>
+          <div class="bg-white shadow-sm rounded-2xl">
+            <div class="p-6">
+              <ul class="grid gap-2 text-gray-600 text-sm m-0">
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span>Version history with rollbacks and approvals.</span></li>
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg><span>Automated scheduling and expiry to align campaigns.</span></li>
+                <li class="flex gap-2 items-start"><svg viewBox="0 0 24 24" class="w-4 h-4 text-capterra mt-0.5 shrink-0" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg><span>Cross-environment publishing guardrails for QA and compliance.</span></li>
               </ul>
             </div>
           </div>
@@ -135,67 +117,58 @@
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <a href="https://hj5v68xn.media.zestyio.com/analytics-visual.jpg" class="capterra-lightbox-trigger d-block rounded-4 overflow-hidden shadow-lg mb-4 mb-lg-0" data-capterra-lightbox="personalization" aria-label="Expand personalization analytics screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/analytics-visual.jpg" alt="A/B testing and personalization insights" class="w-100 h-100 object-fit-cover">
+  <section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <a href="https://hj5v68xn.media.zestyio.com/analytics-visual.jpg" class="capterra-lightbox-trigger block rounded-2xl overflow-hidden shadow-lg mb-4 lg:mb-0" data-capterra-lightbox="personalization" aria-label="Expand personalization analytics screenshot">
+            <img src="https://hj5v68xn.media.zestyio.com/analytics-visual.jpg" alt="A/B testing and personalization insights" class="w-full h-full object-cover">
           </a>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">A/B testing &amp; personalization</span>
-          <h2 class="h1 fw-semibold mb-3">Deliver the right experience to every audience.</h2>
-          <p class="text-grey mb-4">Target segments with tailored blocks, run experiments, and measure lift without duplicating content. Reuse structured data and AI-powered insights to keep campaigns relevant.</p>
-          <ul class="list-unstyled d-grid gap-3 text-grey mb-0">
-            <li class="d-flex gap-3">
-              <i class="bi bi-intersect text-capterra fs-4"></i>
-              <span>Segment visitors by audience, behavior, or lifecycle stage with reusable rules.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-patch-question text-capterra fs-4"></i>
-              <span>Run A/B or multivariate tests natively and push winners live instantly.</span>
-            </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-graph-up-arrow text-capterra fs-4"></i>
-              <span>Track impact through integrated analytics and shareable dashboards.</span>
-            </li>
+        <div>
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">A/B testing &amp; personalization</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Deliver the right experience to every audience.</h2>
+          <p class="text-gray-600 mb-4">Target segments with tailored blocks, run experiments, and measure lift without duplicating content. Reuse structured data and AI-powered insights to keep campaigns relevant.</p>
+          <ul class="grid gap-3 text-gray-600 m-0">
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="9" cy="9" r="7"/><circle cx="15" cy="15" r="7"/></svg><span>Segment visitors by audience, behavior, or lifecycle stage with reusable rules.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg><span>Run A/B or multivariate tests natively and push winners live instantly.</span></li>
+            <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-capterra shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><span>Track impact through integrated analytics and shareable dashboards.</span></li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Customer success meeting" class="w-100 h-100 object-fit-cover">
+  <section class="py-16 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="rounded-2xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=1200&q=80" alt="Customer success meeting" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-capterra-subtle text-capterra mb-3">Loved by digital teams</span>
-          <h2 class="h1 fw-semibold mb-3">Join brands launching faster with Content.One.</h2>
-          <p class="text-grey mb-4">From growth marketing to enterprise product teams, Content.One powers omnichannel storytelling with governance built in.</p>
+        <div>
+          <span class="inline-flex items-center bg-capterra-subtle text-capterra rounded-full px-3 py-1 text-xs font-semibold mb-3">Loved by digital teams</span>
+          <h2 class="font-display text-3xl md:text-4xl font-semibold mb-3">Join brands launching faster with Content.One.</h2>
+          <p class="text-gray-600 mb-4">From growth marketing to enterprise product teams, Content.One powers omnichannel storytelling with governance built in.</p>
           {{include /components/widgets/logos.html}}
         </div>
       </div>
     </div>
   </section>
 
-  <section id="capterra-demo-form" class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Talk with Content.One experts</h2>
-          <p class="lead text-grey mb-0">Share your goals-we'll show how visual editing, agentic AI, and governance fit your roadmap.</p>
+  <section id="capterra-demo-form" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center text-center mb-12">
+        <div class="lg:max-w-3xl">
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3">Talk with Content.One experts</h2>
+          <p class="text-lg text-gray-600 m-0">Share your goals—we'll show how visual editing, agentic AI, and governance fit your roadmap.</p>
         </div>
       </div>
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <div class="card border-0 shadow-lg">
-            <div class="card-body p-4 p-lg-5">
+      <div class="flex justify-center">
+        <div class="lg:max-w-3xl w-full">
+          <div class="bg-white shadow-lg rounded-2xl">
+            <div class="p-6 lg:p-10">
               {{include /components/forms/zoho-form.html}}
             </div>
           </div>
@@ -210,62 +183,22 @@
     <div class="modal-content bg-transparent border-0">
       <button type="button" class="btn-close btn-close-white ms-auto me-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
       <div class="modal-body p-0">
-        <img src="" alt="" class="capterra-lightbox-image rounded-4 shadow-lg w-100 h-auto">
+        <img src="" alt="" class="capterra-lightbox-image rounded-2xl shadow-lg w-full h-auto">
       </div>
     </div>
   </div>
 </div>
 
 <style>
-  .capterra-landing-page .bg-gradient-capterra {
-    background: linear-gradient(135deg, #0f172a 0%, #2563eb 45%, #22d3ee 100%);
-  }
-  .capterra-landing-page .text-capterra {
-    color: #2563eb !important;
-  }
-  .capterra-landing-page .bg-capterra-subtle {
-    background-color: rgba(37, 99, 235, 0.12) !important;
-  }
-  .capterra-landing-page .capterra-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
-  }
-  .capterra-landing-page .capterra-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(34, 211, 238, 0.45);
-    top: -140px;
-    right: -120px;
-  }
-  .capterra-landing-page .capterra-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(147, 51, 234, 0.35);
-    bottom: -160px;
-    left: -140px;
-  }
-  .capterra-landing-page .card h3,
-  .capterra-landing-page .card h2 {
-    color: #0f172a;
-  }
-  .capterra-landing-page .card .text-grey {
-    color: #64748b;
-  }
-  .capterra-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
-  }
-  .capterra-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .capterra-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
-  }
+  .capterra-landing-page .bg-gradient-capterra { background: linear-gradient(135deg, #0f172a 0%, #2563eb 45%, #22d3ee 100%); }
+  .capterra-landing-page .text-capterra { color: #2563eb !important; }
+  .capterra-landing-page .bg-capterra-subtle { background-color: rgba(37, 99, 235, 0.12) !important; }
+  .capterra-landing-page .capterra-glow { position: absolute; border-radius: 50%; filter: blur(140px); pointer-events: none; }
+  .capterra-landing-page .capterra-glow--one { width: 320px; height: 320px; background: rgba(34, 211, 238, 0.45); top: -140px; right: -120px; }
+  .capterra-landing-page .capterra-glow--two { width: 360px; height: 360px; background: rgba(147, 51, 234, 0.35); bottom: -160px; left: -140px; }
+  .capterra-lightbox-trigger { position: relative; cursor: zoom-in; }
+  .capterra-lightbox-modal .modal-body { display: flex; justify-content: center; align-items: center; }
+  .capterra-lightbox-modal .modal-content { background: rgba(15, 23, 42, 0.92); backdrop-filter: blur(4px); }
 </style>
 
 <script>
@@ -273,10 +206,8 @@
     var modalEl = document.getElementById('capterraLightboxModal');
     if (!modalEl) return;
     if (typeof bootstrap === 'undefined' || !bootstrap.Modal) return;
-
     var modalImg = modalEl.querySelector('.capterra-lightbox-image');
     if (!modalImg) return;
-
     var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
     document.querySelectorAll('.capterra-lightbox-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (event) {
@@ -289,7 +220,6 @@
         lightboxModal.show();
       });
     });
-
     modalEl.addEventListener('hidden.bs.modal', function () {
       modalImg.src = '';
       modalImg.alt = '';
@@ -299,13 +229,10 @@
 
 <script type="text/javascript">
   (function(l,o,w,n,g){
-  window._gz=function(e,t){window._ct={vid:e,vkey:t,
-  uc:true,hasDoNotTrackIPs:false};window.ct};
-  n=l.createElement(o);g=l.getElementsByTagName(o)[0];
-  n["async"]=1;
-  n.src=w;g.parentNode.insertBefore(n,g)})(
-  document,"script",
-  "https://tr.capterra.com/static/wp.js");
-  window._gz('c8fe14b3-b689-4949-895b-55e9f27769cb', 
-  'da41b876710afed7abfa202ce92323c0');
+    window._gz=function(e,t){window._ct={vid:e,vkey:t,uc:true,hasDoNotTrackIPs:false};window.ct};
+    n=l.createElement(o);g=l.getElementsByTagName(o)[0];
+    n["async"]=1;
+    n.src=w;g.parentNode.insertBefore(n,g)
+  })(document,"script","https://tr.capterra.com/static/wp.js");
+  window._gz('c8fe14b3-b689-4949-895b-55e9f27769cb', 'da41b876710afed7abfa202ce92323c0');
 </script>
