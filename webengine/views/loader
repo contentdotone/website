@@ -326,10 +326,8 @@
   }
 </script>
 
-<link rel="preload" as="style" href="https://www.content.one/assets/theme.css" crossorigin="anonymous">
-<link rel="stylesheet" id="theme-css" href="https://www.content.one/assets/theme.css" media="print" onload="this.media='all'" crossorigin="anonymous">
-
-<noscript><link rel="stylesheet" href="https://www.content.one/assets/theme.css" crossorigin="anonymous"></noscript>
+<!-- theme.css dropped for the Tailwind deployment (per ardeay 2026-05-31).
+     All visuals now come from Tailwind utilities + the loader's shim CSS above. -->
  
 <script> function gtag_report_conversion(url) { var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } }; gtag('event', 'conversion', { 'send_to': 'AW-955374362/FhacCNqOoMAbEJq2x8cD', 'event_callback': callback }); return false; } </script>
 
@@ -406,7 +404,7 @@
 
 <script type="text/javascript" src="{{instance.getJsUrl()}}" defer></script>
 (** <script type="text/javascript" src="/assets/theme.min.js"></script> **)
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+<!-- bootstrap.bundle.min.js dropped — vanilla shim above handles all data-bs-* + window.bootstrap.* calls. -->
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js" defer></script>
 
 <script>
@@ -632,15 +630,13 @@
 <script>
   (function () {
     var cover = document.getElementById('page-cover');
-    var themeLink = document.getElementById('theme-css');
-    if (!cover || !themeLink) return;
+    if (!cover) return;
 
     function fadeAndRemove() {
-      // Wait two frames to ensure media flip -> style apply -> paint
+      // Wait two frames to ensure paint
       requestAnimationFrame(function () {
         requestAnimationFrame(function () {
           cover.classList.add('is-fading');
-          // Remove from DOM when transition finishes, with a 300ms safety timeout
           var done = false;
           function cleanup() {
             if (done) return;
@@ -653,19 +649,14 @@
       });
     }
 
-    // Trigger after theme.css finishes and inline onload flips media='all'
-    themeLink.addEventListener('load', function () {
-      // Run after the inline onload handler
-      setTimeout(fadeAndRemove, 0);
-    }, { once: true });
-
-    // If loaded from cache before this script ran
-    if (themeLink.media === 'all' || themeLink.sheet) {
+    // Tailwind CDN + inline shim CSS are inline/blocking — fade as soon as DOM is ready.
+    if (document.readyState !== 'loading') {
       fadeAndRemove();
+    } else {
+      document.addEventListener('DOMContentLoaded', fadeAndRemove, { once: true });
     }
-
-    // Absolute fallback in case load never fires
-    setTimeout(fadeAndRemove, 5000);
+    // Absolute fallback
+    setTimeout(fadeAndRemove, 3000);
   })();
 </script>
 
