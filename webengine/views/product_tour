@@ -65,7 +65,8 @@
               {{/if}}
               <h3 class="font-display text-xl font-bold mb-2" data-tour-title>
                 {{if {tour_page.bootstrap_icon_name} }}
-                  <i class="bi bi-{{tour_page.bootstrap_icon_name}} text-royal mr-1" aria-hidden="true"></i>
+                  <!-- bootstrap_icon_name is CMS-driven; replaced with generic chevron SVG to drop the bootstrap-icons CDN. -->
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4 text-royal mr-1" aria-hidden="true"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg>
                 {{/if}}
                 {{tour_page.title}}
               </h3>
