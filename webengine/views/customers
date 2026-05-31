@@ -20,14 +20,14 @@
         {{each customer as customer}}
           <div data-customer-card data-code="{{customer.short_code}}">
             <article class="customer-card bg-white shadow-sm h-full rounded-2xl overflow-hidden flex flex-col">
-              <div class="customer-card__media relative">
-                <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="w-full h-full object-cover">
-                <div class="customer-card__overlay absolute inset-0"></div>
-                <div class="customer-card__logo absolute inset-0 flex items-center justify-center">
+              <div class="relative h-[220px] overflow-hidden">
+                <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/65"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center bg-white/90 rounded-full px-5 py-3 shadow-lg">
                   {{if {customer.logo} }}
-                    <img src="{{customer.logo.getImage(220,120)}}" alt="{{customer.name}} logo">
+                    <img src="{{customer.logo.getImage(220,120)}}" alt="{{customer.name}} logo" class="max-w-[180px] max-h-[72px] object-contain">
                   {{else}}
-                    <span class="font-semibold text-white">{{customer.short_code}}</span>
+                    <span class="font-semibold text-gray-900">{{customer.short_code}}</span>
                   {{end-if}}
                 </div>
               </div>
