@@ -80,9 +80,12 @@
   }
 </style>
 <header class="sticky-nav" data-sticky-nav>
-  <input type="checkbox" id="nav-offcanvas-toggle" aria-hidden="true">
   <nav class="w-full bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-3 w-full flex items-center justify-between py-3">
+      <!-- Hidden checkbox MUST be a sibling of .offcanvas-nav-panel below for the
+           CSS `:checked ~` selector to slide the panel in on tap. -->
+      <input type="checkbox" id="nav-offcanvas-toggle" aria-hidden="true">
+
       <a class="shrink-0" title="Content.One CMS Homepage" href="/">
         <img src="{{globals.logo_full.getImage()}}" width="160" height="36" alt="Content.One Logo" loading="eager" fetchpriority="high" />
       </a>
