@@ -66,8 +66,16 @@
   #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel { transform: translateX(0); }
   .offcanvas-backdrop { display: none; }
   @media (min-width: 1024px) {
-    /* Disable offcanvas behavior on desktop — show inline */
-    .offcanvas-nav-panel { transform: none !important; position: static !important; box-shadow: none !important; background: transparent !important; }
+    /* Disable offcanvas behavior on desktop — show inline.
+       overflow MUST be visible on desktop so absolute-positioned dropdown menus
+       can escape the panel's bounds instead of being clipped or pushing layout. */
+    .offcanvas-nav-panel {
+      transform: none !important;
+      position: static !important;
+      box-shadow: none !important;
+      background: transparent !important;
+      overflow: visible !important;
+    }
     .offcanvas-backdrop { display: none !important; }
   }
 </style>
