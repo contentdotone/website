@@ -45,9 +45,12 @@
     }
     .nav-details.nav-menu-right > .nav-menu { left: auto; right: 0; }
     .nav-details.nav-menu-wide > .nav-menu { min-width: 44rem; padding: 1rem; }
-    /* Hover-open on desktop without JS — toggle via focus-within so keyboard works too */
-    .nav-details:hover[open] > .nav-menu,
-    .nav-details:focus-within[open] > .nav-menu { display: block; }
+    /* Hover-open on desktop: show menu on hover or when keyboard focus is inside.
+       Padding below summary keeps the hover area contiguous with the menu so the
+       cursor doesn't lose the dropdown crossing the gap. */
+    .nav-details:hover > .nav-menu,
+    .nav-details:focus-within > .nav-menu { display: block; }
+    .nav-details > summary { padding-bottom: 0.75rem; }
   }
   .nav-details summary > .nav-caret { transition: transform .2s; }
   .nav-details[open] > summary > .nav-caret { transform: rotate(180deg); }
