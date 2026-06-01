@@ -81,12 +81,43 @@
     .offcanvas-backdrop { display: none !important; }
   }
 </style>
+<!-- Checkbox + offcanvas panel + backdrop live OUTSIDE the sticky-nav header.
+     Reason: sticky-nav uses `transform`/`will-change: transform` for its slide
+     animation, which makes it the containing block for `position: fixed`
+     descendants. If the panel were inside, `fixed top-0 bottom-0` would
+     position it relative to the 64px-tall header instead of the viewport. -->
+<input type="checkbox" id="nav-offcanvas-toggle" aria-hidden="true">
+
+<label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 lg:hidden cursor-pointer" aria-hidden="true"></label>
+
+<aside class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 bg-white shadow-xl overflow-y-auto lg:hidden" id="mobileNav" style="width: 20rem; max-width: 90vw;">
+  <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+    <a href="/" class="text-gray-900">
+      <img src="{{globals.logo.getImage()}}" width="100" height="100" alt="Content.One Logo" />
+    </a>
+    <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 p-2 text-2xl leading-none cursor-pointer" aria-label="Close navigation">&times;</label>
+  </div>
+  <div class="px-4 pt-2 pb-6">
+    <ul class="flex flex-col gap-2 m-0 list-none p-0">
+      {{each product_solutions as solution}}
+        <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="{{indy.getUrl()}}">{{solution.seo_link_title}}</a></li>
+      {{/each}}
+      {{each industries as indy}}
+        <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="{{indy.getUrl()}}">{{indy.seo_link_title}}</a></li>
+      {{/each}}
+      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/customers/">Customers</a></li>
+      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/product-tour/">Features</a></li>
+      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/blog/">Blog</a></li>
+      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="https://docs.zesty.io/" target="_blank">Documentation</a></li>
+      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/contact-us/">Contact Us</a></li>
+      <li class="mt-3"><a class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition" href="/contact-us/">Get Started</a></li>
+    </ul>
+  </div>
+</aside>
+
 <header class="sticky-nav" data-sticky-nav>
   <nav class="w-full bg-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-3 w-full flex items-center justify-between py-3">
-      <!-- Hidden checkbox MUST be a sibling of .offcanvas-nav-panel below for the
-           CSS `:checked ~` selector to slide the panel in on tap. -->
-      <input type="checkbox" id="nav-offcanvas-toggle" aria-hidden="true">
 
       <a class="shrink-0" title="Content.One CMS Homepage" href="/">
         <img src="{{globals.logo_full.getImage()}}" width="160" height="36" alt="Content.One Logo" loading="eager" fetchpriority="high" />
@@ -97,18 +128,10 @@
         <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </label>
 
-      <!-- Backdrop also toggles the checkbox (closes panel) -->
-      <label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 z-40 lg:hidden cursor-pointer" aria-hidden="true"></label>
-
-      <div class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 z-50 bg-white shadow-xl overflow-y-auto lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-6" id="mobileNav" style="width: 20rem; max-width: 90vw;">
-        <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100 lg:hidden">
-          <a href="/" class="text-gray-900">
-            <img src="{{globals.logo.getImage()}}" width="100" height="100" alt="Content.One Logo" />
-          </a>
-          <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 p-2 text-2xl leading-none cursor-pointer" aria-label="Close navigation">&times;</label>
-        </div>
-        <div class="px-4 pt-2 pb-6 lg:p-0 lg:flex lg:flex-1 lg:items-center">
-          <ul class="flex flex-col gap-2 m-0 list-none lg:flex-row lg:items-center lg:gap-1 lg:mx-auto">
+      <!-- Desktop nav content: full menu with dropdowns. Hidden below lg. -->
+      <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-6">
+        <div class="flex flex-1 items-center">
+          <ul class="flex flex-row items-center gap-1 mx-auto m-0 list-none p-0">
             <li>
               <details name="navmenu" class="nav-details">
                 <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
@@ -221,7 +244,8 @@
               </details>
             </li>
           </ul>
-          <div class="mt-3 lg:mt-0 flex flex-col lg:flex-row items-start lg:items-center gap-2">
+        </div>
+        <div class="flex flex-row items-center gap-2">
             <details name="navmenu" class="nav-details nav-menu-right">
               <summary class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition cursor-pointer">
                 <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-1" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
@@ -271,7 +295,6 @@
           </div>
         </div>
       </div>
-    </div>
   </nav>
 </header>
 <div id="nav-spacer" style="height:0"></div>
