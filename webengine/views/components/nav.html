@@ -61,7 +61,9 @@
     transition: transform .25s ease;
     transform: translateX(-100%);
     will-change: transform;
+    z-index: 1080; /* above sticky-nav (1030), modal-shim (1055), backdrop (1070) */
   }
+  .offcanvas-backdrop { z-index: 1070; }
   #nav-offcanvas-toggle:checked ~ .offcanvas-backdrop { display: block; }
   #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel { transform: translateX(0); }
   .offcanvas-backdrop { display: none; }
