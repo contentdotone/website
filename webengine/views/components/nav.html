@@ -80,6 +80,15 @@
     }
     .offcanvas-backdrop { display: none !important; }
   }
+
+  /* Mobile nav accordion styling */
+  .mobile-nav-group > summary { list-style: none; }
+  .mobile-nav-group > summary::-webkit-details-marker { display: none; }
+  .mobile-nav-group > summary::marker { content: ""; }
+  .mobile-nav-group .mobile-nav-caret { transition: transform .2s ease; }
+  .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(180deg); }
+  .mobile-nav-group[open] > summary { color: #4255BD; background: rgba(66,85,189,0.06); }
+  .mobile-nav-group + .mobile-nav-group, .mobile-nav-group + a, a + .mobile-nav-group { margin-top: .25rem; }
 </style>
 <!-- Checkbox + offcanvas panel + backdrop live OUTSIDE the sticky-nav header.
      Reason: sticky-nav uses `transform`/`will-change: transform` for its slide
@@ -90,28 +99,76 @@
 
 <label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 lg:hidden cursor-pointer" aria-hidden="true"></label>
 
-<aside class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 bg-white shadow-xl overflow-y-auto lg:hidden" id="mobileNav" style="width: 20rem; max-width: 90vw;">
-  <div class="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-    <a href="/" class="text-gray-900">
-      <img src="{{globals.logo.getImage()}}" width="100" height="100" alt="Content.One Logo" />
+<aside class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 bg-white shadow-2xl overflow-y-auto lg:hidden flex flex-col" id="mobileNav" style="width: 20rem; max-width: 90vw;">
+  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
+    <a href="/" class="text-gray-900 inline-flex items-center">
+      <img src="{{globals.logo.getImage(40)}}" width="40" height="40" alt="Content.One" class="w-10 h-10" />
+      <span class="ml-2 font-display font-semibold text-gray-900">Content.One</span>
     </a>
-    <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 p-2 text-2xl leading-none cursor-pointer" aria-label="Close navigation">&times;</label>
+    <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 w-9 h-9 inline-flex items-center justify-center rounded-md hover:bg-gray-100 text-2xl leading-none cursor-pointer" aria-label="Close navigation">&times;</label>
   </div>
-  <div class="px-4 pt-2 pb-6">
-    <ul class="flex flex-col gap-2 m-0 list-none p-0">
-      {{each product_solutions as solution}}
-        <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="{{indy.getUrl()}}">{{solution.seo_link_title}}</a></li>
-      {{/each}}
-      {{each industries as indy}}
-        <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="{{indy.getUrl()}}">{{indy.seo_link_title}}</a></li>
-      {{/each}}
-      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/customers/">Customers</a></li>
-      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/product-tour/">Features</a></li>
-      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/blog/">Blog</a></li>
-      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="https://docs.zesty.io/" target="_blank">Documentation</a></li>
-      <li><a class="block px-3 py-2 text-gray-700 hover:text-royal" href="/contact-us/">Contact Us</a></li>
-      <li class="mt-3"><a class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition" href="/contact-us/">Get Started</a></li>
-    </ul>
+
+  <nav class="flex-1 px-3 py-4">
+    <details class="mobile-nav-group" name="mobilemenu">
+      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+        <span>Solutions</span>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <ul class="list-none m-0 pl-3 pr-2 py-1">
+        {{each product_solutions as solution}}
+          <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">{{solution.seo_link_title}}</a></li>
+        {{/each}}
+      </ul>
+    </details>
+
+    <details class="mobile-nav-group" name="mobilemenu">
+      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+        <span>Industries</span>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <ul class="list-none m-0 pl-3 pr-2 py-1">
+        {{each industries as indy}}
+          <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">{{indy.seo_link_title}}</a></li>
+        {{/each}}
+      </ul>
+    </details>
+
+    <a href="/customers/" class="block px-3 py-3 rounded-lg text-gray-900 font-display font-semibold hover:bg-royal/5">Customers</a>
+
+    <details class="mobile-nav-group" name="mobilemenu">
+      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+        <span>Features</span>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <div class="pl-3 pr-2 py-1">
+        {{each product_sections as section order by section.sort_order}}
+          <div class="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-gray-400 font-semibold">{{section.section_name}}</div>
+          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc }}
+            <a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{nav_page.getUrl()}}">{{nav_page.seo_link_title}}</a>
+          {{/each}}
+        {{/each}}
+      </div>
+    </details>
+
+    <details class="mobile-nav-group" name="mobilemenu">
+      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+        <span>Resources</span>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </summary>
+      <ul class="list-none m-0 pl-3 pr-2 py-1">
+        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/blog/">Blog</a></li>
+        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://docs.zesty.io/">Documentation</a></li>
+        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://github.com/contentdotone">GitHub</a></li>
+        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/contact-us/">Contact Us</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <div class="px-5 py-4 border-t border-gray-100 bg-gray-50">
+    <a href="/contact-us/" class="flex items-center justify-center w-full rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 transition">
+      <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-2" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+      Get Started
+    </a>
   </div>
 </aside>
 
