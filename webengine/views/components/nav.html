@@ -287,6 +287,17 @@
       });
     });
 
+    // Single-active dropdown: hovering any nav-details closes any other open one.
+    // (name="navmenu" already handles the click-toggle case via the browser.)
+    var allDetails = document.querySelectorAll('.nav-details');
+    allDetails.forEach(function (d) {
+      d.addEventListener('mouseenter', function () {
+        allDetails.forEach(function (other) {
+          if (other !== d && other.open) other.removeAttribute('open');
+        });
+      });
+    });
+
     var showDelay = 300;
     var revealTimer = null;
     var isFixed = false;
