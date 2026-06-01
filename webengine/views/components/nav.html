@@ -287,14 +287,20 @@
       });
     });
 
-    // Single-active dropdown: hovering any nav-details closes any other open one.
-    // (name="navmenu" already handles the click-toggle case via the browser.)
+    // Hover-driven dropdowns:
+    //   - mouseenter on a nav-details opens it (and closes any other open one)
+    //   - mouseleave closes it
+    // (name="navmenu" already handles the click-toggle exclusivity case.)
     var allDetails = document.querySelectorAll('.nav-details');
     allDetails.forEach(function (d) {
       d.addEventListener('mouseenter', function () {
         allDetails.forEach(function (other) {
           if (other !== d && other.open) other.removeAttribute('open');
         });
+        d.setAttribute('open', '');
+      });
+      d.addEventListener('mouseleave', function () {
+        d.removeAttribute('open');
       });
     });
 
