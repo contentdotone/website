@@ -300,10 +300,16 @@
   .visually-hidden, .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
   .stretched-link::after { content:""; position:absolute; inset:0; }
 
-  /* Constrain inline SVG icons that picked up only a Tailwind text-* class from
-     the bs2tw converter (Bootstrap fs-N → text-Nxl). Without an explicit
-     width/height attr, the browser renders SVG at the default 300x150 — making
-     bullet icons monstrous. These rules size the icon to match its text class. */
+  /* Constrain inline SVG icons that don't have explicit width/height attrs OR
+     Tailwind w-N/h-N classes. The bs2tw converter mapped Bootstrap fs-N to
+     Tailwind text-Nxl, but text-* only sets font-size — SVGs without
+     width/height default to the browser fallback (300x150 px) and renders bullet
+     icons monstrously huge.
+     - First rule: any SVG without width/height/w-N/h-N classes falls back to 1em
+       so it inherits the surrounding text size (default 16px).
+     - Subsequent rules: size SVG to match its text-Nxl class so the icon scales
+       with the type. */
+  svg:not([width]):not([height]):not([class*="w-"]):not([class*="h-"]) { width:1em; height:1em; flex-shrink:0; }
   svg:not([width]):not([height])[class*="text-xs"]    { width:.75rem;  height:.75rem;  flex-shrink:0; }
   svg:not([width]):not([height])[class*="text-sm"]    { width:.875rem; height:.875rem; flex-shrink:0; }
   svg:not([width]):not([height])[class*="text-base"]  { width:1rem;    height:1rem;    flex-shrink:0; }
