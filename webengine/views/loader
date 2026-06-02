@@ -299,6 +299,22 @@
   details[open] > summary > svg { transform: rotate(180deg); }
   .visually-hidden, .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
   .stretched-link::after { content:""; position:absolute; inset:0; }
+
+  /* Constrain inline SVG icons that picked up only a Tailwind text-* class from
+     the bs2tw converter (Bootstrap fs-N → text-Nxl). Without an explicit
+     width/height attr, the browser renders SVG at the default 300x150 — making
+     bullet icons monstrous. These rules size the icon to match its text class. */
+  svg:not([width]):not([height])[class*="text-xs"]    { width:.75rem;  height:.75rem;  flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-sm"]    { width:.875rem; height:.875rem; flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-base"]  { width:1rem;    height:1rem;    flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-lg"]    { width:1.125rem;height:1.125rem;flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-xl"]:not([class*="text-2xl"]):not([class*="text-3xl"]):not([class*="text-4xl"]):not([class*="text-5xl"]):not([class*="text-6xl"]):not([class*="text-7xl"]) { width:1.25rem; height:1.25rem; flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-2xl"]   { width:1.5rem;  height:1.5rem;  flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-3xl"]   { width:1.875rem;height:1.875rem;flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-4xl"]   { width:2.25rem; height:2.25rem; flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-5xl"]   { width:3rem;    height:3rem;    flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-6xl"]   { width:3.75rem; height:3.75rem; flex-shrink:0; }
+  svg:not([width]):not([height])[class*="text-7xl"]   { width:4.5rem;  height:4.5rem;  flex-shrink:0; }
 </style>
 <script>
   tailwind.config = {
