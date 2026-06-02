@@ -1,0 +1,13 @@
+<!--
+  Isolated landing-page marketing snippet.
+
+  Include with `{{include /-/isolated-page-marketing-snippet.html}}` near the
+  end of <head> on standalone landing pages.
+
+  Output is the raw value of the globals.marketing_snippets field — the
+  marketer pastes in their full <script>/<noscript>/<iframe> tags directly
+  (Microsoft Clarity, Google Tag Manager, LinkedIn Insight, Meta Pixel,
+  whatever else they're running). Do NOT wrap in a <script> tag here — the
+  pasted content already has its own tags embedded.
+-->
+{{globals.marketing_snippets}}
