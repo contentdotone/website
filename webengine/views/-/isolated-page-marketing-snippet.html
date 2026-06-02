@@ -9,5 +9,10 @@
   (Microsoft Clarity, Google Tag Manager, LinkedIn Insight, Meta Pixel,
   whatever else they're running). Do NOT wrap in a <script> tag here — the
   pasted content already has its own tags embedded.
+
+  Guarded with {{if}} so the page still renders if the field isn't yet on the
+  globals content model — Parsley otherwise errors hard on missing fields.
 -->
+{{if {globals.marketing_snippets} }}
 {{globals.marketing_snippets}}
+{{end-if}}
