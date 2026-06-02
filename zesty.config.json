@@ -739,6 +739,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-02T20:08:39Z",
                 "createdAt": "2026-06-02T20:08:39Z"
+            },
+            "/-/isolated-page-marketing-snippet.html": {
+                "zuid": "11-ac94bdfa84-bj4lhr",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T20:15:11Z",
+                "createdAt": "2026-06-02T20:15:11Z"
             }
         },
         "styles": {
