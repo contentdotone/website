@@ -733,6 +733,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-02T17:25:54Z",
                 "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/mcp-press-release.html": {
+                "zuid": "11-f8f0deab9b-tr0stj",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T20:08:39Z",
+                "createdAt": "2026-06-02T20:08:39Z"
             }
         },
         "styles": {
