@@ -5,8 +5,8 @@
     {{$imageHeader = {this.hero_image.getImage()} }}
     {{/if}}
     <style>
-        .parallax-header {
-        background-image: url('{{$imageHeader}}'); 
+      .parallax-header {
+        background-image: url('{{$imageHeader}}');
         height: 300px;
         background-attachment: fixed;
         background-position: bottom;
@@ -16,223 +16,151 @@
         display: flex;
         align-items: center;
         color: white;
-        }
-
-        .parallax-header h1 {
-        font-size: 2rem;
-        font-weight: bold;
-        z-index: 2;
-        }
-
-        /* Optional: dark overlay for contrast */
-        .parallax-header::before {
-        content: "";
-        position: absolute;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-        z-index: 1;
-        }
-
-
+      }
+      .parallax-header h1 { font-size: 2rem; font-weight: bold; z-index: 2; }
+      .parallax-header::before {
+        content: ""; position: absolute; top: 0; left: 0;
+        width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); z-index: 1;
+      }
     </style>
 
-
-
-    <!--body-->
     <header class="parallax-header">
-        <div class="container">
-            <h1 class="position-relative">{{ this.title }}</h1>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="relative font-display">{{ this.title }}</h1>
         </div>
     </header>
 
-
-    <section class="my-xl-9 my-5">
-        <div class="container my-5">
-            <div class="row">
-                <!-- Main Content: 3/4 width on desktop, appears first on mobile -->
-                <div class="col-12 col-lg-9 order-1 order-lg-1">
-                    <div class="main-content mr-6">
-                        <div class="content">{{ this.body }}</div>
-                        <!-- Add more product details here -->
+    <section class="my-12 xl:my-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+                <div class="lg:col-span-9 order-1">
+                    <div class="main-content lg:pr-12">
+                        <div class="content prose prose-slate max-w-none">{{ this.body }}</div>
                     </div>
                 </div>
-
-                <!-- Sidebar: 1/4 width on desktop, appears second on mobile -->
-                <div class="col-12 col-lg-3 order-2 order-lg-2">
-                
-                    <div class="collapse d-md-block" id="collapseAccountMenu">
-                        <h3 class="font-light">Product Tour</h3>
-                        <ul class="nav flex-column nav-account">
+                <div class="lg:col-span-3 order-2">
+                    <div id="collapseAccountMenu">
+                        <h3 class="font-display font-light text-xl mb-3">Product Tour</h3>
+                        <ul class="flex flex-col gap-1">
                             {{each product_sections as section order by section.sort_order  }}
-                                <li class="nav-item {{$active}}">
-                                    <span class="ms-2"><strong>{{section.section_name}}</strong></span>
+                                <li class="{{$active}}">
+                                    <span class="ml-2"><strong>{{section.section_name}}</strong></span>
                                 </li>
                                 {{each product_tour_pages as tour_page where product_section = '{section.zuid}'}}
                                 {{$active = ""}}
                                 {{if '{tour_page.path_part}' == '{request.pathPart(2)}' }}
                                 {{$active = active at}}
                                 {{/if}}
-                                <li class="nav-item {{$active}}">
-                                    <a class="nav-link {{$active}}" href="{{tour_page.getURL()}}" title="{{tour_page.title}}">
-                                        <i class="align-bottom bx bx-home"></i>
-                                        <span class="ms-2">{{tour_page.seo_link_title}}</span>
+                                <li class="{{$active}}">
+                                    <a class="block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10 {{$active}}" href="{{tour_page.getURL()}}" title="{{tour_page.title}}">
+                                        <span class="ml-2">{{tour_page.seo_link_title}}</span>
                                     </a>
                                 </li>
                                 {{/each}}
                             {{/each}}
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
     </section>
-    <!-- call to action -->
-    <section class="my-xl-9 my-5">
-        <div class="container my-5">
+
+    <section class="my-12 xl:my-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
             {{block(/-/block/form_capture.html)}}
         </div>
     </section>
+
     <style>
-        .relative-card{
-            position: relative;
-            z-index: 1;
-        }
-        .relative-card .badge{
-            position: absolute;
-            top: 75%;
-            right: 10%;
-            text-decoration: none;
-            z-index: 2;
-            font-size: 18px;
-        }
-        .absolute-text{
-            position: absolute;
-            width: 85%;
-            top: 5%;
-            left: 10%;
-            color: white;
-            z-index: 2;
+        .relative-card { position: relative; z-index: 1; }
+        .relative-card .badge { position: absolute; top: 75%; right: 10%; text-decoration: none; z-index: 2; font-size: 18px; }
+        .absolute-text {
+            position: absolute; width: 85%; top: 5%; left: 10%; color: white; z-index: 2;
             font-size: 36px;
-            text-shadow: 0px 0px 10px black,0px 0px 10px black,0px 0px 10px black;
-
+            text-shadow: 0px 0px 10px black, 0px 0px 10px black, 0px 0px 10px black;
         }
-        .absolute-text a{
-            text-decoration: none;
-        }
-        .absolute-text span {
-            font-size: 64px;
-            font-weight: bold;
-        }
+        .absolute-text a { text-decoration: none; }
+        .absolute-text span { font-size: 64px; font-weight: bold; }
     </style>
-    <!-- product follow up -->
+
     <section>
-        <div class="container my-5">
-            <h2 class="mb-4">Learn more about <strong>{{product_sections.filter({this.product_section}).section_name}}</strong> in <strong>Content.One</strong></h2>
-            <!-- build cards here -->
-            <div class="table-responsive-lg">
-                <div class="row g-5 flex-nowrap pb-2 pb-lg-0 me-5 me-lg-0" onclick="window.location='{{follow_page.getURL()}}'">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-12">
+            <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4">Learn more about <strong>{{product_sections.filter({this.product_section}).section_name}}</strong> in <strong>Content.One</strong></h2>
+            <div class="overflow-x-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-2" onclick="window.location='{{follow_page.getURL()}}'">
                     {{each product_tour_pages as follow_page where z.path_part != '{this.path_part}' AND follow_page.product_section = '{this.product_section}' }}
-                    <article class="col-lg-4 col-md-6 col-12 relative-card">
-                    
-
-                        <a href="#!" class="badge bg-primary-subtle text-primary-emphasis rounded-pill text-uppercase">{{product_sections.filter({this.product_section}).section_name}}</a>
-                        <h3 class="my-3 lh-base h4 absolute-text">
-                            <a href="{{follow_page.getURL()}}" class="text-reset">{{follow_page.title}}</a>
+                    <article class="relative-card">
+                        <a href="#!" class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 text-xs font-semibold uppercase">{{product_sections.filter({this.product_section}).section_name}}</a>
+                        <h3 class="my-3 absolute-text">
+                            <a href="{{follow_page.getURL()}}" class="text-white">{{follow_page.title}}</a>
                             <br>
-                            <span alt="{{follow_page.title}} icon" class="avatar avatar-xs rounded-circle bi-icon bi-{{follow_page.bootstrap_icon_name}}"></span>
-                        </h3> 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" alt="{{follow_page.title}} icon" aria-hidden="true"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/></svg>
+                        </h3>
                         <figure class="mb-4 zoom-img">
-                            
                             <a href="{{follow_page.getURL()}}">
                                 {{if {follow_page.hero_image} }}
-                                <img src="{{follow_page.hero_image.getImage()}}" alt="{{follow_page.title}}" class="img-fluid rounded-3">
+                                <img src="{{follow_page.hero_image.getImage()}}" alt="{{follow_page.title}}" class="w-full rounded-2xl">
                                 {{else}}
-                                <img src="https://hj5v68xn.media.zestyio.com/ai-background.jpg" alt="default image" class="img-fluid rounded-3">
+                                <img src="https://hj5v68xn.media.zestyio.com/ai-background.jpg" alt="default image" class="w-full rounded-2xl">
                                 {{/if}}
                             </a>
                         </figure>
                     </article>
                     {{/each}}
-            
-                </div>
-            </div>
-            <h2 class="mb-4">Explore other Product Areas of <strong>Content.One</strong></h2>
-            <div class="">
-                <div class="row g-5 pb-2 pb-lg-0 me-5 me-lg-0" onclick="window.location='{{follow_page.getURL()}}'">
-                    {{each product_tour_pages as follow_page where follow_page.product_section != '{this.product_section}' }}
-                    <article class="col-lg-4 col-md-6 col-12 relative-card">
-                    
-
-                        <a href="#!" class="badge bg-primary-subtle text-primary-emphasis rounded-pill text-uppercase">{{product_sections.filter({this.product_section}).section_name}}</a>
-                        <h3 class="my-3 lh-base h4 absolute-text">
-                            <a href="{{follow_page.getURL()}}" class="text-reset">{{follow_page.title}}</a>
-                            <br>
-                            <span alt="{{follow_page.title}} icon" class="avatar avatar-xs rounded-circle bi-icon bi-{{follow_page.bootstrap_icon_name}}"></span>
-                        </h3> 
-                        <figure class="mb-4 zoom-img">
-                            
-                            <a href="{{follow_page.getURL()}}">
-                                {{if {follow_page.hero_image} }}
-                                <img src="{{follow_page.hero_image.getImage()}}" alt="{{follow_page.title}}" class="img-fluid rounded-3">
-                                {{else}}
-                                <img src="https://hj5v68xn.media.zestyio.com/ai-background.jpg" alt="default image" class="img-fluid rounded-3">
-                                {{/if}}
-                            </a>
-                        </figure>
-                    </article>
-                    {{/each}}
-            
                 </div>
             </div>
 
+            <h2 class="font-display text-2xl md:text-3xl font-semibold mb-4 mt-8">Explore other Product Areas of <strong>Content.One</strong></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pb-2" onclick="window.location='{{follow_page.getURL()}}'">
+                {{each product_tour_pages as follow_page where follow_page.product_section != '{this.product_section}' }}
+                <article class="relative-card">
+                    <a href="#!" class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 text-xs font-semibold uppercase">{{product_sections.filter({this.product_section}).section_name}}</a>
+                    <h3 class="my-3 absolute-text">
+                        <a href="{{follow_page.getURL()}}" class="text-white">{{follow_page.title}}</a>
+                        <br>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" alt="{{follow_page.title}} icon" aria-hidden="true"><path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"/></svg>
+                    </h3>
+                    <figure class="mb-4 zoom-img">
+                        <a href="{{follow_page.getURL()}}">
+                            {{if {follow_page.hero_image} }}
+                            <img src="{{follow_page.hero_image.getImage()}}" alt="{{follow_page.title}}" class="w-full rounded-2xl">
+                            {{else}}
+                            <img src="https://hj5v68xn.media.zestyio.com/ai-background.jpg" alt="default image" class="w-full rounded-2xl">
+                            {{/if}}
+                        </a>
+                    </figure>
+                </article>
+                {{/each}}
+            </div>
         </div>
     </section>
 {{/if}}
-<script>
-/**
-  window.addEventListener('load', () => {
-      scrollCue.init({
-        // tweak as you like
-        percentage: 0.85,  // trigger when 25% in view
-        interval: -0.15,   // stagger children
-        duration: 400,
-        // once: true,     // uncomment if you only want it to fire once
-      });
-    });
 
-    */
-</script>
-
-
-<section class="bg-secondary p-5">
-    <div class="container">
-        
-        <h3 class="h3 mb-5">Read about Customers who've leveraged {{this.title}} from Content.One</h3>
-        <div class="row g-4" id="customersGrid">
-        {{each customer as customer order by rand() limit 4}} 
-        <div class="col-12 col-md-6 col-xl-3" data-customer-card data-code="{{customer.short_code}}">
-            <article class="customer-card card h-100 border-0 shadow-sm overflow-hidden">
-            <div class="customer-card__media position-relative">
-                <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="w-100 h-100 object-fit-cover">
-                <div class="customer-card__overlay position-absolute inset-0"></div>
-                <div class="customer-card__logo position-absolute">
-                {{if {customer.logo} }}
-                    <img src="{{customer.logo.getImage(220,120)}}" alt="{{customer.name}} logo">
-                {{else}}
-                    <span class="fw-semibold">{{customer.short_code}}</span>
-                {{end-if}}
+<section class="bg-gray-100 p-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-5">Read about Customers who've leveraged {{this.title}} from Content.One</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" id="customersGrid">
+        {{each customer as customer order by rand() limit 4}}
+        <div data-customer-card data-code="{{customer.short_code}}">
+            <article class="customer-card bg-white shadow-sm h-full rounded-2xl overflow-hidden flex flex-col">
+              <div class="relative h-[220px] overflow-hidden">
+                <img src="{{customer.header_image.getImage(640,360)}}" alt="{{customer.name}} background" class="absolute inset-0 w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-gray-900/20 to-gray-900/65"></div>
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center justify-center bg-white/90 rounded-full px-5 py-3 shadow-lg">
+                  {{if {customer.logo} }}
+                    <img src="{{customer.logo.getImage(220,120)}}" alt="{{customer.name}} logo" class="max-w-[180px] max-h-[72px] object-contain">
+                  {{else}}
+                    <span class="font-semibold text-gray-900">{{customer.short_code}}</span>
+                  {{end-if}}
                 </div>
-            </div>
-            <div class="card-body">
-                <h3 class="h4 mb-2">{{customer.name}}</h3>
-                <p class="text-grey mb-3">{{customer.short_description.subwords(20)}}...</p>
-                
-            </div>
-            <footer class="card-footer border-0 pt-0 bg-transparent">
-                <a href="{{customer.getURL()}}" class="btn btn-outline-primary w-100">Learn More</a>
-            </footer>
+              </div>
+              <div class="p-6 flex-1">
+                <h3 class="font-display text-xl font-bold mb-2">{{customer.name}}</h3>
+                <p class="text-gray-600 mb-3">{{customer.short_description.subwords(20)}}...</p>
+              </div>
+              <footer class="px-6 pb-6 bg-transparent">
+                <a href="{{customer.getURL()}}" class="inline-flex items-center justify-center w-full rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-4 py-2.5 transition">Learn More</a>
+              </footer>
             </article>
         </div>
         {{/each}}
@@ -240,4 +168,4 @@
     </div>
 </section>
 
- {{blocks('/-/block/sales_personal_cta.html') }}
+{{blocks('/-/block/sales_personal_cta.html') }}

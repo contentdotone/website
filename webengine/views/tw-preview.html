@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tailwind Migration Preview — Content.One</title>
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind Play CDN with brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal:     '#4255BD',
+            royalDark: '#2F3F94',
+            royalLite: '#8C9BE6',
+            ink:       '#0B0F1C',
+            paper:     '#FAFAFC',
+            success:   '#36B37E',
+            warning:   '#FFAB00',
+            danger:    '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+
+  <style>
+    body { font-family: 'Satoshi','DM Sans',system-ui,sans-serif; background:#FAFAFC; color:#0B0F1C; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'DM Sans','system-ui',sans-serif; letter-spacing: -0.015em; }
+  </style>
+</head>
+<body>
+
+  <!-- Migration header strip -->
+  <div class="bg-ink text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-3">
+      <div>
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royalLite">Tailwind Migration · Preview</p>
+        <h1 class="font-display text-xl md:text-2xl font-bold mt-1">on_demand_developers — converted</h1>
+      </div>
+      <p class="text-xs md:text-sm text-white/60 max-w-md">Pure Tailwind. Brand tokens loaded inline (royal <code class="text-royalLite">#4255BD</code>, ink <code class="text-royalLite">#0B0F1C</code>, DM Sans / Satoshi). No Bootstrap class dependencies. Inline SVG icons replace <code class="text-royalLite">bi-*</code>.</p>
+    </div>
+  </div>
+
+  <!-- Converted components — visual fidelity demo -->
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">01 · on_demand_developers.html</p></div></div>
+  {{include /components/features/on_demand_developers.html}}
+
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">02 · analytics_highlight.html</p></div></div>
+  {{include /components/features/analytics_highlight.html}}
+
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">03 · block_highlight.html</p></div></div>
+  {{include /components/features/block_highlight.html}}
+
+  <div class="bg-gray-50 py-6 border-t border-gray-200"><div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"><p class="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-royal">04 · hybrid_advantage.html</p></div></div>
+  {{include /components/features/hybrid_advantage.html}}
+
+  <!-- Note: blocks at /-/block/ aren't directly includable via parsley — they render only as block-instances inside their parent pages. Removed inline include of review_block. -->
+
+
+  <!-- After / status strip -->
+  <div class="border-t border-gray-200 bg-white mt-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Migration status — batches 1 + 2</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold mb-3">13 files converted so far.</h2>
+      <div class="grid md:grid-cols-2 gap-x-10 gap-y-2 text-sm text-gray-700 max-w-3xl">
+        <ul class="space-y-1">
+          <li class="font-semibold text-gray-900">Feature components</li>
+          <li>· components/features/on_demand_developers.html</li>
+          <li>· components/features/analytics_highlight.html</li>
+          <li>· components/features/block_highlight.html</li>
+          <li>· components/features/hybrid_advantage.html</li>
+        </ul>
+        <ul class="space-y-1">
+          <li class="font-semibold text-gray-900">CTAs</li>
+          <li>· components/ctas/book-button.html</li>
+          <li>· components/ctas/customer-button.html</li>
+          <li>· components/ctas/solutions-button.html</li>
+          <li>· components/ctas/email-subscription-form.html</li>
+        </ul>
+        <ul class="space-y-1 mt-4 md:mt-0">
+          <li class="font-semibold text-gray-900">Blocks</li>
+          <li>· -/block/client_logos.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/mission_driven_success.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/review_block.html ✓ rendered above</li>
+          <li>· -/block/form_capture.html <span class="text-gray-400">(needs block-instance data)</span></li>
+          <li>· -/block/download_cta_full.html <span class="text-gray-400">(needs block-instance data)</span></li>
+        </ul>
+      </div>
+      <p class="text-gray-500 text-sm mt-6 max-w-3xl">VQA note: blocks driven by <code class="text-royal">{{this.X}}</code> instance fields render fully only on a parent page that has block-instance data; on the standalone preview only their layout would show (with empty content). They're fidelity-checked once their parent pages are converted.</p>
+      <p class="text-gray-500 text-sm mt-2 max-w-3xl">Components with JS interactions (nav offcanvas + dropdowns, footer collapse, accordions) deferred until a JS interaction strategy is locked in.</p>
+    </div>
+  </div>
+
+</body>
+</html>

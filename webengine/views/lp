@@ -1,4 +1,4 @@
 (** default code https://zesty.org/services/web-engine/introduction-to-parsley/parsley-autolayout **)
-<div class="container">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     {{this.autolayout()}}
 </div>

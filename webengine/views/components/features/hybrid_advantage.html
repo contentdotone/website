@@ -1,108 +1,88 @@
-<section class="hybrid-advantage py-6 bg-dark text-white">
-  <div class="container">
-    <div class="text-center mb-4">
-      <h2 class="display-6 fw-bold mb-3 text-white">
-        Content.One Hybrid Advantage: <span class="text-accent">Less Software Needed</span>
+<!--
+  hybrid_advantage — Tailwind-converted.
+  Dark navy card with two side-by-side bracket cards (Pure Headless CMS vs
+  Required Additional Software). Bracket decoration kept as scoped <style>
+  for the ::before/::after pseudo-elements.
+-->
+<section class="hybrid-advantage py-12 md:py-16 text-white max-w-7xl mx-auto" style="background:#0f172a; border-radius:20px; box-shadow:0 18px 50px rgba(0,0,0,0.35);">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-8">
+      <h2 class="text-3xl md:text-4xl font-display font-bold text-white mb-3">
+        Content.One Hybrid Advantage: <span class="text-royalLite">Less Software Needed</span>
       </h2>
-      <p class="lead text-muted mb-0">
-        Pure headless CMS require additional software. Content.One offers end-to-end hosting and delivery services
-        that accelerate digital marketing efforts through infrastructure and marketing automation.
+      <p class="text-base md:text-lg max-w-3xl mx-auto" style="color:rgba(255,255,255,0.82);">
+        Pure headless CMS require additional software. Content.One offers end-to-end hosting and delivery services that accelerate digital marketing efforts through infrastructure and marketing automation.
       </p>
     </div>
 
-    <div class="row g-4">
-      <div class="col-lg-6">
-        <div class="bracket-card h-100">
-          <div class="bracket-label text-center fw-semibold mb-3">Pure Headless CMS</div>
-          <div class="row row-cols-2 g-4 text-center">
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-cloud-check fs-1"></i>
-                <div class="fw-semibold">Software Hosting</div>
-              </div> 
-            </div> 
-            <div class="col"> 
-              <div class="icon-tile">
-                <i class="bi bi-hdd-stack fs-1"></i>
-                <div class="fw-semibold">Database</div>
-                <div class="small text-muted">Backups, Storage, etc</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-window fs-1"></i>
-                <div class="fw-semibold">Software</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-share fs-1"></i>
-                <div class="fw-semibold">API Content Feed</div>
-              </div>
-            </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+      <!-- Pure Headless CMS bracket -->
+      <div class="bracket-card h-full px-5 pt-8 pb-6">
+        <div class="text-center font-semibold mb-3">Pure Headless CMS</div>
+        <div class="grid grid-cols-2 gap-6 text-center">
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M18 10a6 6 0 0 0-11.66-2A4 4 0 0 0 6 16h12a4 4 0 0 0 0-8z"/><path d="M9 13l2 2 4-4"/></svg>
+            <div class="font-semibold">Software Hosting</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
+            <div class="font-semibold">Database</div>
+            <div class="text-xs" style="color:rgba(255,255,255,0.65);">Backups, Storage, etc</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+            <div class="font-semibold">Software</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51L8.59 10.49"/></svg>
+            <div class="font-semibold">API Content Feed</div>
           </div>
         </div>
       </div>
 
-      <div class="col-lg-6">
-        <div class="bracket-card h-100">
-          <div class="bracket-label text-center fw-semibold mb-3">Required Additional Software</div>
-          <div class="row row-cols-2 row-cols-md-3 g-4 text-center">
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-layout-text-window-reverse fs-1"></i>
-                <div class="fw-semibold">Page Build</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-search fs-1"></i>
-                <div class="fw-semibold">SEO Metadata</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-pc-display-horizontal fs-1"></i>
-                <div class="fw-semibold">Website Hosting</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-shield-lock-fill fs-1"></i>
-                <div class="fw-semibold">Security</div>
-                <div class="small text-muted">TLS, Software Security, DDOS Protection, etc</div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="icon-tile">
-                <i class="bi bi-globe fs-1"></i>
-                <div class="fw-semibold">Content Delivery Network</div>
-              </div>
-            </div>
+      <!-- Required Additional Software bracket -->
+      <div class="bracket-card h-full px-5 pt-8 pb-6">
+        <div class="text-center font-semibold mb-3">Required Additional Software</div>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            <div class="font-semibold">Page Build</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+            <div class="font-semibold">SEO Metadata</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4"/></svg>
+            <div class="font-semibold">Website Hosting</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="currentColor" aria-hidden="true"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg>
+            <div class="font-semibold">Security</div>
+            <div class="text-xs" style="color:rgba(255,255,255,0.65);">TLS, Software Security, DDOS Protection, etc</div>
+          </div>
+          <div class="flex flex-col gap-1 items-center text-white">
+            <svg viewBox="0 0 24 24" class="w-9 h-9" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+            <div class="font-semibold">Content Delivery Network</div>
           </div>
         </div>
       </div>
+
     </div>
 
-    <div class="cta-bracket mt-5 bg-white">
-      <p class="mb-0 fw-semibold text-accent">On Content.One, all website software to launch, host, and deploy are included out of the box, and customizable as needed.</p>
+    <div class="cta-bracket mt-8 bg-white text-center rounded-2xl border-[3px] border-royal px-6 py-4">
+      <p class="m-0 font-semibold text-royal">On Content.One, all website software to launch, host, and deploy are included out of the box, and customizable as needed.</p>
     </div>
   </div>
 </section>
 
 <style>
-  .hybrid-advantage {
-    background: #0f172a;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
-  }
-  .hybrid-advantage .text-accent {
-    color: var(--bs-primary);
-  }
+  /* Bracket decoration — kept as inline CSS since pseudo-elements with
+     positioned ::before/::after are awkward to express purely with Tailwind. */
   .hybrid-advantage .bracket-card {
     position: relative;
-    padding: 2rem 1.25rem 1.5rem;
     border-top: 3px solid #ffffff;
     border-radius: 10px;
   }
@@ -115,38 +95,10 @@
     height: 60px;
     background: #ffffff;
   }
-  .hybrid-advantage .bracket-card::before {
-    left: 0;
-  }
-  .hybrid-advantage .bracket-card::after {
-    right: 0;
-  }
-  .hybrid-advantage .icon-tile {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
-    align-items: center;
-    color: #ffffff;
-  }
-  .hybrid-advantage .icon-tile i {
-    line-height: 1;
-  }
-  .hybrid-advantage .cta-bracket {
-    border: 3px solid var(--bs-primary);
-    border-radius: 14px;
-    padding: 1rem 1.5rem;
-    text-align: center;
-    color: var(--bs-primary);
-  }
-  .hybrid-advantage .lead,
-  .hybrid-advantage .text-muted,
-  .hybrid-advantage .small.text-muted {
-    color: rgba(255,255,255,0.82) !important;
-  }
+  .hybrid-advantage .bracket-card::before { left: 0; }
+  .hybrid-advantage .bracket-card::after { right: 0; }
   @media (max-width: 767.98px) {
     .hybrid-advantage .bracket-card::before,
-    .hybrid-advantage .bracket-card::after {
-      height: 40px;
-    }
+    .hybrid-advantage .bracket-card::after { height: 40px; }
   }
 </style>

@@ -1,6 +1,6 @@
 <div class="brand-page">
   <section class="brand-hero">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="brand-hero__eyebrow">Brand assets</div>
       <div class="brand-hero__grid">
         <div>
@@ -17,7 +17,7 @@
   </section> 
 
   <section class="brand-section" id="logo-suite">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="brand-section__header">
         <div>
           <div class="brand-section__label">Logo suite</div>
@@ -224,7 +224,7 @@
   </section>
 
   <section class="brand-section brand-section--soft" id="color-system">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="brand-section__header">
         <div>
           <div class="brand-section__label">Color system</div>
@@ -308,7 +308,7 @@
   </section>
 
   <section class="brand-section brand-section--typography" id="typography">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="brand-section__header">
         <div>
           <div class="brand-section__label">Typography</div>
@@ -545,7 +545,7 @@
   </section>
 
   <section class="brand-section">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="brand-section__header">
         <div>
           <div class="brand-section__label">Usage</div>

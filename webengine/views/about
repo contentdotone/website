@@ -1,360 +1,170 @@
 <main>
-           <!--Mission start-->
-         <section class="py-5 py-lg-6 border-top mission-section text-white position-relative overflow-hidden">
-            <div class="position-absolute top-0 start-0 w-100 h-100 mission-section__overlay"></div>
-            <div class="container position-relative">
-               <div class="row g-5 align-items-center">
-                  <div class="col-lg-5">
-                     <div class="badge bg-white text-primary mb-3 fw-semibold text-uppercase">Our mission</div>
-                     <h2 class="display-6 fw-semibold mb-3 text-white">Empower every team to build, launch, and scale experiences in one secure platform.</h2>
-                     <p class="text-white-75 mb-0">Content.One unifies marketer-friendly creation, developer precision, and AI assistance so organizations can thrive in a world of AI search and intelligent agents. We exist to give enterprises the governance of legacy suites with the agility and cost-efficiency of modern content tooling.</p>
-                  </div>
-                  <div class="col-lg-7">
-                     <div class="row g-3 g-lg-4">
-                        <div class="col-sm-6">
-                           <div class="mission-pill card border-0 shadow-sm h-100">
-                              <div class="card-body p-4">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <i class="bi bi-graph-up-arrow text-primary fs-4"></i>
-                                    <div>
-                                       <h3 class="h6 mb-1 text-dark">Enterprise scale</h3>
-                                       <p class="text-muted small mb-0">Support thousands of pages, regional teams, and rigorous workflows without friction.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="mission-pill card border-0 shadow-sm h-100">
-                              <div class="card-body p-4">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <i class="bi bi-shield-lock text-primary fs-4"></i>
-                                    <div>
-                                       <h3 class="h6 mb-1 text-dark">Security &amp; compliance</h3>
-                                       <p class="text-muted small mb-0">Encryption, audit logs, and SSO-ready controls trusted by regulated industries.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="mission-pill card border-0 shadow-sm h-100">
-                              <div class="card-body p-4">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <i class="bi bi-cpu text-primary fs-4"></i>
-                                    <div>
-                                       <h3 class="h6 mb-1 text-dark">AI workforce</h3>
-                                       <p class="text-muted small mb-0">Activate AI copilots, insights, and automation that boost every team’s productivity.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="mission-pill card border-0 shadow-sm h-100">
-                              <div class="card-body p-4">
-                                 <div class="d-flex align-items-start gap-3">
-                                    <i class="bi bi-plug text-primary fs-4"></i>
-                                    <div>
-                                       <h3 class="h6 mb-1 text-dark">Seamless integration</h3>
-                                       <p class="text-muted small mb-0">Connect to enterprise tech stacks, analytics, and APIs without sacrificing speed.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="mission-heritage-card mt-4 rounded-4 overflow-hidden position-relative text-white shadow-sm">
-                        <div class="position-absolute top-0 start-0 w-100 h-100 mission-heritage-card__image"></div>
-                        <div class="position-absolute top-0 start-0 w-100 h-100 mission-heritage-card__overlay"></div>
-                        <div class="position-relative p-4 p-lg-5">
-                           <h3 class="h5 fw-semibold mb-2 text-white">From San Diego startup to global enterprise backbone</h3>
-                           <p class="text-white-75 small mb-2">We started as Zesty.io, serving high-growth SMB teams from our home in San Diego. As customers scaled, they needed a partner that combined flexibility, automation, and enterprise governance.</p>
-                           <p class="text-white-75 small mb-0">Content.One reflects that journey—pairing our coastal roots with a platform built for the world’s most ambitious digital teams.</p>
-                        </div>
-                     </div>
-                  </div>
-               </div> 
+  <!-- Mission -->
+  <section class="py-12 lg:py-16 border-t border-gray-200 mission-section text-white relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-full mission-section__overlay"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center bg-white text-royal rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Our mission</div>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3 text-white">Empower every team to build, launch, and scale experiences in one secure platform.</h2>
+          <p class="text-white/75 m-0">Content.One unifies marketer-friendly creation, developer precision, and AI assistance so organizations can thrive in a world of AI search and intelligent agents. We exist to give enterprises the governance of legacy suites with the agility and cost-efficiency of modern content tooling.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
+            <div class="mission-pill bg-white shadow-sm h-full rounded-3xl"><div class="p-6"><div class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg><div><h3 class="text-base mb-1 text-gray-900 font-semibold">Enterprise scale</h3><p class="text-gray-500 text-sm m-0">Support thousands of pages, regional teams, and rigorous workflows without friction.</p></div></div></div></div>
+            <div class="mission-pill bg-white shadow-sm h-full rounded-3xl"><div class="p-6"><div class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg><div><h3 class="text-base mb-1 text-gray-900 font-semibold">Security &amp; compliance</h3><p class="text-gray-500 text-sm m-0">Encryption, audit logs, and SSO-ready controls trusted by regulated industries.</p></div></div></div></div>
+            <div class="mission-pill bg-white shadow-sm h-full rounded-3xl"><div class="p-6"><div class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M1 9h3M1 15h3M20 9h3M20 15h3"/></svg><div><h3 class="text-base mb-1 text-gray-900 font-semibold">AI workforce</h3><p class="text-gray-500 text-sm m-0">Activate AI copilots, insights, and automation that boost every team's productivity.</p></div></div></div></div>
+            <div class="mission-pill bg-white shadow-sm h-full rounded-3xl"><div class="p-6"><div class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 14a5 5 0 0 1 0-7l3-3a5 5 0 0 1 7 7l-1.5 1.5"/><path d="M14 10a5 5 0 0 1 0 7l-3 3a5 5 0 0 1-7-7l1.5-1.5"/></svg><div><h3 class="text-base mb-1 text-gray-900 font-semibold">Seamless integration</h3><p class="text-gray-500 text-sm m-0">Connect to enterprise tech stacks, analytics, and APIs without sacrificing speed.</p></div></div></div></div>
+          </div>
+          <div class="mission-heritage-card mt-4 rounded-2xl overflow-hidden relative text-white shadow-sm">
+            <div class="absolute top-0 left-0 w-full h-full mission-heritage-card__image"></div>
+            <div class="absolute top-0 left-0 w-full h-full mission-heritage-card__overlay"></div>
+            <div class="relative p-6 lg:p-10">
+              <h3 class="text-base font-semibold mb-2 text-white">From San Diego startup to global enterprise backbone</h3>
+              <p class="text-white/75 text-sm mb-2">We started as Zesty.io, serving high-growth SMB teams from our home in San Diego. As customers scaled, they needed a partner that combined flexibility, automation, and enterprise governance.</p>
+              <p class="text-white/75 text-sm m-0">Content.One reflects that journey—pairing our coastal roots with a platform built for the world's most ambitious digital teams.</p>
             </div>
-         </section>
-         <!--Mission end-->
-         
-         <!--Pageheader start-->
-         <section class="py-5 py-lg-8">
-            <div class="container"> 
-               <div class="row">
-                  <div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-                     <div class="text-center">
-                        <small class="text-uppercase ls-md fw-semibold">{{this.title}}</small>
-                        <h1 class="mb-3 mt-3">{{this.h1_byline}}</h1>
-                        <div class="leadership-story text-start text-lg-center">
-                           <div class="badge bg-light text-dark mb-3 fw-semibold text-uppercase">Built by teams who’ve powered the web for decades</div>
-                           <p class="text-grey mb-4">Our founders and builders have launched enterprise experiences since the earliest days of the web. Content.One distills that history into a platform that respects structure, unlocks creativity, and evolves with every shift in technology.</p>
-                           <div class="row g-4 text-start">
-                              <div class="col-lg-4">
-                                 <div class="card border-0 shadow-sm h-100">
-                                    <div class="card-body p-4">
-                                       <span class="badge bg-primary-subtle text-primary mb-2">01</span>
-                                       <h3 class="h5 fw-semibold mb-2">Create without barriers</h3>
-                                       <p class="text-grey small mb-0">We’ve seen what slows teams down: clunky systems, disconnected tools, and gatekeeping. Content.One removes those blockers so marketers, developers, and content teams can launch without friction.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-4">
-                                 <div class="card border-0 shadow-sm h-100">
-                                    <div class="card-body p-4">
-                                       <span class="badge bg-primary-subtle text-primary mb-2">02</span>
-                                       <h3 class="h5 fw-semibold mb-2">Structure powers speed</h3>
-                                       <p class="text-grey small mb-0">The internet runs on structure—governance, frameworks, and security. We embed that DNA into every workflow so your teams move fast while staying secure, consistent, and enterprise-ready.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-lg-4">
-                                 <div class="card border-0 shadow-sm h-100">
-                                    <div class="card-body p-4">
-                                       <span class="badge bg-primary-subtle text-primary mb-2">03</span>
-                                       <h3 class="h5 fw-semibold mb-2">We evolve with the web</h3>
-                                       <p class="text-grey small mb-0">The internet never stands still—and neither do we. From AI-assisted content to headless delivery, we innovate alongside the most ambitious teams so you can stay ahead of what’s next.</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Story / Three pillars -->
+  <section class="py-12 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="lg:max-w-4xl lg:mx-auto">
+        <div class="text-center">
+          <small class="uppercase tracking-widest font-semibold text-sm">{{this.title}}</small>
+          <h1 class="font-display text-3xl md:text-4xl font-bold mb-3 mt-3">{{this.h1_byline}}</h1>
+          <div class="leadership-story text-left lg:text-center">
+            <div class="inline-flex items-center bg-gray-100 text-gray-900 rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Built by teams who've powered the web for decades</div>
+            <p class="text-gray-600 mb-4">Our founders and builders have launched enterprise experiences since the earliest days of the web. Content.One distills that history into a platform that respects structure, unlocks creativity, and evolves with every shift in technology.</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 text-left">
+              <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 mb-2 text-xs font-semibold">01</span><h3 class="text-base font-semibold mb-2">Create without barriers</h3><p class="text-gray-600 text-sm m-0">We've seen what slows teams down: clunky systems, disconnected tools, and gatekeeping. Content.One removes those blockers so marketers, developers, and content teams can launch without friction.</p></div></div>
+              <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 mb-2 text-xs font-semibold">02</span><h3 class="text-base font-semibold mb-2">Structure powers speed</h3><p class="text-gray-600 text-sm m-0">The internet runs on structure—governance, frameworks, and security. We embed that DNA into every workflow so your teams move fast while staying secure, consistent, and enterprise-ready.</p></div></div>
+              <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-2.5 py-1 mb-2 text-xs font-semibold">03</span><h3 class="text-base font-semibold mb-2">We evolve with the web</h3><p class="text-gray-600 text-sm m-0">The internet never stands still—and neither do we. From AI-assisted content to headless delivery, we innovate alongside the most ambitious teams so you can stay ahead of what's next.</p></div></div>
             </div>
-         </section>
-         <!--Pageheader end-->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-         <!--Meaning start-->
-         <section class="py-5 py-lg-6 bg-light">
-            <div class="container">
-               <div class="row justify-content-center text-center mb-5">
-                  <div class="col-lg-8">
-                     <div class="badge bg-white text-primary mb-3 fw-semibold text-uppercase">What Content.One means</div>
-                     <h2 class="display-6 fw-semibold mb-3">Leadership, simplicity, and a unified network for enterprise content.</h2>
-                     <p class="text-grey mb-0">“Content” signals our expertise in orchestrating digital experiences. “dot” represents the singularity of AI empowerment. “One” stands for a unified solution that bridges marketing, product, and engineering teams around the globe.</p>
-                  </div>
-               </div>
-               <div class="row g-4">
-                  <div class="col-lg-4">
-                     <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-start">
-                           <h3 class="h5 fw-semibold mb-2">We bridge the gap</h3>
-                           <p class="text-grey small mb-3">Content.One meets enterprises between legacy suites and headless-only stacks.</p>
-                           <ul class="list-unstyled d-grid gap-2 text-grey small mb-0">
-                              <li class="d-flex gap-2"><i class="bi bi-layers-half text-primary"></i><span>Visual editing with reusable components, backed by developer-grade templating.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-cash-stack text-primary"></i><span>Lower complexity and total cost compared to Sitecore or Adobe Experience Manager.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-diagram-3 text-primary"></i><span>Hybrid hosting and API delivery to compete with Contentstack, Contentful, and Hygraph.</span></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-start">
-                           <h3 class="h5 fw-semibold mb-2">Performance without compromise</h3>
-                           <p class="text-grey small mb-3">The platform is engineered for 99.99%+ uptime, real-time cache control, and blazing-fast experiences.</p>
-                           <ul class="list-unstyled d-grid gap-2 text-grey small mb-0">
-                              <li class="d-flex gap-2"><i class="bi bi-rocket text-primary"></i><span>Global CDN hosting, smart cache destruction, and hybrid origin support.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-lightning-charge text-primary"></i><span>Automated weekly updates across infrastructure, UI, and security.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-gear-wide-connected text-primary"></i><span>Workflows, headless APIs, and analytics tightly integrated for scale.</span></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-lg-4">
-                     <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body text-start">
-                           <h3 class="h5 fw-semibold mb-2">The “One” network</h3>
-                           <p class="text-grey small mb-3">Content.One is the foundation for a broader ecosystem of intelligent products.</p>
-                           <ul class="list-unstyled d-grid gap-2 text-grey small mb-0">
-                              <li class="d-flex gap-2"><i class="bi bi-grid text-primary"></i><span>cms.one for marketing websites and digital experiences.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-chat-square-text text-primary"></i><span>brandchat.one to activate AI copilots with governed content.</span></li>
-                              <li class="d-flex gap-2"><i class="bi bi-people text-primary"></i><span>Future-ready apps—from mobile to CauseCircle—that share a secure content core.</span></li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+  <!-- Meaning -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center text-center mb-12">
+        <div class="lg:max-w-3xl">
+          <div class="inline-flex items-center bg-white text-royal rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">What Content.One means</div>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3">Leadership, simplicity, and a unified network for enterprise content.</h2>
+          <p class="text-gray-600 m-0">"Content" signals our expertise in orchestrating digital experiences. "dot" represents the singularity of AI empowerment. "One" stands for a unified solution that bridges marketing, product, and engineering teams around the globe.</p>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+        <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6 text-left"><h3 class="text-base font-semibold mb-2">We bridge the gap</h3><p class="text-gray-600 text-sm mb-3">Content.One meets enterprises between legacy suites and headless-only stacks.</p><ul class="grid gap-2 text-gray-600 text-sm m-0 list-disc list-inside"><li>Visual editing with reusable components, backed by developer-grade templating.</li><li>Lower complexity and total cost compared to Sitecore or Adobe Experience Manager.</li><li>Hybrid hosting and API delivery to compete with Contentstack, Contentful, and Hygraph.</li></ul></div></div>
+        <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6 text-left"><h3 class="text-base font-semibold mb-2">Performance without compromise</h3><p class="text-gray-600 text-sm mb-3">The platform is engineered for 99.99%+ uptime, real-time cache control, and blazing-fast experiences.</p><ul class="grid gap-2 text-gray-600 text-sm m-0 list-disc list-inside"><li>Global CDN hosting, smart cache destruction, and hybrid origin support.</li><li>Automated weekly updates across infrastructure, UI, and security.</li><li>Workflows, headless APIs, and analytics tightly integrated for scale.</li></ul></div></div>
+        <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6 text-left"><h3 class="text-base font-semibold mb-2">The "One" network</h3><p class="text-gray-600 text-sm mb-3">Content.One is the foundation for a broader ecosystem of intelligent products.</p><ul class="grid gap-2 text-gray-600 text-sm m-0 list-disc list-inside"><li>cms.one for marketing websites and digital experiences.</li><li>brandchat.one to activate AI copilots with governed content.</li><li>Future-ready apps—from mobile to CauseCircle—that share a secure content core.</li></ul></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Content.One -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <div class="lg:col-span-5">
+          <div class="inline-flex items-center bg-gray-100 text-gray-900 rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Why enterprises choose us</div>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-4">A modern content operating system for high-velocity teams.</h2>
+          <p class="text-gray-600 m-0">From reusable component libraries and headless APIs to audit logs, SSO, and automated security updates, Content.One aligns everyone around a single source of truth. Marketing gets visual freedom, developers retain code precision, and IT enforces governance—without trade-offs.</p>
+        </div>
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm"><h3 class="text-base font-semibold mb-2">Hybrid delivery</h3><p class="text-gray-600 text-sm m-0">Serve HTML, JSON, or both with modes built for traditional, headless, or hybrid deployments.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm"><h3 class="text-base font-semibold mb-2">Workflow automation</h3><p class="text-gray-600 text-sm m-0">Custom approvals, audit trails, and cache-aware publishing keep teams aligned across regions.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm"><h3 class="text-base font-semibold mb-2">Security-first</h3><p class="text-gray-600 text-sm m-0">Encryption at rest, SSO, SOC 2 controls, staged environments, and expiring developer tokens built-in.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm"><h3 class="text-base font-semibold mb-2">Innovation cadence</h3><p class="text-gray-600 text-sm m-0">Weekly platform updates deliver new capabilities with zero downtime or paid upgrade paths.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section class="py-12 lg:py-16 bg-gray-50 border-y border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-center text-center mb-12">
+        <div class="lg:max-w-3xl">
+          <div class="inline-flex items-center bg-white text-royal rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Leadership</div>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3">Meet the people guiding Content.One.</h2>
+          <p class="text-gray-600 m-0">Our leadership team blends product innovation, enterprise delivery, and decades of experience modernizing global content operations.</p>
+        </div>
+      </div>
+      <div class="md:px-12 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {{each leadership as leader order by leader.sort_order ASC}}
+          <a href="{{leader.getURL()}}" class="bg-white shadow-sm h-full leadership-card rounded-2xl overflow-hidden block" data-bs-toggle="tooltip" data-bs-placement="top" title="{{leader.bio.striptags()}}">
+            <div class="overflow-hidden">
+              <img src="{{leader.image.getImage()}}" alt="{{leader.name}} headshot" class="w-full h-full object-cover" loading="lazy">
             </div>
-         </section>
-         <!--Meaning end-->
-
-         <!--Why Content.One start-->
-         <section class="py-5 py-lg-6">
-            <div class="container">
-               <div class="row align-items-start g-5">
-                  <div class="col-lg-5">
-                     <div class="badge bg-light text-dark mb-3 fw-semibold text-uppercase">Why enterprises choose us</div>
-                     <h2 class="display-6 fw-semibold mb-4">A modern content operating system for high-velocity teams.</h2>
-                     <p class="text-grey mb-0">From reusable component libraries and headless APIs to audit logs, SSO, and automated security updates, Content.One aligns everyone around a single source of truth. Marketing gets visual freedom, developers retain code precision, and IT enforces governance—without trade-offs.</p>
-                  </div> 
-                  <div class="col-lg-7">
-                     <div class="row g-4">
-                        <div class="col-md-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm">
-                              <h3 class="h6 fw-semibold mb-2">Hybrid delivery</h3>
-                              <p class="text-grey small mb-0">Serve HTML, JSON, or both with modes built for traditional, headless, or hybrid deployments.</p>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm">
-                              <h3 class="h6 fw-semibold mb-2">Workflow automation</h3>
-                              <p class="text-grey small mb-0">Custom approvals, audit trails, and cache-aware publishing keep teams aligned across regions.</p>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm">
-                              <h3 class="h6 fw-semibold mb-2">Security-first</h3>
-                              <p class="text-grey small mb-0">Encryption at rest, SSO, SOC 2 controls, staged environments, and expiring developer tokens built-in.</p>
-                           </div>
-                        </div>
-                        <div class="col-md-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm">
-                              <h3 class="h6 fw-semibold mb-2">Innovation cadence</h3>
-                              <p class="text-grey small mb-0">Weekly platform updates deliver new capabilities with zero downtime or paid upgrade paths.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+            <div class="p-6 text-left">
+              <h3 class="text-base font-semibold mb-1">{{leader.name}}</h3>
+              <p class="text-royal text-sm m-0">{{leader.title}}</p>
             </div>
-         </section>
-         <!--Why Content.One end-->
+          </a>
+          {{/each}}
+        </div>
+      </div>
+    </div>
+  </section>
 
-         <!--Leadership start-->
-         <section class="py-5 py-lg-6 bg-light border-top border-bottom">
-            <div class="container">
-               <div class="row justify-content-center text-center mb-5">
-                  <div class="col-lg-8">
-                     <div class="badge bg-white text-primary mb-3 fw-semibold text-uppercase">Leadership</div>
-                     <h2 class="display-6 fw-semibold mb-3">Meet the people guiding Content.One.</h2>
-                     <p class="text-grey mb-0">Our leadership team blends product innovation, enterprise delivery, and decades of
-                        experience modernizing global content operations.</p>
-                  </div>
-               </div>
-               <div class="row px-md-5 px-lg-7">
-                  <div class="row g-4">
-                     {{each leadership as leader order by leader.sort_order ASC}}
-                     <div class="col-md-6 col-lg-3">
-                        <a href="{{leader.getURL()}}" class="card border-0 shadow-sm h-100 leadership-card" data-bs-toggle="tooltip"
-                           data-bs-placement="top" title="{{leader.bio.striptags()}}">
-                           <div class="rounded-top overflow-hidden">
-                              <img src="{{leader.image.getImage()}}" alt="{{leader.name}} headshot"
-                                 class="w-100 h-100 object-fit-cover" loading="lazy">
-                           </div>
-                           <div class="card-body text-start">
-                              <h3 class="h5 fw-semibold mb-1">{{leader.name}}</h3>
-                              <p class="text-primary small mb-0">{{leader.title}}</p>
-                           </div>
-                        </a>
-                     </div>
-                     {{/each}}
-                  </div>
-               </div>
-            </div>
-         </section>
-         <!--Leadership end-->
-
-
-
-<!--Future start-->
-         <section class="py-5 py-lg-6">
-            <div class="container">
-               <div class="row align-items-center g-5">
-                  <div class="col-lg-6">
-                     <div class="badge bg-light text-dark mb-3 fw-semibold text-uppercase">Looking ahead</div>
-                     <h2 class="display-6 fw-semibold mb-3">Building the next era of intelligent content operations.</h2>
-                     <p class="text-grey mb-4">Our roadmap expands the “One” network with AI agents, omnichannel orchestration, and data-driven insights that give enterprises full command of their digital footprint. Every enhancement rolls out automatically—no migrations, no version lag.</p>
-                     <ul class="list-unstyled d-grid gap-2 text-grey mb-4">
-                        <li class="d-flex gap-2"><i class="bi bi-stars text-primary"></i><span>AI copilots embedded in authoring, personalization, and analytics workflows.</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-diagram-2 text-primary"></i><span>Composable integrations that keep legacy and modern stacks in sync.</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-shield-check text-primary"></i><span>Continuous security automation so governance keeps pace with innovation.</span></li>
-                     </ul>
-                     <div class="d-flex flex-wrap gap-3">
-                        <a href="/book-a-demo/" class="btn btn-primary btn-lg">Connect with our team</a>
-                        <a href="/product/" class="btn btn-outline-primary btn-lg">Explore the platform</a>
-                     </div>
-                  </div>
-                  <div class="col-lg-6">
-                     <div class="row g-4">
-                        <div class="col-sm-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm text-center">
-                              <h3 class="display-5 fw-semibold text-primary mb-2">99.99%</h3>
-                              <p class="text-grey small mb-0">Uptime delivered across enterprise contracts with proactive monitoring.</p>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm text-center">
-                              <h3 class="display-5 fw-semibold text-primary mb-2">Global</h3>
-                              <p class="text-grey small mb-0">Hybrid CDN and headless delivery serving audiences on every continent.</p>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm text-center">
-                              <h3 class="display-5 fw-semibold text-primary mb-2">Weekly</h3>
-                              <p class="text-grey small mb-0">Release cadence that keeps every customer on the latest secure build.</p>
-                           </div>
-                        </div>
-                        <div class="col-sm-6">
-                           <div class="border rounded-4 h-100 p-4 shadow-sm text-center">
-                              <h3 class="display-5 fw-semibold text-primary mb-2">Unified</h3>
-                              <p class="text-grey small mb-0">Single content graph connecting marketing, product, and AI experiences.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-</section>
-<!--Future end-->
-
+  <!-- Future -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="inline-flex items-center bg-gray-100 text-gray-900 rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Looking ahead</div>
+          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3">Building the next era of intelligent content operations.</h2>
+          <p class="text-gray-600 mb-4">Our roadmap expands the "One" network with AI agents, omnichannel orchestration, and data-driven insights that give enterprises full command of their digital footprint. Every enhancement rolls out automatically—no migrations, no version lag.</p>
+          <ul class="grid gap-2 text-gray-600 mb-4 list-disc list-inside">
+            <li>AI copilots embedded in authoring, personalization, and analytics workflows.</li>
+            <li>Composable integrations that keep legacy and modern stacks in sync.</li>
+            <li>Continuous security automation so governance keeps pace with innovation.</li>
+          </ul>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition text-lg">Connect with our team</a>
+            <a href="/product/" class="inline-flex items-center rounded-lg border border-royal text-royal hover:bg-royal/10 font-semibold px-6 py-3 transition text-lg">Explore the platform</a>
+          </div>
+        </div>
+        <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">99.99%</h3><p class="text-gray-600 text-sm m-0">Uptime delivered across enterprise contracts with proactive monitoring.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Global</h3><p class="text-gray-600 text-sm m-0">Hybrid CDN and headless delivery serving audiences on every continent.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Weekly</h3><p class="text-gray-600 text-sm m-0">Release cadence that keeps every customer on the latest secure build.</p></div>
+            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Unified</h3><p class="text-gray-600 text-sm m-0">Single content graph connecting marketing, product, and AI experiences.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </main>
 
 <style>
-  .mission-section {
-    background: radial-gradient(circle at top left, #0b214b 0%, #071325 35%, #050c18 100%);
-  }
-  .mission-section__overlay {
-    background: linear-gradient(135deg, rgba(14, 116, 144, 0.35), rgba(59, 130, 246, 0.25));
-    opacity: 0.85;
-  }
-  .mission-pill {
-    background: #ffffff;
-    border-radius: 1.5rem;
-  }
-  .mission-heritage-card {
-    min-height: 220px;
-  }
-  .mission-heritage-card__image {
-    background-image: url('https://hj5v68xn.media.zestyio.com/San-Diego-from-Ferry-Landing.webp');
-    background-size: cover;
-    background-position: center;
-  }
-  .mission-heritage-card__overlay {
-    background: linear-gradient(145deg, rgba(5, 12, 24, 0.9), rgba(14, 116, 144, 0.7));
-  }
-  .leadership-card:hover,
-  .leadership-card:focus-within {
-    transform: translateY(-4px);
-    transition: transform 0.2s ease;
-  }
+  .mission-section { background: radial-gradient(circle at top left, #0b214b 0%, #071325 35%, #050c18 100%); }
+  .mission-section__overlay { background: linear-gradient(135deg, rgba(14, 116, 144, 0.35), rgba(59, 130, 246, 0.25)); opacity: 0.85; }
+  .mission-pill { border-radius: 1.5rem; }
+  .mission-heritage-card { min-height: 220px; }
+  .mission-heritage-card__image { background-image: url('https://hj5v68xn.media.zestyio.com/San-Diego-from-Ferry-Landing.webp'); background-size: cover; background-position: center; }
+  .mission-heritage-card__overlay { background: linear-gradient(145deg, rgba(5, 12, 24, 0.9), rgba(14, 116, 144, 0.7)); }
+  .leadership-card:hover, .leadership-card:focus-within { transform: translateY(-4px); transition: transform 0.2s ease; }
 </style>
- 
+
 <script>
   (function () {
-    if (typeof bootstrap === 'undefined' || !bootstrap.Tooltip) {
-      return;
-    }
+    if (typeof bootstrap === 'undefined' || !bootstrap.Tooltip) { return; }
     var tooltipTriggerList = Array.prototype.slice.call(document.querySelectorAll('.leadership-card[data-bs-toggle="tooltip"]'));
     tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-      new bootstrap.Tooltip(tooltipTriggerEl, {
-        trigger: 'hover focus',
-        html: false,
-        container: 'body'
-      });
+      new bootstrap.Tooltip(tooltipTriggerEl, { trigger: 'hover focus', html: false, container: 'body' });
     });
   })();
 </script>

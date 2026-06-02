@@ -1,6 +1,6 @@
 <main class="leadership-page">
   <section class="leader-profile">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="leader-profile__grid">
         <div class="leader-profile__content">
           <p class="leader-profile__eyebrow">Leadership Profile</p>
@@ -16,7 +16,7 @@
   </section>
 
   <section class="leader-related">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="leader-related__header">
         <p class="leader-related__eyebrow">Articles by {{this.name}}</p>
         <h2 class="leader-related__title">More leadership profiles</h2>
@@ -47,7 +47,7 @@
   </section>
  
   <section class="leadership-hero">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <p class="leadership-hero__eyebrow">Leadership</p>
       <h1 class="leadership-hero__title">Meet the people guiding Content.One.</h1>
       <p class="leadership-hero__subtitle">Focused on enterprise outcomes, trusted delivery, and modern content operations.</p>
@@ -55,7 +55,7 @@
   </section>
     
   <section class="leadership-grid-section">
-    <div class="container">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="leadership-grid">
         {{each leadership as leader where z.zuid != '{this.zuid}' order by leader.sort_order ASC}}
         <a href="{{leader.getURL()}}" class="leader-card__link">

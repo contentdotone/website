@@ -1,21 +1,17 @@
-<main class="pb-8">
-    <!--Pageheader start-->
-    <section class="bg-primary bg-opacity-10 pt-xl-9 pb-xl-0 py-5">
-        <div class="container">
-            <div class="row g-xl-7 gy-5">
-                <div class="col-lg-6 col-12">
-                    <div class="me-xl-7">
-                        <div class="mb-5">
-                            <h1 class="mb-3">{{this.title}}</h1>
-                            <div>{{this.body}}</div>
-                        </div>
-                      
+<main class="pb-24">
+    <section class="bg-royal/10 pt-12 xl:pt-32 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
+                <div class="xl:pr-12">
+                    <div class="mb-8">
+                        <h1 class="font-display text-4xl md:text-5xl font-bold mb-3">{{this.title}}</h1>
+                        <div class="prose prose-slate max-w-none">{{this.body}}</div>
                     </div>
                 </div>
-                <div class="col-lg-6 col-12 mb-lg-n9">
-                    <div class="card shadow-sm">
-                        <div class="card-body">
-                           {{include /components/forms/zoho-form.html}}
+                <div class="lg:-mb-36">
+                    <div class="bg-white shadow-sm rounded-2xl">
+                        <div class="p-6">
+                            {{include /components/forms/zoho-form.html}}
                         </div>
                     </div>
                 </div>
@@ -23,6 +19,4 @@
         </div>
     </section>
     {{blocks('/-/block/client_logos.html')}}
-
-    <!--Pageheader end-->
 </main>

@@ -709,6 +709,30 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-05-29T15:10:34Z",
                 "createdAt": "2026-05-29T15:10:34Z"
+            },
+            "/hospital-pitch.html": {
+                "zuid": "11-ee8396afdb-dt9gt1",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T15:43:48Z",
+                "createdAt": "2026-05-29T15:43:48Z"
+            },
+            "/page_html/industries/composable-cms-for-hospitals-and-health-systems.html": {
+                "zuid": "11-82f9bfbbe7-68pglh",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/page_html/landing_pages/mcp-native-ai-cms.html": {
+                "zuid": "11-8aa5fbdbe8-rlh4mg",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/tw-preview.html": {
+                "zuid": "11-e49bbcb1e9-74px6f",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
             }
         },
         "styles": {

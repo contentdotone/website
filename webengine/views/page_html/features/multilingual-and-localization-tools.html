@@ -1,38 +1,38 @@
 <div class="localization-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-localization text-white position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 fw-bold text-white mb-4">Built-in localization that scales with your brand.</h1>
-          <p class="lead text-white-75 mb-4">Reaching a global audience shouldn’t require building separate systems for every region. Content.One makes localization simple, structured, and scalable—translate content, metadata, and assets in one place and deliver personalized experiences across languages, markets, and channels.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">See localization in action</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">Explore Content.One</a>
+  <section class="py-6 py-lg-7 bg-gradient-localization text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold font-bold text-white mb-4">Built-in localization that scales with your brand.</h1>
+          <p class="text-lg text-white/75 mb-4">Reaching a global audience shouldn’t require building separate systems for every region. Content.One makes localization simple, structured, and scalable—translate content, metadata, and assets in one place and deliver personalized experiences across languages, markets, and channels.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See localization in action</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/flags.jpg" alt="Global team collaborating" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://hj5v68xn.media.zestyio.com/flags.jpg" alt="Global team collaborating" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div> 
   </section>
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-localization-subtle text-localization mb-3">Localization at scale</span>
-          <h2 class="h1 fw-semibold mb-3">Reach global audiences without doubling workload or costs.</h2>
-          <p class="text-grey mb-0">Translate once, deploy everywhere. Content.One handles copy, metadata, media, and structured content for 100+ languages—without add-ons or plugins.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Localization at scale</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Reach global audiences without doubling workload or costs.</h2>
+          <p class="text-gray-600 mb-0">Translate once, deploy everywhere. Content.One handles copy, metadata, media, and structured content for 100+ languages—without add-ons or plugins.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,66 +45,66 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-localization-subtle text-localization mb-3">Localization capabilities</span>
-          <h2 class="h1 fw-semibold mb-3">Stay consistent across markets and visible everywhere</h2>
-          <p class="text-grey fs-5 mb-0">Content.One delivers structured localization workflows so global teams can manage copy, media, and metadata with confidence.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8 xl:col-start-3">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Localization capabilities</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Stay consistent across markets and visible everywhere</h2>
+          <p class="text-gray-600 text-lg mb-0">Content.One delivers structured localization workflows so global teams can manage copy, media, and metadata with confidence.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">Native multilingual support</h3>
-              <p class="text-grey mb-0">Manage content, metadata, and assets in 100+ languages—no plugins, no custom code.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">Native multilingual support</h3>
+              <p class="text-gray-600 mb-0">Manage content, metadata, and assets in 100+ languages—no plugins, no custom code.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Structured translation workflows</h3>
-              <p class="text-grey mb-0">Route content through review, translation, and approval using role-based permissions for local teams.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Structured translation workflows</h3>
+              <p class="text-gray-600 mb-0">Route content through review, translation, and approval using role-based permissions for local teams.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Localization cost savings</h3>
-              <p class="text-grey mb-0">Translate once, reuse everywhere—structured content makes syndicating updates effortless.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Localization cost savings</h3>
+              <p class="text-gray-600 mb-0">Translate once, reuse everywhere—structured content makes syndicating updates effortless.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">International SEO readiness</h3>
-              <p class="text-grey mb-0">Automatic hreflang, localized URLs, and region-specific metadata boost visibility in every market.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">International SEO readiness</h3>
+              <p class="text-gray-600 mb-0">Automatic hreflang, localized URLs, and region-specific metadata boost visibility in every market.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Headless-friendly</h3>
-              <p class="text-grey mb-0">Expose localized content via APIs to apps, kiosks, and chatbots without duplicating systems.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Headless-friendly</h3>
+              <p class="text-gray-600 mb-0">Expose localized content via APIs to apps, kiosks, and chatbots without duplicating systems.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-localization text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Compliance &amp; governance</h3>
-              <p class="text-grey mb-0">Workflow approvals, version history, and audit logs ensure every market stays on-brand and compliant.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Compliance &amp; governance</h3>
+              <p class="text-gray-600 mb-0">Workflow approvals, version history, and audit logs ensure every market stays on-brand and compliant.</p>
             </div>
           </div>
         </div>
@@ -112,16 +112,16 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Lower localization costs, increase global impact</h2>
-          <p class="text-grey mb-4">Content.One centralizes translation so you can manage copy, media, and structured datasets once—and launch globally.</p>
-          <div class="card border-0 shadow-sm">
-            <div class="card-body d-flex flex-column flex-md-row align-items-start gap-3">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Localization meeting" class="rounded-3 shadow-sm" style="width:160px;height:120px;object-fit:cover;">
-              <div class="text-grey small">
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Lower localization costs, increase global impact</h2>
+          <p class="text-gray-600 mb-4">Content.One centralizes translation so you can manage copy, media, and structured datasets once—and launch globally.</p>
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
+            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
+              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Localization meeting" class="rounded-lg shadow-sm" style="width:160px;height:120px;object-fit:cover;">
+              <div class="text-gray-600 text-sm">
                 <p class="mb-1">✅ Built-in translation memory reduces repeated work for copy and media</p>
                 <p class="mb-1">✅ Local reviewers can approve updates without accessing the entire CMS</p>
                 <p class="mb-1">✅ Bulk actions deploy localized variants across microsites and apps</p>
@@ -130,9 +130,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Global content planning" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Global content planning" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -140,32 +140,33 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=1200&q=80" alt="International marketing" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=1200&q=80" alt="International marketing" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-localization-subtle text-localization mb-3">Stay consistent, stay visible</span>
-          <h2 class="h1 fw-semibold mb-4">Protect brand voice across every market</h2>
-          <p class="text-grey fs-5 mb-4">Keep messaging on-brand while empowering local teams to adapt copy, promos, and imagery for regional audiences.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-megaphone text-localization fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Stay consistent, stay visible</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Protect brand voice across every market</h2>
+          <p class="text-gray-600 text-lg mb-4">Keep messaging on-brand while empowering local teams to adapt copy, promos, and imagery for regional audiences.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/></svg>
               <span>Localization workflows give regional marketers editing power with corporate guardrails.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-flag text-localization fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21 21 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21 21 0 0 0 14 7.655V1.222z"/></svg>
               <span>Apply localized imagery, currencies, and offers without duplicating templates.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-translate text-localization fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
+  <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
               <span>Automatic fallback content ensures consistent experiences if translations aren’t ready.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-graph-up text-localization fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>
               <span>Localized analytics dashboards show performance by region, language, and campaign.</span>
             </li>
           </ul>
@@ -174,68 +175,68 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Localization that scales with your content operations</h2>
-          <p class="lead text-white-75 mb-4">Deliver globally consistent experiences while empowering regional teams. Content.One keeps localization fast, secure, and measurable.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-local-count="60" data-local-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Reduction in localization turnaround time</p>
+  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Localization that scales with your content operations</h2>
+          <p class="text-lg text-white/75 mb-4">Deliver globally consistent experiences while empowering regional teams. Content.One keeps localization fast, secure, and measurable.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="60" data-local-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Reduction in localization turnaround time</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-local-count="75" data-local-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Increase in global campaign reuse</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="75" data-local-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Increase in global campaign reuse</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-local-count="99.99" data-local-suffix="%" data-local-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime for global content delivery</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="99.99" data-local-suffix="%" data-local-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime for global content delivery</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-local-count="150" data-local-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Integrations across TMS, analytics, and CRM platforms</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="150" data-local-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Integrations across TMS, analytics, and CRM platforms</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/flags-top.jpg" alt="Global network visualization" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://hj5v68xn.media.zestyio.com/flags-top.jpg" alt="Global network visualization" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-localization-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-localization-dark" style="opacity:0.35;"></div>
   </section>
 
   {{include /components/widgets/random_quotes.html}}
 
   <section class="py-6 bg-localization text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-3">Ready to deliver localized experiences everywhere?</h2>
-          <p class="lead text-white-75 mb-4">Partner with Content.One to streamline translation, governance, and delivery across every market.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-localization">Talk to our team</a>
-            <a href="/solutions/" class="btn btn-outline-light btn-lg">See all solutions</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8 lg:col-start-3">
+          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to deliver localized experiences everywhere?</h2>
+          <p class="text-lg text-white/75 mb-4">Partner with Content.One to streamline translation, governance, and delivery across every market.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-localization">Talk to our team</a>
+            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
           </div>
         </div>
       </div>

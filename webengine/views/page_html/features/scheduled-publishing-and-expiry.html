@@ -1,38 +1,38 @@
 <div class="schedule-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-schedule text-white position-relative overflow-hidden">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <h1 class="display-4 text-white fw-bold mb-4">Plan, schedule, and publish—without the stress.</h1>
-          <p class="lead text-white-75 mb-4">When teams need to move fast, Content.One keeps them in control. From orchestrated launches to automatic expirations, publishing stays secure, structured, and reliable—no matter how large your content operations become.</p>
-          <div class="d-flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-primary">Explore scheduling workflows</a>
-            <a href="/product/" class="btn btn-outline-light btn-lg">See Content.One capabilities</a>
+  <section class="py-6 py-lg-7 bg-gradient-schedule text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold text-white font-bold mb-4">Plan, schedule, and publish—without the stress.</h1>
+          <p class="text-lg text-white/75 mb-4">When teams need to move fast, Content.One keeps them in control. From orchestrated launches to automatic expirations, publishing stays secure, structured, and reliable—no matter how large your content operations become.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Explore scheduling workflows</a>
+            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See Content.One capabilities</a>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Digital teams coordinating publishing" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Digital teams coordinating publishing" class="w-full h-full object-cover">
           </div>
         </div>
       </div> 
     </div>
   </section>
 
-  <section class="py-6 border-top">
-    <div class="container">
-      <div class="row g-4 align-items-center">
-        <div class="col-lg-5">
-          <span class="badge bg-schedule-subtle text-schedule mb-3">Publishing control</span>
-          <h2 class="h1 fw-semibold mb-3">Publish across channels without sacrificing control.</h2>
-          <p class="text-grey mb-0">Lower operational risk with scheduling, expirations, approvals, and role-based workflows built directly into Content.One.</p>
+  <section class="py-6 border-t">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
+        <div class="lg:col-span-5">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Publishing control</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Publish across channels without sacrificing control.</h2>
+          <p class="text-gray-600 mb-0">Lower operational risk with scheduling, expirations, approvals, and role-based workflows built directly into Content.One.</p>
         </div>
-        <div class="col-lg-7">
-          <div class="row row-cols-2 row-cols-md-3 g-3">
+        <div class="lg:col-span-7">
+          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="col">
-              <div class="border rounded-4 p-3 h-100">
-                <a href="{{cus.getURL()}}" class="logo-card d-flex align-items-center justify-content-center h-100">
+            <div class="flex-1">
+              <div class="border rounded-xl p-3 h-full">
+                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
                   <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
                 </a>
               </div>
@@ -45,66 +45,66 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row justify-content-center text-center mb-5">
-        <div class="col-xl-8">
-          <span class="badge bg-schedule-subtle text-schedule mb-3">Scheduling &amp; expiry capabilities</span>
-          <h2 class="h1 fw-semibold mb-3">Keep launches on time and content lifecycle managed automatically</h2>
-          <p class="text-grey fs-5 mb-0">Content.One makes publishing reliable—from planned campaigns to automated rollbacks—so global teams stay agile and compliant.</p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
+        <div class="xl:col-span-8 xl:col-start-3">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Scheduling &amp; expiry capabilities</span>
+          <h2 class="text-4xl font-bold font-semibold mb-3">Keep launches on time and content lifecycle managed automatically</h2>
+          <p class="text-gray-600 text-lg mb-0">Content.One makes publishing reliable—from planned campaigns to automated rollbacks—so global teams stay agile and compliant.</p>
         </div>
       </div>
-      <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">01</span>
-              <h3 class="h5 mb-2">Precise scheduling</h3>
-              <p class="text-grey mb-0">Plan publishing windows across sites, locales, and channels—including embargoes and coordinated launches.</p>
+      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">01</span>
+              <h3 class="text-lg font-semibold mb-2">Precise scheduling</h3>
+              <p class="text-gray-600 mb-0">Plan publishing windows across sites, locales, and channels—including embargoes and coordinated launches.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">02</span>
-              <h3 class="h5 mb-2">Automatic expirations</h3>
-              <p class="text-grey mb-0">Set end dates so promotions, legal notices, and campaigns sunset automatically—no manual cleanup.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">02</span>
+              <h3 class="text-lg font-semibold mb-2">Automatic expirations</h3>
+              <p class="text-gray-600 mb-0">Set end dates so promotions, legal notices, and campaigns sunset automatically—no manual cleanup.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">03</span>
-              <h3 class="h5 mb-2">Role-based workflows</h3>
-              <p class="text-grey mb-0">Approvals, notifications, and permissions ensure content is reviewed by the right stakeholders before going live.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">03</span>
+              <h3 class="text-lg font-semibold mb-2">Role-based workflows</h3>
+              <p class="text-gray-600 mb-0">Approvals, notifications, and permissions ensure content is reviewed by the right stakeholders before going live.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">04</span>
-              <h3 class="h5 mb-2">Instant rollbacks</h3>
-              <p class="text-grey mb-0">Restore prior versions instantly if something needs to be reverted—no downtime or developer tickets.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">04</span>
+              <h3 class="text-lg font-semibold mb-2">Instant rollbacks</h3>
+              <p class="text-gray-600 mb-0">Restore prior versions instantly if something needs to be reverted—no downtime or developer tickets.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">05</span>
-              <h3 class="h5 mb-2">Preview everywhere</h3>
-              <p class="text-grey mb-0">Preview scheduled updates on desktop, mobile, kiosks, or headless endpoints before publication.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">05</span>
+              <h3 class="text-lg font-semibold mb-2">Preview everywhere</h3>
+              <p class="text-gray-600 mb-0">Preview scheduled updates on desktop, mobile, kiosks, or headless endpoints before publication.</p>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <span class="badge bg-schedule text-white rounded-pill px-3 py-2 mb-3">06</span>
-              <h3 class="h5 mb-2">Audit-ready</h3>
-              <p class="text-grey mb-0">Activity logs capture who scheduled, approved, or rolled back content—ideal for compliance.</p>
+        <div class="flex-1">
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
+            <div class="p-6">
+              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">06</span>
+              <h3 class="text-lg font-semibold mb-2">Audit-ready</h3>
+              <p class="text-gray-600 mb-0">Activity logs capture who scheduled, approved, or rolled back content—ideal for compliance.</p>
             </div>
           </div>
         </div>
@@ -112,16 +112,16 @@
     </div>
   </section>
 
-  <section class="py-6 bg-light border-top border-bottom">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="h1 fw-semibold mb-4">Stay agile, stay secure</h2>
-          <p class="text-grey mb-4">Content.One orchestrates large content operations with enterprise-grade scheduling, governance, and rollbacks—so your team stays fast and safe.</p>
-          <div class="card border-0 shadow-sm">
-            <div class="card-body d-flex flex-column flex-md-row align-items-start gap-3">
-              <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail interface" class="rounded-3 shadow-sm" style="width:160px;height:120px;object-fit:cover;">
-              <div class="text-grey small">
+  <section class="py-6 bg-gray-100 border-t border-b">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-4xl font-bold font-semibold mb-4">Stay agile, stay secure</h2>
+          <p class="text-gray-600 mb-4">Content.One orchestrates large content operations with enterprise-grade scheduling, governance, and rollbacks—so your team stays fast and safe.</p>
+          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
+            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
+              <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail interface" class="rounded-lg shadow-sm" style="width:160px;height:120px;object-fit:cover;">
+              <div class="text-gray-600 text-sm">
                 <p class="mb-1">✅ Instantly roll back to previous versions when approvals change direction</p>
                 <p class="mb-1">✅ Route content through multi-step approvals before it reaches production</p>
                 <p class="mb-1">✅ Preview on desktop, mobile, and headless renderings before go-live</p>
@@ -130,9 +130,9 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Digital operations monitoring schedule" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Digital operations monitoring schedule" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
@@ -140,32 +140,34 @@
   </section>
 
   <section class="py-6">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="Scheduling and SEO settings" class="w-100 h-100 object-fit-cover">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="Scheduling and SEO settings" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="col-lg-6">
-          <span class="badge bg-schedule-subtle text-schedule mb-3">Cross-channel reliability</span>
-          <h2 class="h1 fw-semibold mb-4">Coordinate launches across web, mobile, and AI endpoints</h2>
-          <p class="text-grey fs-5 mb-4">Headless APIs and reusable Blocks ensure scheduled content publishes to every destination—landing pages, apps, chatbots, kiosks, and partner portals.</p>
-          <ul class="list-unstyled d-grid gap-3">
-            <li class="d-flex gap-3">
-              <i class="bi bi-globe text-schedule fs-4"></i>
+        <div class="lg:col-span-6">
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Cross-channel reliability</span>
+          <h2 class="text-4xl font-bold font-semibold mb-4">Coordinate launches across web, mobile, and AI endpoints</h2>
+          <p class="text-gray-600 text-lg mb-4">Headless APIs and reusable Blocks ensure scheduled content publishes to every destination—landing pages, apps, chatbots, kiosks, and partner portals.</p>
+          <ul class="list-none m-0 p-0 grid gap-3">
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
               <span>Global scheduling handles multiple time zones and localization requirements.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-calendar-check text-schedule fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
               <span>Set recurring schedules for seasonal campaigns or evergreen updates.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-broadcast text-schedule fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg>
               <span>Trigger syndication to headless consumers and AI copilots via Model Context Protocol.</span>
             </li>
-            <li class="d-flex gap-3">
-              <i class="bi bi-shield-check text-schedule fs-4"></i>
+            <li class="flex gap-3">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+  <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/></svg>
               <span>Role-based access and audit logs keep compliance teams confident in every release.</span>
             </li>
           </ul>
@@ -174,80 +176,80 @@
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white position-relative overflow-hidden">
-    <div class="container">
-      <div class="row g-5 align-items-center">
-        <div class="col-lg-6">
-          <h2 class="display-5 text-white fw-semibold mb-4">Operational excellence for content teams</h2>
-          <p class="lead text-white-75 mb-4">Keep launches on time, reduce risk, and maintain uptime—even as your content footprint grows.</p>
-          <div class="row row-cols-1 row-cols-sm-2 g-3">
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-schedule-count="65" data-schedule-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Reduction in manual launch coordination</p>
+  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
+        <div class="lg:col-span-6">
+          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Operational excellence for content teams</h2>
+          <p class="text-lg text-white/75 mb-4">Keep launches on time, reduce risk, and maintain uptime—even as your content footprint grows.</p>
+          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="65" data-schedule-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Reduction in manual launch coordination</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-schedule-count="80" data-schedule-suffix="%">0</p>
-                  <p class="text-white-75 mb-0 small">Decrease in post-launch hotfixes</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="80" data-schedule-suffix="%">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Decrease in post-launch hotfixes</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-schedule-count="99.99" data-schedule-suffix="%" data-schedule-format="decimal">0</p>
-                  <p class="text-white-75 mb-0 small">Uptime guaranteed by managed infrastructure</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="99.99" data-schedule-suffix="%" data-schedule-format="decimal">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Uptime guaranteed by managed infrastructure</p>
                 </div>
               </div>
             </div>
-            <div class="col">
-              <div class="card bg-transparent border border-white-25 h-100">
-                <div class="card-body">
-                  <p class="display-6 fw-semibold text-white mb-1" data-schedule-count="200" data-schedule-suffix="+">0</p>
-                  <p class="text-white-75 mb-0 small">Integrations across analytics, CRM, and automation</p>
+            <div class="flex-1">
+              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
+                <div class="p-6">
+                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="200" data-schedule-suffix="+">0</p>
+                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics, CRM, and automation</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="rounded-4 shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Team coordinating schedules" class="w-100 h-100 object-fit-cover">
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
+            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Team coordinating schedules" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="position-absolute top-0 bottom-0 start-0 end-0 bg-gradient-schedule-dark" style="opacity:0.35;"></div>
+    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-schedule-dark" style="opacity:0.35;"></div>
   </section>
 
     <section class="py-6">
-    <div class="container">
-      <div class="d-flex flex-column flex-lg-row align-items-start justify-content-between gap-4 mb-5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
         <div>
-          <span class="badge bg-drag-subtle text-drag mb-3">Customer voices</span>
-          <h2 class="h1 fw-semibold mb-2">Digital teams thrive on Content.One</h2>
-          <p class="text-grey mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
+          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Customer voices</span>
+          <h2 class="text-4xl font-bold font-semibold mb-2">Digital teams thrive on Content.One</h2>
+          <p class="text-gray-600 mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
         </div>
-        <a href="/customers/" class="btn btn-outline-drag btn-lg">Read customer wins</a>
+        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-drag text-base px-6 py-3">Read customer wins</a>
       </div>
      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
   <section class="py-6 bg-schedule text-white">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold text-white mb-3">Ready to explore Content.One?</h2>
-          <p class="lead text-white-75 mb-4">Give your content teams content scheduling and version that scale with your brand.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a href="/book-a-demo/" class="btn btn-light btn-lg text-schedule">Talk to our team</a>
-            <a href="/solutions/" class="btn btn-outline-light btn-lg">See all solutions</a>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-12 gap-4 justify-center text-center">
+        <div class="lg:col-span-8 lg:col-start-3">
+          <h2 class="text-3xl font-bold font-semibold text-white mb-3">Ready to explore Content.One?</h2>
+          <p class="text-lg text-white/75 mb-4">Give your content teams content scheduling and version that scale with your brand.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-schedule">Talk to our team</a>
+            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
           </div>
         </div>
       </div>

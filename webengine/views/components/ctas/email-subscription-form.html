@@ -1,22 +1,19 @@
 <form
     action='https://forms.zohopublic.com/zestyio/form/ContentOneEmailSubscription/formperma/88TJkTm3IesJeRHf5m2c2TMDOkmTpFD-TytQJXkq5oM/htmlRecords/submit'
     name='form' id='form' method='POST' accept-charset='UTF-8' enctype='multipart/form-data'
-    class="row g-3 needs-validation">
-    <input type="hidden" name="zf_referrer_name"
-        value=""><!-- To Track referrals , place the referrer name within the " " in the above hidden input field -->
-    <input type="hidden" name="zf_redirect_url"
-        value="https://www.content.one/thank-you/?type=email"><!-- To redirect to a specific page after record submission , place the respective url within the " " in the above hidden input field -->
-    <input type="hidden" name="zc_gad"
-        value=""><!-- If GCLID is enabled in Zoho CRM Integration, click details of AdWords Ads will be pushed to Zoho CRM -->
-    <h5 class="mb-0">Subscribe to our newsletter</h5>
-    
-    <!--Email-->
-    <div class="row g-2 align-items-center w-100">
-        <div class="col-12 col-md-9">
-            <label class="form-label visually-hidden">Email <em>*</em></label>
+    class="flex flex-col gap-3 w-full max-w-md">
+    <input type="hidden" name="zf_referrer_name" value="">
+    <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=email">
+    <input type="hidden" name="zc_gad" value="">
+
+    <h5 class="font-display font-semibold text-base m-0">Subscribe to our newsletter</h5>
+
+    <div class="flex flex-col md:flex-row gap-2 items-stretch">
+        <div class="flex-1">
+            <label class="sr-only">Email <em>*</em></label>
             <input
                 type="email"
-                class="form-control"
+                class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal"
                 maxlength="255"
                 name="Email"
                 placeholder="Enter your email"
@@ -24,10 +21,7 @@
                 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                 title="Please enter a valid email address"
             />
-            <div class="invalid-feedback">Please enter email.</div>
         </div>
-        <div class="col-12 col-md-3 d-grid">
-            <button type="submit" class="btn btn-primary"><em>Submit</em></button>
-        </div>
+        <button type="submit" class="rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-5 py-2.5 transition"><em class="not-italic">Submit</em></button>
     </div>
 </form>

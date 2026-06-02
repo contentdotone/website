@@ -1,99 +1,70 @@
-<div class="row row-cols-1 row-cols-lg-3 g-4">
-    {{each customer_reviews as review order by rand() limit 3}}
-    <div class="col">
-        <div class="card h-100 border-0 shadow-sm">
-            <div class="card-body">
-                <div class="d-flex align-items-center gap-3 mb-4">
-                    <img src="https://hj5v68xn.media.zestyio.com/G2_Crowd_logo.svg"
-                        alt="G2 Logo" class="shadow-sm rounded-3"
-                        style="width:60px;height:60px;padding: 8px;object-fit:contain;">
-                    <div>
-                        <p class="text-grey fw-bold mb-0">{{review.name}}</p>
-                        {{if {review.working_title} }}
-                        <span class="text-muted small">{{review.working_title}}</span>
-                        {{/if}}
-                        {{if {review.stars} }}
-                        <div class="d-flex align-items-center gap-2 mt-1">
-                          <div class="star-rating" data-stars="{{review.stars}}" aria-hidden="true">
-                            <img src="https://hj5v68xn.media.zestyio.com/five-stars-rating-icon-png.png" alt="" class="star-rating__base" loading="lazy">
-                            <div class="star-rating__fill">
-                              <img src="https://hj5v68xn.media.zestyio.com/five-stars-rating-icon-png.png" alt="" loading="lazy">
-                            </div>
-                          </div>
-                          
-                          <span class="text-muted small">{{review.stars}}</span>
-                        </div>
-                        <span class="visually-hidden">Rated {{review.stars}} out of 5 stars</span>
-                        {{/if}}
-                    </div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+  {{each customer_reviews as review order by rand() limit 3}}
+  <div>
+    <div class="bg-white shadow-sm rounded-2xl h-full">
+      <div class="p-6">
+        <div class="flex items-center gap-3 mb-4">
+          <img src="https://hj5v68xn.media.zestyio.com/G2_Crowd_logo.svg" alt="G2 Logo" class="shadow-sm rounded-lg" style="width:60px;height:60px;padding: 8px;object-fit:contain;">
+          <div>
+            <p class="text-gray-700 font-bold m-0">{{review.name}}</p>
+            {{if {review.working_title} }}
+            <span class="text-gray-500 text-sm">{{review.working_title}}</span>
+            {{/if}}
+            {{if {review.stars} }}
+            <div class="flex items-center gap-2 mt-1">
+              <div class="star-rating" data-stars="{{review.stars}}" aria-hidden="true">
+                <img src="https://hj5v68xn.media.zestyio.com/five-stars-rating-icon-png.png" alt="" class="star-rating__base" loading="lazy">
+                <div class="star-rating__fill">
+                  <img src="https://hj5v68xn.media.zestyio.com/five-stars-rating-icon-png.png" alt="" loading="lazy">
                 </div>
-                {{if {review.title} }}
-                <h5>{{review.title}}</h5>
-                {{/if}}
-                <div class="fs-5 text-grey mb-4 review-quote">
-                    <span class="review-quote__preview"></span>
-                    <button type="button" class="btn btn-link p-0 align-baseline text-primary small review-quote__read-more d-none">Read more</button>
-                    <span class="review-quote__full d-none">{{review.quote.striptags()}}</span>
-                    <span class="review-quote__title d-none">{{review.title}}</span>
-                    <span class="review-quote__meta d-none">{{review.name}} {{if {review.working_title} }} - {{review.working_title}}{{/if}}</span>
-                </div>
-                {{if {review.related_features} }}
-                    {{each {review.related_features} as feature}}
-                    <div class="badge bg-wysiwyg-subtle text-wysiwyg rounded-pill px-3 py-2">{{this.title}}</div>
-                    {{/each}}
-                {{/if}}
+              </div>
+              <span class="text-gray-500 text-sm">{{review.stars}}</span>
             </div>
+            <span class="sr-only">Rated {{review.stars}} out of 5 stars</span>
+            {{/if}}
+          </div>
         </div>
-    </div>
-    {{/each}}
-</div>
-
-<div class="modal fade" id="reviewQuoteModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow">
-      <div class="modal-header p-4">
-        <h5 class="modal-title review-quote-modal-title">Customer quote</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-4">
-        <p class="mb-0 review-quote-modal-body"></p>
+        {{if {review.title} }}
+        <h5 class="font-semibold text-base mb-2">{{review.title}}</h5>
+        {{/if}}
+        <div class="text-base text-gray-600 mb-4 review-quote">
+          <span class="review-quote__preview"></span>
+          <button type="button" class="inline-flex items-baseline p-0 text-royal text-sm underline review-quote__read-more hidden">Read more</button>
+          <span class="review-quote__full hidden">{{review.quote.striptags()}}</span>
+          <span class="review-quote__title hidden">{{review.title}}</span>
+          <span class="review-quote__meta hidden">{{review.name}} {{if {review.working_title} }} - {{review.working_title}}{{/if}}</span>
+        </div>
+        {{if {review.related_features} }}
+          {{each {review.related_features} as feature}}
+          <span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-3 py-2 text-sm font-semibold mr-1 mb-1">{{this.title}}</span>
+          {{/each}}
+        {{/if}}
       </div>
     </div>
   </div>
+  {{/each}}
 </div>
 
+<dialog id="reviewQuoteModal" class="rounded-2xl shadow-2xl p-0 max-w-xl w-full backdrop:bg-black/50 border-0">
+  <div class="bg-white rounded-2xl">
+    <div class="flex items-center justify-between p-4 border-b border-gray-200">
+      <h5 class="font-semibold text-base m-0 review-quote-modal-title">Customer quote</h5>
+      <button type="button" onclick="document.getElementById('reviewQuoteModal').close()" aria-label="Close" class="text-gray-500 hover:text-gray-900 text-2xl leading-none">&times;</button>
+    </div>
+    <div class="p-4">
+      <p class="m-0 review-quote-modal-body"></p>
+    </div>
+  </div>
+</dialog>
+
 <style>
-  .star-rating {
-    position: relative;
-    width: 132px;
-    height: 32px;
-  }
-  .star-rating__base,
-  .star-rating__fill img {
-    position: absolute; 
-    top: 0; 
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .star-rating__fill {
-    width: 0%;
-    overflow: hidden;
-  }
-  .star-rating__base {
-    filter: grayscale(1) opacity(0.3);
-  }
-  .review-quote__read-more {
-    margin-left: 0.25rem;
-    text-decoration: underline;
-  }
-  .review-quote__read-more:hover,
-  .review-quote__read-more:focus {
-    text-decoration: none;
-  }
+  .star-rating { position: relative; width: 132px; height: 32px; }
+  .star-rating__base, .star-rating__fill img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  .star-rating__fill { width: 0%; overflow: hidden; }
+  .star-rating__base { filter: grayscale(1) opacity(0.3); }
 </style>
 
-<script> 
+<script>
   (function () {
     var starContainers = document.querySelectorAll('.star-rating');
     starContainers.forEach(function (container) {
@@ -101,9 +72,7 @@
       if (isNaN(value)) return;
       var percent = Math.max(0, Math.min(value, 5)) / 5 * 100;
       var fill = container.querySelector('.star-rating__fill');
-      if (fill) {
-        fill.style.width = percent + '%';
-      }
+      if (fill) { fill.style.width = percent + '%'; }
     });
   })();
 
@@ -111,17 +80,15 @@
     var modalEl = document.getElementById('reviewQuoteModal');
     var modalTitleEl = modalEl ? modalEl.querySelector('.review-quote-modal-title') : null;
     var modalBodyEl = modalEl ? modalEl.querySelector('.review-quote-modal-body') : null;
-    var modalInstance = (modalEl && typeof bootstrap !== 'undefined' && bootstrap.Modal) ? new bootstrap.Modal(modalEl, { focus: true }) : null;
+    var modalInstance = modalEl ? {
+      show: function () { if (typeof modalEl.showModal === 'function') { modalEl.showModal(); } else { modalEl.setAttribute('open', ''); } }
+    } : null;
 
     function truncateText(text, limit) {
-      if (text.length <= limit) {
-        return { truncated: false, value: text };
-      }
+      if (text.length <= limit) { return { truncated: false, value: text }; }
       var truncated = text.slice(0, limit);
       var lastSpace = truncated.lastIndexOf(' ');
-      if (lastSpace > limit * 0.6) {
-        truncated = truncated.slice(0, lastSpace);
-      }
+      if (lastSpace > limit * 0.6) { truncated = truncated.slice(0, lastSpace); }
       truncated = truncated.replace(/[\s.,;:-]+$/, '');
       return { truncated: true, value: truncated + '…' };
     }
@@ -129,23 +96,18 @@
     document.querySelectorAll('.review-quote').forEach(function (quoteEl) {
       if (quoteEl.dataset.bound === 'true') return;
       quoteEl.dataset.bound = 'true';
-
       var fullEl = quoteEl.querySelector('.review-quote__full');
       var previewEl = quoteEl.querySelector('.review-quote__preview');
       var readMoreBtn = quoteEl.querySelector('.review-quote__read-more');
       var titleEl = quoteEl.querySelector('.review-quote__title');
       var metaEl = quoteEl.querySelector('.review-quote__meta');
-
       if (!fullEl || !previewEl) return;
-
       var fullText = fullEl.textContent.trim().replace(/\s+/g, ' ');
       var titleText = titleEl ? titleEl.textContent.trim() : 'Customer quote';
-
       var result = truncateText(fullText, 200);
       previewEl.textContent = result.value;
-
       if (result.truncated && readMoreBtn) {
-        readMoreBtn.classList.remove('d-none');
+        readMoreBtn.classList.remove('hidden');
         readMoreBtn.setAttribute('aria-label', 'Read full customer quote');
         readMoreBtn.addEventListener('click', function (event) {
           event.preventDefault();
@@ -156,7 +118,7 @@
               var metaText = metaEl.textContent.trim();
               if (metaText.length) {
                 var metaPara = document.createElement('p');
-                metaPara.className = 'text-muted small mb-0';
+                metaPara.className = 'text-gray-500 text-sm m-0';
                 metaPara.textContent = metaText;
                 modalBodyEl.appendChild(metaPara);
               }
@@ -164,11 +126,11 @@
             modalInstance.show();
           } else {
             previewEl.textContent = fullText;
-            readMoreBtn.classList.add('d-none');
+            readMoreBtn.classList.add('hidden');
           }
         });
       } else if (readMoreBtn) {
-        readMoreBtn.classList.add('d-none');
+        readMoreBtn.classList.add('hidden');
       }
     });
   });

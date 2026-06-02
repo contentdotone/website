@@ -1,88 +1,63 @@
+<!-- rocket_league case study — Tailwind-converted. Per ardeay's direction: drop
+     Bootstrap component-class adapters; rebuild progress bars as Tailwind divs,
+     accordion + modal as plain disclosure/dialog containers. ScrollSpy + counter
+     + fade-section JS preserved. -->
 <div class="rl-case-study">
-  <section class="py-6 py-lg-7 bg-gradient-rocket text-white overflow-hidden position-relative">
-    <div class="container position-relative">
-      <div class="row align-items-center g-5 rl-hero-foreground position-relative">
-        <div class="col-lg-6">
-          <span class="badge bg-white text-primary mb-3">Customer Highlight</span>
-          <h1 class="display-4 fw-bold mb-4 text-white">Rocket League powers esports storytelling with Content.One.</h1>
-          <p class="lead text-white-75 mb-4">Psyonix launched a high-octane content hub that keeps 40+ million players engaged, informed, and ready for the next kickoff.</p>
-          <div class="row row-cols-2 row-cols-sm-4 g-3 mt-5">
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-rl-count="40">0</p>
-                  <p class="small text-white-75 mb-0">Million players</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-rl-count="1.1" data-rl-format="decimal">0</p>
-                  <p class="small text-white-75 mb-0">Million daily players</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-rl-count="75" data-rl-suffix="%">0</p>
-                  <p class="small text-white-75 mb-0">Cost reduction</p>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card bg-white border border-white-50 shadow-none text-center text-sm-start">
-                <div class="card-body p-3">
-                  <p class="h2 mb-1" data-rl-count="7" data-rl-suffix="x">0</p>
-                  <p class="small text-white-75 mb-0">Faster content</p>
-                </div>
-              </div>
-            </div>
+
+  <section class="bg-gradient-rocket text-white overflow-hidden relative py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center rl-hero-foreground relative">
+        <div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Customer Highlight</span>
+          <h1 class="font-display text-4xl md:text-5xl font-bold mb-4 text-white">Rocket League powers esports storytelling with Content.One.</h1>
+          <p class="text-lg text-white/75 mb-4">Psyonix launched a high-octane content hub that keeps 40+ million players engaged, informed, and ready for the next kickoff.</p>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mt-8">
+            <div class="bg-white border border-white/50 text-center sm:text-left rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal" data-rl-count="40">0</p><p class="text-xs text-gray-500 m-0">Million players</p></div></div>
+            <div class="bg-white border border-white/50 text-center sm:text-left rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal" data-rl-count="1.1" data-rl-format="decimal">0</p><p class="text-xs text-gray-500 m-0">Million daily players</p></div></div>
+            <div class="bg-white border border-white/50 text-center sm:text-left rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal" data-rl-count="75" data-rl-suffix="%">0</p><p class="text-xs text-gray-500 m-0">Cost reduction</p></div></div>
+            <div class="bg-white border border-white/50 text-center sm:text-left rounded-xl"><div class="p-3"><p class="text-2xl font-bold m-0 text-royal" data-rl-count="7" data-rl-suffix="x">0</p><p class="text-xs text-gray-500 m-0">Faster content</p></div></div>
           </div>
         </div>
-        <div class="col-lg-6">
-          <div class="ratio ratio-16x9 rounded-4 shadow-lg overflow-hidden rl-hero-media">
-            <img src="https://hj5v68xn.media.zestyio.com/rocket-league-background.webp" alt="Rocket League esports experience" class="w-100 h-100 object-fit-cover">
+        <div>
+          <div class="rounded-3xl shadow-lg overflow-hidden rl-hero-media aspect-video">
+            <img src="https://hj5v68xn.media.zestyio.com/rocket-league-background.webp" alt="Rocket League esports experience" class="w-full h-full object-cover">
           </div>
         </div>
       </div>
     </div>
-    <div class="rl-hero-glow d-none d-lg-block">
-      <div class="rl-hero-glow__image"></div>
-    </div>
+    <div class="rl-hero-glow hidden lg:block"><div class="rl-hero-glow__image"></div></div>
   </section>
 
-  <section class="bg-light py-5 border-bottom">
-    <div class="container">
-      <div class="row g-4">
-        <div class="col-12 col-lg-4">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body d-flex flex-column flex-md-row align-items-start gap-3">
-              <img src="https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg" alt="Kyle Lemmon" class="rounded-3 shadow-sm flex-shrink-0" style="width:96px;height:96px;object-fit:cover;">
+  <section class="bg-gray-50 py-12 border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-4">
+        <div class="lg:col-span-4">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
+              <img src="https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg" alt="Kyle Lemmon" class="rounded-xl shadow-sm shrink-0" style="width:96px;height:96px;object-fit:cover;">
               <div>
-                <h2 class="h4">In their words</h2>
-                <p class="text-grey mb-0">“Community polls, audio players, and other cool widgets snap into place on Content.One. We can brand everything without waiting on developers.”</p>
-                <p class="small text-muted mb-0 mt-2">Kyle Lemmon, Marketing Manager, Psyonix</p>
+                <h2 class="text-xl font-semibold">In their words</h2>
+                <p class="text-gray-600 m-0">"Community polls, audio players, and other cool widgets snap into place on Content.One. We can brand everything without waiting on developers."</p>
+                <p class="text-xs text-gray-500 m-0 mt-2">Kyle Lemmon, Marketing Manager, Psyonix</p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-8">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body">
-              <div class="d-flex flex-wrap align-items-center gap-4">
-                <div class="d-flex align-items-center gap-3">
-                  <img src="{{this.logo.getImage()}}" width="150" height="auto" alt="Rocket League" class="bg-white p-2">
+        <div class="lg:col-span-8">
+          <div class="bg-white shadow-sm rounded-2xl h-full">
+            <div class="p-6">
+              <div class="flex flex-wrap items-center gap-4">
+                <div class="flex items-center gap-3">
+                  <img src="{{this.logo.getImage()}}" width="150" alt="Rocket League" class="bg-white p-2">
                   <div>
-                    <h3 class="h5 mb-1">Fast passes, faster launches</h3>
-                    <p class="mb-0 text-grey">Site updates now move as quickly as the game — without plugins slowing the team down.</p>
+                    <h3 class="text-base font-semibold mb-1">Fast passes, faster launches</h3>
+                    <p class="m-0 text-gray-600">Site updates now move as quickly as the game — without plugins slowing the team down.</p>
                   </div>
                 </div>
-                <div class="vr d-none d-lg-inline"></div>
-                <div class="flex-grow-1">
-                  <div class="progress rounded-pill" style="height: 16px;">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 88%;" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100">Launch velocity 88%</div>
+                <div class="hidden lg:inline-block w-px h-12 bg-gray-200"></div>
+                <div class="flex-1">
+                  <div class="rounded-full overflow-hidden bg-gray-200" style="height: 16px;">
+                    <div class="h-full bg-warning text-gray-900 text-xs font-medium flex items-center px-2" style="width: 88%;">Launch velocity 88%</div>
                   </div>
                 </div>
               </div>
@@ -93,116 +68,69 @@
     </div>
   </section>
 
-  <section class="py-5 py-lg-6">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-lg-3">
-          <div class="position-sticky top-0" style="z-index:2; top: 6rem;">
-            <div class="card shadow-sm border-0">
-              <div class="card-body p-3">
-                <h2 class="h5 mb-3">Game Plan</h2>
-                <nav id="rlCaseNav" class="nav nav-pills flex-column gap-2">
-                  <a class="nav-link active" href="#rl-mission">Origins &amp; Goals</a>
-                  <a class="nav-link" href="#rl-influencer">Influencer Reach</a>
-                  <a class="nav-link" href="#rl-pro">Pro Scene</a>
-                  <a class="nav-link" href="#rl-relational">Relational Content</a>
-                  <a class="nav-link" href="#rl-metrics">Performance Wins</a>
+  <section class="py-12 lg:py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+        <div class="lg:col-span-3">
+          <div class="sticky top-0" style="z-index:2; top: 6rem;">
+            <div class="bg-white shadow-sm rounded-2xl">
+              <div class="p-3">
+                <h2 class="text-base font-semibold mb-3">Game Plan</h2>
+                <nav id="rlCaseNav" class="flex flex-col gap-2">
+                  <a class="nav-link active block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#rl-mission">Origins &amp; Goals</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#rl-influencer">Influencer Reach</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#rl-pro">Pro Scene</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#rl-relational">Relational Content</a>
+                  <a class="nav-link block px-3 py-2 rounded-lg text-sm text-gray-700 hover:bg-royal/10" href="#rl-metrics">Performance Wins</a>
                 </nav>
               </div>
               {{include /components/casestudy/side-cta.html}}
             </div>
           </div>
         </div>
-        <div class="col-lg-9">
-          <div id="rlSections" data-bs-spy="scroll" data-bs-target="#rlCaseNav" data-bs-offset="160" tabindex="0" class="pe-lg-3">
-            <section id="rl-mission" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-md-6">
-                  <h3 class="h2">Origins: Building a pro-level hub</h3>
-                  <p class="lead text-grey">Several years ago, the Psyonix team needed a CMS that could keep pace with Rocket League’s esports heartbeat and connect players with pro content instantly.</p>
-                  <ul class="list-unstyled d-grid gap-3">
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-rocket-takeoff text-warning fs-4"></i>
-                      <span>Launch a new experience quickly without sacrificing brand style.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-people-fill text-warning fs-4"></i>
-                      <span>Create an active global community with minimal dev lift.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-shield-lock text-warning fs-4"></i>
-                      <span>Ensure consistency across tournaments, teams, influencers, and fans.</span>
-                    </li>
+        <div class="lg:col-span-9">
+          <div id="rlSections" tabindex="0" class="lg:pr-3">
+
+            <section id="rl-mission" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold">Origins: Building a pro-level hub</h3>
+                  <p class="text-lg text-gray-600">Several years ago, the Psyonix team needed a CMS that could keep pace with Rocket League's esports heartbeat and connect players with pro content instantly.</p>
+                  <ul class="grid gap-3 mt-3">
+                    <li class="flex gap-3"><svg viewBox="0 0 16 16" class="w-6 h-6 text-warning shrink-0" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg><span>Launch a new experience quickly without sacrificing brand style.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="currentColor"><path d="M17 11a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm-7 0a4 4 0 1 0-4-4 4 4 0 0 0 4 4zm0 2c-3 0-9 1.5-9 4v3h18v-3c0-2.5-6-4-9-4z"/></svg><span>Create an active global community with minimal dev lift.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="currentColor"><path d="M12 1l9 4v6c0 5-3.84 9.41-9 11-5.16-1.59-9-6-9-11V5l9-4z"/></svg><span>Ensure consistency across tournaments, teams, influencers, and fans.</span></li>
                   </ul>
-                </div> 
-                <div class="col-md-6">
-                  <div class="rounded-4 overflow-hidden shadow-sm">
+                </div>
+                <div>
+                  <div class="rounded-2xl overflow-hidden shadow-sm">
                     <img src="https://hj5v68xn.media.zestyio.com/rocket-league-real-website.JPG" alt="Rocket League homepage">
-                  </div> 
+                  </div>
                 </div>
               </div>
             </section>
 
-            <section id="rl-influencer" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-7">
-                  <h3 class="h2">Goal 1: Amplify influencer magic</h3>
-                  <p class="text-grey">With millions of daily players, Rocket League leverages Content.One to spotlight streamers, pros, and rising stars — fueling exponential growth.</p>
-                  <div class="row row-cols-1 row-cols-md-2 g-4">
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">40M players</h4>
-                          <p class="mb-3">A massive audience interacts with curated highlights, polls, and live events — all orchestrated inside Content.One.</p>
-                          <span class="badge bg-warning-subtle text-warning">Community reach</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">Scales without plugins</h4>
-                          <p class="mb-3">Custom widgets stay on-brand without the plugin maintenance their previous platform demanded.</p>
-                          <span class="badge bg-warning-subtle text-warning">Creative control</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <div class="card border-0 shadow-sm h-100">
-                        <div class="card-body">
-                          <h4 class="h5">Launch in days</h4>
-                          <p class="mb-3">Page creation happens in days, not weeks — influencers stay in the spotlight.</p>
-                          <span class="badge bg-warning-subtle text-warning">Agility</span>
-                        </div>
-                      </div>
-                    </div>
+            <section id="rl-influencer" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-7">
+                  <h3 class="text-2xl md:text-3xl font-display font-bold">Goal 1: Amplify influencer magic</h3>
+                  <p class="text-gray-600">With millions of daily players, Rocket League leverages Content.One to spotlight streamers, pros, and rising stars — fueling exponential growth.</p>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-3">
+                    <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><h4 class="text-base font-semibold mb-2">40M players</h4><p class="mb-3 text-gray-600">A massive audience interacts with curated highlights, polls, and live events — all orchestrated inside Content.One.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Community reach</span></div></div>
+                    <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><h4 class="text-base font-semibold mb-2">Scales without plugins</h4><p class="mb-3 text-gray-600">Custom widgets stay on-brand without the plugin maintenance their previous platform demanded.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Creative control</span></div></div>
+                    <div class="bg-white shadow-sm rounded-2xl h-full"><div class="p-6"><h4 class="text-base font-semibold mb-2">Launch in days</h4><p class="mb-3 text-gray-600">Page creation happens in days, not weeks — influencers stay in the spotlight.</p><span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-warning/10 text-warning">Agility</span></div></div>
                   </div>
                 </div>
-                <div class="col-lg-5">
-                  <div class="card border-0 shadow-sm h-100 rl-stats-card">
-                    <div class="card-body">
-                      <h5 class="mb-3">Platform boosts</h5>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>Content creation speed</span>
-                        <span class="fw-semibold text-warning">7× faster</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-warning" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>Developer costs</span>
-                        <span class="fw-semibold text-warning">-75%</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 8px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex align-items-center justify-content-between mb-2">
-                        <span>Page load times</span>
-                        <span class="fw-semibold text-warning">4× quicker</span>
-                      </div>
-                      <div class="progress" style="height: 8px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                <div class="lg:col-span-5">
+                  <div class="bg-white shadow-sm rounded-2xl h-full rl-stats-card">
+                    <div class="p-6">
+                      <h5 class="text-base font-semibold mb-3">Platform boosts</h5>
+                      <div class="flex items-center justify-between mb-2"><span>Content creation speed</span><span class="font-semibold text-warning">7× faster</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200 mb-3" style="height:8px;"><div class="h-full bg-warning" style="width:95%;"></div></div>
+                      <div class="flex items-center justify-between mb-2"><span>Developer costs</span><span class="font-semibold text-warning">-75%</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200 mb-3" style="height:8px;"><div class="h-full bg-success" style="width:75%;"></div></div>
+                      <div class="flex items-center justify-between mb-2"><span>Page load times</span><span class="font-semibold text-warning">4× quicker</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200" style="height:8px;"><div class="h-full bg-info" style="width:90%;"></div></div>
                     </div>
                   </div>
                 </div>
@@ -211,248 +139,152 @@
 
             {{include /components/casestudy/sliver-cta.html}}
 
-            <section id="rl-pro" class="py-5 border-bottom fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                  <div class="rounded-4 overflow-hidden shadow-sm">
-                    <img src="https://hj5v68xn.media.zestyio.com/rocket-league-background.webp" alt="Rocket League tournament" >
+            <section id="rl-pro" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div class="lg:order-2">
+                  <div class="rounded-2xl overflow-hidden shadow-sm">
+                    <img src="https://hj5v68xn.media.zestyio.com/rocket-league-background.webp" alt="Rocket League tournament">
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <h3 class="h2">Goal 2: Fuel the pro scene</h3>
-                  <p class="text-grey">From televised tournaments to six-figure prize pools, Rocket League keeps esports fans energized with consistent storytelling.</p>
-                  <ul class="list-unstyled d-grid gap-3">
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-tv text-warning fs-4"></i>
-                      <span>Broadcast-ready stories land instantly across Twitch, Turner, and beyond.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-calendar-event text-warning fs-4"></i>
-                      <span>Quarterly landing pages launch without waiting on engineering cycles.</span>
-                    </li>
-                    <li class="d-flex gap-3">
-                      <i class="bi bi-megaphone text-warning fs-4"></i>
-                      <span>Campaigns and patch notes hit the site the moment new content drops.</span>
-                    </li>
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold">Goal 2: Fuel the pro scene</h3>
+                  <p class="text-gray-600">From televised tournaments to six-figure prize pools, Rocket League keeps esports fans energized with consistent storytelling.</p>
+                  <ul class="grid gap-3 mt-3">
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="13" rx="2"/><polyline points="17 2 12 7 7 2"/></svg><span>Broadcast-ready stories land instantly across Twitch, Turner, and beyond.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg><span>Quarterly landing pages launch without waiting on engineering cycles.</span></li>
+                    <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-warning shrink-0" fill="currentColor"><path d="M3 11l18-5v12L3 14v-3zM11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg><span>Campaigns and patch notes hit the site the moment new content drops.</span></li>
                   </ul>
-                  <blockquote class="blockquote border-start border-warning ps-3 mt-4">
-                    <p class="mb-2">“Our community loves new content and hearing about updates. With Content.One we can deliver every beat while keeping gameplay at the core.”</p>
-                    <footer class="blockquote-footer text-warning">Kyle Lemmon</footer>
+                  <blockquote class="border-l-4 border-warning pl-3 mt-4">
+                    <p class="mb-2">"Our community loves new content and hearing about updates. With Content.One we can deliver every beat while keeping gameplay at the core."</p>
+                    <footer class="text-warning text-sm">— Kyle Lemmon</footer>
                   </blockquote>
                 </div>
               </div>
             </section>
 
-            <section id="rl-relational" class="py-5 border-bottom fade-section">
-              <div class="row g-4">
-                <div class="col-lg-6">
-                  <h3 class="h2">Relational content, perfectly synced</h3>
-                  <p class="text-grey">Players, teams, tournaments, standings — it all connects through Content.One relationships. Update once, publish everywhere.</p>
-                  <div class="accordion" id="rlRelationalAccordion">
-                    <div class="accordion-item">
-                      <h4 class="accordion-header" id="rlUpdateHeading">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#rlUpdate" aria-expanded="true" aria-controls="rlUpdate">Update once, impact everywhere</button>
-                      </h4>
-                      <div id="rlUpdate" class="accordion-collapse collapse show" aria-labelledby="rlUpdateHeading" data-bs-parent="#rlRelationalAccordion">
-                        <div class="accordion-body">Community managers change a stat or roster once — those updates cascade across match pages, leaderboards, and bios automatically.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h4 class="accordion-header" id="rlSpeedHeading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rlSpeed" aria-expanded="false" aria-controls="rlSpeed">Daily cadence</button>
-                      </h4>
-                      <div id="rlSpeed" class="accordion-collapse collapse" aria-labelledby="rlSpeedHeading" data-bs-parent="#rlRelationalAccordion">
-                        <div class="accordion-body">Blogs publish almost every weekday and new landing pages spin up each season — no dev queue required.</div>
-                      </div>
-                    </div>
-                    <div class="accordion-item">
-                      <h4 class="accordion-header" id="rlCollabHeading">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#rlCollab" aria-expanded="false" aria-controls="rlCollab">Creators empowered</button>
-                      </h4>
-                      <div id="rlCollab" class="accordion-collapse collapse" aria-labelledby="rlCollabHeading" data-bs-parent="#rlRelationalAccordion">
-                        <div class="accordion-body">Non-technical content creators handle updates and launches independently, freeing engineers to focus on gameplay.</div>
-                      </div>
-                    </div>
+            <section id="rl-relational" class="py-10 border-b border-gray-200 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold">Relational content, perfectly synced</h3>
+                  <p class="text-gray-600">Players, teams, tournaments, standings — it all connects through Content.One relationships. Update once, publish everywhere.</p>
+                  <!-- Pure-Tailwind disclosure (native <details>) — replaces Bootstrap accordion -->
+                  <div class="grid gap-2 mt-3">
+                    <details open class="bg-white shadow-sm rounded-xl"><summary class="cursor-pointer p-4 font-semibold list-none flex items-center justify-between">Update once, impact everywhere<svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="p-4 pt-0 text-gray-600 text-sm">Community managers change a stat or roster once — those updates cascade across match pages, leaderboards, and bios automatically.</div></details>
+                    <details class="bg-white shadow-sm rounded-xl"><summary class="cursor-pointer p-4 font-semibold list-none flex items-center justify-between">Daily cadence<svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="p-4 pt-0 text-gray-600 text-sm">Blogs publish almost every weekday and new landing pages spin up each season — no dev queue required.</div></details>
+                    <details class="bg-white shadow-sm rounded-xl"><summary class="cursor-pointer p-4 font-semibold list-none flex items-center justify-between">Creators empowered<svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg></summary><div class="p-4 pt-0 text-gray-600 text-sm">Non-technical content creators handle updates and launches independently, freeing engineers to focus on gameplay.</div></details>
                   </div>
                 </div>
-                <div class="col-lg-6">
-                  <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                      <h4 class="h5">Weekly content rhythm</h4>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span>Blogs published</span>
-                        <span class="fw-semibold text-warning">3 per week</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 6px;">
-                        <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span>Landing pages</span>
-                        <span class="fw-semibold text-warning">1 per quarter</span>
-                      </div>
-                      <div class="progress mb-3" style="height: 6px;">
-                        <div class="progress-bar bg-success" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
-                      <div class="d-flex justify-content-between align-items-center mb-2">
-                        <span>Community polls</span>
-                        <span class="fw-semibold text-warning">Weekly</span>
-                      </div>
-                      <div class="progress" style="height: 6px;">
-                        <div class="progress-bar bg-info" role="progressbar" style="width: 72%;" aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"></div>
-                      </div>
+                <div>
+                  <div class="bg-white shadow-sm rounded-2xl h-full">
+                    <div class="p-6">
+                      <h4 class="text-base font-semibold mb-3">Weekly content rhythm</h4>
+                      <div class="flex justify-between items-center mb-2"><span>Blogs published</span><span class="font-semibold text-warning">3 per week</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200 mb-3" style="height:6px;"><div class="h-full bg-royal" style="width:80%;"></div></div>
+                      <div class="flex justify-between items-center mb-2"><span>Landing pages</span><span class="font-semibold text-warning">1 per quarter</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200 mb-3" style="height:6px;"><div class="h-full bg-success" style="width:60%;"></div></div>
+                      <div class="flex justify-between items-center mb-2"><span>Community polls</span><span class="font-semibold text-warning">Weekly</span></div>
+                      <div class="rounded-full overflow-hidden bg-gray-200" style="height:6px;"><div class="h-full bg-info" style="width:72%;"></div></div>
                     </div>
                   </div>
                 </div>
               </div>
             </section>
 
-            <section id="rl-metrics" class="py-5 fade-section">
-              <div class="row g-4 align-items-center">
-                <div class="col-lg-6">
-                  <h3 class="h2">Performance unlocked</h3>
-                  <p class="lead text-grey">Content.One keeps Rocket League’s digital arena stable, fast, and future-ready.</p>
-                  <ul class="list-unstyled d-grid gap-3">
-                    <li class="d-flex gap-3 align-items-center">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">250k</div>
-                      <span>Hits handled per hour during peak tournaments without downtime.</span>
-                    </li>
-                    <li class="d-flex gap-3 align-items-center">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">4×</div>
-                      <span>Faster page loads keep fans locked in on match coverage.</span>
-                    </li>
-                    <li class="d-flex gap-3 align-items-center">
-                      <div class="badge rounded-circle bg-warning text-dark p-3">100%</div>
-                      <span>Brand control maintained across every widget and landing page.</span>
-                    </li>
+            <section id="rl-metrics" class="py-10 fade-section">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+                <div>
+                  <h3 class="text-2xl md:text-3xl font-display font-bold">Performance unlocked</h3>
+                  <p class="text-lg text-gray-600">Content.One keeps Rocket League's digital arena stable, fast, and future-ready.</p>
+                  <ul class="grid gap-3 mt-3">
+                    <li class="flex gap-3 items-center"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">250k</div><span>Hits handled per hour during peak tournaments without downtime.</span></li>
+                    <li class="flex gap-3 items-center"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">4×</div><span>Faster page loads keep fans locked in on match coverage.</span></li>
+                    <li class="flex gap-3 items-center"><div class="rounded-full bg-warning text-gray-900 font-semibold px-3 py-1.5 shrink-0 text-sm">100%</div><span>Brand control maintained across every widget and landing page.</span></li>
                   </ul>
                 </div>
-                <div class="col-lg-6">
-                  <div class="card border-0 shadow-lg">
-                    <div class="card-body p-4 p-lg-5">
-                      <h4 class="h5 text-uppercase text-warning mb-3">Next Steps</h4>
-                      <p class="mb-4 text-grey">Ready to ship content as fast as your players move? See how Content.One fuels enterprise-grade esports storytelling.</p>
-                      <div class="d-flex flex-wrap gap-3">
-                        <a href="/contact/" class="btn btn-warning btn-lg text-dark">Connect with us</a>
-                         
+                <div>
+                  <div class="bg-white shadow-lg rounded-2xl">
+                    <div class="p-6 lg:p-10">
+                      <h4 class="text-base uppercase text-warning mb-3 font-semibold">Next Steps</h4>
+                      <p class="mb-4 text-gray-600">Ready to ship content as fast as your players move? See how Content.One fuels enterprise-grade esports storytelling.</p>
+                      <div class="flex flex-wrap gap-3">
+                        <a href="/contact/" class="inline-flex items-center rounded-lg bg-warning hover:bg-warning/80 text-gray-900 font-semibold px-5 py-3 transition">Connect with us</a>
                       </div>
                     </div>
-                  </div> 
-                </div> 
+                  </div>
+                </div>
               </div>
             </section>
+
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-dark text-white text-center position-relative overflow-hidden">
-    <div class="container py-5">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 class="display-5 fw-semibold mb-4">“On Content.One, content is liquid — it just updates on the site, and I’m not afraid to edit anything.”</h2>
-          <p class="lead text-white-75 mb-5">Rocket League’s marketing team gains creative freedom and stability, keeping the community rallying around every update.</p>
-          <div class="d-flex flex-wrap justify-content-center gap-3">
-            <a class="btn btn-light btn-lg text-primary" href="/customers/">See more case studies</a>
-            <a class="btn btn-outline-light btn-lg" href="/book-a-demo/">Start your roll-out</a>
+  <section class="py-16 bg-gray-900 text-white text-center relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div class="flex justify-center">
+        <div class="lg:max-w-3xl">
+          <h2 class="text-3xl md:text-5xl font-display font-semibold mb-4">"On Content.One, content is liquid — it just updates on the site, and I'm not afraid to edit anything."</h2>
+          <p class="text-lg text-white/75 mb-8">Rocket League's marketing team gains creative freedom and stability, keeping the community rallying around every update.</p>
+          <div class="flex flex-wrap justify-center gap-3">
+            <a class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition" href="/customers/">See more case studies</a>
+            <a class="inline-flex items-center rounded-lg border border-white text-white hover:bg-white/10 font-semibold px-6 py-3 transition" href="/book-a-demo/">Start your roll-out</a>
           </div>
         </div>
       </div>
     </div>
-    <img src="https://hj5v68xn.media.zestyio.com/rocket-league-real-website.JPG" class="position-absolute bottom-0 start-50 translate-middle-x opacity-25 w-100" alt="Rocket League field background">
+    <img src="https://hj5v68xn.media.zestyio.com/rocket-league-real-website.JPG" class="absolute bottom-0 left-1/2 -translate-x-1/2 opacity-25 w-full" alt="Rocket League field background">
   </section>
 
-  <div class="modal fade" id="rlOverviewVideo" tabindex="-1" aria-labelledby="rlOverviewVideoLabel" aria-hidden="true">
-    <div class="modal-dialog modal-xl modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title h5" id="rlOverviewVideoLabel">Rocket League x Content.One Playbook</h2>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body p-0">
-          <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/1OrnsCQs4S8" title="Rocket League highlight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
+  <!-- Pure-Tailwind dialog (Bootstrap modal classes dropped). Opened via JS by other components. -->
+  <dialog id="rlOverviewVideo" class="rounded-2xl shadow-2xl p-0 max-w-4xl w-full backdrop:bg-black/50">
+    <div class="bg-white rounded-2xl">
+      <div class="flex items-center justify-between p-4 border-b border-gray-200">
+        <h2 class="text-base font-semibold m-0">Rocket League x Content.One Playbook</h2>
+        <button type="button" onclick="document.getElementById('rlOverviewVideo').close()" aria-label="Close" class="text-gray-500 hover:text-gray-900 text-2xl leading-none">&times;</button>
+      </div>
+      <div class="p-0">
+        <div class="aspect-video">
+          <iframe src="https://www.youtube.com/embed/1OrnsCQs4S8" title="Rocket League highlight" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-full"></iframe>
         </div>
       </div>
     </div>
-  </div>
+  </dialog>
 </div>
 
 <style>
-  .rl-case-study .rl-hero-foreground,
-  .rl-case-study .rl-hero-media {
-    position: relative;
-    z-index: 2;
-  }
-  .rl-case-study .rl-hero-glow {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    width: 60%;
-    max-width: 760px;
-    pointer-events: none;
-    z-index: 1;
-  }
+  .rl-case-study .rl-hero-foreground, .rl-case-study .rl-hero-media { position: relative; z-index: 2; }
+  .rl-case-study .rl-hero-glow { position: absolute; top: 0; bottom: 0; right: 0; width: 60%; max-width: 760px; pointer-events: none; z-index: 1; }
   .rl-case-study .rl-hero-glow__image {
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(
-      120deg, rgba(8, 15, 35, 0) 0%, 
-      rgba(8, 15, 35, 0.6) 55%, 
-      rgba(8, 15, 35, 0.9) 100%), 
-      url('https://hj5v68xn.media.zestyio.com/RL1-1.webp');
-    background-size: cover;
-    background-position: center;
-    opacity: 0.8;
-    border-top-left-radius: 32px;
-    transform: translate(18%, -14%);
+    width: 100%; height: 100%;
+    background-image: linear-gradient(120deg, rgba(8, 15, 35, 0) 0%, rgba(8, 15, 35, 0.6) 55%, rgba(8, 15, 35, 0.9) 100%), url('https://hj5v68xn.media.zestyio.com/RL1-1.webp');
+    background-size: cover; background-position: center;
+    opacity: 0.8; border-top-left-radius: 32px; transform: translate(18%, -14%);
   }
-  .rl-case-study .fade-section {
-    opacity: 0;
-    transform: translateY(24px);
-    transition: opacity .6s ease, transform .6s ease;
-    scroll-margin-top: 160px;
-  }
-  .rl-case-study .fade-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  .bg-gradient-rocket {
-    background: linear-gradient(135deg, #030712 0%, #0b1d40 45%, #1f4bff 100%);
-  }
-  .bg-warning-subtle {
-    background-color: rgba(255, 193, 7, 0.12) !important;
-  }
-  .rl-stats-card .progress-bar {
-    border-radius: 999px;
-  }
+  .rl-case-study .fade-section { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; scroll-margin-top: 160px; }
+  .rl-case-study .fade-section.is-visible { opacity: 1; transform: translateY(0); }
+  .bg-gradient-rocket { background: linear-gradient(135deg, #030712 0%, #0b1d40 45%, #1f4bff 100%); }
+  .rl-case-study .nav-link.active { background: rgba(66, 85, 189, 0.1); color: #4255BD; font-weight: 600; }
+  .rl-case-study details[open] summary svg { transform: rotate(180deg); }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var sectionsEl = document.getElementById('rlSections');
-    if (sectionsEl) {
-      new bootstrap.ScrollSpy(sectionsEl, {
-        target: '#rlCaseNav',
-        offset: 180
-      });
-    }
-
+    // Pure-JS scroll-spy
+    (function () {
+      var navLinks = document.querySelectorAll('#rlCaseNav .nav-link');
+      var spy = [];
+      navLinks.forEach(function (l) { var id = l.getAttribute('href'); if (id && id.charAt(0)==='#') { var t = document.querySelector(id); if (t) spy.push({link:l,target:t}); } });
+      function on() { var y = window.scrollY + 180; var c = spy[0]; spy.forEach(function(e){ if (e.target.offsetTop <= y) c = e; }); navLinks.forEach(function(l){l.classList.remove('active');}); if (c) c.link.classList.add('active'); }
+      window.addEventListener('scroll', on, {passive:true}); on();
+    })();
     var observer = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('is-visible');
-          observer.unobserve(entry.target);
-        }
+        if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }
       });
     }, { threshold: 0.2 });
-
-    document.querySelectorAll('.rl-case-study .fade-section').forEach(function (section) {
-      observer.observe(section);
-    });
-
+    document.querySelectorAll('.rl-case-study .fade-section').forEach(function (section) { observer.observe(section); });
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -461,43 +293,20 @@
           if (isNaN(endValue)) return;
           var suffix = el.getAttribute('data-rl-suffix') || '';
           var format = el.getAttribute('data-rl-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
+          var duration = 1600; var startTimestamp = null;
           var step = function (timestamp) {
             if (!startTimestamp) startTimestamp = timestamp;
             var progress = Math.min((timestamp - startTimestamp) / duration, 1);
             var value = progress * endValue;
-            el.textContent = format === 'decimal'
-              ? (value).toFixed(1) + suffix
-              : Math.floor(value).toLocaleString() + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              el.textContent = format === 'decimal'
-                ? endValue.toFixed(1) + suffix
-                : Math.round(endValue).toLocaleString() + suffix;
-            }
+            el.textContent = format === 'decimal' ? (value).toFixed(1) + suffix : Math.floor(value).toLocaleString() + suffix;
+            if (progress < 1) { window.requestAnimationFrame(step); }
+            else { el.textContent = format === 'decimal' ? endValue.toFixed(1) + suffix : Math.round(endValue).toLocaleString() + suffix; }
           };
-
           window.requestAnimationFrame(step);
           counterObserver.unobserve(el);
         }
       });
     }, { threshold: 0.4 });
-
-    document.querySelectorAll('[data-rl-count]').forEach(function (counter) {
-      counterObserver.observe(counter);
-    });
-
-    var videoModal = document.getElementById('rlOverviewVideo');
-    if (videoModal) {
-      videoModal.addEventListener('hidden.bs.modal', function () {
-        var iframe = videoModal.querySelector('iframe');
-        if (!iframe) return;
-        var src = iframe.getAttribute('src');
-        iframe.setAttribute('src', src);
-      });
-    }
+    document.querySelectorAll('[data-rl-count]').forEach(function (counter) { counterObserver.observe(counter); });
   });
 </script>

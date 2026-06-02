@@ -1,59 +1,40 @@
-<section class="pattern-square bg-primary bg-opacity-10">
-            <div class="container position-relative z-1 py-xl-9 py-6">
-               <div class="row">
-                  <div class="col-lg-10 offset-lg-1 col-md-12">
-                     <div class="row align-items-center g-5">
-                        <div class="col-lg-6 col-12 order-2" data-cue="slideInLeft" data-show="true" style="animation-name: slideInLeft; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                           <div class="me-xl-7">
-                              <div class="mb-5">
-                                 <h2 class="h1 mb-4">Free Consultation with Content.One</h2>
-                                 <p class="mb-0">Book a free consultation call with one of our experts and get help with your next moves. It's always good to talk to an expert. It's free!</p>
-                              </div>
-                              <div class="mb-5">
-                                 <ul class="list-unstyled">
-                                    <li class="mb-2 d-flex">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                          <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                       </svg>
-                                       <span class="ms-1">Not sure which technology to choose?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                          <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                       </svg>
-                                       <span class="ms-1">Need advice on the next steps?</span>
-                                    </li>
-                                    <li class="mb-2 d-flex">
-                                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dot" viewBox="0 0 16 16">
-                                          <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"></path>
-                                       </svg>
-                                       <span class="ms-1">Hesitating on how to plan the execution?</span>
-                                    </li>
-                                 </ul>
-                              </div>
-                              <div class="d-md-flex align-items-center justify-content-between">
-                                 <div class="d-flex align-items-center mb-3 mb-md-0 small">
-                                    <div class="d-flex align-items-center">
-                                       <img src="https://hj5v68xn.media.zestyio.com/todd-sabo.H1U4Vs7Mee.jpg" alt="Avatar" class="avatar avatar-lg rounded-circle">
-                                       <div class="ms-3">
-                                          <h5 class="mb-0">{{this.title}}</h5>
-                                          <small class="me-4">VP of Growth</small>
-                                          <small>growth@content.one</small>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="col-lg-6 col-12 order-lg-2" data-cue="slideInRight" data-show="true" style="animation-name: slideInRight; animation-duration: 600ms; animation-timing-function: ease; animation-delay: 0ms; animation-direction: normal; animation-fill-mode: both;">
-                           <div class="card shadow-sm">
-                              <div class="card-body">
-                                 {{include /components/forms/zoho-form.html}}
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
+<!-- sales_personal_cta — Tailwind-converted. Pattern-square background kept via inline style. -->
+<section class="relative bg-royal/10" style="background-image: radial-gradient(rgba(66,85,189,.12) 1px, transparent 1px); background-size: 22px 22px;">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-16 xl:py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+      <!-- Left: text + bullets + signature -->
+      <div class="lg:col-span-6 lg:col-start-2 order-2 lg:order-1 lg:pr-12">
+        <div class="mb-8">
+          <h2 class="font-display text-3xl md:text-5xl font-semibold mb-4">Free Consultation with Content.One</h2>
+          <p class="text-gray-700">Book a free consultation call with one of our experts and get help with your next moves. It's always good to talk to an expert. It's free!</p>
+        </div>
+        <div class="mb-8">
+          <ul class="space-y-2 text-gray-800">
+            <li class="flex items-start gap-2"><span class="text-royal mt-0.5">•</span><span>Not sure which technology to choose?</span></li>
+            <li class="flex items-start gap-2"><span class="text-royal mt-0.5">•</span><span>Need advice on the next steps?</span></li>
+            <li class="flex items-start gap-2"><span class="text-royal mt-0.5">•</span><span>Hesitating on how to plan the execution?</span></li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-3 text-sm">
+          <img src="https://hj5v68xn.media.zestyio.com/todd-sabo.H1U4Vs7Mee.jpg" alt="Avatar" class="w-14 h-14 rounded-full object-cover">
+          <div>
+            <h5 class="font-semibold m-0">{{this.title}}</h5>
+            <small class="text-gray-600 mr-4">VP of Growth</small>
+            <small class="text-gray-600">growth@content.one</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: form -->
+      <div class="lg:col-span-5 lg:col-start-8 order-1 lg:order-2">
+        <div class="bg-white shadow-md rounded-xl">
+          <div class="p-6">
+            {{include /components/forms/zoho-form.html}}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
