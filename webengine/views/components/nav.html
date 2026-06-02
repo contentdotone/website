@@ -40,17 +40,26 @@
       box-shadow: 0 8px 28px rgba(15, 23, 42, 0.12);
       border-radius: 0.5rem;
       min-width: 16rem;
-      margin-top: 0.25rem;
+      margin-top: 0;            /* no dead gap — menu touches summary bottom */
+      padding-top: 0.75rem;     /* visual breathing room comes from padding (still hoverable) */
       z-index: 1050;
     }
     .nav-details.nav-menu-right > .nav-menu { left: auto; right: 0; }
-    .nav-details.nav-menu-wide > .nav-menu { min-width: 44rem; padding: 1rem; }
-    /* Hover-open on desktop: show menu on hover or when keyboard focus is inside.
-       Padding below summary keeps the hover area contiguous with the menu so the
-       cursor doesn't lose the dropdown crossing the gap. */
+    .nav-details.nav-menu-wide > .nav-menu { min-width: 44rem; padding: 1rem; padding-top: 0.75rem; }
+    /* Invisible "bridge" pseudo-element extends each dropdown's hover area
+       upward so the cursor never lands in a dead zone between summary and menu. */
+    .nav-details > .nav-menu::before {
+      content: "";
+      position: absolute;
+      top: -10px;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: transparent;
+    }
+    /* Hover-open on desktop: show menu on hover or when keyboard focus is inside. */
     .nav-details:hover > .nav-menu,
     .nav-details:focus-within > .nav-menu { display: block; }
-    .nav-details > summary { padding-bottom: 0.75rem; }
   }
   .nav-details summary > .nav-caret { transition: transform .2s; }
   .nav-details[open] > summary > .nav-caret { transform: rotate(180deg); }
@@ -372,20 +381,29 @@
       });
     });
 
-    // Hover-driven dropdowns:
-    //   - mouseenter on a nav-details opens it (and closes any other open one)
-    //   - mouseleave closes it
-    // (name="navmenu" already handles the click-toggle exclusivity case.)
+    // Hover-driven dropdowns with a close-delay so traversing tiny gaps between
+    // the trigger and the menu doesn't blink the dropdown shut.
+    //   - mouseenter on a nav-details opens it (and closes any other open one);
+    //     cancels any pending close timer.
+    //   - mouseleave starts a 180ms close timer; another enter cancels it.
+    // (name="navmenu" handles the click-toggle exclusivity case via the browser.)
     var allDetails = document.querySelectorAll('.nav-details');
+    var closeTimer = null;
+    function cancelClose() { if (closeTimer) { clearTimeout(closeTimer); closeTimer = null; } }
     allDetails.forEach(function (d) {
       d.addEventListener('mouseenter', function () {
+        cancelClose();
         allDetails.forEach(function (other) {
           if (other !== d && other.open) other.removeAttribute('open');
         });
         d.setAttribute('open', '');
       });
       d.addEventListener('mouseleave', function () {
-        d.removeAttribute('open');
+        cancelClose();
+        closeTimer = setTimeout(function () {
+          d.removeAttribute('open');
+          closeTimer = null;
+        }, 180);
       });
     });
 
