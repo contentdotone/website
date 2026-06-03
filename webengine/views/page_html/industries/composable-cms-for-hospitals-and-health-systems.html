@@ -224,39 +224,34 @@
   </section>
 
   <!-- ════════════ FEATURES SECTION 2 ════════════ -->
-  <section class="py-16 lg:py-24 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
+  <section class="py-24">
+    <div class="mx-auto px-4 sm:px-6 md:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl space-y-12 lg:space-y-24">
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-royal/30 to-ink shadow-xl shadow-black/40 aspect-[16/10] flex items-center justify-center">
-            <svg viewBox="0 0 240 160" class="w-2/3 h-2/3 text-royalLite" fill="none" stroke="currentColor" stroke-width="1.4">
-              <rect x="40" y="30" width="160" height="100" rx="8" />
-              <circle cx="120" cy="80" r="20" />
-              <path d="M110 80l8 8 12-16" stroke-width="2"/>
-              <rect x="60" y="50" width="40" height="3" rx="1.5"/>
-              <rect x="140" y="50" width="40" height="3" rx="1.5"/>
-              <rect x="60" y="115" width="120" height="3" rx="1.5"/>
-            </svg>
+      <!-- Row 1: Agentic AI — image left, content right at lg+ -->
+      <div class="flex flex-col lg:flex-row gap-6 lg:gap-12 xl:gap-24 items-center">
+        <div class="w-full lg:flex-1 lg:min-w-0">
+          <div class="relative aspect-[576/360] lg:aspect-auto lg:h-[400px] rounded-lg overflow-hidden">
+            <img src="https://www.figma.com/api/mcp/asset/f3a53445-0932-4adc-8cad-fbf6956938cc" alt="Agentic AI assisting hospital marketing teams" class="absolute inset-0 w-full h-full object-cover">
           </div>
         </div>
-        <div class="lg:col-span-6 lg:pl-6">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">AI speed</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Draft content at AI speed. Clinical reviewers approve every word.</h2>
-          <p class="text-lg text-white/70 m-0">Give marketing, communications, and foundation teams the ability to build secure, accessible, on-brand sites without waiting on central IT. Reusable Blocks keep required disclosures, accessibility patterns, and Conditions of Participation language consistent across every site.</p>
+        <div class="w-full lg:flex-1 lg:min-w-0 flex flex-col gap-4 items-start">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040]">Agentic AI</span>
+          <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] m-0">Draft content at AI speed. Clinical reviewers approve every word.</h2>
+          <p class="text-[#b1bae7] text-base leading-6 lg:text-lg lg:leading-7 m-0">Give marketing, communications, and foundation teams the ability to build secure, accessible, on-brand sites without waiting on central IT. Reusable Blocks keep required disclosures, accessibility patterns, and Conditions of Participation language consistent across every site.</p>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-6 lg:order-1 order-2 lg:pr-6">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Accessibility &amp; Section 1557</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Audit-ready content for surveys, regulators, and the board.</h2>
-          <p class="text-lg text-white/70 m-0">Immutable audit logs, version history, and exportable reports give compliance teams, accreditation surveyors, and board committees full visibility into what changed, when, who approved it, and what AI suggested along the way.</p>
-        </div>
-        <div class="lg:col-span-6 lg:order-2 order-1">
-          <div class="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/40">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit dashboard" class="w-full block">
+      <!-- Row 2: Transparency & Reporting — content left, image right at lg+ -->
+      <div class="flex flex-col lg:flex-row-reverse gap-6 lg:gap-12 xl:gap-24 items-center">
+        <div class="w-full lg:flex-1 lg:min-w-0">
+          <div class="relative aspect-[576/360] lg:aspect-auto lg:h-[400px] rounded-lg overflow-hidden bg-white">
+            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Content.One analytics + audit dashboard" class="absolute inset-0 w-full h-full object-cover">
           </div>
+        </div>
+        <div class="w-full lg:flex-1 lg:min-w-0 flex flex-col gap-4 items-start">
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040]">Transparency &amp; Reporting</span>
+          <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] m-0">Audit-ready content for surveys, regulators, and the board.</h2>
+          <p class="text-[#b1bae7] text-base leading-6 lg:text-lg lg:leading-7 m-0">Immutable audit logs, version history, and exportable reports give compliance teams, accreditation surveyors, and board committees full visibility into what changed, when, who approved it, and what AI suggested along the way.</p>
         </div>
       </div>
 
