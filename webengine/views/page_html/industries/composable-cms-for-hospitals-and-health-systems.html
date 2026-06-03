@@ -6,20 +6,29 @@
 <div class="hospitals-industry-page bg-ink text-white">
 
   <!-- ════════════ HERO ════════════
-       Spec from Figma "Hero" component 13759:27117 (responsive: 1440/1024/768/640).
-       Background: top-to-bottom gradient #19214e → #060813.
-       Desktop (≥lg): 2-col split with image overflowing the right edge below the section.
-       Mobile (<lg): single column, image below copy. -->
+       Spec from Figma "Hero" 13759:27117 — 4 explicit breakpoints:
+         <md  (sm/base) → Variant4 (13763:2056)  — stacked, 480px image, display-sm 30/38, text-sm body
+         md          → Variant3 (13759:27195)   — stacked, 640px image, display-md 36/44, text-md body
+         lg + xl     → Default  (13759:27116)   — 2-col, 979px image overflowing -70px below, display-lg 48/60, text-xl body
+       Background: top→bottom gradient #19214e → #060813. -->
   <section class="hospital-hero relative overflow-hidden">
     <div class="max-w-7xl mx-auto lg:max-w-none">
       <div class="flex flex-col lg:flex-row items-stretch">
 
         <!-- Left: copy + email capture -->
-        <div class="flex-1 min-w-0 px-6 sm:px-8 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
-          <div class="lg:max-w-[480px]">
+        <div class="flex-1 min-w-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
+          <div class="w-full max-w-[480px] mx-auto md:mx-0">
             <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040] mb-4">Hospitals &amp; health systems</span>
-            <h1 class="font-display font-semibold text-white text-3xl leading-[1.27] lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] mb-6">Run every hospital site, service line, and clinic from one platform.</h1>
-            <p class="text-sm leading-5 lg:text-xl lg:leading-[30px] text-[#b1bae7] mb-8 lg:mb-12">Content.One helps health systems publish patient education, service line pages, find-a-doc directories, and campaign sites at AI speed — with HIPAA-aware governance, clinical review, and accessibility on by default.</p>
+            <h1 class="font-display font-semibold text-white
+                       text-[30px] leading-[38px]
+                       md:text-[36px] md:leading-[44px] md:tracking-[-0.72px]
+                       lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px]
+                       mb-6">Run every hospital site, service line, and clinic from one platform.</h1>
+            <p class="text-[#b1bae7]
+                      text-sm leading-5 tracking-[0.14px]
+                      md:text-base md:leading-6 md:tracking-normal
+                      lg:text-xl lg:leading-[30px]
+                      mb-8 lg:mb-12">Content.One helps health systems publish patient education, service line pages, find-a-doc directories, and campaign sites at AI speed — with HIPAA-aware governance, clinical review, and accessibility on by default.</p>
 
             <form class="flex flex-col sm:flex-row gap-4 sm:gap-3 items-stretch sm:items-start" action="/contact-us/" method="get">
               <div class="flex-1 min-w-0">
@@ -32,12 +41,18 @@
           </div>
         </div>
 
-        <!-- Right: dashboard mockup. Desktop overflows the section bottom + right edge per Figma. -->
+        <!-- Right / below: dashboard mockup.
+             <md  : 480px wide, centered, below copy
+             md   : 640px wide, centered, below copy
+             lg+  : 979px wide, overflows -70px below + flush to right of section -->
         <div class="relative lg:flex-1 lg:min-w-0 lg:self-stretch">
-          <div class="px-6 sm:px-8 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
+          <div class="px-6 sm:px-8 md:px-12 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
             <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png"
                  alt="Content.One dashboard preview for hospital marketing teams"
-                 class="block w-full max-w-[480px] mx-auto lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] rounded-xl lg:rounded-none border border-white/10 lg:border-0 shadow-2xl shadow-black/40 lg:shadow-none object-cover" />
+                 class="block mx-auto rounded-xl border border-white/10 shadow-2xl shadow-black/40 object-cover
+                        w-full max-w-[480px]
+                        md:max-w-[640px]
+                        lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] lg:rounded-none lg:border-0 lg:shadow-none" />
           </div>
         </div>
 
