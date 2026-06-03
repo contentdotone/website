@@ -259,65 +259,91 @@
   </section>
 
   <!-- ════════════ FEATURES SECTION 3 (6 cards) ════════════ -->
-  <section class="py-16 lg:py-24 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Built for the largest content operations.</h2>
-        <p class="text-lg text-white/70 m-0">Content.One scales with the size of your team, the complexity of your brand portfolio, and the channels you have to be on tomorrow.</p>
+  <section class="bg-black py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-16">
+
+      <div class="max-w-3xl flex flex-col gap-5 text-center">
+        <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] sm:text-[36px] sm:leading-[44px] sm:tracking-[-0.72px] m-0">Built for the largest content operations.</h2>
+        <p class="font-body text-[#b1bae7] text-base leading-6 lg:text-xl lg:leading-[30px] m-0">Content.One scales with the size of your team, the complexity of your brand portfolio, and the channels you have to be on tomorrow.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3v4M3 5h4M19 17v4M17 19h4M9 12l2-4 2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg>
+
+      <div class="w-full flex flex-wrap gap-6 items-stretch justify-center xl:justify-start">
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 5.6L20 8l-4 4 1 6-5-3-5 3 1-6-4-4 5.6-.4z"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Generative AI, scoped to your brand.</h3>
-          <p class="text-white/65 text-sm mb-5">Drafts, summaries, translations, and content variations — every output scoped to your brand voice, your terminology, and the rules your team set. Bring your own model.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Generative AI, scoped to your brand.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">Drafts, summaries, translations, and content variations — every output scoped to your brand voice, your terminology, and the rules your team set. Bring your own model.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 7l3 9M16 7l-3 9"/></svg>
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 7l3 9M16 7l-3 9"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Workflow and approvals at scale.</h3>
-          <p class="text-white/65 text-sm mb-5">Custom content flows your team can set by content type, to fit your team's unique needs. Reviewers stay in Content.One — no ticket sprawl across Slack and email.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Workflow and approvals at scale.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">Custom content flows your team can set by content type, to fit your team's unique needs. Reviewers stay in Content.One — no ticket sprawl across Slack and email.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="22" x2="4" y2="15"/><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg>
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="22" x2="4" y2="15"/><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Multi-region &amp; brand content modeling.</h3>
-          <p class="text-white/65 text-sm mb-5">Structured content models to manage your brand portfolio. One model, many brands, many locales — with rules your team controls. Translation localization built in.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Multi-region &amp; brand content modeling.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">Structured content models to manage your brand portfolio. One model, many brands, many locales — with rules your team controls. Translation localization built in.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><polyline points="8 13 6 15 8 17"/><polyline points="13 13 15 15 13 17"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Composable, hybrid, or fully headless.</h3>
-          <p class="text-white/65 text-sm mb-5">Pick the architecture that fits the project, not the other way around. REST and GraphQL APIs, custom endpoints, and a content delivery network in regions close to your users.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Composable, hybrid, or fully headless.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">Pick the architecture that fits the project, not the other way around. REST and GraphQL APIs, custom endpoints, and a content delivery network in regions close to your users.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Performance and reliability you need.</h3>
-          <p class="text-white/65 text-sm mb-5">99.99% uptime SLA at the enterprise tier. Sub-100ms median response time on content delivery. Auto-scaling for traffic events. Status page with real-time region-level visibility.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Performance and reliability you need.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">99.99% uptime SLA at the enterprise tier. Sub-100ms median response time on content delivery. Auto-scaling for traffic events. Status page with real-time region-level visibility.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
 
-        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
-          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg>
+        <article class="hospital-feature-card flex flex-col gap-16 p-6 rounded-xl bg-black/10 border border-[#19214e] w-full sm:max-w-[320px] md:max-w-[calc(50%-12px)] lg:max-w-[320px] xl:max-w-none xl:flex-1 xl:min-w-[280px]">
+          <div class="hospital-feature-icon relative w-12 h-12 rounded-[10px] border-2 border-white/[0.12] bg-[#18214e] overflow-hidden">
+            <svg viewBox="0 0 24 24" class="absolute inset-2.5 w-6 h-6 text-white" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg>
           </div>
-          <h3 class="font-display text-lg font-semibold mb-3">Open integrations across your stack.</h3>
-          <p class="text-white/65 text-sm mb-5">Integrate directly with your tech stack with our open API. The app marketplace lets your team push things further. Build your own apps to fit your team's needs.</p>
-          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <div class="flex flex-col gap-4">
+            <div class="flex flex-col gap-1">
+              <p class="font-body font-semibold text-white text-lg leading-7 m-0">Open integrations across your stack.</p>
+              <p class="font-body text-[#b1bae7] text-sm leading-5 xl:text-base xl:leading-6 m-0">Integrate directly with your tech stack with our open API. The app marketplace lets your team push things further. Build your own apps to fit your team's needs.</p>
+            </div>
+            <a href="/features/" class="hidden xl:inline-flex items-center gap-1.5 text-white font-semibold text-base leading-6 hover:opacity-80 transition">Learn more <svg viewBox="0 0 20 20" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="10" x2="16" y2="10"/><polyline points="11 5 16 10 11 15"/></svg></a>
+          </div>
         </article>
       </div>
     </div>
@@ -515,6 +541,14 @@
   .hospitals-industry-page .hospital-slide.is-active { opacity: 1; pointer-events: auto; }
   .hospitals-industry-page .hospital-dot { background: #404040; transition: background 200ms; cursor: pointer; border: 0; padding: 0; }
   .hospitals-industry-page .hospital-dot.is-active { background: #d4d4d4; }
+
+  /* Skeumorphic Featured Icon per Figma 13771:3505. Drop shadow + inset border + inset bottom highlight. */
+  .hospitals-industry-page .hospital-feature-icon {
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
 </style>
 
 <script>
