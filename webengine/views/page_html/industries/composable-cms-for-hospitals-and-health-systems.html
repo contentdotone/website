@@ -530,23 +530,43 @@
       var interval = parseInt(el.getAttribute('data-interval'), 10) || 3000;
       var current = 0;
       var timer = null;
+      var inView = false;
+      var hovered = false;
       function show(i) {
         slides[current].classList.remove('is-active');
         current = ((i % slides.length) + slides.length) % slides.length;
         slides[current].classList.add('is-active');
       }
-      function start() { stop(); timer = setInterval(function () { show(current + 1); }, interval); }
       function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function maybeStart() {
+        stop();
+        if (inView && !hovered) {
+          timer = setInterval(function () { show(current + 1); }, interval);
+        }
+      }
       el.querySelectorAll('.hospital-dot').forEach(function (d) {
         d.addEventListener('click', function () {
-          stop();
           show(parseInt(d.getAttribute('data-dot'), 10) || 0);
-          start();
+          maybeStart();
         });
       });
-      el.addEventListener('mouseenter', stop);
-      el.addEventListener('mouseleave', start);
-      start();
+      el.addEventListener('mouseenter', function () { hovered = true; stop(); });
+      el.addEventListener('mouseleave', function () { hovered = false; maybeStart(); });
+      // Only auto-advance while the carousel sits within the top 75% of the
+      // viewport — rootMargin shrinks the bottom by 25% so the observer only
+      // fires when the element intersects the upper-three-quarters.
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            inView = entry.isIntersecting;
+            maybeStart();
+          });
+        }, { root: null, rootMargin: '0px 0px -25% 0px', threshold: 0 });
+        io.observe(el);
+      } else {
+        inView = true;
+        maybeStart();
+      }
     }
     function init() {
       document.querySelectorAll('.hospital-carousel').forEach(initCarousel);
