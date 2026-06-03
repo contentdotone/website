@@ -1,218 +1,400 @@
-<div class="hospitals-industry-page">
+<!--
+  Hospital industry page — rebuilt to match the Figma "Web / Industries /
+  Hospital" mockup (file 1IWlokFl7JGqOmfcxFufMe, node 13722:1767).
+  Loader provides nav + footer; this view is just the page body.
+-->
+<div class="hospitals-industry-page bg-ink text-white">
 
-  <!-- HERO ============================================================== -->
-  <section class="py-12 lg:py-20 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-6 items-center">
+  <!-- ════════════ HERO + SOCIAL PROOF ════════════ -->
+  <section class="relative overflow-hidden">
+    <div class="absolute inset-0 hospital-hero-bg pointer-events-none"></div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24 pb-12 lg:pb-16">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-white text-royal mb-4">Hospitals &amp; health systems</span>
-          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4">A composable, HIPAA-aware CMS for hospitals and health systems.</h1>
-          <p class="text-lg text-white/80 mb-6">Launch and govern dozens of patient-care, service-line, and provider sites without compromising compliance. Content.One gives clinical communications, marketing, and IT a shared platform where speed and security finally co-exist.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#hospitals-demo-form" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Book a healthcare demo</a>
-            <a href="/features/" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Take the product tour</a>
-          </div>
-          <div class="flex flex-wrap gap-x-6 gap-y-2 mt-7 text-sm text-white/65">
-            <span class="inline-flex items-center gap-1.5"><svg viewBox="0 0 16 16" fill="currentColor" class="text-success" aria-hidden="true"><path d="M16 8.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-3.97-3.03a.84.84 0 0 0-1.08.04L7.48 10l-2.1-2.09a.84.84 0 0 0-1.18 1.18l2.65 2.65a.84.84 0 0 0 1.18 0l4-4.99a.84.84 0 0 0-.01-1.18Z"/></svg>HIPAA &amp; HITRUST-ready</span>
-            <span class="inline-flex items-center gap-1.5"><svg viewBox="0 0 16 16" fill="currentColor" class="text-success" aria-hidden="true"><path d="M16 8.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-3.97-3.03a.84.84 0 0 0-1.08.04L7.48 10l-2.1-2.09a.84.84 0 0 0-1.18 1.18l2.65 2.65a.84.84 0 0 0 1.18 0l4-4.99a.84.84 0 0 0-.01-1.18Z"/></svg>WCAG 2.2 / ADA accessibility</span>
-            <span class="inline-flex items-center gap-1.5"><svg viewBox="0 0 16 16" fill="currentColor" class="text-success" aria-hidden="true"><path d="M16 8.6a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-3.97-3.03a.84.84 0 0 0-1.08.04L7.48 10l-2.1-2.09a.84.84 0 0 0-1.18 1.18l2.65 2.65a.84.84 0 0 0 1.18 0l4-4.99a.84.84 0 0 0-.01-1.18Z"/></svg>99.999% uptime</span>
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold tracking-wider uppercase text-royalLite mb-5">Hospitals &amp; health systems</span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5">Run every hospital site, service line, and clinic from one platform.</h1>
+          <p class="text-lg text-white/70 mb-8 lg:max-w-xl">Content.One helps health systems publish patient education, service line pages, find-a-doc directories, and campaign sites at AI speed — with HIPAA-aware governance, clinical review, and accessibility on by default.</p>
+
+          <form class="flex flex-col sm:flex-row gap-2 max-w-lg" action="/contact-us/" method="get">
+            <input type="email" name="email" placeholder="Enter your email" required class="flex-1 rounded-lg bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-royalLite focus:bg-white/10" />
+            <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-5 py-3 transition shrink-0">Book a demo</a>
+          </form>
+          <p class="mt-3 text-sm text-white/45">We care about your data in our <a href="/privacy-policy/" class="underline hover:text-white">privacy policy</a>.</p>
+        </div>
+
+        <div class="lg:col-span-6">
+          <div class="rounded-2xl border border-white/10 shadow-2xl shadow-royal/20 overflow-hidden bg-white">
+            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png" alt="Content.One dashboard for hospital marketing teams" class="w-full block" />
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl overflow-hidden shadow-2xl">
-            <img src="https://hj5v68xn.media.zestyio.com/Hospital_Hero.png?width=1200" onerror="this.src='https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80'" alt="Clinicians collaborating on a digital care platform" class="w-full h-full object-cover">
-          </div>
+      </div>
+    </div>
+
+    <!-- Social proof strip -->
+    <div class="border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <p class="text-center text-sm text-white/55 mb-6">Trusted by enterprise marketing, brand, and compliance teams.</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-80">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/sonyHero.svg?height=40&fit=bounds" alt="Sony Electronics">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/The_Salvation_Army.svg.B1cJ5BL9le.png?height=40&fit=bounds" alt="The Salvation Army">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/60b625fd628ab56d5559db43_kin-logo.png?height=40&fit=bounds" alt="Kin Insurance">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/singlifeHero.svg?height=40&fit=bounds" alt="Singlife">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/phoenixSunsHero.svg?height=40&fit=bounds" alt="Phoenix Suns">
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SECTION 1 — Launch faster ========================================== -->
-  <section class="py-12 lg:py-16 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-center">
+  <!-- ════════════ FEATURES SECTION 1 ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" alt="Reusable Blocks for hospital service-line sites" class="w-full">
+          <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/40">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Service line teams collaborating" class="w-full block aspect-[16/10] object-cover" />
+            <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-black/80 to-transparent">
+              <p class="text-white font-semibold mb-1">Service line pages in days, not quarters</p>
+              <p class="text-white/75 text-sm m-0">Spin up cardiology, oncology, orthopedics, and women's health pages from approved layouts. Local hospitals tailor; the system keeps the brand.</p>
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Launch faster</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Stand up service-line, clinic, and campaign sites in days, not quarters.</h2>
-          <p class="text-gray-600 mb-4">Approved Blocks, page templates, and reusable patient-experience patterns let communications and service-line teams publish without filing IT tickets. Brand and accessibility rules stay enforced everywhere.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-700">
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Launch service-line, clinic, foundation, or open-enrollment sites from approved templates.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Reuse provider directories, locations, and conditions content across every property.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Patient communications teams update timely guidance without developer involvement.</span></li>
+        <div class="lg:col-span-6 lg:pl-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Launch faster</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Stand up service line, campaign, and community sites in days.</h2>
+          <p class="text-lg text-white/70 mb-6">Give marketing, communications, and foundation teams the ability to build secure, accessible, on-brand sites without waiting on central IT. Reusable Blocks keep required disclosures, accessibility patterns, and Conditions of Participation language consistent across every site.</p>
+          <ul class="list-none m-0 p-0 grid gap-3 text-white/80">
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Empower hospital marketing teams, service line leads, and foundation staff to publish with confidence.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Share Blocks for find-a-doc, find-a-location, appointment CTAs, price transparency notices, and Section 1557 language.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Central teams own design and clinical accuracy; local teams tailor the story to their community.</span></li>
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SECTION 2 — Compliance ============================================ -->
-  <section class="py-12 lg:py-16 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit logs and approval workflows for healthcare publishing" class="w-full">
-          </div>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Compliance &amp; governance</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Stay HIPAA-aware, HITRUST-aligned, and ADA-compliant everywhere.</h2>
-          <p class="text-gray-600 mb-4">Role-based workflows, staging environments, and audit trails keep legal, security, and clinical review in lockstep. PHI never lands in marketing pages, and approvals are tracked for every change.</p>
-          <div class="bg-white rounded-xl shadow-sm p-6">
-            <ul class="list-none m-0 p-0 grid gap-3 text-gray-700 text-sm">
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M8 1l6.5 3v5c0 3.5-2.7 6.6-6.5 7.7C4.2 15.6 1.5 12.5 1.5 9V4z"/></svg><span>Least-privilege roles for clinicians, marketers, contractors, and regional editors.</span></li>
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/></svg><span>Approval workflows and full version history for every clinical-review touchpoint.</span></li>
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M9.5 1.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0M6 5.5l-4.535-.442A.531.531 0 0 1 1.531 4H14.47a.531.531 0 0 1 .066 1.058L10 5.5V9l.452 6.42a.535.535 0 0 1-1.053.174L8.243 9.97c-.064-.252-.422-.252-.486 0l-1.156 5.624a.535.535 0 0 1-1.053-.174L6 9z"/></svg><span>WCAG 2.2 AA + Section 508 enforced on every Block and template.</span></li>
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M2 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg><span>SOC 2 Type II, BAA-eligible deployments, and audit logs ready for procurement.</span></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 3 — Federated multi-site ================================== -->
-  <section class="py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Federated publishing across hospitals and clinics" class="w-full">
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Federated multi-site orchestration</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Support every hospital, clinic, and service line under one governance model.</h2>
-          <p class="text-gray-600 mb-4">Cascade executive messaging while allowing regional hospitals to localize languages, services, and provider details for their communities. Centralized brand, distributed authoring.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-700">
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M2 4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/></svg><span>Spin up new clinic, foundation, or campaign sites with pre-approved design systems.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/></svg><span>Distribute emergency notices, public-health advisories, and recall information instantly.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72M11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4M5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0"/></svg><span>Local marketers get autonomy while HQ monitors compliance, analytics, and accessibility.</span></li>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 lg:order-1 order-2 lg:pr-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Compliance baked in</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Protect patient trust and your business with built-in compliance.</h2>
+          <p class="text-lg text-white/70 mb-6">Role-based workflows, approval flows, audit logs, and SSO integrations mean every patient-facing word is reviewable, traceable, and on-brand. Keep clinical, legal, brand, and communications aligned without slowing delivery.</p>
+          <ul class="list-none m-0 p-0 grid gap-3 text-white/80">
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Granular roles for marketing, communications, clinical reviewers, legal, foundation, and agency partners.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Approval workflows, version history, and immutable audit logs for every change — including every AI suggestion accepted, rejected, or edited.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Built for HIPAA-aware content approvals; we handle marketing accessibility and link directly to your secure platforms of choice.</span></li>
           </ul>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SECTION 4 — Integrations ========================================== -->
-  <section class="py-12 lg:py-16 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-start">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Enterprise integrations</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Connect patient experience to the systems clinicians rely on.</h2>
-          <p class="text-gray-600 mb-4">Sync provider directories, automate updates to find-a-doc portals, and feed marketing dashboards. Content.One meets your EHR, scheduling, and CRM systems where they live.</p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">EHR</span>
-              <h3 class="text-base font-semibold mb-1">Epic &amp; Cerner</h3>
-              <p class="text-sm text-gray-600 m-0">Surface accurate provider details, locations, and scheduling availability with two-way sync.</p>
-            </div>
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">CRM</span>
-              <h3 class="text-base font-semibold mb-1">Salesforce Health Cloud</h3>
-              <p class="text-sm text-gray-600 m-0">Trigger patient outreach when content publishes — campaign launches, screenings, recalls.</p>
-            </div>
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">Find-a-Doc</span>
-              <h3 class="text-base font-semibold mb-1">Provider directories</h3>
-              <p class="text-sm text-gray-600 m-0">Headless provider data delivered to web, mobile app, and partner portals from one source.</p>
-            </div>
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">Analytics</span>
-              <h3 class="text-base font-semibold mb-1">GA4 + Tag Manager</h3>
-              <p class="text-sm text-gray-600 m-0">Performance and accessibility insights flow to your team without exposing PHI.</p>
-            </div>
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">Scheduling</span>
-              <h3 class="text-base font-semibold mb-1">MyChart &amp; appointment portals</h3>
-              <p class="text-sm text-gray-600 m-0">Embed scheduling flows on landing pages and service-line sites with full audit logs.</p>
-            </div>
-            <div class="border bg-white rounded-xl p-4">
-              <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-2">APIs</span>
-              <h3 class="text-base font-semibold mb-1">REST + GraphQL + Webhooks</h3>
-              <p class="text-sm text-gray-600 m-0">Deliver structured content to native apps, kiosks, and partner integrations.</p>
-            </div>
+        <div class="lg:col-span-6 lg:order-2 order-1">
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/40">
+            <img src="https://hj5v68xn.media.zestyio.com/sso-login-options.png" alt="Centralized SSO" class="w-full block">
           </div>
         </div>
       </div>
+
     </div>
   </section>
 
-  <!-- SECTION 5 — Mission scale + quotes ================================= -->
-  <section class="py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Built for the mission</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Serve millions of patients with experiences that earn trust.</h2>
-          <p class="text-gray-600 mb-4">Whether you run multi-lingual community sites or system-wide rollouts, Content.One scales with your mission and keeps leadership aligned.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-700 mb-4">
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Empower regional hospital teams while maintaining system-wide governance.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Fast, accessible experiences that meet WCAG 2.2 and Section 508 standards.</span></li>
-            <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>SOC 2 Type II, BAA-eligible deployments, and audit trails for procurement teams.</span></li>
-          </ul>
-        </div>
-        <div class="lg:col-span-7">
-          {{include /components/widgets/random_quotes_micro.html}}
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- ════════════ FEATURES SECTION 2 ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-20 lg:space-y-28">
 
-  <!-- TRUSTED PARTNERS ================================================= -->
-  <section class="py-12 lg:py-16 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 text-center mb-8">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">Trusted partners</span>
-          <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Proven with enterprise health and care organizations.</h2>
-          <p class="text-gray-600 m-0">See how leading providers, payers, and nonprofit health systems streamline governance with Content.One.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4">
-        <div class="lg:col-span-10 lg:col-start-2">
-          {{include /components/widgets/logos.html}}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEMO + FORM ====================================================== -->
-  <section class="py-12 lg:py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-6 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         <div class="lg:col-span-6">
-          <div class="bg-white rounded-2xl shadow-lg p-6 lg:p-10">
-            <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-royal/10 text-royal mb-3">See it in action</span>
-            <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Book a guided demo for your health system.</h2>
-            <p class="text-gray-600 mb-4">In 30 minutes we'll map your current challenges, review compliance requirements, and show how Content.One accelerates patient-facing experiences across every facility.</p>
-            <ul class="list-none m-0 p-0 grid gap-3 text-gray-700 text-sm mb-5">
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Approval workflows, audit logs, and records retention.</span></li>
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>Federated multi-site orchestration with pre-approved components.</span></li>
-              <li class="flex items-start gap-3"><svg viewBox="0 0 16 16" class="text-royal mt-0.5" fill="currentColor" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg><span>EHR + CRM integrations sized for your IT team.</span></li>
-            </ul>
-            {{include /components/ctas/book-button.html}}
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-br from-royal/30 to-ink shadow-xl shadow-black/40 aspect-[16/10] flex items-center justify-center">
+            <svg viewBox="0 0 240 160" class="w-2/3 h-2/3 text-royalLite" fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="40" y="30" width="160" height="100" rx="8" />
+              <circle cx="120" cy="80" r="20" />
+              <path d="M110 80l8 8 12-16" stroke-width="2"/>
+              <rect x="60" y="50" width="40" height="3" rx="1.5"/>
+              <rect x="140" y="50" width="40" height="3" rx="1.5"/>
+              <rect x="60" y="115" width="120" height="3" rx="1.5"/>
+            </svg>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <div class="border rounded-2xl p-6 lg:p-8 bg-royal/5">
-            <h3 class="font-display text-xl font-semibold text-royal mb-3">Ready to accelerate your digital patient experience?</h3>
-            <p class="text-gray-700 text-sm mb-4">Meet with a healthcare CMS specialist to explore migration planning, governance models, and time-to-value for your system.</p>
-            <div id="hospitals-demo-form" class="rounded-xl">
-              {{include /components/forms/zoho-form.html}}
+        <div class="lg:col-span-6 lg:pl-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">AI speed</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Draft content at AI speed. Clinical reviewers approve every word.</h2>
+          <p class="text-lg text-white/70 m-0">Give marketing, communications, and foundation teams the ability to build secure, accessible, on-brand sites without waiting on central IT. Reusable Blocks keep required disclosures, accessibility patterns, and Conditions of Participation language consistent across every site.</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 lg:order-1 order-2 lg:pr-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Accessibility &amp; Section 1557</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Audit-ready content for surveys, regulators, and the board.</h2>
+          <p class="text-lg text-white/70 m-0">Immutable audit logs, version history, and exportable reports give compliance teams, accreditation surveyors, and board committees full visibility into what changed, when, who approved it, and what AI suggested along the way.</p>
+        </div>
+        <div class="lg:col-span-6 lg:order-2 order-1">
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/40">
+            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit dashboard" class="w-full block">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES SECTION 3 (6 cards) ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Built for the largest content operations.</h2>
+        <p class="text-lg text-white/70 m-0">Content.One scales with the size of your team, the complexity of your brand portfolio, and the channels you have to be on tomorrow.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 3v4M3 5h4M19 17v4M17 19h4M9 12l2-4 2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Generative AI, scoped to your brand.</h3>
+          <p class="text-white/65 text-sm mb-5">Drafts, summaries, translations, and content variations — every output scoped to your brand voice, your terminology, and the rules your team set. Bring your own model.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 7l3 9M16 7l-3 9"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Workflow and approvals at scale.</h3>
+          <p class="text-white/65 text-sm mb-5">Custom content flows your team can set by content type, to fit your team's unique needs. Reviewers stay in Content.One — no ticket sprawl across Slack and email.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="4" y1="22" x2="4" y2="15"/><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Multi-region &amp; brand content modeling.</h3>
+          <p class="text-white/65 text-sm mb-5">Structured content models to manage your brand portfolio. One model, many brands, many locales — with rules your team controls. Translation localization built in.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Composable, hybrid, or fully headless.</h3>
+          <p class="text-white/65 text-sm mb-5">Pick the architecture that fits the project, not the other way around. REST and GraphQL APIs, custom endpoints, and a content delivery network in regions close to your users.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Performance and reliability you need.</h3>
+          <p class="text-white/65 text-sm mb-5">99.99% uptime SLA at the enterprise tier. Sub-100ms median response time on content delivery. Auto-scaling for traffic events. Status page with real-time region-level visibility.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7 hover:bg-white/[0.05] transition">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-8">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="6" cy="6" r="3"/><circle cx="18" cy="18" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Open integrations across your stack.</h3>
+          <p class="text-white/65 text-sm mb-5">Integrate directly with your tech stack with our open API. The app marketplace lets your team push things further. Build your own apps to fit your team's needs.</p>
+          <a href="/features/" class="inline-flex items-center text-royalLite text-sm font-semibold hover:text-white transition">Learn more <svg viewBox="0 0 24 24" class="w-4 h-4 ml-1" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES SECTION 4 (industries 2x2) ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12 lg:mb-16">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5">Different industries. Same enterprise CMS.</h2>
+        <p class="text-lg text-white/70 m-0">Content.One is used by enterprise marketing teams across non-profits, insurance, commercial brands, financial services, and healthcare. Each industry brings its own constraints; the platform brings the same trust layer, the same AI guardrails, and the same approval flows.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-3">Enterprise non-profits.</h3>
+          <p class="text-white/65 text-base m-0">Tell your story everywhere — with the brand discipline a board expects and the speed a campaign window demands. Share content across chapters, regions, and program areas without losing brand integrity.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-3">Insurance and regulated brands.</h3>
+          <p class="text-white/65 text-base m-0">Draft policy explainers, claims content, and campaign pages at AI speed — with every word routed through your approval flow and audit trail before it ships. Create processes to fit your team's needs.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-3">Commercial Brands.</h3>
+          <p class="text-white/65 text-base m-0">Run global campaigns from one platform. Keep your brand voice consistent no matter where your customers view your site. Manage content across product lines, brands, and acquisitions in one place.</p>
+        </div>
+        <div>
+          <h3 class="font-display text-xl font-semibold mb-3">Financial Services.</h3>
+          <p class="text-white/65 text-base m-0">The trust layer your compliance team needed before they would even take the meeting. Audit trails, model boundaries, regional data residency — and AI that respects every one of them.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ PRICING ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What enterprise customers get on day one.</h2>
+        <p class="text-lg text-white/70 m-0">Enterprise pricing is built around the size and complexity of your operation. Every enterprise contract includes the items below — with custom packaging for the rest.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl mx-auto">
+        <ul class="list-none m-0 p-0 grid gap-5 text-white/85">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Dedicated Support Management</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">99.99% uptime SLA</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Premium support with named on-call engineers</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Migration engineering staffed against your timeline</span></li>
+        </ul>
+        <ul class="list-none m-0 p-0 grid gap-5 text-white/85">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Single tenancy &amp; regional data residency</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">SOC 2 Type II + BAA-eligible deployments</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Bring-your-own-model AI &amp; private inference</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Custom roles, audit exports, and procurement reviews</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TESTIMONIAL ════════════ -->
+  <section class="border-t border-white/5">
+    <div class="grid grid-cols-1 lg:grid-cols-2">
+      <div class="bg-ink flex items-center px-6 sm:px-8 lg:px-16 py-16 lg:py-24">
+        <div class="max-w-xl">
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">What customers say about Content.One</h2>
+          <blockquote class="text-xl lg:text-2xl text-white leading-relaxed mb-10">
+            "Load times have improved dramatically, and stability has been night and day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."
+          </blockquote>
+          <div class="flex items-end justify-between">
+            <div>
+              <p class="font-semibold m-0">Andrew Dobney, Director of Digital Strategy</p>
+              <p class="text-white/55 text-sm m-0">The Salvation Army</p>
+            </div>
+            <div class="flex gap-3">
+              <button type="button" aria-label="Previous" class="w-12 h-12 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white flex items-center justify-center transition"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg></button>
+              <button type="button" aria-label="Next" class="w-12 h-12 rounded-full border border-white/20 text-white/70 hover:text-white hover:border-white flex items-center justify-center transition"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></button>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="hidden lg:flex items-center justify-center bg-ink py-16">
+        <div class="w-80 h-80 rounded-full overflow-hidden bg-royalLite/30 ring-2 ring-white/10">
+          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney portrait" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Frequently asked questions</h2>
+        <p class="text-lg text-white/70 m-0">Questions that come up most often in enterprise procurement, security, and legal reviews of Content.One.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto grid gap-0 divide-y divide-white/10">
+        <details open class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">What is Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Content.One is the enterprise CMS we built as a foundation for AI-era content operations. Marketing teams use it to draft, govern, translate, and ship content across web, mobile, and every other channel. Generative AI accelerates the work; your security, brand, and compliance teams keep control of every word that ships.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">Is Content.One a headless CMS?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Yes — and also composable and hybrid. Pick the architecture that fits each project. REST + GraphQL APIs, structured content models, and a built-in delivery layer mean you can ship a marketing site, a native app, or a partner integration from the same source of truth.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How does generative AI work on Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">AI is scoped to your brand voice, your terminology, and the rules your team set. Drafts, summaries, translations, and component variations are produced inside the same approval flow as human-authored content; every suggestion is logged and reviewable. Bring your own model — Anthropic, OpenAI, Google, or your own private inference endpoint.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How do enterprise customers migrate from their current CMS?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Migration engineering is included in enterprise contracts. We staff against your timeline, model your existing schemas in Content.One, write the migration scripts, and run staged cutovers so you ship without downtime.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">Does Content.One support single sign-on?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Yes — SAML 2.0 and OIDC, connected to Okta, Microsoft Entra ID, Google Workspace, GitHub, and any IdP your IAM team already manages. SCIM provisioning is included.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">Who owns the content created on Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">You do. Your content, schemas, and audit logs are yours to export at any time in open formats. Nothing is held hostage; nothing is silently used to train a third-party model.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">What's included in enterprise pricing?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Dedicated support management, the 99.99% uptime SLA, named on-call engineers, migration engineering, single-tenancy + regional data residency, SOC 2 Type II, BAA-eligible deployments, and bring-your-own-model AI. Volume packaging and custom add-ons are quoted around your operation.</p>
+        </details>
+        <details class="hospital-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How does Content.One compare to a traditional headless CMS?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Headless-only CMSs assume you'll build the marketing experience yourself. Content.One ships with the editor, the AI scaffolding, the multi-site governance, and the audit-ready compliance layer — and still gives you the headless APIs underneath. You get the velocity of a hosted product with the architecture of a headless platform.</p>
+        </details>
+      </div>
+
+      <div class="mt-16 text-center max-w-2xl mx-auto">
+        <div class="flex justify-center mb-5">
+          <div class="flex -space-x-3">
+            <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="" class="w-12 h-12 rounded-full ring-2 ring-ink object-cover" />
+            <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="" class="w-14 h-14 rounded-full ring-2 ring-ink object-cover relative z-10" />
+            <img src="https://hj5v68xn.media.zestyio.com/todd-sabo.H1U4Vs7Mee.jpg" alt="" class="w-12 h-12 rounded-full ring-2 ring-ink object-cover" />
+          </div>
+        </div>
+        <h3 class="font-display text-2xl font-semibold mb-2">Book a Demo</h3>
+        <p class="text-white/65 mb-6">30 minutes with our team, scoped to your stack and your industry.</p>
+        <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition">Schedule a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CONTACT ════════════ -->
+  <section id="hospitals-demo-form" class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 lg:mb-16">Take Content.One Further</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto items-start">
+        <div>
+          <h3 class="font-display text-3xl font-bold mb-4">Talk to a Content Expert</h3>
+          <p class="text-white/65 m-0">For teams ready to scope packaging, contractual terms, and migration.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
+          {{include /components/forms/zoho-form.html}}
         </div>
       </div>
     </div>
   </section>
 
 </div>
+
+<style>
+  .hospitals-industry-page { background: #0B0F1C; }
+  .hospitals-industry-page .hospital-hero-bg {
+    background:
+      radial-gradient(60% 80% at 80% 20%, rgba(99, 60, 255, 0.25) 0%, transparent 60%),
+      radial-gradient(50% 70% at 10% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
+      linear-gradient(135deg, #0B0F1C 0%, #161947 35%, #2a1d6b 55%, #161947 80%, #0B0F1C 100%);
+  }
+  .hospitals-industry-page .hospital-hero-bg::after {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 80%);
+    -webkit-mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 80%);
+  }
+  .hospitals-industry-page .hospital-faq > summary::-webkit-details-marker { display: none; }
+  .hospitals-industry-page .hospital-faq > summary::marker { content: ""; }
+</style>
