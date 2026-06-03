@@ -5,27 +5,57 @@
 -->
 <div class="hospitals-industry-page bg-ink text-white">
 
-  <!-- ════════════ HERO + SOCIAL PROOF ════════════ -->
-  <section class="relative overflow-hidden">
-    <div class="absolute inset-0 hospital-hero-bg pointer-events-none"></div>
-    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 lg:pt-24 pb-12 lg:pb-16">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold tracking-wider uppercase text-royalLite mb-5">Hospitals &amp; health systems</span>
-          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] mb-5">Run every hospital site, service line, and clinic from one platform.</h1>
-          <p class="text-lg text-white/70 mb-8 lg:max-w-xl">Content.One helps health systems publish patient education, service line pages, find-a-doc directories, and campaign sites at AI speed — with HIPAA-aware governance, clinical review, and accessibility on by default.</p>
+  <!-- ════════════ HERO ════════════
+       Spec from Figma "Hero" component 13759:27117 (responsive: 1440/1024/768/640).
+       Background: top-to-bottom gradient #19214e → #060813.
+       Desktop (≥lg): 2-col split with image overflowing the right edge below the section.
+       Mobile (<lg): single column, image below copy. -->
+  <section class="hospital-hero relative overflow-hidden">
+    <div class="max-w-7xl mx-auto lg:max-w-none">
+      <div class="flex flex-col lg:flex-row items-stretch">
 
-          <form class="flex flex-col sm:flex-row gap-2 max-w-lg" action="/contact-us/" method="get">
-            <input type="email" name="email" placeholder="Enter your email" required class="flex-1 rounded-lg bg-white/5 border border-white/15 px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-royalLite focus:bg-white/10" />
-            <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-5 py-3 transition shrink-0">Book a demo</a>
-          </form>
-          <p class="mt-3 text-sm text-white/45">We care about your data in our <a href="/privacy-policy/" class="underline hover:text-white">privacy policy</a>.</p>
+        <!-- Left: copy + email capture -->
+        <div class="flex-1 min-w-0 px-6 sm:px-8 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
+          <div class="lg:max-w-[480px]">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040] mb-4">Hospitals &amp; health systems</span>
+            <h1 class="font-display font-semibold text-white text-3xl leading-[1.27] lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] mb-6">Run every hospital site, service line, and clinic from one platform.</h1>
+            <p class="text-sm leading-5 lg:text-xl lg:leading-[30px] text-[#b1bae7] mb-8 lg:mb-12">Content.One helps health systems publish patient education, service line pages, find-a-doc directories, and campaign sites at AI speed — with HIPAA-aware governance, clinical review, and accessibility on by default.</p>
+
+            <form class="flex flex-col sm:flex-row gap-4 sm:gap-3 items-stretch sm:items-start" action="/contact-us/" method="get">
+              <div class="flex-1 min-w-0">
+                <input type="email" name="email" placeholder="Enter your email" required
+                       class="block w-full bg-white border border-[#d4d4d4] rounded-lg px-3.5 py-3 text-base text-[#171717] placeholder:text-[#737373] shadow-sm focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30" />
+                <p class="mt-2 text-sm text-[#b1bae7]">We care about your data in our <a href="/privacy-policy/" class="underline decoration-[#d4d4d4] hover:text-white">privacy policy</a>.</p>
+              </div>
+              <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-[18px] py-3 text-base shadow-sm border-2 border-white/[0.12] transition shrink-0 sm:self-start">Book a demo</a>
+            </form>
+          </div>
         </div>
 
-        <div class="lg:col-span-6">
-          <div class="rounded-2xl border border-white/10 shadow-2xl shadow-royal/20 overflow-hidden bg-white">
-            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png" alt="Content.One dashboard for hospital marketing teams" class="w-full block" />
+        <!-- Right: dashboard mockup. Desktop overflows the section bottom + right edge per Figma. -->
+        <div class="relative lg:flex-1 lg:min-w-0 lg:self-stretch">
+          <div class="px-6 sm:px-8 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
+            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png"
+                 alt="Content.One dashboard preview for hospital marketing teams"
+                 class="block w-full max-w-[480px] mx-auto lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] rounded-xl lg:rounded-none border border-white/10 lg:border-0 shadow-2xl shadow-black/40 lg:shadow-none object-cover" />
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SOCIAL PROOF ════════════ -->
+  <section class="relative overflow-hidden">
+    <div class="border-t border-white/5">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <p class="text-center text-sm text-white/55 mb-6">Trusted by enterprise marketing, brand, and compliance teams.</p>
+        <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 opacity-80">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/sonyHero.svg?height=40&fit=bounds" alt="Sony Electronics">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/The_Salvation_Army.svg.B1cJ5BL9le.png?height=40&fit=bounds" alt="The Salvation Army">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/60b625fd628ab56d5559db43_kin-logo.png?height=40&fit=bounds" alt="Kin Insurance">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/singlifeHero.svg?height=40&fit=bounds" alt="Singlife">
+          <img class="h-9 w-auto object-contain grayscale brightness-200 opacity-70" src="https://hj5v68xn.media.zestyio.com/phoenixSunsHero.svg?height=40&fit=bounds" alt="Phoenix Suns">
         </div>
       </div>
     </div>
@@ -380,21 +410,8 @@
 
 <style>
   .hospitals-industry-page { background: #0B0F1C; }
-  .hospitals-industry-page .hospital-hero-bg {
-    background:
-      radial-gradient(60% 80% at 80% 20%, rgba(99, 60, 255, 0.25) 0%, transparent 60%),
-      radial-gradient(50% 70% at 10% 80%, rgba(56, 189, 248, 0.12) 0%, transparent 60%),
-      linear-gradient(135deg, #0B0F1C 0%, #161947 35%, #2a1d6b 55%, #161947 80%, #0B0F1C 100%);
-  }
-  .hospitals-industry-page .hospital-hero-bg::after {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 56px 56px;
-    mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 80%);
-    -webkit-mask-image: radial-gradient(70% 70% at 70% 40%, #000 0%, transparent 80%);
-  }
+  /* Hero gradient — Figma 13759:27117. Top-to-bottom #19214e → #060813. */
+  .hospitals-industry-page .hospital-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
   .hospitals-industry-page .hospital-faq > summary::-webkit-details-marker { display: none; }
   .hospitals-industry-page .hospital-faq > summary::marker { content: ""; }
 </style>
