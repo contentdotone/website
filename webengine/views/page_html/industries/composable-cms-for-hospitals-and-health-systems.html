@@ -398,9 +398,9 @@
   <!-- ════════════ TESTIMONIAL ════════════ -->
   <section class="bg-[#0c1027]">
     <div class="flex flex-col lg:flex-row items-stretch min-h-[480px] lg:min-h-[720px]">
-      <!-- Text column — full width below lg, half width at lg+ -->
-      <div class="flex-1 lg:max-w-[640px] lg:ml-auto px-6 sm:px-8 lg:px-8 py-16 lg:py-24 flex items-center">
-        <div class="w-full flex flex-col gap-10 lg:pr-8">
+      <!-- Text column — equal width with the image column at lg+, full width below -->
+      <div class="flex-1 lg:min-w-0 px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24 flex items-center justify-center">
+        <div class="w-full max-w-[480px] md:max-w-[640px] lg:max-w-none flex flex-col gap-10">
           <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">What customers say about Content.One</h2>
           <blockquote class="font-display font-medium text-[#b1bae7] text-2xl leading-8 xl:text-[30px] xl:leading-[38px] m-0">
             "Load times have improved dramatically, and stability has been night and day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."
@@ -425,8 +425,8 @@
           </div>
         </div>
       </div>
-      <!-- Image column — hidden below lg, shown at lg+ -->
-      <div class="hidden lg:flex flex-1 items-center justify-center p-20 xl:p-[120px]">
+      <!-- Image column — equal width with the text column at lg+, hidden below -->
+      <div class="hidden lg:flex flex-1 lg:min-w-0 items-center justify-center p-12 xl:p-20">
         <div class="w-[300px] h-[300px] rounded-full overflow-hidden bg-royalLite/20 ring-1 ring-white/10 shrink-0">
           <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney portrait" class="w-full h-full object-cover" />
         </div>
