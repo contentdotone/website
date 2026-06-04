@@ -550,19 +550,102 @@
   </section>
 
   <!-- ════════════ CONTACT ════════════ -->
-  <section id="hospitals-demo-form" class="py-16 lg:py-24 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 lg:mb-16">Take Content.One Further</h2>
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto items-start">
-        <div>
-          <h3 class="font-display text-3xl font-bold mb-4">Talk to a Content Expert</h3>
-          <p class="text-white/65 m-0">For teams ready to scope packaging, contractual terms, and migration.</p>
-        </div>
-        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
-          {{include /components/forms/zoho-form.html}}
-        </div>
+  <section id="hospitals-demo-form" class="bg-[#060813] py-24">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-16">
+
+      <!-- Heading + subhead, centered -->
+      <div class="flex flex-col gap-5 items-center text-center max-w-3xl mx-auto">
+        <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Take Content.One further</h2>
+        <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">For teams ready to scope packaging, contractual terms, and migration.</p>
       </div>
+
+      <!-- Form (posts to the same Zoho action the legacy include used) -->
+      <form action="https://forms.zohopublic.com/zestyio/form/ContentOneDemoForm/formperma/v5yu682DcRoFs5WJHMyNPgq30kitbSqJXuQGEZkwoVw/htmlRecords/submit"
+            method="POST"
+            accept-charset="UTF-8"
+            enctype="multipart/form-data"
+            id="hospitals-contact-form"
+            class="needs-validation max-w-3xl mx-auto w-full flex flex-col gap-8"
+            onsubmit="javascript:document.charset='UTF-8'; return (typeof zf_ValidateAndSubmit === 'function' ? zf_ValidateAndSubmit() : true);"
+            novalidate>
+
+        <input type="hidden" name="zf_referrer_name" value="">
+        <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=demo">
+        <input type="hidden" name="zc_gad" value="">
+
+        <div class="flex flex-col gap-6">
+          <!-- First name + Last name row -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
+            <div class="flex flex-col gap-1.5">
+              <label for="hospitals-firstname" class="font-body font-medium text-[#d4d4d4] text-sm leading-5">First name <span class="text-[#a3a3a3]">*</span></label>
+              <input type="text" id="hospitals-firstname" name="Name_First" maxlength="255" required placeholder="First name"
+                     class="w-full bg-[#0a0a0a] border border-[#404040] rounded-lg px-3.5 py-2.5 text-base text-white placeholder:text-[#737373] focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30 transition" />
+            </div>
+            <div class="flex flex-col gap-1.5">
+              <label for="hospitals-lastname" class="font-body font-medium text-[#d4d4d4] text-sm leading-5">Last name <span class="text-[#a3a3a3]">*</span></label>
+              <input type="text" id="hospitals-lastname" name="Name_Last" maxlength="255" required placeholder="Last name"
+                     class="w-full bg-[#0a0a0a] border border-[#404040] rounded-lg px-3.5 py-2.5 text-base text-white placeholder:text-[#737373] focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30 transition" />
+            </div>
+          </div>
+
+          <!-- Email -->
+          <div class="flex flex-col gap-1.5">
+            <label for="hospitals-email" class="font-body font-medium text-[#d4d4d4] text-sm leading-5">Email <span class="text-[#a3a3a3]">*</span></label>
+            <input type="email" id="hospitals-email" name="Email" maxlength="255" required placeholder="you@company.com"
+                   class="w-full bg-[#0a0a0a] border border-[#404040] rounded-lg px-3.5 py-2.5 text-base text-white placeholder:text-[#737373] focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30 transition" />
+          </div>
+
+          <!-- Company -->
+          <div class="flex flex-col gap-1.5">
+            <label for="hospitals-company" class="font-body font-medium text-[#d4d4d4] text-sm leading-5">Company <span class="text-[#a3a3a3]">*</span></label>
+            <input type="text" id="hospitals-company" name="SingleLine" maxlength="255" required placeholder="Company Name"
+                   class="w-full bg-[#0a0a0a] border border-[#404040] rounded-lg px-3.5 py-2.5 text-base text-white placeholder:text-[#737373] focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30 transition" />
+          </div>
+
+          <!-- Message textarea -->
+          <div class="flex flex-col gap-1.5">
+            <label for="hospitals-message" class="font-body font-medium text-[#d4d4d4] text-sm leading-5">Message <span class="text-[#a3a3a3]">*</span></label>
+            <textarea id="hospitals-message" name="MultiLine" maxlength="65535" required placeholder="Leave us a message..." rows="6"
+                      class="w-full bg-[#0a0a0a] border border-[#404040] rounded-lg px-3.5 py-3 text-base text-white placeholder:text-[#737373] focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30 transition resize-y min-h-[160px]"></textarea>
+          </div>
+
+          <!-- Privacy disclosure -->
+          <label class="flex gap-3 items-start cursor-pointer">
+            <input type="checkbox" id="hospitals-privacy" required
+                   class="mt-1 w-5 h-5 rounded bg-[#0a0a0a] border-[#404040] text-royal focus:ring-royal/30 shrink-0" />
+            <span class="font-body text-[#a3a3a3] text-base leading-6">You agree to our friendly <a href="/privacy-policy/" class="underline decoration-[#a3a3a3] hover:text-white">privacy policy</a>.</span>
+          </label>
+        </div>
+
+        <button type="submit"
+                onclick="if (typeof gtag_report_conversion === 'function') gtag_report_conversion(); if (typeof linkedin_conversion === 'function') linkedin_conversion();"
+                class="w-full inline-flex items-center justify-center bg-[#31429b] hover:bg-royalDark text-white font-body font-semibold text-base leading-6 px-[18px] py-3 rounded-lg border-2 border-white/[0.12] shadow-sm transition">
+          Contact Sales
+        </button>
+      </form>
+
     </div>
+
+    <script>
+      (function () {
+        var match = document.cookie.match(/(?:^|; )URL_REFERRER=([^;]*)/);
+        if (match) {
+          var referrer = decodeURIComponent(match[1]);
+          var field = document.querySelector('#hospitals-contact-form input[name="zf_redirect_url"]');
+          if (field) field.value = referrer;
+        }
+        var form = document.getElementById('hospitals-contact-form');
+        if (form) {
+          form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        }
+      })();
+    </script>
   </section>
 
 </div>
