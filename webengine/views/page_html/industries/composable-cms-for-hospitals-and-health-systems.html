@@ -402,6 +402,7 @@
       <div class="flex-1 lg:min-w-0 px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24 flex items-center justify-center">
         <div class="w-full flex flex-col gap-10">
           <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">What customers say about Content.One</h2>
+          <div class="flex flex-col gap-10" data-testimonial-body>
           <blockquote class="font-display font-medium text-[#b1bae7] text-2xl leading-8 xl:text-[30px] xl:leading-[38px] m-0" data-testimonial-quote>
             "Load times have improved dramatically, and stability has been night and day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."
           </blockquote>
@@ -422,6 +423,7 @@
                 <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </button>
             </div>
+          </div>
           </div>
         </div>
       </div>
@@ -637,6 +639,7 @@
       }
     ];
     function initTestimonial(section) {
+      var bodyEl = section.querySelector('[data-testimonial-body]');
       var quoteEl = section.querySelector('[data-testimonial-quote]');
       var nameTitleEl = section.querySelector('[data-testimonial-name-title]');
       var companyEl = section.querySelector('[data-testimonial-company]');
@@ -659,8 +662,31 @@
         i = (i + delta + testimonials.length) % testimonials.length;
         render();
       }
+      // Pin the testimonial body to the height of the tallest variant so the
+      // section doesn't reflow as users cycle. Re-measure on resize since
+      // wrapping changes per viewport width.
+      function measureAndPin() {
+        if (!bodyEl) return;
+        var origIdx = i;
+        bodyEl.style.minHeight = '';
+        var maxH = 0;
+        for (var idx = 0; idx < testimonials.length; idx++) {
+          i = idx;
+          render();
+          if (bodyEl.offsetHeight > maxH) maxH = bodyEl.offsetHeight;
+        }
+        i = origIdx;
+        render();
+        bodyEl.style.minHeight = maxH + 'px';
+      }
       prevBtn.addEventListener('click', function () { go(-1); });
       nextBtn.addEventListener('click', function () { go(1); });
+      measureAndPin();
+      var resizeTimer = null;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(measureAndPin, 150);
+      });
     }
     function init() {
       document.querySelectorAll('[data-testimonial-carousel]').forEach(initTestimonial);
