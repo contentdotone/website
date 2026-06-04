@@ -412,7 +412,7 @@
           <!-- Attribution + arrows — md+ all in one row, sm/base stacked (avatar+name row, arrows row) -->
           <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-3 w-full">
             <div class="flex gap-3 items-center flex-1 min-w-0">
-              <img data-testimonial-avatar src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney portrait" class="w-14 h-14 rounded-full object-cover shrink-0 lg:hidden" />
+              <img data-testimonial-avatar src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-14 h-14 rounded-full object-cover shrink-0 lg:hidden" />
               <div class="flex flex-col gap-1 min-w-0">
                 <p class="font-body font-semibold text-white text-base leading-6 lg:text-lg lg:leading-7 m-0" data-testimonial-name-title>Andrew Dobney, Director of Digital Strategy</p>
                 <p class="font-body text-[#b1bae7] text-base leading-6 m-0" data-testimonial-company>The Salvation Army</p>
@@ -432,7 +432,7 @@
       <!-- Image column — equal width with the text column at lg+, hidden below -->
       <div class="hidden lg:flex flex-1 lg:min-w-0 items-center justify-center p-12 xl:p-20">
         <div class="w-[300px] h-[300px] rounded-full overflow-hidden bg-royalLite/20 ring-1 ring-white/10 shrink-0">
-          <img data-testimonial-portrait src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney portrait" class="w-full h-full object-cover" />
+          <img data-testimonial-portrait src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
@@ -656,7 +656,7 @@
         companyEl.textContent = t.company;
         avatarEls.forEach(function (img) {
           img.src = t.image;
-          img.alt = t.name + ' portrait';
+          img.alt = t.name + ', ' + t.title + ' at ' + t.company;
         });
       }
       function go(delta) {
