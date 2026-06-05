@@ -745,6 +745,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-02T20:15:11Z",
                 "createdAt": "2026-06-02T20:15:11Z"
+            },
+            "/fractional-devs-pitch.html": {
+                "zuid": "11-dc96c5a5de-s83t2f",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-05T18:31:53Z",
+                "createdAt": "2026-06-05T18:31:53Z"
             }
         },
         "styles": {
