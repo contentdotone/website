@@ -751,6 +751,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-05T18:31:53Z",
                 "createdAt": "2026-06-05T18:31:53Z"
+            },
+            "/decks.html": {
+                "zuid": "11-eec89cd6bb-rgf4tq",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-05T19:23:38Z",
+                "createdAt": "2026-06-05T19:23:38Z"
             }
         },
         "styles": {
