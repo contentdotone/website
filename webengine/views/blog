@@ -12,7 +12,7 @@
   <section class="blog-grid-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="blog-grid">
-        {{each articles as article}}
+        {{each articles as article sort by publish_date desc}}
         <article class="blog-card">
           <a href="{{article.getURL()}}" class="blog-card__link">
             {{if {article.main_image} }}
