@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content.One On-Demand Fractional Developers · Pitch</title>
+  <meta name="description" content="Bolt-on engineering capacity that accelerates your tech initiatives. Senior developers embedded with your team — proven with The Salvation Army (5 CMSs → 1, +50% traffic, 0 added headcount) and Sony (six weeks to soft launch)." />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: {
+          display: ['"DM Sans"', 'sans-serif'],
+          sans: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
+          mono: ['"DM Mono"', 'monospace'],
+        },
+        colors: {
+          ink: '#080b18', panel: '#10162b', panel2: '#171f3a',
+          line: 'rgba(124,140,240,0.18)',
+          royal: '#4255BD', royalLite: '#9aa6f4',
+          success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          chalk: '#eef1fc', muted: '#9aa2c8',
+        },
+      } },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap');
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+    :root { color-scheme: dark; }
+    html, body { height: 100%; overflow: hidden; background:#080b18; }
+    h1,h2,h3 { letter-spacing:-0.025em; } h1 { letter-spacing:-0.04em; }
+    #deck { position: fixed; inset: 0; transition: transform .72s cubic-bezier(.76,0,.24,1); will-change: transform; }
+    .slide { height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .slide::-webkit-scrollbar { width: 0; }
+    .hairline { border:1px solid rgba(124,140,240,0.18); }
+    .gridbg { background-image:
+      linear-gradient(rgba(124,140,240,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,140,240,0.05) 1px, transparent 1px);
+      background-size: 48px 48px; }
+    .royalfade { background:
+      radial-gradient(900px 500px at 80% -10%, rgba(66,85,189,0.45), transparent 60%),
+      radial-gradient(700px 420px at -5% 110%, rgba(13,202,240,0.12), transparent 55%); }
+    @keyframes rise { from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:none;} }
+    .rise { opacity:0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @media (prefers-reduced-motion: reduce){ .rise{animation:none;opacity:1;} #deck{transition:none;} }
+    .kicker { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; }
+    .navbtn { width:3.5rem; height:3.5rem; display:grid; place-items:center; border-radius:9999px;
+      border:1px solid rgba(124,140,240,0.3); background:rgba(8,11,24,0.75); backdrop-filter:blur(8px); color:#eef1fc; transition:all .2s ease; }
+    .navbtn:hover:not(:disabled){ background:#4255BD; border-color:#4255BD; transform:translateY(-2px); }
+    .navbtn:disabled{ opacity:.3; cursor:default; }
+    ::selection{ background:#4255BD; color:#fff; }
+  </style>
+</head>
+
+<body class="font-sans text-chalk antialiased">
+
+  <a href="#" class="fixed top-5 left-6 z-50"><img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-6 w-auto opacity-90" /></a>
+  <div class="fixed top-0 left-0 right-0 h-1 bg-royal/20 z-50"><div id="bar" class="h-full bg-royal w-0 transition-all duration-700"></div></div>
+  <div class="fixed bottom-7 right-6 z-50 font-mono text-xs text-muted hairline rounded-full px-3 py-1.5 bg-ink/70 backdrop-blur"><span id="cur" class="text-chalk">01</span> <span class="text-royalLite">/</span> 11</div>
+  <div class="fixed bottom-6 left-6 z-50 flex gap-3">
+    <button id="prev" class="navbtn" aria-label="Previous slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+    <button id="next" class="navbtn" aria-label="Next slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+  </div>
+
+  <div id="deck">
+
+  <!-- 01 TITLE -->
+  <section class="slide relative flex items-center gridbg" data-i="1">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="rise h-9 w-auto" style="animation-delay:.04s" />
+      <p class="rise kicker text-royalLite mt-8" style="animation-delay:.1s">On-Demand Fractional Developers</p>
+      <h1 class="rise font-display font-bold leading-[0.95] mt-5 text-[12vw] md:text-[6.5rem]" style="animation-delay:.16s">
+        Your engineering team,<br /><span class="text-royalLite">on demand</span>.
+      </h1>
+      <p class="rise max-w-2xl text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.24s">
+        Senior developers <span class="text-chalk font-medium">embedded with your team</span> — no req, no agency markup, no months-long hiring loop. Bolt onto Content.One to accelerate the initiatives already on your roadmap.
+      </p>
+      <div class="rise mt-9 flex flex-wrap gap-3 font-mono text-xs" style="animation-delay:.32s">
+        <span class="hairline rounded-full px-4 py-2 text-success">0 added headcount</span>
+        <span class="hairline rounded-full px-4 py-2 text-info">Embedded, not transactional</span>
+        <span class="hairline rounded-full px-4 py-2 text-warning">Hours, not weeks</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">Included in license</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 THE CHALLENGE -->
+  <section class="slide relative flex items-center" data-i="2">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-danger">The challenge</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Ambitious roadmap. Lean team. No time to hire.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">Modern marketing, ops, and product teams are asked to ship more — site consolidations, AI experiments, integrations, performance work — without a matching headcount budget. Senior engineering hires take six months and a quarter-million dollars to onboard. Agencies disappear after launch. Tickets pile up.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-12">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Hiring lag</div><p class="text-muted mt-3 leading-relaxed">A senior full-stack hire takes 4–6 months from approval to productive — by then the initiative is already late.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Agency churn</div><p class="text-muted mt-3 leading-relaxed">Project-shop devs build, hand off, and leave. There's nobody who knows your stack when something breaks.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-danger font-mono text-sm">Ticket backlog</div><p class="text-muted mt-3 leading-relaxed">Small fixes — a YouTube embed swap, a new search filter — sit for weeks because internal devs are buried.</p></div>
+      </div>
+      <p class="text-muted mt-8 max-w-3xl text-lg">You don't need another vendor. You need <em class="not-italic text-chalk">capacity</em> — engineers who know the platform, sit with your team, and ship.</p>
+    </div>
+  </section>
+
+  <!-- 03 WHAT IT IS -->
+  <section class="slide relative flex items-center bg-panel gridbg" data-i="3">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">What it is</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">A fractional dev team that ships like in-house.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">Content.One's Technical Solutions group becomes an extension of your team — strategy, sprint planning, daily stand-ups, releases, integrations, and monitoring. You get senior engineers who know the platform deeply, without the recruiter, the offer letter, or the burdened cost.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-7 bg-ink"><div class="font-mono text-royalLite text-sm">Embedded, not transactional</div><h3 class="font-display text-xl font-bold mt-2">Inside your sprint</h3><p class="text-muted mt-3 leading-relaxed">Stand-ups, Slack channel, project board, kickoff calls. The same engineers stay with you — they learn your data, your stack, and how your team works.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-ink"><div class="font-mono text-info text-sm">Full delivery arm</div><h3 class="font-display text-xl font-bold mt-2">Architecture → release → monitoring</h3><p class="text-muted mt-3 leading-relaxed">Architecture, automation, integrations, performance, releases, monitoring — handled end-to-end. You operate like a much larger in-house tech team.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-ink"><div class="font-mono text-success text-sm">Included in your license</div><h3 class="font-display text-xl font-bold mt-2">No separate SOW per ticket</h3><p class="text-muted mt-3 leading-relaxed">Response-time SLAs, 24/7/365 coverage, account management, ongoing training — bundled. No surprise invoices for every small ask.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-ink"><div class="font-mono text-warning text-sm">Senior-only</div><h3 class="font-display text-xl font-bold mt-2">60+ years combined experience</h3><p class="text-muted mt-3 leading-relaxed">Architecture and marketing experience baked in. The people on your project have shipped at enterprise scale before.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 CASE STUDY INTRO -->
+  <section class="slide relative flex items-center overflow-hidden" data-i="4">
+    <img src="https://8hxvw8tw.media.zestyio.com/FoodPantry-7jpg.jpg" alt="The Salvation Army field operations" class="absolute inset-0 w-full h-full object-cover opacity-25" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/30"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <div class="inline-flex items-center gap-3 bg-white/95 rounded-xl px-4 py-2">
+        <img src="https://hj5v68xn.media.zestyio.com/The_Salvation_Army.svg.png" alt="The Salvation Army" class="h-8 w-auto" />
+        <span class="text-ink/40 text-sm">×</span>
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto invert" />
+      </div>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-6 max-w-4xl">Enterprise-grade platforms — without adding headcount.</h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg leading-relaxed">The Salvation Army needed to consolidate five CMSs, modernize a national digital ecosystem, and ship new tools — fast. They didn't hire a 10-engineer team. They embedded Content.One's On-Demand Devs alongside their internal staff.</p>
+      <blockquote class="mt-8 max-w-2xl hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+        <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+        <div>
+          <p class="text-lg text-chalk leading-relaxed">"It's rare to find a vendor that understands both the technical complexity and the human complexity of an organization like ours."</p>
+          <footer class="mt-3 font-mono text-xs text-muted">Andrew Dobney · Director of Digital Strategy, The Salvation Army</footer>
+        </div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 05 RESULTS -->
+  <section class="slide relative flex items-center bg-royal" data-i="5">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <div class="flex items-center gap-3">
+        <p class="kicker text-white/70">The results</p>
+        <span class="inline-flex items-center bg-white/95 rounded-lg px-2.5 py-1"><img src="https://hj5v68xn.media.zestyio.com/The_Salvation_Army.svg.png" alt="The Salvation Army" class="h-6 w-auto" /></span>
+      </div>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 text-white">A national platform — built without a hiring spree.</h2>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/15 mt-10 rounded-2xl overflow-hidden">
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">5 → 1</div><p class="text-white/70 mt-2">CMSs consolidated into one national stack</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">0×</div><p class="text-white/70 mt-2">Additional engineering headcount required</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+50%</div><p class="text-white/70 mt-2">Web traffic growth (Apr–Jul)</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+98%</div><p class="text-white/70 mt-2">Increase in location searches</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">4×</div><p class="text-white/70 mt-2">Faster content updates</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">99.99%</div><p class="text-white/70 mt-2">Uptime across national infrastructure</p></div>
+      </div>
+      <p class="text-white/85 mt-7 font-mono text-sm">Engineers embedded with the internal digital team. Releases, integrations, monitoring — handled end-to-end.</p>
+    </div>
+  </section>
+
+  <!-- 06 SPEED OF DELIVERY -->
+  <section class="slide relative flex items-center gridbg" data-i="6">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="kicker text-info">Speed of delivery</p>
+        <h2 class="font-display text-4xl md:text-5xl font-bold mt-4">Hours and days, not weeks and months.</h2>
+        <p class="text-muted mt-5 text-lg leading-relaxed">Tickets that used to sit in an agency backlog — or wait for the next sprint of an overloaded internal team — get resolved in real time. The same engineers know your stack, so a new integration, a search filter, or a bug fix lands the same day it's raised.</p>
+        <p class="text-muted mt-4 leading-relaxed">That cadence is the difference between an initiative shipping this quarter and slipping to next year.</p>
+      </div>
+      <div class="space-y-4">
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"Hard to quantify the fast turnaround we see every day — but days instead of weeks, months. That was a main factor in moving."</p><footer class="font-mono text-xs text-muted mt-2">Andrew Dobney · Director of Digital Strategy, The Salvation Army</footer></div>
+        </blockquote>
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren, National Web Manager at The Salvation Army" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"With Content.One, I can add an EOD ticket and get real-time dialogue and quick resolution in the same day."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager, The Salvation Army</footer></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 ONBOARDING + TRAINING -->
+  <section class="slide relative flex items-center" data-i="7">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-warning">Onboarding &amp; partnership</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">White-glove from kickoff to launch — and after.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">Every engagement starts with a scoped kickoff: discovery, architecture, timeline, milestones. From there it's weekly check-ins, launch support, and ongoing coaching via Slack or Teams. Engineers are <span class="text-chalk">in the room</span> during launch to make sure go-live actually goes.</p>
+      <div class="grid md:grid-cols-4 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-warning font-mono text-sm">SLA-backed</div><p class="text-muted text-sm mt-2 leading-relaxed">Response-time SLAs with a global team. 24/7/365 coverage, no time-zone gaps.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-warning font-mono text-sm">Slack / Teams native</div><p class="text-muted text-sm mt-2 leading-relaxed">Real-time channels with your project team. EOD tickets resolved EOD.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-warning font-mono text-sm">Total training mgmt</div><p class="text-muted text-sm mt-2 leading-relaxed">LMS + live sessions tailored to roles. Track progress, send reminders, keep knowledge current.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="text-warning font-mono text-sm">Direct AM access</div><p class="text-muted text-sm mt-2 leading-relaxed">Email and phone access to account managers. Proactive — not just reactive.</p></div>
+      </div>
+      <blockquote class="mt-8 hairline rounded-2xl bg-panel/85 p-6 flex gap-4 items-center">
+        <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+        <div><p class="text-chalk leading-relaxed">"Onboarding was thorough, documentation clear, guidance responsive and tailored. The collaborative architecture work and project management have been strong — clear direction, flexible, and aligned on priorities."</p><footer class="font-mono text-xs text-muted mt-2">Andrew Dobney · Director of Digital Strategy, The Salvation Army</footer></div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 08 BOLT-ON / INTEGRATIONS -->
+  <section class="slide relative flex items-center bg-panel" data-i="8">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-info">Bolt onto your existing stack</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Connect the systems you already run.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">Content.One's modular, API-first architecture connects to your CRM, payments, donation, ERP, EHR, careers, and AI tools — instead of replacing them. On-Demand Devs handle the wiring: webhooks, real-time sync, cascading automation, AI-ready datasets.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-7 bg-ink">
+          <p class="kicker text-danger">Old way</p>
+          <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-danger">✕</span> Every integration is a bespoke project, separately scoped and quoted.</li>
+            <li class="flex gap-3"><span class="text-danger">✕</span> Custom code rots — original devs gone, docs stale, fixes risky.</li>
+            <li class="flex gap-3"><span class="text-danger">✕</span> Internal team gates everything; experiments stall in backlog.</li>
+          </ul>
+        </div>
+        <div class="hairline rounded-2xl p-7 bg-ink">
+          <p class="kicker text-success">With On-Demand Devs</p>
+          <ul class="mt-4 space-y-3 text-muted leading-relaxed">
+            <li class="flex gap-3"><span class="text-success">✓</span> Engineers who know the platform wire integrations as standard work.</li>
+            <li class="flex gap-3"><span class="text-success">✓</span> Your team gets the autonomy to set up APIs without custom builds.</li>
+            <li class="flex gap-3"><span class="text-success">✓</span> AI experiments and analytics layer onto a foundation that's already solid.</li>
+          </ul>
+        </div>
+      </div>
+      <blockquote class="mt-8 hairline rounded-2xl bg-ink/80 p-6 flex gap-4 items-center">
+        <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren, National Web Manager at The Salvation Army" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+        <div><p class="text-chalk leading-relaxed">"API integrations required custom development on our old platform. We now have the autonomy to set up APIs through Content.One with ease."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager, The Salvation Army</footer></div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 09 ENTERPRISE PROOF (SONY) -->
+  <section class="slide relative flex items-center overflow-hidden" data-i="9">
+    <img src="https://hj5v68xn.media.zestyio.com/Alpha-Universe-WIMB-Zack-Knudsen-2.webp" alt="Sony Electronics — enterprise launch on Content.One" class="absolute inset-0 w-full h-full object-cover opacity-20" />
+    <div class="absolute inset-0 bg-gradient-to-r from-ink via-ink/85 to-ink/40"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Proven at enterprise scale</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Sony Electronics: soft launch in six weeks.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">A global brand, an aggressive timeline, no time to staff a new in-house engineering team. Content.One's on-demand model carried Sony's MARCOM org from kickoff to soft launch in six weeks — and full launch inside two months.</p>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 mt-8 rounded-2xl overflow-hidden max-w-3xl">
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-info">6 wks</div><p class="text-muted text-xs mt-1">To soft launch</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-success">2.25×</div><p class="text-muted text-xs mt-1">Faster go-live</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-warning">+164%</div><p class="text-muted text-xs mt-1">QoQ engagement</p></div>
+        <div class="bg-ink/70 p-5"><div class="font-display text-3xl md:text-4xl font-bold text-royalLite">99.99%</div><p class="text-muted text-xs mt-1">Uptime</p></div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4 mt-8 max-w-4xl">
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/matt.jpg" alt="Matthew Parnell, MARCOM Manager at Sony Electronics" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months."</p><footer class="font-mono text-xs text-muted mt-2">Matthew Parnell · MARCOM Manager, Sony Electronics</footer></div>
+        </blockquote>
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6">
+          <p class="text-chalk leading-relaxed">"We need software that's both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable."</p>
+          <footer class="font-mono text-xs text-muted mt-2">Ben Johnson · Director of Technology Operations, Bluepixel (Sony's agency)</footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 WHO IT'S FOR -->
+  <section class="slide relative flex items-center gridbg" data-i="10">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Who it's for</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Bolt-on capacity for the work that's already on your roadmap.</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-mono text-info text-sm">Site consolidation</div><h3 class="font-display text-2xl font-bold mt-2">Many CMSs → one</h3><p class="text-muted mt-3 leading-relaxed">Federated multisite migrations, content audits, redirect maps, unified taxonomy — the work that's too big for one in-house dev to own.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-mono text-success text-sm">AI &amp; automation</div><h3 class="font-display text-2xl font-bold mt-2">From experiment to production</h3><p class="text-muted mt-3 leading-relaxed">Generative content workflows, MCP-driven agents, structured data for GEO. On-Demand Devs ship past the demo into a real production system.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-mono text-warning text-sm">Performance &amp; SEO</div><h3 class="font-display text-2xl font-bold mt-2">Speed and discoverability</h3><p class="text-muted mt-3 leading-relaxed">CDN tuning, schema rollout, Core Web Vitals work, GEO/SEO automation across thousands of pages.</p></div>
+        <div class="hairline rounded-2xl p-7 bg-panel"><div class="font-mono text-royalLite text-sm">Integrations &amp; data</div><h3 class="font-display text-2xl font-bold mt-2">CRM, EHR, donor, payments</h3><p class="text-muted mt-3 leading-relaxed">API and webhook wiring across your stack — keeping data flowing in real time so marketing and ops can move.</p></div>
+      </div>
+      <blockquote class="mt-8 hairline rounded-2xl bg-panel/85 p-6 flex gap-4 items-center">
+        <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren, National Web Manager at The Salvation Army" class="w-14 h-14 rounded-full object-cover flex-shrink-0" />
+        <div><p class="text-chalk leading-relaxed">"We can finally start thinking ahead again — not just patching things. It's opened up space for creativity, strategy, and mission."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager, The Salvation Army</footer></div>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- 11 CLOSE -->
+  <section class="slide relative flex items-center gridbg" data-i="11">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-4xl mx-auto px-6 w-full py-16 text-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-9 w-auto mx-auto" />
+      <p class="kicker text-royalLite mt-7">Capacity, not contracts</p>
+      <h2 class="font-display text-4xl md:text-7xl font-bold mt-5">Accelerate the work — without adding the headcount.</h2>
+      <blockquote class="mt-8 max-w-2xl mx-auto hairline rounded-2xl bg-panel/80 backdrop-blur p-6 flex gap-4 items-center text-left">
+        <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren, National Web Manager at The Salvation Army" class="w-16 h-16 rounded-full object-cover flex-shrink-0" />
+        <div><p class="text-lg text-chalk leading-relaxed">"We knew big-name tools are impressive and look like they have the most features — but they'd never sit in the room with us. Content.One did. We needed the personal touch."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager, The Salvation Army</footer></div>
+      </blockquote>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/contact-us/" class="bg-royal hover:bg-royalLite hover:text-ink transition text-white font-medium rounded-full px-7 py-3">Talk with our team</a>
+        <a href="/customers/salvation-army-ondemand-developers/" class="hairline hover:border-royalLite transition rounded-full px-7 py-3 text-chalk">Read the Salvation Army story</a>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /deck -->
+
+  <script>
+    const deck = document.getElementById('deck');
+    const slides = [...deck.querySelectorAll('.slide')];
+    const cur = document.getElementById('cur'), bar = document.getElementById('bar');
+    const prevBtn = document.getElementById('prev'), nextBtn = document.getElementById('next');
+    let idx = 0, lock = false;
+    function render() {
+      deck.style.transform = `translateY(${-idx * 100}vh)`;
+      cur.textContent = String(idx + 1).padStart(2, '0');
+      bar.style.width = ((idx + 1) / slides.length * 100) + '%';
+      prevBtn.disabled = idx === 0; nextBtn.disabled = idx === slides.length - 1;
+    }
+    function goTo(i) { i = Math.max(0, Math.min(slides.length - 1, i)); if (i === idx) return; idx = i; lock = true; render(); setTimeout(() => { lock = false; }, 720); }
+    prevBtn.addEventListener('click', () => goTo(idx - 1));
+    nextBtn.addEventListener('click', () => goTo(idx + 1));
+    window.addEventListener('wheel', (e) => {
+      const s = slides[idx];
+      const canDown = s.scrollHeight - s.scrollTop - s.clientHeight > 2, canUp = s.scrollTop > 2;
+      if ((e.deltaY > 0 && canDown) || (e.deltaY < 0 && canUp)) return;
+      e.preventDefault(); if (lock) return;
+      if (e.deltaY > 6) goTo(idx + 1); else if (e.deltaY < -6) goTo(idx - 1);
+    }, { passive: false });
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); goTo(idx + 1); }
+      else if (['ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); goTo(idx - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+      else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+    });
+    let ty = null;
+    window.addEventListener('touchstart', (e) => { ty = e.touches[0].clientY; }, { passive: true });
+    window.addEventListener('touchend', (e) => {
+      if (ty === null) return; const dy = ty - e.changedTouches[0].clientY; const s = slides[idx];
+      const atBottom = s.scrollHeight - s.scrollTop - s.clientHeight < 4, atTop = s.scrollTop < 4;
+      if (dy > 50 && atBottom) goTo(idx + 1); else if (dy < -50 && atTop) goTo(idx - 1); ty = null;
+    }, { passive: true });
+    render();
+  </script>
+</body>
+</html>
