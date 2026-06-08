@@ -1,0 +1,159 @@
+<main class="press-index">
+  <section class="press-hero">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="press-hero__content">
+        <p class="press-hero__eyebrow">Content.One Press</p>
+        <h1 class="press-hero__title">Content.One in the news.</h1>
+        <p class="press-hero__subtitle">Press releases, announcements, and media coverage of the team building Content.One.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="press-grid-section">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="press-grid">
+        {{each press_releases as release sort by publish_date desc}}
+        <article class="press-card">
+          <a href="{{release.getURL()}}" class="press-card__link">
+            {{if {release.main_image} }}
+            <div class="press-card__media">
+              <img src="{{release.main_image.getImage(800,520,crop)}}" alt="{{release.title}} cover image">
+            </div>
+            {{/if}}
+            <div class="press-card__body">
+              <div class="press-card__meta">
+                {{if {release.publish_date} }}
+                <span>{{release.publish_date.date(Y-m-d)}}</span>
+                {{/if}}
+                {{if {release.authors} }}
+                <span>
+                  {{each {release.authors} as author}}
+                  {{author.name}}{{author._arraycomma}}
+                  {{/each}}
+                </span>
+                {{/if}}
+              </div>
+              <h2 class="press-card__title">{{release.title}}</h2>
+              {{if {release.body} }}
+              <p class="press-card__excerpt">{{release.body.striptags().subwords(28)}}...</p>
+              {{/if}}
+              <span class="press-card__cta">Read the release</span>
+            </div>
+          </a>
+        </article>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
+  @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap");
+
+  .press-index {
+    --ink: #111827;
+    --muted: #4b5563;
+    --card: #ffffff;
+    --brand-dark: #0f172a;
+    --brand-mid: #3f51b5;
+    --brand-bright: #6f7bf7;
+    font-family: "Satoshi", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.06) 0%, rgba(63, 81, 181, 0.08) 50%, rgba(111, 123, 247, 0.05) 100%);
+  }
+
+  .press-hero {
+    padding: 4.5rem 0 3rem;
+  }
+
+  .press-hero__content {
+    max-width: 720px;
+  }
+
+  .press-hero__eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 0.75rem;
+    color: var(--muted);
+  }
+
+  .press-hero__title {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    font-size: clamp(2.4rem, 4vw, 3.6rem);
+    margin: 1rem 0;
+  }
+
+  .press-hero__subtitle {
+    color: var(--muted);
+    font-size: 1.05rem;
+  }
+
+  .press-grid-section {
+    padding: 0 0 4rem;
+  }
+
+  .press-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .press-card {
+    background: var(--card);
+    border-radius: 4px;
+    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
+    overflow: hidden;
+  }
+
+  .press-card__link {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    color: inherit;
+    text-decoration: none;
+    height: 100%;
+  }
+
+  .press-card__media img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .press-card__body {
+    padding: 1.6rem;
+    display: grid;
+    gap: 0.8rem;
+  }
+
+  .press-card__meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+  }
+
+  .press-card__title {
+    font-family: "DM Sans", "Segoe UI", sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+
+  .press-card__excerpt {
+    color: var(--muted);
+    margin: 0;
+  }
+
+  .press-card__cta {
+    font-weight: 600;
+    color: var(--brand-mid);
+  }
+
+  @media (max-width: 640px) {
+    .press-hero {
+      padding: 3.5rem 0 2.5rem;
+    }
+  }
+</style>
