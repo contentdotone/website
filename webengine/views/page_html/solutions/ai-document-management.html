@@ -2,7 +2,7 @@
   <section class="py-6 py-lg-7 bg-gradient-ai relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h1 class="text-4xl font-bold text-white font-bold mb-4">Organize, search, and govern content at scale—powered by AI.</h1>
           <p class="text-lg text-white/75 mb-4">Content.One’s AI Document Management centralizes assets, documents, and unstructured content for marketing, sales, and operations. Catalog everything automatically, keep governance tight, and connect approved content to every channel.</p>
           <div class="flex flex-wrap gap-3">
@@ -10,7 +10,7 @@
             <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Team organizing digital content" class="w-full h-full object-cover">
           </div>
@@ -22,13 +22,13 @@
   <section class="py-6 border-t">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> 
       <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
+        <div class="col-span-12 lg:col-span-5">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">Trusted across industries</span>
           <h2 class="text-4xl font-bold font-semibold mb-3">Content excellence for marketing, sales, and operations.</h2>
           <p class="text-gray-600 mb-0">Global brands rely on Content.One to catalog documents, manage regulated content, and distribute approved assets to every touchpoint—from corporate sites to partner portals and sales enablement hubs.</p>
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="col-span-12 lg:col-span-7">
+          <div class="grid gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
             <div class="flex-1">
               <div class="border rounded-xl p-3 h-full">
@@ -53,7 +53,7 @@
           <p class="text-gray-600 text-lg mb-0">Automated tagging, intelligent search, and enterprise governance ensure the right teams find the right content instantly—while your brand stays consistent across regions, products, and channels.</p>
         </div>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
             <div class="p-6">
@@ -115,10 +115,10 @@
   <section class="py-6 bg-gray-100 border-t border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-4xl font-bold font-semibold mb-4">Catalog once, syndicate everywhere</h2>
           <p class="text-gray-600 mb-4">Content.One’s document schemas and workflows bridge marketing and sales teams. Build central catalog entries that drive product pages, partner portals, and sales collateral—without recreating content.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
                 <div class="p-6">
@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl overflow-hidden shadow-lg">
             <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="Content catalog dashboard" class="w-full h-full object-cover">
           </div>
@@ -165,12 +165,12 @@
   <section class="py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="{{this.hero_image.getImage(1200)}}" alt="AI search interface" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-subtle text-ai mb-3">MCP-powered intelligence</span>
           <h2 class="text-4xl font-bold font-semibold mb-4">Connect MCP servers to power omnichannel discovery</h2>
           <p class="text-gray-600 text-lg mb-4">Leverage Model Context Protocol (MCP) servers to bridge Content.One’s structured content with AI copilots, sales tools, and custom experiences. Deliver the right document or offer in seconds.</p>
@@ -201,10 +201,10 @@
   <section class="py-6 bg-gray-900 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-3xl font-bold text-white font-semibold mb-4">AI document management that scales with your teams</h2>
           <p class="text-lg text-white/75 mb-4">Deliver compliant, up-to-date content to every stakeholder. Content.One’s managed hosting, multi-environment workflows, and AI toolset keep your knowledge base ready for growth.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
                 <div class="p-6">
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Distributed teams collaborating" class="w-full h-full object-cover">
           </div>
@@ -259,7 +259,7 @@
         </div>
         <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-ai text-base px-6 py-3">See how they scale</a>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
             <div class="p-6">
@@ -312,7 +312,7 @@
   <section class="py-6 bg-ai text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
           <h2 class="text-3xl font-bold font-semibold mb-3">Ready to modernize your document management with AI?</h2>
           <p class="text-lg text-white/75 mb-4">Partner with Content.One to centralize assets, automate governance, and deliver content wherever your teams engage customers.</p>
           <div class="flex flex-wrap justify-center gap-3">
