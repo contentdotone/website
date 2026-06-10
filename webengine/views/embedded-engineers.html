@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Embedded Engineers — On-Demand Developers | Content.One</title>
+  <meta name="description" content="Dedicated Content.One developers, embedded with your team. Part-time or full-time, trained on the platform, fully managed by us. No HR overhead, no engineering bottlenecks." />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD',
+            royalDark: '#2F3F94',
+            royalLite: '#8C9BE6',
+            ink: '#0B0F1C',
+            paper: '#FAFAFC',
+            muted: '#6B7280',
+            success: '#36B37E',
+            warning: '#FFAB00',
+            danger:  '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"','system-ui','sans-serif'],
+            sans:    ['"Satoshi"','"DM Sans"','system-ui','sans-serif'],
+            mono:    ['"DM Mono"','ui-monospace','monospace'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap">
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Satoshi','DM Sans',system-ui,sans-serif; background: #FAFAFC; color: #0B0F1C; -webkit-font-smoothing: antialiased; }
+    .font-display { font-family: 'DM Sans','system-ui',sans-serif; letter-spacing: -0.015em; }
+    .font-mono    { font-family: 'DM Mono', ui-monospace, monospace; }
+
+    .kicker { font-family: 'DM Mono', ui-monospace, monospace; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; }
+    .hairline { border: 1px solid rgba(255,255,255,.18); }
+    .hairline-ink { border: 1px solid rgba(11,15,28,.12); }
+
+    /* Hero atmosphere */
+    .hero {
+      background:
+        radial-gradient(900px 600px at 85% -10%, rgba(66,85,189,.45), transparent 60%),
+        radial-gradient(700px 500px at 5% 110%, rgba(66,85,189,.28), transparent 60%),
+        linear-gradient(180deg, #0B0F1C 0%, #0B0F1C 100%);
+    }
+    .dot-grid {
+      background-image: radial-gradient(rgba(255,255,255,.08) 1px, transparent 1px);
+      background-size: 22px 22px;
+    }
+
+    /* Royal band */
+    .royal-band {
+      background:
+        radial-gradient(700px 400px at 100% 0%, rgba(255,255,255,.18), transparent 60%),
+        linear-gradient(135deg, #4255BD 0%, #2F3F94 100%);
+    }
+
+    /* Card decoration */
+    .card-light { background: #fff; border: 1px solid rgba(11,15,28,.08); }
+    .card-dark  { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.10); }
+    .stat-card  { background: #fff; border: 1px solid rgba(11,15,28,.08); }
+
+    /* Subtle rise on scroll-in */
+    @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+    .rise { animation: rise .9s cubic-bezier(.2,.65,.2,1) both; }
+
+    /* Number ticker style */
+    .stat-num { font-family: 'DM Sans','system-ui',sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+
+    .underline-royal { background-image: linear-gradient(transparent 60%, rgba(140,155,230,.45) 60%); padding: 0 .05em; }
+
+    .btn-primary { background:#4255BD; color:#fff; transition: all .2s; box-shadow: 0 6px 22px rgba(66,85,189,.35); }
+    .btn-primary:hover { background:#2F3F94; transform: translateY(-1px); }
+    .btn-ghost { color:#fff; border:1px solid rgba(255,255,255,.35); transition: all .2s; }
+    .btn-ghost:hover { background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.55); }
+    .btn-ink { background:#0B0F1C; color:#fff; transition: all .2s; }
+    .btn-ink:hover { background:#1a2238; }
+
+    /* Step connector */
+    .step-line {
+      position: absolute; top: 28px; left: calc(50% + 32px); right: calc(-50% + 32px);
+      height: 1px; background: linear-gradient(90deg, rgba(140,155,230,.6), rgba(140,155,230,0));
+    }
+    @media (max-width: 768px) { .step-line { display: none; } }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- NAV -->
+  <header class="absolute inset-x-0 top-0 z-20">
+    <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2 text-white">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-7 w-auto" />
+      </a>
+      <a href="/contact/" class="hidden sm:inline-flex items-center gap-2 text-white text-sm font-medium hairline rounded-full px-4 py-2 hover:bg-white/10 transition">Talk to us →</a>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero relative text-white pt-32 pb-28 md:pt-40 md:pb-36 overflow-hidden">
+    <div class="absolute inset-0 dot-grid opacity-50"></div>
+    <div class="relative max-w-7xl mx-auto px-6">
+      <p class="kicker text-royalLite rise" style="animation-delay:.05s">On-Demand Developers · Embedded Engineering</p>
+      <h1 class="font-display text-5xl md:text-7xl font-bold mt-6 max-w-5xl leading-[1.04] rise" style="animation-delay:.18s">
+        Engineers, <span class="text-royalLite">embedded</span> with your team.
+      </h1>
+      <p class="mt-7 max-w-2xl text-lg md:text-xl text-white/75 rise" style="animation-delay:.3s">
+        Bolt a Content.One developer — or several — onto your team. Part-time or full-time, trained on the platform, fully managed by us. No HR overhead. No engineering bottleneck.
+      </p>
+      <div class="mt-10 flex flex-wrap gap-3 rise" style="animation-delay:.42s">
+        <a href="/contact/" class="btn-primary rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">Bring an engineer onto your team <span aria-hidden="true">→</span></a>
+        <a href="#proof" class="btn-ghost rounded-full px-6 py-3 text-sm font-semibold inline-flex items-center gap-2">See the proof</a>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-2.5 font-mono text-xs md:text-sm rise" style="animation-delay:.55s">
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">Part-time or full-time</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">Fully managed</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">No HR overhead</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">Trained on Content.One</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">60+ combined years</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE PROBLEM -->
+  <section class="bg-paper py-20 md:py-24">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="kicker text-royal">The bottleneck</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 max-w-3xl">Marketing waits. Roadmaps stretch. <span class="underline-royal">Sites slip.</span></h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg">Most teams have more ideas than engineering hours. New campaigns sit in sprints. Integrations get deferred. Migrations turn into multi-quarter projects. The site becomes the bottleneck instead of the growth engine.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+        <div class="card-light rounded-2xl p-6">
+          <p class="font-display text-3xl font-bold text-royal">Hard‑coded</p>
+          <p class="mt-2 text-sm text-muted">Pages and portals locked in code mean every change is a ticket — and every ticket waits behind product work.</p>
+        </div>
+        <div class="card-light rounded-2xl p-6">
+          <p class="font-display text-3xl font-bold text-royal">Hand‑offs</p>
+          <p class="mt-2 text-sm text-muted">Marketing, design, and engineering each own a fragment of the site. Nothing ships without a queue.</p>
+        </div>
+        <div class="card-light rounded-2xl p-6">
+          <p class="font-display text-3xl font-bold text-royal">Hiring</p>
+          <p class="mt-2 text-sm text-muted">Adding headcount takes months. Onboarding takes longer. Most teams can't justify a full-time platform engineer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT YOU GET -->
+  <section class="bg-ink text-white py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+        <div class="lg:col-span-7">
+          <p class="kicker text-royalLite">What you get</p>
+          <h2 class="font-display text-3xl md:text-5xl font-bold mt-3">Dedicated developers, embedded with your team.</h2>
+          <p class="mt-6 text-white/75 max-w-2xl text-lg">Content.One offers one — or many — dedicated developers to bolster your efforts and support your digital marketing needs. They sit alongside your team, learn how you work, and ship.</p>
+          <ul class="mt-10 grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-white/90">
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Works directly with your team</span> — async or in your stand-ups, on your tools.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Trained on Content.One</span> — productive from week one.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Part-time or full-time</span> — scoped to actual need.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Versatile skill-sets</span> — front-end, back-end, integrations, DevOps.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Controlled costs</span> — no hiring spike, no surprise overruns.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">No HR overhead</span> — no recruiting, no benefits, no churn risk.</span></li>
+            <li class="flex gap-3"><span class="text-royalLite mt-1">●</span><span><span class="font-semibold">Fully managed by us</span> — performance, ramp, and continuity are our job.</span></li>
+          </ul>
+        </div>
+
+        <aside class="lg:col-span-5 card-dark rounded-3xl p-7 lg:p-9">
+          <p class="kicker text-royalLite">Why teams trust us</p>
+          <div class="mt-6 space-y-7">
+            <div>
+              <p class="font-display text-2xl font-bold">Trusted</p>
+              <p class="text-white/70 mt-1 text-sm">60+ combined years building advanced websites and enterprise applications.</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold">Best practices</p>
+              <p class="text-white/70 mt-1 text-sm">Performance, accessibility, security, and content modeling — followed from day one.</p>
+            </div>
+            <div>
+              <p class="font-display text-2xl font-bold">Success guarantee</p>
+              <p class="text-white/70 mt-1 text-sm">Engineers stay on through launch so the migration goes live smoothly. Every time.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT THEY HANDLE -->
+  <section class="bg-paper py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="kicker text-royal">Your full development arm</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 max-w-3xl">Architecture, automation, releases, integrations — handled end‑to‑end.</h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg">With the embedded model, you operate like a larger in‑house tech team. Engineers focus on mission‑driven work; routine engineering disappears into the platform.</p>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 mt-12">
+        <!-- Architecture -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Architecture</p>
+          <p class="text-sm text-muted mt-2">Content models, design systems, instance setup — built to scale across brands, geos, and campaigns.</p>
+        </div>
+        <!-- Automation -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.36.144.668.39.91.71"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Automation</p>
+          <p class="text-sm text-muted mt-2">Workflows, content syndication, scheduled publishing, and Git-native delivery — so updates don't need handoffs.</p>
+        </div>
+        <!-- Releases -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12l5 5L20 7"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Releases</p>
+          <p class="text-sm text-muted mt-2">Branch-based promotion, instant rollback, and zero-downtime deploys — turnaround measured in hours, not weeks.</p>
+        </div>
+        <!-- Integrations -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M10 14a5 5 0 0 1 0-7l3-3a5 5 0 0 1 7 7l-1.5 1.5"/><path d="M14 10a5 5 0 0 1 0 7l-3 3a5 5 0 0 1-7-7l1.5-1.5"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Integrations</p>
+          <p class="text-sm text-muted mt-2">Payment portals, patient/staff portals, CRMs, donation platforms, search, analytics — wired in cleanly.</p>
+        </div>
+        <!-- Performance -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h3l3-8 4 16 3-8h5"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Performance</p>
+          <p class="text-sm text-muted mt-2">Core Web Vitals, global CDN tuning, image optimization — proactively monitored, never an afterthought.</p>
+        </div>
+        <!-- Support / DevOps -->
+        <div class="card-light rounded-2xl p-6">
+          <svg viewBox="0 0 24 24" class="h-7 w-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/><path d="M12 7v5l3 2"/></svg>
+          <p class="font-display text-xl font-bold mt-4">Support & DevOps</p>
+          <p class="text-sm text-muted mt-2">24/7/365 coverage with response-time SLAs. From urgent tickets to complex new features — always within reach.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMBEDDED MODEL CALLOUT -->
+  <section class="bg-ink text-white py-20 md:py-28 relative overflow-hidden">
+    <div class="absolute inset-0 dot-grid opacity-40"></div>
+    <div class="relative max-w-5xl mx-auto px-6">
+      <p class="kicker text-royalLite">Why "embedded" matters</p>
+      <blockquote class="mt-8 font-display text-2xl md:text-4xl font-semibold leading-snug">
+        “We knew big‑name tools are impressive and look like they have the most features — but they'd never sit in the room with us. <span class="text-royalLite">Content.One did.</span> We needed the personal touch. The Content.One Engineering and Support Team learned our organization deeply. It wasn't just ‘tell us what to build,’ but understand how we work so the instance fits our needs.”
+      </blockquote>
+      <div class="mt-8 flex items-center gap-4">
+        <div class="h-12 w-12 rounded-full bg-royal/30 hairline grid place-items-center font-display font-bold text-royalLite">AD</div>
+        <div>
+          <p class="font-semibold">Andrew Dobney</p>
+          <p class="text-white/60 text-sm">The Salvation Army</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROOF -->
+  <section id="proof" class="bg-paper py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="kicker text-royal">Proof</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 max-w-3xl">Built for organizations like <span class="underline-royal">The Salvation Army.</span></h2>
+      <p class="text-muted mt-6 max-w-2xl text-lg">Acting as their full development arm, Content.One's embedded engineers consolidated five CMSs into one, modernized national infrastructure, and let the digital team move at mission speed.</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">99.99%</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Uptime</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">24/7</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Support SLA</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">5 → 1</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">CMSs consolidated</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">4×</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Campaigns shipped</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">+50%</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Traffic growth</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">+98%</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Location searches</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">+115%</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Service clicks</p>
+        </div>
+        <div class="stat-card rounded-2xl p-6">
+          <p class="stat-num text-4xl text-royal">0×</p>
+          <p class="text-xs uppercase tracking-widest text-muted mt-2">Headcount added</p>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <a href="/case-studies/the-salvation-army/" class="inline-flex items-center gap-2 text-royal font-semibold hover:text-royalDark transition">
+          Read the full Salvation Army story <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-ink text-white py-20 md:py-28">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="kicker text-royalLite">How it works</p>
+      <h2 class="font-display text-3xl md:text-5xl font-bold mt-3 max-w-3xl">From scope to ship in weeks, not quarters.</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-14">
+        <div class="relative">
+          <div class="step-line"></div>
+          <div class="h-14 w-14 rounded-2xl bg-royal grid place-items-center font-display text-white font-bold text-2xl">1</div>
+          <p class="font-display text-xl font-bold mt-6">Scope</p>
+          <p class="text-white/70 mt-2 text-sm">A 30-minute call to map your goals, tech stack, and timeline. We size the engagement — part-time, full-time, or a small team — to actual need.</p>
+        </div>
+        <div class="relative">
+          <div class="step-line"></div>
+          <div class="h-14 w-14 rounded-2xl bg-royal grid place-items-center font-display text-white font-bold text-2xl">2</div>
+          <p class="font-display text-xl font-bold mt-6">Embed</p>
+          <p class="text-white/70 mt-2 text-sm">Your engineer joins your stand-ups, your Slack, your tools. They're productive from week one — already trained on Content.One and managed by us.</p>
+        </div>
+        <div>
+          <div class="h-14 w-14 rounded-2xl bg-royal grid place-items-center font-display text-white font-bold text-2xl">3</div>
+          <p class="font-display text-xl font-bold mt-6">Ship</p>
+          <p class="text-white/70 mt-2 text-sm">Releases in hours, not weeks. Engineers stay on through launch with a success guarantee. Scale up or down as the roadmap shifts.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="royal-band text-white py-20 md:py-28">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <p class="kicker text-white/80">Ready when you are</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 leading-[1.05]">Add a Content.One engineer to your team.</h2>
+      <p class="text-white/85 mt-6 max-w-2xl mx-auto text-lg">Part-time or full-time. Trained, managed, and accountable. Bring in expertise without bringing on headcount.</p>
+      <div class="mt-10 flex flex-wrap gap-3 justify-center">
+        <a href="/contact/" class="btn-ink rounded-full px-7 py-3.5 text-sm font-semibold inline-flex items-center gap-2">Talk to us <span aria-hidden="true">→</span></a>
+        <a href="/solutions/" class="rounded-full px-7 py-3.5 text-sm font-semibold inline-flex items-center gap-2 border border-white/40 hover:bg-white/10 transition">Explore all developer services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-ink text-white/60 py-10">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row gap-4 items-center justify-between text-sm">
+      <div class="flex items-center gap-2">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-6 w-auto opacity-80" />
+      </div>
+      <p>&copy; Content.One — Engineers, embedded with your team.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
