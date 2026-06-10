@@ -757,6 +757,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-05T19:23:38Z",
                 "createdAt": "2026-06-05T19:23:38Z"
+            },
+            "/content-one-launches-mcp-enabled-ai-cms.html": {
+                "zuid": "11-f8c189e4e1-3tlxq6",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-10T23:32:38Z",
+                "createdAt": "2026-06-10T23:32:38Z"
             }
         },
         "styles": {
