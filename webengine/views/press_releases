@@ -45,7 +45,7 @@
         <article class="article-content">
           {{this.body}}
 
-          <p><strong>Need help solving for {{this.title}} with your organization?</strong> <strong><a href="/contact-us/">Click Here</a></strong> to Setup a time to talk through a solution.</p>
+          <p><strong>Press inquiries about "{{this.title}}"?</strong> <strong><a href="/contact-us/">Reach out</a></strong> to the Content.One communications team.</p>
           
             <h2>Meet the Author{{if preg_match('/,/',{this.authors})}}s{{/if}}</h2>
             
@@ -317,26 +317,12 @@
     animation: fade-up 0.9s ease-out 0.1s both;
   }
 
-  /* Tailwind's preflight (loaded via cdn.tailwindcss.com) resets h1-h6 + strong/b
-     to inherit font-size + font-weight. Restore visual hierarchy explicitly here. */
-  .article-content h1,
   .article-content h2,
   .article-content h3,
-  .article-content h4,
-  .article-content h5,
-  .article-content h6 {
+  .article-content h4 {
     font-family: "DM Sans", "Segoe UI", sans-serif;
-    color: var(--ink);
-    line-height: 1.25;
     margin-top: 2rem;
-    margin-bottom: 0.75rem;
   }
-  .article-content h1 { font-size: 2.25rem; font-weight: 700; line-height: 1.2; margin-top: 2.5rem; }
-  .article-content h2 { font-size: 1.875rem; font-weight: 700; }
-  .article-content h3 { font-size: 1.5rem; font-weight: 600; }
-  .article-content h4 { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
-  .article-content h5 { font-size: 1.125rem; font-weight: 600; line-height: 1.4; }
-  .article-content h6 { font-size: 1rem; font-weight: 600; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
 
   .article-content p,
   .article-content li {
@@ -344,34 +330,6 @@
     line-height: 1.7;
     font-size: 1.05rem;
   }
-
-  .article-content p { margin: 0 0 1rem; }
-
-  .article-content strong,
-  .article-content b { font-weight: 700; }
-  .article-content em,
-  .article-content i { font-style: italic; }
-
-  .article-content a {
-    color: var(--brand-mid, #3f51b5);
-    text-decoration: underline;
-    text-decoration-color: rgba(63, 81, 181, 0.35);
-  }
-  .article-content a:hover {
-    color: var(--brand-dark, #0f172a);
-    text-decoration-color: currentColor;
-  }
-
-  .article-content ul,
-  .article-content ol {
-    margin: 1rem 0 1.25rem;
-    padding-left: 1.75rem;
-  }
-  .article-content ul { list-style: disc; }
-  .article-content ol { list-style: decimal; }
-  .article-content li { margin: 0.4rem 0; }
-  .article-content li > ul,
-  .article-content li > ol { margin: 0.25rem 0; }
 
   .article-content blockquote {
     border-left: 4px solid var(--accent);

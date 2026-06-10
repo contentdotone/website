@@ -1,43 +1,43 @@
-<main class="blog-index">
-  <section class="blog-hero">
+<main class="press-index">
+  <section class="press-hero">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="blog-hero__content">
-        <p class="blog-hero__eyebrow">Content.One Journal</p>
-        <h1 class="blog-hero__title">Latest perspectives on content, AI, and delivery.</h1>
-        <p class="blog-hero__subtitle">Fresh thinking from the teams building modern digital experiences.</p>
+      <div class="press-hero__content">
+        <p class="press-hero__eyebrow">Content.One Press</p>
+        <h1 class="press-hero__title">Content.One in the news.</h1>
+        <p class="press-hero__subtitle">Press releases, announcements, and media coverage of the team building Content.One.</p>
       </div>
-    </div> 
+    </div>
   </section>
 
-  <section class="blog-grid-section">
+  <section class="press-grid-section">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="blog-grid">
-        {{each articles as article sort by publish_date desc}}
-        <article class="blog-card">
-          <a href="{{article.getURL()}}" class="blog-card__link">
-            {{if {article.main_image} }}
-            <div class="blog-card__media">
-              <img src="{{article.main_image.getImage(800,520,crop)}}" alt="{{article.title}} cover image">
+      <div class="press-grid">
+        {{each press_releases as release sort by publish_date desc}}
+        <article class="press-card">
+          <a href="{{release.getURL()}}" class="press-card__link">
+            {{if {release.main_image} }}
+            <div class="press-card__media">
+              <img src="{{release.main_image.getImage(800,520,crop)}}" alt="{{release.title}} cover image">
             </div>
-            {{/if}} 
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                {{if {article.publish_date} }}
-                <span>{{article.publish_date.date(Y-m-d)}}</span>
+            {{/if}}
+            <div class="press-card__body">
+              <div class="press-card__meta">
+                {{if {release.publish_date} }}
+                <span>{{release.publish_date.date(Y-m-d)}}</span>
                 {{/if}}
-                {{if {article.authors} }}
+                {{if {release.authors} }}
                 <span>
-                  {{each {article.authors} as author}}
+                  {{each {release.authors} as author}}
                   {{author.name}}{{author._arraycomma}}
                   {{/each}}
                 </span>
                 {{/if}}
               </div>
-              <h2 class="blog-card__title">{{article.title}}</h2>
-              {{if {article.body} }}
-              <p class="blog-card__excerpt">{{article.body.striptags().subwords(28)}}...</p>
+              <h2 class="press-card__title">{{release.title}}</h2>
+              {{if {release.body} }}
+              <p class="press-card__excerpt">{{release.body.striptags().subwords(28)}}...</p>
               {{/if}}
-              <span class="blog-card__cta">Read article</span>
+              <span class="press-card__cta">Read the release</span>
             </div>
           </a>
         </article>
@@ -51,7 +51,7 @@
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
   @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap");
 
-  .blog-index {
+  .press-index {
     --ink: #111827;
     --muted: #4b5563;
     --card: #ffffff;
@@ -63,50 +63,50 @@
     background: linear-gradient(180deg, rgba(15, 23, 42, 0.06) 0%, rgba(63, 81, 181, 0.08) 50%, rgba(111, 123, 247, 0.05) 100%);
   }
 
-  .blog-hero {
+  .press-hero {
     padding: 4.5rem 0 3rem;
   }
 
-  .blog-hero__content {
+  .press-hero__content {
     max-width: 720px;
   }
 
-  .blog-hero__eyebrow {
+  .press-hero__eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.2em;
     font-size: 0.75rem;
     color: var(--muted);
   }
 
-  .blog-hero__title {
+  .press-hero__title {
     font-family: "DM Sans", "Segoe UI", sans-serif;
     font-size: clamp(2.4rem, 4vw, 3.6rem);
     margin: 1rem 0;
   }
 
-  .blog-hero__subtitle {
+  .press-hero__subtitle {
     color: var(--muted);
     font-size: 1.05rem;
   }
 
-  .blog-grid-section {
+  .press-grid-section {
     padding: 0 0 4rem;
   }
 
-  .blog-grid {
+  .press-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
   }
 
-  .blog-card {
+  .press-card {
     background: var(--card);
     border-radius: 4px;
     box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
     overflow: hidden;
   }
 
-  .blog-card__link {
+  .press-card__link {
     display: grid;
     grid-template-rows: auto 1fr;
     color: inherit;
@@ -114,20 +114,20 @@
     height: 100%;
   }
 
-  .blog-card__media img {
+  .press-card__media img {
     width: 100%;
     height: 220px;
     object-fit: cover;
     display: block;
   }
 
-  .blog-card__body {
+  .press-card__body {
     padding: 1.6rem;
     display: grid;
     gap: 0.8rem;
   }
 
-  .blog-card__meta {
+  .press-card__meta {
     display: flex;
     gap: 1rem;
     font-size: 0.85rem;
@@ -135,24 +135,24 @@
     flex-wrap: wrap;
   }
 
-  .blog-card__title {
+  .press-card__title {
     font-family: "DM Sans", "Segoe UI", sans-serif;
     font-size: 1.5rem;
     margin: 0;
   }
 
-  .blog-card__excerpt {
+  .press-card__excerpt {
     color: var(--muted);
     margin: 0;
   }
 
-  .blog-card__cta {
+  .press-card__cta {
     font-weight: 600;
     color: var(--brand-mid);
   }
 
   @media (max-width: 640px) {
-    .blog-hero {
+    .press-hero {
       padding: 3.5rem 0 2.5rem;
     }
   }

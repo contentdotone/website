@@ -2,7 +2,7 @@
   <section class="py-6 py-lg-7 bg-gradient-chatbot text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h1 class="text-4xl font-bold font-bold text-white mb-4">Org AI Chatbot: your always-on frontline powered by trusted content.</h1>
           <p class="text-lg text-white/75 mb-4">Deliver real-time answers across websites, apps, and portals with an AI trained on governed Content.One data. Engage audiences without adding headcount, and keep every response aligned with your brand.</p>
           <div class="flex flex-wrap gap-3">
@@ -10,7 +10,7 @@
             <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One AI</a>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="AI chatbot conversation" class="w-full h-full object-cover">
           </div>
@@ -22,13 +22,13 @@
   <section class="py-6 border-t">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
+        <div class="col-span-12 lg:col-span-5">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-chatbot-subtle text-chatbot mb-3">Trusted conversational experiences</span>
           <h2 class="text-4xl font-bold font-semibold mb-3">AI chat that knows your organization inside and out.</h2>
           <p class="text-gray-600 mb-0">Content.One unifies structured content, documents, and FAQs into governed knowledge sources. The Org AI Chatbot taps those sources with enterprise controls—so you deliver accurate, human-like responses every time.</p>
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="col-span-12 lg:col-span-7">
+          <div class="grid gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
             <div class="flex-1">
               <div class="border rounded-xl p-3 h-full">
@@ -53,7 +53,7 @@
           <p class="text-gray-600 text-lg mb-0">Org AI Chatbot uses Content.One’s structured data, AI tagging, and MCP servers to deliver relevant, compliant responses across every channel.</p>
         </div>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
             <div class="p-6">
@@ -115,10 +115,10 @@
   <section class="py-6 bg-gray-100 border-t border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-4xl font-bold font-semibold mb-4">Content-led chat experiences that convert</h2>
           <p class="text-gray-600 mb-4">Centralize marketing and support content in Content.One, then syndicate it to the chatbot for cross-sell offers, donation prompts, or program recommendations. Ensure every answer reflects the latest campaigns.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
                 <div class="p-6">
@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl overflow-hidden shadow-lg">
             <img src="{{this.hero_image.getImage()}}" alt="AI chatbot dashboard" class="w-full h-full object-cover">
           </div>
@@ -165,12 +165,12 @@
   <section class="py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1480694313141-fce5e697ee25?auto=format&fit=crop&w=1200&q=80" alt="MCP integration illustration" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-chatbot-subtle text-chatbot mb-3">MCP integrations</span>
           <h2 class="text-4xl font-bold font-semibold mb-4">Model Context Protocol keeps AI grounded in truth</h2>
           <p class="text-gray-600 text-lg mb-4">Org AI Chatbot taps Content.One through MCP servers, ensuring every response uses governed, approved knowledge while respecting permissions and compliance policies.</p>
@@ -202,10 +202,10 @@
   <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-3xl font-bold text-white font-semibold mb-4">Conversational AI that scales with your mission</h2>
           <p class="text-lg text-white/75 mb-4">From national nonprofits to digital-first enterprises, Content.One keeps chatbot operations reliable, secure, and performance-driven.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
                 <div class="p-6">
@@ -240,7 +240,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
             <img src="https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1200&q=80" alt="AI operations team" class="w-full h-full object-cover">
           </div>
@@ -260,7 +260,7 @@
         </div>
         <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-chatbot text-base px-6 py-3">Explore more stories</a>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
             <div class="p-6">
@@ -313,7 +313,7 @@
   <section class="py-6 bg-chatbot text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
           <h2 class="text-3xl font-bold font-semibold mb-3">Ready to launch an AI chatbot grounded in truth?</h2>
           <p class="text-lg text-white/75 mb-4">Connect with our team to deliver conversational support your audiences can trust—powered by Content.One.</p>
           <div class="flex flex-wrap justify-center gap-3">

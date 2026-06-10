@@ -2,7 +2,7 @@
   <section class="py-6 py-lg-7 bg-gradient-mobile text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-12 gap-4 items-center gap-6"> 
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h1 class="text-4xl font-bold text-white font-bold mb-4">Seamless, scalable content for every device.</h1>
           <p class="text-lg text-white/75 mb-4">Content.One powers mobile-first experiences for customers, employees, and field teams. Publish once, syndicate everywhere, and give contributors mobile tools built on the same trusted APIs.</p>
           <div class="flex flex-wrap gap-3">
@@ -10,7 +10,7 @@
             <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See Content.One in action</a>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Mobile content experience" class="w-full h-full object-cover">
           </div>
@@ -22,13 +22,13 @@
   <section class="py-6 border-t">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
+        <div class="col-span-12 lg:col-span-5">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Mobile content delivery</span>
           <h2 class="text-4xl font-bold font-semibold mb-3">Manage mobile experiences centrally, deploy instantly.</h2>
           <p class="text-gray-600 mb-0">With Content.One, marketing and product teams deliver app-ready content without resubmitting to app stores or waiting on dev cycles. Structured content, media, and workflows keep your mobile channels consistent and compliant.</p>
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
+        <div class="col-span-12 lg:col-span-7">
+          <div class="grid gap-4 grid-cols-2 md:grid-cols-3 gap-3">
             {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
             <div class="flex-1">
               <div class="border rounded-xl p-3 h-full">
@@ -53,7 +53,7 @@
           <p class="text-gray-600 text-lg mb-0">Content.One’s headless architecture feeds native apps, PWAs, kiosks, and custom digital platforms so every update stays in sync across channels.</p>
         </div>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
             <div class="p-6">
@@ -115,10 +115,10 @@
   <section class="py-6 bg-gray-100 border-t border-b">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-4xl font-bold font-semibold mb-4">Mobilize your workforce without new training</h2>
           <p class="text-gray-600 mb-4">Build bespoke mobile apps on Content.One APIs to let thousands of staff, volunteers, or franchisees contribute content instantly—no enterprise CMS UI required.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
                 <div class="p-6">
@@ -153,7 +153,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl overflow-hidden shadow-lg">
             <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Field worker using mobile app" class="w-full h-full object-cover">
           </div>
@@ -165,12 +165,12 @@
   <section class="py-6">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden">
             <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="API integrations" class="w-full h-full object-cover">
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Extensible APIs &amp; MCP</span>
           <h2 class="text-4xl font-bold font-semibold mb-4">Build custom mobile software on reliable content APIs</h2>
           <p class="text-gray-600 text-lg mb-4">Content.One APIs and Model Context Protocol integrations let you extend governed content to bespoke mobile tools, digital signage, or AI copilots with confidence.</p>
@@ -201,10 +201,10 @@
   <section class="py-6 bg-gray-900 relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <h2 class="text-3xl font-bold text-white font-semibold mb-4">Mobile content operations at enterprise scale</h2>
           <p class="text-lg text-white/75 mb-4">Launch mobile experiences faster, ensure consistency, and keep your workforce engaged with the same platform that powers your web and API channels.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
+          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
             <div class="flex-1">
               <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
                 <div class="p-6">
@@ -239,7 +239,7 @@
             </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
+        <div class="col-span-12 lg:col-span-6">
           <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
             <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Mobile operations dashboard" class="w-full h-full object-cover">
           </div>
@@ -259,7 +259,7 @@
         </div>
         <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-mobile text-base px-6 py-3">Read their stories</a>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
         <div class="flex-1">
           <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
             <div class="p-6">
@@ -312,7 +312,7 @@
   <section class="py-6 bg-mobile text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
+        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
           <h2 class="text-3xl font-bold font-semibold mb-3">Ready to power mobile apps with Content.One?</h2>
           <p class="text-lg text-white/75 mb-4">Unify content, empower contributors, and launch mobile experiences at scale. Let’s build your mobile roadmap together.</p>
           <div class="flex flex-wrap justify-center gap-3">

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why knowing everything still makes building websites hard — Randy Apuzzo</title>
+  <meta name="description" content="25 years building websites and CMSs. Why AI tools made the early stages faster but didn't replace the judgment that comes from shipping hundreds of sites. By Randy Apuzzo, Founder &amp; CEO of Content.One." />
+  <meta name="author" content="Randy Apuzzo" />
+  <meta property="og:title" content="Why knowing everything still makes building websites hard" />
+  <meta property="og:description" content="AI gives you the facts, but it doesn't give you the judgment that only comes from shipping hundreds of sites. Randy Apuzzo, Founder &amp; CEO of Content.One." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <meta property="article:author" content="Randy Apuzzo" />
+  <link rel="canonical" href="https://www.content.one/why-building-websites-is-still-hard.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .post-prose p { font-size: 1.0625rem; line-height: 1.75; color: #1f2937; }
+    .post-prose p + p { margin-top: 1.25rem; }
+    .post-prose a { color: #4255BD; text-decoration: underline; text-decoration-color: rgba(66, 85, 189, 0.3); }
+    .post-prose a:hover { color: #2F3F94; text-decoration-color: currentColor; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="bg-paper">
+  <article class="max-w-3xl mx-auto px-6 sm:px-8 py-12 lg:py-20">
+
+    <!-- Article header -->
+    <header class="mb-12 pb-10 border-b border-gray-200">
+      <a href="/blog/" class="inline-flex items-center gap-1 text-sm font-semibold text-royal hover:text-royalDark mb-6">
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+        Back to journal
+      </a>
+      <p class="uppercase tracking-[0.18em] text-xs font-semibold text-gray-500 mb-3">Perspective · 5 min read</p>
+      <h1 class="font-display text-3xl sm:text-4xl md:text-5xl font-bold leading-tight text-ink mb-6">
+        Why knowing everything still makes building websites hard
+      </h1>
+      <div class="flex items-center gap-4">
+        <div class="w-12 h-12 rounded-full bg-royal text-white font-display font-bold flex items-center justify-center shrink-0" aria-hidden="true">RA</div>
+        <div>
+          <p class="font-semibold text-ink m-0">Randy Apuzzo</p>
+          <p class="text-sm text-gray-600 m-0">Founder &amp; CEO, Content.One · 25 years building websites</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Article body -->
+    <div class="post-prose">
+      <p class="text-xl leading-8 text-ink font-medium mb-6">You'd think with all the knowledge in the world at our fingertips, building a website would be easy. It's not.</p>
+
+      <p>I've been building websites and working with content management systems for more than 25 years. The difference between me and someone starting out today isn't access to information — it's the scar tissue. It's knowing what actually matters when things break at 2 a.m.</p>
+
+      <figure class="my-10 bg-white border border-gray-200 rounded-2xl p-6 shadow-sm">
+        <blockquote class="m-0 italic text-gray-700 text-lg leading-relaxed">"Talk is cheap. Show me the code."</blockquote>
+        <figcaption class="text-sm text-gray-500 text-right mt-3">— Linus Torvalds</figcaption>
+      </figure>
+
+      <p>Go back to the 90s. We were hand-coding static HTML in Notepad. Then came Dreamweaver, CSS frameworks, WordPress themes, and the explosion of no-code tools. Each wave promised to make it simpler.</p>
+
+      <p>Today, AI tools like Framer AI, Lovable, v0 by Vercel, Wix AI, and OpenAI's Sites can generate a full website from a single prompt. The speed is incredible.</p>
+
+      <figure class="my-10 bg-amber-50 border border-amber-200 rounded-2xl p-6">
+        <blockquote class="m-0 italic text-amber-900 text-lg leading-relaxed">"Great web design without functionality is like a sports car with no engine."</blockquote>
+        <figcaption class="text-sm text-amber-800 text-right mt-3">— Paul Cookson</figcaption>
+      </figure>
+
+      <p>Yet people still struggle. AI often produces generic designs that all look the same, hallucinates broken code, ignores SEO and security best practices, and ships sites that are painful to update or scale.</p>
+
+      <p class="font-semibold text-ink">AI gives you the facts. It doesn't give you the judgment that only comes from shipping hundreds of sites. That gap — between knowledge and skill — is exactly why experienced developers and platforms like ours are still in demand.</p>
+
+      <p class="text-xl font-medium text-ink py-2">The tools got easier. The craft didn't.</p>
+
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-ink mt-14 mb-5">Navigating the future</h2>
+
+      <p>So how do you move forward? Use AI to accelerate the early stages — generating ideas, layouts, first drafts. Then partner with experienced professionals who understand strategy, user experience, performance, and long-term maintenance.</p>
+
+      <p>The winners won't be the teams who use AI alone or humans alone. They'll be the teams that combine both intelligently.</p>
+
+      <p class="font-semibold text-ink">If you want a website that actually grows your business — instead of becoming another AI-generated template in a sea of sameness — work with people who've been doing this for decades. The tech changes. Real expertise doesn't.</p>
+    </div>
+
+    <!-- Author footer -->
+    <footer class="mt-16 pt-10 border-t border-gray-200">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-5">
+        <div class="w-16 h-16 rounded-full bg-royal text-white font-display font-bold text-xl flex items-center justify-center shrink-0" aria-hidden="true">RA</div>
+        <div class="flex-1">
+          <p class="font-display text-lg font-semibold text-ink m-0">Randy Apuzzo</p>
+          <p class="text-sm text-gray-600 m-0 mb-3">Founder &amp; CEO of Content.One. 25 years building websites and content infrastructure for enterprise marketing teams.</p>
+          <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">Book time with Randy</a>
+        </div>
+      </div>
+    </footer>
+
+  </article>
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+      <span class="text-sm text-white/70">© 2026 Content.One — built for federated organizations.</span>
+    </div>
+    <div class="flex items-center gap-5 text-sm text-white/70">
+      <a href="/contact-us/" class="hover:text-white">Contact</a>
+      <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      <a href="/terms/" class="hover:text-white">Terms</a>
+      <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+      <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
