@@ -194,10 +194,22 @@ function extractZuid(json) {
 }
 
 // POST /web/<endpoint> to create a brand-new resource, returning its new ZUID.
+// Returns null when the resource can't be auto-created (e.g. extensionless view
+// where templateset vs pageset can't be inferred from the filename). The caller
+// must filter nulls before treating the array as a list of created resources.
 async function createNew(nf, publish) {
   const code = fs.readFileSync(nf.localPath, 'utf8');
   const { fileName, type, configKey } = inferResource(nf.section, nf.rel);
   const rel = path.relative(process.cwd(), nf.localPath);
+  // /web/views POST requires a `type`, but extensionless view files
+  // (templateset = parent URL view, pageset = per-instance view) can't be
+  // disambiguated from the filename alone. Skip with a warning rather than
+  // failing the whole sync — the resource needs to be created in the Zesty
+  // admin and its ZUID added to zesty.config.json before sync will manage it.
+  if (nf.endpoint === 'views' && !type) {
+    console.log(`⏭️  Skip ${rel} → ${nf.endpoint} (fileName=${fileName}) — view type can't be inferred for extensionless view. Create it in the Zesty admin (templateset for a parent URL view, pageset for a per-instance view), then add its ZUID to zesty.config.json.`);
+    return null;
+  }
   console.log(`✨ ${DRY_RUN ? '[dry-run] ' : ''}Create ${rel} → ${nf.endpoint} (fileName=${fileName}${type ? `, type=${type}` : ''})`);
   if (DRY_RUN) return { section: nf.section, configKey, zuid: 'DRYRUN-ZUID', type };
   const payload = type ? { code, fileName, type } : { code, fileName };
@@ -338,8 +350,11 @@ async function runStage(items, newFiles, manifest, config, indent) {
   const created = [];
   const createdRels = [];
   for (const nf of newFiles) {
-    created.push(await createNew(nf, false));
-    createdRels.push(path.relative(process.cwd(), nf.localPath));
+    const result = await createNew(nf, false);
+    if (result) {
+      created.push(result);
+      createdRels.push(path.relative(process.cwd(), nf.localPath));
+    }
   }
   if (created.length && !DRY_RUN) {
     addToConfig(config, created);
