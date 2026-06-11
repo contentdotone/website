@@ -5,9 +5,18 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div class="lg:col-span-5">
-          <div class="inline-flex items-center bg-white text-royal rounded-full px-3 py-1 mb-3 font-semibold uppercase text-xs">Our mission</div>
-          <h2 class="font-display text-4xl md:text-5xl font-semibold mb-3 text-white">Empower every team to build, launch, and scale experiences in one secure platform.</h2>
-          <p class="text-white/75 m-0">Content.One unifies marketer-friendly creation, developer precision, and AI assistance so organizations can thrive in a world of AI search and intelligent agents. We exist to give enterprises the governance of legacy suites with the agility and cost-efficiency of modern content tooling.</p>
+          <div class="inline-flex items-center bg-white text-royal rounded-full px-3 py-1 mb-4 font-semibold uppercase text-xs tracking-wider">Our mission</div>
+          <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight mb-5 text-white leading-[1.05]">Empower every team to build, launch, and scale experiences in one secure platform.</h2>
+          <p class="text-white/75 text-lg leading-relaxed mb-7">Content.One unifies marketer-friendly creation, developer precision, and AI assistance so organizations can thrive in a world of AI search and intelligent agents. We exist to give enterprises the governance of legacy suites with the agility and cost-efficiency of modern content tooling.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow-lg shadow-black/20">
+              Book a demo
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="/customers/" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">
+              Read customer stories
+            </a>
+          </div>
         </div>
         <div class="lg:col-span-7">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
@@ -137,11 +146,11 @@
           </div>
         </div>
         <div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">99.99%</h3><p class="text-gray-600 text-sm m-0">Uptime delivered across enterprise contracts with proactive monitoring.</p></div>
-            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Global</h3><p class="text-gray-600 text-sm m-0">Hybrid CDN and headless delivery serving audiences on every continent.</p></div>
-            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Weekly</h3><p class="text-gray-600 text-sm m-0">Release cadence that keeps every customer on the latest secure build.</p></div>
-            <div class="border border-gray-200 rounded-2xl h-full p-6 shadow-sm text-center"><h3 class="text-4xl font-semibold text-royal mb-2">Unified</h3><p class="text-gray-600 text-sm m-0">Single content graph connecting marketing, product, and AI experiences.</p></div>
+          <div class="grid grid-cols-2 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200">
+            <div class="bg-white p-7"><div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">99.99%</div><p class="text-gray-600 text-sm mt-3 leading-snug">Uptime across enterprise contracts with proactive monitoring</p></div>
+            <div class="bg-white p-7"><div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">Global</div><p class="text-gray-600 text-sm mt-3 leading-snug">Hybrid CDN and headless delivery serving every continent</p></div>
+            <div class="bg-white p-7"><div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">Weekly</div><p class="text-gray-600 text-sm mt-3 leading-snug">Release cadence keeps every customer on the latest secure build</p></div>
+            <div class="bg-white p-7"><div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">Unified</div><p class="text-gray-600 text-sm mt-3 leading-snug">Single content graph connecting marketing, product, and AI</p></div>
           </div>
         </div>
       </div>
