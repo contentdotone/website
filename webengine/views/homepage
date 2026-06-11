@@ -1,35 +1,39 @@
 (** {{include /components/homepage/hero-ai-cool.html}} **)
 <!-- HOMEPAGE V2 — design refresh mockup against Untitled UI patterns -->
 
-<!-- ════════════ HERO ════════════ -->
-<section class="co-hero relative overflow-hidden py-16 lg:py-24">
+<!-- ════════════ HERO (apple-scale) ════════════ -->
+<section class="co-hero relative overflow-hidden pt-24 md:pt-28 lg:pt-36 pb-20 md:pb-28 lg:pb-32">
   <div class="co-hero__bg absolute top-0 left-0 w-full h-full"></div>
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-      <div class="lg:col-span-6 text-center lg:text-left">
-        <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-6">
-          <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-          <span class="text-xs font-semibold tracking-wide uppercase">Rethinking Content Management for Modern Teams</span>
+    <div class="text-center max-w-5xl mx-auto mb-14 md:mb-20">
+      <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
         </span>
-        <h1 class="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight text-white mb-5 leading-[1.05]">AI-Driven <span class="rotate">Content</span><br/>Marketing at Scale</h1>
-        <p class="text-lg md:text-xl mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed" style="color:rgba(255,255,255,.78)">
-          One platform to orchestrate website, mobile, and headless content experiences — so marketing teams can manage, scale, and deliver campaigns across every local and global market.
-        </p>
-        <div class="flex flex-wrap gap-3 justify-center lg:justify-start">
-          <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow-lg shadow-royal/20">
-            Book a demo
-            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-          <a href="https://agent.content.one" target="_blank" rel="noopener" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">
-            See agent.content.one
-          </a>
-        </div>
+        <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">Rethinking content management for modern teams</span>
+      </span>
+      <h1 class="text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-display font-semibold text-white mb-7 leading-[0.95]" style="letter-spacing:-0.045em">AI-Driven <span class="rotate">Content</span><br/>Marketing at Scale.</h1>
+      <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-light" style="color:rgba(255,255,255,.78)">
+        One platform to orchestrate website, mobile, and headless content experiences — so marketing teams can manage, scale, and deliver campaigns across every local and global market.
+      </p>
+      <div class="flex flex-wrap gap-3 justify-center items-center">
+        <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
+          Book a demo
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="https://agent.content.one" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-white/90 hover:text-white font-semibold px-3 py-3.5 transition group/cta">
+          See agent.content.one
+          <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </a>
       </div>
-      <div class="lg:col-span-6">
-        <div class="co-hero__media rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-black">
-          <div class="relative" style="padding-bottom: 56.25%; height: 0;">
-            <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/0T6CJPF0UZE?rel=0&modestbranding=1" title="Content.One agentic CMS demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-          </div>
+    </div>
+    <!-- Floating product preview -->
+    <div class="co-hero__media-wrap relative max-w-5xl mx-auto">
+      <div class="co-hero__media-glow absolute -inset-6 md:-inset-10 rounded-[2.5rem] blur-3xl opacity-50"></div>
+      <div class="co-hero__media relative rounded-2xl md:rounded-[1.75rem] overflow-hidden shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-black">
+        <div class="relative" style="padding-bottom: 56.25%; height: 0;">
+          <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/0T6CJPF0UZE?rel=0&modestbranding=1" title="Content.One agentic CMS demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -37,18 +41,30 @@
 </section>
 
 <style>
-  .co-hero { background-color: #0b0f1f; }
+  .co-hero { background-color: #050816; }
   .co-hero__bg {
-    background: linear-gradient(135deg, #0b0f1f 0%, #1a1545 35%, #2a1d6b 60%, #1a1545 80%, #0b0f1f 100%);
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,60,255,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(56,189,248,0.12) 0%, transparent 70%),
+      linear-gradient(180deg, #050816 0%, #0a0d24 60%, #050816 100%);
     z-index: 0;
   }
   .co-hero__bg::after {
     content: ""; position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 30% 50%, rgba(99, 60, 255, 0.18) 0%, transparent 65%),
-                radial-gradient(ellipse at 70% 30%, rgba(56, 189, 248, 0.10) 0%, transparent 55%);
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
     pointer-events: none;
   }
-  .co-hero__badge { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: #c7d2fe; }
+  .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
+  .co-hero__media-glow {
+    background:
+      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(99,60,255,0.5) 0%, transparent 60%),
+      radial-gradient(ellipse 70% 40% at 50% 80%, rgba(56,189,248,0.25) 0%, transparent 60%);
+  }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
   .rotate.is-fading { opacity: 0; transform: translateY(-6px); }
 </style>
@@ -75,72 +91,85 @@
 </script>
 
 <!-- ════════════ TRUST BAR (client logos with eyebrow) ════════════ -->
-<section class="bg-paper py-12 lg:py-16 border-b border-gray-100">
+<section class="bg-paper py-16 lg:py-20 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-gray-500 mb-7">Trusted by enterprise marketing teams</p>
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-gray-500 mb-9">Trusted by enterprise marketing teams</p>
     {{ block('/-/block/client_logos.html') }}
   </div>
 </section>
 
-<!-- ════════════ STAT STRIP (new) ════════════ -->
-<section class="bg-paper py-12 lg:py-20">
+<!-- ════════════ STAT STRIP (apple-scale numbers) ════════════ -->
+<section class="bg-paper py-20 lg:py-28">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200">
-      <div class="bg-white p-6 lg:p-8">
-        <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">3,000+</div>
-        <p class="text-gray-600 text-sm mt-3 leading-snug">Salvation Army locations on one federated platform</p>
+    <div class="max-w-3xl mb-12 lg:mb-16">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-royal mb-4">By the numbers</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.05]" style="letter-spacing:-0.025em">Measured on the customers running on Content.One.</h2>
+    </div>
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 rounded-3xl overflow-hidden border border-gray-200">
+      <div class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">3,000<span class="text-royal">+</span></div>
+        <p class="text-gray-600 text-sm mt-5 leading-snug">Salvation Army locations on one federated platform</p>
       </div>
-      <div class="bg-white p-6 lg:p-8">
-        <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">99.99%</div>
-        <p class="text-gray-600 text-sm mt-3 leading-snug">Production uptime across the enterprise customer base</p>
+      <div class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">99.99<span class="text-royal">%</span></div>
+        <p class="text-gray-600 text-sm mt-5 leading-snug">Production uptime across the enterprise customer base</p>
       </div>
-      <div class="bg-white p-6 lg:p-8">
-        <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">6 wks</div>
-        <p class="text-gray-600 text-sm mt-3 leading-snug">Kickoff to soft launch for Sony Electronics</p>
+      <div class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">6 <span class="text-royal">wks</span></div>
+        <p class="text-gray-600 text-sm mt-5 leading-snug">Kickoff to soft launch — Sony Electronics</p>
       </div>
-      <div class="bg-white p-6 lg:p-8">
-        <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">+50%</div>
-        <p class="text-gray-600 text-sm mt-3 leading-snug">Web traffic growth for The Salvation Army after migration</p>
+      <div class="bg-white p-8 lg:p-10 flex flex-col">
+        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em"><span class="text-royal">+</span>50%</div>
+        <p class="text-gray-600 text-sm mt-5 leading-snug">Web traffic growth post-migration — The Salvation Army</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════ PLATFORM HIGHLIGHTS (was hero's 4 cards) ════════════ -->
-<section class="py-12 xl:py-20 bg-paper">
+<!-- ════════════ PLATFORM HIGHLIGHTS — apple bento grid ════════════ -->
+<section class="py-20 lg:py-28 bg-paper">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl mb-10">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">The platform</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight text-ink">Built for marketing teams that need to move.</h2>
+    <div class="max-w-3xl mb-14 lg:mb-20">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-royal mb-4">The platform</p>
+      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.05]" style="letter-spacing:-0.025em">Built for marketing teams that need to move.</h2>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-      <article class="group p-6 rounded-2xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-lg transition">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-4">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+      <!-- Hero bento tile: spans 2 cols on lg+ -->
+      <article class="group lg:col-span-2 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink via-royalDark to-royal text-white p-10 lg:p-14 min-h-[360px] flex flex-col justify-between transition-all hover:shadow-2xl hover:shadow-royal/30">
+        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
+        <div class="relative">
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/20 px-3 py-1 text-[0.65rem] font-mono uppercase tracking-[0.2em] mb-6">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            Now in GA
+          </div>
+          <h3 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.05] max-w-xl" style="letter-spacing:-0.025em">Agentic page building.</h3>
+          <p class="text-white/75 text-base md:text-lg mt-5 max-w-md leading-relaxed">Write a prompt. Watch agent.content.one build a full schema, page, image set, and ready-to-publish layout — in roughly one to two minutes.</p>
         </div>
-        <h3 class="font-display text-lg font-bold text-ink mb-2">Central Control Hub</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">Define re-usable blocks for marketers and developers to use organization-wide.</p>
+        <a href="https://agent.content.one" target="_blank" rel="noopener" class="relative mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-white group/cta self-start">
+          See agent.content.one
+          <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </article>
-      <article class="group p-6 rounded-2xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-lg transition">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-4">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
+        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
         </div>
-        <h3 class="font-display text-lg font-bold text-ink mb-2">Agentic Page Building</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">Write your prompt and watch as AI builds your website end-to-end.</p>
+        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Central control hub.</h3>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Re-usable blocks for marketers and developers to share, govern, and ship organization-wide.</p>
       </article>
-      <article class="group p-6 rounded-2xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-lg transition">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-4">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
+        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
         </div>
-        <h3 class="font-display text-lg font-bold text-ink mb-2">Headless APIs &amp; Webhooks</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">Publish anywhere, trigger custom workflows, and integrate with freedom.</p>
+        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Headless APIs &amp; webhooks.</h3>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Publish anywhere, trigger custom workflows, integrate with the systems you already trust.</p>
       </article>
-      <article class="group p-6 rounded-2xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-lg transition">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-4">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
+        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
         </div>
-        <h3 class="font-display text-lg font-bold text-ink mb-2">Powerful Analytics</h3>
-        <p class="text-sm text-gray-600 leading-relaxed">Measure and test in real-time with built-in analytics and reporting.</p>
+        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Powerful analytics.</h3>
+        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Measure, test, and optimize in real time. Insights without exporting to another tool.</p>
       </article>
     </div>
   </div>
