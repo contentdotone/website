@@ -22,23 +22,58 @@
           Book a demo
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
+        <button type="button" data-modal-open="hero-video" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base group/cta">
+          <span class="relative flex h-8 w-8 items-center justify-center rounded-full bg-white/10 border border-white/20 group-hover/cta:bg-white/20 transition">
+            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 translate-x-[1px]" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          Watch it happen in 2 minutes
+        </button>
         <a href="https://agent.content.one" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-white/90 hover:text-white font-semibold px-3 py-3.5 transition group/cta">
           See agent.content.one
           <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
       </div>
     </div>
-    <!-- Floating product preview -->
-    <div class="co-hero__media-wrap relative max-w-5xl mx-auto">
-      <div class="co-hero__media-glow absolute -inset-6 md:-inset-10 rounded-[2.5rem] blur-3xl opacity-50"></div>
-      <div class="co-hero__media relative rounded-2xl md:rounded-[1.75rem] overflow-hidden shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-black">
-        <div class="relative" style="padding-bottom: 56.25%; height: 0;">
-          <iframe class="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/0T6CJPF0UZE?rel=0&modestbranding=1" title="Content.One agentic CMS demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
+  </div>
+
+  <!-- Demo video modal -->
+  <div id="hero-video-modal" class="hidden fixed inset-0 z-[100] bg-ink/85 backdrop-blur-md items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true" aria-label="Content.One agentic CMS demo">
+    <button type="button" data-modal-close class="absolute top-5 right-5 sm:top-7 sm:right-7 w-11 h-11 rounded-full bg-white/10 backdrop-blur border border-white/20 text-white hover:bg-white/20 flex items-center justify-center transition z-10" aria-label="Close video">
+      <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="relative max-w-5xl w-full rounded-2xl md:rounded-[1.5rem] overflow-hidden shadow-[0_40px_120px_-20px_rgba(0,0,0,0.6)] ring-1 ring-white/10 bg-black">
+      <div class="relative" style="padding-bottom: 56.25%; height: 0;">
+        <iframe id="hero-video-iframe" class="absolute top-0 left-0 w-full h-full" src="" title="Content.One agentic CMS demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var modal = document.getElementById('hero-video-modal');
+    var iframe = document.getElementById('hero-video-iframe');
+    var triggers = document.querySelectorAll('[data-modal-open="hero-video"]');
+    var closers = document.querySelectorAll('[data-modal-close]');
+    var videoUrl = 'https://www.youtube.com/embed/0T6CJPF0UZE?autoplay=1&rel=0&modestbranding=1';
+    function openModal() {
+      iframe.setAttribute('src', videoUrl);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.documentElement.style.overflow = 'hidden';
+    }
+    function closeModal() {
+      iframe.setAttribute('src', '');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.documentElement.style.overflow = '';
+    }
+    triggers.forEach(function (el) { el.addEventListener('click', function (e) { e.preventDefault(); openModal(); }); });
+    closers.forEach(function (el) { el.addEventListener('click', closeModal); });
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && !modal.classList.contains('hidden')) closeModal(); });
+  })();
+</script>
 
 <style>
   .co-hero { background-color: #050816; }
@@ -60,13 +95,10 @@
     pointer-events: none;
   }
   .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
-  .co-hero__media-glow {
-    background:
-      radial-gradient(ellipse 50% 50% at 50% 50%, rgba(99,60,255,0.5) 0%, transparent 60%),
-      radial-gradient(ellipse 70% 40% at 50% 80%, rgba(56,189,248,0.25) 0%, transparent 60%);
-  }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
   .rotate.is-fading { opacity: 0; transform: translateY(-6px); }
+  /* Force the modal's flex helper to win over the hidden utility */
+  #hero-video-modal.flex { display: flex !important; }
 </style>
 
 <script>
