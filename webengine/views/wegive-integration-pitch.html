@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Content.One × WeGive · Integration Pitch</title>
+  <meta name="description" content="How Content.One and WeGive pair up: WeGive runs marketing, payments, and the donor portal; Content.One runs the multi-site website layer. Donors get a seamless giving experience, stewardship gets automated, and recurring revenue compounds." />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        fontFamily: {
+          display: ['"DM Sans"', 'sans-serif'],
+          sans: ['"Satoshi"', '"DM Sans"', 'sans-serif'],
+          mono: ['"DM Mono"', 'monospace'],
+        },
+        colors: {
+          ink: '#080b18', panel: '#10162b', panel2: '#171f3a',
+          line: 'rgba(124,140,240,0.18)',
+          royal: '#4255BD', royalLite: '#9aa6f4',
+          success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          chalk: '#eef1fc', muted: '#9aa2c8',
+        },
+      } },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Mono:wght@400;500&display=swap');
+    @import url('https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&display=swap');
+    :root { color-scheme: dark; }
+    html, body { height: 100%; overflow: hidden; background:#080b18; }
+    h1,h2,h3 { letter-spacing:-0.025em; } h1 { letter-spacing:-0.04em; }
+    #deck { position: fixed; inset: 0; transition: transform .72s cubic-bezier(.76,0,.24,1); will-change: transform; }
+    .slide { height: 100vh; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+    .slide::-webkit-scrollbar { width: 0; }
+    .hairline { border:1px solid rgba(124,140,240,0.18); }
+    .gridbg { background-image:
+      linear-gradient(rgba(124,140,240,0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(124,140,240,0.05) 1px, transparent 1px);
+      background-size: 48px 48px; }
+    .royalfade { background:
+      radial-gradient(900px 500px at 80% -10%, rgba(66,85,189,0.45), transparent 60%),
+      radial-gradient(700px 420px at -5% 110%, rgba(13,202,240,0.12), transparent 55%); }
+    .painfade { background:
+      radial-gradient(900px 500px at 80% -10%, rgba(255,86,48,0.32), transparent 60%),
+      radial-gradient(700px 420px at -5% 110%, rgba(255,86,48,0.10), transparent 55%); }
+    .pleasurefade { background:
+      radial-gradient(900px 500px at 20% -10%, rgba(54,179,126,0.32), transparent 60%),
+      radial-gradient(700px 420px at 100% 110%, rgba(66,85,189,0.30), transparent 55%); }
+    @keyframes rise { from{opacity:0; transform:translateY(22px);} to{opacity:1; transform:none;} }
+    .rise { opacity:0; animation: rise .7s cubic-bezier(.2,.7,.2,1) forwards; }
+    @media (prefers-reduced-motion: reduce){ .rise{animation:none;opacity:1;} #deck{transition:none;} }
+    .kicker { font-family:'DM Mono',monospace; font-size:.72rem; letter-spacing:.34em; text-transform:uppercase; }
+    .navbtn { width:3.5rem; height:3.5rem; display:grid; place-items:center; border-radius:9999px;
+      border:1px solid rgba(124,140,240,0.3); background:rgba(8,11,24,0.75); backdrop-filter:blur(8px); color:#eef1fc; transition:all .2s ease; }
+    .navbtn:hover:not(:disabled){ background:#4255BD; border-color:#4255BD; transform:translateY(-2px); }
+    .navbtn:disabled{ opacity:.3; cursor:default; }
+    ::selection{ background:#4255BD; color:#fff; }
+    @media print {
+      @page { size: landscape; margin: 0; }
+      html, body { height: auto; overflow: visible; }
+      #deck { position: static; transform: none !important; transition: none; }
+      .slide { height: auto; min-height: 100vh; overflow: visible; break-inside: avoid; break-after: page; page-break-after: always; }
+      .slide:last-child { break-after: auto; page-break-after: auto; }
+      .fixed { display: none !important; }
+      * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    }
+  </style>
+</head>
+
+<body class="font-sans text-chalk antialiased">
+
+  <a href="#" class="fixed top-5 left-6 z-50"><img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-6 w-auto opacity-90" /></a>
+  <div class="fixed top-0 left-0 right-0 h-1 bg-royal/20 z-50"><div id="bar" class="h-full bg-royal w-0 transition-all duration-700"></div></div>
+  <div class="fixed bottom-7 right-6 z-50 font-mono text-xs text-muted hairline rounded-full px-3 py-1.5 bg-ink/70 backdrop-blur"><span id="cur" class="text-chalk">01</span> <span class="text-royalLite">/</span> 11</div>
+  <div class="fixed bottom-6 left-6 z-50 flex gap-3">
+    <button id="prev" class="navbtn" aria-label="Previous slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg></button>
+    <button id="next" class="navbtn" aria-label="Next slide"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></button>
+  </div>
+
+  <div id="deck">
+
+  <!-- 01 TITLE -->
+  <section class="slide relative flex items-center gridbg" data-i="1">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full">
+      <div class="rise inline-flex items-center gap-3 hairline rounded-full bg-ink/60 px-4 py-2" style="animation-delay:.04s">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto" />
+        <span class="text-royalLite">×</span>
+        <img src="https://cdn.prod.website-files.com/60d23fd3da44f567d7c85ae3/63bdd4eadeb4d92ef2336ae8_WeGive%20Logo%20280.png" alt="WeGive" class="h-5 w-auto brightness-0 invert opacity-90" />
+      </div>
+      <p class="rise kicker text-royalLite mt-8" style="animation-delay:.1s">Integration Pitch</p>
+      <h1 class="rise font-display font-bold leading-[0.95] mt-5 text-[11vw] md:text-[6.25rem]" style="animation-delay:.16s">
+        Fundraising and content,<br /><span class="text-royalLite">one stack</span>.
+      </h1>
+      <p class="rise max-w-2xl text-xl text-muted mt-8 leading-relaxed" style="animation-delay:.24s">
+        WeGive runs the marketing, payments, and donor portal. Content.One runs the multi-site website layer. <span class="text-chalk font-medium">Together they replace the fragmented stack non-profits drown in</span> — and the donor never feels the seam.
+      </p>
+      <div class="rise mt-9 flex flex-wrap gap-3 font-mono text-xs md:text-sm" style="animation-delay:.32s">
+        <span class="hairline rounded-full px-4 py-2 text-success">Recurring revenue ↑</span>
+        <span class="hairline rounded-full px-4 py-2 text-info">Donor experience unified</span>
+        <span class="hairline rounded-full px-4 py-2 text-warning">CRM stays the source of truth</span>
+        <span class="hairline rounded-full px-4 py-2 text-royalLite">Federated multi-chapter ready</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PAIN ISLAND -->
+  <section class="slide relative flex items-center" data-i="2">
+    <div class="absolute inset-0 painfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-danger">Pain island</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Where most non-profits are stuck.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg leading-relaxed">A donation page in one tool. A CRM in another. Marketing automation somewhere else. Local chapters running their own donor pages without telling HQ. Stewardship handled by spreadsheets and goodwill.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-xs text-danger">Disconnected stack</div><p class="text-muted mt-3 leading-relaxed">A patchwork of giving platforms, marketing tools, and CRM imports — every handoff a place where donor intent gets lost.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-xs text-danger">Manual data hygiene</div><p class="text-muted mt-3 leading-relaxed">Development and IT spend hours reconciling donor records each week. Marketing can't trust the segmentation.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-xs text-danger">Fragmented websites</div><p class="text-muted mt-3 leading-relaxed">Each chapter, region, or program has its own site, its own forms, its own brand drift. HQ has no central lever.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-xs text-danger">Stewardship after the fact</div><p class="text-muted mt-3 leading-relaxed">First gift to second gift is the hardest jump. Without unified data and a CMS that can move, the moment passes.</p></div>
+      </div>
+      <p class="text-chalk mt-8 text-lg max-w-3xl">When the giving stack and the website stack don't talk, donors feel it — and so does recurring revenue.</p>
+    </div>
+  </section>
+
+  <!-- 03 THE BRIDGE -->
+  <section class="slide relative flex items-center bg-panel gridbg" data-i="3">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">The bridge</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">Two products. One donor experience.</h2>
+      <p class="text-muted mt-6 max-w-3xl text-lg">Content.One renders every page, every chapter, every campaign — and WeGive powers every giving moment inside it. Donor data flows back through WeGive into your existing CRM. Marketing automation acts on it. The website doesn't care which CRM you run.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-7 bg-ink">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="bg-white rounded-lg p-1.5"><img src="https://cdn.prod.website-files.com/60d23fd3da44f567d7c85ae3/63bdd4eadeb4d92ef2336ae8_WeGive%20Logo%20280.png" alt="WeGive" class="h-5 w-auto" /></span>
+            <p class="font-mono text-xs text-royalLite uppercase tracking-wider">WeGive runs the giving</p>
+          </div>
+          <h3 class="font-display text-xl font-bold">Marketing · Payments · Portal</h3>
+          <p class="text-muted mt-3 leading-relaxed">The integrated fundraising and marketing platform that grows sustainable revenue — managed CRM integration, managed data sync, managed checkouts, managed migration. The complexity stays inside WeGive.</p>
+        </div>
+        <div class="hairline rounded-2xl p-7 bg-ink">
+          <div class="flex items-center gap-3 mb-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto" />
+            <p class="font-mono text-xs text-info uppercase tracking-wider">Content.One runs the website</p>
+          </div>
+          <h3 class="font-display text-xl font-bold">Federated multi-site CMS</h3>
+          <p class="text-muted mt-3 leading-relaxed">A single platform for HQ, chapter, regional, and program sites. Cascade brand and campaign content; embed WeGive's giving moments anywhere a marketer or local team needs them.</p>
+        </div>
+      </div>
+      <p class="font-mono text-sm text-chalk mt-8">Result: donors arrive on a Content.One page, give through a WeGive flow, and their data is in your CRM before stewardship even starts.</p>
+    </div>
+  </section>
+
+  <!-- 04 PLEASURE ISLAND -->
+  <section class="slide relative flex items-center" data-i="4">
+    <div class="absolute inset-0 pleasurefade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-success">Pleasure island</p>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 max-w-4xl">What this unlocks.</h2>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel/85"><div class="font-mono text-xs text-success">Unified donor experience</div><p class="text-chalk mt-3 leading-relaxed">One identity from awareness to stewardship. The giving page knows the donor's history; the website knows the campaign.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel/85"><div class="font-mono text-xs text-success">Recurring revenue compounds</div><p class="text-chalk mt-3 leading-relaxed">WeGive's published average: <span class="font-bold text-success">2× recurring revenue in 2 years</span> for organizations on the platform.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel/85"><div class="font-mono text-xs text-success">No more data reconciliation</div><p class="text-chalk mt-3 leading-relaxed">Managed CRM integration + managed data sync means development and IT stop maintaining spreadsheets.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel/85"><div class="font-mono text-xs text-success">Marketing acts on real donor data</div><p class="text-chalk mt-3 leading-relaxed">Segmented campaigns, automated journeys, lapsed-donor re-engagement — running on data the CRM already trusts.</p></div>
+      </div>
+      <p class="text-chalk mt-8 text-lg max-w-3xl">Federation that was a liability becomes a multiplier — every chapter ships donor-ready pages on day one.</p>
+    </div>
+  </section>
+
+  <!-- 05 WHAT WEGIVE BRINGS -->
+  <section class="slide relative flex items-center gridbg" data-i="5">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <div class="flex items-center gap-3">
+        <p class="kicker text-info">What WeGive brings</p>
+        <span class="inline-flex items-center bg-white rounded-lg px-2.5 py-1"><img src="https://cdn.prod.website-files.com/60d23fd3da44f567d7c85ae3/63bdd4eadeb4d92ef2336ae8_WeGive%20Logo%20280.png" alt="WeGive" class="h-5 w-auto" /></span>
+      </div>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Marketing · Payments · Portal — and the CRM bridge.</h2>
+      <p class="text-muted mt-5 max-w-3xl">Three pillars from WeGive's homepage, plus managed integrations into the CRM the non-profit already runs.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Marketing</div><p class="text-muted mt-3 leading-relaxed">Email, segmentation, automated donor journeys, and stewardship workflows — built around the gift, not bolted on after.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Payments</div><p class="text-muted mt-3 leading-relaxed">Conversion-optimized checkouts, recurring plans, donor-advised fund flows, and gift-routing logic — all live inside one platform.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-info text-sm">Portal</div><p class="text-muted mt-3 leading-relaxed">A donor portal each contributor logs into — gift history, recurring plan management, tax receipts. Retention by design.</p></div>
+      </div>
+      <div class="mt-8 hairline rounded-2xl p-6 bg-panel">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-info mb-4">Managed CRM integrations (WeGive-published)</p>
+        <div class="flex flex-wrap gap-2 text-sm">
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Salesforce NPSP</span>
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Salesforce NPC</span>
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Virtuous</span>
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Planning Center</span>
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Bloomerang</span>
+          <span class="hairline rounded-full px-3 py-1 bg-ink/70">Blackbaud Raiser's Edge NXT</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 WHAT CONTENT.ONE BRINGS -->
+  <section class="slide relative flex items-center" data-i="6">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <div class="flex items-center gap-3">
+        <p class="kicker text-royalLite">What Content.One brings</p>
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto opacity-90" />
+      </div>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">The website layer WeGive plugs into.</h2>
+      <p class="text-muted mt-5 max-w-3xl">A federated multi-site CMS proven on a 3,000+ location non-profit network. WeGive's checkouts, portal, and campaign components drop in wherever you need them.</p>
+      <div class="grid md:grid-cols-2 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-royalLite text-sm">Federated multi-site</div><p class="text-muted mt-3 leading-relaxed">HQ, chapters, regional sites, and programs — one platform, shared brand and components, local autonomy where it matters.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-royalLite text-sm">Marketers ship without IT</div><p class="text-muted mt-3 leading-relaxed">Guided templates, visual editing, no plugins to patch. Lean digital teams move at the speed of campaigns.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-royalLite text-sm">Embed WeGive anywhere</div><p class="text-muted mt-3 leading-relaxed">Drop a giving moment into any page, any chapter, any campaign — the WeGive flow renders inside the same Content.One layout.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-royalLite text-sm">Always-on, global CDN</div><p class="text-muted mt-3 leading-relaxed">99.99% uptime, hosting included, sub-second pages — so giving pages don't drop during a campaign surge.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 HOW IT FLOWS -->
+  <section class="slide relative flex items-center bg-panel gridbg" data-i="7">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-info">How a donation actually flows</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Awareness → gift → CRM → stewardship.</h2>
+      <p class="text-muted mt-5 max-w-3xl">One stack, four hops, no manual handoffs.</p>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-3 mt-10">
+        <div class="hairline rounded-2xl p-5 bg-ink">
+          <p class="font-mono text-[0.7rem] text-royalLite uppercase tracking-wider mb-2">Step 01</p>
+          <h3 class="font-display text-lg font-bold">Awareness</h3>
+          <p class="text-muted text-sm mt-2">Donor lands on a Content.One page — campaign, program, or local chapter — rendered from the federated CMS.</p>
+        </div>
+        <div class="hairline rounded-2xl p-5 bg-ink">
+          <p class="font-mono text-[0.7rem] text-info uppercase tracking-wider mb-2">Step 02</p>
+          <h3 class="font-display text-lg font-bold">Gift</h3>
+          <p class="text-muted text-sm mt-2">WeGive's checkout renders inline. Gift, recurring plan, or DAF — routed and processed inside WeGive.</p>
+        </div>
+        <div class="hairline rounded-2xl p-5 bg-ink">
+          <p class="font-mono text-[0.7rem] text-warning uppercase tracking-wider mb-2">Step 03</p>
+          <h3 class="font-display text-lg font-bold">CRM</h3>
+          <p class="text-muted text-sm mt-2">WeGive's managed integration writes the gift into Salesforce, Virtuous, Bloomerang, or Raiser's Edge — no batch import.</p>
+        </div>
+        <div class="hairline rounded-2xl p-5 bg-ink">
+          <p class="font-mono text-[0.7rem] text-success uppercase tracking-wider mb-2">Step 04</p>
+          <h3 class="font-display text-lg font-bold">Stewardship</h3>
+          <p class="text-muted text-sm mt-2">WeGive marketing automation triggers the next-best touch. Content.One renders the email-to-page experience on brand.</p>
+        </div>
+      </div>
+      <p class="font-mono text-sm text-chalk mt-8">Every step is the same platform doing the work — not three vendors and a spreadsheet.</p>
+    </div>
+  </section>
+
+  <!-- 08 MARKETING AUTOMATION PAIRING -->
+  <section class="slide relative flex items-center" data-i="8">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-warning">Marketing automation pairing</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">A CMS that moves at the speed of automation.</h2>
+      <p class="text-muted mt-5 max-w-3xl">WeGive activates the donor journey. Content.One renders the landing experience for every step of it — at scale, across every chapter, without a developer in the loop.</p>
+      <div class="grid md:grid-cols-3 gap-4 mt-10">
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">Segmented landings</div><p class="text-muted text-sm mt-3 leading-relaxed">WeGive's audiences drive which Content.One landing page a donor lands on — major-gift prospect, lapsed donor, monthly upgrade.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">Cascading campaign content</div><p class="text-muted text-sm mt-3 leading-relaxed">Campaign assets cascade from HQ to every chapter site at once. No "did you update the regional pages yet?" calls.</p></div>
+        <div class="hairline rounded-2xl p-6 bg-panel"><div class="font-mono text-warning text-sm">Lifecycle journeys</div><p class="text-muted text-sm mt-3 leading-relaxed">First gift → second gift → monthly upgrade → lapsed re-engagement. Each touch points to a Content.One page built for the moment.</p></div>
+      </div>
+      <div class="mt-8 hairline rounded-2xl p-6 bg-panel">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-warning mb-3">M+R Benchmarks 2026 (industry context)</p>
+        <div class="grid sm:grid-cols-2 gap-6 text-sm">
+          <div><span class="font-display text-3xl font-bold text-success">71% / 24%</span><p class="text-muted mt-1">Monthly-donor retention at 12 months vs. one-time online donor retention. <em class="not-italic text-muted/80">M+R Benchmarks 2026</em></p></div>
+          <div><span class="font-display text-3xl font-bold text-info">+44% DAF</span><p class="text-muted mt-1">Year-over-year growth in donor-advised fund revenue in 2025. <em class="not-italic text-muted/80">M+R Benchmarks 2026, via NonProfit PRO</em></p></div>
+        </div>
+      </div>
+      <p class="text-chalk mt-6 text-base max-w-3xl">The teams that move first-time donors into monthly plans win the decade. WeGive's automation makes the journey; Content.One renders every step.</p>
+    </div>
+  </section>
+
+  <!-- 09 PROOF: WEGIVE GROWTH -->
+  <section class="slide relative flex items-center bg-royal" data-i="9">
+    <div class="max-w-6xl mx-auto px-6 w-full py-16">
+      <div class="flex items-center gap-3">
+        <p class="kicker text-white/80">WeGive's published proof</p>
+        <span class="inline-flex items-center bg-white rounded-lg px-2.5 py-1"><img src="https://cdn.prod.website-files.com/60d23fd3da44f567d7c85ae3/63bdd4eadeb4d92ef2336ae8_WeGive%20Logo%20280.png" alt="WeGive" class="h-5 w-auto" /></span>
+      </div>
+      <h2 class="font-display text-4xl md:text-6xl font-bold mt-4 text-white max-w-4xl">2× recurring revenue. On average. In two years.</h2>
+      <p class="text-white/85 mt-6 max-w-3xl text-lg">WeGive's homepage headline stat: "The average organization on WeGive doubles recurring revenue in 2 years." Selected customer growth numbers — also published on wegive.com — below.</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-px bg-white/15 mt-10 rounded-2xl overflow-hidden">
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+350%</div><p class="text-white/80 mt-2">Messenger International</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+585%</div><p class="text-white/80 mt-2">Word of Life</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+553%</div><p class="text-white/80 mt-2">Alpha</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+374%</div><p class="text-white/80 mt-2">LIFEWISE</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+173%</div><p class="text-white/80 mt-2">Backdrop</p></div>
+        <div class="bg-royal p-6 md:p-7"><div class="font-display text-4xl md:text-6xl font-bold text-white">+93%</div><p class="text-white/80 mt-2">Wild at Heart</p></div>
+      </div>
+      <p class="font-mono text-xs text-white/70 mt-6">Source: wegive.com customer growth highlights. Stats are WeGive-attributed; not measured at a joint Content.One × WeGive customer.</p>
+    </div>
+  </section>
+
+  <!-- 10 TRUST + CUSTOMER VOICE -->
+  <section class="slide relative flex items-center overflow-hidden gridbg" data-i="10">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-6xl mx-auto px-6 w-full py-16">
+      <p class="kicker text-royalLite">Trusted by federated organizations</p>
+      <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 max-w-4xl">Content.One's nonprofit proof.</h2>
+      <p class="text-muted mt-5 max-w-3xl">Pair WeGive's giving stack with Content.One on the same network — 3,000+ Salvation Army locations, federated, on one platform.</p>
+      <div class="rise mt-9 mb-9">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-muted mb-4">Trusted by</p>
+        <div class="flex flex-wrap items-center gap-x-9 gap-y-5">
+          {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}} logo" class="h-7 md:h-8 w-auto object-contain opacity-70 brightness-0 invert" />
+          {{/each}}
+        </div>
+      </div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-14 h-14 rounded-full object-cover shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."</p><footer class="font-mono text-xs text-muted mt-2">Andrew Dobney · Director of Digital Strategy, The Salvation Army</footer></div>
+        </blockquote>
+        <blockquote class="hairline rounded-2xl bg-panel/85 backdrop-blur p-6 flex gap-4 items-center">
+          <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="w-14 h-14 rounded-full object-cover shrink-0" />
+          <div><p class="text-chalk leading-relaxed">"We don't build websites; we add content. Partner with those who do."</p><footer class="font-mono text-xs text-muted mt-2">Jon Aren · National Web Manager, The Salvation Army</footer></div>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 CLOSE -->
+  <section class="slide relative flex items-center gridbg" data-i="11">
+    <div class="absolute inset-0 royalfade"></div>
+    <div class="relative max-w-4xl mx-auto px-6 w-full py-16 text-center">
+      <div class="inline-flex items-center gap-3 hairline rounded-full bg-ink/60 px-4 py-2 mx-auto">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-white.png" alt="Content.One" class="h-5 w-auto" />
+        <span class="text-royalLite">×</span>
+        <img src="https://cdn.prod.website-files.com/60d23fd3da44f567d7c85ae3/63bdd4eadeb4d92ef2336ae8_WeGive%20Logo%20280.png" alt="WeGive" class="h-5 w-auto brightness-0 invert opacity-90" />
+      </div>
+      <p class="kicker text-royalLite mt-7">From pain island to pleasure island</p>
+      <h2 class="font-display text-4xl md:text-7xl font-bold mt-5">One stack. One donor experience.</h2>
+      <p class="text-muted mt-6 max-w-2xl mx-auto text-lg leading-relaxed">WeGive handles the giving. Content.One handles the website. Your CRM stays the source of truth. Recurring revenue compounds. Stewardship runs itself.</p>
+      <div class="mt-10 flex flex-wrap justify-center gap-3">
+        <a href="/contact-us/" class="bg-royal hover:bg-royalLite hover:text-ink transition text-white font-medium rounded-full px-7 py-3">Talk with our team</a>
+        <a href="https://www.wegive.com/demo-request" target="_blank" rel="noopener" class="hairline hover:border-royalLite transition rounded-full px-7 py-3 text-chalk">See a WeGive demo</a>
+      </div>
+    </div>
+  </section>
+
+  </div><!-- /deck -->
+
+  <script>
+    const deck = document.getElementById('deck');
+    const slides = [...deck.querySelectorAll('.slide')];
+    const cur = document.getElementById('cur'), bar = document.getElementById('bar');
+    const prevBtn = document.getElementById('prev'), nextBtn = document.getElementById('next');
+    let idx = 0, lock = false;
+    function render() {
+      deck.style.transform = `translateY(${-idx * 100}vh)`;
+      cur.textContent = String(idx + 1).padStart(2, '0');
+      bar.style.width = ((idx + 1) / slides.length * 100) + '%';
+      prevBtn.disabled = idx === 0; nextBtn.disabled = idx === slides.length - 1;
+    }
+    function goTo(i) { i = Math.max(0, Math.min(slides.length - 1, i)); if (i === idx) return; idx = i; lock = true; render(); setTimeout(() => { lock = false; }, 720); }
+    prevBtn.addEventListener('click', () => goTo(idx - 1));
+    nextBtn.addEventListener('click', () => goTo(idx + 1));
+    window.addEventListener('wheel', (e) => {
+      const s = slides[idx];
+      const canDown = s.scrollHeight - s.scrollTop - s.clientHeight > 2, canUp = s.scrollTop > 2;
+      if ((e.deltaY > 0 && canDown) || (e.deltaY < 0 && canUp)) return;
+      e.preventDefault(); if (lock) return;
+      if (e.deltaY > 6) goTo(idx + 1); else if (e.deltaY < -6) goTo(idx - 1);
+    }, { passive: false });
+    window.addEventListener('keydown', (e) => {
+      if (['ArrowDown', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); goTo(idx + 1); }
+      else if (['ArrowUp', 'PageUp'].includes(e.key)) { e.preventDefault(); goTo(idx - 1); }
+      else if (e.key === 'Home') { e.preventDefault(); goTo(0); }
+      else if (e.key === 'End') { e.preventDefault(); goTo(slides.length - 1); }
+    });
+    let ty = null;
+    window.addEventListener('touchstart', (e) => { ty = e.touches[0].clientY; }, { passive: true });
+    window.addEventListener('touchend', (e) => {
+      if (ty === null) return; const dy = ty - e.changedTouches[0].clientY; const s = slides[idx];
+      const atBottom = s.scrollHeight - s.scrollTop - s.clientHeight < 4, atTop = s.scrollTop < 4;
+      if (dy > 50 && atBottom) goTo(idx + 1); else if (dy < -50 && atTop) goTo(idx - 1); ty = null;
+    }, { passive: true });
+    render();
+  </script>
+</body>
+</html>
