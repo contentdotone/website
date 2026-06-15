@@ -122,12 +122,12 @@
   })();
 </script>
 
-<!-- ════════════ SOCIAL PROOF — Figma 13863:10629 (Untitled-C1) ════════════ -->
-<section class="bg-[#060813] py-24" data-figma-node="13863:10629">
+<!-- ════════════ SOCIAL PROOF — Figma 13873:4138 (Untitled-C1) ════════════ -->
+<section class="bg-[#0c1027] py-24" data-figma-node="13873:4138">
   <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <div class="flex flex-col gap-8 items-center">
       <p class="font-sans font-semibold text-white text-center text-base sm:text-xl leading-[24px] sm:leading-[30px] max-w-3xl">
-        Trusted by enterprise marketing, brand, and compliance teams.
+        Trusted by teams shipping enterprise content
       </p>
       <div class="flex flex-wrap items-center justify-center gap-8 w-full">
         <img src="https://hj5v68xn.media.zestyio.com/the_salvation_army_reversed.svg" alt="The Salvation Army" width="61" height="72" class="h-[60px] sm:h-[72px] w-auto" loading="lazy" />
@@ -137,6 +137,9 @@
         <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" width="70" height="60" class="h-[50px] sm:h-[60px] w-auto" loading="lazy" />
         <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" width="129" height="40" class="h-[34px] sm:h-[40px] w-auto" loading="lazy" />
       </div>
+      <p class="font-sans font-medium text-white text-center text-base leading-[24px] max-w-3xl">
+        From Fortune 500 brands to mission-driven non-profits. The teams content quality matters most to.
+      </p>
     </div>
   </div>
 </section>
