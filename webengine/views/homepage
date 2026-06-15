@@ -122,11 +122,22 @@
   })();
 </script>
 
-<!-- ════════════ TRUST BAR (client logos with eyebrow) ════════════ -->
-<section class="bg-paper py-16 lg:py-20 border-b border-gray-100">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-gray-500 mb-9">Trusted by enterprise marketing teams</p>
-    {{ block('/-/block/client_logos.html') }}
+<!-- ════════════ SOCIAL PROOF — Figma 13863:10629 (Untitled-C1) ════════════ -->
+<section class="bg-[#060813] py-24" data-figma-node="13863:10629">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
+    <div class="flex flex-col gap-8 items-center">
+      <p class="font-sans font-semibold text-white text-center text-base sm:text-xl leading-[24px] sm:leading-[30px] max-w-3xl">
+        Trusted by enterprise marketing, brand, and compliance teams.
+      </p>
+      <div class="flex flex-wrap items-center justify-center gap-8 w-full">
+        <img src="https://hj5v68xn.media.zestyio.com/the_salvation_army_reversed.svg" alt="The Salvation Army" width="61" height="72" class="h-[60px] sm:h-[72px] w-auto" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" width="114" height="40" class="h-[34px] sm:h-[40px] w-auto" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/phoenix_suns.svg" alt="Phoenix Suns" width="77" height="74" class="h-[62px] sm:h-[74px] w-auto" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/kin_reversed.svg" alt="Kin Insurance" width="65" height="36" class="h-[30px] sm:h-[36px] w-auto" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" width="70" height="60" class="h-[50px] sm:h-[60px] w-auto" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" width="129" height="40" class="h-[34px] sm:h-[40px] w-auto" loading="lazy" />
+      </div>
+    </div>
   </div>
 </section>
 
