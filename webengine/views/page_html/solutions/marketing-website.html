@@ -283,19 +283,12 @@
     color: #c7d2fe;
     backdrop-filter: blur(8px);
   }
-  /* Dynamic customer logos on dark bg — desaturate, invert, then dim 5%.
-     Preserves source luminance variation through the invert (no preceding
-     brightness(0)) so solid fills (Salvation Army shield, PetDesk disc)
-     retain shape definition. */
+  /* Dynamic customer logos on dark bg — ardeay's CSS setup. */
   .marketing-websites-page .solutions-logo__image {
-    filter: grayscale(1) invert(1) brightness(0.95);
-    opacity: 0.7;
+    filter: grayscale(1) invert(1) brightness(1);
+    opacity: 1;
     transition: opacity .2s ease;
     max-height: 100%;
-  }
-  .marketing-websites-page .solutions-logo:hover .solutions-logo__image,
-  .marketing-websites-page .solutions-logo:focus .solutions-logo__image {
-    opacity: 1;
   }
 </style>
 
