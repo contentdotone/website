@@ -1,411 +1,360 @@
 <div class="mobile-app-page">
-  <section class="py-6 py-lg-7 bg-gradient-mobile text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6"> 
-        <div class="col-span-12 lg:col-span-6">
-          <h1 class="text-4xl font-bold text-white font-bold mb-4">Seamless, scalable content for every device.</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One powers mobile-first experiences for customers, employees, and field teams. Publish once, syndicate everywhere, and give contributors mobile tools built on the same trusted APIs.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Explore mobile content ops</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See Content.One in action</a>
-          </div>
+
+  <!-- ════════════ HERO (Apple-scale dark) ════════════ -->
+  <section class="co-hero relative overflow-hidden pt-24 md:pt-28 lg:pt-36 pb-20 md:pb-28 lg:pb-32">
+    <div class="co-hero__bg absolute top-0 left-0 w-full h-full"></div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
+      <div class="text-center max-w-5xl mx-auto mb-14 md:mb-20">
+        <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+          </span>
+          <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">Solution · Mobile App</span>
+        </span>
+        <h1 class="text-[2.5rem] sm:text-5xl md:text-6xl lg:text-[5.5rem] xl:text-[6.25rem] font-display font-semibold text-white mb-7 leading-[0.95]" style="letter-spacing:-0.045em">Seamless, scalable content for every device.</h1>
+        <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-light" style="color:rgba(255,255,255,.78)">
+          Content.One powers mobile-first experiences for customers, employees, and field teams. Publish once, syndicate everywhere, and give contributors mobile tools built on the same trusted APIs.
+        </p>
+        <div class="flex flex-wrap gap-3 justify-center items-center">
+          <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
+            <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+            Start Demo
+          </a>
+          <a href="/book-a-demo/" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
+            Explore mobile content ops
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
-        <div class="col-span-12 lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Mobile content experience" class="w-full h-full object-cover">
-          </div>
+        <div class="mt-6 flex justify-center">
+          <a href="/product/" class="inline-flex items-center gap-1.5 text-white/80 hover:text-white font-semibold transition group/cta">
+            See Content.One in action
+            <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 border-t">
+  <!-- ════════════ SOCIAL PROOF (reversed-SVG dark) ════════════ -->
+  <section class="bg-[#060813] py-24">
+    <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-10 items-center text-center">
+      <h2 class="font-display font-semibold text-white text-base md:text-xl m-0">Manage mobile experiences centrally, deploy instantly.</h2>
+      <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+        {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
+          <a href="{{cus.getURL()}}" class="solutions-logo flex items-center justify-center h-10 md:h-12 transition" aria-label="{{cus.name}}">
+            <img src="{{cus.logo.getImage(220)}}" alt="{{cus.name}} logo" class="solutions-logo__image h-full w-auto" loading="lazy" />
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ STAT STRIP (animated count-up, dark) ════════════ -->
+  <section class="bg-[#0c1027] py-20 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="col-span-12 lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Mobile content delivery</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Manage mobile experiences centrally, deploy instantly.</h2>
-          <p class="text-gray-600 mb-0">With Content.One, marketing and product teams deliver app-ready content without resubmitting to app stores or waiting on dev cycles. Structured content, media, and workflows keep your mobile channels consistent and compliant.</p>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royalLite mb-3">By the numbers</p>
+        <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white" style="letter-spacing:-0.035em">Mobile content operations at enterprise scale.</h2>
+      </div>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-6 md:p-8">
+          <p class="font-display font-semibold text-white text-5xl md:text-6xl lg:text-7xl leading-none m-0" style="letter-spacing:-0.04em"><span data-cornershop-count="65">0</span><span class="text-royalLite">%</span></p>
+          <p class="text-white/70 text-sm mt-4 leading-snug m-0">Reduction in app update cycles</p>
         </div>
-        <div class="col-span-12 lg:col-span-7">
-          <div class="grid gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
-          </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-6 md:p-8">
+          <p class="font-display font-semibold text-white text-5xl md:text-6xl lg:text-7xl leading-none m-0" style="letter-spacing:-0.04em"><span data-cornershop-count="80">0</span><span class="text-royalLite">%</span></p>
+          <p class="text-white/70 text-sm mt-4 leading-snug m-0">Increase in mobile content reuse</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-6 md:p-8">
+          <p class="font-display font-semibold text-white text-5xl md:text-6xl lg:text-7xl leading-none m-0" style="letter-spacing:-0.04em"><span data-cornershop-count="99.99" data-cornershop-format="decimal">0</span><span class="text-royalLite">%</span></p>
+          <p class="text-white/70 text-sm mt-4 leading-snug m-0">Uptime backed by WebEngine and CDN</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-6 md:p-8">
+          <p class="font-display font-semibold text-white text-5xl md:text-6xl lg:text-7xl leading-none m-0" style="letter-spacing:-0.04em"><span data-cornershop-count="200">0</span><span class="text-royalLite">+</span></p>
+          <p class="text-white/70 text-sm mt-4 leading-snug m-0">Integrations across CRM, CDP, and mobile analytics</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6">
+  <!-- ════════════ FEATURES BENTO (dark uniform 6-card grid) ════════════ -->
+  <section class="bg-black py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Flexible, future-proof mobile experiences</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Deliver app-ready content without rebuilding systems</h2>
-          <p class="text-gray-600 text-lg mb-0">Content.One’s headless architecture feeds native apps, PWAs, kiosks, and custom digital platforms so every update stays in sync across channels.</p>
-        </div>
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-semibold text-white" style="letter-spacing:-0.035em">Deliver app-ready content without rebuilding systems.</h2>
+        <p class="font-body font-medium text-base mt-5 m-0" style="color:#b1bae7">
+          Content.One's headless architecture feeds native apps, PWAs, kiosks, and custom digital platforms so every update stays in sync across channels.
+        </p>
       </div>
-      <div class="grid gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Headless delivery</h3>
-              <p class="text-gray-600 mb-0">Push structured content to iOS, Android, PWAs, kiosks, or smart devices using Content.One APIs and webhooks.</p>
-            </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-5">
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
           </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Headless delivery</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Push structured content to iOS, Android, PWAs, kiosks, or smart devices using Content.One APIs and webhooks.</p>
+        </article>
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">No developer bottlenecks</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Update in-app copy, visuals, and flows directly from Content.One—no app store resubmissions or custom builds.</p>
+        </article>
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Reusable content models</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Design once, deliver everywhere—reuse structured content across web, mobile, directories, and partner portals.</p>
+        </article>
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Global CDN</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Serve media and content quickly worldwide with mobile-optimized delivery, even in low-bandwidth regions.</p>
+        </article>
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Security &amp; compliance</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">SSO, encryption, audit logs, and automated updates keep mobile deployments aligned with enterprise policies.</p>
+        </article>
+        <article class="rounded-2xl border border-[#19214e] bg-black/40 p-7 flex flex-col h-full">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5" style="background:#18214e;box-shadow:inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.4);">
+            <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Analytics-ready</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Connect telemetry and personalization engines to measure usage, conversions, and content engagement across devices.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ WORKFLOW STEPS (dark numbered, 4-step) ════════════ -->
+  <section class="bg-[#0c1027] py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royalLite mb-3">Mobile contributor workflows</p>
+        <h2 class="text-4xl md:text-5xl lg:text-[3.5rem] font-display font-semibold text-white" style="letter-spacing:-0.035em">Mobilize your workforce without new training.</h2>
+        <p class="font-body font-medium text-base mt-5 m-0" style="color:#b1bae7">
+          Build bespoke mobile apps on Content.One APIs to let thousands of staff, volunteers, or franchisees contribute content instantly—no enterprise CMS UI required.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-7">
+          <div class="font-display text-5xl font-semibold text-royalLite mb-4 leading-none" style="letter-spacing:-0.04em">01</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Guided authoring</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Create mobile workflows for stories, hours, alerts, or inventory updates with validation rules from Content.One schemas.</p>
         </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">No developer bottlenecks</h3>
-              <p class="text-gray-600 mb-0">Update in-app copy, visuals, and flows directly from Content.One—no app store resubmissions or custom builds.</p>
-            </div>
-          </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-7">
+          <div class="font-display text-5xl font-semibold text-royalLite mb-4 leading-none" style="letter-spacing:-0.04em">02</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Offline-ready capture</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Allow field teams to draft content offline and sync when connected, ensuring remote locations can still publish quickly.</p>
         </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Reusable content models</h3>
-              <p class="text-gray-600 mb-0">Design once, deliver everywhere—reuse structured content across web, mobile, directories, and partner portals.</p>
-            </div>
-          </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-7">
+          <div class="font-display text-5xl font-semibold text-royalLite mb-4 leading-none" style="letter-spacing:-0.04em">03</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Approval in minutes</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Managers review submissions in a mobile-optimized approval queue before publishing to sites, apps, or directories.</p>
         </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Global CDN</h3>
-              <p class="text-gray-600 mb-0">Serve media and content quickly worldwide with mobile-optimized delivery, even in low-bandwidth regions.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Security &amp; compliance</h3>
-              <p class="text-gray-600 mb-0">SSO, encryption, audit logs, and automated updates keep mobile deployments aligned with enterprise policies.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Analytics-ready</h3>
-              <p class="text-gray-600 mb-0">Connect telemetry and personalization engines to measure usage, conversions, and content engagement across devices.</p>
-            </div>
-          </div>
+        <div class="rounded-2xl border border-white/10 bg-black/30 p-7">
+          <div class="font-display text-5xl font-semibold text-royalLite mb-4 leading-none" style="letter-spacing:-0.04em">04</div>
+          <h3 class="font-display text-lg font-semibold text-white mb-2 m-0">Real-time guidance</h3>
+          <p class="text-white/70 text-sm leading-relaxed m-0">Push notifications, playbooks, and video tutorials help local teams follow best practices without formal training.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="col-span-12 lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Mobilize your workforce without new training</h2>
-          <p class="text-gray-600 mb-4">Build bespoke mobile apps on Content.One APIs to let thousands of staff, volunteers, or franchisees contribute content instantly—no enterprise CMS UI required.</p>
-          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Guided authoring</h3>
-                  <p class="text-gray-600 text-sm mb-0">Create mobile workflows for stories, hours, alerts, or inventory updates with validation rules from Content.One schemas.</p>
-                </div>
+  <!-- ════════════ TESTIMONIAL CAROUSEL ════════════ -->
+  <section class="bg-[#0c1027]" data-testimonial-carousel>
+    <div class="mx-auto max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col lg:flex-row items-stretch min-h-[480px] lg:min-h-[640px]">
+      <div class="flex-1 lg:min-w-0 px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24 flex items-stretch">
+        <div class="w-full flex flex-col gap-6 justify-between">
+          <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Teams scaling mobile content with Content.One</h2>
+          <div class="flex-1 flex items-center">
+            <blockquote class="font-display font-medium text-2xl leading-8 xl:text-[30px] xl:leading-[38px] m-0" style="color:#b1bae7" data-testimonial-quote>
+              "Content.One let us launch a mobile contribution app for 3,000+ corps—volunteers publish updates instantly while HQ maintains standards."
+            </blockquote>
+          </div>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-3 w-full">
+            <div class="flex gap-3 items-center flex-1 min-w-0">
+              <img data-testimonial-avatar src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-14 h-14 rounded-full object-cover shrink-0 lg:hidden" />
+              <div class="flex flex-col gap-1 min-w-0">
+                <p class="font-body font-semibold text-white text-base leading-6 lg:text-lg lg:leading-7 m-0" data-testimonial-name-title>Andrew Dobney, Director of Digital Strategy</p>
+                <p class="font-body text-base leading-6 m-0" style="color:#b1bae7" data-testimonial-company>The Salvation Army</p>
               </div>
             </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Offline-ready capture</h3>
-                  <p class="text-gray-600 text-sm mb-0">Allow field teams to draft content offline and sync when connected, ensuring remote locations can still publish quickly.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Approval in minutes</h3>
-                  <p class="text-gray-600 text-sm mb-0">Managers review submissions in a mobile-optimized approval queue before publishing to sites, apps, or directories.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Real-time guidance</h3>
-                  <p class="text-gray-600 text-sm mb-0">Push notifications, playbooks, and video tutorials help local teams follow best practices without formal training.</p>
-                </div>
-              </div>
+            <div class="flex gap-8 items-center justify-end shrink-0">
+              <button type="button" aria-label="Previous testimonial" data-testimonial-prev class="w-14 h-14 rounded-full border border-[#e5e5e5] text-white flex items-center justify-center hover:bg-white/10 transition">
+                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+              </button>
+              <button type="button" aria-label="Next testimonial" data-testimonial-next class="w-14 h-14 rounded-full border border-[#e5e5e5] text-white flex items-center justify-center hover:bg-white/10 transition">
+                <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-span-12 lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?auto=format&fit=crop&w=1200&q=80" alt="Field worker using mobile app" class="w-full h-full object-cover">
-          </div>
+      </div>
+      <div class="hidden lg:flex flex-1 lg:min-w-0 items-center justify-center p-12 xl:p-20">
+        <div class="w-[300px] h-[300px] rounded-full overflow-hidden bg-royalLite/20 ring-1 ring-white/10 shrink-0">
+          <img data-testimonial-portrait src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-full h-full object-cover" />
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="col-span-12 lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="API integrations" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <div class="col-span-12 lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Extensible APIs &amp; MCP</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Build custom mobile software on reliable content APIs</h2>
-          <p class="text-gray-600 text-lg mb-4">Content.One APIs and Model Context Protocol integrations let you extend governed content to bespoke mobile tools, digital signage, or AI copilots with confidence.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-mobile text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>
-              <span>Expose structured content as JSON, GraphQL, or MCP tool endpoints for mobile clients to consume.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-mobile text-xl" aria-hidden="true"><path d="M10 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zM6 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2z"/>
-  <path d="M8 12a1 1 0 1 0 0-2 1 1 0 0 0 0 2M1.599 4.058a.5.5 0 0 1 .208.676A7 7 0 0 0 1 8c0 1.18.292 2.292.807 3.266a.5.5 0 0 1-.884.468A8 8 0 0 1 0 8c0-1.347.334-2.619.923-3.734a.5.5 0 0 1 .676-.208m12.802 0a.5.5 0 0 1 .676.208A8 8 0 0 1 16 8a8 8 0 0 1-.923 3.734.5.5 0 0 1-.884-.468A7 7 0 0 0 15 8c0-1.18-.292-2.292-.807-3.266a.5.5 0 0 1 .208-.676M3.057 5.534a.5.5 0 0 1 .284.648A5 5 0 0 0 3 8c0 .642.12 1.255.34 1.818a.5.5 0 1 1-.93.364A6 6 0 0 1 2 8c0-.769.145-1.505.41-2.182a.5.5 0 0 1 .647-.284m9.886 0a.5.5 0 0 1 .648.284C13.855 6.495 14 7.231 14 8s-.145 1.505-.41 2.182a.5.5 0 0 1-.93-.364C12.88 9.255 13 8.642 13 8s-.12-1.255-.34-1.818a.5.5 0 0 1 .283-.648"/></svg>
-              <span>Trigger push notifications and in-app prompts based on content updates or marketing campaigns.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-mobile text-xl" aria-hidden="true"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg>
-              <span>Authenticate contributors with SSO and apply the same permissions used across your web presence.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-mobile text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>
-              <span>Capture usage analytics and tie engagements back to Content.One reporting for end-to-end visibility.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-900 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="col-span-12 lg:col-span-6">
-          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Mobile content operations at enterprise scale</h2>
-          <p class="text-lg text-white/75 mb-4">Launch mobile experiences faster, ensure consistency, and keep your workforce engaged with the same platform that powers your web and API channels.</p>
-          <div class="grid gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-mobile-count="65" data-mobile-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in app update cycles</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-mobile-count="80" data-mobile-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Increase in mobile content reuse</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-mobile-count="99.99" data-mobile-suffix="%" data-mobile-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime backed by WebEngine and CDN</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-mobile-count="200" data-mobile-suffix="+">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Integrations across CRM, CDP, and mobile analytics</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-span-12 lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Mobile operations dashboard" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-mobile-dark" style="opacity:0.35;"></div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile mb-3">Customer voices</span>
-          <h2 class="text-4xl font-bold font-semibold mb-2">Teams scaling mobile content with Content.One</h2>
-          <p class="text-gray-600 mb-0">From national nonprofits to customer engagement platforms, organizations turn to Content.One to keep mobile audiences informed and inspired.</p>
-        </div>
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-mobile text-base px-6 py-3">Read their stories</a>
-      </div>
-      <div class="grid gap-4 grid-cols-1 lg:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
-            <div class="p-6">
-              <div class="flex items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="rounded-full shadow-sm" style="width:64px;height:64px;object-fit:cover;">
-                <div>
-                  <p class="text-gray-600 font-semibold mb-0">Andrew Dobney</p>
-                  <span class="text-gray-500 text-sm">Director of Digital Strategy, The Salvation Army</span>
-                </div>
-              </div>
-              <p class="text-lg text-gray-600 mb-4">“Content.One let us launch a mobile contribution app for 3,000+ corps—volunteers publish updates instantly while HQ maintains standards.”</p>
-              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile rounded-full px-3 py-2">Federated nonprofit</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
-            <div class="p-6">
-              <div class="flex items-center gap-3 mb-4">
-                <img src="https://hj5v68xn.media.zestyio.com/taylor.jpg" alt="PetDesk hero" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
-                <div>
-                  <p class="text-gray-600 font-semibold mb-0">PetDesk</p>
-                  <span class="text-gray-500 text-sm">Director of Product Marketing</span>
-                </div>
-              </div>
-              <p class="text-lg text-gray-600 mb-4">“We power in-app messaging and clinic tools from Content.One—new offers go live across web and mobile with one publish.”</p>
-              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile rounded-full px-3 py-2">Vetinary engagement</div>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow h-full border-0 shadow-sm">
-            <div class="p-6">
-              <div class="flex items-center gap-3 mb-4">
-                <img src="https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png" alt="Singlife digital experience" class="rounded-lg shadow-sm" style="width:64px;height:64px;object-fit:cover;">
-                <div>
-                  <p class="text-gray-600 font-semibold mb-0">Brian Nilayan</p>
-                  <span class="text-gray-500 text-sm">Head of Business Development, Rebar Solutions</span>
-                </div>
-              </div>
-              <p class="text-lg text-gray-600 mb-4">“Our mobile insurance apps stay compliant because updates pull from the same governed Content.One catalog used by our web teams.”</p>
-              <div class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-mobile-subtle text-mobile rounded-full px-3 py-2">Financial services</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-mobile text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="col-span-12 lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to power mobile apps with Content.One?</h2>
-          <p class="text-lg text-white/75 mb-4">Unify content, empower contributors, and launch mobile experiences at scale. Let’s build your mobile roadmap together.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-mobile">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
-        </div>
+  <!-- ════════════ CLOSING CTA ════════════ -->
+  <section class="bg-[#050816] py-24 relative overflow-hidden">
+    <div class="absolute inset-0" style="background:radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,60,255,0.25) 0%, transparent 60%), radial-gradient(ellipse 80% 60% at 50% 100%, rgba(56,189,248,0.10) 0%, transparent 70%);"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-display font-semibold text-white mb-5" style="letter-spacing:-0.04em">Ready to power mobile apps with Content.One?</h2>
+      <p class="text-lg md:text-xl text-white/75 mb-10 max-w-2xl mx-auto leading-relaxed font-light">Unify content, empower contributors, and launch mobile experiences at scale. Let's build your mobile roadmap together.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
+          <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+          Start Demo
+        </a>
+        <a href="/book-a-demo/" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
+          Talk to our team
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
       </div>
     </div>
   </section>
 </div>
 
 <style>
-  .mobile-app-page .bg-gradient-mobile {
-    background: linear-gradient(135deg, #0f172a 0%, #2563eb 50%, #10b981 100%);
+  .mobile-app-page .co-hero { background-color: #050816; }
+  .mobile-app-page .co-hero__bg {
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,60,255,0.35) 0%, transparent 60%),
+      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(56,189,248,0.12) 0%, transparent 70%),
+      linear-gradient(180deg, #050816 0%, #0a0d24 60%, #050816 100%);
+    z-index: 0;
   }
-  .mobile-app-page .bg-gradient-mobile-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.25) 100%);
+  .mobile-app-page .co-hero__bg::after {
+    content: ""; position: absolute; inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+    background-size: 64px 64px;
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
+    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
+    pointer-events: none;
   }
-  .mobile-app-page .bg-mobile {
-    background-color: #2563eb;
+  .mobile-app-page .co-hero__badge {
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    color: #c7d2fe;
+    backdrop-filter: blur(8px);
   }
-  .mobile-app-page .text-mobile {
-    color: #2563eb !important;
-  }
-  .mobile-app-page .bg-mobile-subtle {
-    background-color: rgba(37, 99, 235, 0.12) !important;
-  }
-  .mobile-app-page .btn-outline-mobile {
-    border-color: #2563eb;
-    color: #2563eb;
-  }
-  .mobile-app-page .btn-outline-mobile:hover {
-    background-color: #2563eb;
-    color: #fff;
-  }
-  .mobile-app-page .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
-  }
-  .mobile-app-page .logo-card__image {
-    max-height: 48px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
-  }
-  .mobile-app-page .logo-card:hover .logo-card__image,
-  .mobile-app-page .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
+  /* Dynamic customer logos on dark bg — ardeay's CSS setup. */
+  .mobile-app-page .solutions-logo__image {
+    filter: grayscale(1) invert(1) brightness(1);
     opacity: 1;
+    transition: opacity .2s ease;
+    max-height: 100%;
   }
 </style>
 
 <script>
+  // Stat counter animation — runs when the strip scrolls into view
   document.addEventListener('DOMContentLoaded', function () {
-    var mobileCounterObserver = new IntersectionObserver(function (entries) {
+    var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-mobile-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-mobile-suffix') || '';
-          var format = el.getAttribute('data-mobile-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          mobileCounterObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-cornershop-count'));
+        if (isNaN(endValue)) return;
+        var format = el.getAttribute('data-cornershop-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          el.textContent = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            el.textContent = format === 'decimal'
+              ? endValue.toFixed(2)
+              : Math.round(endValue).toLocaleString();
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
-
-    document.querySelectorAll('.mobile-app-page [data-mobile-count]').forEach(function (counter) {
-      mobileCounterObserver.observe(counter);
+    document.querySelectorAll('.mobile-app-page [data-cornershop-count]').forEach(function (counter) {
+      counterObserver.observe(counter);
     });
   });
+
+  // Testimonial carousel — click prev/next to cycle quote + attribution + image
+  (function () {
+    var testimonials = [
+      {
+        quote: "“Content.One let us launch a mobile contribution app for 3,000+ corps—volunteers publish updates instantly while HQ maintains standards.”",
+        name: "Andrew Dobney",
+        title: "Director of Digital Strategy",
+        company: "The Salvation Army",
+        image: "https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg"
+      },
+      {
+        quote: "“We power in-app messaging and clinic tools from Content.One—new offers go live across web and mobile with one publish.”",
+        name: "PetDesk",
+        title: "Director of Product Marketing",
+        company: "Vetinary engagement",
+        image: "https://hj5v68xn.media.zestyio.com/taylor.jpg"
+      },
+      {
+        quote: "“Our mobile insurance apps stay compliant because updates pull from the same governed Content.One catalog used by our web teams.”",
+        name: "Brian Nilayan",
+        title: "Head of Business Development",
+        company: "Rebar Solutions (Singlife Insurance)",
+        image: "https://kfg6bckb.media.zestyio.com/singlife-case-study-cms.png"
+      }
+    ];
+    function initTestimonial(section) {
+      var quoteEl = section.querySelector('[data-testimonial-quote]');
+      var nameTitleEl = section.querySelector('[data-testimonial-name-title]');
+      var companyEl = section.querySelector('[data-testimonial-company]');
+      var avatarEls = section.querySelectorAll('[data-testimonial-avatar], [data-testimonial-portrait]');
+      var prevBtn = section.querySelector('[data-testimonial-prev]');
+      var nextBtn = section.querySelector('[data-testimonial-next]');
+      if (!quoteEl || !nameTitleEl || !companyEl || !prevBtn || !nextBtn) return;
+      var i = 0;
+      function render() {
+        var t = testimonials[i];
+        quoteEl.textContent = t.quote;
+        nameTitleEl.textContent = t.name + ', ' + t.title;
+        companyEl.textContent = t.company;
+        avatarEls.forEach(function (img) {
+          img.src = t.image;
+          img.alt = t.name + ', ' + t.title + ' at ' + t.company;
+        });
+      }
+      function go(delta) {
+        i = (i + delta + testimonials.length) % testimonials.length;
+        render();
+      }
+      prevBtn.addEventListener('click', function () { go(-1); });
+      nextBtn.addEventListener('click', function () { go(1); });
+    }
+    function init() {
+      document.querySelectorAll('.mobile-app-page [data-testimonial-carousel]').forEach(initTestimonial);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
