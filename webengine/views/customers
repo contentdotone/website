@@ -3,12 +3,45 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
       <div class="flex justify-center text-center">
         <div class="lg:max-w-4xl">
-          <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold mb-3">Loved by teams worldwide</span>
-          <h1 class="text-4xl md:text-5xl text-white font-display font-semibold mb-3">{{page.title}}</h1>
-          <p class="text-lg text-white/75 mb-6">Discover how modern organizations launch, scale, and share their missions with Content.One</p>
+          <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-4">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
+            Loved by teams worldwide
+          </span>
+          <h1 class="text-5xl md:text-6xl lg:text-7xl text-white font-display font-semibold tracking-tight mb-4 leading-[1.05]">{{page.title}}</h1>
+          <p class="text-lg md:text-xl text-white/80 mb-8 max-w-2xl mx-auto leading-relaxed">Discover how modern organizations launch, scale, and share their missions with Content.One.</p>
           <div class="inline-flex flex-wrap gap-3 justify-center">
-            <a class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow" href="/contact/">Book an Exploratory Call</a>
+            <a class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow-lg shadow-black/20" href="/contact-us/">
+              Book an exploratory call
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition" href="/blog/">
+              Read the journal
+            </a>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aggregate proof strip -->
+  <section class="py-12 lg:py-16 bg-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 rounded-2xl overflow-hidden border border-gray-200">
+        <div class="bg-white p-6 lg:p-8">
+          <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">3,000+</div>
+          <p class="text-gray-600 text-sm mt-3 leading-snug">Salvation Army locations on one federated platform</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8">
+          <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">2.25×</div>
+          <p class="text-gray-600 text-sm mt-3 leading-snug">Faster go-live for Sony Electronics</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8">
+          <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">99.99%</div>
+          <p class="text-gray-600 text-sm mt-3 leading-snug">Production uptime across the enterprise customer base</p>
+        </div>
+        <div class="bg-white p-6 lg:p-8">
+          <div class="font-display text-4xl lg:text-5xl font-bold text-royal leading-none">+50%</div>
+          <p class="text-gray-600 text-sm mt-3 leading-snug">Web traffic growth post-migration (Salvation Army)</p>
         </div>
       </div>
     </div>
@@ -39,7 +72,10 @@
                 {{end-if}}
               </div>
               <footer class="px-6 pb-6 bg-transparent">
-                <a href="{{customer.getURL()}}" class="inline-flex items-center justify-center w-full rounded-full border border-royal text-royal hover:bg-royal/10 font-semibold px-4 py-2.5 transition">Learn More</a>
+                <a href="{{customer.getURL()}}" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark group/cta">
+                  Read the story
+                  <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 transition-transform group-hover/cta:translate-x-0.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
               </footer>
             </article>
           </div>
