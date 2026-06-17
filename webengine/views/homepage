@@ -326,57 +326,105 @@
 
 {{include /components/product-section.html}}
 
-<!-- ════════════ CUSTOMER VOICE (real attributed testimonials) ════════════ -->
-<section class="py-16 lg:py-24 bg-paper">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="text-center mb-12">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Customer voice</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight">Real teams shipping on Content.One.</h2>
+<!-- ════════════ TESTIMONIAL CAROUSEL ════════════ -->
+<section class="bg-[#0c1027]" data-testimonial-carousel>
+  <div class="mx-auto max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col lg:flex-row items-stretch min-h-[480px] lg:min-h-[720px]">
+    <div class="flex-1 lg:min-w-0 px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24 flex items-stretch">
+      <div class="w-full flex flex-col gap-6 justify-between">
+        <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">What customers say about Content.One</h2>
+        <div class="flex-1 flex items-center">
+          <blockquote class="font-display font-medium text-[#b1bae7] text-2xl leading-8 xl:text-[30px] xl:leading-[38px] m-0" data-testimonial-quote>
+            "Load times have improved dramatically, and stability has been night and day compared to our old platform. We've seen a 50% increase in traffic and double the location-search activity since launch."
+          </blockquote>
+        </div>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-3 w-full">
+          <div class="flex gap-3 items-center flex-1 min-w-0">
+            <img data-testimonial-avatar src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-14 h-14 rounded-full object-cover shrink-0 lg:hidden" />
+            <div class="flex flex-col gap-1 min-w-0">
+              <p class="font-body font-semibold text-white text-base leading-6 lg:text-lg lg:leading-7 m-0" data-testimonial-name-title>Andrew Dobney, Director of Digital Strategy</p>
+              <p class="font-body text-[#b1bae7] text-base leading-6 m-0" data-testimonial-company>The Salvation Army</p>
+            </div>
+          </div>
+          <div class="flex gap-8 items-center justify-end shrink-0">
+            <button type="button" aria-label="Previous testimonial" data-testimonial-prev class="w-14 h-14 rounded-full border border-[#e5e5e5] text-white flex items-center justify-center hover:bg-white/10 transition">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+            </button>
+            <button type="button" aria-label="Next testimonial" data-testimonial-next class="w-14 h-14 rounded-full border border-[#e5e5e5] text-white flex items-center justify-center hover:bg-white/10 transition">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="grid md:grid-cols-2 gap-5">
-      <figure class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm">
-        <blockquote class="text-base md:text-lg text-ink leading-relaxed">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a <span class="font-semibold">50% increase in traffic</span> and double the location-search activity since launch."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3 pt-5 border-t border-gray-100">
-          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-12 h-12 rounded-full object-cover" />
-          <div>
-            <p class="font-semibold text-ink text-sm m-0">Andrew Dobney</p>
-            <p class="text-gray-500 text-xs m-0">Director of Digital Strategy · The Salvation Army</p>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm">
-        <blockquote class="text-base md:text-lg text-ink leading-relaxed">"By using Content.One as our CMS, we were able to <span class="font-semibold">soft launch in six weeks</span> and fully launch within two months."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3 pt-5 border-t border-gray-100">
-          <img src="https://hj5v68xn.media.zestyio.com/matt.jpg" alt="Matthew Parnell" class="w-12 h-12 rounded-full object-cover" />
-          <div>
-            <p class="font-semibold text-ink text-sm m-0">Matthew Parnell</p>
-            <p class="text-gray-500 text-xs m-0">MARCOM Manager · Sony Electronics</p>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm">
-        <blockquote class="text-base md:text-lg text-ink leading-relaxed">"It's rare to find a vendor that understands both the technical complexity and the human complexity of an organization like ours."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3 pt-5 border-t border-gray-100">
-          <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-12 h-12 rounded-full object-cover" />
-          <div>
-            <p class="font-semibold text-ink text-sm m-0">Andrew Dobney</p>
-            <p class="text-gray-500 text-xs m-0">Director of Digital Strategy · The Salvation Army</p>
-          </div>
-        </figcaption>
-      </figure>
-      <figure class="bg-white border border-gray-200 rounded-2xl p-7 shadow-sm">
-        <blockquote class="text-base md:text-lg text-ink leading-relaxed">"We need software that's both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable."</blockquote>
-        <figcaption class="mt-5 flex items-center gap-3 pt-5 border-t border-gray-100">
-          <div class="w-12 h-12 rounded-full bg-royal/10 text-royal font-display font-bold flex items-center justify-center text-sm">BJ</div>
-          <div>
-            <p class="font-semibold text-ink text-sm m-0">Ben Johnson</p>
-            <p class="text-gray-500 text-xs m-0">Director of Technology Operations · Bluepixel (Sony's agency)</p>
-          </div>
-        </figcaption>
-      </figure>
+    <div class="hidden lg:flex flex-1 lg:min-w-0 items-center justify-center p-12 xl:p-20">
+      <div class="w-[300px] h-[300px] rounded-full overflow-hidden bg-royalLite/20 ring-1 ring-white/10 shrink-0">
+        <img data-testimonial-portrait src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney, Director of Digital Strategy at The Salvation Army" class="w-full h-full object-cover" />
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var testimonials = [
+      {
+        quote: "“Load times have improved dramatically, and stability has been night and day compared to our old platform. We’ve seen a 50% increase in traffic and double the location-search activity since launch.”",
+        name: "Andrew Dobney",
+        title: "Director of Digital Strategy",
+        company: "The Salvation Army",
+        image: "https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg"
+      },
+      {
+        quote: "“By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months.”",
+        name: "Matthew Parnell",
+        title: "MARCOM Manager",
+        company: "Sony Electronics",
+        image: "https://hj5v68xn.media.zestyio.com/matt.jpg"
+      },
+      {
+        quote: "“Community polls, audio players, and other cool widgets snap into place on Content.One. We can brand everything without waiting on developers.”",
+        name: "Kyle Lemmon",
+        title: "Marketing Manager",
+        company: "Psyonix",
+        image: "https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg"
+      }
+    ];
+    function initTestimonial(section) {
+      var quoteEl = section.querySelector('[data-testimonial-quote]');
+      var nameTitleEl = section.querySelector('[data-testimonial-name-title]');
+      var companyEl = section.querySelector('[data-testimonial-company]');
+      var avatarEls = section.querySelectorAll('[data-testimonial-avatar], [data-testimonial-portrait]');
+      var prevBtn = section.querySelector('[data-testimonial-prev]');
+      var nextBtn = section.querySelector('[data-testimonial-next]');
+      if (!quoteEl || !nameTitleEl || !companyEl || !prevBtn || !nextBtn) return;
+      var i = 0;
+      function render() {
+        var t = testimonials[i];
+        quoteEl.textContent = t.quote;
+        nameTitleEl.textContent = t.name + ', ' + t.title;
+        companyEl.textContent = t.company;
+        avatarEls.forEach(function (img) {
+          img.src = t.image;
+          img.alt = t.name + ', ' + t.title + ' at ' + t.company;
+        });
+      }
+      function go(delta) {
+        i = (i + delta + testimonials.length) % testimonials.length;
+        render();
+      }
+      prevBtn.addEventListener('click', function () { go(-1); });
+      nextBtn.addEventListener('click', function () { go(1); });
+    }
+    function init() {
+      document.querySelectorAll('[data-testimonial-carousel]').forEach(initTestimonial);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
+</script>
 
 {{include /components/homepage/personas.html}}
 
