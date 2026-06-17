@@ -2,7 +2,7 @@
   Hospital industry page — composed from 9 reusable industry Blocks per bobby's
   design ask (msg 1516903214849462282). Each include below maps to a single
   Figma node + a single block file under /-/block/. The blocks are the
-  hospital-content instance for now; future industry pages can either reuse
+  c1-industry-content instance for now; future industry pages can either reuse
   these files or duplicate to swap in industry-specific copy.
 
   Block roster:
@@ -18,11 +18,11 @@
 
   The shared <style> + <script> blocks below stay at the orchestrator level
   because they reference selectors that span multiple blocks (carousel JS
-  targets .hospital-carousel, FAQ styling targets .hospital-faq, the form
-  dark theme is scoped .hospital-form-wrap inside the page wrapper).
+  targets .c1-industry-carousel, FAQ styling targets .c1-industry-faq, the form
+  dark theme is scoped .c1-industry-form-wrap inside the page wrapper).
   Loader provides nav + footer; this view is just the page body.
 -->
-<div class="hospitals-industry-page bg-ink text-white">
+<div class="c1-industry-page bg-ink text-white">
   {{include /-/block/c1_industry_hero.html}}
   {{include /-/block/c1_industry_social_proof.html}}
   {{include /-/block/c1_industry_specific_carousels.html}}
@@ -35,19 +35,19 @@
 </div>
 
 <style>
-  .hospitals-industry-page { background: #0B0F1C; }
+  .c1-industry-page { background: #0B0F1C; }
   /* Hero gradient — Figma 13759:27117. Top-to-bottom #19214e → #060813. */
-  .hospitals-industry-page .hospital-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
-  .hospitals-industry-page .hospital-faq > summary::-webkit-details-marker { display: none; }
-  .hospitals-industry-page .hospital-faq > summary::marker { content: ""; }
+  .c1-industry-page .c1-industry-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
+  .c1-industry-page .c1-industry-faq > summary::-webkit-details-marker { display: none; }
+  .c1-industry-page .c1-industry-faq > summary::marker { content: ""; }
 
-  .hospitals-industry-page .hospital-slide { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
-  .hospitals-industry-page .hospital-slide.is-active { opacity: 1; pointer-events: auto; }
-  .hospitals-industry-page .hospital-dot { background: #404040; transition: background 200ms; cursor: pointer; border: 0; padding: 0; }
-  .hospitals-industry-page .hospital-dot.is-active { background: #d4d4d4; }
+  .c1-industry-page .c1-industry-slide { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
+  .c1-industry-page .c1-industry-slide.is-active { opacity: 1; pointer-events: auto; }
+  .c1-industry-page .c1-industry-dot { background: #404040; transition: background 200ms; cursor: pointer; border: 0; padding: 0; }
+  .c1-industry-page .c1-industry-dot.is-active { background: #d4d4d4; }
 
   /* Skeumorphic Featured Icon per Figma 13771:3505. Drop shadow + inset border + inset bottom highlight. */
-  .hospitals-industry-page .hospital-feature-icon {
+  .c1-industry-page .c1-industry-feature-icon {
     box-shadow:
       0 1px 2px 0 rgba(0, 0, 0, 0.05),
       inset 0 0 0 1px rgba(0, 0, 0, 0.18),
@@ -55,37 +55,37 @@
   }
 
   /* Dark-theme override for the shared /components/forms/zoho-form.html include. Selectors are scoped
-     to .hospital-form-wrap and qualified with chained classes so they beat Tailwind utility specificity. */
-  .hospitals-industry-page .hospital-form-wrap form.needs-validation { gap: 1.5rem; }
-  .hospitals-industry-page .hospital-form-wrap label { color: #d4d4d4; font-weight: 500; }
-  .hospitals-industry-page .hospital-form-wrap input[type="text"],
-  .hospitals-industry-page .hospital-form-wrap input[type="email"],
-  .hospitals-industry-page .hospital-form-wrap textarea {
+     to .c1-industry-form-wrap and qualified with chained classes so they beat Tailwind utility specificity. */
+  .c1-industry-page .c1-industry-form-wrap form.needs-validation { gap: 1.5rem; }
+  .c1-industry-page .c1-industry-form-wrap label { color: #d4d4d4; font-weight: 500; }
+  .c1-industry-page .c1-industry-form-wrap input[type="text"],
+  .c1-industry-page .c1-industry-form-wrap input[type="email"],
+  .c1-industry-page .c1-industry-form-wrap textarea {
     background-color: #0a0a0a;
     border-color: #404040;
     color: #ffffff;
     padding: 0.625rem 0.875rem;
   }
-  .hospitals-industry-page .hospital-form-wrap input::placeholder,
-  .hospitals-industry-page .hospital-form-wrap textarea::placeholder { color: #737373; }
-  .hospitals-industry-page .hospital-form-wrap input:focus,
-  .hospitals-industry-page .hospital-form-wrap textarea:focus { border-color: #4255BD; outline: none; box-shadow: 0 0 0 3px rgba(66,85,189,0.3); }
-  .hospitals-industry-page .hospital-form-wrap textarea { min-height: 10rem; resize: vertical; }
-  .hospitals-industry-page .hospital-form-wrap button[type="submit"] {
+  .c1-industry-page .c1-industry-form-wrap input::placeholder,
+  .c1-industry-page .c1-industry-form-wrap textarea::placeholder { color: #737373; }
+  .c1-industry-page .c1-industry-form-wrap input:focus,
+  .c1-industry-page .c1-industry-form-wrap textarea:focus { border-color: #4255BD; outline: none; box-shadow: 0 0 0 3px rgba(66,85,189,0.3); }
+  .c1-industry-page .c1-industry-form-wrap textarea { min-height: 10rem; resize: vertical; }
+  .c1-industry-page .c1-industry-form-wrap button[type="submit"] {
     background-color: #31429b;
     border: 2px solid rgba(255, 255, 255, 0.12);
     font-weight: 600;
     padding: 0.75rem 1.125rem;
   }
-  .hospitals-industry-page .hospital-form-wrap button[type="submit"]:hover { background-color: #2F3F94; }
+  .c1-industry-page .c1-industry-form-wrap button[type="submit"]:hover { background-color: #2F3F94; }
 </style>
 
 <script>
-  // Industry-specific carousel — runs on every .hospital-carousel element. Auto-advances
+  // Industry-specific carousel — runs on every .c1-industry-carousel element. Auto-advances
   // while in viewport, pauses on hover, and supports dot-click jumps.
   (function () {
     function initCarousel(el) {
-      var slides = el.querySelectorAll('.hospital-slide');
+      var slides = el.querySelectorAll('.c1-industry-slide');
       if (slides.length === 0) return;
       var interval = parseInt(el.getAttribute('data-interval'), 10) || 3000;
       var current = 0;
@@ -104,7 +104,7 @@
           timer = setInterval(function () { show(current + 1); }, interval);
         }
       }
-      el.querySelectorAll('.hospital-dot').forEach(function (d) {
+      el.querySelectorAll('.c1-industry-dot').forEach(function (d) {
         d.addEventListener('click', function () {
           show(parseInt(d.getAttribute('data-dot'), 10) || 0);
           maybeStart();
@@ -129,7 +129,7 @@
       }
     }
     function init() {
-      document.querySelectorAll('.hospital-carousel').forEach(initCarousel);
+      document.querySelectorAll('.c1-industry-carousel').forEach(initCarousel);
     }
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', init);
