@@ -40,13 +40,12 @@
   <section class="bg-[#060813] py-24">
     <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-10 items-center text-center">
       <h2 class="font-display font-semibold text-white text-base md:text-xl m-0">Trusted by brands who move fast and scale big</h2>
-      <div class="flex flex-wrap justify-center items-center gap-8">
-        <img src="https://hj5v68xn.media.zestyio.com/tsa_reversed.svg" alt="The Salvation Army" class="h-8 md:h-10 opacity-90"/>
-        <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-8 md:h-10 opacity-90"/>
-        <img src="https://hj5v68xn.media.zestyio.com/phoenix-suns_reversed.svg" alt="Phoenix Suns" class="h-8 md:h-10 opacity-90"/>
-        <img src="https://hj5v68xn.media.zestyio.com/kin_reversed.svg" alt="Kin Insurance" class="h-8 md:h-10 opacity-90"/>
-        <img src="https://hj5v68xn.media.zestyio.com/wattpad_reversed.svg" alt="Wattpad" class="h-8 md:h-10 opacity-90"/>
-        <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-8 md:h-10 opacity-90"/>
+      <div class="flex flex-wrap justify-center items-center gap-x-10 gap-y-8">
+        {{each customer as cus where cus.name not like '%technical%' AND name not like '%federated%' limit 6 sort by rand()}}
+          <a href="{{cus.getURL()}}" class="solutions-logo flex items-center justify-center h-10 md:h-12 transition" aria-label="{{cus.name}}">
+            <img src="{{cus.logo.getImage(220)}}" alt="{{cus.name}} logo" class="solutions-logo__image h-full w-auto" loading="lazy" />
+          </a>
+        {{/each}}
       </div>
     </div>
   </section>
@@ -283,6 +282,19 @@
     border: 1px solid rgba(255,255,255,0.1);
     color: #c7d2fe;
     backdrop-filter: blur(8px);
+  }
+  /* Render the dynamic customer-model logos as consistent white silhouettes
+     against the dark social-proof bg. Customers upload color logos sized for
+     light backgrounds; this normalizes them on contact. */
+  .marketing-websites-page .solutions-logo__image {
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity .2s ease;
+    max-height: 100%;
+  }
+  .marketing-websites-page .solutions-logo:hover .solutions-logo__image,
+  .marketing-websites-page .solutions-logo:focus .solutions-logo__image {
+    opacity: 1;
   }
 </style>
 
