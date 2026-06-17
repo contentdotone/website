@@ -283,18 +283,20 @@
     color: #c7d2fe;
     backdrop-filter: blur(8px);
   }
-  /* Render the dynamic customer-model logos as consistent white silhouettes
-     against the dark social-proof bg. Customers upload color logos sized for
-     light backgrounds; this normalizes them on contact. */
+  /* Render dynamic customer-model logos as soft off-white silhouettes against
+     the dark social-proof bg. Pulling brightness back from pure white + lower
+     opacity lets the bg bleed through subtly so logos with solid color fills
+     (Salvation Army shield, PetDesk disc) retain edge / shape definition
+     instead of flattening into a uniform white blob. */
   .marketing-websites-page .solutions-logo__image {
-    filter: brightness(0) invert(1);
-    opacity: 0.85;
+    filter: grayscale(1) brightness(0) invert(1) brightness(0.88);
+    opacity: 0.7;
     transition: opacity .2s ease;
     max-height: 100%;
   }
   .marketing-websites-page .solutions-logo:hover .solutions-logo__image,
   .marketing-websites-page .solutions-logo:focus .solutions-logo__image {
-    opacity: 1;
+    opacity: 0.95;
   }
 </style>
 
