@@ -283,20 +283,20 @@
     color: #c7d2fe;
     backdrop-filter: blur(8px);
   }
-  /* Render dynamic customer-model logos as soft off-white silhouettes against
-     the dark social-proof bg. Pulling brightness back from pure white + lower
-     opacity lets the bg bleed through subtly so logos with solid color fills
-     (Salvation Army shield, PetDesk disc) retain edge / shape definition
-     instead of flattening into a uniform white blob. */
+  /* Dynamic customer logos on dark bg — keep 10% of source luminance through
+     the initial knockout (brightness(0.1) instead of brightness(0)) so anti-
+     aliased edges and internal tonal variation survive the inversion. Solid
+     fills (Salvation Army shield, PetDesk disc) gain back enough edge /
+     interior definition not to read as flat blobs. */
   .marketing-websites-page .solutions-logo__image {
-    filter: grayscale(1) brightness(0) invert(1) brightness(0.88);
-    opacity: 0.7;
+    filter: grayscale(1) brightness(0.1) invert(1);
+    opacity: 0.85;
     transition: opacity .2s ease;
     max-height: 100%;
   }
   .marketing-websites-page .solutions-logo:hover .solutions-logo__image,
   .marketing-websites-page .solutions-logo:focus .solutions-logo__image {
-    opacity: 0.95;
+    opacity: 1;
   }
 </style>
 
