@@ -387,6 +387,13 @@
         title: "Marketing Manager",
         company: "Psyonix",
         image: "https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg"
+      },
+      {
+        quote: "“We need software that's both secure and agile. After seven years, we continue to build on Content.One because the platform listens, evolves, and stays reliable.”",
+        name: "Ben Johnson",
+        title: "Director of Technology Operations",
+        company: "Bluepixel",
+        image: "https://hj5v68xn.media.zestyio.com/Ben.webp"
       }
     ];
     function initTestimonial(section) {
