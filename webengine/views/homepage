@@ -172,50 +172,98 @@
   </div>
 </section>
 
-<!-- ════════════ PLATFORM HIGHLIGHTS — apple bento grid ════════════ -->
-<section class="py-20 lg:py-28 bg-paper">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-14 lg:mb-20">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-royal mb-4">The platform</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.05]" style="letter-spacing:-0.025em">Built for marketing teams that need to move.</h2>
+<!-- ════════════ FEATURES SECTION — Figma 13882:5843 (Untitled-C1) ════════════ -->
+<section class="bg-black py-24" data-figma-node="13882:5843">
+  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-col gap-16">
+    <!-- Heading + supporting text -->
+    <div class="max-w-[768px] flex flex-col gap-5">
+      <h2 class="font-display font-semibold text-white text-[28px] leading-[36px] md:text-[36px] md:leading-[44px]" style="letter-spacing:-0.72px">All your content needs, in one platform.</h2>
+      <p class="font-sans font-medium text-[#b1bae7] text-base leading-6">
+        Content.One is an enterprise content management system with AI built-in. Teams use it to draft, govern, and publish content across every channel they need to be on. Generative AI accelerates the work; your team controls every word that ships.
+      </p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      <!-- Hero bento tile: spans 2 cols on lg+ -->
-      <article class="group lg:col-span-2 row-span-1 relative overflow-hidden rounded-3xl bg-gradient-to-br from-ink via-royalDark to-royal text-white p-10 lg:p-14 min-h-[360px] flex flex-col justify-between transition-all hover:shadow-2xl hover:shadow-royal/30">
-        <div class="absolute -top-32 -right-32 w-96 h-96 rounded-full bg-white/10 blur-3xl"></div>
-        <div class="relative">
-          <div class="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur border border-white/20 px-3 py-1 text-[0.65rem] font-mono uppercase tracking-[0.2em] mb-6">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            Now in GA
+    <!-- 4-card grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Card 1 — stars-01 (AI drafts) -->
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
+        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/>
+            <path d="M5 16l.75 2.25L8 19l-2.25.75L5 22l-.75-2.25L2 19l2.25-.75L5 16z"/>
+          </svg>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h3 class="font-sans font-semibold text-white text-lg leading-7">AI creates drafts, for humans to refine.</h3>
+            <p class="font-sans text-white/70 text-base leading-6">AI drafts, summaries, translations, and variants. Your team approves, edits, or rejects before anything goes live. Brand voice and approval flow are built in.</p>
           </div>
-          <h3 class="font-display text-3xl md:text-4xl lg:text-5xl font-semibold leading-[1.05] max-w-xl" style="letter-spacing:-0.025em">Agentic page building.</h3>
-          <p class="text-white/75 text-base md:text-lg mt-5 max-w-md leading-relaxed">Write a prompt. Watch agent.content.one build a full schema, page, image set, and ready-to-publish layout — in roughly one to two minutes.</p>
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+            Learn more
+            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
         </div>
-        <a href="https://agent.content.one" target="_blank" rel="noopener" class="relative mt-8 inline-flex items-center gap-1.5 text-sm font-semibold text-white group/cta self-start">
-          See agent.content.one
-          <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
       </article>
-      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
-        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
-          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <!-- Card 2 — browser (Visual editing) -->
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
+        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="16" rx="2"/>
+            <line x1="3" y1="9" x2="21" y2="9"/>
+            <circle cx="6.5" cy="6.5" r="0.6" fill="currentColor"/>
+            <circle cx="9" cy="6.5" r="0.6" fill="currentColor"/>
+            <circle cx="11.5" cy="6.5" r="0.6" fill="currentColor"/>
+          </svg>
         </div>
-        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Central control hub.</h3>
-        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Re-usable blocks for marketers and developers to share, govern, and ship organization-wide.</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h3 class="font-sans font-semibold text-white text-lg leading-7">Visual editing lets you build pages, without code.</h3>
+            <p class="font-sans text-white/70 text-base leading-6">Drag, drop, edit, publish. Reusable blocks. Approval flows that move with the content, not a parallel ticket system.</p>
+          </div>
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+            Learn more
+            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </article>
-      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
-        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
-          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+      <!-- Card 3 — database-01 (Enterprise platform) -->
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
+        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+            <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
+          </svg>
         </div>
-        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Headless APIs &amp; webhooks.</h3>
-        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Publish anywhere, trigger custom workflows, integrate with the systems you already trust.</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h3 class="font-sans font-semibold text-white text-lg leading-7">An enterprise-grade platform powers it all.</h3>
+            <p class="font-sans text-white/70 text-base leading-6">Composable, hybrid, or headless, pick your architecture. REST and GraphQL APIs, custom endpoints, structured content models that work long-term.</p>
+          </div>
+          <a href="/solutions/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+            Learn more
+            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </article>
-      <article class="group p-8 lg:p-10 rounded-3xl border border-gray-200 bg-white hover:border-royal/40 hover:shadow-xl transition flex flex-col min-h-[280px]">
-        <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center mb-6">
-          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+      <!-- Card 4 — lock-02 (Trust) -->
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
+        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
+          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="4" y="11" width="16" height="10" rx="2"/>
+            <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
+            <circle cx="12" cy="16" r="1"/>
+          </svg>
         </div>
-        <h3 class="font-display text-xl lg:text-2xl font-semibold text-ink mb-3" style="letter-spacing:-0.015em">Powerful analytics.</h3>
-        <p class="text-sm md:text-base text-gray-600 leading-relaxed">Measure, test, and optimize in real time. Insights without exporting to another tool.</p>
+        <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-1">
+            <h3 class="font-sans font-semibold text-white text-lg leading-7">Trust is baked-into Content.One by default.</h3>
+            <p class="font-sans text-white/70 text-base leading-6">OWASP-certified. Roles, audit logs, environment separation, SSO. AI guardrails you configure, not us.</p>
+          </div>
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+            Learn more
+            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
       </article>
     </div>
   </div>
