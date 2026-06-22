@@ -1,19 +1,30 @@
 <div class="drag-drop-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-drag relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
-          <p class="text-lg text-gray-600 mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See Freestyle in action</a>
-            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore customer stories</a>
-          </div> 
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-full h-full object-cover">
+
+  <!-- ════════════ HERO — Figma 13863:4419 (XL) / 4433 (LG) / 4449 (MD) / 4465 (SM)
+       Dark gradient bg, left-aligned content (badge + display-lg H1 with -0.96px
+       tracking + secondary-color body), two skeumorphic CTAs (royal primary + white
+       outlined). Single-column at all breakpoints in the Figma — no right-rail GIF. -->
+  <section class="drag-drop-hero relative overflow-hidden pt-24 lg:pt-32 pb-20 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative">
+      <div class="max-w-[480px] md:max-w-[640px] flex flex-col gap-12">
+        <div class="flex flex-col gap-6">
+          <div class="flex flex-col gap-4">
+            <span class="self-start inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040]">Visual Drag-n-Drop Pages</span>
+            <h1 class="font-display font-semibold text-white
+                       text-[30px] leading-[38px]
+                       md:text-[36px] md:leading-[44px] md:tracking-[-0.72px]
+                       lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] m-0">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
           </div>
+          <p class="text-[#b1bae7]
+                    text-sm leading-5 tracking-[0.14px]
+                    md:text-base md:leading-6 md:tracking-normal
+                    lg:text-xl lg:leading-[30px]
+                    max-w-[480px] m-0">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+        </div>
+
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/book-a-demo/" class="drag-drop-cta-primary inline-flex items-center justify-center rounded-lg text-white font-semibold text-base leading-6 px-[18px] py-3 border-2 border-white/[0.12] shadow-sm transition">See Freestyle in Action</a>
+          <a href="/customers/" class="drag-drop-cta-secondary inline-flex items-center justify-center rounded-lg bg-white text-[#404040] hover:bg-gray-50 font-semibold text-base leading-6 px-[18px] py-3 border border-[#d4d4d4] shadow-sm transition">Explore Customer Stories</a>
         </div>
       </div>
     </div>
@@ -333,6 +344,29 @@
 </div>
 
 <style>
+  /* Hero — Figma 13863:4419. Dark gradient backdrop matching the rest of the
+     new Apple-scale industry/feature page hero language. */
+  .drag-drop-feature-page .drag-drop-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+  }
+  /* Primary CTA — royal #31429b fill, skeumorphic inset border + bottom highlight
+     per Figma "Shadows/shadow-xs-skeuomorphic" effect spec. */
+  .drag-drop-feature-page .drag-drop-cta-primary {
+    background-color: #31429b;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .drag-drop-feature-page .drag-drop-cta-primary:hover { background-color: #2F3F94; }
+  /* Secondary CTA — white fill, gray-300 border, same skeumorphic inset shadow. */
+  .drag-drop-feature-page .drag-drop-cta-secondary {
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  /* Legacy classes retained — still used by sections below the hero (stat strip etc). */
   .drag-drop-feature-page .bg-gradient-drag {
     background: linear-gradient(135deg, #111827 0%, #2563eb 40%, #ec4899 100%);
   }
