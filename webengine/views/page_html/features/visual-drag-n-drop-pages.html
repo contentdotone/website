@@ -39,9 +39,9 @@
       <p class="drag-drop-trust__heading">Trusted by fast-moving teams</p>
       <div class="drag-drop-trust__logos">
         {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-          <a href="{{cus.getURL()}}" class="drag-drop-trust__logo" aria-label="{{cus.name}}">
-            <img src="{{cus.logo.getImage(220)}}" alt="{{cus.name}} logo" class="drag-drop-trust__logo-img" loading="lazy" />
-          </a>
+        <a href="{{cus.getURL()}}" class="drag-drop-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="drag-drop-trust__logo-img">
+        </a>
         {{/each}}
       </div>
       <p class="drag-drop-trust__body">Freestyle turns components into reusable Blocks that marketers can drag, drop, and publish across any page. Pair your headless content models with design tokens or use Content.One’s templating—either way, brand consistency stays locked in.</p>
