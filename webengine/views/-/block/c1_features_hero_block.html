@@ -1,56 +1,150 @@
 <!-- C1 Features Hero Block — Block model 6-dad8d5b1a8-mhb7xr.
      Fields: overline, title, subheading, image, cta_1, cta_1_link, cta_2, cta_2_link.
-     Variants: pages reference by variant ZUID via {{blocks('7-...')}} or via a
-     content-field reference. Visual treatment per Figma 13863:4419 (XL),
-     13863:4433 (LG), 13863:4449 (MD), 13863:4465 (SM). Dark gradient hero,
-     left-aligned single column, skeumorphic CTAs. -->
-<section class="c1-features-hero relative overflow-hidden pt-24 lg:pt-32 pb-20 lg:pb-24">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-8 relative">
-    <div class="max-w-[480px] md:max-w-[640px] flex flex-col gap-12">
-      <div class="flex flex-col gap-6">
-        <div class="flex flex-col gap-4">
-          {{if {this.overline} }}
-            <span class="self-start inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040]">{{this.overline}}</span>
-          {{end-if}}
-          <h1 class="font-display font-semibold text-white text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] md:tracking-[-0.72px] lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] m-0">{{this.title}}</h1>
-        </div>
-        {{if {this.subheading} }}
-          <p class="text-[#b1bae7] text-sm leading-5 tracking-[0.14px] md:text-base md:leading-6 md:tracking-normal lg:text-xl lg:leading-[30px] max-w-[480px] m-0">{{this.subheading}}</p>
+     Visual treatment per Figma 13863:4419 (XL), 13863:4433 (LG), 13863:4449 (MD),
+     13863:4465 (SM). Dark gradient hero, left-aligned single column, skeumorphic CTAs.
+     Critical visual properties (padding / type ramp / max-widths) inlined via the
+     scoped <style> at the bottom rather than Tailwind utilities — Tailwind Play CDN
+     was missing arbitrary-value classes on this page's runtime scan. -->
+<section class="c1-features-hero">
+  <div class="c1-features-hero__container">
+    <div class="c1-features-hero__content">
+
+      <div class="c1-features-hero__heading-group">
+        {{if {this.overline} }}
+          <span class="c1-features-hero__overline">{{this.overline}}</span>
         {{end-if}}
+        <h1 class="c1-features-hero__title">{{this.title}}</h1>
       </div>
 
+      {{if {this.subheading} }}
+        <p class="c1-features-hero__subheading">{{this.subheading}}</p>
+      {{end-if}}
+
       {{if {this.cta_1} OR {this.cta_2} }}
-      <div class="flex flex-col sm:flex-row gap-4">
+      <div class="c1-features-hero__ctas">
         {{if {this.cta_1} }}
-          <a href="{{this.cta_1_link.getURL()}}" class="c1-features-hero__cta-primary inline-flex items-center justify-center rounded-lg text-white font-semibold text-base leading-6 px-[18px] py-3 border-2 border-white/[0.12] shadow-sm transition">{{this.cta_1}}</a>
+          <a href="{{this.cta_1_link.getURL()}}" class="c1-features-hero__cta c1-features-hero__cta--primary">{{this.cta_1}}</a>
         {{end-if}}
         {{if {this.cta_2} }}
-          <a href="{{this.cta_2_link.getURL()}}" class="c1-features-hero__cta-secondary inline-flex items-center justify-center rounded-lg bg-white text-[#404040] hover:bg-gray-50 font-semibold text-base leading-6 px-[18px] py-3 border border-[#d4d4d4] shadow-sm transition">{{this.cta_2}}</a>
+          <a href="{{this.cta_2_link.getURL()}}" class="c1-features-hero__cta c1-features-hero__cta--secondary">{{this.cta_2}}</a>
         {{end-if}}
       </div>
       {{end-if}}
+
     </div>
   </div>
 </section>
 
 <style>
+  /* Self-contained CSS so the block renders regardless of which page's Tailwind
+     scan has compiled which utility classes. */
   .c1-features-hero {
     background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
+    position: relative;
+    overflow: hidden;
   }
-  /* Skeumorphic primary CTA — Figma shadow-xs-skeuomorphic (drop-shadow + inset border + inset bottom highlight). */
-  .c1-features-hero__cta-primary {
+  @media (min-width: 1024px) {
+    .c1-features-hero { padding: 128px 0 96px; }
+  }
+  .c1-features-hero__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .c1-features-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .c1-features-hero__container { padding: 0 2rem; } }
+  .c1-features-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 480px;
+  }
+  @media (min-width: 768px) { .c1-features-hero__content { max-width: 640px; } }
+  .c1-features-hero__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .c1-features-hero__overline {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: #404040;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .c1-features-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .c1-features-hero__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; }
+  }
+  @media (min-width: 1024px) {
+    .c1-features-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -0.96px; }
+  }
+  .c1-features-hero__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    max-width: 480px;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .c1-features-hero__subheading { font-size: 16px; line-height: 24px; letter-spacing: normal; }
+  }
+  @media (min-width: 1024px) {
+    .c1-features-hero__subheading { font-size: 20px; line-height: 30px; }
+  }
+  .c1-features-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 640px) {
+    .c1-features-hero__ctas { flex-direction: row; }
+  }
+  .c1-features-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .c1-features-hero__cta--primary {
     background-color: #31429b;
-    box-shadow:
-      0 1px 2px 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
   }
-  .c1-features-hero__cta-primary:hover { background-color: #2F3F94; }
-  /* Skeumorphic secondary CTA — same shadow recipe on a white fill. */
-  .c1-features-hero__cta-secondary {
-    box-shadow:
-      0 1px 2px 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  .c1-features-hero__cta--primary:hover { background-color: #2F3F94; }
+  .c1-features-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
   }
+  .c1-features-hero__cta--secondary:hover { background-color: #f9fafb; }
 </style>
