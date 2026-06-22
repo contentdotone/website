@@ -1,20 +1,27 @@
 <div class="drag-drop-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-drag relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
-          <p class="text-lg text-gray-600 mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See Freestyle in action</a>
-            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore customer stories</a>
-          </div> 
+
+  <!-- ════════════ HERO — Figma 13863:4419 (XL) / 4433 (LG) / 4449 (MD) / 4465 (SM)
+       Dark gradient bg, badge + display-lg H1 with -0.96px tracking + secondary-color
+       body, two skeumorphic CTAs (royal primary + white outlined). Single-column at
+       all breakpoints. All styles in plain CSS in the <style> block at the bottom of
+       this file — no Tailwind utilities so the hero renders deterministically
+       regardless of Play CDN's runtime class scan. -->
+  <section class="drag-drop-hero">
+    <div class="drag-drop-hero__container">
+      <div class="drag-drop-hero__content">
+
+        <div class="drag-drop-hero__heading-group">
+          <span class="drag-drop-hero__overline">Visual Drag-n-Drop Pages</span>
+          <h1 class="drag-drop-hero__title">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-full h-full object-cover">
-          </div>
+
+        <p class="drag-drop-hero__subheading">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+
+        <div class="drag-drop-hero__ctas">
+          <a href="/book-a-demo/" class="drag-drop-hero__cta drag-drop-hero__cta--primary">See Freestyle in Action</a>
+          <a href="/customers/" class="drag-drop-hero__cta drag-drop-hero__cta--secondary">Explore Customer Stories</a>
         </div>
+
       </div>
     </div>
   </section>
@@ -333,6 +340,120 @@
 </div>
 
 <style>
+  /* ─── Hero (Figma 13863:4419 + responsive variants) ──────────────────
+     Plain CSS, no Tailwind utilities — renders deterministically regardless
+     of Play CDN runtime class scan. */
+  .drag-drop-feature-page .drag-drop-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero { padding: 128px 0 96px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 2rem; } }
+  .drag-drop-feature-page .drag-drop-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 480px;
+  }
+  @media (min-width: 768px) { .drag-drop-feature-page .drag-drop-hero__content { max-width: 640px; } }
+  .drag-drop-feature-page .drag-drop-hero__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .drag-drop-feature-page .drag-drop-hero__overline {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: #404040;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .drag-drop-feature-page .drag-drop-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-hero__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; }
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -0.96px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    max-width: 480px;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-hero__subheading { font-size: 16px; line-height: 24px; letter-spacing: normal; }
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__subheading { font-size: 20px; line-height: 30px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 640px) {
+    .drag-drop-feature-page .drag-drop-hero__ctas { flex-direction: row; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--primary:hover { background-color: #2F3F94; }
+  .drag-drop-feature-page .drag-drop-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--secondary:hover { background-color: #f9fafb; }
+
+  /* Legacy classes — still used by sections below the hero. */
   .drag-drop-feature-page .bg-gradient-drag {
     background: linear-gradient(135deg, #111827 0%, #2563eb 40%, #ec4899 100%);
   }
