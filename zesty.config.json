@@ -1,893 +1,887 @@
 {
-  "instance_zuid": "8-98969f9fe2-5w3x3g",
-  "instance": {
-    "views": {
-      "homepage": {
-        "zuid": "11-a8b694fbef-kq7ds0",
-        "type": "templateset",
-        "updatedAt": "2018-08-13T22:56:07Z",
-        "createdAt": "2026-04-23T19:39:30Z"
-      },
-      "loader": {
-        "zuid": "11-e4fe95fbef-b3kn74",
-        "type": "snippet",
-        "updatedAt": "2018-08-13T22:56:07Z",
-        "createdAt": "2026-04-23T19:39:44Z"
-      },
-      "/components/nav.html": {
-        "zuid": "11-d2b1c58ff3-1dm88s",
-        "type": "ajax-json",
-        "updatedAt": "2025-03-14T19:29:05Z",
-        "createdAt": "2026-04-20T15:11:19Z"
-      },
-      "/assets/theme.css": {
-        "zuid": "11-9ad6dec9d3-9znmtm",
-        "type": "ajax-json",
-        "updatedAt": "2025-03-14T19:33:35Z",
-        "createdAt": "2025-09-07T20:21:51Z"
-      },
-      "/assets/theme.min.js": {
-        "zuid": "11-e299d5e4f6-6br1cw",
-        "type": "ajax-json",
-        "updatedAt": "2025-03-14T19:39:58Z",
-        "createdAt": "2025-03-14T20:14:01Z"
-      },
-      "industries": {
-        "zuid": "11-c4f9fce9d6-shm8f4",
-        "type": "pageset",
-        "updatedAt": "2025-03-14T19:53:56Z",
-        "createdAt": "2026-01-23T18:27:00Z"
-      },
-      "/components/footer.html": {
-        "zuid": "11-9680efe6c2-1zp3dq",
-        "type": "ajax-json",
-        "updatedAt": "2025-03-14T21:08:54Z",
-        "createdAt": "2026-02-26T20:14:50Z"
-      },
-      "about": {
-        "zuid": "11-80e197a7b7-g6vb89",
-        "type": "templateset",
-        "updatedAt": "2025-05-21T20:20:18Z",
-        "createdAt": "2026-01-16T04:36:32Z"
-      },
-      "/-/block/review_block.html": {
-        "zuid": "11-cecdcbc1d3-px5wrz",
-        "type": "block",
-        "updatedAt": "2025-05-27T20:02:56Z",
-        "createdAt": "2025-09-04T14:35:26Z"
-      },
-      "/-/block/form_capture.html": {
-        "zuid": "11-e6fec6a5e8-tgjsfq",
-        "type": "block",
-        "updatedAt": "2025-05-27T20:12:09Z",
-        "createdAt": "2025-11-01T18:46:16Z"
-      },
-      "/-/block/sales_personal_cta.html": {
-        "zuid": "11-d6f3f0dfec-tdl2n1",
-        "type": "block",
-        "updatedAt": "2025-05-27T20:39:56Z",
-        "createdAt": "2025-11-14T22:33:04Z"
-      },
-      "/-/block/consulting_provided.html": {
-        "zuid": "11-a0d6a781d2-nrmlvb",
-        "type": "block",
-        "updatedAt": "2025-05-27T21:00:47Z",
-        "createdAt": "2026-01-30T19:38:25Z"
-      },
-      "product_tour": {
-        "zuid": "11-aecfc5f3c0-tgxk51",
-        "type": "templateset",
-        "updatedAt": "2025-06-01T10:34:20Z",
-        "createdAt": "2025-11-05T17:15:28Z"
-      },
-      "product_tour_pages": {
-        "zuid": "11-f88b81de83-m5n4b0",
-        "type": "pageset",
-        "updatedAt": "2025-06-01T10:35:20Z",
-        "createdAt": "2025-10-24T18:06:25Z"
-      },
-      "product_solutions": {
-        "zuid": "11-eec4b8aaf7-hrg59z",
-        "type": "pageset",
-        "updatedAt": "2025-06-09T15:17:18Z",
-        "createdAt": "2025-10-24T03:04:33Z"
-      },
-      "/components/homepage/home-hero.html": {
-        "zuid": "11-eeffb3909e-s5hz81",
-        "type": "ajax-json",
-        "updatedAt": "2025-08-27T20:00:48Z",
-        "createdAt": "2025-11-05T18:17:00Z"
-      },
-      "/-/block/client_logos.html": {
-        "zuid": "11-d0c6ba919e-lk12q4",
-        "type": "block",
-        "updatedAt": "2025-09-03T22:33:42Z",
-        "createdAt": "2025-09-07T13:16:19Z"
-      },
-      "/-/block/feature_highlight.html": {
-        "zuid": "11-beb097baa4-xhn1wh",
-        "type": "block",
-        "updatedAt": "2025-09-04T02:37:40Z",
-        "createdAt": "2025-09-04T14:13:51Z"
-      },
-      "/components/features/block_highlight.html": {
-        "zuid": "11-d0b2c4d8cb-33nddj",
-        "type": "ajax-json",
-        "updatedAt": "2025-09-04T02:52:22Z",
-        "createdAt": "2025-10-31T18:36:02Z"
-      },
-      "/components/features/analytics_highlight.html": {
-        "zuid": "11-88d4a0c9fe-gmh9nv",
-        "type": "ajax-json",
-        "updatedAt": "2025-09-04T03:13:05Z",
-        "createdAt": "2025-10-31T18:44:18Z"
-      },
-      "/components/forms/zoho-form.html": {
-        "zuid": "11-cc93e38af9-rmfgk1",
-        "type": "ajax-json",
-        "updatedAt": "2025-09-04T20:04:41Z",
-        "createdAt": "2026-03-26T20:35:05Z"
-      },
-      "/-/block/demo_form_signup.html": {
-        "zuid": "11-becd95ad87-f010pv",
-        "type": "block",
-        "updatedAt": "2025-09-05T16:36:48Z",
-        "createdAt": "2025-09-05T16:36:48Z"
-      },
-      "contact_us": {
-        "zuid": "11-a287c0abd6-kdv7gl",
-        "type": "templateset",
-        "updatedAt": "2025-09-05T20:26:37Z",
-        "createdAt": "2026-03-05T00:28:20Z"
-      },
-      "/components/ctas/book-button.html": {
-        "zuid": "11-ccdfe5b99a-cw11dh",
-        "type": "ajax-json",
-        "updatedAt": "2025-09-05T20:37:39Z",
-        "createdAt": "2026-03-13T15:13:35Z"
-      },
-      "/components/ctas/email-subscription-form.html": {
-        "zuid": "11-b2c7e88eb3-s3jf4m",
-        "type": "ajax-json",
-        "updatedAt": "2025-09-06T01:59:50Z",
-        "createdAt": "2025-09-06T02:35:15Z"
-      },
-      "basic_page": {
-        "zuid": "11-c6a381a0f9-vx91vm",
-        "type": "templateset",
-        "updatedAt": "2025-09-06T02:04:34Z",
-        "createdAt": "2026-03-27T17:00:49Z"
-      },
-      "404-page": {
-        "zuid": "11-e691afacc8-nxl051",
-        "type": "snippet",
-        "updatedAt": "2025-09-06T13:15:20Z",
-        "createdAt": "2025-09-06T13:26:27Z"
-      },
-      "/components/casestudy/tsa.html": {
-        "zuid": "11-90d199fa87-qlhfqb",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-06T12:26:43Z",
-        "createdAt": "2026-03-27T17:01:04Z"
-      },
-      "customers": {
-        "zuid": "11-c2d1dbefac-mn7q8n",
-        "type": "templateset",
-        "updatedAt": "2025-10-06T14:39:05Z",
-        "createdAt": "2026-01-16T17:34:09Z"
-      },
-      "customer": {
-        "zuid": "11-94b8f4b98c-lrdw00",
-        "type": "pageset",
-        "updatedAt": "2025-10-06T14:40:10Z",
-        "createdAt": "2025-12-16T02:57:59Z"
-      },
-      "/components/casestudy/rocket_league.html": {
-        "zuid": "11-a885c7f3c6-7t5zvp",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-07T20:16:42Z",
-        "createdAt": "2026-03-27T17:01:22Z"
-      },
-      "/components/casestudy/sony.html": {
-        "zuid": "11-82afb7999e-nn45tn",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-10T18:16:30Z",
-        "createdAt": "2026-03-27T17:01:09Z"
-      },
-      "/components/casestudy/tsa-odd.html": {
-        "zuid": "11-e6b18590fd-skdhqg",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-10T20:41:53Z",
-        "createdAt": "2026-03-27T17:01:06Z"
-      },
-      "/components/casestudy/tsa-federated-franchise.html": {
-        "zuid": "11-dce3a9e389-2lqbsq",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-12T19:27:41Z",
-        "createdAt": "2026-02-13T17:47:41Z"
-      },
-      "/components/casestudy/petdesk.html": {
-        "zuid": "11-b4cf9285f4-3x2590",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-15T15:33:34Z",
-        "createdAt": "2026-03-27T17:01:25Z"
-      },
-      "/components/casestudy/singlife.html": {
-        "zuid": "11-aaaaa08694-q0zmg9",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-21T21:08:59Z",
-        "createdAt": "2026-03-27T17:01:14Z"
-      },
-      "/components/casestudy/wattpad.html": {
-        "zuid": "11-e6f5f1f1b9-n7pnzt",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-21T21:53:10Z",
-        "createdAt": "2026-03-27T17:00:59Z"
-      },
-      "/components/casestudy/draftkings.html": {
-        "zuid": "11-b28c9cc689-vff28h",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-22T21:57:36Z",
-        "createdAt": "2026-03-27T17:01:27Z"
-      },
-      "/components/casestudy/uber.html": {
-        "zuid": "11-a8a5a0b58b-mmt4vn",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T00:07:35Z",
-        "createdAt": "2026-03-27T17:01:02Z"
-      },
-      "/components/casestudy/side-cta.html": {
-        "zuid": "11-acacd6a6bf-3k9h7p",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T02:51:12Z",
-        "createdAt": "2026-03-27T17:01:16Z"
-      },
-      "/page_html/solutions/marketing-website.html": {
-        "zuid": "11-e288a6b38f-6k2q6g",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T17:13:49Z",
-        "createdAt": "2025-10-24T02:55:22Z"
-      },
-      "/page_html/solutions/global-directory.html": {
-        "zuid": "11-9cb9e6f886-x4q9kb",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T19:43:15Z",
-        "createdAt": "2025-10-24T15:13:32Z"
-      },
-      "/page_html/solutions/ai-document-management.html": {
-        "zuid": "11-969296b6f7-ql1gw9",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T19:53:32Z",
-        "createdAt": "2025-10-24T02:55:16Z"
-      },
-      "/page_html/solutions/federated-multisite.html": {
-        "zuid": "11-acd88add98-gpl6qs",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T20:18:48Z",
-        "createdAt": "2026-01-16T17:50:49Z"
-      },
-      "/page_html/solutions/org-ai-chatbot.html": {
-        "zuid": "11-c4e1e8a6fc-dxww4d",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T20:54:49Z",
-        "createdAt": "2025-10-24T02:55:10Z"
-      },
-      "/page_html/solutions/mobile-app.html": {
-        "zuid": "11-9ebefcad82-0z1vvf",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T21:09:43Z",
-        "createdAt": "2025-10-24T02:55:08Z"
-      },
-      "/page_html/solutions/story-hub.html": {
-        "zuid": "11-9cd7e8c092-m70wt9",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-23T21:24:56Z",
-        "createdAt": "2025-10-24T02:55:05Z"
-      },
-      "/page_html/features/visual-drag-n-drop-pages.html": {
-        "zuid": "11-b4beb9ea83-t4pb4z",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-24T16:59:08Z",
-        "createdAt": "2025-10-24T19:43:29Z"
-      },
-      "/page_html/features/wysiwyg-and-markdown-support.html": {
-        "zuid": "11-f4bcb2e1eb-rgh838",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-24T17:24:34Z",
-        "createdAt": "2025-11-03T22:19:38Z"
-      },
-      "/components/widgets/random_quotes.html": {
-        "zuid": "11-fea1affcde-mq1s19",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-24T18:47:52Z",
-        "createdAt": "2025-11-05T06:21:47Z"
-      },
-      "/page_html/features/scheduled-publishing-and-expiry.html": {
-        "zuid": "11-a8bfd5e6f4-sr7137",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-24T19:59:47Z",
-        "createdAt": "2025-10-30T13:20:22Z"
-      },
-      "/page_html/features/multilingual-and-localization-tools.html": {
-        "zuid": "11-fcf5b782f8-2dqqq7",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-24T20:05:48Z",
-        "createdAt": "2025-10-24T20:20:37Z"
-      },
-      "/page_html/features/generative-ai-content-acceleration.html": {
-        "zuid": "11-e0f79bb7ad-j7skfk",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-26T17:18:20Z",
-        "createdAt": "2025-10-26T17:26:13Z"
-      },
-      "/page_html/features/analytics.html": {
-        "zuid": "11-82f1c284eb-15lbt9",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-26T17:52:16Z",
-        "createdAt": "2025-11-07T02:51:56Z"
-      },
-      "/page_html/features/geo-and-seo.html": {
-        "zuid": "11-ac95bab08b-3g2vss",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-26T18:37:17Z",
-        "createdAt": "2025-10-26T19:26:00Z"
-      },
-      "/page_html/features/personalization.html": {
-        "zuid": "11-b4c7d994ae-hmgd8c",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-26T19:51:32Z",
-        "createdAt": "2025-10-26T20:11:23Z"
-      },
-      "/page_html/features/reusable-component-libraries.html": {
-        "zuid": "11-eaadaef890-4rx5pg",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-29T21:17:14Z",
-        "createdAt": "2025-11-04T00:10:43Z"
-      },
-      "/page_html/features/audit-logs-and-activity-tracking.html": {
-        "zuid": "11-aca7a790a8-1wv331",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T02:13:04Z",
-        "createdAt": "2025-10-30T03:47:35Z"
-      },
-      "/page_html/features/headless-and-apis.html": {
-        "zuid": "11-8cfc98c98a-chdbjk",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T05:04:14Z",
-        "createdAt": "2025-10-30T05:47:38Z"
-      },
-      "/components/widgets/logos.html": {
-        "zuid": "11-a886a09591-gl17q5",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T13:23:36Z",
-        "createdAt": "2025-10-31T14:41:29Z"
-      },
-      "/components/widgets/sso-options.html": {
-        "zuid": "11-aea882889b-bs2zc5",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T13:57:42Z",
-        "createdAt": "2025-10-30T14:22:12Z"
-      },
-      "/page_html/features/single-sign-on-sso-and-roles.html": {
-        "zuid": "11-a8bbc586d8-5ghhmz",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T14:41:22Z",
-        "createdAt": "2025-10-30T15:00:18Z"
-      },
-      "capterra_landing_page": {
-        "zuid": "11-bcb09498bf-xnvgzh",
-        "type": "templateset",
-        "updatedAt": "2025-10-30T15:38:00Z",
-        "createdAt": "2026-01-16T17:39:23Z"
-      },
-      "/page_html/industries/cms-for-insurance.html": {
-        "zuid": "11-949de5c894-q3793f",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T18:04:47Z",
-        "createdAt": "2026-01-16T17:34:27Z"
-      },
-      "/page_html/industries/cms-for-non-profits.html": {
-        "zuid": "11-d2d895afaf-dpr2gk",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T19:03:33Z",
-        "createdAt": "2026-01-16T17:36:54Z"
-      },
-      "/page_html/features/workflow-automation-and-approvals.html": {
-        "zuid": "11-faceefdbfa-jv54j4",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T19:14:53Z",
-        "createdAt": "2025-11-02T22:59:30Z"
-      },
-      "/components/widgets/random_quotes_micro.html": {
-        "zuid": "11-a6aff3dfbe-z97pgr",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T19:38:48Z",
-        "createdAt": "2025-10-31T14:22:55Z"
-      },
-      "/page_html/industries/cms-for-government-and-public-sector-organizations.html": {
-        "zuid": "11-c0e9f3d497-zznr4v",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T20:05:38Z",
-        "createdAt": "2026-01-16T17:34:24Z"
-      },
-      "/page_html/industries/cms-for-financial-institutions-and-fintech-banks.html": {
-        "zuid": "11-c2ddcebf8c-z8513d",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-30T20:31:57Z",
-        "createdAt": "2026-01-16T17:34:21Z"
-      },
-      "/components/ctas/customer-button.html": {
-        "zuid": "11-88df8a978c-590c3c",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-31T14:15:23Z",
-        "createdAt": "2025-10-31T14:15:30Z"
-      },
-      "/page_html/features/webhooks-for-real-time-integrations.html": {
-        "zuid": "11-f2ccfcac98-t25bcs",
-        "type": "ajax-json",
-        "updatedAt": "2025-10-31T18:50:00Z",
-        "createdAt": "2025-10-31T19:35:00Z"
-      },
-      "/page_html/features/visual-code-based-templating.html": {
-        "zuid": "11-b6aee59ea5-pb7972",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-01T18:44:16Z",
-        "createdAt": "2025-11-06T20:19:01Z"
-      },
-      "/page_html/features/template-versioning-and-rollbacks.html": {
-        "zuid": "11-e2a7e1fe9d-0p22fd",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-01T20:48:14Z",
-        "createdAt": "2025-11-01T20:50:54Z"
-      },
-      "/page_html/features/global-cdn-hosting.html": {
-        "zuid": "11-d8a8b8c9f8-h74mtt",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-02T21:24:45Z",
-        "createdAt": "2025-11-02T23:17:40Z"
-      },
-      "/page_html/features/data-encryption-and-security.html": {
-        "zuid": "11-ee8687e1dc-jnr9zr",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-02T23:01:45Z",
-        "createdAt": "2025-11-02T23:11:57Z"
-      },
-      "/page_html/features/automated-security-updates.html": {
-        "zuid": "11-faa0baaff5-gt1pv0",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-02T23:19:17Z",
-        "createdAt": "2025-11-02T23:33:14Z"
-      },
-      "leadership": {
-        "zuid": "11-d496f0e9aa-374w3d",
-        "type": "pageset",
-        "updatedAt": "2025-11-03T20:30:25Z",
-        "createdAt": "2026-01-12T19:05:05Z"
-      },
-      "solutions": {
-        "zuid": "11-e8d98fa7e8-s1s7z4",
-        "type": "templateset",
-        "updatedAt": "2025-11-05T15:18:23Z",
-        "createdAt": "2025-11-05T17:16:56Z"
-      },
-      "/components/homepage/hero-ai-cool.html": {
-        "zuid": "11-f0f5dfc6a1-6cs92r",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-05T20:04:50Z",
-        "createdAt": "2026-04-23T19:09:27Z"
-      },
-      "/components/homepage/personas.html": {
-        "zuid": "11-aac888abbc-m0rljq",
-        "type": "ajax-json",
-        "updatedAt": "2025-11-07T21:00:56Z",
-        "createdAt": "2025-11-10T18:19:23Z"
-      },
-      "/components/casestudy/side-cta copy.html": {
-        "zuid": "11-f0a4c599cd-qxnrk5",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-16T02:26:08Z",
-        "createdAt": "2025-12-16T02:26:08Z"
-      },
-      "/components/casestudy/sliver-cta.html": {
-        "zuid": "11-daf4e4d7f8-rhvd89",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-16T02:30:31Z",
-        "createdAt": "2026-03-27T17:01:12Z"
-      },
-      "components/features/hybrid": {
-        "zuid": "11-a084bc87cf-kb8bs1",
-        "type": "snippet",
-        "updatedAt": "2025-12-18T02:39:48Z",
-        "createdAt": "2025-12-18T02:39:48Z"
-      },
-      "/components/features/hybrid_advantage.html": {
-        "zuid": "11-84b7f7cff6-hbwnrc",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-18T02:45:54Z",
-        "createdAt": "2025-12-18T03:15:03Z"
-      },
-      "/components/features/flexstack.html": {
-        "zuid": "11-c2da89888a-hj4z77",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-18T03:17:44Z",
-        "createdAt": "2025-12-18T04:32:16Z"
-      },
-      "/components/features/on_demand_developers.html": {
-        "zuid": "11-9c91d4ed89-wcvnlg",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-18T04:41:37Z",
-        "createdAt": "2025-12-18T04:46:03Z"
-      },
-      "/components/features/ven-diagram.html": {
-        "zuid": "11-babd9cbfa4-jgwhwp",
-        "type": "ajax-json",
-        "updatedAt": "2025-12-22T01:16:48Z",
-        "createdAt": "2025-12-22T04:02:47Z"
-      },
-      "brand": {
-        "zuid": "11-e0ca88aeaf-bw5gk9",
-        "type": "templateset",
-        "updatedAt": "2026-01-09T22:06:12Z",
-        "createdAt": "2026-03-13T19:44:48Z"
-      },
-      "blog": {
-        "zuid": "11-f8d5e0bee5-vh0d2w",
-        "type": "templateset",
-        "updatedAt": "2026-01-10T22:20:53Z",
-        "createdAt": "2026-01-12T19:04:55Z"
-      },
-      "articles": {
-        "zuid": "11-e0ff84a99c-ncgvf2",
-        "type": "pageset",
-        "updatedAt": "2026-01-10T22:21:18Z",
-        "createdAt": "2026-01-30T19:53:59Z"
-      },
-      "categories": {
-        "zuid": "11-9693c6e6e6-ksphq9",
-        "type": "pageset",
-        "updatedAt": "2026-01-14T22:55:57Z",
-        "createdAt": "2026-01-14T22:55:57Z"
-      },
-      "landing_pages": {
-        "zuid": "11-dad783f6e6-7b3zj2",
-        "type": "pageset",
-        "updatedAt": "2026-01-18T21:08:08Z",
-        "createdAt": "2026-01-30T19:22:41Z"
-      },
-      "lp": {
-        "zuid": "11-9294fdb2ab-c0bx98",
-        "type": "templateset",
-        "updatedAt": "2026-01-18T21:16:01Z",
-        "createdAt": "2026-02-26T18:27:11Z"
-      },
-      "/page_html/landing_pages/linkedin.html": {
-        "zuid": "11-fc9997fc84-blpxs0",
-        "type": "ajax-json",
-        "updatedAt": "2026-01-18T21:23:39Z",
-        "createdAt": "2026-01-21T16:42:36Z"
-      },
-      "/-/block/mission_driven_success.html": {
-        "zuid": "11-a2bcd8fbd6-b6phqr",
-        "type": "block",
-        "updatedAt": "2026-01-18T21:37:01Z",
-        "createdAt": "2026-01-18T21:43:26Z"
-      },
-      "/-/block/connected_tech_stack_.html": {
-        "zuid": "11-9ac3d7feed-rf1m5x",
-        "type": "block",
-        "updatedAt": "2026-01-18T22:10:17Z",
-        "createdAt": "2026-01-18T22:45:48Z"
-      },
-      "/page_html/industries/cms-for-franchise-chains.html": {
-        "zuid": "11-cee1f493e7-1hbwqf",
-        "type": "ajax-json",
-        "updatedAt": "2026-01-23T17:28:18Z",
-        "createdAt": "2026-01-23T17:29:07Z"
-      },
-      "/-/block/download_side_cta.html": {
-        "zuid": "11-90a6f5c9a7-lrnglf",
-        "type": "block",
-        "updatedAt": "2026-01-27T23:31:21Z",
-        "createdAt": "2026-01-30T19:09:15Z"
-      },
-      "/page_html/landing_pages/kin.html": {
-        "zuid": "11-94819adcf2-v3s5c9",
-        "type": "ajax-json",
-        "updatedAt": "2026-01-30T19:21:43Z",
-        "createdAt": "2026-01-30T19:26:30Z"
-      },
-      "/-/block/download_cta_full.html": {
-        "zuid": "11-92ecf2b19a-z1swtw",
-        "type": "block",
-        "updatedAt": "2026-01-30T19:45:52Z",
-        "createdAt": "2026-03-26T19:59:42Z"
-      },
-      "/page_html/landing_pages/linkedin-tsa.html": {
-        "zuid": "11-84f0bbff9f-t14psp",
-        "type": "ajax-json",
-        "updatedAt": "2026-02-19T23:20:57Z",
-        "createdAt": "2026-02-19T23:25:30Z"
-      },
-      "privacy_policy": {
-        "zuid": "11-c8aaaa88b3-gjjg15",
-        "type": "templateset",
-        "updatedAt": "2026-02-26T16:40:43Z",
-        "createdAt": "2026-02-26T18:30:06Z"
-      },
-      "/-/ai/context/brand.md": {
-        "zuid": "11-f4a29898af-x024l3",
-        "type": "ajax-json",
-        "updatedAt": "2026-02-26T18:22:38Z",
-        "createdAt": "2026-03-03T17:09:57Z"
-      },
-      "/-/ai/context/writing.md": {
-        "zuid": "11-b6adf2daaf-01k32l",
-        "type": "ajax-json",
-        "updatedAt": "2026-02-26T18:22:38Z",
-        "createdAt": "2026-03-03T18:08:34Z"
-      },
-      "/-/ai/context/images.md": {
-        "zuid": "11-94ece099b0-3lt6pm",
-        "type": "ajax-json",
-        "updatedAt": "2026-02-26T18:22:38Z",
-        "createdAt": "2026-04-23T18:48:40Z"
-      },
-      "/-/ai/context/coding.md": {
-        "zuid": "11-acb4b8d5b0-zm0f9r",
-        "type": "ajax-json",
-        "updatedAt": "2026-02-26T18:22:38Z",
-        "createdAt": "2026-02-26T18:22:57Z"
-      },
-      "marketing_downloads": {
-        "zuid": "11-d881ada0ae-tp2c6m",
-        "type": "pageset",
-        "updatedAt": "2026-03-13T17:26:11Z",
-        "createdAt": "2026-04-08T19:58:19Z"
-      },
-      "/components/forms/zoho-form-dl.html": {
-        "zuid": "11-c4b984d7ef-xlpzzv",
-        "type": "ajax-json",
-        "updatedAt": "2026-03-26T19:56:25Z",
-        "createdAt": "2026-04-08T19:54:28Z"
-      },
-      "/afp-icon.html": {
-        "zuid": "11-c0aee3dbf3-w7hh4d",
-        "type": "ajax-json",
-        "updatedAt": "2026-04-23T17:09:30Z",
-        "createdAt": "2026-04-26T18:01:45Z"
-      },
-      "/components/product-section.html": {
-        "zuid": "11-e0b8b6eeb5-16dr1g",
-        "type": "ajax-json",
-        "updatedAt": "2026-04-23T18:57:36Z",
-        "createdAt": "2026-04-23T19:01:05Z"
-      },
-      "/test.html": {
-        "zuid": "11-c6d4feaaf5-jrjz4v",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T03:50:20Z",
-        "createdAt": "2026-05-29T03:50:20Z"
-      },
-      "/github-integration.html": {
-        "zuid": "11-aebbb4a3d3-dzf8lj",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:41:31Z",
-        "createdAt": "2026-05-29T13:41:31Z"
-      },
-      "/-/block/connected_tech_stack.html": {
-        "zuid": "11-b6e483edd1-fx73ph",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:04:36Z",
-        "createdAt": "2026-05-29T13:04:36Z"
-      },
-      "/-/block/connected_text_stack.html": {
-        "zuid": "11-e6d8fe84d4-nx2r4l",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:04:36Z",
-        "createdAt": "2026-05-29T13:04:36Z"
-      },
-      "/assets/theme.css.map": {
-        "zuid": "11-ceb68fcfd6-w7s9g2",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:04:36Z",
-        "createdAt": "2026-05-29T13:04:36Z"
-      },
-      "/components/ctas/solutions-button.html": {
-        "zuid": "11-90c292c8d9-004nz5",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:04:36Z",
-        "createdAt": "2026-05-29T13:04:36Z"
-      },
-      "/page_html/features/ai-content-acceleration.html": {
-        "zuid": "11-eeb4c8aadb-2wjc8r",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T13:04:36Z",
-        "createdAt": "2026-05-29T13:04:36Z"
-      },
-      "/nonprofit-pitch.html": {
-        "zuid": "11-ecc6cae3d3-tdx3f4",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T15:10:34Z",
-        "createdAt": "2026-05-29T15:10:34Z"
-      },
-      "/hospital-pitch.html": {
-        "zuid": "11-ee8396afdb-dt9gt1",
-        "type": "ajax-json",
-        "updatedAt": "2026-05-29T15:43:48Z",
-        "createdAt": "2026-05-29T15:43:48Z"
-      },
-      "/page_html/industries/composable-cms-for-hospitals-and-health-systems.html": {
-        "zuid": "11-82f9bfbbe7-68pglh",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-02T17:25:54Z",
-        "createdAt": "2026-06-02T17:25:54Z"
-      },
-      "/page_html/landing_pages/mcp-native-ai-cms.html": {
-        "zuid": "11-8aa5fbdbe8-rlh4mg",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-02T17:25:54Z",
-        "createdAt": "2026-06-02T17:25:54Z"
-      },
-      "/tw-preview.html": {
-        "zuid": "11-e49bbcb1e9-74px6f",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-02T17:25:54Z",
-        "createdAt": "2026-06-02T17:25:54Z"
-      },
-      "/mcp-press-release.html": {
-        "zuid": "11-f8f0deab9b-tr0stj",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-02T20:08:39Z",
-        "createdAt": "2026-06-02T20:08:39Z"
-      },
-      "/-/isolated-page-marketing-snippet.html": {
-        "zuid": "11-ac94bdfa84-bj4lhr",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-02T20:15:11Z",
-        "createdAt": "2026-06-02T20:15:11Z"
-      },
-      "/fractional-devs-pitch.html": {
-        "zuid": "11-dc96c5a5de-s83t2f",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-05T18:31:53Z",
-        "createdAt": "2026-06-05T18:31:53Z"
-      },
-      "/decks.html": {
-        "zuid": "11-eec89cd6bb-rgf4tq",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-05T19:23:38Z",
-        "createdAt": "2026-06-05T19:23:38Z"
-      },
-      "/content-one-launches-mcp-enabled-ai-cms.html": {
-        "zuid": "11-f8c189e4e1-3tlxq6",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-10T23:32:38Z",
-        "createdAt": "2026-06-10T23:32:38Z"
-      },
-      "/embedded-engineers.html": {
-        "zuid": "11-d8eba38da6-fdz803",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-10T23:34:30Z",
-        "createdAt": "2026-06-10T23:34:30Z"
-      },
-      "/wegive-integration-pitch.html": {
-        "zuid": "11-d0bf9680f9-6f0n6c",
-        "type": "ajax-json",
-        "updatedAt": "2026-06-11T16:52:21Z",
-        "createdAt": "2026-06-11T16:52:21Z"
-      },
-      "/-/block/c1_features_hero_block.html": {
-        "zuid": "11-92e0f895a9-0hm095",
-        "type": "block",
-        "updatedAt": "2026-06-22T17:00:00Z",
-        "createdAt": "2026-06-22T17:00:00Z"
-      }
-    },
-    "styles": {
-      "main.less": {
-        "zuid": "10-9cfbeefaef-f996qc",
-        "type": "text/less",
-        "updatedAt": "2018-08-13T22:56:05Z",
-        "createdAt": "2025-10-31T14:32:28Z"
-      },
-      "homepage.less": {
-        "zuid": "10-e49ea5c5c7-ph20rp",
-        "type": "text/less",
-        "updatedAt": "2025-03-14T13:52:16Z",
-        "createdAt": "2025-03-14T16:19:56Z"
-      },
-      "jaralax.min.css": {
-        "zuid": "10-acdc9bae83-w9jd09",
-        "type": "text/css",
-        "updatedAt": "2025-03-14T20:15:14Z",
-        "createdAt": "2025-03-14T20:15:18Z"
-      },
-      "theme-tweaks.scss": {
-        "zuid": "10-c8bdfdaab8-s4mwhq",
-        "type": "text/scss",
-        "updatedAt": "2025-05-21T19:59:08Z",
-        "createdAt": "2025-05-21T20:04:33Z"
-      },
-      "content.scss": {
-        "zuid": "10-eadcbe8fe1-pk1zdd",
-        "type": "text/scss",
-        "updatedAt": "2025-06-06T19:11:54Z",
-        "createdAt": "2025-06-06T19:52:19Z"
-      },
-      "scrollcue.scss": {
-        "zuid": "10-90b48fa299-qcsf6f",
-        "type": "text/scss",
-        "updatedAt": "2025-09-04T13:42:15Z",
-        "createdAt": "2025-09-04T13:42:20Z"
-      },
-      "customers.scss": {
-        "zuid": "10-aae6d5dcde-5xtm0m",
-        "type": "text/scss",
-        "updatedAt": "2025-10-23T16:53:09Z",
-        "createdAt": "2025-10-23T16:53:12Z"
-      }
-    },
-    "scripts": {
-      "main.js": {
-        "zuid": "10-9688f0faef-x1wz1k",
-        "type": "text/javascript",
-        "updatedAt": "2018-08-13T22:56:05Z",
-        "createdAt": "2025-09-07T18:29:18Z"
-      },
-      "cleave-function.js": {
-        "zuid": "10-beb388d8f6-mlrjz8",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T12:58:20Z",
-        "createdAt": "2025-09-04T13:03:59Z"
-      },
-      "jarallax.js": {
-        "zuid": "10-a4a2e0cbd4-r39vt9",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:04:51Z",
-        "createdAt": "2025-09-04T13:46:04Z"
-      },
-      "navbar.js": {
-        "zuid": "10-f4f5c8a9f7-cgg0m5",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:05:13Z",
-        "createdAt": "2025-09-04T13:12:33Z"
-      },
-      "parallax.js": {
-        "zuid": "10-a6e1a290a6-w7snxk",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:38:32Z",
-        "createdAt": "2025-09-07T18:36:13Z"
-      },
-      "sidebar-menu.js": {
-        "zuid": "10-a691ea9383-f4n3vx",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:39:01Z",
-        "createdAt": "2025-09-04T13:39:04Z"
-      },
-      "tab-to-dropdown.js": {
-        "zuid": "10-98b5f7fdbd-fzw741",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:39:09Z",
-        "createdAt": "2025-09-04T13:39:11Z"
-      },
-      "swiper.js": {
-        "zuid": "10-aeb2d9aae1-04w3g4",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:39:14Z",
-        "createdAt": "2025-09-04T13:39:15Z"
-      },
-      "sidenav.js": {
-        "zuid": "10-aef2ccfea9-j38889",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:39:24Z",
-        "createdAt": "2025-09-04T13:39:26Z"
-      },
-      "scrollcue.js": {
-        "zuid": "10-b4b1bfe2de-sbd3dx",
-        "type": "text/javascript",
-        "updatedAt": "2025-09-04T13:39:48Z",
-        "createdAt": "2025-09-07T18:35:46Z"
-      }
+    "instance_zuid": "8-98969f9fe2-5w3x3g",
+    "instance": {
+        "views": {
+            "homepage": {
+                "zuid": "11-a8b694fbef-kq7ds0",
+                "type": "templateset",
+                "updatedAt": "2018-08-13T22:56:07Z",
+                "createdAt": "2026-04-23T19:39:30Z"
+            },
+            "loader": {
+                "zuid": "11-e4fe95fbef-b3kn74",
+                "type": "snippet",
+                "updatedAt": "2018-08-13T22:56:07Z",
+                "createdAt": "2026-04-23T19:39:44Z"
+            },
+            "/components/nav.html": {
+                "zuid": "11-d2b1c58ff3-1dm88s",
+                "type": "ajax-json",
+                "updatedAt": "2025-03-14T19:29:05Z",
+                "createdAt": "2026-04-20T15:11:19Z"
+            },
+            "/assets/theme.css": {
+                "zuid": "11-9ad6dec9d3-9znmtm",
+                "type": "ajax-json",
+                "updatedAt": "2025-03-14T19:33:35Z",
+                "createdAt": "2025-09-07T20:21:51Z"
+            },
+            "/assets/theme.min.js": {
+                "zuid": "11-e299d5e4f6-6br1cw",
+                "type": "ajax-json",
+                "updatedAt": "2025-03-14T19:39:58Z",
+                "createdAt": "2025-03-14T20:14:01Z"
+            },
+            "industries": {
+                "zuid": "11-c4f9fce9d6-shm8f4",
+                "type": "pageset",
+                "updatedAt": "2025-03-14T19:53:56Z",
+                "createdAt": "2026-01-23T18:27:00Z"
+            },
+            "/components/footer.html": {
+                "zuid": "11-9680efe6c2-1zp3dq",
+                "type": "ajax-json",
+                "updatedAt": "2025-03-14T21:08:54Z",
+                "createdAt": "2026-02-26T20:14:50Z"
+            },
+            "about": {
+                "zuid": "11-80e197a7b7-g6vb89",
+                "type": "templateset",
+                "updatedAt": "2025-05-21T20:20:18Z",
+                "createdAt": "2026-01-16T04:36:32Z"
+            },
+            "/-/block/review_block.html": {
+                "zuid": "11-cecdcbc1d3-px5wrz",
+                "type": "block",
+                "updatedAt": "2025-05-27T20:02:56Z",
+                "createdAt": "2025-09-04T14:35:26Z"
+            },
+            "/-/block/form_capture.html": {
+                "zuid": "11-e6fec6a5e8-tgjsfq",
+                "type": "block",
+                "updatedAt": "2025-05-27T20:12:09Z",
+                "createdAt": "2025-11-01T18:46:16Z"
+            },
+            "/-/block/sales_personal_cta.html": {
+                "zuid": "11-d6f3f0dfec-tdl2n1",
+                "type": "block",
+                "updatedAt": "2025-05-27T20:39:56Z",
+                "createdAt": "2025-11-14T22:33:04Z"
+            },
+            "/-/block/consulting_provided.html": {
+                "zuid": "11-a0d6a781d2-nrmlvb",
+                "type": "block",
+                "updatedAt": "2025-05-27T21:00:47Z",
+                "createdAt": "2026-01-30T19:38:25Z"
+            },
+            "product_tour": {
+                "zuid": "11-aecfc5f3c0-tgxk51",
+                "type": "templateset",
+                "updatedAt": "2025-06-01T10:34:20Z",
+                "createdAt": "2025-11-05T17:15:28Z"
+            },
+            "product_tour_pages": {
+                "zuid": "11-f88b81de83-m5n4b0",
+                "type": "pageset",
+                "updatedAt": "2025-06-01T10:35:20Z",
+                "createdAt": "2025-10-24T18:06:25Z"
+            },
+            "product_solutions": {
+                "zuid": "11-eec4b8aaf7-hrg59z",
+                "type": "pageset",
+                "updatedAt": "2025-06-09T15:17:18Z",
+                "createdAt": "2025-10-24T03:04:33Z"
+            },
+            "/components/homepage/home-hero.html": {
+                "zuid": "11-eeffb3909e-s5hz81",
+                "type": "ajax-json",
+                "updatedAt": "2025-08-27T20:00:48Z",
+                "createdAt": "2025-11-05T18:17:00Z"
+            },
+            "/-/block/client_logos.html": {
+                "zuid": "11-d0c6ba919e-lk12q4",
+                "type": "block",
+                "updatedAt": "2025-09-03T22:33:42Z",
+                "createdAt": "2025-09-07T13:16:19Z"
+            },
+            "/-/block/feature_highlight.html": {
+                "zuid": "11-beb097baa4-xhn1wh",
+                "type": "block",
+                "updatedAt": "2025-09-04T02:37:40Z",
+                "createdAt": "2025-09-04T14:13:51Z"
+            },
+            "/components/features/block_highlight.html": {
+                "zuid": "11-d0b2c4d8cb-33nddj",
+                "type": "ajax-json",
+                "updatedAt": "2025-09-04T02:52:22Z",
+                "createdAt": "2025-10-31T18:36:02Z"
+            },
+            "/components/features/analytics_highlight.html": {
+                "zuid": "11-88d4a0c9fe-gmh9nv",
+                "type": "ajax-json",
+                "updatedAt": "2025-09-04T03:13:05Z",
+                "createdAt": "2025-10-31T18:44:18Z"
+            },
+            "/components/forms/zoho-form.html": {
+                "zuid": "11-cc93e38af9-rmfgk1",
+                "type": "ajax-json",
+                "updatedAt": "2025-09-04T20:04:41Z",
+                "createdAt": "2026-03-26T20:35:05Z"
+            },
+            "/-/block/demo_form_signup.html": {
+                "zuid": "11-becd95ad87-f010pv",
+                "type": "block",
+                "updatedAt": "2025-09-05T16:36:48Z",
+                "createdAt": "2025-09-05T16:36:48Z"
+            },
+            "contact_us": {
+                "zuid": "11-a287c0abd6-kdv7gl",
+                "type": "templateset",
+                "updatedAt": "2025-09-05T20:26:37Z",
+                "createdAt": "2026-03-05T00:28:20Z"
+            },
+            "/components/ctas/book-button.html": {
+                "zuid": "11-ccdfe5b99a-cw11dh",
+                "type": "ajax-json",
+                "updatedAt": "2025-09-05T20:37:39Z",
+                "createdAt": "2026-03-13T15:13:35Z"
+            },
+            "/components/ctas/email-subscription-form.html": {
+                "zuid": "11-b2c7e88eb3-s3jf4m",
+                "type": "ajax-json",
+                "updatedAt": "2025-09-06T01:59:50Z",
+                "createdAt": "2025-09-06T02:35:15Z"
+            },
+            "basic_page": {
+                "zuid": "11-c6a381a0f9-vx91vm",
+                "type": "templateset",
+                "updatedAt": "2025-09-06T02:04:34Z",
+                "createdAt": "2026-03-27T17:00:49Z"
+            },
+            "404-page": {
+                "zuid": "11-e691afacc8-nxl051",
+                "type": "snippet",
+                "updatedAt": "2025-09-06T13:15:20Z",
+                "createdAt": "2025-09-06T13:26:27Z"
+            },
+            "/components/casestudy/tsa.html": {
+                "zuid": "11-90d199fa87-qlhfqb",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-06T12:26:43Z",
+                "createdAt": "2026-03-27T17:01:04Z"
+            },
+            "customers": {
+                "zuid": "11-c2d1dbefac-mn7q8n",
+                "type": "templateset",
+                "updatedAt": "2025-10-06T14:39:05Z",
+                "createdAt": "2026-01-16T17:34:09Z"
+            },
+            "customer": {
+                "zuid": "11-94b8f4b98c-lrdw00",
+                "type": "pageset",
+                "updatedAt": "2025-10-06T14:40:10Z",
+                "createdAt": "2025-12-16T02:57:59Z"
+            },
+            "/components/casestudy/rocket_league.html": {
+                "zuid": "11-a885c7f3c6-7t5zvp",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-07T20:16:42Z",
+                "createdAt": "2026-03-27T17:01:22Z"
+            },
+            "/components/casestudy/sony.html": {
+                "zuid": "11-82afb7999e-nn45tn",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-10T18:16:30Z",
+                "createdAt": "2026-03-27T17:01:09Z"
+            },
+            "/components/casestudy/tsa-odd.html": {
+                "zuid": "11-e6b18590fd-skdhqg",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-10T20:41:53Z",
+                "createdAt": "2026-03-27T17:01:06Z"
+            },
+            "/components/casestudy/tsa-federated-franchise.html": {
+                "zuid": "11-dce3a9e389-2lqbsq",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-12T19:27:41Z",
+                "createdAt": "2026-02-13T17:47:41Z"
+            },
+            "/components/casestudy/petdesk.html": {
+                "zuid": "11-b4cf9285f4-3x2590",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-15T15:33:34Z",
+                "createdAt": "2026-03-27T17:01:25Z"
+            },
+            "/components/casestudy/singlife.html": {
+                "zuid": "11-aaaaa08694-q0zmg9",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-21T21:08:59Z",
+                "createdAt": "2026-03-27T17:01:14Z"
+            },
+            "/components/casestudy/wattpad.html": {
+                "zuid": "11-e6f5f1f1b9-n7pnzt",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-21T21:53:10Z",
+                "createdAt": "2026-03-27T17:00:59Z"
+            },
+            "/components/casestudy/draftkings.html": {
+                "zuid": "11-b28c9cc689-vff28h",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-22T21:57:36Z",
+                "createdAt": "2026-03-27T17:01:27Z"
+            },
+            "/components/casestudy/uber.html": {
+                "zuid": "11-a8a5a0b58b-mmt4vn",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T00:07:35Z",
+                "createdAt": "2026-03-27T17:01:02Z"
+            },
+            "/components/casestudy/side-cta.html": {
+                "zuid": "11-acacd6a6bf-3k9h7p",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T02:51:12Z",
+                "createdAt": "2026-03-27T17:01:16Z"
+            },
+            "/page_html/solutions/marketing-website.html": {
+                "zuid": "11-e288a6b38f-6k2q6g",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T17:13:49Z",
+                "createdAt": "2025-10-24T02:55:22Z"
+            },
+            "/page_html/solutions/global-directory.html": {
+                "zuid": "11-9cb9e6f886-x4q9kb",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T19:43:15Z",
+                "createdAt": "2025-10-24T15:13:32Z"
+            },
+            "/page_html/solutions/ai-document-management.html": {
+                "zuid": "11-969296b6f7-ql1gw9",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T19:53:32Z",
+                "createdAt": "2025-10-24T02:55:16Z"
+            },
+            "/page_html/solutions/federated-multisite.html": {
+                "zuid": "11-acd88add98-gpl6qs",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T20:18:48Z",
+                "createdAt": "2026-01-16T17:50:49Z"
+            },
+            "/page_html/solutions/org-ai-chatbot.html": {
+                "zuid": "11-c4e1e8a6fc-dxww4d",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T20:54:49Z",
+                "createdAt": "2025-10-24T02:55:10Z"
+            },
+            "/page_html/solutions/mobile-app.html": {
+                "zuid": "11-9ebefcad82-0z1vvf",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T21:09:43Z",
+                "createdAt": "2025-10-24T02:55:08Z"
+            },
+            "/page_html/solutions/story-hub.html": {
+                "zuid": "11-9cd7e8c092-m70wt9",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-23T21:24:56Z",
+                "createdAt": "2025-10-24T02:55:05Z"
+            },
+            "/page_html/features/visual-drag-n-drop-pages.html": {
+                "zuid": "11-b4beb9ea83-t4pb4z",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-24T16:59:08Z",
+                "createdAt": "2025-10-24T19:43:29Z"
+            },
+            "/page_html/features/wysiwyg-and-markdown-support.html": {
+                "zuid": "11-f4bcb2e1eb-rgh838",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-24T17:24:34Z",
+                "createdAt": "2025-11-03T22:19:38Z"
+            },
+            "/components/widgets/random_quotes.html": {
+                "zuid": "11-fea1affcde-mq1s19",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-24T18:47:52Z",
+                "createdAt": "2025-11-05T06:21:47Z"
+            },
+            "/page_html/features/scheduled-publishing-and-expiry.html": {
+                "zuid": "11-a8bfd5e6f4-sr7137",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-24T19:59:47Z",
+                "createdAt": "2025-10-30T13:20:22Z"
+            },
+            "/page_html/features/multilingual-and-localization-tools.html": {
+                "zuid": "11-fcf5b782f8-2dqqq7",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-24T20:05:48Z",
+                "createdAt": "2025-10-24T20:20:37Z"
+            },
+            "/page_html/features/generative-ai-content-acceleration.html": {
+                "zuid": "11-e0f79bb7ad-j7skfk",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-26T17:18:20Z",
+                "createdAt": "2025-10-26T17:26:13Z"
+            },
+            "/page_html/features/analytics.html": {
+                "zuid": "11-82f1c284eb-15lbt9",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-26T17:52:16Z",
+                "createdAt": "2025-11-07T02:51:56Z"
+            },
+            "/page_html/features/geo-and-seo.html": {
+                "zuid": "11-ac95bab08b-3g2vss",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-26T18:37:17Z",
+                "createdAt": "2025-10-26T19:26:00Z"
+            },
+            "/page_html/features/personalization.html": {
+                "zuid": "11-b4c7d994ae-hmgd8c",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-26T19:51:32Z",
+                "createdAt": "2025-10-26T20:11:23Z"
+            },
+            "/page_html/features/reusable-component-libraries.html": {
+                "zuid": "11-eaadaef890-4rx5pg",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-29T21:17:14Z",
+                "createdAt": "2025-11-04T00:10:43Z"
+            },
+            "/page_html/features/audit-logs-and-activity-tracking.html": {
+                "zuid": "11-aca7a790a8-1wv331",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T02:13:04Z",
+                "createdAt": "2025-10-30T03:47:35Z"
+            },
+            "/page_html/features/headless-and-apis.html": {
+                "zuid": "11-8cfc98c98a-chdbjk",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T05:04:14Z",
+                "createdAt": "2025-10-30T05:47:38Z"
+            },
+            "/components/widgets/logos.html": {
+                "zuid": "11-a886a09591-gl17q5",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T13:23:36Z",
+                "createdAt": "2025-10-31T14:41:29Z"
+            },
+            "/components/widgets/sso-options.html": {
+                "zuid": "11-aea882889b-bs2zc5",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T13:57:42Z",
+                "createdAt": "2025-10-30T14:22:12Z"
+            },
+            "/page_html/features/single-sign-on-sso-and-roles.html": {
+                "zuid": "11-a8bbc586d8-5ghhmz",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T14:41:22Z",
+                "createdAt": "2025-10-30T15:00:18Z"
+            },
+            "capterra_landing_page": {
+                "zuid": "11-bcb09498bf-xnvgzh",
+                "type": "templateset",
+                "updatedAt": "2025-10-30T15:38:00Z",
+                "createdAt": "2026-01-16T17:39:23Z"
+            },
+            "/page_html/industries/cms-for-insurance.html": {
+                "zuid": "11-949de5c894-q3793f",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T18:04:47Z",
+                "createdAt": "2026-01-16T17:34:27Z"
+            },
+            "/page_html/industries/cms-for-non-profits.html": {
+                "zuid": "11-d2d895afaf-dpr2gk",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T19:03:33Z",
+                "createdAt": "2026-01-16T17:36:54Z"
+            },
+            "/page_html/features/workflow-automation-and-approvals.html": {
+                "zuid": "11-faceefdbfa-jv54j4",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T19:14:53Z",
+                "createdAt": "2025-11-02T22:59:30Z"
+            },
+            "/components/widgets/random_quotes_micro.html": {
+                "zuid": "11-a6aff3dfbe-z97pgr",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T19:38:48Z",
+                "createdAt": "2025-10-31T14:22:55Z"
+            },
+            "/page_html/industries/cms-for-government-and-public-sector-organizations.html": {
+                "zuid": "11-c0e9f3d497-zznr4v",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T20:05:38Z",
+                "createdAt": "2026-01-16T17:34:24Z"
+            },
+            "/page_html/industries/cms-for-financial-institutions-and-fintech-banks.html": {
+                "zuid": "11-c2ddcebf8c-z8513d",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-30T20:31:57Z",
+                "createdAt": "2026-01-16T17:34:21Z"
+            },
+            "/components/ctas/customer-button.html": {
+                "zuid": "11-88df8a978c-590c3c",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-31T14:15:23Z",
+                "createdAt": "2025-10-31T14:15:30Z"
+            },
+            "/page_html/features/webhooks-for-real-time-integrations.html": {
+                "zuid": "11-f2ccfcac98-t25bcs",
+                "type": "ajax-json",
+                "updatedAt": "2025-10-31T18:50:00Z",
+                "createdAt": "2025-10-31T19:35:00Z"
+            },
+            "/page_html/features/visual-code-based-templating.html": {
+                "zuid": "11-b6aee59ea5-pb7972",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-01T18:44:16Z",
+                "createdAt": "2025-11-06T20:19:01Z"
+            },
+            "/page_html/features/template-versioning-and-rollbacks.html": {
+                "zuid": "11-e2a7e1fe9d-0p22fd",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-01T20:48:14Z",
+                "createdAt": "2025-11-01T20:50:54Z"
+            },
+            "/page_html/features/global-cdn-hosting.html": {
+                "zuid": "11-d8a8b8c9f8-h74mtt",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-02T21:24:45Z",
+                "createdAt": "2025-11-02T23:17:40Z"
+            },
+            "/page_html/features/data-encryption-and-security.html": {
+                "zuid": "11-ee8687e1dc-jnr9zr",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-02T23:01:45Z",
+                "createdAt": "2025-11-02T23:11:57Z"
+            },
+            "/page_html/features/automated-security-updates.html": {
+                "zuid": "11-faa0baaff5-gt1pv0",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-02T23:19:17Z",
+                "createdAt": "2025-11-02T23:33:14Z"
+            },
+            "leadership": {
+                "zuid": "11-d496f0e9aa-374w3d",
+                "type": "pageset",
+                "updatedAt": "2025-11-03T20:30:25Z",
+                "createdAt": "2026-01-12T19:05:05Z"
+            },
+            "solutions": {
+                "zuid": "11-e8d98fa7e8-s1s7z4",
+                "type": "templateset",
+                "updatedAt": "2025-11-05T15:18:23Z",
+                "createdAt": "2025-11-05T17:16:56Z"
+            },
+            "/components/homepage/hero-ai-cool.html": {
+                "zuid": "11-f0f5dfc6a1-6cs92r",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-05T20:04:50Z",
+                "createdAt": "2026-04-23T19:09:27Z"
+            },
+            "/components/homepage/personas.html": {
+                "zuid": "11-aac888abbc-m0rljq",
+                "type": "ajax-json",
+                "updatedAt": "2025-11-07T21:00:56Z",
+                "createdAt": "2025-11-10T18:19:23Z"
+            },
+            "/components/casestudy/side-cta copy.html": {
+                "zuid": "11-f0a4c599cd-qxnrk5",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-16T02:26:08Z",
+                "createdAt": "2025-12-16T02:26:08Z"
+            },
+            "/components/casestudy/sliver-cta.html": {
+                "zuid": "11-daf4e4d7f8-rhvd89",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-16T02:30:31Z",
+                "createdAt": "2026-03-27T17:01:12Z"
+            },
+            "components/features/hybrid": {
+                "zuid": "11-a084bc87cf-kb8bs1",
+                "type": "snippet",
+                "updatedAt": "2025-12-18T02:39:48Z",
+                "createdAt": "2025-12-18T02:39:48Z"
+            },
+            "/components/features/hybrid_advantage.html": {
+                "zuid": "11-84b7f7cff6-hbwnrc",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-18T02:45:54Z",
+                "createdAt": "2025-12-18T03:15:03Z"
+            },
+            "/components/features/flexstack.html": {
+                "zuid": "11-c2da89888a-hj4z77",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-18T03:17:44Z",
+                "createdAt": "2025-12-18T04:32:16Z"
+            },
+            "/components/features/on_demand_developers.html": {
+                "zuid": "11-9c91d4ed89-wcvnlg",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-18T04:41:37Z",
+                "createdAt": "2025-12-18T04:46:03Z"
+            },
+            "/components/features/ven-diagram.html": {
+                "zuid": "11-babd9cbfa4-jgwhwp",
+                "type": "ajax-json",
+                "updatedAt": "2025-12-22T01:16:48Z",
+                "createdAt": "2025-12-22T04:02:47Z"
+            },
+            "brand": {
+                "zuid": "11-e0ca88aeaf-bw5gk9",
+                "type": "templateset",
+                "updatedAt": "2026-01-09T22:06:12Z",
+                "createdAt": "2026-03-13T19:44:48Z"
+            },
+            "blog": {
+                "zuid": "11-f8d5e0bee5-vh0d2w",
+                "type": "templateset",
+                "updatedAt": "2026-01-10T22:20:53Z",
+                "createdAt": "2026-01-12T19:04:55Z"
+            },
+            "articles": {
+                "zuid": "11-e0ff84a99c-ncgvf2",
+                "type": "pageset",
+                "updatedAt": "2026-01-10T22:21:18Z",
+                "createdAt": "2026-01-30T19:53:59Z"
+            },
+            "categories": {
+                "zuid": "11-9693c6e6e6-ksphq9",
+                "type": "pageset",
+                "updatedAt": "2026-01-14T22:55:57Z",
+                "createdAt": "2026-01-14T22:55:57Z"
+            },
+            "landing_pages": {
+                "zuid": "11-dad783f6e6-7b3zj2",
+                "type": "pageset",
+                "updatedAt": "2026-01-18T21:08:08Z",
+                "createdAt": "2026-01-30T19:22:41Z"
+            },
+            "lp": {
+                "zuid": "11-9294fdb2ab-c0bx98",
+                "type": "templateset",
+                "updatedAt": "2026-01-18T21:16:01Z",
+                "createdAt": "2026-02-26T18:27:11Z"
+            },
+            "/page_html/landing_pages/linkedin.html": {
+                "zuid": "11-fc9997fc84-blpxs0",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-18T21:23:39Z",
+                "createdAt": "2026-01-21T16:42:36Z"
+            },
+            "/-/block/mission_driven_success.html": {
+                "zuid": "11-a2bcd8fbd6-b6phqr",
+                "type": "block",
+                "updatedAt": "2026-01-18T21:37:01Z",
+                "createdAt": "2026-01-18T21:43:26Z"
+            },
+            "/-/block/connected_tech_stack_.html": {
+                "zuid": "11-9ac3d7feed-rf1m5x",
+                "type": "block",
+                "updatedAt": "2026-01-18T22:10:17Z",
+                "createdAt": "2026-01-18T22:45:48Z"
+            },
+            "/page_html/industries/cms-for-franchise-chains.html": {
+                "zuid": "11-cee1f493e7-1hbwqf",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-23T17:28:18Z",
+                "createdAt": "2026-01-23T17:29:07Z"
+            },
+            "/-/block/download_side_cta.html": {
+                "zuid": "11-90a6f5c9a7-lrnglf",
+                "type": "block",
+                "updatedAt": "2026-01-27T23:31:21Z",
+                "createdAt": "2026-01-30T19:09:15Z"
+            },
+            "/page_html/landing_pages/kin.html": {
+                "zuid": "11-94819adcf2-v3s5c9",
+                "type": "ajax-json",
+                "updatedAt": "2026-01-30T19:21:43Z",
+                "createdAt": "2026-01-30T19:26:30Z"
+            },
+            "/-/block/download_cta_full.html": {
+                "zuid": "11-92ecf2b19a-z1swtw",
+                "type": "block",
+                "updatedAt": "2026-01-30T19:45:52Z",
+                "createdAt": "2026-03-26T19:59:42Z"
+            },
+            "/page_html/landing_pages/linkedin-tsa.html": {
+                "zuid": "11-84f0bbff9f-t14psp",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-19T23:20:57Z",
+                "createdAt": "2026-02-19T23:25:30Z"
+            },
+            "privacy_policy": {
+                "zuid": "11-c8aaaa88b3-gjjg15",
+                "type": "templateset",
+                "updatedAt": "2026-02-26T16:40:43Z",
+                "createdAt": "2026-02-26T18:30:06Z"
+            },
+            "/-/ai/context/brand.md": {
+                "zuid": "11-f4a29898af-x024l3",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-03-03T17:09:57Z"
+            },
+            "/-/ai/context/writing.md": {
+                "zuid": "11-b6adf2daaf-01k32l",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-03-03T18:08:34Z"
+            },
+            "/-/ai/context/images.md": {
+                "zuid": "11-94ece099b0-3lt6pm",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-04-23T18:48:40Z"
+            },
+            "/-/ai/context/coding.md": {
+                "zuid": "11-acb4b8d5b0-zm0f9r",
+                "type": "ajax-json",
+                "updatedAt": "2026-02-26T18:22:38Z",
+                "createdAt": "2026-02-26T18:22:57Z"
+            },
+            "marketing_downloads": {
+                "zuid": "11-d881ada0ae-tp2c6m",
+                "type": "pageset",
+                "updatedAt": "2026-03-13T17:26:11Z",
+                "createdAt": "2026-04-08T19:58:19Z"
+            },
+            "/components/forms/zoho-form-dl.html": {
+                "zuid": "11-c4b984d7ef-xlpzzv",
+                "type": "ajax-json",
+                "updatedAt": "2026-03-26T19:56:25Z",
+                "createdAt": "2026-04-08T19:54:28Z"
+            },
+            "/afp-icon.html": {
+                "zuid": "11-c0aee3dbf3-w7hh4d",
+                "type": "ajax-json",
+                "updatedAt": "2026-04-23T17:09:30Z",
+                "createdAt": "2026-04-26T18:01:45Z"
+            },
+            "/components/product-section.html": {
+                "zuid": "11-e0b8b6eeb5-16dr1g",
+                "type": "ajax-json",
+                "updatedAt": "2026-04-23T18:57:36Z",
+                "createdAt": "2026-04-23T19:01:05Z"
+            },
+            "/test.html": {
+                "zuid": "11-c6d4feaaf5-jrjz4v",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T03:50:20Z",
+                "createdAt": "2026-05-29T03:50:20Z"
+            },
+            "/github-integration.html": {
+                "zuid": "11-aebbb4a3d3-dzf8lj",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:41:31Z",
+                "createdAt": "2026-05-29T13:41:31Z"
+            },
+            "/-/block/connected_tech_stack.html": {
+                "zuid": "11-b6e483edd1-fx73ph",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/-/block/connected_text_stack.html": {
+                "zuid": "11-e6d8fe84d4-nx2r4l",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/assets/theme.css.map": {
+                "zuid": "11-ceb68fcfd6-w7s9g2",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/components/ctas/solutions-button.html": {
+                "zuid": "11-90c292c8d9-004nz5",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/page_html/features/ai-content-acceleration.html": {
+                "zuid": "11-eeb4c8aadb-2wjc8r",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T13:04:36Z",
+                "createdAt": "2026-05-29T13:04:36Z"
+            },
+            "/nonprofit-pitch.html": {
+                "zuid": "11-ecc6cae3d3-tdx3f4",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T15:10:34Z",
+                "createdAt": "2026-05-29T15:10:34Z"
+            },
+            "/hospital-pitch.html": {
+                "zuid": "11-ee8396afdb-dt9gt1",
+                "type": "ajax-json",
+                "updatedAt": "2026-05-29T15:43:48Z",
+                "createdAt": "2026-05-29T15:43:48Z"
+            },
+            "/page_html/industries/composable-cms-for-hospitals-and-health-systems.html": {
+                "zuid": "11-82f9bfbbe7-68pglh",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/page_html/landing_pages/mcp-native-ai-cms.html": {
+                "zuid": "11-8aa5fbdbe8-rlh4mg",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/tw-preview.html": {
+                "zuid": "11-e49bbcb1e9-74px6f",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T17:25:54Z",
+                "createdAt": "2026-06-02T17:25:54Z"
+            },
+            "/mcp-press-release.html": {
+                "zuid": "11-f8f0deab9b-tr0stj",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T20:08:39Z",
+                "createdAt": "2026-06-02T20:08:39Z"
+            },
+            "/-/isolated-page-marketing-snippet.html": {
+                "zuid": "11-ac94bdfa84-bj4lhr",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-02T20:15:11Z",
+                "createdAt": "2026-06-02T20:15:11Z"
+            },
+            "/fractional-devs-pitch.html": {
+                "zuid": "11-dc96c5a5de-s83t2f",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-05T18:31:53Z",
+                "createdAt": "2026-06-05T18:31:53Z"
+            },
+            "/decks.html": {
+                "zuid": "11-eec89cd6bb-rgf4tq",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-05T19:23:38Z",
+                "createdAt": "2026-06-05T19:23:38Z"
+            },
+            "/content-one-launches-mcp-enabled-ai-cms.html": {
+                "zuid": "11-f8c189e4e1-3tlxq6",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-10T23:32:38Z",
+                "createdAt": "2026-06-10T23:32:38Z"
+            },
+            "/embedded-engineers.html": {
+                "zuid": "11-d8eba38da6-fdz803",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-10T23:34:30Z",
+                "createdAt": "2026-06-10T23:34:30Z"
+            },
+            "/wegive-integration-pitch.html": {
+                "zuid": "11-d0bf9680f9-6f0n6c",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-11T16:52:21Z",
+                "createdAt": "2026-06-11T16:52:21Z"
+            }
+        },
+        "styles": {
+            "main.less": {
+                "zuid": "10-9cfbeefaef-f996qc",
+                "type": "text/less",
+                "updatedAt": "2018-08-13T22:56:05Z",
+                "createdAt": "2025-10-31T14:32:28Z"
+            },
+            "homepage.less": {
+                "zuid": "10-e49ea5c5c7-ph20rp",
+                "type": "text/less",
+                "updatedAt": "2025-03-14T13:52:16Z",
+                "createdAt": "2025-03-14T16:19:56Z"
+            },
+            "jaralax.min.css": {
+                "zuid": "10-acdc9bae83-w9jd09",
+                "type": "text/css",
+                "updatedAt": "2025-03-14T20:15:14Z",
+                "createdAt": "2025-03-14T20:15:18Z"
+            },
+            "theme-tweaks.scss": {
+                "zuid": "10-c8bdfdaab8-s4mwhq",
+                "type": "text/scss",
+                "updatedAt": "2025-05-21T19:59:08Z",
+                "createdAt": "2025-05-21T20:04:33Z"
+            },
+            "content.scss": {
+                "zuid": "10-eadcbe8fe1-pk1zdd",
+                "type": "text/scss",
+                "updatedAt": "2025-06-06T19:11:54Z",
+                "createdAt": "2025-06-06T19:52:19Z"
+            },
+            "scrollcue.scss": {
+                "zuid": "10-90b48fa299-qcsf6f",
+                "type": "text/scss",
+                "updatedAt": "2025-09-04T13:42:15Z",
+                "createdAt": "2025-09-04T13:42:20Z"
+            },
+            "customers.scss": {
+                "zuid": "10-aae6d5dcde-5xtm0m",
+                "type": "text/scss",
+                "updatedAt": "2025-10-23T16:53:09Z",
+                "createdAt": "2025-10-23T16:53:12Z"
+            }
+        },
+        "scripts": {
+            "main.js": {
+                "zuid": "10-9688f0faef-x1wz1k",
+                "type": "text/javascript",
+                "updatedAt": "2018-08-13T22:56:05Z",
+                "createdAt": "2025-09-07T18:29:18Z"
+            },
+            "cleave-function.js": {
+                "zuid": "10-beb388d8f6-mlrjz8",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T12:58:20Z",
+                "createdAt": "2025-09-04T13:03:59Z"
+            },
+            "jarallax.js": {
+                "zuid": "10-a4a2e0cbd4-r39vt9",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:04:51Z",
+                "createdAt": "2025-09-04T13:46:04Z"
+            },
+            "navbar.js": {
+                "zuid": "10-f4f5c8a9f7-cgg0m5",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:05:13Z",
+                "createdAt": "2025-09-04T13:12:33Z"
+            },
+            "parallax.js": {
+                "zuid": "10-a6e1a290a6-w7snxk",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:38:32Z",
+                "createdAt": "2025-09-07T18:36:13Z"
+            },
+            "sidebar-menu.js": {
+                "zuid": "10-a691ea9383-f4n3vx",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:39:01Z",
+                "createdAt": "2025-09-04T13:39:04Z"
+            },
+            "tab-to-dropdown.js": {
+                "zuid": "10-98b5f7fdbd-fzw741",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:39:09Z",
+                "createdAt": "2025-09-04T13:39:11Z"
+            },
+            "swiper.js": {
+                "zuid": "10-aeb2d9aae1-04w3g4",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:39:14Z",
+                "createdAt": "2025-09-04T13:39:15Z"
+            },
+            "sidenav.js": {
+                "zuid": "10-aef2ccfea9-j38889",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:39:24Z",
+                "createdAt": "2025-09-04T13:39:26Z"
+            },
+            "scrollcue.js": {
+                "zuid": "10-b4b1bfe2de-sbd3dx",
+                "type": "text/javascript",
+                "updatedAt": "2025-09-04T13:39:48Z",
+                "createdAt": "2025-09-07T18:35:46Z"
+            }
+        }
     }
-  }
 }

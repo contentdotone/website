@@ -1,10 +1,23 @@
 <div class="drag-drop-feature-page">
-
-  <!-- ════════════ HERO — Block model 6-dad8d5b1a8-mhb7xr ("C1 Features Hero Block")
-       Variant 7-ecc9cddf84-6d085w ("Freestyle - Drag n Drop"). Renders from the
-       block view file webengine/views/-/block/c1_features_hero_block.html which
-       implements Figma 13863:4419 (XL) / 4433 (LG) / 4449 (MD) / 4465 (SM). -->
-  {{blocks('7-ecc9cddf84-6d085w')}}
+  <section class="py-6 py-lg-7 bg-gradient-drag relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid grid-cols-12 gap-4 items-center gap-6">
+        <div class="lg:col-span-6">
+          <h1 class="text-4xl font-bold font-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
+          <p class="text-lg text-gray-600 mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See Freestyle in action</a>
+            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore customer stories</a>
+          </div> 
+        </div>
+        <div class="lg:col-span-6">
+          <div class="rounded-xl shadow-lg overflow-hidden">
+            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-full h-full object-cover">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section class="py-6 border-t">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -320,9 +333,6 @@
 </div>
 
 <style>
-  /* Hero now rendered via {{blocks('/-/block/c1_features_hero_block.html')}} —
-     all hero CSS lives in that block view file. Legacy classes below remain
-     because sections under the hero (stat strip etc.) still use them. */
   .drag-drop-feature-page .bg-gradient-drag {
     background: linear-gradient(135deg, #111827 0%, #2563eb 40%, #ec4899 100%);
   }
