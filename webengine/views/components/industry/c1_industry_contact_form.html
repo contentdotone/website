@@ -1,0 +1,28 @@
+<!-- C1 Industry-Specific Contact Form — Figma 13800:6538 (Untitled-C1).
+     Centered heading + shared Zoho form include, restyled for dark theme
+     via .c1-industry-form-wrap scope (dark CSS lives in the parent page).
+     Section id="c1-industry-demo-form" is the anchor target for the hero CTA. -->
+<section id="c1-industry-demo-form" class="bg-[#060813] py-24">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-16">
+
+    <!-- Heading + subhead, centered -->
+    <div class="flex flex-col gap-5 items-center text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Take Content.One further</h2>
+      <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">For teams ready to scope packaging, contractual terms, and migration.</p>
+    </div>
+
+    <!-- Shared Zoho form include — restyled for dark theme via .c1-industry-form-wrap scope -->
+    <div class="c1-industry-form-wrap max-w-3xl mx-auto w-full">
+      {{include /components/forms/zoho-form.html}}
+    </div>
+
+  </div>
+
+  <script>
+    // Override the form submit button label on the industry-specific contact form.
+    (function () {
+      var btn = document.querySelector('.c1-industry-form-wrap form button[type="submit"]');
+      if (btn && btn.textContent.trim() === 'Submit') btn.textContent = 'Talk to a Content Specialist';
+    })();
+  </script>
+</section>

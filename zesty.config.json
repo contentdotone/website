@@ -775,6 +775,72 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-11T16:52:21Z",
                 "createdAt": "2026-06-11T16:52:21Z"
+            },
+            "/components/industry/c1_ai_governance_highlight.html": {
+                "zuid": "11-d897d4ace1-17qn7b",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_enterprise_callout.html": {
+                "zuid": "11-beb196f6e2-cxtvrp",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_contact_form.html": {
+                "zuid": "11-f4d1a4d7e3-qk5665",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_faq.html": {
+                "zuid": "11-b6aeefcbe4-667npz",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_feature_grid.html": {
+                "zuid": "11-fea19bace5-kp6v2n",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_hero.html": {
+                "zuid": "11-e4bb95fde5-sw45rd",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_social_proof.html": {
+                "zuid": "11-dce6a8d8e6-35cvm8",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_industry_specific_carousels.html": {
+                "zuid": "11-cec9c8bae7-91785t",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/components/industry/c1_testimonial_carousel.html": {
+                "zuid": "11-c68ed7a3e8-g7ghs0",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T20:57:49Z",
+                "createdAt": "2026-06-22T20:57:49Z"
+            },
+            "/hospital-landing.html": {
+                "zuid": "11-f8f9f3e59e-snwwh6",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T21:00:49Z",
+                "createdAt": "2026-06-22T21:00:49Z"
+            },
+            "/support-team.html": {
+                "zuid": "11-d6de8ffb9f-dhsnjk",
+                "type": "ajax-json",
+                "updatedAt": "2026-06-22T21:00:49Z",
+                "createdAt": "2026-06-22T21:00:49Z"
             }
         },
         "styles": {
