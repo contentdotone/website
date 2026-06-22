@@ -1,25 +1,29 @@
 <div class="drag-drop-feature-page">
 
   <!-- ════════════ HERO — Figma 13863:4419 (XL) / 4433 (LG) / 4449 (MD) / 4465 (SM)
-       Dark gradient bg, badge + display-lg H1 with -0.96px tracking + secondary-color
-       body, two skeumorphic CTAs (royal primary + white outlined). Single-column at
-       all breakpoints. All styles in plain CSS in the <style> block at the bottom of
-       this file — no Tailwind utilities so the hero renders deterministically
-       regardless of Play CDN's runtime class scan. -->
+       Dark gradient bg with text on left + Freestyle product GIF on right at lg+,
+       stacked single-column below lg. All styles in plain CSS in the <style> block
+       at the bottom — no Tailwind utilities so the hero renders deterministically. -->
   <section class="drag-drop-hero">
     <div class="drag-drop-hero__container">
-      <div class="drag-drop-hero__content">
+      <div class="drag-drop-hero__layout">
 
-        <div class="drag-drop-hero__heading-group">
-          <span class="drag-drop-hero__overline">Visual Drag-n-Drop Pages</span>
-          <h1 class="drag-drop-hero__title">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
+        <div class="drag-drop-hero__content">
+          <div class="drag-drop-hero__heading-group">
+            <span class="drag-drop-hero__overline">Visual Drag-n-Drop Pages</span>
+            <h1 class="drag-drop-hero__title">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
+          </div>
+
+          <p class="drag-drop-hero__subheading">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+
+          <div class="drag-drop-hero__ctas">
+            <a href="/book-a-demo/" class="drag-drop-hero__cta drag-drop-hero__cta--primary">See Freestyle in Action</a>
+            <a href="/customers/" class="drag-drop-hero__cta drag-drop-hero__cta--secondary">Explore Customer Stories</a>
+          </div>
         </div>
 
-        <p class="drag-drop-hero__subheading">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
-
-        <div class="drag-drop-hero__ctas">
-          <a href="/book-a-demo/" class="drag-drop-hero__cta drag-drop-hero__cta--primary">See Freestyle in Action</a>
-          <a href="/customers/" class="drag-drop-hero__cta drag-drop-hero__cta--secondary">Explore Customer Stories</a>
+        <div class="drag-drop-hero__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Freestyle-in-Action-Snippet--Social-Media-Asset-.gif" alt="Content.One Freestyle drag &amp; drop page builder in action" class="drag-drop-hero__media-img" loading="eager" />
         </div>
 
       </div>
@@ -359,6 +363,20 @@
   }
   @media (min-width: 640px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 1.5rem; } }
   @media (min-width: 1024px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 2rem; } }
+  /* Layout — single column below lg, two-column row at lg+ (text left, GIF right). */
+  .drag-drop-feature-page .drag-drop-hero__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: stretch;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__layout {
+      flex-direction: row;
+      gap: 64px;
+      align-items: center;
+    }
+  }
   .drag-drop-feature-page .drag-drop-hero__content {
     display: flex;
     flex-direction: column;
@@ -366,6 +384,36 @@
     max-width: 480px;
   }
   @media (min-width: 768px) { .drag-drop-feature-page .drag-drop-hero__content { max-width: 640px; } }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__content {
+      flex: 0 0 auto;
+      width: 50%;
+      max-width: 560px;
+    }
+  }
+  /* Right-rail GIF — rounded card with subtle border to anchor on the dark bg. */
+  .drag-drop-feature-page .drag-drop-hero__media {
+    width: 100%;
+    max-width: 640px;
+    align-self: center;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__media {
+      flex: 1 1 0;
+      max-width: none;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .drag-drop-feature-page .drag-drop-hero__media-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
   .drag-drop-feature-page .drag-drop-hero__heading-group {
     display: flex;
     flex-direction: column;
