@@ -1,113 +1,117 @@
 <div class="drag-drop-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-drag relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
-          <p class="text-lg text-gray-600 mb-4">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See Freestyle in action</a>
-            <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore customer stories</a>
-          </div> 
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/drag-and-drop.gif" alt="Content.One drag and drop page designer" class="w-full h-full object-cover">
+
+  <!-- ════════════ HERO — Figma 13863:4419 (XL) / 4433 (LG) / 4449 (MD) / 4465 (SM)
+       Dark gradient bg with text on left + Freestyle product GIF on right at lg+,
+       stacked single-column below lg. All styles in plain CSS in the <style> block
+       at the bottom — no Tailwind utilities so the hero renders deterministically. -->
+  <section class="drag-drop-hero">
+    <div class="drag-drop-hero__container">
+      <div class="drag-drop-hero__layout">
+
+        <div class="drag-drop-hero__content">
+          <div class="drag-drop-hero__heading-group">
+            <span class="drag-drop-hero__overline">Visual Drag-n-Drop Pages</span>
+            <h1 class="drag-drop-hero__title">Design beautiful pages with Content.One’s freestyle drag &amp; drop builder.</h1>
+          </div>
+
+          <p class="drag-drop-hero__subheading">Give marketers and digital teams a visual canvas connected to your design system. Ship on-brand landing pages in minutes—no code, no waiting on developers.</p>
+
+          <div class="drag-drop-hero__ctas">
+            <a href="/book-a-demo/" class="drag-drop-hero__cta drag-drop-hero__cta--primary">See Freestyle in Action</a>
+            <a href="/customers/" class="drag-drop-hero__cta drag-drop-hero__cta--secondary">Explore Customer Stories</a>
           </div>
         </div>
+
+        <div class="drag-drop-hero__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Freestyle-in-Action-Snippet--Social-Media-Asset-.gif" alt="Content.One Freestyle drag &amp; drop page builder in action" class="drag-drop-hero__media-img" loading="eager" />
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Trusted by fast-moving teams</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Build once, reuse everywhere.</h2>
-          <p class="text-gray-600 mb-0">Freestyle turns components into reusable Blocks that marketers can drag, drop, and publish across any page. Pair your headless content models with design tokens or use Content.One’s templating—either way, brand consistency stays locked in.</p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </div>
+  <!-- ════════════ TRUST / SOCIAL PROOF — Figma 13910:5011 (XL) / 5101 / 5191 / 5281 / 5371
+       Dark #060813 bg, centered column. Heading on top, dynamic customer-logo row in
+       white silhouette (keeping the existing parsley each-customer loop), supporting
+       paragraph below. All styles in plain CSS in the <style> block at the bottom. -->
+  <section class="drag-drop-trust">
+    <div class="drag-drop-trust__container">
+      <p class="drag-drop-trust__heading">Trusted by fast-moving teams</p>
+      <div class="drag-drop-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="drag-drop-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="drag-drop-trust__logo-img">
+        </a>
+        {{/each}}
       </div>
+      <p class="drag-drop-trust__body">Freestyle turns components into reusable Blocks that marketers can drag, drop, and publish across any page. Pair your headless content models with design tokens or use Content.One’s templating—either way, brand consistency stays locked in.</p>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Freestyle capabilities</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Create stunning pages in seconds—no engineering ticket required</h2>
-          <p class="text-gray-600 text-lg mb-0">Drag &amp; drop curated Blocks, configure layouts, and publish instantly. Freestyle is purpose-built for growth teams who need speed without sacrificing governance.</p>
-        </div>
+  <!-- ════════════ FEATURES GRID — Figma 13911:8714 (XL) / 8765 (LG) / 8810 (MD) / 8855 (SM) / 8900 (Base)
+       Pure black bg, centered heading + subhead, 6-card grid with #18214e
+       skeumorphic icon tiles. Heading + subhead copy lifted from the Figma. -->
+  <section class="drag-drop-features">
+    <div class="drag-drop-features__container">
+      <div class="drag-drop-features__heading-group">
+        <h2 class="drag-drop-features__title">Create stunning pages in seconds—no engineering ticket required</h2>
+        <p class="drag-drop-features__subheading">Content.One scales with the size of your team, the complexity of your brand portfolio, and the channels you have to be on tomorrow.</p>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Visual editing canvas</h3>
-              <p class="text-gray-600 mb-0">Drag hero sections, galleries, forms, or CTA strips into place and fine-tune spacing, backgrounds, and copy in real time.</p>
-            </div>
+      <div class="drag-drop-features__grid">
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Reusable Blocks</h3>
-              <p class="text-gray-600 mb-0">Developers build Blocks using Content.One templating or headless component libraries. Marketers reuse them across any experience.</p>
-            </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Visual editing canvas</p>
+            <p class="drag-drop-features__card-body">Drag hero sections, galleries, forms, or CTA strips into place and fine-tune spacing, backgrounds, and copy in real time.</p>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Layouts &amp; canvases</h3>
-              <p class="text-gray-600 mb-0">Start from approved layouts or craft custom canvases for campaigns, microsites, and product launches.</p>
-            </div>
+        </article>
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Collaboration-friendly</h3>
-              <p class="text-gray-600 mb-0">Share pages for feedback without publishing. Commenting, version history, and audit trails keep teams aligned.</p>
-            </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Reusable Blocks</p>
+            <p class="drag-drop-features__card-body">Developers build Blocks using Content.One templating or headless component libraries. Marketers reuse them across any experience.</p>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Works with headless or templated</h3>
-              <p class="text-gray-600 mb-0">Use Freestyle with Content.One’s WebEngine templates or expose layouts via APIs for headless frontends.</p>
-            </div>
+        </article>
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="5" cy="5" r="1.5"/><circle cx="12" cy="5" r="1.5"/><circle cx="19" cy="5" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/><circle cx="5" cy="19" r="1.5"/><circle cx="12" cy="19" r="1.5"/><circle cx="19" cy="19" r="1.5"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Design system friendly</h3>
-              <p class="text-gray-600 mb-0">Hook Blocks into your tokens, Tailwind utilities, or CSS variables so every landing page stays on-brand.</p>
-            </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Layouts &amp; canvases</p>
+            <p class="drag-drop-features__card-body">Start from approved layouts or craft custom canvases for campaigns, microsites, and product launches.</p>
           </div>
-        </div>
+        </article>
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Collaboration Friendly</p>
+            <p class="drag-drop-features__card-body">Share pages for feedback without publishing. Commenting, version history, and audit trails keep teams aligned.</p>
+          </div>
+        </article>
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><line x1="2" y1="9" x2="22" y2="9"/><polyline points="8 14 6 16 8 18"/><polyline points="13 14 15 16 13 18"/></svg>
+          </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Works with headless or templated</p>
+            <p class="drag-drop-features__card-body">Use Freestyle with Content.One’s WebEngine templates or expose layouts via APIs for headless frontends.</p>
+          </div>
+        </article>
+        <article class="drag-drop-features__card">
+          <div class="drag-drop-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="6" r="3"/><circle cx="6" cy="16" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+          </div>
+          <div class="drag-drop-features__card-text">
+            <p class="drag-drop-features__card-title">Design System Friendly</p>
+            <p class="drag-drop-features__card-body">Hook Blocks into your tokens, Tailwind utilities, or CSS variables so every landing page stays on-brand.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
@@ -333,6 +337,359 @@
 </div>
 
 <style>
+  /* ─── Hero (Figma 13863:4419 + responsive variants) ──────────────────
+     Plain CSS, no Tailwind utilities — renders deterministically regardless
+     of Play CDN runtime class scan. */
+  .drag-drop-feature-page .drag-drop-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero { padding: 128px 0 96px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .drag-drop-feature-page .drag-drop-hero__container { padding: 0 2rem; } }
+  /* Layout — single column below lg, two-column row at lg+ (text left, GIF right). */
+  .drag-drop-feature-page .drag-drop-hero__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: stretch;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__layout {
+      flex-direction: row;
+      gap: 64px;
+      align-items: center;
+    }
+  }
+  .drag-drop-feature-page .drag-drop-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 480px;
+  }
+  @media (min-width: 768px) { .drag-drop-feature-page .drag-drop-hero__content { max-width: 640px; } }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__content {
+      flex: 0 0 auto;
+      width: 50%;
+      max-width: 560px;
+    }
+  }
+  /* Right-rail GIF — rounded card with subtle border to anchor on the dark bg. */
+  .drag-drop-feature-page .drag-drop-hero__media {
+    width: 100%;
+    max-width: 640px;
+    align-self: center;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__media {
+      flex: 1 1 0;
+      max-width: none;
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .drag-drop-feature-page .drag-drop-hero__media-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .drag-drop-feature-page .drag-drop-hero__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .drag-drop-feature-page .drag-drop-hero__overline {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: #404040;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+  }
+  .drag-drop-feature-page .drag-drop-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-hero__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; }
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -0.96px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    max-width: 480px;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-hero__subheading { font-size: 16px; line-height: 24px; letter-spacing: normal; }
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-hero__subheading { font-size: 20px; line-height: 30px; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 640px) {
+    .drag-drop-feature-page .drag-drop-hero__ctas { flex-direction: row; }
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--primary:hover { background-color: #2F3F94; }
+  .drag-drop-feature-page .drag-drop-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .drag-drop-feature-page .drag-drop-hero__cta--secondary:hover { background-color: #f9fafb; }
+
+  /* ─── Trust / social proof (Figma 13910:5011 + 5101/5191/5281/5371) ──── */
+  .drag-drop-feature-page .drag-drop-trust {
+    background: #060813;
+    padding: 96px 0;
+  }
+  .drag-drop-feature-page .drag-drop-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .drag-drop-feature-page .drag-drop-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .drag-drop-feature-page .drag-drop-trust__container { padding: 0 2rem; } }
+  .drag-drop-feature-page .drag-drop-trust__heading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 1216px;
+  }
+  @media (min-width: 640px) {
+    .drag-drop-feature-page .drag-drop-trust__heading { font-size: 20px; line-height: 30px; }
+  }
+  .drag-drop-feature-page .drag-drop-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+  }
+  .drag-drop-feature-page .drag-drop-trust__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    transition: opacity 0.2s ease;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-trust__logo { height: 48px; }
+  }
+  .drag-drop-feature-page .drag-drop-trust__logo-img {
+    display: block;
+    height: 100%;
+    width: auto;
+    max-width: 100%;
+    /* White-silhouette treatment for color logos on a dark bg —
+       desaturate + invert + slight dim per ardeay's solutions-page CSS. */
+    filter: grayscale(1) invert(1) brightness(1);
+    opacity: 1;
+  }
+  .drag-drop-feature-page .drag-drop-trust__body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+
+  /* ─── Features grid (Figma 13911:8714 + 8765/8810/8855/8900) ─────────── */
+  .drag-drop-feature-page .drag-drop-features {
+    background: #000000;
+    padding: 96px 0;
+  }
+  .drag-drop-feature-page .drag-drop-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (min-width: 640px) { .drag-drop-feature-page .drag-drop-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .drag-drop-feature-page .drag-drop-features__container { padding: 0 2rem; } }
+  .drag-drop-feature-page .drag-drop-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    max-width: 768px;
+    width: 100%;
+  }
+  .drag-drop-feature-page .drag-drop-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-features__title {
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: -0.72px;
+    }
+  }
+  .drag-drop-feature-page .drag-drop-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-features__subheading {
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+  .drag-drop-feature-page .drag-drop-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+  @media (min-width: 768px) {
+    .drag-drop-feature-page .drag-drop-features__grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (min-width: 1024px) {
+    .drag-drop-feature-page .drag-drop-features__grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  .drag-drop-feature-page .drag-drop-features__card {
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #19214e;
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: flex-start;
+  }
+  /* Skeumorphic 48px icon tile per Figma "shadow-xs-skeuomorphic" spec —
+     drop shadow + inset border + inset bottom highlight. */
+  .drag-drop-feature-page .drag-drop-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #18214e;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .drag-drop-feature-page .drag-drop-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #ffffff;
+  }
+  .drag-drop-feature-page .drag-drop-features__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  .drag-drop-feature-page .drag-drop-features__card-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .drag-drop-feature-page .drag-drop-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    min-height: 72px;
+  }
+
+  /* Legacy classes — still used by sections below the hero. */
   .drag-drop-feature-page .bg-gradient-drag {
     background: linear-gradient(135deg, #111827 0%, #2563eb 40%, #ec4899 100%);
   }
