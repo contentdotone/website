@@ -226,7 +226,7 @@
     </div>
   </section>
 
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
+  <section class="drag-drop-stats text-white relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-12 gap-4 gap-6 items-center">
         <div class="lg:col-span-6">
@@ -814,6 +814,14 @@
     line-height: 24px;
     margin: 0;
     flex: 1;
+  }
+
+  /* "Why teams love Freestyle" stat strip — matches the alternating-highlights bg
+     (#0c1027) + 96px vertical padding so it reads as continuous with the section
+     above instead of a hard break. */
+  .drag-drop-feature-page .drag-drop-stats {
+    background: #0c1027;
+    padding: 96px 0;
   }
 
   /* Legacy classes — still used by sections below the hero. */
