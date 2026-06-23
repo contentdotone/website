@@ -907,6 +907,11 @@
   .drag-drop-feature-page .drag-drop-customers__cta:hover {
     background: rgba(255, 255, 255, 0.06);
   }
+  /* Hide the related-feature chips on the customer cards — bobby asked to drop
+     them on this page. Widget is shared across other pages; only scoped here. */
+  .drag-drop-feature-page .drag-drop-customers .review-feature-chip {
+    display: none;
+  }
 
   /* Legacy classes — still used by sections below the hero. */
   .drag-drop-feature-page .bg-gradient-drag {
