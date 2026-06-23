@@ -136,9 +136,9 @@
     </section>
 {{/if}}
 
-<section class="bg-gray-100 p-5">
+<section class="p-5" style="background:#0c1027; padding-top:96px; padding-bottom:96px;">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-5">Read about Customers who've leveraged {{this.title}} from Content.One</h3>
+        <h3 class="font-display text-2xl md:text-3xl font-semibold mb-8 text-white" style="letter-spacing:-0.01em;">Read about Customers who've leveraged {{this.title}} from Content.One</h3>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4" id="customersGrid">
         {{each customer as customer order by rand() limit 4}}
         <div data-customer-card data-code="{{customer.short_code}}">
