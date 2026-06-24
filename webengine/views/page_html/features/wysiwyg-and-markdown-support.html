@@ -438,9 +438,12 @@
     max-width: 640px;
   }
 
-  /* ─── Features Grid ──────────────────────────────────────────────────── */
+  /* ─── Features Grid (Figma 13911:8713 + responsive variants) ──────────
+     Light variant — white bg, white cards with subtle border, dark text,
+     light-lavender icon tiles. Mirrors the drag-n-drop page's light-theme
+     features grid to create a dark→light→dark rhythm on the page. */
   .wysiwyg-feature-page .wysiwyg-features {
-    background: #000000;
+    background: #ffffff;
     padding: 96px 0;
   }
   .wysiwyg-feature-page .wysiwyg-features__container {
@@ -466,7 +469,7 @@
   .wysiwyg-feature-page .wysiwyg-features__title {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    color: #171717;
     font-size: 30px;
     line-height: 38px;
     margin: 0;
@@ -474,7 +477,7 @@
   @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-features__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; } }
   .wysiwyg-feature-page .wysiwyg-features__subheading {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
-    color: #b1bae7;
+    color: #404040;
     font-size: 18px;
     line-height: 28px;
     margin: 0;
@@ -489,8 +492,8 @@
   @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-features__grid { grid-template-columns: repeat(2, 1fr); } }
   @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-features__grid { grid-template-columns: repeat(3, 1fr); } }
   .wysiwyg-feature-page .wysiwyg-features__card {
-    background: rgba(0, 0, 0, 0.1);
-    border: 1px solid #19214e;
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     padding: 24px;
     display: flex;
@@ -502,22 +505,19 @@
     width: 48px;
     height: 48px;
     border-radius: 10px;
-    background: #18214e;
+    background: #d8dcf3;
     border: 2px solid rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    box-shadow:
-      0 1px 2px 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   }
   .wysiwyg-feature-page .wysiwyg-features__icon svg {
     width: 24px;
     height: 24px;
     display: block;
-    color: #ffffff;
+    color: #4255BD;
   }
   .wysiwyg-feature-page .wysiwyg-features__card-text {
     display: flex;
@@ -528,14 +528,14 @@
   .wysiwyg-feature-page .wysiwyg-features__card-title {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    color: #171717;
     font-size: 18px;
     line-height: 28px;
     margin: 0;
   }
   .wysiwyg-feature-page .wysiwyg-features__card-body {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
-    color: #b1bae7;
+    color: #525252;
     font-size: 16px;
     line-height: 24px;
     margin: 0;
