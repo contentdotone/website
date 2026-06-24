@@ -668,9 +668,13 @@
     min-height: 72px;
   }
 
-  /* ─── Alternating highlights (Figma 13935:2082 + 2145/2208/2271/2334) ─── */
+  /* ─── Alternating highlights (Figma 13935:2082 + 2145/2208/2271/2334) ───
+     Light variant per latest Figma — flipped from dark #0c1027 to white
+     for the drag-n-drop page. Extends the dark→light→dark→light page
+     rhythm: hero/trust dark → features light → highlights LIGHT → stats
+     dark → customers dark → closing dark. */
   .drag-drop-feature-page .drag-drop-highlights {
-    background: #0c1027;
+    background: #ffffff;
     padding: 96px 0;
   }
   .drag-drop-feature-page .drag-drop-highlights__container {
@@ -713,8 +717,8 @@
     width: 100%;
     height: auto;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.06);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
   }
   .drag-drop-feature-page .drag-drop-highlights__content {
     width: 100%;
@@ -733,7 +737,7 @@
   .drag-drop-feature-page .drag-drop-highlights__title {
     font-family: 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    color: #171717;
     font-size: 24px;
     line-height: 32px;
     letter-spacing: 0;
@@ -744,8 +748,8 @@
   }
   .drag-drop-feature-page .drag-drop-highlights__lede {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
-    font-weight: 400;
-    color: #b1bae7;
+    font-weight: 500;
+    color: #525252;
     font-size: 16px;
     line-height: 24px;
     margin: 0;
@@ -773,7 +777,7 @@
   .drag-drop-feature-page .drag-drop-highlights__cell-title {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
-    color: #ffffff;
+    color: #171717;
     font-size: 18px;
     line-height: 28px;
     margin: 0;
@@ -781,7 +785,7 @@
   .drag-drop-feature-page .drag-drop-highlights__cell-body {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 500;
-    color: #b1bae7;
+    color: #737373;
     font-size: 16px;
     line-height: 24px;
     margin: 0;
@@ -805,7 +809,7 @@
     flex-shrink: 0;
     width: 24px;
     height: 24px;
-    color: #b1bae7;
+    color: #4255BD;
     display: block;
     padding-top: 2px;
   }
@@ -817,7 +821,7 @@
   .drag-drop-feature-page .drag-drop-highlights__icon-text {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 500;
-    color: #b1bae7;
+    color: #525252;
     font-size: 16px;
     line-height: 24px;
     margin: 0;
