@@ -277,6 +277,86 @@
     </div>
   </section>
 
+  <!-- ════════════ CUSTOMER REVIEWS — 3 Content.One vs 3 Contentful, verbatim G2. -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Customer reviews</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto">Verbatim from G2 reviewers — three for Content.One (still listed under its former name Zesty.io), three for Contentful. Truncated for length; links go to the full reviews.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+        <!-- Content.One column -->
+        <div>
+          <div class="flex items-center justify-between mb-5 pb-3 border-b border-gray-200">
+            <div class="flex items-center gap-3">
+              <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" alt="" class="w-8 h-8 rounded" />
+              <h3 class="font-display text-xl font-bold m-0">Content.One <span class="text-gray-500 font-normal text-sm">(Zesty.io on G2)</span></h3>
+            </div>
+            <a href="https://www.g2.com/products/zesty-io/reviews" target="_blank" rel="noopener" class="text-sm font-semibold text-royal hover:text-royalDark whitespace-nowrap">All reviews →</a>
+          </div>
+          <div class="grid gap-4">
+            {{each customer_reviews as review order by review.stars desc, review.created_date desc limit 3}}
+            <article class="bg-white rounded-2xl border border-gray-200 p-5 shadow-sm">
+              <div class="flex items-start justify-between gap-3 mb-3">
+                <div>
+                  <p class="font-semibold text-ink m-0">{{review.name}}</p>
+                  {{if {review.working_title} }}
+                  <p class="text-gray-500 text-sm m-0">{{review.working_title}}</p>
+                  {{/if}}
+                </div>
+                {{if {review.stars} }}
+                <div class="flex items-center gap-1 text-warning shrink-0" aria-label="{{review.stars}} out of 5 stars">
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  <svg viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01z"/></svg>
+                </div>
+                {{/if}}
+              </div>
+              {{if {review.title} }}
+              <p class="font-semibold text-ink mb-2">{{review.title}}</p>
+              {{/if}}
+              <p class="text-gray-700 text-sm leading-6 m-0">{{review.quote.striptags().subwords(35)}}…</p>
+            </article>
+            {{/each}}
+          </div>
+        </div>
+
+        <!-- Contentful column — kaya to paste 3 verbatim G2 reviews here. -->
+        <div>
+          <div class="flex items-center justify-between mb-5 pb-3 border-b border-gray-200">
+            <div class="flex items-center gap-3">
+              <img src="https://www.google.com/s2/favicons?domain=contentful.com&sz=64" alt="" class="w-8 h-8 rounded" />
+              <h3 class="font-display text-xl font-bold m-0">Contentful</h3>
+            </div>
+            <a href="https://www.g2.com/products/contentful/reviews" target="_blank" rel="noopener" class="text-sm font-semibold text-royal hover:text-royalDark whitespace-nowrap">All reviews →</a>
+          </div>
+          <div class="grid gap-4">
+            <!-- TODO(kaya): swap each "Pending verbatim review" card below for a real
+                 G2 Contentful review. Keep the structure identical to the Content.One
+                 cards on the left so the columns stay visually balanced. -->
+            <article class="bg-white rounded-2xl border border-dashed border-gray-300 p-5 text-center">
+              <p class="text-gray-500 text-sm m-0">Pending verbatim review from G2.</p>
+              <a href="https://www.g2.com/products/contentful/reviews" target="_blank" rel="noopener" class="text-royal hover:text-royalDark text-sm font-semibold">Read Contentful reviews on G2 →</a>
+            </article>
+            <article class="bg-white rounded-2xl border border-dashed border-gray-300 p-5 text-center">
+              <p class="text-gray-500 text-sm m-0">Pending verbatim review from G2.</p>
+              <a href="https://www.g2.com/products/contentful/reviews" target="_blank" rel="noopener" class="text-royal hover:text-royalDark text-sm font-semibold">Read Contentful reviews on G2 →</a>
+            </article>
+            <article class="bg-white rounded-2xl border border-dashed border-gray-300 p-5 text-center">
+              <p class="text-gray-500 text-sm m-0">Pending verbatim review from G2.</p>
+              <a href="https://www.g2.com/products/contentful/reviews" target="_blank" rel="noopener" class="text-royal hover:text-royalDark text-sm font-semibold">Read Contentful reviews on G2 →</a>
+            </article>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- ════════════ FAQ ════════════ -->
   <section class="py-16 lg:py-24">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
