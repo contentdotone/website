@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Drupal vs Content.One — CMS comparison, cost of ownership, G2 reviews</title>
+  <meta name="description" content="Drupal vs Content.One: side-by-side comparison of cost of ownership, hosting, multisite, developer dependency, SSO, AI agents, and G2 reviews. See where each CMS fits." />
+  <meta property="og:title" content="Drupal vs Content.One" />
+  <meta property="og:description" content="Cost of ownership, hosting, multisite, developer dependency, SSO, AI/MCP, and G2 reviews, compared." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/drupal-vs-content-one.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .versus-faq > summary::-webkit-details-marker { display: none; }
+    .versus-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="versus-page">
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-5">Side-by-side comparison</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Drupal vs Content.One</h1>
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Drupal is a free, open-source CMS with deep flexibility and a huge module library, run and maintained by you or an agency. Content.One gives multi-site teams the same federated reach as a managed platform, with hosting and upkeep handled.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AT A GLANCE — 4 CARDS ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">At a glance</h2>
+        <p class="text-gray-600">The four trade-offs that show up most often when teams compare Drupal vs Content.One.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">What it really costs</h3>
+          <p class="text-gray-600 text-sm m-0">Drupal's license is free. The cost is Drupal hosting, developers or an agency, and ongoing maintenance. Content.One is quote-based with hosting included.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Who runs it</h3>
+          <p class="text-gray-600 text-sm m-0">With Drupal, you (or a host like Acquia or Pantheon) run the servers, apply security patches, and handle upgrades. Content.One is managed, with no servers to patch.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Multisite</h3>
+          <p class="text-gray-600 text-sm m-0">Drupal multisite is native but a self-managed, shared-codebase model. Content.One runs federated multisite from one platform, managed for you.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">When each wins</h3>
+          <p class="text-gray-600 text-sm m-0">Pick Drupal for open-source control when you have the developers to run it. Pick Content.One for managed federated multisite a marketing team can drive.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ G2 / REVIEWS ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">What real customers say</h2>
+        <p class="text-gray-600">Independent review scores from G2 and Capterra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="40" height="40" alt="Content.One" class="rounded-lg" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Content.One</p>
+              <p class="text-gray-500 text-xs m-0">G2 + Capterra review profiles</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 25 reviews on Capterra</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Ease of use for non-developers. Hands-on support — "goes above and beyond." Customers report dropping their own software and database maintenance after migrating.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/content-one/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/143834/Zesty-io/reviews/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=drupal.org&sz=128" width="40" height="40" alt="Drupal" class="rounded-lg bg-gray-50 p-1" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Drupal</p>
+              <p class="text-gray-500 text-xs m-0">G2 review profile</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.2</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 445+ reviews on G2</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Flexibility without custom code, strong security, and multilingual sites at scale — widely trusted by government, higher education, and large nonprofits. Pushback is consistent too: a steep learning curve, complex setup, and performance tuning that often needs extra infrastructure.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/drupal/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ COMPARISON TABLE ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">The comparison</h2>
+        <p class="text-gray-600">Capability by capability. Why each one matters in the right-hand column.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-700">
+              <th class="font-display font-semibold p-4 w-1/4">Capability</th>
+              <th class="font-display font-semibold p-4 w-1/4">Content.One</th>
+              <th class="font-display font-semibold p-4 w-1/4">Drupal</th>
+              <th class="font-display font-semibold p-4 w-1/4">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+
+            <tr class="bg-royal/5"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Pricing and plans</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Plans and entry price</td><td class="p-4 align-top">Custom pricing by consultation, no public tiers</td><td class="p-4 align-top">Free, open-source, no license fee</td><td class="p-4 align-top text-gray-600">The license is free, the cost is hosting, developers, and upkeep</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Total cost of ownership</td><td class="p-4 align-top">Quote-based, hosting and maintenance included</td><td class="p-4 align-top">No license cost — you pay for hosting, development, and maintenance</td><td class="p-4 align-top text-gray-600">"Free" usually lands well above free once you add it up</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Hosting included</td><td class="p-4 align-top">Yes, hosting and global CDN</td><td class="p-4 align-top">No — you self-host or pay a Drupal host like Acquia, Pantheon, or Platform.sh</td><td class="p-4 align-top text-gray-600">One managed bill vs servers you run yourself</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Maintenance and updates</td><td class="p-4 align-top">Managed, no servers or patching</td><td class="p-4 align-top">You apply security patches, module updates, and core upgrades</td><td class="p-4 align-top text-gray-600">Ongoing engineering time vs handled for you</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Editorial experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Publish without a developer</td><td class="p-4 align-top">Yes, visual drag-and-drop builder</td><td class="p-4 align-top">Drupal CMS 2.0 added Canvas and site templates, but most builds still lean on developers or an agency</td><td class="p-4 align-top text-gray-600">Ship pages without a ticket vs depend on dev capacity</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Visual editing</td><td class="p-4 align-top">Built into the core product</td><td class="p-4 align-top">Yes, via Drupal Canvas in Drupal CMS 2.0</td><td class="p-4 align-top text-gray-600">Close to even now, both edit on the page</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Content model and scale</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Content modeling</td><td class="p-4 align-top">Structured content, no code required to model</td><td class="p-4 align-top">Flexible content types and fields, complex models need developers</td><td class="p-4 align-top text-gray-600">Flexibility vs configuration effort</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Federated multisite</td><td class="p-4 align-top">Native, many sites and brands from one platform, managed</td><td class="p-4 align-top">Native multisite, but a self-managed shared-codebase model</td><td class="p-4 align-top text-gray-600">Hosted multisite vs running the codebase and updates yourself</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Localization</td><td class="p-4 align-top">Built in, structured translation workflows</td><td class="p-4 align-top">Strong multilingual in core, one of Drupal's best features</td><td class="p-4 align-top text-gray-600">Both handle localization well, Drupal especially</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Scale and performance</td><td class="p-4 align-top">Managed scaling and CDN</td><td class="p-4 align-top">Scales well, but caching, tuning, and infrastructure are on you</td><td class="p-4 align-top text-gray-600">Managed performance vs your team's responsibility</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">AI and agents</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI content</td><td class="p-4 align-top">Generative AI built in</td><td class="p-4 align-top">Drupal CMS 2.0 ships Canvas AI, an admin chatbot, and AI alt text, plus a contributed AI module with 48+ providers</td><td class="p-4 align-top text-gray-600">Both have AI, Drupal's is part core and part contrib you configure</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">MCP server for AI agents</td><td class="p-4 align-top">Native MCP server</td><td class="p-4 align-top">Available through contributed modules (mcp_server, MCP Tools), community-maintained and still pre-stable</td><td class="p-4 align-top text-gray-600">Native and managed vs install, configure, and maintain yourself</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Developer experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">APIs</td><td class="p-4 align-top">REST, GraphQL, and JSON endpoints</td><td class="p-4 align-top">JSON:API and REST in core, GraphQL via a contributed module</td><td class="p-4 align-top text-gray-600">Both support headless, Drupal needs a module for GraphQL</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Dev workflow</td><td class="p-4 align-top">Templating with versioning and rollbacks, GitHub and local dev, webhooks</td><td class="p-4 align-top">PHP and Symfony, Twig, Composer, Drush, Git</td><td class="p-4 align-top text-gray-600">Both developer-friendly, Drupal is a deeper engineering commitment</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Extensions and modules</td><td class="p-4 align-top">Webhooks, block components, native integrations</td><td class="p-4 align-top">Thousands of contributed modules, one of the largest libraries in CMS</td><td class="p-4 align-top text-gray-600">A huge module library vs a managed integration set</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Security and governance</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">SSO and roles</td><td class="p-4 align-top">SSO and custom roles included in standard</td><td class="p-4 align-top">Granular roles in core, SSO and SAML via contributed modules you install</td><td class="p-4 align-top text-gray-600">Managed access control vs assembling and maintaining it</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Audit logs</td><td class="p-4 align-top">Included</td><td class="p-4 align-top">Via contributed modules</td><td class="p-4 align-top text-gray-600">Built in vs add and maintain</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Security model</td><td class="p-4 align-top">Managed, patching handled</td><td class="p-4 align-top">Strong security reputation, but you apply the patches</td><td class="p-4 align-top text-gray-600">Trusted either way — the question is who keeps it current</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Support</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Support</td><td class="p-4 align-top">Reviewers praise responsiveness on Capterra</td><td class="p-4 align-top">Community forums and documentation, paid support via agencies or hosts</td><td class="p-4 align-top text-gray-600">Direct vendor help vs community plus paid partners</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BODY TEXT ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Drupal vs Content.One: how they actually differ</h2>
+      <div class="prose prose-gray max-w-none space-y-6 text-gray-700 text-base leading-7">
+        <p>Let's give Drupal its due, because it earns it. It's 25 years old, it powers a huge share of government, higher-education, and nonprofit sites, and its security reputation is one of the best in the category. Multilingual is a core strength, the contributed module library is enormous, and on January 28, 2026 Drupal shipped one of its biggest releases ever. <a href="https://www.drupal.org/blog/drupal-cms-20-is-here-visual-building-ai-and-site-templates-transform-drupal" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">Drupal CMS 2.0</a> added Drupal Canvas for on-page visual editing, AI tools, and site templates, so marketing teams can launch branded sites in days rather than weeks. It's free, open-source, and you own your data outright. For a team with developers, that's a serious platform.</p>
+        <p>Here's the part that doesn't show up on a feature list. "Free" is the license, not the cost. You host Drupal yourself or pay a specialist host like Acquia or Pantheon, you apply the security patches, and you carry the core and module upgrades. Beyond a starter template, most real builds still run through developers or an agency. None of that is a knock on Drupal. It's the deal you sign up for with self-hosted open-source, and for an engineering team that wants full control, it's a fair trade. For a lean marketing team running 40 chapter sites, it's a standing cost that never really ends.</p>
+        <p>Multisite is a good example. Drupal multisite is native and genuinely capable, but it's a shared-codebase model you run yourself. Every site rides the same code, and one upgrade or security patch is a job across all of them. That works when you have the people to manage it. It gets heavy when you don't.</p>
+        <p>This is where Content.One is built differently, and it's worth being specific. Content.One includes hosting and global CDN delivery, so there are no servers to run or patch. It's designed around <a href="/solutions/federated-multisite/" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">federated multisite</a>, so one team runs many sites and brands from a single managed platform instead of maintaining a shared Drupal codebase. Publishing is visual and no-ticket, SSO, custom roles, and audit logs sit in the standard product, and there's a native MCP server so AI agents can work with content directly. The upgrades and patching that eat a Drupal team's week are simply not your job.</p>
+        <p>Reviews track the split. Content.One's reviews currently sit under its former name, Zesty.io, on G2 and Capterra, since the rebrand is still rolling out, and the recurring Capterra themes are ease of use for non-developers and hands-on support, with one customer saying the team <em>"goes above and beyond."</em> On the Drupal side, reviewers praise the flexibility, the security, and the multilingual depth, and the most common caveats are just as steady: a steep learning curve, complex setup, and performance that needs tuning and extra infrastructure as sites grow.</p>
+        <p>None of this makes Drupal the wrong call. If you want open-source control, full data ownership, deep custom functionality from the module library, and you have the developers or agency to run it, Drupal is an excellent choice, and Drupal CMS 2.0 closes a real chunk of the old ease-of-use gap. The honest decision is about who carries the platform. If you have an engineering team and want to own every layer, Drupal fits. If you want the same federated multisite reach without hosting, patching, and upgrades on your plate, that's the case for Content.One. (Comparing the headless names too? Here's <a href="/contentful-vs-content-one.html" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">Contentful vs Content.One</a> and <a href="/sanity-vs-content-one.html" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">Sanity vs Content.One</a>.)</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="font-display text-2xl font-bold mb-3">When Drupal is the better pick</h3>
+        <p class="text-gray-700 text-base leading-7">Drupal is the stronger choice if you want a free, open-source platform with full code and data ownership and no vendor lock-in, you have or will hire the developers or agency to build and maintain it, you need deep custom functionality from the contributed module library, multilingual at scale is core to your sites, or your security and compliance posture favors self-hosting with complete control.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+        <p class="text-gray-600">The questions that come up most often when teams compare Drupal and Content.One.</p>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is Content.One a good Drupal alternative?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">For multi-site teams that want federated reach without hosting and maintaining the platform themselves, yes. Drupal is the stronger pick if you want open-source control and have the developers to run it.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is Drupal free?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">The software is free and open-source, so there's no license fee. The real cost is Drupal hosting, developers or an agency to build and maintain the site, and the time spent on updates. Content.One is quote-based with hosting and maintenance included.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Drupal include hosting?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">No. You self-host Drupal or pay a specialist host such as Acquia, Pantheon, or Platform.sh. Content.One includes hosting and global CDN delivery.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Do I need a developer to use Drupal?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">For setup and anything beyond a starter template, usually yes. Drupal CMS 2.0 added Canvas for on-page editing and site templates, which helps marketers, but modules, theming, and maintenance still lean on developers. Content.One is built so a non-developer can publish from the start.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">How does Drupal multisite compare to Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Drupal multisite is native but runs on a shared codebase you host and maintain, so updates and patches apply across every site. Content.One offers managed federated multisite, where one team runs many sites from a single platform without the codebase upkeep.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Drupal support AI agents and MCP?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Drupal CMS 2.0 ships AI tools, and Drupal can act as an MCP server through contributed modules like mcp_server and MCP Tools. Those are community-maintained and still pre-stable, and you install and configure them. Content.One ships a native MCP server.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is migrating from Drupal to Content.One hard?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Effort depends on how many sites, content types, and languages you're moving. You can get an estimate from the migration tool at <a href="https://migration.content.one" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">migration.content.one</a>.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Why are Content.One reviews listed under Zesty.io?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One was rebranded from Zesty.io, and the review profiles on G2 and Capterra haven't fully migrated yet.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to compare hands-on?</h2>
+      <p class="text-lg text-white/80 mb-8">Start a build, or get an estimate for migrating off self-hosted Drupal — both take a few minutes.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+      <span class="text-sm text-white/70">© 2026 Content.One — built for federated organizations.</span>
+    </div>
+    <div class="flex items-center gap-5 text-sm text-white/70">
+      <a href="/contact-us/" class="hover:text-white">Contact</a>
+      <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      <a href="/terms/" class="hover:text-white">Terms</a>
+      <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+      <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
