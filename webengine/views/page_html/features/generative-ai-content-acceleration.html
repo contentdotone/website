@@ -175,30 +175,35 @@
     </div>
   </section>
 
-  <!-- ════════════ STATS — DARK, solidified card surface, royalLite labels. -->
+  <!-- ════════════ STATS — DARK, solidified cards, side image on right at lg+. -->
   <section class="genai-stats">
     <div class="genai-stats__container">
-      <div class="genai-stats__heading-group">
-        <h2 class="genai-stats__title">AI content acceleration that scales with your team</h2>
-        <p class="genai-stats__lede">Deliver more content, faster—while maintaining consistency, compliance, and quality across every market.</p>
+      <div class="genai-stats__copy">
+        <div class="genai-stats__heading-group">
+          <h2 class="genai-stats__title">AI content acceleration that scales with your team</h2>
+          <p class="genai-stats__lede">Deliver more content, faster—while maintaining consistency, compliance, and quality across every market.</p>
+        </div>
+        <div class="genai-stats__grid">
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="4" data-genai-suffix="×">0</span></p>
+            <p class="genai-stats__label">Faster content velocity with AI assistance</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="70" data-genai-suffix="%">0</span></p>
+            <p class="genai-stats__label">Reduction in time spent on localization workflows</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="200" data-genai-suffix="+">0</span></p>
+            <p class="genai-stats__label">Integrations across analytics, CRM, and automation</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="99.99" data-genai-suffix="%" data-genai-format="decimal">0</span></p>
+            <p class="genai-stats__label">Uptime backed by managed WebEngine infrastructure</p>
+          </div>
+        </div>
       </div>
-      <div class="genai-stats__grid">
-        <div class="genai-stats__tile">
-          <p class="genai-stats__number"><span data-genai-count="4" data-genai-suffix="×">0</span></p>
-          <p class="genai-stats__label">Faster content velocity with AI assistance</p>
-        </div>
-        <div class="genai-stats__tile">
-          <p class="genai-stats__number"><span data-genai-count="70" data-genai-suffix="%">0</span></p>
-          <p class="genai-stats__label">Reduction in time spent on localization workflows</p>
-        </div>
-        <div class="genai-stats__tile">
-          <p class="genai-stats__number"><span data-genai-count="200" data-genai-suffix="+">0</span></p>
-          <p class="genai-stats__label">Integrations across analytics, CRM, and automation</p>
-        </div>
-        <div class="genai-stats__tile">
-          <p class="genai-stats__number"><span data-genai-count="99.99" data-genai-suffix="%" data-genai-format="decimal">0</span></p>
-          <p class="genai-stats__label">Uptime backed by managed WebEngine infrastructure</p>
-        </div>
+      <div class="genai-stats__media">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Team scaling AI content operations" class="genai-stats__img" loading="lazy" />
       </div>
     </div>
   </section>
@@ -597,7 +602,7 @@
     flex: 1;
   }
 
-  /* ─── Stats (DARK, solidified cards) ─────────────────────────────────── */
+  /* ─── Stats (DARK, solidified cards, side image right) ───────────────── */
   .genai-feature-page .genai-stats {
     background: #0c1027;
     padding: 96px 0;
@@ -606,17 +611,34 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 0 1rem;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 48px;
+    align-items: center;
   }
   @media (min-width: 640px) { .genai-feature-page .genai-stats__container { padding: 0 1.5rem; } }
-  @media (min-width: 1024px) { .genai-feature-page .genai-stats__container { padding: 0 2rem; } }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-stats__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+  }
+  .genai-feature-page .genai-stats__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .genai-feature-page .genai-stats__media { width: 100%; }
+  .genai-feature-page .genai-stats__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
   .genai-feature-page .genai-stats__heading-group {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    max-width: 768px;
+    max-width: 560px;
   }
   .genai-feature-page .genai-stats__title {
     font-family: 'DM Sans', system-ui, sans-serif;
@@ -641,7 +663,6 @@
     gap: 16px;
   }
   @media (min-width: 640px) { .genai-feature-page .genai-stats__grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (min-width: 1024px) { .genai-feature-page .genai-stats__grid { grid-template-columns: repeat(4, 1fr); } }
   .genai-feature-page .genai-stats__tile {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.12);
