@@ -967,6 +967,11 @@
   .drag-drop-feature-page .drag-drop-customers .review-feature-chip {
     display: none;
   }
+  /* Add Untitled-UI border-secondary_alt (#eaecf0) to the review cards on this
+     page only. Shared widget already ships bg-white + rounded-2xl + shadow-sm. */
+  .drag-drop-feature-page .drag-drop-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
+  }
 
   /* ─── Closing CTA (Figma 13937:3798 + 3825/3852/3879/3906) ──────────── */
   .drag-drop-feature-page .drag-drop-closing {
