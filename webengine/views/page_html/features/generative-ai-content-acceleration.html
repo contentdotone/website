@@ -78,7 +78,7 @@
         </article>
         <article class="genai-features__card">
           <div class="genai-features__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h3M19 12h3M12 2v3M12 19v3M4.93 4.93l2.12 2.12M16.95 16.95l2.12 2.12M4.93 19.07l2.12-2.12M16.95 7.05l2.12-2.12"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="genai-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/layout-alt-04.svg')"></span>
           </div>
           <div class="genai-features__card-text">
             <p class="genai-features__card-title">Omnichannel ready</p>
@@ -440,6 +440,16 @@
     height: 24px;
     display: block;
     color: #4255BD;
+  }
+  /* Asset-backed icons: mask the SVG so the brand #4255BD shows through
+     regardless of the source SVG's stroke color. */
+  .genai-feature-page .genai-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
   }
   .genai-feature-page .genai-features__card-text {
     display: flex;
