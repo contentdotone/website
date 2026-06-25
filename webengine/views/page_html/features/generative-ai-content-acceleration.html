@@ -146,25 +146,25 @@
           <ul class="genai-highlights__icon-list">
             <li class="genai-highlights__icon-row">
               <span class="genai-highlights__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/cube-03.rJOEETqGze.svg')"></span>
               </span>
               <p class="genai-highlights__icon-text">Reusable Blocks and templates accelerate publishing across campaigns.</p>
             </li>
             <li class="genai-highlights__icon-row">
               <span class="genai-highlights__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/database-01.svg')"></span>
               </span>
               <p class="genai-highlights__icon-text">Structured content models power omnichannel delivery without rework.</p>
             </li>
             <li class="genai-highlights__icon-row">
               <span class="genai-highlights__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/server-05.svg')"></span>
               </span>
               <p class="genai-highlights__icon-text">Lower localization costs—translate once, deploy everywhere.</p>
             </li>
             <li class="genai-highlights__icon-row">
               <span class="genai-highlights__icon" aria-hidden="true">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/globe-05.svg')"></span>
               </span>
               <p class="genai-highlights__icon-text">Native support for 100+ languages—no plugins required.</p>
             </li>
@@ -579,6 +579,14 @@
     padding-top: 2px;
   }
   .genai-feature-page .genai-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .genai-feature-page .genai-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
   .genai-feature-page .genai-highlights__icon-text {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 500;
