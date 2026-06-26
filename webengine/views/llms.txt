@@ -1,0 +1,139 @@
+# Content.One
+
+> Content.One is an AI-native content management system (CMS) and content operations platform built for large, distributed organizations: franchise networks, multi-location brands, and federated or multi-chapter organizations. It combines a headless, API-first architecture with agentic AI and enterprise governance, so a non-developer can publish and manage hundreds of websites from one place. Content.One is the next generation of Zesty.io (founded 2015, San Diego, California), rebuilt around AI content workflows.
+
+Content.One is made for three kinds of organization:
+
+- **Franchise networks**: licensed, multi-unit brands that need a consistent corporate site plus local location pages, updated without a developer ticket for every change.
+- **Multi-location businesses**: corporate-owned location groups such as dental support organizations (DSOs), healthcare systems, gym chains, and restaurant groups managing content across many sites.
+- **Multi-chapter and federated organizations**: nonprofits, trade associations, alumni networks, and member bodies running many chapter or affiliate websites under one brand.
+
+What the platform does, in plain terms:
+
+- Lets a marketer publish a landing page or push a content update across many sites without waiting on a developer.
+- Runs a headless, API-first CMS, so the same structured content can feed websites, mobile apps, and directories.
+- Includes agentic AI for drafting, content operations, and an organization-specific AI chatbot trained on your own content.
+- Ships with enterprise controls: single sign-on (SSO), custom roles, audit logs, workflow approvals, template versioning, and rollbacks.
+- Is built to be read by search engines and AI crawlers, with server-side rendering, GEO and SEO tooling, and a Model Context Protocol (MCP) server, so content can be found and cited in AI search.
+
+Three free tools sit at the top of the funnel: a site analysis and onboarding tool, a standalone GEO/SEO readiness audit, and a migration planner. Pricing and demos are handled through the contact and demo flow.
+
+## Start here
+
+- [Content.One homepage](https://www.content.one/): What Content.One is, who it serves, and how the AI content system works for large organizations.
+- [Features](https://www.content.one/features/): Overview of core CMS and content operations features.
+- [Solutions](https://www.content.one/solutions/): How distributed organizations use Content.One across federated sites, directories, marketing sites, and apps.
+- [Customer stories](https://www.content.one/customers/): Named customers and outcomes, including The Salvation Army, Sony, Rocket League, and Wattpad.
+- [Blog](https://www.content.one/blog/): Articles on content operations, headless CMS, AI search, and managing multi-location and federated websites.
+- [About Content.One](https://www.content.one/about/): Company background, the Zesty.io heritage, and the team behind the platform.
+- [Contact and demo](https://www.content.one/contact-us/): Talk to the team, request a demo, or ask about pricing.
+
+## Free tools
+
+- [Launch: site analysis and onboarding](https://launch.content.one): Enter a domain and get a pre-configured Content.One instance, with an automated read of your current site.
+- [Analysis: GEO and SEO readiness audit](https://analysis.content.one): A standalone audit of how ready a site is for search engines and AI search. No account required.
+- [Migration: platform migration planner](https://migration.content.one): Plan a move from another CMS to Content.One, scoped to your content and site structure.
+
+## Platform and features
+
+- [Headless content management and APIs](https://www.content.one/product-tour/headless-and-apis/): API-first delivery so one content source can serve sites, apps, and directories.
+- [Visual and code-based templating](https://www.content.one/product-tour/visual-code-based-templating/): Build templates visually or in code, so marketers and developers work in the same system.
+- [Visual drag-and-drop pages](https://www.content.one/features/visual-drag-n-drop-pages/): Page building for marketers without writing code.
+- [Reusable component libraries](https://www.content.one/product-tour/reusable-component-libraries/): Block-based components reused across pages and sites for consistency.
+- [WYSIWYG and Markdown support](https://www.content.one/features/wysiwyg-and-markdown-support/): Edit content in a visual editor or in Markdown.
+- [Workflow automation and approvals](https://www.content.one/product-tour/workflow-automation-and-approvals/): Review and approval steps before content goes live.
+- [Scheduled publishing and expiry](https://www.content.one/features/scheduled-publishing-and-expiry/): Set content to publish or come down automatically on a schedule.
+- [Template versioning and rollbacks](https://www.content.one/product-tour/template-versioning-and-rollbacks/): Track template history and revert changes when needed.
+- [Single sign-on (SSO) and custom roles](https://www.content.one/product-tour/single-sign-on-sso-and-roles/): SSO with role-based permissions for large teams.
+- [Audit logs and activity tracking](https://www.content.one/product-tour/audit-logs-and-activity-tracking/): A record of who changed what, for accountability and compliance.
+- [Data encryption and security](https://www.content.one/product-tour/data-encryption-and-security/): Encryption at rest and in transit.
+- [Automated security updates](https://www.content.one/product-tour/automated-security-updates/): UI, API, and security updates handled by the platform.
+- [Global CDN, hosting, and delivery](https://www.content.one/product-tour/global-cdn-hosting/): Hosting and content delivery across a global network.
+- [Multilingual and localization tools](https://www.content.one/product-tour/multilingual-and-localization-tools/): Manage content across languages and regions.
+- [Personalization](https://www.content.one/product-tour/personalization/): Serve different content to different audiences.
+- [Analytics](https://www.content.one/features/analytics/): Built-in reporting on content and site performance.
+- [Webhooks for real-time integrations](https://www.content.one/product-tour/webhooks-for-real-time-integrations/): Trigger external systems when content changes.
+
+## Solutions for distributed organizations
+
+- [Federated multisite](https://www.content.one/solutions/federated-multisite/): Run many chapter, affiliate, or location websites from one platform with shared governance.
+- [Global directory](https://www.content.one/solutions/global-directory/): Manage large member, location, or franchise directories.
+- [Marketing websites](https://www.content.one/solutions/marketing-website/): Marketing sites for large organizations, published without developer dependency.
+- [Story hub](https://www.content.one/solutions/story-hub/): Centralize stories, campaigns, and content for distributed teams.
+- [Mobile app](https://www.content.one/solutions/mobile-app/): Use Content.One as the content source for a mobile app.
+- [AI document management](https://www.content.one/solutions/ai-document-management/): Organize and surface documents with AI.
+- [Org AI chatbot](https://www.content.one/solutions/org-ai-chatbot/): An AI chatbot trained on your organization's own content.
+
+## Who it's for
+
+- [CMS for franchise chains](https://www.content.one/cms-for-franchise-chains/): Content management for franchise and multi-unit brands.
+- [CMS for nonprofits](https://www.content.one/cms-for-non-profits/): Governance and multi-site management for nonprofit and federated organizations.
+- [CMS for hospitals and health systems](https://www.content.one/composable-cms-for-hospitals-and-health-systems/): Composable CMS for healthcare organizations.
+- [CMS for insurance](https://www.content.one/cms-for-insurance/): Content and digital experience management for insurers.
+- [CMS for financial institutions and banks](https://www.content.one/cms-for-financial-institutions-and-fintech-banks/): CMS for banks, fintech, and financial services.
+- [CMS for government and public sector](https://www.content.one/cms-for-government-and-public-sector-organizations/): Content management for public sector agencies.
+
+## AI and AI search (GEO)
+
+- [AI MCP server](https://www.content.one/ai-mcp-server/): The Content.One Model Context Protocol (MCP) server, which lets AI agents connect to and work with your content.
+- [AI content creation with MCP](https://www.content.one/ai-content-creation-mcp/): Using MCP for AI-assisted content creation inside Content.One.
+- [Generative AI content acceleration](https://www.content.one/features/generative-ai-content-acceleration/): AI drafting and content production built into the CMS.
+- [GEO and SEO](https://www.content.one/product-tour/geo-and-seo/): Built-in tooling for search engine optimization and generative engine optimization.
+- [How to show up in AI search in 2026 using your CMS](https://www.content.one/blog/how-to-show-up-in-ai-search-in-2026-using-your-cms-and-why-it-matters/): Why your CMS affects whether AI tools cite your content, and what to do about it.
+- [Optimizing for GEO](https://www.content.one/blog/optimizing-for-geo-how-modern-brands-win-visibility-in-ai-search/): How organizations win visibility in AI search.
+- [Specs are the future for coding with AI](https://www.content.one/blog/specs-are-the-future-for-coding-with-ai/): On spec-driven development and AI-assisted coding.
+
+## Comparisons and alternatives
+
+- [Contentful alternatives](https://www.content.one/blog/contentful-alternatives/): What content teams look for when evaluating alternatives to Contentful.
+- [Drupal alternative](https://www.content.one/blog/drupal-alternative/): Considerations for teams migrating away from Drupal.
+- [Sitecore alternative](https://www.content.one/blog/sitecore-alternative/): Options for distributed organizations and multi-site teams leaving Sitecore.
+- [Adobe Experience Manager (AEM) alternative](https://www.content.one/blog/aem-alternative-why-teams-are-walking-away-from-adobe-experience-manager/): Why some teams move off AEM and what they evaluate instead.
+- [Kentico alternative](https://www.content.one/blog/kentico-alternative/): Enterprise content operations without a heavy upgrade cycle.
+- [WordPress alternatives](https://www.content.one/blog/wordpress-alternatives/): Alternatives for multi-site organizations outgrowing WordPress.
+- [Webflow alternatives](https://www.content.one/blog/webflow-alternatives-beyond-websites-to-enterprise-content-operations/): Moving from website building to enterprise content operations.
+
+## Guides and research
+
+- [The CMS Buyers' Guide 2026](https://www.content.one/the-cms-buyers-guide-2026/): A buyer's guide to choosing a CMS in the age of AI.
+- [Content Operations Maturity Audit](https://www.content.one/content-operations-maturity-audit/): An 8-step framework to find content operations bottlenecks and fix them.
+- [What is content operations?](https://www.content.one/blog/what-is-content-operations-the-modern-approach-to-enterprise-content-management/): A primer on the modern approach to enterprise content management.
+- [Content lifecycle management: the complete enterprise guide](https://www.content.one/blog/content-lifecycle-management/): How content is created, managed, and retired across an organization.
+- [When to use headless CMS architecture (and when not to)](https://www.content.one/blog/when-to-use-headless-cms-architecture-and-when-not-to/): The trade-offs of going headless.
+- [Headless CMS disadvantage: risking content velocity](https://www.content.one/blog/headless-cms-disadvantage-risking-content-velocity/): Where headless setups slow content teams down.
+- [Federated multi-site CMS: manage 100+ websites from one platform](https://www.content.one/blog/federated-multisite-cms-manage-100plus-websites-from-one-platform/): Running many sites under one system.
+- [Enterprise content collaboration](https://www.content.one/blog/enterprise-content-collaboration/): How modern teams create content together at scale.
+- [CMS migration guide: switch platforms without losing SEO](https://www.content.one/blog/cms-migration-guide-how-to-switch-platforms-without-losing-seo/): Migrating a CMS while protecting search rankings.
+- [Best AI CMS platforms for enterprise in 2026](https://www.content.one/blog/best-ai-cms-platforms-for-enterprise-in-2026-reviewed-and-ranked/): A reviewed and ranked list of AI CMS platforms.
+- [Top content operations software solutions in 2026](https://www.content.one/blog/top-9-content-operations-software-solutions-in-2026/): A roundup of content operations tools.
+- [Top content lifecycle management solutions for 2026](https://www.content.one/blog/top-10-content-lifecycle-management-solutions-for-2026/): A roundup of content lifecycle management tools.
+- [Top franchise management software solutions](https://www.content.one/blog/top-franchise-management-software-solutions/): Software options for franchise operations.
+- [Member directory software buyer's guide (2026)](https://www.content.one/blog/member-directory-software-buyers-guide-2026/): What to look for in member directory software.
+
+## Industry insight
+
+- [Franchise industry trends 2026](https://www.content.one/blog/franchise-industry-trends-2026/): Data and trends shaping franchise networks.
+- [Nonprofit statistics 2026](https://www.content.one/blog/nonprofit-statistics-2026/): Current statistics on the nonprofit sector.
+- [Why content operations break in multi-location businesses](https://www.content.one/blog/why-content-operations-break-in-multilocation-businesses-and-what-to-fix-first/): Common failure points and what to fix first.
+- [Why franchise marketing teams struggle with multi-location websites](https://www.content.one/blog/why-franchise-marketing-teams-struggle-to-manage-multilocation-websites/): The specific problems franchise marketers hit.
+- [Cybersecurity wake-up call for nonprofits](https://www.content.one/blog/cybersecurity-wakeup-call-for-nonprofits/): Security risks facing nonprofit websites.
+
+## Customer stories
+
+- [The Salvation Army](https://www.content.one/customers/the-salvation-army/): Managing federated nonprofit websites and on-demand development.
+- [Sony](https://www.content.one/customers/sony/): Enterprise content delivery at scale.
+- [Rocket League](https://www.content.one/customers/rocket-league/): High-traffic content management.
+- [Wattpad](https://www.content.one/customers/wattpad/): Content delivery for a large consumer platform.
+- [Singlife](https://www.content.one/customers/singlife/): Financial services content management.
+- [PetDesk](https://www.content.one/customers/petdesk/): Content operations for a multi-location vertical.
+- [JackPocket by DraftKings](https://www.content.one/customers/jackpocket-by-draftkings/): Content delivery for a consumer app.
+- [Cornershop by Uber](https://www.content.one/customers/cornershop-by-uber/): Content management for a marketplace.
+
+## Optional
+
+- [The Salvation Army case study (PDF)](https://www.content.one/the-salvation-army-case-study-pdf/): Downloadable nonprofit website growth playbook.
+- [Salvation Army: federated websites](https://www.content.one/customers/salvation-army-federated-websites/): Detail on the federated multisite deployment.
+- [Salvation Army: on-demand developers](https://www.content.one/customers/salvation-army-ondemand-developers/): Detail on the on-demand development model.
+- [Brand assets](https://www.content.one/brand/): Logos and brand guidelines.
+- [Privacy policy](https://www.content.one/legal/privacy-policy/): How Content.One handles data.
+- [End user license agreement](https://www.content.one/legal/end-user-license-agreement/): Platform terms of use.
