@@ -1,322 +1,775 @@
 <div class="localization-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-localization text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Built-in localization that scales with your brand.</h1>
-          <p class="text-lg text-white/75 mb-4">Reaching a global audience shouldn’t require building separate systems for every region. Content.One makes localization simple, structured, and scalable—translate content, metadata, and assets in one place and deliver personalized experiences across languages, markets, and channels.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See localization in action</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/flags.jpg" alt="Global team collaborating" class="w-full h-full object-cover">
-          </div>
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="localization-hero">
+    <div class="localization-hero__container">
+      <div class="localization-hero__copy">
+        <p class="localization-hero__eyebrow"><span class="localization-hero__dot" aria-hidden="true"></span>Multilingual &amp; localization</p>
+        <h1 class="localization-hero__title">Built-in localization that scales with your brand.</h1>
+        <p class="localization-hero__lede">Reaching a global audience shouldn't require building separate systems for every region. Content.One makes localization simple, structured, and scalable — translate content, metadata, and assets in one place and deliver personalized experiences across languages, markets, and channels.</p>
+        <div class="localization-hero__ctas">
+          <a href="/book-a-demo/" class="localization-hero__cta localization-hero__cta--primary">See localization in action</a>
+          <a href="/product/" class="localization-hero__cta localization-hero__cta--secondary">Explore Content.One</a>
         </div>
       </div>
-    </div> 
-  </section>
-
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Localization at scale</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Reach global audiences without doubling workload or costs.</h2>
-          <p class="text-gray-600 mb-0">Translate once, deploy everywhere. Content.One handles copy, metadata, media, and structured content for 100+ languages—without add-ons or plugins.</p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </div>
+      <div class="localization-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/flags.jpg" alt="Global team collaborating across regions" class="localization-hero__img" />
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Localization capabilities</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Stay consistent across markets and visible everywhere</h2>
-          <p class="text-gray-600 text-lg mb-0">Content.One delivers structured localization workflows so global teams can manage copy, media, and metadata with confidence.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Native multilingual support</h3>
-              <p class="text-gray-600 mb-0">Manage content, metadata, and assets in 100+ languages—no plugins, no custom code.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Structured translation workflows</h3>
-              <p class="text-gray-600 mb-0">Route content through review, translation, and approval using role-based permissions for local teams.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Localization cost savings</h3>
-              <p class="text-gray-600 mb-0">Translate once, reuse everywhere—structured content makes syndicating updates effortless.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">International SEO readiness</h3>
-              <p class="text-gray-600 mb-0">Automatic hreflang, localized URLs, and region-specific metadata boost visibility in every market.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Headless-friendly</h3>
-              <p class="text-gray-600 mb-0">Expose localized content via APIs to apps, kiosks, and chatbots without duplicating systems.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Compliance &amp; governance</h3>
-              <p class="text-gray-600 mb-0">Workflow approvals, version history, and audit logs ensure every market stays on-brand and compliant.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="localization-trust">
+    <div class="localization-trust__container">
+      <p class="localization-trust__overline">Trusted by fast-moving teams</p>
+      <div class="localization-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="localization-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="localization-trust__logo-img">
+        </a>
+        {{/each}}
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Lower localization costs, increase global impact</h2>
-          <p class="text-gray-600 mb-4">Content.One centralizes translation so you can manage copy, media, and structured datasets once—and launch globally.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
-              <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80" alt="Localization meeting" class="rounded-lg shadow-sm" style="width:160px;height:120px;object-fit:cover;">
-              <div class="text-gray-600 text-sm">
-                <p class="mb-1">✅ Built-in translation memory reduces repeated work for copy and media</p>
-                <p class="mb-1">✅ Local reviewers can approve updates without accessing the entire CMS</p>
-                <p class="mb-1">✅ Bulk actions deploy localized variants across microsites and apps</p>
-                <p class="mb-0">✅ Integration-friendly—connect to TMS providers or AI translation tools</p>
-              </div>
-            </div>
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 localization capability cards. -->
+  <section class="localization-features">
+    <div class="localization-features__container">
+      <div class="localization-features__heading-group">
+        <h2 class="localization-features__title">Stay consistent across markets and visible everywhere</h2>
+        <p class="localization-features__subheading">Structured localization workflows so global teams can manage copy, media, and metadata with confidence — 100+ languages without add-ons or plugins.</p>
+      </div>
+      <div class="localization-features__grid">
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Global content planning" class="w-full h-full object-cover">
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">Native multilingual support</p>
+            <p class="localization-features__card-body">Manage content, metadata, and assets in 100+ languages — no plugins, no custom code.</p>
           </div>
-        </div>
+        </article>
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M17 11l2 2 4-4"/></svg>
+          </div>
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">Translation workflows</p>
+            <p class="localization-features__card-body">Route content through review, translation, and approval using role-based permissions for local teams.</p>
+          </div>
+        </article>
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">Translation cost savings</p>
+            <p class="localization-features__card-body">Translate once, reuse everywhere — structured content makes syndicating updates effortless.</p>
+          </div>
+        </article>
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">International SEO</p>
+            <p class="localization-features__card-body">Automatic hreflang, localized URLs, and region-specific metadata boost visibility in every market.</p>
+          </div>
+        </article>
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">Headless-friendly</p>
+            <p class="localization-features__card-body">Expose localized content via APIs to apps, kiosks, and chatbots without duplicating systems.</p>
+          </div>
+        </article>
+        <article class="localization-features__card">
+          <div class="localization-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div class="localization-features__card-text">
+            <p class="localization-features__card-title">Compliance &amp; governance</p>
+            <p class="localization-features__card-body">Workflow approvals, version history, and audit logs ensure every market stays on-brand and compliant.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=1200&q=80" alt="International marketing" class="w-full h-full object-cover">
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="localization-highlights">
+    <div class="localization-highlights__container">
+
+      <!-- Row 1: image left, text right — "Lower localization costs" + 2x2 cells. -->
+      <div class="localization-highlights__row">
+        <div class="localization-highlights__media">
+          <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80" alt="Global localization team planning" class="localization-highlights__img" loading="lazy" />
+        </div>
+        <div class="localization-highlights__content">
+          <div class="localization-highlights__heading-group">
+            <h2 class="localization-highlights__title">Lower localization costs, increase global impact</h2>
+            <p class="localization-highlights__lede">Content.One centralizes translation so you can manage copy, media, and structured datasets once — and launch globally without the usual overhead.</p>
+          </div>
+          <div class="localization-highlights__cells">
+            <div class="localization-highlights__cell">
+              <p class="localization-highlights__cell-title">Translation memory</p>
+              <p class="localization-highlights__cell-body">Built-in memory reduces repeated work across copy and media, translation after translation.</p>
+            </div>
+            <div class="localization-highlights__cell">
+              <p class="localization-highlights__cell-title">Regional reviewers</p>
+              <p class="localization-highlights__cell-body">Local reviewers can approve updates without accessing the entire CMS.</p>
+            </div>
+            <div class="localization-highlights__cell">
+              <p class="localization-highlights__cell-title">Bulk deployment</p>
+              <p class="localization-highlights__cell-body">Deploy localized variants across microsites and apps in a single action.</p>
+            </div>
+            <div class="localization-highlights__cell">
+              <p class="localization-highlights__cell-title">TMS + AI integrations</p>
+              <p class="localization-highlights__cell-body">Connect to translation management systems or AI translation tools out of the box.</p>
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-localization-subtle text-localization mb-3">Stay consistent, stay visible</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Protect brand voice across every market</h2>
-          <p class="text-gray-600 text-lg mb-4">Keep messaging on-brand while empowering local teams to adapt copy, promos, and imagery for regional audiences.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/></svg>
-              <span>Localization workflows give regional marketers editing power with corporate guardrails.</span>
+      </div>
+
+      <!-- Row 2 reverse: image right, text left — "Protect brand voice across every market" + 4 bullets. -->
+      <div class="localization-highlights__row localization-highlights__row--reverse">
+        <div class="localization-highlights__media">
+          <img src="https://images.unsplash.com/photo-1473186505569-9c61870c11f9?auto=format&fit=crop&w=1200&q=80" alt="International marketing team reviewing regional variants" class="localization-highlights__img" loading="lazy" />
+        </div>
+        <div class="localization-highlights__content">
+          <div class="localization-highlights__heading-group">
+            <h2 class="localization-highlights__title">Protect brand voice across every market</h2>
+            <p class="localization-highlights__lede">Keep messaging on-brand while empowering local teams to adapt copy, promos, and imagery for regional audiences.</p>
+          </div>
+          <ul class="localization-highlights__icon-list">
+            <li class="localization-highlights__icon-row">
+              <span class="localization-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="localization-highlights__icon-text">Localization workflows give regional marketers editing power with corporate guardrails.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21 21 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21 21 0 0 0 14 7.655V1.222z"/></svg>
-              <span>Apply localized imagery, currencies, and offers without duplicating templates.</span>
+            <li class="localization-highlights__icon-row">
+              <span class="localization-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="localization-highlights__icon-text">Apply localized imagery, currencies, and offers without duplicating templates.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
-  <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
-              <span>Automatic fallback content ensures consistent experiences if translations aren’t ready.</span>
+            <li class="localization-highlights__icon-row">
+              <span class="localization-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="localization-highlights__icon-text">Automatic fallback content ensures consistent experiences if translations aren't ready.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-localization text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>
-              <span>Localized analytics dashboards show performance by region, language, and campaign.</span>
+            <li class="localization-highlights__icon-row">
+              <span class="localization-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="localization-highlights__icon-text">Localized analytics dashboards show performance by region, language, and campaign.</p>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Localization that scales with your content operations</h2>
-          <p class="text-lg text-white/75 mb-4">Deliver globally consistent experiences while empowering regional teams. Content.One keeps localization fast, secure, and measurable.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="60" data-local-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in localization turnaround time</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="75" data-local-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Increase in global campaign reuse</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="99.99" data-local-suffix="%" data-local-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime for global content delivery</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-local-count="150" data-local-suffix="+">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Integrations across TMS, analytics, and CRM platforms</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- ════════════ STATS — DARK, solidified cards, side image right. -->
+  <section class="localization-stats">
+    <div class="localization-stats__container">
+      <div class="localization-stats__copy">
+        <div class="localization-stats__heading-group">
+          <h2 class="localization-stats__title">Localization that scales with your content operations</h2>
+          <p class="localization-stats__lede">Deliver globally consistent experiences while empowering regional teams. Content.One keeps localization fast, secure, and measurable.</p>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/flags-top.jpg" alt="Global network visualization" class="w-full h-full object-cover">
+        <div class="localization-stats__grid">
+          <div class="localization-stats__tile">
+            <p class="localization-stats__number"><span data-local-count="60" data-local-suffix="%">0</span></p>
+            <p class="localization-stats__label">Reduction in localization turnaround time</p>
+          </div>
+          <div class="localization-stats__tile">
+            <p class="localization-stats__number"><span data-local-count="75" data-local-suffix="%">0</span></p>
+            <p class="localization-stats__label">Increase in global campaign reuse</p>
+          </div>
+          <div class="localization-stats__tile">
+            <p class="localization-stats__number"><span data-local-count="99.99" data-local-suffix="%" data-local-format="decimal">0</span></p>
+            <p class="localization-stats__label">Uptime for global content delivery</p>
+          </div>
+          <div class="localization-stats__tile">
+            <p class="localization-stats__number"><span data-local-count="150" data-local-suffix="+">0</span></p>
+            <p class="localization-stats__label">Integrations across TMS, analytics, and CRM platforms</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-localization-dark" style="opacity:0.35;"></div>
-  </section>
-
-  {{include /components/widgets/random_quotes.html}}
-
-  <section class="py-6 bg-localization text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to deliver localized experiences everywhere?</h2>
-          <p class="text-lg text-white/75 mb-4">Partner with Content.One to streamline translation, governance, and delivery across every market.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-localization">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
-        </div>
+      <div class="localization-stats__media">
+        <img src="https://hj5v68xn.media.zestyio.com/flags-top.jpg" alt="Global network visualization" class="localization-stats__img" loading="lazy" />
       </div>
     </div>
   </section>
+
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="localization-customers">
+    <div class="localization-customers__container">
+      <div class="localization-customers__header">
+        <div class="localization-customers__header-text">
+          <h2 class="localization-customers__title">Global brands running localization on Content.One</h2>
+          <p class="localization-customers__lede">Translation memory, structured workflows, and localized delivery keep multi-region campaigns aligned across every market.</p>
+        </div>
+        <a href="/customers/" class="localization-customers__cta">See customer wins</a>
+      </div>
+      {{include /components/widgets/random_quotes.html}}
+    </div>
+  </section>
+
 </div>
 
 <style>
-  .localization-feature-page .bg-gradient-localization {
-    background: linear-gradient(135deg, #0f172a 0%, #2563eb 45%, #22c55e 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .localization-feature-page .localization-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .localization-feature-page .bg-gradient-localization-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.25) 100%);
+  .localization-feature-page .localization-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
-  .localization-feature-page .bg-localization {
-    background-color: #2563eb;
+  @media (min-width: 640px) { .localization-feature-page .localization-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .localization-feature-page .localization-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .localization-feature-page .text-localization {
-    color: #2563eb !important;
+  .localization-feature-page .localization-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .localization-feature-page .localization-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
   }
-  .localization-feature-page .bg-localization-subtle {
-    background-color: rgba(37, 99, 235, 0.12) !important;
+  .localization-feature-page .localization-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .localization-feature-page .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
+  .localization-feature-page .localization-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .localization-feature-page .logo-card__image {
-    max-height: 48px;
+  @media (min-width: 768px) { .localization-feature-page .localization-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .localization-feature-page .localization-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .localization-feature-page .localization-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
+  }
+  @media (min-width: 1024px) { .localization-feature-page .localization-hero__lede { font-size: 20px; line-height: 30px; } }
+  .localization-feature-page .localization-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .localization-feature-page .localization-hero__ctas { flex-direction: row; gap: 16px; } }
+  .localization-feature-page .localization-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .localization-feature-page .localization-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .localization-feature-page .localization-hero__cta--primary:hover { background-color: #2F3F94; }
+  .localization-feature-page .localization-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .localization-feature-page .localization-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .localization-feature-page .localization-hero__media { width: 100%; }
+  .localization-feature-page .localization-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .localization-feature-page .localization-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .localization-feature-page .localization-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .localization-feature-page .localization-trust__container { padding: 0 2rem; } }
+  .localization-feature-page .localization-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .localization-feature-page .localization-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .localization-feature-page .localization-trust__logo { display: inline-flex; }
+  .localization-feature-page .localization-trust__logo-img {
+    max-height: 36px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
   }
-  .localization-feature-page .logo-card:hover .logo-card__image,
-  .localization-feature-page .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
-    opacity: 1;
+  .localization-feature-page .localization-trust__logo:hover .localization-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .localization-feature-page .localization-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .localization-feature-page .localization-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .localization-feature-page .localization-features__container { padding: 0 2rem; } }
+  .localization-feature-page .localization-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .localization-feature-page .localization-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .localization-feature-page .localization-features__title { font-size: 36px; line-height: 44px; } }
+  .localization-feature-page .localization-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .localization-feature-page .localization-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .localization-feature-page .localization-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .localization-feature-page .localization-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .localization-feature-page .localization-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .localization-feature-page .localization-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  .localization-feature-page .localization-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .localization-feature-page .localization-features__card-text { display: flex; flex-direction: column; gap: 4px; }
+  .localization-feature-page .localization-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .localization-feature-page .localization-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .localization-feature-page .localization-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .localization-feature-page .localization-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .localization-feature-page .localization-highlights__container { padding: 0 2rem; } }
+  .localization-feature-page .localization-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .localization-feature-page .localization-highlights__row { flex-direction: row; gap: 96px; }
+    .localization-feature-page .localization-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .localization-feature-page .localization-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .localization-feature-page .localization-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .localization-feature-page .localization-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .localization-feature-page .localization-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .localization-feature-page .localization-highlights__content { flex: 1 1 0; } }
+  .localization-feature-page .localization-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .localization-feature-page .localization-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .localization-feature-page .localization-highlights__title { font-size: 30px; line-height: 38px; } }
+  .localization-feature-page .localization-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .localization-feature-page .localization-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .localization-feature-page .localization-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .localization-feature-page .localization-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .localization-feature-page .localization-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .localization-feature-page .localization-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .localization-feature-page .localization-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .localization-feature-page .localization-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .localization-feature-page .localization-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .localization-feature-page .localization-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .localization-feature-page .localization-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .localization-feature-page .localization-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Stats (DARK, solidified cards, side image right) ───────────────── */
+  .localization-feature-page .localization-stats {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .localization-feature-page .localization-stats__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-stats__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .localization-feature-page .localization-stats__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+  }
+  .localization-feature-page .localization-stats__copy { display: flex; flex-direction: column; gap: 32px; }
+  .localization-feature-page .localization-stats__media { width: 100%; }
+  .localization-feature-page .localization-stats__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .localization-feature-page .localization-stats__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 560px;
+  }
+  .localization-feature-page .localization-stats__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .localization-feature-page .localization-stats__title { font-size: 30px; line-height: 38px; } }
+  .localization-feature-page .localization-stats__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .localization-feature-page .localization-stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  .localization-feature-page .localization-stats__tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .localization-feature-page .localization-stats__number {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0 0 4px;
+  }
+  .localization-feature-page .localization-stats__label {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .localization-feature-page .localization-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .localization-feature-page .localization-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .localization-feature-page .localization-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .localization-feature-page .localization-customers__container { padding: 0 2rem; } }
+  .localization-feature-page .localization-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .localization-feature-page .localization-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .localization-feature-page .localization-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .localization-feature-page .localization-customers__title { font-size: 30px; line-height: 38px; } }
+  .localization-feature-page .localization-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .localization-feature-page .localization-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .localization-feature-page .localization-customers__cta:hover { background: #f9fafb; }
+  .localization-feature-page .localization-customers .review-feature-chip { display: none; }
+  .localization-feature-page .localization-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
+  // Stats count-up animation
   document.addEventListener('DOMContentLoaded', function () {
-    var localObserver = new IntersectionObserver(function (entries) {
+    var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-local-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-local-suffix') || '';
-          var format = el.getAttribute('data-local-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          localObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-local-count'));
+        if (isNaN(endValue)) return;
+        var suffix = el.getAttribute('data-local-suffix') || '';
+        var format = el.getAttribute('data-local-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          var display = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            var finalValue = format === 'decimal' ? endValue.toFixed(2) : Math.round(endValue).toLocaleString();
+            el.textContent = finalValue + suffix;
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
 
     document.querySelectorAll('.localization-feature-page [data-local-count]').forEach(function (counter) {
-      localObserver.observe(counter);
+      counterObserver.observe(counter);
     });
   });
 </script>
