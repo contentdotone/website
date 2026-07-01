@@ -1,410 +1,813 @@
 <div class="versioning-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-versioning text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-versioning mb-3">Template versioning &amp; rollbacks</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Build boldly, roll back instantly.</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One keeps every template change tracked, reviewable, and recoverable. Develop in the SaaS editor or VS Code, sync with GitHub, and restore any version with confidence.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-versioning">See version history</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/native-code-diffing.png" class="versioning-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-versioning-lightbox="hero" aria-label="Expand version diff screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/native-code-diffing.png" alt="Native code diffing view" class="w-full h-full object-cover">
-          </a>
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="versioning-hero">
+    <div class="versioning-hero__container">
+      <div class="versioning-hero__copy">
+        <p class="versioning-hero__eyebrow"><span class="versioning-hero__dot" aria-hidden="true"></span>Template versioning &amp; rollbacks</p>
+        <h1 class="versioning-hero__title">Build boldly, roll back instantly.</h1>
+        <p class="versioning-hero__lede">Content.One keeps every template change tracked, reviewable, and recoverable. Develop in the SaaS editor or VS Code, sync with GitHub, and restore any version with confidence.</p>
+        <div class="versioning-hero__ctas">
+          <a href="/book-a-demo/" class="versioning-hero__cta versioning-hero__cta--primary">See version history</a>
+          <a href="/product/" class="versioning-hero__cta versioning-hero__cta--secondary">Explore Content.One</a>
         </div>
       </div>
+      <div class="versioning-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/native-code-diffing.png" alt="Content.One native code diffing view" class="versioning-hero__img" />
+      </div>
     </div>
-    <div class="versioning-glow versioning-glow--one"></div>
-    <div class="versioning-glow versioning-glow--two hidden md:block"></div>
   </section>
-  
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">Track every change</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Diff, compare, and restore in seconds.</h2>
-          <p class="text-gray-600 mb-4">Content.One logs every template revision, showing side-by-side diffs so you can review, approve, and restore quickly. Roll back a single template or entire releases without downtime.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022zm2.004.45a7 7 0 0 0-.985-.299l.219-.976q.576.129 1.126.342zm1.37.71a7 7 0 0 0-.439-.27l.493-.87a8 8 0 0 1 .979.654l-.615.789a7 7 0 0 0-.418-.302zm1.834 1.79a7 7 0 0 0-.653-.796l.724-.69q.406.429.747.91zm.744 1.352a7 7 0 0 0-.214-.468l.893-.45a8 8 0 0 1 .45 1.088l-.95.313a7 7 0 0 0-.179-.483m.53 2.507a7 7 0 0 0-.1-1.025l.985-.17q.1.58.116 1.17zm-.131 1.538q.05-.254.081-.51l.993.123a8 8 0 0 1-.23 1.155l-.964-.267q.069-.247.12-.501m-.952 2.379q.276-.436.486-.908l.914.405q-.24.54-.555 1.038zm-.964 1.205q.183-.183.35-.378l.758.653a8 8 0 0 1-.401.432z"/>
-  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0z"/>
-  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5"/></svg>
-              <span>Time-stamped versions for every template, snippet, and layout.</span>
+
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="versioning-trust">
+    <div class="versioning-trust__container">
+      <p class="versioning-trust__overline">Trusted by fast-moving teams</p>
+      <div class="versioning-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="versioning-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="versioning-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 versioning capability cards. -->
+  <section class="versioning-features">
+    <div class="versioning-features__container">
+      <div class="versioning-features__heading-group">
+        <h2 class="versioning-features__title">Diff, compare, and restore in seconds</h2>
+        <p class="versioning-features__subheading">Every template revision is logged with side-by-side diffs so you can review, approve, and restore — a single template or an entire release — without downtime.</p>
+      </div>
+      <div class="versioning-features__grid">
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">Time-stamped history</p>
+            <p class="versioning-features__card-body">Every template, snippet, and layout carries a full timeline of changes with authorship and context.</p>
+          </div>
+        </article>
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">Inline diffs</p>
+            <p class="versioning-features__card-body">Side-by-side highlights show exactly what changed before you publish or merge.</p>
+          </div>
+        </article>
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">One-click rollbacks</p>
+            <p class="versioning-features__card-body">Restore a previous version instantly — no downtime, no developer ticket, no lost work.</p>
+          </div>
+        </article>
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">GitHub-native</p>
+            <p class="versioning-features__card-body">Connect Content.One to your repo. Branch, raise PRs, and trigger CI/CD pipelines automatically.</p>
+          </div>
+        </article>
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">Snapshots</p>
+            <p class="versioning-features__card-body">Freeze a labelled point-in-time before a campaign launch or a risky refactor — restore it in one call.</p>
+          </div>
+        </article>
+        <article class="versioning-features__card">
+          <div class="versioning-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
+          </div>
+          <div class="versioning-features__card-text">
+            <p class="versioning-features__card-title">Audit trails</p>
+            <p class="versioning-features__card-body">Full change logs capture who, what, and when for governance, compliance, and post-incident review.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="versioning-highlights">
+    <div class="versioning-highlights__container">
+
+      <!-- Row 1: image left, text right — "Code locally or in the browser" + 2x2 cells. -->
+      <div class="versioning-highlights__row">
+        <div class="versioning-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/vs-code-integration-compatible-with-codex.png" alt="Content.One VS Code integration" class="versioning-highlights__img" loading="lazy" />
+        </div>
+        <div class="versioning-highlights__content">
+          <div class="versioning-highlights__heading-group">
+            <h2 class="versioning-highlights__title">Code locally or in the browser — your choice</h2>
+            <p class="versioning-highlights__lede">Spin up the browser-based editor for quick fixes or connect VS Code for full local control. Content.One's CLI syncs templates, assets, and styles so you can commit, branch, and merge with ease.</p>
+          </div>
+          <div class="versioning-highlights__cells">
+            <div class="versioning-highlights__cell">
+              <p class="versioning-highlights__cell-title">Instant SaaS editor</p>
+              <p class="versioning-highlights__cell-body">Mirrors production for rapid iterations — no local setup required.</p>
+            </div>
+            <div class="versioning-highlights__cell">
+              <p class="versioning-highlights__cell-title">VS Code integration</p>
+              <p class="versioning-highlights__cell-body">Auto-sync keeps local workspace and cloud environments in lockstep.</p>
+            </div>
+            <div class="versioning-highlights__cell">
+              <p class="versioning-highlights__cell-title">GitHub / GitLab</p>
+              <p class="versioning-highlights__cell-body">Push changes to your repo for peer review and CI/CD automation.</p>
+            </div>
+            <div class="versioning-highlights__cell">
+              <p class="versioning-highlights__cell-title">Environment promotion</p>
+              <p class="versioning-highlights__cell-body">Move templates between dev, stage, and production with a single command.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 reverse: image right, text left — "Approvals, rollbacks, and history in one place" + 4 bullets. -->
+      <div class="versioning-highlights__row versioning-highlights__row--reverse">
+        <div class="versioning-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/content-one-instant-environment.jpg" alt="Content.One instant environment workflow" class="versioning-highlights__img" loading="lazy" />
+        </div>
+        <div class="versioning-highlights__content">
+          <div class="versioning-highlights__heading-group">
+            <h2 class="versioning-highlights__title">Approvals, rollbacks, and history in one place</h2>
+            <p class="versioning-highlights__lede">Review change logs, approve updates, and restore templates without leaving Content.One. Everyone — marketing to engineering — sees a single source of truth.</p>
+          </div>
+          <ul class="versioning-highlights__icon-list">
+            <li class="versioning-highlights__icon-row">
+              <span class="versioning-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="versioning-highlights__icon-text">Leave review notes on individual versions before they publish.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8M1.173 8a13 13 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5s3.879 1.168 5.168 2.457A13 13 0 0 1 14.828 8q-.086.13-.195.288c-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5s-3.879-1.168-5.168-2.457A13 13 0 0 1 1.172 8z"/>
-  <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5M4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0"/></svg>
-              <span>Inline diffs highlight exactly what changed before you publish.</span>
+            <li class="versioning-highlights__icon-row">
+              <span class="versioning-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="versioning-highlights__icon-text">Lock templates for QA, then unlock once approvals are complete.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z"/>
-  <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466"/></svg>
-              <span>One-click rollbacks restore previous versions instantly.</span>
+            <li class="versioning-highlights__icon-row">
+              <span class="versioning-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="versioning-highlights__icon-text">Duplicate a template to experiment without touching production.</p>
+            </li>
+            <li class="versioning-highlights__icon-row">
+              <span class="versioning-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="versioning-highlights__icon-text">Role-based permissions protect production and gate destructive actions.</p>
             </li>
           </ul>
         </div>
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/built-in-code-editor.png" class="versioning-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-versioning-lightbox="diff" aria-label="Expand diffing interface screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/built-in-code-editor.png" alt="Content.One code editor diff view" class="w-full h-full object-cover">
-          </a>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <a href="https://hj5v68xn.media.zestyio.com/vs-code-integration-compatible-with-codex.png" class="versioning-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-versioning-lightbox="vscode" aria-label="Expand VS Code integration screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/vs-code-integration-compatible-with-codex.png" alt="VS Code integration with Content.One" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">VS Code + SaaS editor</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Code locally or in the browser&mdash;your choice.</h2>
-          <p class="text-gray-600 mb-4">Spin up the browser-based editor for quick fixes or connect VS Code for full local control. Content.One’s CLI syncs templates, assets, and styles so you can commit, branch, and merge with ease.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 text-gray-600 text-sm">
-              <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-  <path d="M6.854 4.646a.5.5 0 0 1 0 .708L4.207 8l2.647 2.646a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 0 1 .708 0m2.292 0a.5.5 0 0 0 0 .708L11.793 8l-2.647 2.646a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708 0"/></svg>Instant SaaS editor mirrors production for rapid iterations.</p>
-              <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M13.5 3a.5.5 0 0 1 .5.5V11H2V3.5a.5.5 0 0 1 .5-.5zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5"/></svg>VS Code integration with auto-sync keeps local and cloud in lockstep.</p>
-              <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/></svg>Push changes to GitHub or GitLab for peer review and CI/CD.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ════════════ CODE VIEWER — DARK, tabbed automation snippets. -->
+  <section class="versioning-code">
+    <div class="versioning-code__container">
+      <div class="versioning-code__heading-group">
+        <h2 class="versioning-code__title">Manage versions in code or from the browser</h2>
+        <p class="versioning-code__lede">Use Content.One's command palette or CLI to snapshot templates, promote changes between environments, or roll back instantly.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4">
-        <div class="lg:col-span-4">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">Hybrid workflows</span>
-              <h3 class="text-lg font-semibold mb-2">Bring marketers and developers together</h3>
-              <p class="text-gray-600 text-sm mb-3">Marketers work visually while developers own the codebase. Every update is versioned and reviewable.</p>
-              <ul class="list-none m-0 p-0 text-gray-600 text-sm grid gap-2 mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg>Collaborate with approvals and comment history.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M13.5 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zm-11-1a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-  <path d="M6.5 3a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm-4 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1zm8 0a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1z"/></svg>Stage changes in preview environments before launch.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg>Protect production with role-based permissions.</li>
-              </ul>
-            </div>
-          </div>
+      <div class="versioning-code__panel">
+        <div class="versioning-code__tabs">
+          <button class="versioning-code__tab is-active" data-versioning-code-tab="cli" type="button">CLI snapshot</button>
+          <button class="versioning-code__tab" data-versioning-code-tab="api" type="button">API rollback</button>
+          <button class="versioning-code__tab" data-versioning-code-tab="git" type="button">Git workflow</button>
+          <span class="versioning-code__meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Automation snippets</span>
         </div>
-        <div class="lg:col-span-4">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">GitHub native</span>
-              <h3 class="text-lg font-semibold mb-2">Version control you already trust</h3>
-              <p class="text-gray-600 text-sm mb-3">Connect Content.One to your GitHub or GitLab repo. Track diffs, raise pull requests, and trigger CI/CD pipelines automatically.</p>
-              <ul class="list-none m-0 p-0 text-gray-600 text-sm grid gap-2 mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M15.698 7.287 8.712.302a1.03 1.03 0 0 0-1.457 0l-1.45 1.45 1.84 1.84a1.223 1.223 0 0 1 1.55 1.56l1.773 1.774a1.224 1.224 0 0 1 1.267 2.025 1.226 1.226 0 0 1-2.002-1.334L8.58 5.963v4.353a1.226 1.226 0 1 1-1.008-.036V5.887a1.226 1.226 0 0 1-.666-1.608L5.093 2.465l-4.79 4.79a1.03 1.03 0 0 0 0 1.457l6.986 6.986a1.03 1.03 0 0 0 1.457 0l6.953-6.953a1.03 1.03 0 0 0 0-1.457"/></svg>Branch for new features and merge with reviews.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/></svg>Audit trails ensure compliance and traceability.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"/></svg>Sync environments via webhooks or CLI commands.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-4">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">Always recoverable</span>
-              <h3 class="text-lg font-semibold mb-2">Never worry about breaking templates</h3>
-              <p class="text-gray-600 text-sm mb-3">Roll back to a previous version, clone templates for safe experimentation, and track who made each change.</p>
-              <ul class="list-none m-0 p-0 text-gray-600 text-sm grid gap-2 mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z"/>
-  <path d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466"/></svg>Restore any saved version in seconds.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z"/></svg>Duplicate templates to iterate without risk.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-  <path d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z"/></svg>See commit authorship, timestamps, and diff context.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-versioning mb-3">Command palette</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3 text-white">Manage versions in code or from the browser.</h2>
-          <p class="text-white/75 mb-4">Use Content.One’s command palette or CLI to snapshot templates, promote changes between environments, or roll back instantly.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-white/75 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M6 9a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3A.5.5 0 0 1 6 9M3.854 4.146a.5.5 0 1 0-.708.708L4.793 6.5 3.146 8.146a.5.5 0 1 0 .708.708l2-2a.5.5 0 0 0 0-.708z"/>
-  <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2zm12 1a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1z"/></svg>
-              <span>Run `zesty pull` &amp; `zesty push` to sync templates locally.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708z"/>
-  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/></svg>
-              <span>Snapshot environments before publishing major changes.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>
-              <span>Trigger rollbacks via API for automated recovery plans.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow bg-versioning-code border-0 shadow-lg text-white">
-            <div class="p-4 border-b border-gray-200 border-0 bg-transparent px-4 pt-4 pb-0">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex gap-2 flex-wrap">
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10 active" data-versioning-code-tab="cli">CLI snapshot</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-versioning-code-tab="api">API rollback</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-versioning-code-tab="git">Git workflow</button>
-                </div>
-                <div class="text-white/50 text-sm flex gap-2 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>
-                  <span>Automation snippets</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 p-0">
-              <div class="versioning-code-pane show" data-versioning-code-pane="cli">
-<pre class="mb-0 text-white text-sm"><code># Pull environment to local workspace
+        <div class="versioning-code__pane is-active" data-versioning-code-pane="cli">
+          <pre class="versioning-code__pre"><code># Pull environment to local workspace
 zesty pull --instance 8-abc-123 --models --views
 
 # Snapshot templates before editing
 zesty snapshot create --label "pre-campaign-launch"
 
 # Push updates back to Content.One
-zesty push --views --assets
-</code></pre>
-              </div>
-              <div class="versioning-code-pane" data-versioning-code-pane="api">
-<pre class="mb-0 text-white text-sm"><code>POST https://accounts.api.zesty.io/v1/instances/:instance_zuid/rollback
+zesty push --views --assets</code></pre>
+        </div>
+        <div class="versioning-code__pane" data-versioning-code-pane="api">
+          <pre class="versioning-code__pre"><code>POST https://accounts.api.zesty.io/v1/instances/:instance_zuid/rollback
 {
   "view_zuid": "8-abc-123",
   "target_version": "2024-02-10T18:42:00Z",
   "notes": "Rollback landing page before campaign"
 }</code></pre>
-              </div>
-              <div class="versioning-code-pane" data-versioning-code-pane="git">
-<pre class="mb-0 text-white text-sm"><code>git checkout -b feature/header-update
+        </div>
+        <div class="versioning-code__pane" data-versioning-code-pane="git">
+          <pre class="versioning-code__pre"><code>git checkout -b feature/header-update
 # Edit locally in VS Code, run tests
 git commit -am "Update hero template"
 git push origin feature/header-update
-# Open PR -> merge -> Content.One deploys via webhook
-</code></pre>
-              </div>
-            </div>
-          </div>
+# Open PR → merge → Content.One deploys via webhook</code></pre>
         </div>
       </div>
-      <img src="https://hj5v68xn.media.zestyio.com/developer-stock-2.jpg" alt="Developer reviewing code" class="versioning-bg-image versioning-bg-image--one hidden xl:block">
-      <img src="https://hj5v68xn.media.zestyio.com/developer-stock-1.jpg" alt="Collaborative coding session" class="versioning-bg-image versioning-bg-image--two hidden xl:block">
+      <ul class="versioning-code__bullets">
+        <li><span class="versioning-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Run <code>zesty pull</code> and <code>zesty push</code> to sync templates between local and cloud environments.</li>
+        <li><span class="versioning-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Snapshot an environment before publishing major changes — restore it in one call.</li>
+        <li><span class="versioning-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Trigger rollbacks via the REST API for automated recovery plans and CI/CD gates.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/content-one-instant-environment.jpg" class="versioning-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-versioning-lightbox="workflow" aria-label="Expand workflow screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/content-one-instant-environment.jpg" alt="Instant environment workflow" class="w-full h-full object-cover">
-          </a>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="versioning-customers">
+    <div class="versioning-customers__container">
+      <div class="versioning-customers__header">
+        <div class="versioning-customers__header-text">
+          <h2 class="versioning-customers__title">Teams shipping without fear on Content.One</h2>
+          <p class="versioning-customers__lede">Version history, one-click rollbacks, and Git-native deploys make it safe to iterate quickly across every template.</p>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">Keep teams aligned</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Approvals, rollbacks, and history in one place.</h2>
-          <p class="text-gray-600 mb-4">Review change logs, approve updates, and restore templates without leaving Content.One. Everyone—from marketing to engineering—sees a single source of truth.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-2.5a2 2 0 0 0-1.6.8L8 14.333 6.1 11.8a2 2 0 0 0-1.6-.8H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2.5a1 1 0 0 1 .8.4l1.9 2.533a1 1 0 0 0 1.6 0l1.9-2.533a1 1 0 0 1 .8-.4H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
-  <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/></svg>
-              <span>Leave review notes on individual versions before they publish.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/></svg>
-              <span>Lock templates for QA, then unlock once approvals are complete.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M10.854 6.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 8.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
-  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/></svg>
-              <span>Audit logs capture every change for governance and compliance.</span>
-            </li>
-          </ul>
-        </div>
+        <a href="/customers/" class="versioning-customers__cta">See customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 p-4 p-lg-5">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-versioning-subtle text-versioning mb-3">See it in action</span>
-              <h2 class="text-4xl font-bold font-semibold mb-3">Book a versioning strategy session.</h2>
-              <p class="text-gray-600 mb-4">We’ll walk through your current workflow and show how Content.One handles version history, rollbacks, and Git-backed deployments.</p>
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-4">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Review diffing, approvals, and recovery plans.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Connect Content.One to GitHub for code reviews.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-versioning mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Plan environment promotion and rollback automation.</li>
-              </ul>
-              {{include /components/ctas/book-button.html}}
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/developer-stock-keyboard.jpg" alt="Developer typing on keyboard" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="modal fade versioning-lightbox-modal" id="versioningLightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-transparent border-0">
-        <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body p-0">
-          <img src="" alt="" class="versioning-lightbox-image rounded-xl shadow-lg w-full h-auto">
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <style>
-  .versioning-feature-page .bg-gradient-versioning {
-    background: linear-gradient(135deg, #0f172a 0%, #0f4c81 45%, #22d3ee 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .versioning-feature-page .versioning-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .versioning-feature-page .text-versioning {
-    color: #0f4c81 !important;
-  }
-  .versioning-feature-page .bg-versioning-subtle {
-    background-color: rgba(15, 76, 129, 0.12) !important;
-  }
-  .versioning-feature-page .versioning-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
-  }
-  .versioning-feature-page .versioning-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(34, 211, 238, 0.35);
-    top: -160px;
-    right: -120px;
-  }
-  .versioning-feature-page .versioning-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(56, 189, 248, 0.25);
-    bottom: -180px;
-    left: -140px;
-  }
-  .versioning-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
-  }
-  .versioning-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
-  }
-  .versioning-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
+  .versioning-feature-page .versioning-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: center;
   }
-  .versioning-code-pane {
-    display: none;
+  @media (min-width: 640px) { .versioning-feature-page .versioning-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .versioning-feature-page .versioning-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .versioning-code-pane.show {
-    display: block;
-  }
-  .versioning-code-pane pre {
-    padding: 1.75rem;
+  .versioning-feature-page .versioning-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .versioning-feature-page .versioning-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
     margin: 0;
-    overflow: auto;
   }
-  .bg-versioning-code {
-    background: linear-gradient(135deg, #0f172a 0%, #1f2937 50%, #0f4c81 100%);
+  .versioning-feature-page .versioning-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .versioning-code-pane code {
-    font-family: "Fira Code", "SFMono-Regular", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  .versioning-feature-page .versioning-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .versioning-bg-image {
-    position: absolute;
-    opacity: 0.08;
-    filter: blur(6px);
-    transform: rotate(-4deg);
+  @media (min-width: 768px) { .versioning-feature-page .versioning-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .versioning-feature-page .versioning-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .versioning-feature-page .versioning-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
   }
-  .versioning-bg-image--one {
-    top: -40px;
-    right: -140px;
-    width: 320px;
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-hero__lede { font-size: 20px; line-height: 30px; } }
+  .versioning-feature-page .versioning-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-hero__ctas { flex-direction: row; gap: 16px; } }
+  .versioning-feature-page .versioning-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
-  .versioning-bg-image--two {
-    bottom: -140px;
-    left: -160px;
-    width: 360px;
+  .versioning-feature-page .versioning-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .versioning-feature-page .versioning-hero__cta--primary:hover { background-color: #2F3F94; }
+  .versioning-feature-page .versioning-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .versioning-feature-page .versioning-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .versioning-feature-page .versioning-hero__media { width: 100%; }
+  .versioning-feature-page .versioning-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .versioning-feature-page .versioning-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .versioning-feature-page .versioning-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-trust__container { padding: 0 2rem; } }
+  .versioning-feature-page .versioning-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .versioning-feature-page .versioning-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .versioning-feature-page .versioning-trust__logo { display: inline-flex; }
+  .versioning-feature-page .versioning-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .versioning-feature-page .versioning-trust__logo:hover .versioning-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .versioning-feature-page .versioning-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .versioning-feature-page .versioning-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-features__container { padding: 0 2rem; } }
+  .versioning-feature-page .versioning-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .versioning-feature-page .versioning-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .versioning-feature-page .versioning-features__title { font-size: 36px; line-height: 44px; } }
+  .versioning-feature-page .versioning-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .versioning-feature-page .versioning-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .versioning-feature-page .versioning-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .versioning-feature-page .versioning-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .versioning-feature-page .versioning-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  .versioning-feature-page .versioning-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .versioning-feature-page .versioning-features__card-text { display: flex; flex-direction: column; gap: 4px; }
+  .versioning-feature-page .versioning-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .versioning-feature-page .versioning-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .versioning-feature-page .versioning-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .versioning-feature-page .versioning-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-highlights__container { padding: 0 2rem; } }
+  .versioning-feature-page .versioning-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .versioning-feature-page .versioning-highlights__row { flex-direction: row; gap: 96px; }
+    .versioning-feature-page .versioning-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .versioning-feature-page .versioning-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .versioning-feature-page .versioning-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .versioning-feature-page .versioning-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .versioning-feature-page .versioning-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-highlights__content { flex: 1 1 0; } }
+  .versioning-feature-page .versioning-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .versioning-feature-page .versioning-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .versioning-feature-page .versioning-highlights__title { font-size: 30px; line-height: 38px; } }
+  .versioning-feature-page .versioning-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .versioning-feature-page .versioning-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .versioning-feature-page .versioning-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .versioning-feature-page .versioning-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .versioning-feature-page .versioning-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .versioning-feature-page .versioning-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .versioning-feature-page .versioning-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .versioning-feature-page .versioning-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .versioning-feature-page .versioning-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .versioning-feature-page .versioning-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .versioning-feature-page .versioning-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Code viewer (DARK, tabbed automation snippets) ─────────────────── */
+  .versioning-feature-page .versioning-code {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .versioning-feature-page .versioning-code__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-code__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-code__container { padding: 0 2rem; } }
+  .versioning-feature-page .versioning-code__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 768px;
+  }
+  .versioning-feature-page .versioning-code__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .versioning-feature-page .versioning-code__title { font-size: 30px; line-height: 38px; } }
+  .versioning-feature-page .versioning-code__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .versioning-feature-page .versioning-code__panel {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+  }
+  .versioning-feature-page .versioning-code__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .versioning-feature-page .versioning-code__tab {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .versioning-feature-page .versioning-code__tab:hover { background: rgba(255, 255, 255, 0.06); }
+  .versioning-feature-page .versioning-code__tab.is-active {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+  .versioning-feature-page .versioning-code__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .versioning-feature-page .versioning-code__pane { display: none; }
+  .versioning-feature-page .versioning-code__pane.is-active { display: block; }
+  .versioning-feature-page .versioning-code__pre {
+    margin: 0;
+    padding: 24px;
+    background: transparent;
+    color: #e2e8f0;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  .versioning-feature-page .versioning-code__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .versioning-feature-page .versioning-code__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .versioning-feature-page .versioning-code__bullets li code {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  .versioning-feature-page .versioning-code__check {
+    flex-shrink: 0;
+    color: #8C9BE6;
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding-top: 1px;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .versioning-feature-page .versioning-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .versioning-feature-page .versioning-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .versioning-feature-page .versioning-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .versioning-feature-page .versioning-customers__container { padding: 0 2rem; } }
+  .versioning-feature-page .versioning-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .versioning-feature-page .versioning-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .versioning-feature-page .versioning-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .versioning-feature-page .versioning-customers__title { font-size: 30px; line-height: 38px; } }
+  .versioning-feature-page .versioning-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .versioning-feature-page .versioning-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .versioning-feature-page .versioning-customers__cta:hover { background: #f9fafb; }
+  .versioning-feature-page .versioning-customers .review-feature-chip { display: none; }
+  .versioning-feature-page .versioning-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
-  (function () {
-    var modalEl = document.getElementById('versioningLightboxModal');
-    var modalImg = modalEl ? modalEl.querySelector('.versioning-lightbox-image') : null;
-    if (modalEl && modalImg && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-      var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
-      document.querySelectorAll('.versioning-lightbox-trigger').forEach(function (trigger) {
-        trigger.addEventListener('click', function (event) {
-          event.preventDefault();
-          var targetSrc = trigger.getAttribute('href');
-          var innerImage = trigger.querySelector('img');
-          var imgAlt = innerImage ? innerImage.getAttribute('alt') : 'Expanded screenshot';
-          modalImg.src = targetSrc;
-          modalImg.alt = imgAlt || 'Expanded screenshot';
-          lightboxModal.show();
-        });
+  // Automation snippets tab toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.versioning-feature-page [data-versioning-code-tab]');
+    var panes = document.querySelectorAll('.versioning-feature-page [data-versioning-code-pane]');
+    if (!tabs.length || !panes.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-versioning-code-tab');
+        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+        panes.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-versioning-code-pane') === target); });
       });
-      modalEl.addEventListener('hidden.bs.modal', function () {
-        modalImg.src = '';
-        modalImg.alt = '';
-      });
-    }
-
-    var codeButtons = Array.prototype.slice.call(document.querySelectorAll('[data-versioning-code-tab]'));
-    var codePanes = Array.prototype.slice.call(document.querySelectorAll('[data-versioning-code-pane]'));
-    if (codeButtons.length && codePanes.length) {
-      function activateCodePane(target) {
-        codeButtons.forEach(function (btn) {
-          btn.classList.toggle('active', btn.getAttribute('data-versioning-code-tab') === target);
-        });
-        codePanes.forEach(function (pane) {
-          pane.classList.toggle('show', pane.getAttribute('data-versioning-code-pane') === target);
-        });
-      }
-      codeButtons.forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          activateCodePane(button.getAttribute('data-versioning-code-tab'));
-        });
-      });
-      activateCodePane(codeButtons[0].getAttribute('data-versioning-code-tab'));
-    }
-  })();
+    });
+  });
 </script>
