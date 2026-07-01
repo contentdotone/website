@@ -353,35 +353,41 @@
         Thursday, July 30 · 5:00 PM · Cadillac Ranch, National Harbor. Drop your details and we'll add you to the guest list. We'll send a quick reminder the morning of.
       </p>
 
-      <form class="text-left grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto" action="mailto:events@content.one" method="post" enctype="text/plain" onsubmit="return true;">
-        <label class="flex flex-col gap-1 sm:col-span-1">
-          <span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">First name</span>
-          <input type="text" name="first_name" required class="rounded-lg border border-gray-300 px-4 py-2.5 focus:border-royal focus:ring-1 focus:ring-royal outline-none" />
-        </label>
-        <label class="flex flex-col gap-1 sm:col-span-1">
-          <span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Last name</span>
-          <input type="text" name="last_name" required class="rounded-lg border border-gray-300 px-4 py-2.5 focus:border-royal focus:ring-1 focus:ring-royal outline-none" />
-        </label>
-        <label class="flex flex-col gap-1 sm:col-span-2">
-          <span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Work email</span>
-          <input type="email" name="email" required class="rounded-lg border border-gray-300 px-4 py-2.5 focus:border-royal focus:ring-1 focus:ring-royal outline-none" />
-        </label>
-        <label class="flex flex-col gap-1 sm:col-span-2">
-          <span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Organization</span>
-          <input type="text" name="organization" class="rounded-lg border border-gray-300 px-4 py-2.5 focus:border-royal focus:ring-1 focus:ring-royal outline-none" />
-        </label>
-        <label class="flex flex-col gap-1 sm:col-span-2">
-          <span class="text-xs font-semibold text-gray-700 uppercase tracking-wider">Role</span>
-          <input type="text" name="role" placeholder="Fundraising · Marketing · Digital · Tech · Exec" class="rounded-lg border border-gray-300 px-4 py-2.5 focus:border-royal focus:ring-1 focus:ring-royal outline-none" />
-        </label>
-        <label class="flex items-start gap-3 sm:col-span-2 text-sm text-gray-600 mt-2">
-          <input type="checkbox" name="sober_friendly" class="mt-1 rounded" />
-          <span>I'd appreciate a heads-up on the non-alcoholic menu — help us plan for it.</span>
-        </label>
-        <button type="submit" class="sm:col-span-2 mt-2 inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition">
-          Save my seat
-        </button>
-      </form>
+      <!-- Zoho Forms embed — posts direct to Zoho CRM Leads. -->
+      <div class="rounded-2xl border border-gray-200 bg-white shadow-sm overflow-hidden max-w-2xl mx-auto">
+        <iframe
+          id="ziframe_478466"
+          aria-label="BridgeTech 2026 Happy Hour Sign-up"
+          frameborder="0"
+          style="height:640px;width:100%;border:none;display:block;"
+          src="https://forms.zohopublic.com/zestyio/form/BridgeTech2026HappyHourSignup/formperma/-1pXWPMkeF6YfYrsBgLeySHFdgZlSXxmbaK1ZRN2HAY"
+        ></iframe>
+      </div>
+      <script type="text/javascript">
+        (function () {
+          try {
+            var zf_frame = document.getElementById("ziframe_478466");
+            var ifrmSrc = zf_frame.src;
+            if (!(new RegExp("[?&]referrername=")).test(ifrmSrc)) {
+              var rfr = window.location.href;
+              try {
+                rfr = window.self !== window.top
+                  ? window.top.location.href
+                  : (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
+              } catch (e) {}
+              if (rfr && rfr !== "") {
+                if (rfr.length > 1800) {
+                  var queryIndex = rfr.indexOf('?');
+                  if (queryIndex > -1) { rfr = rfr.substring(0, queryIndex); }
+                  if (rfr.length > 1800) { rfr = rfr.substring(0, 1800); }
+                }
+                ifrmSrc += ((ifrmSrc.indexOf('?') > 0) ? '&' : '?') + 'referrername=' + encodeURIComponent(rfr);
+              }
+            }
+            if (zf_frame.src !== ifrmSrc) { zf_frame.src = ifrmSrc; }
+          } catch (e) {}
+        })();
+      </script>
 
       <p class="mt-6 text-xs text-gray-500">
         Not sure yet? Add it to your calendar and decide day-of — no pressure.
