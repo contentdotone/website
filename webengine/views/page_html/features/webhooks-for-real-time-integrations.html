@@ -1,111 +1,197 @@
 <div class="webhooks-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-webhooks text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-8">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-webhooks mb-3">Real-time integrations</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Integrate into your systems with Content.One webhooks.</h1>
-          <p class="text-lg text-white/75 mb-4">Trigger downstream workflows the moment content changes—no polling, no manual steps. Content.One webhooks keep apps, CRMs, and custom middleware synchronized in real time.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-webhooks">See webhooks in action</a>
-            <a href="https://zesty.org/apis" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Read API docs</a>
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="webhooks-hero">
+    <div class="webhooks-hero__container">
+      <div class="webhooks-hero__copy">
+        <p class="webhooks-hero__eyebrow"><span class="webhooks-hero__dot" aria-hidden="true"></span>Real-time integrations</p>
+        <h1 class="webhooks-hero__title">Integrate into your systems with Content.One webhooks.</h1>
+        <p class="webhooks-hero__lede">Trigger downstream workflows the moment content changes—no polling, no manual steps. Content.One webhooks keep apps, CRMs, and custom middleware synchronized in real time.</p>
+        <div class="webhooks-hero__ctas">
+          <a href="/book-a-demo/" class="webhooks-hero__cta webhooks-hero__cta--primary">See webhooks in action</a>
+          <a href="https://zesty.org/apis" class="webhooks-hero__cta webhooks-hero__cta--secondary">Read API docs</a>
+        </div>
+      </div>
+      <div class="webhooks-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/webhook-resources.png" alt="Content.One webhook resources configuration" class="webhooks-hero__img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="webhooks-trust">
+    <div class="webhooks-trust__container">
+      <p class="webhooks-trust__overline">Trusted by fast-moving teams</p>
+      <div class="webhooks-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="webhooks-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="webhooks-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 webhook-idea cards. -->
+  <section class="webhooks-features">
+    <div class="webhooks-features__container">
+      <div class="webhooks-features__heading-group">
+        <h2 class="webhooks-features__title">Plug-and-play automations for every team</h2>
+        <p class="webhooks-features__subheading">Trigger downstream workflows across SaaS apps, CDPs, and custom services whenever content is created, updated, or published—no polling required.</p>
+      </div>
+      <div class="webhooks-features__grid">
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">Slack alerts</p>
+            <p class="webhooks-features__card-body">Send rich alerts to channel owners whenever content is published, scheduled, or rolled back.</p>
+          </div>
+        </article>
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a3 3 0 1 0-2.83-4H8.83A3 3 0 1 0 6 8a3 3 0 1 0 2.83 4h6.34A3 3 0 1 0 18 8z"/><path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">Social ping</p>
+            <p class="webhooks-features__card-body">Notify social teams or automation tools when new campaigns launch so cross-channel promos stay aligned.</p>
+          </div>
+        </article>
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">Email automation</p>
+            <p class="webhooks-features__card-body">Trigger email or SMS nurtures the moment new gated assets go live via SendGrid, Mailchimp, or your own stack.</p>
+          </div>
+        </article>
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">DevOps notice</p>
+            <p class="webhooks-features__card-body">Pipe schema or page updates into DevOps workflows, Git-based CI/CD, or observability tools.</p>
+          </div>
+        </article>
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 15 11 17 15 13"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">Change logs</p>
+            <p class="webhooks-features__card-body">Post structured change logs into ticketing systems so marketing and engineering share the same timeline.</p>
+          </div>
+        </article>
+        <article class="webhooks-features__card">
+          <div class="webhooks-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+          </div>
+          <div class="webhooks-features__card-text">
+            <p class="webhooks-features__card-title">Data sync</p>
+            <p class="webhooks-features__card-body">Keep apps, CRMs, data warehouses, and headless consumers aligned with your CMS—no polling.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="webhooks-highlights">
+    <div class="webhooks-highlights__container">
+
+      <!-- Row 1: image left, text right — "Trigger actions, sync systems" + 4 cells. -->
+      <div class="webhooks-highlights__row">
+        <div class="webhooks-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/webhook-actions.png" alt="Content.One webhook action configuration" class="webhooks-highlights__img" loading="lazy" />
+        </div>
+        <div class="webhooks-highlights__content">
+          <div class="webhooks-highlights__heading-group">
+            <h2 class="webhooks-highlights__title">Trigger actions, sync systems, and automate workflows—instantly</h2>
+            <p class="webhooks-highlights__lede">Content.One's Webhooks let you keep every system, platform, and team in sync. Fire external actions in real-time whenever content is created, updated, or published—wiring Zapier, custom middleware, and internal services with one contract.</p>
+          </div>
+          <div class="webhooks-highlights__cells">
+            <div class="webhooks-highlights__cell">
+              <p class="webhooks-highlights__cell-title">Real-time notifications</p>
+              <p class="webhooks-highlights__cell-body">Fire the moment content or schema updates land—no polling, no cron.</p>
+            </div>
+            <div class="webhooks-highlights__cell">
+              <p class="webhooks-highlights__cell-title">Custom payloads</p>
+              <p class="webhooks-highlights__cell-body">Design tailored JSON per subscriber for CRMs, queues, and edge functions.</p>
+            </div>
+            <div class="webhooks-highlights__cell">
+              <p class="webhooks-highlights__cell-title">3-tier matching</p>
+              <p class="webhooks-highlights__cell-body">Bind hooks at item, model, or instance scope. Most specific match wins.</p>
+            </div>
+            <div class="webhooks-highlights__cell">
+              <p class="webhooks-highlights__cell-title">Governed access</p>
+              <p class="webhooks-highlights__cell-body">Role-based controls on who can create, update, and rotate webhook subscriptions.</p>
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-4">
-          <a href="https://hj5v68xn.media.zestyio.com/webhook-resources.png" class="webhooks-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-webhooks-lightbox="hero" aria-label="Expand webhook configuration screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/webhook-resources.png" alt="Content.One webhook resources configuration" class="w-full h-full object-cover">
-          </a>
-        </div>
       </div>
-    </div>
-    <div class="webhooks-glow webhooks-glow--one"></div>
-    <div class="webhooks-glow webhooks-glow--two hidden md:block"></div>
-  </section>
 
-
-
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-4">
-          <a href="https://hj5v68xn.media.zestyio.com/webhook-actions.png" class="webhooks-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-webhooks-lightbox="actions" aria-label="Expand webhook action configuration screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/webhook-actions.png" alt="Webhook action configuration" class="w-full h-full object-cover">
-          </a>
+      <!-- Row 2 reverse: image right, text left — "Automate more, manage less" + 4 bullets. -->
+      <div class="webhooks-highlights__row webhooks-highlights__row--reverse">
+        <div class="webhooks-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Publishing workflow triggering webhooks" class="webhooks-highlights__img" loading="lazy" />
         </div>
-        <div class="lg:col-span-8">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">Trigger actions, sync systems</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Trigger actions, sync systems, and automate workflows—instantly.</h2>
-          <p class="text-gray-600 mb-4">Content.One’s Webhooks let you keep every system, platform, and team in sync. Trigger external actions in real-time whenever content is created, updated, or published—automating processes and connecting your digital ecosystem. Hit systems like Zapier or your own custom middleware.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM6 8a2 2 0 1 1 2.5 1.937V15.5a.5.5 0 0 1-1 0V9.937A2 2 0 0 1 6 8"/></svg>
-              <span>Real-time notifications whenever content or schema updates occur.</span>
+        <div class="webhooks-highlights__content">
+          <div class="webhooks-highlights__heading-group">
+            <h2 class="webhooks-highlights__title">Automate more, manage less</h2>
+            <p class="webhooks-highlights__lede">From automating translations to syncing product catalogs, webhooks keep Content.One connected—and your teams productive. Design precise automations by tying webhooks to specific instance assets, models, or account actions.</p>
+          </div>
+          <ul class="webhooks-highlights__icon-list">
+            <li class="webhooks-highlights__icon-row">
+              <span class="webhooks-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="webhooks-highlights__icon-text">Secure webhook management with role-based controls.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>
-              <span>Trigger downstream workflows across SaaS apps, CDPs, and custom services.</span>
+            <li class="webhooks-highlights__icon-row">
+              <span class="webhooks-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="webhooks-highlights__icon-text">Custom payloads and targeting for advanced workflows.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 3.5A.5.5 0 0 1 .5 3H1c2.202 0 3.827 1.24 4.874 2.418.49.552.865 1.102 1.126 1.532.26-.43.636-.98 1.126-1.532C9.173 4.24 10.798 3 13 3v1c-1.798 0-3.173 1.01-4.126 2.082A9.6 9.6 0 0 0 7.556 8a9.6 9.6 0 0 0 1.317 1.918C9.828 10.99 11.204 12 13 12v1c-2.202 0-3.827-1.24-4.874-2.418A10.6 10.6 0 0 1 7 9.05c-.26.43-.636.98-1.126 1.532C4.827 11.76 3.202 13 1 13H.5a.5.5 0 0 1 0-1H1c1.798 0 3.173-1.01 4.126-2.082A9.6 9.6 0 0 0 6.444 8a9.6 9.6 0 0 0-1.317-1.918C4.172 5.01 2.796 4 1 4H.5a.5.5 0 0 1-.5-.5"/>
-  <path d="M13 5.466V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192m0 9v-3.932a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192"/></svg>
-              <span>Keep apps, CRMs, and services aligned with your CMS—no polling required.</span>
+            <li class="webhooks-highlights__icon-row">
+              <span class="webhooks-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="webhooks-highlights__icon-text">Bind to Instances API resources or Accounts API governance events.</p>
+            </li>
+            <li class="webhooks-highlights__icon-row">
+              <span class="webhooks-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="webhooks-highlights__icon-text">Scale integrations without adding manual overhead or duplicate polling jobs.</p>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-start">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">Webhook ideas</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Plug-and-play ideas for business impact.</h2>
-          <p class="text-gray-600 mb-4">Use webhooks to orchestrate communications, automate marketing handoffs, and keep engineering in the loop&mdash;all without custom polling.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3 border rounded-lg p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111.756 8.43 1.68 8.43h1.682zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682zm6.749 1.682c0-.926.755-1.682 1.68-1.682S16 4.964 16 5.889s-.756 1.681-1.68 1.681h-1.681zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68s.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681z"/></svg>
-              <span>Send rich Slack alerts to channel owners whenever content is published, scheduled, or rolled back.</span>
-            </li>
-            <li class="flex gap-3 border rounded-lg p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M13 2.5a1.5 1.5 0 0 1 3 0v11a1.5 1.5 0 0 1-3 0v-.214c-2.162-1.241-4.49-1.843-6.912-2.083l.405 2.712A1 1 0 0 1 5.51 15.1h-.548a1 1 0 0 1-.916-.599l-1.85-3.49-.202-.003A2.014 2.014 0 0 1 0 9V7a2.02 2.02 0 0 1 1.992-2.013 75 75 0 0 0 2.483-.075c3.043-.154 6.148-.849 8.525-2.199zm1 0v11a.5.5 0 0 0 1 0v-11a.5.5 0 0 0-1 0m-1 1.35c-2.344 1.205-5.209 1.842-8 2.033v4.233q.27.015.537.036c2.568.189 5.093.744 7.463 1.993zm-9 6.215v-4.13a95 95 0 0 1-1.992.052A1.02 1.02 0 0 0 1 7v2c0 .55.448 1.002 1.006 1.009A61 61 0 0 1 4 10.065m-.657.975 1.609 3.037.01.024h.548l-.002-.014-.443-2.966a68 68 0 0 0-1.722-.082z"/></svg>
-              <span>Notify social teams or automation tools when new campaigns launch so cross-channel promos stay aligned.</span>
-            </li>
-            <li class="flex gap-3 border rounded-lg p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M8.47 1.318a1 1 0 0 0-.94 0l-6 3.2A1 1 0 0 0 1 5.4v.817l5.75 3.45L8 8.917l1.25.75L15 6.217V5.4a1 1 0 0 0-.53-.882zM15 7.383l-4.778 2.867L15 13.117zm-.035 6.88L8 10.082l-6.965 4.18A1 1 0 0 0 2 15h12a1 1 0 0 0 .965-.738ZM1 13.116l4.778-2.867L1 7.383v5.734ZM7.059.435a2 2 0 0 1 1.882 0l6 3.2A2 2 0 0 1 16 5.4V14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V5.4a2 2 0 0 1 1.059-1.765z"/></svg>
-              <span>Trigger email or SMS nurtures the moment new gated assets go live.</span>
-            </li>
-            <li class="flex gap-3 border rounded-lg p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/></svg>
-              <span>Pipe schema or page updates into DevOps workflows, Git-based CI/CD, or observability tools.</span>
-            </li>
-            <li class="flex gap-3 border rounded-lg p-2">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z"/>
-  <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0M7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0"/></svg>
-              <span>Post structured change logs into ticketing systems so marketing and engineering share the same timeline.</span>
-            </li>
-          </ul>
+  <!-- ════════════ WEBHOOK PAYLOAD VIEWER — DARK, tabbed JSON with 4 examples. -->
+  <section class="webhooks-code">
+    <div class="webhooks-code__container">
+      <div class="webhooks-code__heading-group">
+        <h2 class="webhooks-code__title">Design payloads for any downstream system</h2>
+        <p class="webhooks-code__lede">Send tailored JSON payloads to CRMs, messaging platforms, queue processors, or custom endpoints. Every payload can include contextual metadata like item ZUIDs, users, timestamps, and routes.</p>
+      </div>
+      <div class="webhooks-code__panel">
+        <div class="webhooks-code__tabs">
+          <button class="webhooks-code__tab is-active" data-webhooks-code-tab="slack" type="button">Slack alert</button>
+          <button class="webhooks-code__tab" data-webhooks-code-tab="social" type="button">Social ping</button>
+          <button class="webhooks-code__tab" data-webhooks-code-tab="email" type="button">Email automation</button>
+          <button class="webhooks-code__tab" data-webhooks-code-tab="devops" type="button">DevOps notice</button>
+          <span class="webhooks-code__meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> JSON payload examples</span>
         </div>
-        <div class="lg:col-span-7">
-          <div class="bg-white rounded-lg shadow bg-webhooks-code border-0 shadow-lg text-white webhooks-ideas-card">
-            <div class="p-4 border-b border-gray-200 bg-transparent border-0 px-4 pt-4 pb-0">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex gap-2 flex-wrap">
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10 active" data-webhooks-idea-tab="slack">Slack alert</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-webhooks-idea-tab="social">Social ping</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-webhooks-idea-tab="email">Email automation</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-webhooks-idea-tab="devops">DevOps notice</button>
-                </div>
-                <div class="flex gap-2 items-center text-white/50 text-sm">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/></svg>
-                  <span>JSON payload examples</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 p-0">
-              <div class="webhooks-idea-pane show" data-webhooks-idea-pane="slack">
-<pre class="mb-0 text-white text-sm"><code>{
+        <div class="webhooks-code__pane is-active" data-webhooks-code-pane="slack">
+          <pre class="webhooks-code__pre"><code>{
   "url": "https://hooks.slack.com/services/.../...",
   "payload": {
     "channel": "#content-launches",
@@ -120,9 +206,9 @@
     }]
   }
 }</code></pre>
-              </div>
-              <div class="webhooks-idea-pane" data-webhooks-idea-pane="social">
-<pre class="mb-0 text-white text-sm"><code>{
+        </div>
+        <div class="webhooks-code__pane" data-webhooks-code-pane="social">
+          <pre class="webhooks-code__pre"><code>{
   "service": "zapier",
   "event": "new-social-asset",
   "data": {
@@ -133,9 +219,9 @@
     "channels": ["linkedin", "x", "facebook"]
   }
 }</code></pre>
-              </div>
-              <div class="webhooks-idea-pane" data-webhooks-idea-pane="email">
-<pre class="mb-0 text-white text-sm"><code>{
+        </div>
+        <div class="webhooks-code__pane" data-webhooks-code-pane="email">
+          <pre class="webhooks-code__pre"><code>{
   "endpoint": "https://api.sendgrid.com/v3/mail/send",
   "payload": {
     "template_id": "d-12345",
@@ -149,9 +235,9 @@
     }]
   }
 }</code></pre>
-              </div>
-              <div class="webhooks-idea-pane" data-webhooks-idea-pane="devops">
-<pre class="mb-0 text-white text-sm"><code>{
+        </div>
+        <div class="webhooks-code__pane" data-webhooks-code-pane="devops">
+          <pre class="webhooks-code__pre"><code>{
   "target": "https://ci.brand.com/hooks/zesty",
   "payload": {
     "event": "schema.updated",
@@ -161,335 +247,601 @@
     "changeset": "{diff_url}"
   }
 }</code></pre>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+      <ul class="webhooks-code__bullets">
+        <li><span class="webhooks-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Manage subscriptions via the Accounts API — POST, GET, DELETE at <code>accounts.api.zesty.io/v1/webhooks</code>.</li>
+        <li><span class="webhooks-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>3-tier match logic: item-level → model-level → instance-level. Most specific wins.</li>
+        <li><span class="webhooks-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Publish-action webhooks do not fire for scheduled publishes more than 30 days out.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">Automate more, manage less</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Automate more, manage less.</h2>
-          <p class="text-gray-600 mb-4">From automating translations to syncing product catalogs, Webhooks keep Content.One connected—and your teams productive.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 text-gray-600 text-sm">
-              <p class="mb-2">✅ Secure webhook management with role-based controls.</p>
-              <p class="mb-2">✅ Custom payloads and targeting for advanced workflows.</p>
-              <p class="mb-0">✅ Scale integrations without adding manual overhead.</p>
-            </div>
-          </div>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="webhooks-customers">
+    <div class="webhooks-customers__container">
+      <div class="webhooks-customers__header">
+        <div class="webhooks-customers__header-text">
+          <h2 class="webhooks-customers__title">Teams wiring Content.One into everything</h2>
+          <p class="webhooks-customers__lede">Real-time payloads, structured data, and governed access keep every downstream system in lockstep with your CMS.</p>
         </div>
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="webhooks-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-webhooks-lightbox="publishing" aria-label="Expand publishing workflow screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Publishing workflow triggering webhooks" class="w-full h-full object-cover">
-          </a>
-        </div>
+        <a href="/customers/" class="webhooks-customers__cta">See customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">What listens for webhooks?</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Resources that can trigger webhooks.</h2>
-          <p class="text-gray-600 mb-4">Design precise automations by tying webhooks to specific instance assets, models, or account actions.</p>
-          <div class="block px-4 py-3 rounded bg-info/10 text-info border border-info/20 border-0 text-gray-600 text-sm mb-4" role="note">
-            <strong>Note:</strong> Publish-action webhooks do not fire for scheduled publishes more than 30 days in the future.
-          </div>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold text-webhooks mb-3">Instances API</h3>
-                  <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                    <li>Content models &amp; items</li>
-                    <li>Fields &amp; views</li>
-                    <li>Stylesheets &amp; scripts</li>
-                    <li>Redirects &amp; languages</li>
-                    <li>Instance settings</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold text-webhooks mb-3">Accounts API</h3>
-                  <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                    <li>Roles &amp; instance roles</li>
-                    <li>Instance domains</li>
-                    <li>Invites &amp; access</li>
-                    <li>Team governance events</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold text-webhooks mb-3">Common use cases</h3>
-                  <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                    <li>Trigger customer notifications</li>
-                    <li>Pipe updates into data warehouses</li>
-                    <li>Fire translation or localization jobs</li>
-                    <li>Kick off QA or approval workflows</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-900 text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-webhooks mb-3">REST API endpoints</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3 text-white">Webhook management endpoints.</h2>
-          <p class="text-white/75 mb-4">Create, update, and manage webhook subscriptions programmatically using the Accounts API.</p>
-          <div class="bg-white rounded-lg shadow bg-webhooks-code border-0 shadow-lg">
-            <div class="p-6 text-monospace text-white text-sm">
-              <pre class="mb-0"><code>POST   https://accounts.api.zesty.io/v1/webhooks
-  &rarr; Create a webhook subscription
-
-GET    https://accounts.api.zesty.io/v1/instances/:instance_zuid/webhooks
-  &rarr; List all webhooks for an instance
-
-GET    https://accounts.api.zesty.io/v1/webhooks/:webhook_zuid
-  &rarr; Retrieve a webhook by ZUID
-
-DELETE https://accounts.api.zesty.io/v1/webhooks/:webhook_zuid
-  &rarr; Remove a webhook subscription</code></pre>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm bg-white text-gray-600">
-            <div class="p-6">
-              <h3 class="text-lg font-semibold text-webhooks mb-3">Execution logic &amp; conditions</h3>
-              <p class="text-sm mb-3">When events happen, Content.One searches for the most specific webhook match and fires the associated payload:</p>
-              <ul class="list-none m-0 p-0 grid gap-2 text-sm mb-0">
-                <li>1️⃣ Item-level: matches a specific item ZUID.</li>
-                <li>2️⃣ Model-level: matches any item in a given content model.</li>
-                <li>3️⃣ Instance-level: matches any item in the instance.</li>
-              </ul>
-              <p class="text-sm mb-0 mt-3">Example: Updating item <code>7-ABCD-1234</code> in model <code>6-ABCD-1234</code> on instance <code>8-ABCD-1234</code> can trigger all three tiers depending on configured webhooks.</p>
-            </div>
-          </div> 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">Structured payloads</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Design payloads for any downstream system.</h2>
-          <p class="text-gray-600 mb-4">Send tailored JSON payloads to CRMs, messaging platforms, queue processors, or custom endpoints.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0"/>
-  <path d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z"/></svg>
-              <span>Include contextual metadata: item ZUIDs, users, timestamps, and routes.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M4 0a2 2 0 0 0-2 2v1.133l-.941.502A2 2 0 0 0 0 5.4V14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V5.4a2 2 0 0 0-1.059-1.765L14 3.133V2a2 2 0 0 0-2-2zm10 4.267.47.25A1 1 0 0 1 15 5.4v.817l-1 .6zm-1 3.15-3.75 2.25L8 8.917l-1.25.75L3 7.417V2a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1zm-11-.6-1-.6V5.4a1 1 0 0 1 .53-.882L2 4.267zm13 .566v5.734l-4.778-2.867zm-.035 6.88A1 1 0 0 1 14 15H2a1 1 0 0 1-.965-.738L8 10.083zM1 13.116V7.383l4.778 2.867L1 13.117Z"/></svg>
-              <span>Send formatted payloads for email/SMS services or customer-communication platforms.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks text-xl" aria-hidden="true"><path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"/></svg>
-              <span>Trigger ETL/ELT jobs with ready-to-ingest data structures.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-lg rounded-xl">
-            <div class="p-6 bg-webhooks-code text-white text-monospace text-sm">
-<pre class="mb-0"><code>{
-  "event": "content.item.updated",
-  "instance_zuid": "8-ABCD-1234",
-  "model_zuid": "6-ABCD-1234",
-  "item_zuid": "7-ABCD-1234",
-  "timestamp": "2024-04-12T17:24:35Z",
-  "user": {
-    "zuid": "5-XYZ-6578",
-    "email": "editor@brand.com"
-  },
-  "meta": {
-    "preview_url": "https://preview.brand.com/articles/latest",
-    "publish_state": "scheduled"
-  }
-}</code></pre>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 p-4 p-lg-5">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-webhooks-subtle text-webhooks mb-3">See it in action</span>
-              <h2 class="text-4xl font-bold font-semibold mb-3">Book a workflow automation consult.</h2>
-              <p class="text-gray-600 mb-4">We’ll map your integration needs, review webhook patterns, and show how Content.One keeps every platform synchronized.</p>
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-4">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks mr-2" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg>Design webhook strategies for omnichannel delivery.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks mr-2" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg>Review security and governance best practices.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-webhooks mr-2" aria-hidden="true"><path d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0"/>
-  <path d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z"/></svg>Connect with Zapier, Workato, or custom middleware.</li>
-              </ul>
-              {{include /components/ctas/book-button.html}}
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          {{include /components/widgets/random_quotes_micro.html}}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="modal fade webhooks-lightbox-modal" id="webhooksLightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-transparent border-0">
-        <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body p-0">
-          <img src="" alt="" class="webhooks-lightbox-image rounded-xl shadow-lg w-full h-auto">
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <style>
-  .webhooks-feature-page .bg-gradient-webhooks {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 45%, #14b8a6 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .webhooks-feature-page .webhooks-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .webhooks-feature-page .text-webhooks {
-    color: #0f766e !important;
-  }
-  .webhooks-feature-page .bg-webhooks-subtle {
-    background-color: rgba(20, 184, 166, 0.12) !important;
-  }
-  .webhooks-feature-page .webhooks-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
-  }
-  .webhooks-feature-page .webhooks-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(20, 184, 166, 0.35);
-    top: -160px;
-    right: -120px;
-  }
-  .webhooks-feature-page .webhooks-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(45, 212, 191, 0.25);
-    bottom: -180px;
-    left: -140px;
-  }
-  .webhooks-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
-  }
-  .webhooks-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
-  }
-  .webhooks-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
+  .webhooks-feature-page .webhooks-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: center;
   }
-  .bg-webhooks-code {
-    background: linear-gradient(135deg, #0f172a 0%, #1f2937 50%, #0f766e 100%);
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .webhooks-feature-page .webhooks-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .webhooks-ideas-card .btn-outline-light.active {
-    color: #0f172a;
+  .webhooks-feature-page .webhooks-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .webhooks-feature-page .webhooks-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
+  }
+  .webhooks-feature-page .webhooks-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .webhooks-feature-page .webhooks-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .webhooks-feature-page .webhooks-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .webhooks-feature-page .webhooks-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
+  }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-hero__lede { font-size: 20px; line-height: 30px; } }
+  .webhooks-feature-page .webhooks-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-hero__ctas { flex-direction: row; gap: 16px; } }
+  .webhooks-feature-page .webhooks-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .webhooks-feature-page .webhooks-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .webhooks-feature-page .webhooks-hero__cta--primary:hover { background-color: #2F3F94; }
+  .webhooks-feature-page .webhooks-hero__cta--secondary {
     background-color: #ffffff;
-    border-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
   }
-  .webhooks-idea-pane {
-    display: none;
-  }
-  .webhooks-idea-pane.show {
+  .webhooks-feature-page .webhooks-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .webhooks-feature-page .webhooks-hero__media { width: 100%; }
+  .webhooks-feature-page .webhooks-hero__img {
     display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
-  .webhooks-idea-pane pre {
-    padding: 1.5rem;
-    overflow: auto;
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .webhooks-feature-page .webhooks-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .webhooks-feature-page .webhooks-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-trust__container { padding: 0 2rem; } }
+  .webhooks-feature-page .webhooks-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .webhooks-feature-page .webhooks-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .webhooks-feature-page .webhooks-trust__logo { display: inline-flex; }
+  .webhooks-feature-page .webhooks-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .webhooks-feature-page .webhooks-trust__logo:hover .webhooks-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .webhooks-feature-page .webhooks-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .webhooks-feature-page .webhooks-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-features__container { padding: 0 2rem; } }
+  .webhooks-feature-page .webhooks-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .webhooks-feature-page .webhooks-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .webhooks-feature-page .webhooks-features__title { font-size: 36px; line-height: 44px; } }
+  .webhooks-feature-page .webhooks-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .webhooks-feature-page .webhooks-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .webhooks-feature-page .webhooks-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .webhooks-feature-page .webhooks-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  .webhooks-feature-page .webhooks-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .webhooks-feature-page .webhooks-features__card-text { display: flex; flex-direction: column; gap: 4px; }
+  .webhooks-feature-page .webhooks-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .webhooks-feature-page .webhooks-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .webhooks-feature-page .webhooks-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-highlights__container { padding: 0 2rem; } }
+  .webhooks-feature-page .webhooks-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .webhooks-feature-page .webhooks-highlights__row { flex-direction: row; gap: 96px; }
+    .webhooks-feature-page .webhooks-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .webhooks-feature-page .webhooks-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .webhooks-feature-page .webhooks-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .webhooks-feature-page .webhooks-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .webhooks-feature-page .webhooks-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-highlights__content { flex: 1 1 0; } }
+  .webhooks-feature-page .webhooks-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .webhooks-feature-page .webhooks-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .webhooks-feature-page .webhooks-highlights__title { font-size: 30px; line-height: 38px; } }
+  .webhooks-feature-page .webhooks-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .webhooks-feature-page .webhooks-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .webhooks-feature-page .webhooks-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .webhooks-feature-page .webhooks-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .webhooks-feature-page .webhooks-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .webhooks-feature-page .webhooks-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .webhooks-feature-page .webhooks-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .webhooks-feature-page .webhooks-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .webhooks-feature-page .webhooks-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Code viewer (DARK, tabbed JSON payloads) ───────────────────────── */
+  .webhooks-feature-page .webhooks-code {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .webhooks-feature-page .webhooks-code__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-code__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-code__container { padding: 0 2rem; } }
+  .webhooks-feature-page .webhooks-code__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 768px;
+  }
+  .webhooks-feature-page .webhooks-code__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .webhooks-feature-page .webhooks-code__title { font-size: 30px; line-height: 38px; } }
+  .webhooks-feature-page .webhooks-code__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .webhooks-feature-page .webhooks-code__panel {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+  }
+  .webhooks-feature-page .webhooks-code__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .webhooks-feature-page .webhooks-code__tab {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .webhooks-feature-page .webhooks-code__tab:hover { background: rgba(255, 255, 255, 0.06); }
+  .webhooks-feature-page .webhooks-code__tab.is-active {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+  .webhooks-feature-page .webhooks-code__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .webhooks-feature-page .webhooks-code__pane { display: none; }
+  .webhooks-feature-page .webhooks-code__pane.is-active { display: block; }
+  .webhooks-feature-page .webhooks-code__pre {
+    margin: 0;
+    padding: 24px;
+    background: transparent;
+    color: #e2e8f0;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  .webhooks-feature-page .webhooks-code__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+  }
+  .webhooks-feature-page .webhooks-code__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .webhooks-feature-page .webhooks-code__bullets li code {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 0.9em;
+  }
+  .webhooks-feature-page .webhooks-code__check {
+    flex-shrink: 0;
+    color: #8C9BE6;
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding-top: 1px;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .webhooks-feature-page .webhooks-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .webhooks-feature-page .webhooks-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .webhooks-feature-page .webhooks-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .webhooks-feature-page .webhooks-customers__container { padding: 0 2rem; } }
+  .webhooks-feature-page .webhooks-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .webhooks-feature-page .webhooks-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .webhooks-feature-page .webhooks-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .webhooks-feature-page .webhooks-customers__title { font-size: 30px; line-height: 38px; } }
+  .webhooks-feature-page .webhooks-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .webhooks-feature-page .webhooks-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .webhooks-feature-page .webhooks-customers__cta:hover { background: #f9fafb; }
+  .webhooks-feature-page .webhooks-customers .review-feature-chip { display: none; }
+  .webhooks-feature-page .webhooks-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
-  (function () {
-    // Lightbox handler
-    var modalEl = document.getElementById('webhooksLightboxModal');
-    var modalImg = modalEl ? modalEl.querySelector('.webhooks-lightbox-image') : null;
-    if (modalEl && modalImg && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-      var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
-      document.querySelectorAll('.webhooks-lightbox-trigger').forEach(function (trigger) {
-        trigger.addEventListener('click', function (event) {
-          event.preventDefault();
-          var targetSrc = trigger.getAttribute('href');
-          var innerImage = trigger.querySelector('img');
-          var imgAlt = innerImage ? innerImage.getAttribute('alt') : 'Expanded screenshot';
-          modalImg.src = targetSrc;
-          modalImg.alt = imgAlt || 'Expanded screenshot';
-          lightboxModal.show();
-        });
+  // Webhook payload tab toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.webhooks-feature-page [data-webhooks-code-tab]');
+    var panes = document.querySelectorAll('.webhooks-feature-page [data-webhooks-code-pane]');
+    if (!tabs.length || !panes.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-webhooks-code-tab');
+        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+        panes.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-webhooks-code-pane') === target); });
       });
-      modalEl.addEventListener('hidden.bs.modal', function () {
-        modalImg.src = '';
-        modalImg.alt = '';
-      });
-    }
-
-    // Webhook ideas tab switcher
-    var ideaButtons = Array.prototype.slice.call(document.querySelectorAll('[data-webhooks-idea-tab]'));
-    var ideaPanes = Array.prototype.slice.call(document.querySelectorAll('[data-webhooks-idea-pane]'));
-
-    if (ideaButtons.length && ideaPanes.length) {
-      function activateIdea(target) {
-        ideaButtons.forEach(function (btn) {
-          btn.classList.toggle('active', btn.getAttribute('data-webhooks-idea-tab') === target);
-        });
-        ideaPanes.forEach(function (pane) {
-          pane.classList.toggle('show', pane.getAttribute('data-webhooks-idea-pane') === target);
-        });
-      }
-
-      ideaButtons.forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          activateIdea(button.getAttribute('data-webhooks-idea-tab'));
-        });
-      });
-      activateIdea(ideaButtons[0].getAttribute('data-webhooks-idea-tab'));
-    }
-  })();
+    });
+  });
 </script>
