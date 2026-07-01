@@ -42,7 +42,7 @@
       <div class="components-features__grid">
         <article class="components-features__card">
           <div class="components-features__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            <span class="components-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/cube-03.rJOEETqGze.svg')"></span>
           </div>
           <div class="components-features__card-text">
             <p class="components-features__card-title">Blocks map to code</p>
@@ -51,7 +51,7 @@
         </article>
         <article class="components-features__card">
           <div class="components-features__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <span class="components-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/pencil-02.svg')"></span>
           </div>
           <div class="components-features__card-text">
             <p class="components-features__card-title">Structured content</p>
@@ -60,7 +60,7 @@
         </article>
         <article class="components-features__card">
           <div class="components-features__icon" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            <span class="components-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/git-branch-01.svg')"></span>
           </div>
           <div class="components-features__card-text">
             <p class="components-features__card-title">Version control native</p>
@@ -645,28 +645,31 @@
   .component-libraries-feature-page .components-stats__grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
+    margin-top: 16px;
   }
   @media (min-width: 640px) { .component-libraries-feature-page .components-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  /* "Bridge marketing vision" cells — matches the .components-highlights__cell
+     typography pattern (title + body, no card treatment), tuned for dark bg. */
   .component-libraries-feature-page .components-stats__tile {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
   }
   .component-libraries-feature-page .components-stats__number {
-    font-family: 'DM Sans', system-ui, sans-serif;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
     color: #ffffff;
-    font-size: 30px;
-    line-height: 38px;
-    margin: 0 0 4px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
   }
   .component-libraries-feature-page .components-stats__label {
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
     color: #b1bae7;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
     margin: 0;
   }
 
