@@ -608,6 +608,10 @@
   @media (min-width: 640px) { .component-libraries-feature-page .components-stats__container { padding: 0 1.5rem; } }
   @media (min-width: 1024px) {
     .component-libraries-feature-page .components-stats__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+    /* Desktop: flip so image sits left and copy sits right. Mobile keeps
+       DOM order (copy above image) via the default single-column grid. */
+    .component-libraries-feature-page .components-stats__copy { order: 2; }
+    .component-libraries-feature-page .components-stats__media { order: 1; }
   }
   .component-libraries-feature-page .components-stats__copy { display: flex; flex-direction: column; gap: 32px; }
   .component-libraries-feature-page .components-stats__media { width: 100%; }
