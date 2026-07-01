@@ -1,174 +1,201 @@
 <div class="cdn-feature-page">
-  <section class="py-6 section-padding py-lg-7 bg-gradient-cdn text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-cdn mb-3">Global CDN hosting</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Fast, resilient global content delivery</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One’s global CDN brings your experiences closer to every customer. Deliver lightning-fast pages across regions, keep uptime at 99.999%, and scale instantly when traffic surges.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-cdn">See CDN performance</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/global-delivery.jpg" class="cdn-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-cdn-lightbox="hero" aria-label="Expand global delivery map">
-            <img src="https://hj5v68xn.media.zestyio.com/global-delivery.jpg" alt="Global CDN delivery" class="w-full h-full object-cover">
-          </a>
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="cdn-hero">
+    <div class="cdn-hero__container">
+      <div class="cdn-hero__copy">
+        <p class="cdn-hero__eyebrow"><span class="cdn-hero__dot" aria-hidden="true"></span>Global CDN hosting</p>
+        <h1 class="cdn-hero__title">Fast, resilient global content delivery</h1>
+        <p class="cdn-hero__lede">Content.One's global CDN brings your experiences closer to every customer. Deliver lightning-fast pages across regions, keep uptime at 99.999%, and scale instantly when traffic surges.</p>
+        <div class="cdn-hero__ctas">
+          <a href="/book-a-demo/" class="cdn-hero__cta cdn-hero__cta--primary">See CDN performance</a>
+          <a href="/product/" class="cdn-hero__cta cdn-hero__cta--secondary">Explore Content.One</a>
         </div>
       </div>
+      <div class="cdn-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/global-delivery.jpg" alt="Content.One global CDN delivery network" class="cdn-hero__img" />
+      </div>
     </div>
-    <div class="cdn-glow cdn-glow--one"></div>
-    <div class="cdn-glow cdn-glow--two hidden md:block"></div>
   </section>
 
-  <section class="py-6 section-padding border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <img src="https://hj5v68xn.media.zestyio.com/lightning-web.jpg" alt="Operations team monitoring global delivery" class="w-full h-full rounded-lg object-cover">
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="cdn-trust">
+    <div class="cdn-trust__container">
+      <p class="cdn-trust__overline">Trusted by fast-moving teams</p>
+      <div class="cdn-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="cdn-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="cdn-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 CDN capability cards. -->
+  <section class="cdn-features">
+    <div class="cdn-features__container">
+      <div class="cdn-features__heading-group">
+        <h2 class="cdn-features__title">Deliver lightning-fast experiences worldwide</h2>
+        <p class="cdn-features__subheading">Strategic POPs at major internet exchanges, automated routing, and hybrid orchestration — engineered to keep sites, apps, and APIs fast under every load.</p>
+      </div>
+      <div class="cdn-features__grid">
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Global scale</p>
+            <p class="cdn-features__card-body">POP network centers on major internet exchanges worldwide for low-latency delivery on every continent.</p>
+          </div>
+        </article>
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Low-latency delivery</p>
+            <p class="cdn-features__card-body">Global Anycast routing distributes traffic intelligently to the nearest POP with the healthiest path.</p>
+          </div>
+        </article>
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Auto-scaling</p>
+            <p class="cdn-features__card-body">Handle campaign spikes, product drops, and viral moments without manual intervention or pre-warming.</p>
+          </div>
+        </article>
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Redundancy &amp; failover</p>
+            <p class="cdn-features__card-body">Enterprise 99.999% uptime SLA with automated failover, live health checks, and multi-provider diversity.</p>
+          </div>
+        </article>
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><polyline points="23 20 23 14 17 14"/><path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Cache orchestration</p>
+            <p class="cdn-features__card-body">Publish, rollback, and expiry events fire targeted purges — no manual scripts, no stale content.</p>
+          </div>
+        </article>
+        <article class="cdn-features__card">
+          <div class="cdn-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"/><rect x="2" y="14" width="20" height="8" rx="2" ry="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+          </div>
+          <div class="cdn-features__card-text">
+            <p class="cdn-features__card-title">Hybrid CDN ready</p>
+            <p class="cdn-features__card-body">Run Content.One behind Akamai, Cloudflare, CloudFront, or any custom edge — origin + orchestration in sync.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="cdn-highlights">
+    <div class="cdn-highlights__container">
+
+      <!-- Row 1: image left, text right — "Stay live, stay fast" + 2x2 cells. -->
+      <div class="cdn-highlights__row">
+        <div class="cdn-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/lightning-web.jpg" alt="Operations team monitoring global delivery" class="cdn-highlights__img" loading="lazy" />
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Global scale, built in</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Deliver lightning-fast experiences across the globe.</h2>
-          <p class="text-gray-600 mb-4">Content.One’s CDN spans high-density internet exchange points worldwide. Points of presence sit inside major infrastructure hubs, reducing hops and latency for customers across continents.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2M3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707M2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8m9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5m.754-4.246a.39.39 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.39.39 0 0 0-.029-.518z"/>
-  <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.95 11.95 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0"/></svg>
-              <span>Low-latency delivery for sites, apps, and APIs—no matter the device or market.</span>
+        <div class="cdn-highlights__content">
+          <div class="cdn-highlights__heading-group">
+            <h2 class="cdn-highlights__title">Stay live, stay fast — no matter the demand</h2>
+            <p class="cdn-highlights__lede">Points of presence sit inside major infrastructure hubs, reducing hops and latency. Our architecture is hardened with redundancy, automation, and active monitoring — most months we deliver a full 100% uptime.</p>
+          </div>
+          <div class="cdn-highlights__cells">
+            <div class="cdn-highlights__cell">
+              <p class="cdn-highlights__cell-title">Strategic POPs</p>
+              <p class="cdn-highlights__cell-body">Placement at top internet exchanges keeps content close to your audience.</p>
+            </div>
+            <div class="cdn-highlights__cell">
+              <p class="cdn-highlights__cell-title">Automated routing</p>
+              <p class="cdn-highlights__cell-body">Traffic reroutes around network disruptions without touching your config.</p>
+            </div>
+            <div class="cdn-highlights__cell">
+              <p class="cdn-highlights__cell-title">99.999% SLA</p>
+              <p class="cdn-highlights__cell-body">Enterprise contracts back an uptime commitment with real accountability.</p>
+            </div>
+            <div class="cdn-highlights__cell">
+              <p class="cdn-highlights__cell-title">Direct cloud peering</p>
+              <p class="cdn-highlights__cell-body">Direct connections with Google Cloud, AWS, and other origins reduce hops.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2 reverse: image right, text left — "Keep your CDN edge—let Content.One power the origin" + 4 bullets. -->
+      <div class="cdn-highlights__row cdn-highlights__row--reverse">
+        <div class="cdn-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/security-auditing.jpg" alt="Content.One security auditing dashboard" class="cdn-highlights__img" loading="lazy" />
+        </div>
+        <div class="cdn-highlights__content">
+          <div class="cdn-highlights__heading-group">
+            <h2 class="cdn-highlights__title">Keep your CDN edge — let Content.One power the origin</h2>
+            <p class="cdn-highlights__lede">Run Content.One behind your preferred CDN. We accelerate your origin while synchronizing cache purges and invalidations across every downstream edge.</p>
+          </div>
+          <ul class="cdn-highlights__icon-list">
+            <li class="cdn-highlights__icon-row">
+              <span class="cdn-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="cdn-highlights__icon-text">Bring Akamai, Cloudflare, Azure, or any custom CDN — Content.One origins respond with fresh content for every edge.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
-              <span>Strategic POP placement at top internet exchanges keeps content close to your audience.</span>
+            <li class="cdn-highlights__icon-row">
+              <span class="cdn-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="cdn-highlights__icon-text">Cache purge APIs fire instantly when editors publish, roll back, or expire content.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M9.302 1.256a1.5 1.5 0 0 0-2.604 0l-1.704 2.98a.5.5 0 0 0 .869.497l1.703-2.981a.5.5 0 0 1 .868 0l2.54 4.444-1.256-.337a.5.5 0 1 0-.26.966l2.415.647a.5.5 0 0 0 .613-.353l.647-2.415a.5.5 0 1 0-.966-.259l-.333 1.242zM2.973 7.773l-1.255.337a.5.5 0 1 1-.26-.966l2.416-.647a.5.5 0 0 1 .612.353l.647 2.415a.5.5 0 0 1-.966.259l-.333-1.242-2.545 4.454a.5.5 0 0 0 .434.748H5a.5.5 0 0 1 0 1H1.723A1.5 1.5 0 0 1 .421 12.24zm10.89 1.463a.5.5 0 1 0-.868.496l1.716 3.004a.5.5 0 0 1-.434.748h-5.57l.647-.646a.5.5 0 1 0-.708-.707l-1.5 1.5a.5.5 0 0 0 0 .707l1.5 1.5a.5.5 0 1 0 .708-.707l-.647-.647h5.57a1.5 1.5 0 0 0 1.302-2.244z"/></svg>
-              <span>Automated routing avoids outages and reroutes traffic around network disruptions.</span>
+            <li class="cdn-highlights__icon-row">
+              <span class="cdn-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="cdn-highlights__icon-text">Programmable controls cascade invalidations by zone, geography, or route so distributed CDNs stay consistent.</p>
+            </li>
+            <li class="cdn-highlights__icon-row">
+              <span class="cdn-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="cdn-highlights__icon-text">Security auditing and logging help satisfy compliance requirements without extra vendors.</p>
             </li>
           </ul>
-        </div> 
-        
+        </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <a href="https://hj5v68xn.media.zestyio.com/security-auditing.jpg" class="cdn-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-cdn-lightbox="security" aria-label="Expand security auditing dashboard">
-            <img src="https://hj5v68xn.media.zestyio.com/security-auditing.jpg" alt="Security auditing" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Secure, resilient infrastructure</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Stay live, stay fast—no matter the demand.</h2>
-          <p class="text-gray-600 mb-4">Our architecture is hardened with redundancy, automation, and active monitoring. Enterprise contracts offer a 99.999% uptime SLA—and most months we deliver 100%.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 text-gray-600 text-sm">
-              <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/></svg>Protect user experience during global surges with automated failover.</p>
-              <p class="mb-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M6 2a.5.5 0 0 1 .47.33L10 12.036l1.53-4.208A.5.5 0 0 1 12 7.5h3.5a.5.5 0 0 1 0 1h-3.15l-1.88 5.17a.5.5 0 0 1-.94 0L6 3.964 4.47 8.171A.5.5 0 0 1 4 8.5H.5a.5.5 0 0 1 0-1h3.15l1.88-5.17A.5.5 0 0 1 6 2"/></svg>Operational redundancy keeps POPs online even during outages.</p>
-              <p class="mb-0"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"/></svg>Security auditing and logging help satisfy compliance requirements.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ════════════ CODE VIEWER — DARK, tabbed infrastructure snippets. -->
+  <section class="cdn-code">
+    <div class="cdn-code__container">
+      <div class="cdn-code__heading-group">
+        <h2 class="cdn-code__title">Wire it up in the language of your infrastructure</h2>
+        <p class="cdn-code__lede">DNS routing, origin configuration, and POP metadata are all first-class. Manage them with a config file, a REST call, or the Content.One admin — whichever suits your ops posture.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4">
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Built for enterprise growth</span>
-              <h3 class="text-lg font-semibold mb-2">Auto-scaling infrastructure for every launch.</h3>
-              <p class="text-gray-600 text-sm mb-3">Content.One scales automatically with demand so you never scramble before a launch or campaign.</p>
-              <ul class="list-none m-0 p-0 text-gray-600 text-sm grid gap-2 mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M8 8c.828 0 1.5-.895 1.5-2S8.828 4 8 4s-1.5.895-1.5 2S7.172 8 8 8"/>
-  <path d="M11.953 8.81c-.195-3.388-.968-5.507-1.777-6.819C9.707 1.233 9.23.751 8.857.454a3.5 3.5 0 0 0-.463-.315A2 2 0 0 0 8.25.064.55.55 0 0 0 8 0a.55.55 0 0 0-.266.073 2 2 0 0 0-.142.08 4 4 0 0 0-.459.33c-.37.308-.844.803-1.31 1.57-.805 1.322-1.577 3.433-1.774 6.756l-1.497 1.826-.004.005A2.5 2.5 0 0 0 2 12.202V15.5a.5.5 0 0 0 .9.3l1.125-1.5c.166-.222.42-.4.752-.57.214-.108.414-.192.625-.281l.198-.084c.7.428 1.55.635 2.4.635s1.7-.207 2.4-.635q.1.044.196.083c.213.09.413.174.627.282.332.17.586.348.752.57l1.125 1.5a.5.5 0 0 0 .9-.3v-3.298a2.5 2.5 0 0 0-.548-1.562zM12 10.445v.055c0 .866-.284 1.585-.75 2.14.146.064.292.13.425.199.39.197.8.46 1.1.86L13 14v-1.798a1.5 1.5 0 0 0-.327-.935zM4.75 12.64C4.284 12.085 4 11.366 4 10.5v-.054l-.673.82a1.5 1.5 0 0 0-.327.936V14l.225-.3c.3-.4.71-.664 1.1-.861.133-.068.279-.135.425-.199M8.009 1.073q.096.06.226.163c.284.226.683.621 1.09 1.28C10.137 3.836 11 6.237 11 10.5c0 .858-.374 1.48-.943 1.893C9.517 12.786 8.781 13 8 13s-1.517-.214-2.057-.607C5.373 11.979 5 11.358 5 10.5c0-4.182.86-6.586 1.677-7.928.409-.67.81-1.082 1.096-1.32q.136-.113.236-.18Z"/>
-  <path d="M9.479 14.361c-.48.093-.98.139-1.479.139s-.999-.046-1.479-.139L7.6 15.8a.5.5 0 0 0 .8 0z"/></svg>Handle massive spikes without manual intervention.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M10.854 8.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M2 2a1 1 0 0 0-1 1v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"/>
-  <path d="M2.5 4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5z"/></svg>Stay reliable during events, product drops, or viral moments.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>Maintain performance across regions with intelligent routing.</li>
-              </ul>
-            </div>
-          </div>
+      <div class="cdn-code__panel">
+        <div class="cdn-code__tabs">
+          <button class="cdn-code__tab is-active" data-cdn-code-tab="dns" type="button">DNS routing</button>
+          <button class="cdn-code__tab" data-cdn-code-tab="origin" type="button">Origin configuration</button>
+          <button class="cdn-code__tab" data-cdn-code-tab="api" type="button">POP metadata API</button>
+          <span class="cdn-code__meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg> Infrastructure snippets</span>
         </div>
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Powered by Content.One CDN</span>
-              <h3 class="text-lg font-semibold mb-2">Strategic POPs, proven backbone.</h3>
-              <p class="text-gray-600 text-sm mb-3">Our CDN combines multiple sites within each POP to serve densely populated markets, prioritizing connectivity, provider diversity, and performance.</p>
-              <ul class="list-none m-0 p-0 text-gray-600 text-sm grid gap-2 mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/></svg>POP network centers on major internet exchanges worldwide.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H11a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 5 7h2.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM3 11.5A1.5 1.5 0 0 1 4.5 10h1A1.5 1.5 0 0 1 7 11.5v1A1.5 1.5 0 0 1 5.5 14h-1A1.5 1.5 0 0 1 3 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1A1.5 1.5 0 0 1 9 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>Automation keeps routing optimized, rerouting around issues instantly.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M7.646 5.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 6.707V10.5a.5.5 0 0 1-1 0V6.707L6.354 7.854a.5.5 0 1 1-.708-.708z"/>
-  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/></svg>Direct connections with Google Cloud, AWS, and other cloud origins.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-cdn mb-3">Hybrid CDN orchestration</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3 text-white">Keep your CDN edge—let Content.One power the origin.</h2>
-          <p class="text-white/75 mb-4">Run Content.One behind your preferred CDN. We accelerate your origin while synchronizing cache purges and invalidations across every downstream edge.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-white/75 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M4.5 5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1M3 4.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/>
-  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8.5v3a1.5 1.5 0 0 1 1.5 1.5h5.5a.5.5 0 0 1 0 1H10A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5H.5a.5.5 0 0 1 0-1H6A1.5 1.5 0 0 1 7.5 10V7H2a2 2 0 0 1-2-2zm1 0v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1m6 7.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5"/></svg>
-              <span>Bring Akamai, Cloudflare, Azure, or any custom CDN—Content.One origins respond with fresh content for every edge.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/></svg>
-              <span>Cache purge APIs fire instantly when editors publish, roll back, or expire content—keeping downstream caches synchronized.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M5.525 3.025a3.5 3.5 0 0 1 4.95 0 .5.5 0 1 0 .707-.707 4.5 4.5 0 0 0-6.364 0 .5.5 0 0 0 .707.707"/>
-  <path d="M6.94 4.44a1.5 1.5 0 0 1 2.12 0 .5.5 0 0 0 .708-.708 2.5 2.5 0 0 0-3.536 0 .5.5 0 0 0 .707.707ZM2.5 11a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m4.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2.5.5a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1m1.5-.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0"/>
-  <path d="M2.974 2.342a.5.5 0 1 0-.948.316L3.806 8H1.5A1.5 1.5 0 0 0 0 9.5v2A1.5 1.5 0 0 0 1.5 13H2a.5.5 0 0 0 .5.5h2A.5.5 0 0 0 5 13h6a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5h.5a1.5 1.5 0 0 0 1.5-1.5v-2A1.5 1.5 0 0 0 14.5 8h-2.306l1.78-5.342a.5.5 0 1 0-.948-.316L11.14 8H4.86zM14.5 9a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .5-.5z"/>
-  <path d="M8.5 5.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0"/></svg>
-              <span>Programmable controls cascade invalidations by zone, geography, or route so distributed CDNs stay consistent.</span>
-            </li>
-          </ul> 
-        </div>
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow bg-cdn-code border-0 shadow-lg text-white">
-            <div class="p-4 border-b border-gray-200 border-0 bg-transparent px-4 pt-4 pb-0">
-              <div class="flex flex-wrap items-center justify-between gap-3">
-                <div class="flex gap-2 flex-wrap">
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10 active" data-cdn-code-tab="dns">DNS routing</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-cdn-code-tab="origin">Origin configuration</button>
-                  <button type="button" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-sm px-3 py-1.5 border border-white text-white hover:bg-white/10" data-cdn-code-tab="api">POP metadata API</button>
-                </div>
-                <div class="text-white/50 text-sm flex gap-2 items-center">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>
-                  <span>Infrastructure snippets</span>
-                </div>
-              </div>
-            </div>
-            <div class="p-6 p-0">
-              <div class="cdn-code-pane show" data-cdn-code-pane="dns">
-<pre class="mb-0 text-white text-sm"><code>;; Content.One DNS response
+        <div class="cdn-code__pane is-active" data-cdn-code-pane="dns">
+          <pre class="cdn-code__pre"><code>;; Content.One DNS response
 example.com.    60   IN  CNAME global.contentone.net.
-;; Optimized for proximity + failover
-</code></pre>
-              </div>
-              <div class="cdn-code-pane" data-cdn-code-pane="origin">
-<pre class="mb-0 text-white text-sm"><code>{
+;; Optimized for proximity + failover</code></pre>
+        </div>
+        <div class="cdn-code__pane" data-cdn-code-pane="origin">
+          <pre class="cdn-code__pre"><code>{
   "service_id": "3d7a",
   "version": 42,
   "backends": [{
@@ -178,250 +205,609 @@ example.com.    60   IN  CNAME global.contentone.net.
     "ssl_check_cert": true
   }]
 }</code></pre>
-              </div>
-              <div class="cdn-code-pane" data-cdn-code-pane="api">
-<pre class="mb-0 text-white text-sm"><code>GET https://api.contentone.com/v1/pop-locations
+        </div>
+        <div class="cdn-code__pane" data-cdn-code-pane="api">
+          <pre class="cdn-code__pre"><code>GET https://api.contentone.com/v1/pop-locations
 [
   { "code": "IAD", "city": "Ashburn", "lat": 39.0438, "lon": -77.4874 },
   { "code": "AMS", "city": "Amsterdam", "lat": 52.3105, "lon": 4.7683 },
   { "code": "SIN", "city": "Singapore", "lat": 1.3644, "lon": 103.9915 }
 ]</code></pre>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-      <img src="https://hj5v68xn.media.zestyio.com/global-delivery.jpg" alt="Global POP network" class="cdn-bg-image cdn-bg-image--one hidden xl:block">
+      <ul class="cdn-code__bullets">
+        <li><span class="cdn-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Purge across native + partner edges with a single call — <code>POST /v1/cache/purge</code> with a <code>cascade</code> array.</li>
+        <li><span class="cdn-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Content.One CDN powered by Fastly under the hood, hybrid-ready with Akamai, CloudFront, and Cloudflare.</li>
+        <li><span class="cdn-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Scope purges by URL glob, tag, environment, or entire property for granular cache control.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="py-6 section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Remove downtime risks</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Keep digital experiences smooth—even under pressure.</h2>
-          <p class="text-gray-600 mb-4">Keep your developer stress free to focus on business initiatives. Automatic scaling and redundant POP clusters eliminate manual intervention. Launches, events, and unexpected traffic spikes stay on track.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg>
-              <span>Global Anycast routing distributes load intelligently.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M7.068.727c.243-.97 1.62-.97 1.864 0l.071.286a.96.96 0 0 0 1.622.434l.205-.211c.695-.719 1.888-.03 1.613.931l-.08.284a.96.96 0 0 0 1.187 1.187l.283-.081c.96-.275 1.65.918.931 1.613l-.211.205a.96.96 0 0 0 .434 1.622l.286.071c.97.243.97 1.62 0 1.864l-.286.071a.96.96 0 0 0-.434 1.622l.211.205c.719.695.03 1.888-.931 1.613l-.284-.08a.96.96 0 0 0-1.187 1.187l.081.283c.275.96-.918 1.65-1.613.931l-.205-.211a.96.96 0 0 0-1.622.434l-.071.286c-.243.97-1.62.97-1.864 0l-.071-.286a.96.96 0 0 0-1.622-.434l-.205.211c-.695.719-1.888.03-1.613-.931l.08-.284a.96.96 0 0 0-1.186-1.187l-.284.081c-.96.275-1.65-.918-.931-1.613l.211-.205a.96.96 0 0 0-.434-1.622l-.286-.071c-.97-.243-.97-1.62 0-1.864l.286-.071a.96.96 0 0 0 .434-1.622l-.211-.205c-.719-.695-.03-1.888.931-1.613l.284.08a.96.96 0 0 0 1.187-1.186l-.081-.284c-.275-.96.918-1.65 1.613-.931l.205.211a.96.96 0 0 0 1.622-.434zM12.973 8.5H8.25l-2.834 3.779A4.998 4.998 0 0 0 12.973 8.5m0-1a4.998 4.998 0 0 0-7.557-3.779l2.834 3.78zM5.048 3.967l-.087.065zm-.431.355A4.98 4.98 0 0 0 3.002 8c0 1.455.622 2.765 1.615 3.678L7.375 8zm.344 7.646.087.065z"/></svg>
-              <span>Automation handles cache invalidation and origin failover.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053.918 3.995.78 5.323 1.508 7H.43c-2.128-5.697 4.165-8.83 7.394-5.857q.09.083.176.171a3 3 0 0 1 .176-.17c3.23-2.974 9.522.159 7.394 5.856h-1.078c.728-1.677.59-3.005.108-3.947C13.486.878 10.4.28 8.717 2.01zM2.212 10h1.315C4.593 11.183 6.05 12.458 8 13.795c1.949-1.337 3.407-2.612 4.473-3.795h1.315c-1.265 1.566-3.14 3.25-5.788 5-2.648-1.75-4.523-3.434-5.788-5"/>
-  <path d="M10.464 3.314a.5.5 0 0 0-.945.049L7.921 8.956 6.464 5.314a.5.5 0 0 0-.88-.091L3.732 8H.5a.5.5 0 0 0 0 1H4a.5.5 0 0 0 .416-.223l1.473-2.209 1.647 4.118a.5.5 0 0 0 .945-.049l1.598-5.593 1.457 3.642A.5.5 0 0 0 12 9h3.5a.5.5 0 0 0 0-1h-3.162z"/></svg>
-              <span>Live monitoring and health checks keep SLAs intact.</span>
-            </li>
-          </ul>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="cdn-customers">
+    <div class="cdn-customers__container">
+      <div class="cdn-customers__header">
+        <div class="cdn-customers__header-text">
+          <h2 class="cdn-customers__title">Teams shipping fast, everywhere, on Content.One</h2>
+          <p class="cdn-customers__lede">Global routing, automated failover, and cache orchestration keep every launch on time — no matter the traffic curve.</p>
         </div>
-        <div class="lg:col-span-6">
-          <img src="https://hj5v68xn.media.zestyio.com/stressed-developer.jpg" alt="stressed developer over downtime" class="rounded-lg" />
-        </div>
+        <a href="/customers/" class="cdn-customers__cta">See customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-cdn-soft">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <div class="bg-white rounded-lg shadow border-0 shadow-lg">
-            <div class="p-6 p-4 p-lg-5">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">One-click cache control</span>
-              <h3 class="text-lg font-semibold font-semibold text-cdn mb-3">Manually flush the cache when needed</h3>
-              <p class="text-gray-600 text-sm mb-4">Marketing releases and emergency fixes can invalidate cache globally with a single action—whether you run on the Content.One CDN powered by Fastly or pair us with Akamai, CloudFront, or Cloudflare.</p>
-              <pre class="bg-gray-900 text-white text-sm rounded-xl p-3 mb-0"><code># Purge a campaign path across Content.One + partner CDNs
-curl -X POST https://api.contentone.com/v1/cache/purge \
-  -H "Authorization: Bearer &lt;token&gt;" \
-  -d '{ "paths": ["/campaigns/spring/*"], "cascade": ["akamai", "cloudfront"] }'</code></pre>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">Real-time cache orchestration</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Publishing triggers smart cache destruction.</h2>
-          <p class="text-gray-600 mb-4">Every publish, rollback, or scheduled expiry generates targeted purge events. Content.One keeps native CDN nodes and hybrid partner edges synchronized automatically.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>
-              <span>Auto-invalidation fires on marketer actions—no manual scripts required.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>
-              <span>Content.One CDN (Fastly), Akamai, AWS CloudFront, and custom edges purge in tandem.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn text-xl" aria-hidden="true"><path d="M11 4a4 4 0 0 1 0 8H8a5 5 0 0 0 2-4 5 5 0 0 0-2-4zm-6 8a4 4 0 1 1 0-8 4 4 0 0 1 0 8M0 8a5 5 0 0 0 5 5h6a5 5 0 0 0 0-10H5a5 5 0 0 0-5 5"/></svg>
-              <span>Granular controls let you scope purges by URL, tag, environment, or entire property.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 p-4 p-lg-5">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-cdn-subtle text-cdn mb-3">See it in action</span>
-              <h2 class="text-4xl font-bold font-semibold mb-3">Let Content.One take on your marketing infra stresses</h2>
-              <p class="text-gray-600 mb-4">We’ll map your traffic patterns, review POP coverage, and plan a migration that keeps uptime and performance high.</p>
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-4">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Analyze current latency and caching strategy.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Plan origin configuration with cloud or on-prem sources.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-cdn mr-2" aria-hidden="true"><path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/></svg>Design rollback and surge capacity playbooks.</li>
-              </ul>
-              {{include /components/ctas/book-button.html}}
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          {{include /components/widgets/random_quotes_micro.html}}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="modal fade cdn-lightbox-modal" id="cdnLightboxModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl">
-      <div class="modal-content bg-transparent border-0">
-        <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-        <div class="modal-body p-0">
-          <img src="" alt="" class="cdn-lightbox-image rounded-xl shadow-lg w-full h-auto">
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
 
 <style>
-  .cdn-feature-page .bg-gradient-cdn {
-    
-    background: linear-gradient(135deg,  #1189d4 0%, #112835 20%, #000000 100%);
-
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .cdn-feature-page .cdn-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .cdn-feature-page .text-cdn {
-    color: #0d9488 !important;
-  }
-  .cdn-feature-page .bg-cdn-subtle {
-    background-color: rgba(13, 148, 136, 0.12) !important;
-  }
-  .bg-cdn-soft {
-    background-color: rgba(13, 148, 136, 0.05);
-  }
-  .cdn-feature-page .cdn-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
-  }
-  .cdn-feature-page .cdn-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(56, 189, 248, 0.35);
-    top: -160px;
-    right: -120px;
-  }
-  .cdn-feature-page .cdn-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(34, 211, 238, 0.25);
-    bottom: -180px;
-    left: -140px;
-  }
-  .cdn-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
-  }
-  .cdn-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
-  }
-  .cdn-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
+  .cdn-feature-page .cdn-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: center;
   }
-  .cdn-code-pane {
-    display: none;
+  @media (min-width: 640px) { .cdn-feature-page .cdn-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .cdn-feature-page .cdn-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .cdn-code-pane.show {
-    display: block;
-  }
-  .cdn-code-pane pre {
-    padding: 1.75rem;
+  .cdn-feature-page .cdn-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .cdn-feature-page .cdn-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
     margin: 0;
-    overflow: auto;
   }
-  .bg-cdn-code {
-    background: linear-gradient(135deg, #0f172a 0%, #1f2937 50%, #0d9488 100%);
+  .cdn-feature-page .cdn-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .cdn-bg-image {
-    position: absolute;
-    opacity: 0.08;
-    filter: blur(6px);
-    transform: rotate(-4deg);
+  .cdn-feature-page .cdn-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .cdn-bg-image--one {
-    top: -80px;
-    right: -160px;
-    width: 380px;
+  @media (min-width: 768px) { .cdn-feature-page .cdn-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .cdn-feature-page .cdn-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .cdn-feature-page .cdn-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
   }
-  .cdn-bg-image--two {
-    bottom: -140px;
-    left: -160px;
-    width: 360px;
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-hero__lede { font-size: 20px; line-height: 30px; } }
+  .cdn-feature-page .cdn-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-hero__ctas { flex-direction: row; gap: 16px; } }
+  .cdn-feature-page .cdn-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .cdn-feature-page .cdn-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .cdn-feature-page .cdn-hero__cta--primary:hover { background-color: #2F3F94; }
+  .cdn-feature-page .cdn-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .cdn-feature-page .cdn-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .cdn-feature-page .cdn-hero__media { width: 100%; }
+  .cdn-feature-page .cdn-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .cdn-feature-page .cdn-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .cdn-feature-page .cdn-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-trust__container { padding: 0 2rem; } }
+  .cdn-feature-page .cdn-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .cdn-feature-page .cdn-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .cdn-feature-page .cdn-trust__logo { display: inline-flex; }
+  .cdn-feature-page .cdn-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .cdn-feature-page .cdn-trust__logo:hover .cdn-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .cdn-feature-page .cdn-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .cdn-feature-page .cdn-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-features__container { padding: 0 2rem; } }
+  .cdn-feature-page .cdn-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .cdn-feature-page .cdn-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .cdn-feature-page .cdn-features__title { font-size: 36px; line-height: 44px; } }
+  .cdn-feature-page .cdn-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .cdn-feature-page .cdn-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .cdn-feature-page .cdn-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .cdn-feature-page .cdn-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .cdn-feature-page .cdn-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  .cdn-feature-page .cdn-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .cdn-feature-page .cdn-features__card-text { display: flex; flex-direction: column; gap: 4px; }
+  .cdn-feature-page .cdn-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .cdn-feature-page .cdn-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .cdn-feature-page .cdn-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .cdn-feature-page .cdn-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-highlights__container { padding: 0 2rem; } }
+  .cdn-feature-page .cdn-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .cdn-feature-page .cdn-highlights__row { flex-direction: row; gap: 96px; }
+    .cdn-feature-page .cdn-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .cdn-feature-page .cdn-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .cdn-feature-page .cdn-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .cdn-feature-page .cdn-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .cdn-feature-page .cdn-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-highlights__content { flex: 1 1 0; } }
+  .cdn-feature-page .cdn-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .cdn-feature-page .cdn-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .cdn-feature-page .cdn-highlights__title { font-size: 30px; line-height: 38px; } }
+  .cdn-feature-page .cdn-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .cdn-feature-page .cdn-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .cdn-feature-page .cdn-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .cdn-feature-page .cdn-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .cdn-feature-page .cdn-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .cdn-feature-page .cdn-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .cdn-feature-page .cdn-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .cdn-feature-page .cdn-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .cdn-feature-page .cdn-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .cdn-feature-page .cdn-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .cdn-feature-page .cdn-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Code viewer (DARK, tabbed infrastructure snippets) ─────────────── */
+  .cdn-feature-page .cdn-code {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .cdn-feature-page .cdn-code__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-code__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-code__container { padding: 0 2rem; } }
+  .cdn-feature-page .cdn-code__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 768px;
+  }
+  .cdn-feature-page .cdn-code__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .cdn-feature-page .cdn-code__title { font-size: 30px; line-height: 38px; } }
+  .cdn-feature-page .cdn-code__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .cdn-feature-page .cdn-code__panel {
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    overflow: hidden;
+  }
+  .cdn-feature-page .cdn-code__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .cdn-feature-page .cdn-code__tab {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: transparent;
+    color: #ffffff;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .cdn-feature-page .cdn-code__tab:hover { background: rgba(255, 255, 255, 0.06); }
+  .cdn-feature-page .cdn-code__tab.is-active {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(255, 255, 255, 0.32);
+  }
+  .cdn-feature-page .cdn-code__meta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 13px;
+  }
+  .cdn-feature-page .cdn-code__pane { display: none; }
+  .cdn-feature-page .cdn-code__pane.is-active { display: block; }
+  .cdn-feature-page .cdn-code__pre {
+    margin: 0;
+    padding: 24px;
+    background: transparent;
+    color: #e2e8f0;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 1.6;
+    overflow-x: auto;
+  }
+  .cdn-feature-page .cdn-code__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .cdn-feature-page .cdn-code__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .cdn-feature-page .cdn-code__bullets li code {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'DM Mono', ui-monospace, monospace;
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+  .cdn-feature-page .cdn-code__check {
+    flex-shrink: 0;
+    color: #8C9BE6;
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding-top: 1px;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .cdn-feature-page .cdn-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .cdn-feature-page .cdn-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .cdn-feature-page .cdn-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .cdn-feature-page .cdn-customers__container { padding: 0 2rem; } }
+  .cdn-feature-page .cdn-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .cdn-feature-page .cdn-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .cdn-feature-page .cdn-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .cdn-feature-page .cdn-customers__title { font-size: 30px; line-height: 38px; } }
+  .cdn-feature-page .cdn-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .cdn-feature-page .cdn-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .cdn-feature-page .cdn-customers__cta:hover { background: #f9fafb; }
+  .cdn-feature-page .cdn-customers .review-feature-chip { display: none; }
+  .cdn-feature-page .cdn-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
-  (function () {
-    var modalEl = document.getElementById('cdnLightboxModal');
-    var modalImg = modalEl ? modalEl.querySelector('.cdn-lightbox-image') : null;
-    if (modalEl && modalImg && typeof bootstrap !== 'undefined' && bootstrap.Modal) {
-      var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
-      document.querySelectorAll('.cdn-lightbox-trigger').forEach(function (trigger) {
-        trigger.addEventListener('click', function (event) {
-          event.preventDefault();
-          var targetSrc = trigger.getAttribute('href');
-          var innerImage = trigger.querySelector('img');
-          var imgAlt = innerImage ? innerImage.getAttribute('alt') : 'Expanded screenshot';
-          modalImg.src = targetSrc;
-          modalImg.alt = imgAlt || 'Expanded screenshot';
-          lightboxModal.show();
-        });
+  // Infrastructure snippets tab toggle
+  document.addEventListener('DOMContentLoaded', function () {
+    var tabs = document.querySelectorAll('.cdn-feature-page [data-cdn-code-tab]');
+    var panes = document.querySelectorAll('.cdn-feature-page [data-cdn-code-pane]');
+    if (!tabs.length || !panes.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-cdn-code-tab');
+        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+        panes.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-cdn-code-pane') === target); });
       });
-      modalEl.addEventListener('hidden.bs.modal', function () {
-        modalImg.src = '';
-        modalImg.alt = '';
-      });
-    }
-
-    var codeButtons = Array.prototype.slice.call(document.querySelectorAll('[data-cdn-code-tab]'));
-    var codePanes = Array.prototype.slice.call(document.querySelectorAll('[data-cdn-code-pane]'));
-    if (codeButtons.length && codePanes.length) {
-      function activatePane(target) {
-        codeButtons.forEach(function (btn) {
-          btn.classList.toggle('active', btn.getAttribute('data-cdn-code-tab') === target);
-        });
-        codePanes.forEach(function (pane) {
-          pane.classList.toggle('show', pane.getAttribute('data-cdn-code-pane') === target);
-        });
-      }
-      codeButtons.forEach(function (button) {
-        button.addEventListener('click', function (event) {
-          event.preventDefault();
-          activatePane(button.getAttribute('data-cdn-code-tab'));
-        });
-      });
-      activatePane(codeButtons[0].getAttribute('data-cdn-code-tab'));
-    }
-  })();
+    });
+  });
 </script>
