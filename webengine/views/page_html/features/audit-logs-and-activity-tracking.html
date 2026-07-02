@@ -717,11 +717,10 @@ X-ContentOne-Signature: t=1719921484,v1=8a3d92...
     list-style: none;
     margin: 0;
     padding: 0;
-    display: grid;
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 12px;
   }
-  @media (min-width: 768px) { .audit-feature-page .audit-code__bullets { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
   .audit-feature-page .audit-code__bullets li {
     display: flex;
     align-items: flex-start;
