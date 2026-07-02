@@ -1,254 +1,588 @@
-<div class="sso-roles-page">
-  <section class="py-6 py-lg-7 bg-gradient-sso text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-sso mb-3">Access you can trust</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Single sign-on and custom roles built for enterprise governance.</h1>
-          <p class="text-lg text-white/75 mb-4">Unify authentication and authorization across every Content.One instance. Connect your identity provider, assign tailored permissions, and keep teams moving fast without compromising security.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-sso">See access controls</a>
-            <a href="/security/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore security features</a>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/accounts-base-roles.png" alt="Content.One role management interface" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div> 
-    </div>
-    <div class="sso-glow sso-glow--one"></div>
-    <div class="sso-glow sso-glow--two hidden md:block"></div>
-  </section>
+<div class="sso-roles-feature-page">
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-start">
-        <div class="lg:col-span-4">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sso-subtle text-sso mb-3">Base role types</span>
-          
-          <h2 class="text-4xl font-bold font-semibold mb-3">Start with roles everyone understands.</h2>
-          <p class="text-gray-600 mb-4">Content.One ships with a spectrum of preconfigured roles so you can launch quickly with the right guardrails. Each role maps to common responsibilities across your organization.</p>
-          <img src="https://hj5v68xn.media.zestyio.com/christina-wocintechchat-com-dKBTFoarrOU-unsplash.jpg?width=500" alt="role laptop security" class="full-width rounded-lg mb-2" />
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="sso-hero">
+    <div class="sso-hero__container">
+      <div class="sso-hero__copy">
+        <p class="sso-hero__eyebrow"><span class="sso-hero__dot" aria-hidden="true"></span>Access you can trust</p>
+        <h1 class="sso-hero__title">Single sign-on and custom roles built for enterprise governance.</h1>
+        <p class="sso-hero__lede">Unify authentication and authorization across every Content.One instance. Connect your identity provider, assign tailored permissions, and keep teams moving fast without compromising security.</p>
+        <div class="sso-hero__ctas">
+          <a href="/book-a-demo/" class="sso-hero__cta sso-hero__cta--primary">See access controls</a>
+          <a href="/security/" class="sso-hero__cta sso-hero__cta--secondary">Explore security features</a>
         </div>
-        <div class="lg:col-span-8">
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 gap-4">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Owner</h3>
-                  <p class="text-gray-600 text-sm mb-2">Full access across Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, Settings, and Accounts.</p>
-                  <p class="text-gray-600 text-sm mb-0">Launch instances, add domains, invite users, manage teams, and create tokens.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Admin</h3>
-                  <p class="text-gray-600 text-sm mb-2">Same access as Owner without the ability to delete other users.</p>
-                  <p class="text-gray-600 text-sm mb-0">Perfect for operational leads who manage day-to-day governance.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Developer</h3>
-                  <p class="text-gray-600 text-sm mb-2">Code-first teams with access to build models, components, redirects, and integrations.</p>
-                  <p class="text-gray-600 text-sm mb-0">Includes Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, Settings.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Developer Contributor</h3>
-                  <p class="text-gray-600 text-sm mb-2">All Developer access without publish permissions.</p>
-                  <p class="text-gray-600 text-sm mb-0">Ideal for contractors or QA engineers contributing safely.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">SEO</h3>
-                  <p class="text-gray-600 text-sm mb-2">Focused on discoverability with access to Content, Media, Leads, Redirects, Reports, and Apps.</p>
-                  <p class="text-gray-600 text-sm mb-0">Empower growth teams to optimize without touching code.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Publisher</h3>
-                  <p class="text-gray-600 text-sm mb-2">Content, Media, Leads, Reports, and Apps access with publish rights.</p>
-                  <p class="text-gray-600 text-sm mb-0">Perfect for regional marketing teams with go-live responsibility.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Contributor</h3>
-                  <p class="text-gray-600 text-sm mb-2">Create and edit in Content, Media, and Apps without publishing rights.</p>
-                  <p class="text-gray-600 text-sm mb-0">Submit workflow requests to escalate approvals to publishers.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-base font-semibold mb-2">Access Admin</h3>
-                  <p class="text-gray-600 text-sm mb-2">Specialized administrative view for managing identities and tokens.</p>
-                  <p class="text-gray-600 text-sm mb-0">Grant to security teams who oversee account-wide governance.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="sso-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/accounts-base-roles.png" alt="Content.One role management interface" class="sso-hero__img" />
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-1.png" alt="Custom role creation interface" class="w-full h-full object-cover">
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="sso-trust">
+    <div class="sso-trust__container">
+      <p class="sso-trust__overline">Trusted by fast-moving teams</p>
+      <div class="sso-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="sso-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="sso-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BASE ROLES GRID — LIGHT, 8-card 4-column grid at lg+. -->
+  <section class="sso-features">
+    <div class="sso-features__container">
+      <div class="sso-features__heading-group">
+        <h2 class="sso-features__title">Start with roles everyone understands</h2>
+        <p class="sso-features__subheading">Content.One ships with a spectrum of preconfigured roles so you can launch quickly with the right guardrails. Each role maps to common responsibilities across your organization.</p>
+      </div>
+      <div class="sso-features__grid">
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Owner</p>
+          <p class="sso-features__card-body">Full access across Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, Settings, and Accounts. Launch instances, add domains, invite users, and manage teams.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Admin</p>
+          <p class="sso-features__card-body">Same access as Owner without the ability to delete other users. Perfect for operational leads who manage day-to-day governance.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Developer</p>
+          <p class="sso-features__card-body">Code-first teams with access to build models, components, redirects, and integrations. Content, Schema, Media, Code, Leads, Redirects, Reports, Apps, Settings.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Developer Contributor</p>
+          <p class="sso-features__card-body">All Developer access without publish permissions. Ideal for contractors or QA engineers contributing safely.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">SEO</p>
+          <p class="sso-features__card-body">Focused on discoverability with access to Content, Media, Leads, Redirects, Reports, and Apps. Empower growth teams to optimize without touching code.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Publisher</p>
+          <p class="sso-features__card-body">Content, Media, Leads, Reports, and Apps access with publish rights. Perfect for regional marketing teams with go-live responsibility.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Contributor</p>
+          <p class="sso-features__card-body">Create and edit in Content, Media, and Apps without publishing rights. Submit workflow requests to escalate approvals to publishers.</p>
+        </article>
+        <article class="sso-features__card">
+          <p class="sso-features__card-title">Access Admin</p>
+          <p class="sso-features__card-body">Specialized administrative view for managing identities and tokens. Grant to security teams who oversee account-wide governance.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="sso-highlights">
+    <div class="sso-highlights__container">
+
+      <!-- Row 1: image left, text right — "Define permissions down to the field level" + 2x2 cells. -->
+      <div class="sso-highlights__row">
+        <div class="sso-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-1.png" alt="Content.One custom role creation interface" class="sso-highlights__img" loading="lazy" />
+        </div>
+        <div class="sso-highlights__content">
+          <div class="sso-highlights__heading-group">
+            <h2 class="sso-highlights__title">Define permissions down to the field level</h2>
+            <p class="sso-highlights__lede">Go beyond base roles with tailored permissions that align to your workflow. Configure roles for individual models, entries, or even specific fields so every teammate gets exactly what they need.</p>
+          </div>
+          <div class="sso-highlights__cells">
+            <div class="sso-highlights__cell">
+              <p class="sso-highlights__cell-title">Custom role creation</p>
+              <p class="sso-highlights__cell-body">Build roles from scratch or extend base roles to fit your exact org structure.</p>
+            </div>
+            <div class="sso-highlights__cell">
+              <p class="sso-highlights__cell-title">Tailored permissions</p>
+              <p class="sso-highlights__cell-body">Choose who can save, create, publish, or delete per content type.</p>
+            </div>
+            <div class="sso-highlights__cell">
+              <p class="sso-highlights__cell-title">Granular application</p>
+              <p class="sso-highlights__cell-body">Apply roles to a single site, section, entry, or field.</p>
+            </div>
+            <div class="sso-highlights__cell">
+              <p class="sso-highlights__cell-title">Workflow governance</p>
+              <p class="sso-highlights__cell-body">Prevent accidental changes by limiting access to exactly what matters.</p>
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sso-subtle text-sso mb-3">Custom and granular roles</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Define permissions down to the field level.</h2>
-          <p class="text-gray-600 mb-4">Go beyond base roles with tailored permissions that align to your workflow. Content.One lets you configure roles for individual models, entries, or even specific fields so every teammate gets exactly what they need.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso text-xl" aria-hidden="true"><path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
-  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5z"/></svg>
-              <span><strong>Custom role creation</strong> &ndash; Build roles from scratch or extend base roles.</span>
+      </div>
+
+      <!-- Row 2 reverse: image right, text left — "Scale governance with reusable teams" + 4 bullets. -->
+      <div class="sso-highlights__row sso-highlights__row--reverse">
+        <div class="sso-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-2.png" alt="Granular role settings detail" class="sso-highlights__img" loading="lazy" />
+        </div>
+        <div class="sso-highlights__content">
+          <div class="sso-highlights__heading-group">
+            <h2 class="sso-highlights__title">Scale governance with reusable teams</h2>
+            <p class="sso-highlights__lede">Organize users into teams that mirror your organization — marketers, developers, agencies. Assign a role once and cascade it across instances so adding or removing members is effortless.</p>
+          </div>
+          <ul class="sso-highlights__icon-list">
+            <li class="sso-highlights__icon-row">
+              <span class="sso-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="sso-highlights__icon-text">Create teams for recurring collaborators and contractors.</p>
             </li>
-            <li class="flex gap-3 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/></svg>
-              <span><strong>Tailored permissions</strong> &ndash; Choose who can save, create, publish, or delete per content type.</span>
+            <li class="sso-highlights__icon-row">
+              <span class="sso-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="sso-highlights__icon-text">Apply a team to multiple instances with a single action.</p>
             </li>
-            <li class="flex gap-3 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso text-xl" aria-hidden="true"><path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10"/>
-  <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/></svg>
-              <span><strong>Granular application</strong> &ndash; Apply roles to a single site, section, entry, or field.</span>
+            <li class="sso-highlights__icon-row">
+              <span class="sso-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="sso-highlights__icon-text">Update membership once and sync everywhere automatically.</p>
             </li>
-            <li class="flex gap-3 items-start">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso text-xl" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/></svg>
-              <span><strong>Workflow governance</strong> &ndash; Prevent accidental changes by limiting access to exactly what matters.</span>
+            <li class="sso-highlights__icon-row">
+              <span class="sso-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="sso-highlights__icon-text">Accelerate onboarding by granting access in minutes, not days.</p>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-2.png" alt="Granular role settings detail" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sso-subtle text-sso mb-3">Teams &amp; multi-site management</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Scale governance with reusable teams.</h2>
-          <p class="text-gray-600 mb-4">Organize users into teams that mirror your organization&mdash;marketers, developers, agencies, and more. Assign a role once and cascade it across instances so adding or removing members is effortless.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6">
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso mr-2" aria-hidden="true"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></svg>Create teams for recurring collaborators and contractors.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>Apply a team to multiple instances with a single action.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso mr-2" aria-hidden="true"><path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
-  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/></svg>Update membership once and sync everywhere automatically.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-sso mr-2" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>Accelerate onboarding by granting access in minutes, not days.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+  <!-- ════════════ SSO PROVIDER SHOWCASE — LIGHT, preserves the sso-options.html include (Okta/Azure/Google tile grid). -->
+  <section class="sso-providers">
+    <div class="sso-providers__container">
+      {{include /components/widgets/sso-options.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/sso-login-options.png" alt="Single sign-on login options" class="w-full h-full object-cover">
-          </div>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="sso-customers">
+    <div class="sso-customers__container">
+      <div class="sso-customers__header">
+        <div class="sso-customers__header-text">
+          <h2 class="sso-customers__title">Enterprise teams governing access on Content.One</h2>
+          <p class="sso-customers__lede">SSO, base roles, custom permissions, and team-based governance keep every instance secure without slowing publishing down.</p>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-sso-subtle text-sso mb-3">Authentication</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Connect the identity provider your company already trusts.</h2>
-          <p class="text-gray-600 mb-4">Content.One supports modern SSO protocols so your workforce can sign in with existing credentials while your security team stays in control of MFA, password policies, and lifecycle management.</p>
-          
-        </div>
+        <a href="/customers/" class="sso-customers__cta">See customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
-{{include /components/widgets/sso-options.html}}
-  <section class="py-6 bg-sso text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to modernize access control?</h2>
-          <p class="text-lg text-white/75 mb-4">Combine SSO, base roles, and granular permissions to keep your Content.One ecosystem secure and efficient.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-sso">Talk to our team</a>
-            <a href="/product_tour/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Take the product tour</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 </div>
 
 <style>
-  .sso-roles-page .bg-gradient-sso {
-    background: linear-gradient(135deg, #0f172a 0%, #2563eb 45%, #9333ea 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .sso-roles-feature-page .sso-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .sso-roles-page .bg-sso {
-    background-color: #2563eb;
+  .sso-roles-feature-page .sso-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
-  .sso-roles-page .text-sso {
-    color: #2563eb !important;
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .sso-roles-feature-page .sso-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .sso-roles-page .bg-sso-subtle {
-    background-color: rgba(37, 99, 235, 0.12) !important;
+  .sso-roles-feature-page .sso-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .sso-roles-feature-page .sso-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
   }
-  .sso-roles-page .sso-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
+  .sso-roles-feature-page .sso-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .sso-roles-page .sso-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(147, 51, 234, 0.45);
-    top: -140px;
-    right: -120px;
+  .sso-roles-feature-page .sso-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .sso-roles-page .sso-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(37, 99, 235, 0.35);
-    bottom: -160px;
-    left: -140px;
+  @media (min-width: 768px) { .sso-roles-feature-page .sso-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .sso-roles-feature-page .sso-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .sso-roles-feature-page .sso-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
   }
-  .sso-roles-page .card h3 {
-    color: #0f172a;
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-hero__lede { font-size: 20px; line-height: 30px; } }
+  .sso-roles-feature-page .sso-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-hero__ctas { flex-direction: row; gap: 16px; } }
+  .sso-roles-feature-page .sso-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
-  .sso-roles-page .card .text-grey {
-    color: #64748b;
+  .sso-roles-feature-page .sso-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .sso-roles-feature-page .sso-hero__cta--primary:hover { background-color: #2F3F94; }
+  .sso-roles-feature-page .sso-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .sso-roles-feature-page .sso-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .sso-roles-feature-page .sso-hero__media { width: 100%; }
+  .sso-roles-feature-page .sso-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .sso-roles-feature-page .sso-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .sso-roles-feature-page .sso-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-trust__container { padding: 0 2rem; } }
+  .sso-roles-feature-page .sso-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .sso-roles-feature-page .sso-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .sso-roles-feature-page .sso-trust__logo { display: inline-flex; }
+  .sso-roles-feature-page .sso-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .sso-roles-feature-page .sso-trust__logo:hover .sso-trust__logo-img { opacity: 1; }
+
+  /* ─── Base Roles Grid (LIGHT, 4-col at lg+ to fit 8 cards cleanly) ───── */
+  .sso-roles-feature-page .sso-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .sso-roles-feature-page .sso-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-features__container { padding: 0 2rem; } }
+  .sso-roles-feature-page .sso-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .sso-roles-feature-page .sso-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .sso-roles-feature-page .sso-features__title { font-size: 36px; line-height: 44px; } }
+  .sso-roles-feature-page .sso-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .sso-roles-feature-page .sso-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-features__grid { grid-template-columns: repeat(4, 1fr); } }
+  .sso-roles-feature-page .sso-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .sso-roles-feature-page .sso-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .sso-roles-feature-page .sso-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .sso-roles-feature-page .sso-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .sso-roles-feature-page .sso-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-highlights__container { padding: 0 2rem; } }
+  .sso-roles-feature-page .sso-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .sso-roles-feature-page .sso-highlights__row { flex-direction: row; gap: 96px; }
+    .sso-roles-feature-page .sso-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .sso-roles-feature-page .sso-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .sso-roles-feature-page .sso-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .sso-roles-feature-page .sso-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .sso-roles-feature-page .sso-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-highlights__content { flex: 1 1 0; } }
+  .sso-roles-feature-page .sso-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .sso-roles-feature-page .sso-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .sso-roles-feature-page .sso-highlights__title { font-size: 30px; line-height: 38px; } }
+  .sso-roles-feature-page .sso-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .sso-roles-feature-page .sso-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .sso-roles-feature-page .sso-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .sso-roles-feature-page .sso-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .sso-roles-feature-page .sso-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .sso-roles-feature-page .sso-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .sso-roles-feature-page .sso-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .sso-roles-feature-page .sso-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .sso-roles-feature-page .sso-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .sso-roles-feature-page .sso-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── SSO Providers (LIGHT wrapper around the sso-options.html include) ─ */
+  .sso-roles-feature-page .sso-providers {
+    background: #ffffff;
+    padding: 48px 0 96px;
+  }
+  .sso-roles-feature-page .sso-providers__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-providers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-providers__container { padding: 0 2rem; } }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .sso-roles-feature-page .sso-customers {
+    background: #ffffff;
+    padding: 96px 0;
+    border-top: 1px solid #eaecf0;
+  }
+  .sso-roles-feature-page .sso-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .sso-roles-feature-page .sso-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .sso-roles-feature-page .sso-customers__container { padding: 0 2rem; } }
+  .sso-roles-feature-page .sso-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .sso-roles-feature-page .sso-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .sso-roles-feature-page .sso-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .sso-roles-feature-page .sso-customers__title { font-size: 30px; line-height: 38px; } }
+  .sso-roles-feature-page .sso-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .sso-roles-feature-page .sso-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .sso-roles-feature-page .sso-customers__cta:hover { background: #f9fafb; }
+  .sso-roles-feature-page .sso-customers .review-feature-chip { display: none; }
+  .sso-roles-feature-page .sso-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>

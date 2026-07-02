@@ -1,335 +1,785 @@
 <div class="schedule-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-schedule text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold text-white font-bold mb-4">Plan, schedule, and publish—without the stress.</h1>
-          <p class="text-lg text-white/75 mb-4">When teams need to move fast, Content.One keeps them in control. From orchestrated launches to automatic expirations, publishing stays secure, structured, and reliable—no matter how large your content operations become.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Explore scheduling workflows</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See Content.One capabilities</a>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Digital teams coordinating publishing" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div> 
-    </div>
-  </section>
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Publishing control</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Publish across channels without sacrificing control.</h2>
-          <p class="text-gray-600 mb-0">Lower operational risk with scheduling, expirations, approvals, and role-based workflows built directly into Content.One.</p>
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="schedule-hero">
+    <div class="schedule-hero__container">
+      <div class="schedule-hero__copy">
+        <p class="schedule-hero__eyebrow"><span class="schedule-hero__dot" aria-hidden="true"></span>Scheduled publishing</p>
+        <h1 class="schedule-hero__title">Plan, schedule, and publish—without the stress.</h1>
+        <p class="schedule-hero__lede">When teams need to move fast, Content.One keeps them in control. From orchestrated launches to automatic expirations, publishing stays secure, structured, and reliable—no matter how large your content operations become.</p>
+        <div class="schedule-hero__ctas">
+          <a href="/book-a-demo/" class="schedule-hero__cta schedule-hero__cta--primary">Explore scheduling workflows</a>
+          <a href="/product/" class="schedule-hero__cta schedule-hero__cta--secondary">See Content.One capabilities</a>
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </div>
+      </div>
+      <div class="schedule-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Content.One scheduled publishing interface" class="schedule-hero__img" />
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Scheduling &amp; expiry capabilities</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Keep launches on time and content lifecycle managed automatically</h2>
-          <p class="text-gray-600 text-lg mb-0">Content.One makes publishing reliable—from planned campaigns to automated rollbacks—so global teams stay agile and compliant.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Precise scheduling</h3>
-              <p class="text-gray-600 mb-0">Plan publishing windows across sites, locales, and channels—including embargoes and coordinated launches.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Automatic expirations</h3>
-              <p class="text-gray-600 mb-0">Set end dates so promotions, legal notices, and campaigns sunset automatically—no manual cleanup.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Role-based workflows</h3>
-              <p class="text-gray-600 mb-0">Approvals, notifications, and permissions ensure content is reviewed by the right stakeholders before going live.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Instant rollbacks</h3>
-              <p class="text-gray-600 mb-0">Restore prior versions instantly if something needs to be reverted—no downtime or developer tickets.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Preview everywhere</h3>
-              <p class="text-gray-600 mb-0">Preview scheduled updates on desktop, mobile, kiosks, or headless endpoints before publication.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Audit-ready</h3>
-              <p class="text-gray-600 mb-0">Activity logs capture who scheduled, approved, or rolled back content—ideal for compliance.</p>
-            </div>
-          </div>
-        </div>
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="schedule-trust">
+    <div class="schedule-trust__container">
+      <p class="schedule-trust__overline">Trusted by fast-moving teams</p>
+      <div class="schedule-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="schedule-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="schedule-trust__logo-img">
+        </a>
+        {{/each}}
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Stay agile, stay secure</h2>
-          <p class="text-gray-600 mb-4">Content.One orchestrates large content operations with enterprise-grade scheduling, governance, and rollbacks—so your team stays fast and safe.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
-              <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail interface" class="rounded-lg shadow-sm" style="width:160px;height:120px;object-fit:cover;">
-              <div class="text-gray-600 text-sm">
-                <p class="mb-1">✅ Instantly roll back to previous versions when approvals change direction</p>
-                <p class="mb-1">✅ Route content through multi-step approvals before it reaches production</p>
-                <p class="mb-1">✅ Preview on desktop, mobile, and headless renderings before go-live</p>
-                <p class="mb-0">✅ Receive notifications for scheduled launches, expirations, and rollbacks</p>
-              </div>
-            </div>
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 capability cards w/ icon badges. -->
+  <section class="schedule-features">
+    <div class="schedule-features__container">
+      <div class="schedule-features__heading-group">
+        <h2 class="schedule-features__title">Keep launches on time and content lifecycle managed automatically</h2>
+        <p class="schedule-features__subheading">Content.One makes publishing reliable—from planned campaigns to automated rollbacks—so global teams stay agile and compliant.</p>
+      </div>
+      <div class="schedule-features__grid">
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
           </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Digital operations monitoring schedule" class="w-full h-full object-cover">
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Precise scheduling</p>
+            <p class="schedule-features__card-body">Plan publishing windows across sites, locales, and channels—including embargoes and coordinated launches.</p>
           </div>
-        </div>
+        </article>
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Automatic expirations</p>
+            <p class="schedule-features__card-body">Set end dates so promotions, legal notices, and campaigns sunset automatically—no manual cleanup.</p>
+          </div>
+        </article>
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2M17 11l2 2 4-4"/></svg>
+          </div>
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Role-based workflows</p>
+            <p class="schedule-features__card-body">Approvals, notifications, and permissions ensure content is reviewed by the right stakeholders before going live.</p>
+          </div>
+        </article>
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Instant rollbacks</p>
+            <p class="schedule-features__card-body">Restore prior versions instantly if something needs to be reverted—no downtime or developer tickets.</p>
+          </div>
+        </article>
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Preview everywhere</p>
+            <p class="schedule-features__card-body">Preview scheduled updates on desktop, mobile, kiosks, or headless endpoints before publication.</p>
+          </div>
+        </article>
+        <article class="schedule-features__card">
+          <div class="schedule-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="15" x2="15" y2="15"/><line x1="9" y1="11" x2="15" y2="11"/></svg>
+          </div>
+          <div class="schedule-features__card-text">
+            <p class="schedule-features__card-title">Audit-ready</p>
+            <p class="schedule-features__card-body">Activity logs capture who scheduled, approved, or rolled back content—ideal for compliance.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="Scheduling and SEO settings" class="w-full h-full object-cover">
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="schedule-highlights">
+    <div class="schedule-highlights__container">
+
+      <!-- Row 1: image left, text right — "Stay agile, stay secure" + 4 cells. -->
+      <div class="schedule-highlights__row">
+        <div class="schedule-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Content.One audit trail interface" class="schedule-highlights__img" loading="lazy" />
+        </div>
+        <div class="schedule-highlights__content">
+          <div class="schedule-highlights__heading-group">
+            <h2 class="schedule-highlights__title">Stay agile, stay secure</h2>
+            <p class="schedule-highlights__lede">Content.One orchestrates large content operations with enterprise-grade scheduling, governance, and rollbacks—so your team stays fast and safe.</p>
+          </div>
+          <div class="schedule-highlights__cells">
+            <div class="schedule-highlights__cell">
+              <p class="schedule-highlights__cell-title">Instant rollbacks</p>
+              <p class="schedule-highlights__cell-body">Roll back to previous versions instantly when approvals change direction.</p>
+            </div>
+            <div class="schedule-highlights__cell">
+              <p class="schedule-highlights__cell-title">Multi-step approvals</p>
+              <p class="schedule-highlights__cell-body">Route content through staged approvals before it reaches production.</p>
+            </div>
+            <div class="schedule-highlights__cell">
+              <p class="schedule-highlights__cell-title">Preview anywhere</p>
+              <p class="schedule-highlights__cell-body">Preview on desktop, mobile, and headless renderings before go-live.</p>
+            </div>
+            <div class="schedule-highlights__cell">
+              <p class="schedule-highlights__cell-title">Smart notifications</p>
+              <p class="schedule-highlights__cell-body">Notifications for scheduled launches, expirations, and rollbacks.</p>
+            </div>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-schedule-subtle text-schedule mb-3">Cross-channel reliability</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Coordinate launches across web, mobile, and AI endpoints</h2>
-          <p class="text-gray-600 text-lg mb-4">Headless APIs and reusable Blocks ensure scheduled content publishes to every destination—landing pages, apps, chatbots, kiosks, and partner portals.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>
-              <span>Global scheduling handles multiple time zones and localization requirements.</span>
+      </div>
+
+      <!-- Row 2 reverse: image right, text left — cross-channel reliability. -->
+      <div class="schedule-highlights__row schedule-highlights__row--reverse">
+        <div class="schedule-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="Cross-channel publishing settings" class="schedule-highlights__img" loading="lazy" />
+        </div>
+        <div class="schedule-highlights__content">
+          <div class="schedule-highlights__heading-group">
+            <h2 class="schedule-highlights__title">Coordinate launches across web, mobile, and AI endpoints</h2>
+            <p class="schedule-highlights__lede">Headless APIs and reusable Blocks ensure scheduled content publishes to every destination—landing pages, apps, chatbots, kiosks, and partner portals.</p>
+          </div>
+          <ul class="schedule-highlights__icon-list">
+            <li class="schedule-highlights__icon-row">
+              <span class="schedule-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="schedule-highlights__icon-text">Global scheduling handles multiple time zones and localization requirements.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-  <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z"/></svg>
-              <span>Set recurring schedules for seasonal campaigns or evergreen updates.</span>
+            <li class="schedule-highlights__icon-row">
+              <span class="schedule-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="schedule-highlights__icon-text">Set recurring schedules for seasonal campaigns or evergreen updates.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"/></svg>
-              <span>Trigger syndication to headless consumers and AI copilots via Model Context Protocol.</span>
+            <li class="schedule-highlights__icon-row">
+              <span class="schedule-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="schedule-highlights__icon-text">Trigger syndication to headless consumers and AI copilots via Model Context Protocol.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-schedule text-xl" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/></svg>
-              <span>Role-based access and audit logs keep compliance teams confident in every release.</span>
+            <li class="schedule-highlights__icon-row">
+              <span class="schedule-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="schedule-highlights__icon-text">Role-based access and audit logs keep compliance teams confident in every release.</p>
             </li>
           </ul>
         </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Operational excellence for content teams</h2>
-          <p class="text-lg text-white/75 mb-4">Keep launches on time, reduce risk, and maintain uptime—even as your content footprint grows.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="65" data-schedule-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in manual launch coordination</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="80" data-schedule-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Decrease in post-launch hotfixes</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="99.99" data-schedule-suffix="%" data-schedule-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime guaranteed by managed infrastructure</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-schedule-count="200" data-schedule-suffix="+">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics, CRM, and automation</p>
-                </div>
-              </div>
-            </div>
-          </div>
+  <!-- ════════════ STATS — DARK, solidified cards, side image right. -->
+  <section class="schedule-stats">
+    <div class="schedule-stats__container">
+      <div class="schedule-stats__copy">
+        <div class="schedule-stats__heading-group">
+          <h2 class="schedule-stats__title">Operational excellence for content teams</h2>
+          <p class="schedule-stats__lede">Keep launches on time, reduce risk, and maintain uptime—even as your content footprint grows.</p>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Team coordinating schedules" class="w-full h-full object-cover">
+        <div class="schedule-stats__grid">
+          <div class="schedule-stats__tile">
+            <p class="schedule-stats__number"><span data-schedule-count="65" data-schedule-suffix="%">0</span></p>
+            <p class="schedule-stats__label">Reduction in manual launch coordination</p>
+          </div>
+          <div class="schedule-stats__tile">
+            <p class="schedule-stats__number"><span data-schedule-count="80" data-schedule-suffix="%">0</span></p>
+            <p class="schedule-stats__label">Decrease in post-launch hotfixes</p>
+          </div>
+          <div class="schedule-stats__tile">
+            <p class="schedule-stats__number"><span data-schedule-count="99.99" data-schedule-suffix="%" data-schedule-format="decimal">0</span></p>
+            <p class="schedule-stats__label">Uptime guaranteed by managed infrastructure</p>
+          </div>
+          <div class="schedule-stats__tile">
+            <p class="schedule-stats__number"><span data-schedule-count="200" data-schedule-suffix="+">0</span></p>
+            <p class="schedule-stats__label">Integrations across analytics, CRM, and automation</p>
           </div>
         </div>
       </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-schedule-dark" style="opacity:0.35;"></div>
-  </section>
-
-    <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Customer voices</span>
-          <h2 class="text-4xl font-bold font-semibold mb-2">Digital teams thrive on Content.One</h2>
-          <p class="text-gray-600 mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
-        </div>
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-drag text-base px-6 py-3">Read customer wins</a>
+      <div class="schedule-stats__media">
+        <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1200&q=80" alt="Team coordinating publishing schedules" class="schedule-stats__img" loading="lazy" />
       </div>
-     {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-schedule text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold text-white mb-3">Ready to explore Content.One?</h2>
-          <p class="text-lg text-white/75 mb-4">Give your content teams content scheduling and version that scale with your brand.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-schedule">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="schedule-customers">
+    <div class="schedule-customers__container">
+      <div class="schedule-customers__header">
+        <div class="schedule-customers__header-text">
+          <h2 class="schedule-customers__title">Digital teams thrive on Content.One</h2>
+          <p class="schedule-customers__lede">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One.</p>
         </div>
+        <a href="/customers/" class="schedule-customers__cta">Read customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
+
 </div>
 
 <style>
-  .schedule-feature-page .bg-gradient-schedule {
-    background: linear-gradient(135deg, #0f172a 0%, #1d4ed8 45%, #10b981 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .schedule-feature-page .schedule-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .schedule-feature-page .bg-gradient-schedule-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.25) 100%);
+  .schedule-feature-page .schedule-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
-  .schedule-feature-page .bg-schedule {
-    background-color: #1d4ed8;
+  @media (min-width: 640px) { .schedule-feature-page .schedule-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .schedule-feature-page .schedule-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .schedule-feature-page .text-schedule {
-    color: #1d4ed8 !important;
+  .schedule-feature-page .schedule-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .schedule-feature-page .schedule-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
   }
-  .schedule-feature-page .bg-schedule-subtle {
-    background-color: rgba(29, 78, 216, 0.12) !important;
+  .schedule-feature-page .schedule-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .schedule-feature-page .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
+  .schedule-feature-page .schedule-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .schedule-feature-page .logo-card__image {
-    max-height: 48px;
+  @media (min-width: 768px) { .schedule-feature-page .schedule-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .schedule-feature-page .schedule-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .schedule-feature-page .schedule-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
+  }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-hero__lede { font-size: 20px; line-height: 30px; } }
+  .schedule-feature-page .schedule-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-hero__ctas { flex-direction: row; gap: 16px; } }
+  .schedule-feature-page .schedule-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .schedule-feature-page .schedule-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .schedule-feature-page .schedule-hero__cta--primary:hover { background-color: #2F3F94; }
+  .schedule-feature-page .schedule-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .schedule-feature-page .schedule-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .schedule-feature-page .schedule-hero__media { width: 100%; }
+  .schedule-feature-page .schedule-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .schedule-feature-page .schedule-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .schedule-feature-page .schedule-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-trust__container { padding: 0 2rem; } }
+  .schedule-feature-page .schedule-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .schedule-feature-page .schedule-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .schedule-feature-page .schedule-trust__logo { display: inline-flex; }
+  .schedule-feature-page .schedule-trust__logo-img {
+    max-height: 36px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
   }
-  .schedule-feature-page .logo-card:hover .logo-card__image,
-  .schedule-feature-page .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
-    opacity: 1;
+  .schedule-feature-page .schedule-trust__logo:hover .schedule-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .schedule-feature-page .schedule-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .schedule-feature-page .schedule-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-features__container { padding: 0 2rem; } }
+  .schedule-feature-page .schedule-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .schedule-feature-page .schedule-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .schedule-feature-page .schedule-features__title { font-size: 36px; line-height: 44px; } }
+  .schedule-feature-page .schedule-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .schedule-feature-page .schedule-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .schedule-feature-page .schedule-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .schedule-feature-page .schedule-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .schedule-feature-page .schedule-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  /* Asset-backed icons: mask the SVG so the brand color shows through. */
+  .schedule-feature-page .schedule-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .schedule-feature-page .schedule-features__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .schedule-feature-page .schedule-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .schedule-feature-page .schedule-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .schedule-feature-page .schedule-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .schedule-feature-page .schedule-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-highlights__container { padding: 0 2rem; } }
+  .schedule-feature-page .schedule-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .schedule-feature-page .schedule-highlights__row { flex-direction: row; gap: 96px; }
+    .schedule-feature-page .schedule-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .schedule-feature-page .schedule-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .schedule-feature-page .schedule-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .schedule-feature-page .schedule-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .schedule-feature-page .schedule-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-highlights__content { flex: 1 1 0; } }
+  .schedule-feature-page .schedule-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .schedule-feature-page .schedule-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .schedule-feature-page .schedule-highlights__title { font-size: 30px; line-height: 38px; } }
+  .schedule-feature-page .schedule-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .schedule-feature-page .schedule-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .schedule-feature-page .schedule-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .schedule-feature-page .schedule-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .schedule-feature-page .schedule-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .schedule-feature-page .schedule-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .schedule-feature-page .schedule-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .schedule-feature-page .schedule-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .schedule-feature-page .schedule-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .schedule-feature-page .schedule-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .schedule-feature-page .schedule-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Stats (DARK, solidified cards, side image right) ───────────────── */
+  .schedule-feature-page .schedule-stats {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .schedule-feature-page .schedule-stats__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-stats__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .schedule-feature-page .schedule-stats__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+  }
+  .schedule-feature-page .schedule-stats__copy { display: flex; flex-direction: column; gap: 32px; }
+  .schedule-feature-page .schedule-stats__media { width: 100%; }
+  .schedule-feature-page .schedule-stats__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .schedule-feature-page .schedule-stats__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 560px;
+  }
+  .schedule-feature-page .schedule-stats__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .schedule-feature-page .schedule-stats__title { font-size: 30px; line-height: 38px; } }
+  .schedule-feature-page .schedule-stats__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .schedule-feature-page .schedule-stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  .schedule-feature-page .schedule-stats__tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .schedule-feature-page .schedule-stats__number {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0 0 4px;
+  }
+  .schedule-feature-page .schedule-stats__label {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .schedule-feature-page .schedule-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .schedule-feature-page .schedule-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .schedule-feature-page .schedule-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .schedule-feature-page .schedule-customers__container { padding: 0 2rem; } }
+  .schedule-feature-page .schedule-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .schedule-feature-page .schedule-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .schedule-feature-page .schedule-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .schedule-feature-page .schedule-customers__title { font-size: 30px; line-height: 38px; } }
+  .schedule-feature-page .schedule-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .schedule-feature-page .schedule-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .schedule-feature-page .schedule-customers__cta:hover { background: #f9fafb; }
+  .schedule-feature-page .schedule-customers .review-feature-chip { display: none; }
+  .schedule-feature-page .schedule-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
+  // Stats count-up animation
   document.addEventListener('DOMContentLoaded', function () {
-    var scheduleObserver = new IntersectionObserver(function (entries) {
+    var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-schedule-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-schedule-suffix') || '';
-          var format = el.getAttribute('data-schedule-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          scheduleObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-schedule-count'));
+        if (isNaN(endValue)) return;
+        var suffix = el.getAttribute('data-schedule-suffix') || '';
+        var format = el.getAttribute('data-schedule-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          var display = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            var finalValue = format === 'decimal' ? endValue.toFixed(2) : Math.round(endValue).toLocaleString();
+            el.textContent = finalValue + suffix;
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
 
     document.querySelectorAll('.schedule-feature-page [data-schedule-count]').forEach(function (counter) {
-      scheduleObserver.observe(counter);
+      counterObserver.observe(counter);
     });
   });
 </script>

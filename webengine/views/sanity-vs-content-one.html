@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanity vs Content.One — Headless CMS comparison, pricing, G2 reviews</title>
+  <meta name="description" content="Sanity vs Content.One: side-by-side comparison of pricing, hosting, developer dependency, federated multisite, SSO, AI agents, and G2 reviews. See where each headless CMS fits." />
+  <meta property="og:title" content="Sanity vs Content.One" />
+  <meta property="og:description" content="Pricing, hosting, developer dependency, federated multisite, SSO, AI/MCP, and G2 reviews, compared." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/sanity-vs-content-one.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .versus-faq > summary::-webkit-details-marker { display: none; }
+    .versus-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="versus-page">
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-5">Side-by-side comparison</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Sanity vs Content.One</h1>
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Sanity is the most developer-first headless CMS in the category, with schema defined in code and GROQ for querying. Content.One is built for teams publishing across many sites who'd rather not staff a frontend build to do it.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AT A GLANCE — 4 CARDS ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">At a glance</h2>
+        <p class="text-gray-600">The four trade-offs that show up most often when teams compare Sanity vs Content.One.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Who it's built for</h3>
+          <p class="text-gray-600 text-sm m-0">Sanity is built for developer-led product teams who want full control of the content model in code. Content.One is built for marketing-led teams running many sites without a developer in the loop for every change.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Hosting included</h3>
+          <p class="text-gray-600 text-sm m-0">Sanity is the content backend and Content Lake only. You build and host your own frontend. Content.One includes hosting and global CDN delivery.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Limits and tiers</h3>
+          <p class="text-gray-600 text-sm m-0">Sanity meters seats, documents, and API requests, and gates SSO, custom roles, and audit logs to Enterprise. Content.One keeps SSO, custom roles, and audit logs in the standard product.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">When each wins</h3>
+          <p class="text-gray-600 text-sm m-0">Pick Sanity for code-first builds where engineers own the stack. Pick Content.One for federated multisite setups that marketers run day to day.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ G2 / REVIEWS ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">What real customers say</h2>
+        <p class="text-gray-600">Independent review scores from G2 and Capterra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="40" height="40" alt="Content.One" class="rounded-lg" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Content.One</p>
+              <p class="text-gray-500 text-xs m-0">G2 + Capterra review profiles</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 25 reviews on Capterra</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Ease of use for non-developers. Hands-on support — "goes above and beyond." Customers report dropping their own software and database maintenance after migrating.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/content-one/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/143834/Zesty-io/reviews/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=sanity.io&sz=128" width="40" height="40" alt="Sanity" class="rounded-lg bg-gray-50 p-1" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Sanity</p>
+              <p class="text-gray-500 text-xs m-0">G2 review profile</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.7</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 900+ reviews on G2</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Best-in-class developer experience, real-time collaboration ("Google Docs for content"), and a fully customizable Studio. Pushback shows up on the GROQ learning curve, the need for a developer to set things up, and per-seat cost once teams get large.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/sanity/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ COMPARISON TABLE ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">The comparison</h2>
+        <p class="text-gray-600">Capability by capability. Why each one matters in the right-hand column.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-700">
+              <th class="font-display font-semibold p-4 w-1/4">Capability</th>
+              <th class="font-display font-semibold p-4 w-1/4">Content.One</th>
+              <th class="font-display font-semibold p-4 w-1/4">Sanity</th>
+              <th class="font-display font-semibold p-4 w-1/4">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+
+            <tr class="bg-royal/5"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Pricing and plans</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Plans and entry price</td><td class="p-4 align-top">Custom pricing by consultation, no public tiers</td><td class="p-4 align-top">Free, then Growth at $15 per seat/mo, Enterprise custom-quoted</td><td class="p-4 align-top text-gray-600">Per-seat plus usage adds up as the team and traffic grow</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Pricing model</td><td class="p-4 align-top">Quote-based</td><td class="p-4 align-top">Per-seat plus usage-based: API requests, documents, bandwidth, add-ons</td><td class="p-4 align-top text-gray-600">Usage metering makes spend harder to predict as you scale</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Hosting included</td><td class="p-4 align-top">Yes, hosting and global CDN</td><td class="p-4 align-top">No, content backend and Content Lake only — you bring the frontend and host</td><td class="p-4 align-top text-gray-600">One bill vs a separate host and the devops around it</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Maintenance</td><td class="p-4 align-top">Managed, no servers or patching</td><td class="p-4 align-top">Managed backend, you build and maintain the frontend</td><td class="p-4 align-top text-gray-600">Less infrastructure to run</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Editorial experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Publish without a developer</td><td class="p-4 align-top">Yes, visual drag-and-drop builder</td><td class="p-4 align-top">Editors can publish once it's built, but schemas and Studio are configured in code by developers</td><td class="p-4 align-top text-gray-600">Marketers ship pages without filing a ticket</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Visual editing</td><td class="p-4 align-top">Built into the core product</td><td class="p-4 align-top">Yes, live preview and visual editing included</td><td class="p-4 align-top text-gray-600">Close to even, both show the page as you build it</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Content model and scale</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Content modeling</td><td class="p-4 align-top">Structured content, no code required to model</td><td class="p-4 align-top">Code-first schema in TypeScript, very flexible</td><td class="p-4 align-top text-gray-600">Flexibility vs needing a developer to define and change the model</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Scale limits</td><td class="p-4 align-top">None published</td><td class="p-4 align-top">Document, API-request, and seat caps per tier (about 10k docs on Free, 25k on Growth), overages apply</td><td class="p-4 align-top text-gray-600">Hitting a cap or overage forces an upgrade, a common cost surprise</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Federated multisite</td><td class="p-4 align-top">Native, many sites and brands from one platform</td><td class="p-4 align-top">Handled through multiple datasets and projects, with cross-dataset references</td><td class="p-4 align-top text-gray-600">Run lots of sites from one place vs wiring datasets together</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Localization</td><td class="p-4 align-top">Built in, structured translation workflows</td><td class="p-4 align-top">i18n via the Document Internationalization plugin, no locale charge</td><td class="p-4 align-top text-gray-600">Localization works on both, Sanity needs plugin setup</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">AI and agents</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI content</td><td class="p-4 align-top">Generative AI built in</td><td class="p-4 align-top">AI Assist in Studio and Content Agent for bulk edits, credit-based on Growth</td><td class="p-4 align-top text-gray-600">Both draft in-platform, Sanity meters AI by credits</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">MCP server for AI agents</td><td class="p-4 align-top">Native MCP server</td><td class="p-4 align-top">Native MCP server at mcp.sanity.io, plus Agent Context</td><td class="p-4 align-top text-gray-600">Both expose content to AI agents — this one's even</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Developer experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">APIs</td><td class="p-4 align-top">REST, GraphQL, and JSON endpoints</td><td class="p-4 align-top">GROQ, GraphQL, and REST</td><td class="p-4 align-top text-gray-600">Both API-first, GROQ is a genuine Sanity strength</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Dev workflow</td><td class="p-4 align-top">Templating with versioning and rollbacks, GitHub and local dev, webhooks</td><td class="p-4 align-top">Schema-as-code, CLI, local dev, version control</td><td class="p-4 align-top text-gray-600">Both strong, Sanity is the more code-native of the two</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Marketplace and integrations</td><td class="p-4 align-top">Webhooks, block components, native integrations</td><td class="p-4 align-top">Plugins and integrations, reviewers note a thinner official marketplace</td><td class="p-4 align-top text-gray-600">Depends on how many prebuilt integrations you need</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Security and governance</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">SSO and custom roles</td><td class="p-4 align-top">Included, with per-content-type permissions</td><td class="p-4 align-top">SSO/SAML and custom roles on Enterprise, or a paid Growth add-on</td><td class="p-4 align-top text-gray-600">Enterprise access control without the top tier</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Audit logs</td><td class="p-4 align-top">Included</td><td class="p-4 align-top">Enterprise only</td><td class="p-4 align-top text-gray-600">See who changed what without paying up</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Support</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Support</td><td class="p-4 align-top">Reviewers praise responsiveness on Capterra</td><td class="p-4 align-top">Community on Free, standard on Growth, dedicated CSM on Enterprise</td><td class="p-4 align-top text-gray-600">Hands-on help vs tier-gated support</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BODY TEXT ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Sanity vs Content.One: how they actually differ</h2>
+      <div class="prose prose-gray max-w-none space-y-6 text-gray-700 text-base leading-7">
+        <p>Let's be fair to Sanity first, because it earns its reputation. It's been rated the #1 headless CMS on G2 for four years running, sits around 4.7 across 900+ reviews, and the developer experience is about as good as the category gets. Schema is defined in TypeScript, GROQ handles complex queries in a single request, real-time collaboration is built in, and Sanity Studio is an open-source React app you can shape into whatever your editors need. For a product team with engineers, that's a strong hand.</p>
+        <p>The thing to understand is who does the work. Sanity is developer-first by design, and the same flexibility that product teams love is the part a marketing team feels as friction. You define the model in code, you query it with GROQ, and you still build and host your own frontend. Sanity is the content backend and the Content Lake. The frontend, the hosting, and the devops to keep it running are on you. That's normal for headless. It's also a cost and a dependency that never shows up on the pricing page.</p>
+        <p>Then there's how spend grows. Sanity CMS pricing starts free, moves to Growth at $15 per seat a month, and meters usage on top, API requests, documents, and bandwidth, with overages once you cross the included amounts (<a href="https://www.sanity.io/pricing" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">Sanity's pricing page</a> has the current numbers). The part that catches enterprise buyers is governance. SSO and SAML, custom roles, and audit logs live on the Enterprise tier. If you want SAML without going full Enterprise, the Growth add-on runs roughly $1,399 a month on its own (<a href="https://checkthat.ai/brands/sanity/pricing" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">per an April 2026 pricing breakdown</a>). For a single marketing site, none of that bites. For a brand running dozens of sites with real access-control needs, it adds up fast.</p>
+        <p>This is where Content.One is built differently, and it's worth being specific. Content.One includes hosting and global CDN delivery, so there's no separate host to manage or patch. It's designed around <a href="/solutions/federated-multisite/" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">federated multisite</a>, so one team runs many sites and brands from a single platform instead of wiring datasets and projects together. It leans on visual editing, generative AI, and a native MCP server, so a marketer can publish a page without filing a developer ticket. And SSO, custom roles, and audit logs sit in the standard product, not behind an Enterprise contract.</p>
+        <p>Reviews reflect the split. Content.One's reviews currently sit under its former name, Zesty.io, on G2 and Capterra, since the rebrand is still rolling out. On Capterra the recurring themes are ease of use for non-developers and hands-on support, with one customer saying the team <em>"goes above and beyond."</em> On the Sanity side, the praise is consistent on developer experience and collaboration, and the most common caveat is just as consistent: you need a developer to get the most out of it, and GROQ has a learning curve.</p>
+        <p>None of this makes Sanity the wrong call. If your team is engineering-led and you want the most flexible content model in the category, Sanity is a genuinely excellent choice, and its AI direction with Content Agent and the MCP server is ahead of most of the field. The honest decision is about who's publishing. If it's developers shipping through APIs, Sanity fits. If it's marketers running a lot of sites without waiting on engineering, the included hosting, federated multisite, and no-ticket publishing in Content.One tend to matter more. (Weighing the other big headless name too? Here's <a href="/contentful-vs-content-one.html" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">Contentful vs Content.One</a>.)</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="font-display text-2xl font-bold mb-3">When Sanity is the better pick</h3>
+        <p class="text-gray-700 text-base leading-7">Sanity is the stronger choice if your team is developer-led and comfortable in code, you want the most flexible content model in the category with schema defined in TypeScript, real-time collaboration and a fully custom editing UI are core to how you work, or you already have your frontend and hosting handled and just want the best structured-content backend you can get.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+        <p class="text-gray-600">The questions that come up most often when teams compare Sanity and Content.One.</p>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is Content.One a good Sanity alternative?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">For teams running multiple sites or publishing without heavy developer involvement, yes. Sanity is the stronger pick if you're developer-led and want maximum control of the content model in code.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">How much does Sanity cost compared to Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Sanity CMS pricing is Free, then Growth at $15 per seat a month, with usage-based charges on API requests, documents, and bandwidth, and Enterprise quoted custom. Content.One is quote-based with no public tiers. Factor in that Content.One includes hosting, which you pay for separately with Sanity.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Sanity include hosting?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">No. Sanity hosts your content in the Content Lake and hosts Sanity Studio, but you build and host the actual website frontend yourself. Content.One includes hosting and CDN delivery.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Do I need a developer to use Sanity?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">To set it up, yes. Schemas and the Studio are configured in code, and querying uses GROQ. Once a developer has built it, editors can publish without code. Content.One is built so a non-developer can model and publish from the start.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Sanity work with AI agents?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Sanity has a native MCP server at mcp.sanity.io plus Agent Context, so AI agents can query and update content. Content.One also ships a native MCP server, so both platforms support agent-driven content operations.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Content.One support SSO and custom roles?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes, both are in the standard product, with permissions you can set per content type. On Sanity, SSO/SAML and custom roles require the Enterprise tier or a paid Growth add-on.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Why are Content.One reviews listed under Zesty.io?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One was rebranded from Zesty.io, and the review profiles on G2 and Capterra haven't fully migrated yet.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Which is better for franchise or multi-location brands?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One is built around federated multisite, so one team manages many sites from a single platform. Sanity handles multiple sites through separate datasets and projects, which adds setup and management overhead at scale.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to compare hands-on?</h2>
+      <p class="text-lg text-white/80 mb-8">Start a build, or get an estimate for migrating off Sanity — both take a few minutes.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+      <span class="text-sm text-white/70">© 2026 Content.One — built for federated organizations.</span>
+    </div>
+    <div class="flex items-center gap-5 text-sm text-white/70">
+      <a href="/contact-us/" class="hover:text-white">Contact</a>
+      <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      <a href="/terms/" class="hover:text-white">Terms</a>
+      <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+      <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,334 +1,790 @@
-<div class="ai-acceleration-page">
-  <section class="py-6 py-lg-7 bg-gradient-ai-feature text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold text-white font-bold mb-4">Supercharge your team with Generative AI from Content.One </h1>
-          <p class="text-lg text-white/75 mb-4">In today’s competitive landscape, the velocity and precision of content creation define brand visibility. Content.One lets teams ideate, localize, and optimize content at scale without adding headcount.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See AI in action</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
-          </div>
+<div class="genai-feature-page">
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="genai-hero">
+    <div class="genai-hero__container">
+      <div class="genai-hero__copy">
+        <p class="genai-hero__eyebrow"><span class="genai-hero__dot" aria-hidden="true"></span>Generative AI</p>
+        <h1 class="genai-hero__title">Supercharge your team with Generative AI from Content.One</h1>
+        <p class="genai-hero__lede">In today's competitive landscape, the velocity and precision of content creation define brand visibility. Content.One lets teams ideate, localize, and optimize content at scale without adding headcount.</p>
+        <div class="genai-hero__ctas">
+          <a href="/book-a-demo/" class="genai-hero__cta genai-hero__cta--primary">See AI in action</a>
+          <a href="/product/" class="genai-hero__cta genai-hero__cta--secondary">Explore Content.One</a>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" alt="AI powered content creation" class="w-full h-full object-cover">
-          </div>
-        </div>
+      </div>
+      <div class="genai-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" alt="AI-powered content creation in Content.One" class="genai-hero__img" />
       </div>
     </div>
   </section>
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5"> 
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature-subtle text-ai-feature mb-3">Trusted by innovators</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Scale content creation without bottlenecks.</h2>
-          <p class="text-gray-600 mb-0">From ideation to publication, Content.One AI delivers intelligent workflows so marketing, growth, and SEO teams can move from concept to live content in record time.</p>
-        </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
-          </div>
-        </div>
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes in white. -->
+  <section class="genai-trust">
+    <div class="genai-trust__container">
+      <p class="genai-trust__overline">Trusted by fast-moving teams</p>
+      <div class="genai-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="genai-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="genai-trust__logo-img">
+        </a>
+        {{/each}}
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature-subtle text-ai-feature mb-3">AI content capabilities</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Move from concept to live content in record time</h2>
-          <p class="text-gray-600 text-lg mb-0">Content.One AI automates ideation, localization, and optimization so your teams can focus on high-impact storytelling.</p>
-        </div>
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 capability cards w/ icon badges. -->
+  <section class="genai-features">
+    <div class="genai-features__container">
+      <div class="genai-features__heading-group">
+        <h2 class="genai-features__title">Move from concept to live content in record time</h2>
+        <p class="genai-features__subheading">Content.One AI automates ideation, localization, and optimization so your teams can focus on high-impact storytelling.</p>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">AI-assisted generation</h3>
-              <p class="text-gray-600 mb-0">Create outlines, headlines, blog drafts, CTAs, and SEO metadata from guided prompts tuned to your brand voice.</p>
-            </div>
+      <div class="genai-features__grid">
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v4M3 5h4M6 17v4M4 19h4M13 3l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Structured for reuse</h3>
-              <p class="text-gray-600 mb-0">Automatically organize content into reusable models and Blocks so it flows to web, mobile, and AI touchpoints.</p>
-            </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">AI-assisted generation</p>
+            <p class="genai-features__card-body">Create outlines, headlines, blog drafts, CTAs, and SEO metadata from guided prompts tuned to your brand voice.</p>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Bulk SEO variants</h3>
-              <p class="text-gray-600 mb-0">Generate geo-targeted or keyword variants in bulk to localize campaigns while maintaining governance.</p>
-            </div>
+        </article>
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 22 8.5 12 15 2 8.5 12 2"/><polyline points="2 15.5 12 22 22 15.5"/><polyline points="2 12 12 18.5 22 12"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Performance insights</h3>
-              <p class="text-gray-600 mb-0">Smart suggestions surface high-performing topics, formats, and keywords based on historical results.</p>
-            </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">Structured for reuse</p>
+            <p class="genai-features__card-body">Automatically organize content into reusable models and Blocks so it flows to web, mobile, and AI touchpoints.</p>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Omnichannel ready</h3>
-              <p class="text-gray-600 mb-0">Publish to landing pages, apps, chatbots, and partner portals with headless APIs and reusable Blocks.</p>
-            </div>
+        </article>
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
           </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Compliance-friendly</h3>
-              <p class="text-gray-600 mb-0">Approval flows, version history, and audit trails ensure AI-assisted content meets regulatory requirements.</p>
-            </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">Bulk SEO variants</p>
+            <p class="genai-features__card-body">Generate geo-targeted or keyword variants in bulk to localize campaigns while maintaining governance.</p>
           </div>
-        </div>
+        </article>
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg>
+          </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">Performance insights</p>
+            <p class="genai-features__card-body">Smart suggestions surface high-performing topics, formats, and keywords based on historical results.</p>
+          </div>
+        </article>
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <span class="genai-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/layout-alt-04.svg')"></span>
+          </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">Omnichannel ready</p>
+            <p class="genai-features__card-body">Publish to landing pages, apps, chatbots, and partner portals with headless APIs and reusable Blocks.</p>
+          </div>
+        </article>
+        <article class="genai-features__card">
+          <div class="genai-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6l-8-4z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div class="genai-features__card-text">
+            <p class="genai-features__card-title">Compliance-friendly</p>
+            <p class="genai-features__card-body">Approval flows, version history, and audit trails ensure AI-assisted content meets regulatory requirements.</p>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Scale content creation without adding headcount</h2>
-          <p class="text-gray-600 mb-4">Time is the currency of content marketing. Content.One AI gives it back to you—guiding teams from ideation to publication faster than ever.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-ai-feature text-xl" aria-hidden="true"><path d="M9.5 2.672a.5.5 0 1 0 1 0V.843a.5.5 0 0 0-1 0zm4.5.035A.5.5 0 0 0 13.293 2L12 3.293a.5.5 0 1 0 .707.707zM7.293 4A.5.5 0 1 0 8 3.293L6.707 2A.5.5 0 0 0 6 2.707zm-.621 2.5a.5.5 0 1 0 0-1H4.843a.5.5 0 1 0 0 1zm8.485 0a.5.5 0 1 0 0-1h-1.829a.5.5 0 0 0 0 1zM13.293 10A.5.5 0 1 0 14 9.293L12.707 8a.5.5 0 1 0-.707.707zM9.5 11.157a.5.5 0 0 0 1 0V9.328a.5.5 0 0 0-1 0zm1.854-5.097a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L8.646 5.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0l1.293-1.293Zm-3 3a.5.5 0 0 0 0-.706l-.708-.708a.5.5 0 0 0-.707 0L.646 13.94a.5.5 0 0 0 0 .707l.708.708a.5.5 0 0 0 .707 0z"/></svg>
-              <span>AI-generated copy for blogs, landing pages, emails, and microcopy—ready for review and launch.</span>
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="genai-highlights">
+    <div class="genai-highlights__container">
+
+      <!-- Row 1: image left, text right — "Scale content creation without adding headcount" + 4 cells. -->
+      <div class="genai-highlights__row">
+        <div class="genai-highlights__media">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Team planning content with AI assistance" class="genai-highlights__img" loading="lazy" />
+        </div>
+        <div class="genai-highlights__content">
+          <div class="genai-highlights__heading-group">
+            <h2 class="genai-highlights__title">Scale content creation without adding headcount</h2>
+            <p class="genai-highlights__lede">Time is the currency of content marketing. Content.One AI gives it back to you—guiding teams from ideation to publication faster than ever.</p>
+          </div>
+          <div class="genai-highlights__cells">
+            <div class="genai-highlights__cell">
+              <p class="genai-highlights__cell-title">Draft-ready output</p>
+              <p class="genai-highlights__cell-body">AI-generated copy for blogs, landing pages, emails, and microcopy—ready for review and launch.</p>
+            </div>
+            <div class="genai-highlights__cell">
+              <p class="genai-highlights__cell-title">Omnichannel structure</p>
+              <p class="genai-highlights__cell-body">Structure content automatically for omnichannel reuse using Content.One models and Blocks.</p>
+            </div>
+            <div class="genai-highlights__cell">
+              <p class="genai-highlights__cell-title">Localized at scale</p>
+              <p class="genai-highlights__cell-body">Bulk generation of geo-targeted or SEO-variant content keeps localized experiences fresh.</p>
+            </div>
+            <div class="genai-highlights__cell">
+              <p class="genai-highlights__cell-title">Smart suggestions</p>
+              <p class="genai-highlights__cell-body">Surface next-best topics based on performance trends and industry data.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: image right, text left — "Smarter workflows, faster results" + icon list. -->
+      <div class="genai-highlights__row genai-highlights__row--reverse">
+        <div class="genai-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="SEO-ready content workflow" class="genai-highlights__img" loading="lazy" />
+        </div>
+        <div class="genai-highlights__content">
+          <div class="genai-highlights__heading-group">
+            <h2 class="genai-highlights__title">Smarter workflows, faster results</h2>
+            <p class="genai-highlights__lede">Content.One transforms SEO from a manual checklist into a scalable system. Every piece of content is born SEO-ready with native tooling.</p>
+          </div>
+          <ul class="genai-highlights__icon-list">
+            <li class="genai-highlights__icon-row">
+              <span class="genai-highlights__icon" aria-hidden="true">
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/cube-03.rJOEETqGze.svg')"></span>
+              </span>
+              <p class="genai-highlights__icon-text">Reusable Blocks and templates accelerate publishing across campaigns.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-ai-feature text-xl" aria-hidden="true"><path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/>
-  <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"/></svg>
-              <span>Structure content automatically for omnichannel reuse using Content.One models and Blocks.</span>
+            <li class="genai-highlights__icon-row">
+              <span class="genai-highlights__icon" aria-hidden="true">
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/database-01.svg')"></span>
+              </span>
+              <p class="genai-highlights__icon-text">Structured content models power omnichannel delivery without rework.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-ai-feature text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M8 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6M4 4a4 4 0 1 1 4.5 3.969V13.5a.5.5 0 0 1-1 0V7.97A4 4 0 0 1 4 3.999zm2.493 8.574a.5.5 0 0 1-.411.575c-.712.118-1.28.295-1.655.493a1.3 1.3 0 0 0-.37.265.3.3 0 0 0-.057.09V14l.002.008.016.033a.6.6 0 0 0 .145.15c.165.13.435.27.813.395.751.25 1.82.414 3.024.414s2.273-.163 3.024-.414c.378-.126.648-.265.813-.395a.6.6 0 0 0 .146-.15l.015-.033L12 14v-.004a.3.3 0 0 0-.057-.09 1.3 1.3 0 0 0-.37-.264c-.376-.198-.943-.375-1.655-.493a.5.5 0 1 1 .164-.986c.77.127 1.452.328 1.957.594C12.5 13 13 13.4 13 14c0 .426-.26.752-.544.977-.29.228-.68.413-1.116.558-.878.293-2.059.465-3.34.465s-2.462-.172-3.34-.465c-.436-.145-.826-.33-1.116-.558C3.26 14.752 3 14.426 3 14c0-.599.5-1 .961-1.243.505-.266 1.187-.467 1.957-.594a.5.5 0 0 1 .575.411"/></svg>
-              <span>Bulk generation of geo-targeted or SEO-variant content keeps localized experiences fresh.</span>
+            <li class="genai-highlights__icon-row">
+              <span class="genai-highlights__icon" aria-hidden="true">
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/server-05.svg')"></span>
+              </span>
+              <p class="genai-highlights__icon-text">Lower localization costs—translate once, deploy everywhere.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-ai-feature text-xl" aria-hidden="true"><path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/></svg>
-              <span>Smart suggestions surface next-best topics based on performance trends and industry data.</span>
+            <li class="genai-highlights__icon-row">
+              <span class="genai-highlights__icon" aria-hidden="true">
+                <span class="genai-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/globe-05.svg')"></span>
+              </span>
+              <p class="genai-highlights__icon-text">Native support for 100+ languages—no plugins required.</p>
             </li>
           </ul>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" alt="Team planning with AI assistance" class="w-full h-full object-cover">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════ STATS — DARK, solidified cards, side image on right at lg+. -->
+  <section class="genai-stats">
+    <div class="genai-stats__container">
+      <div class="genai-stats__copy">
+        <div class="genai-stats__heading-group">
+          <h2 class="genai-stats__title">AI content acceleration that scales with your team</h2>
+          <p class="genai-stats__lede">Deliver more content, faster—while maintaining consistency, compliance, and quality across every market.</p>
+        </div>
+        <div class="genai-stats__grid">
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="4" data-genai-suffix="×">0</span></p>
+            <p class="genai-stats__label">Faster content velocity with AI assistance</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="70" data-genai-suffix="%">0</span></p>
+            <p class="genai-stats__label">Reduction in time spent on localization workflows</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="200" data-genai-suffix="+">0</span></p>
+            <p class="genai-stats__label">Integrations across analytics, CRM, and automation</p>
+          </div>
+          <div class="genai-stats__tile">
+            <p class="genai-stats__number"><span data-genai-count="99.99" data-genai-suffix="%" data-genai-format="decimal">0</span></p>
+            <p class="genai-stats__label">Uptime backed by managed WebEngine infrastructure</p>
           </div>
         </div>
+      </div>
+      <div class="genai-stats__media">
+        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="Team scaling AI content operations" class="genai-stats__img" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="SEO-ready content" class="w-full h-full object-cover">
-          </div>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="genai-customers">
+    <div class="genai-customers__container">
+      <div class="genai-customers__header">
+        <div class="genai-customers__header-text">
+          <h2 class="genai-customers__title">Digital teams move faster with AI</h2>
+          <p class="genai-customers__lede">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One AI.</p>
         </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-ai-feature-subtle text-ai-feature mb-3">Smarter workflows</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Smarter workflows, faster results</h2>
-          <p class="text-gray-600 text-lg mb-4">Content.One transforms SEO from a manual checklist into a scalable system. Every piece of content is born SEO-ready with native tooling.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 flex flex-col md:flex-row items-start gap-3">
-              <img src="https://hj5v68xn.media.zestyio.com/Group-326.png" alt="Authoring workflow illustration" class="rounded-lg shadow-sm" style="width:120px;height:120px;object-fit:cover;">
-              <div class="text-gray-600">
-                <p class="mb-1">✅ Reusable Blocks and templates for faster publishing</p>
-                <p class="mb-1">✅ Structured content models for omnichannel delivery</p>
-                <p class="mb-1">✅ Lower localization costs—translate once, deploy everywhere</p>
-                <p class="mb-0">✅ Native support for 100+ languages—no plugins required</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <a href="/customers/" class="genai-customers__cta">Read customer wins</a>
       </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-gray-900 relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-3xl font-bold text-white font-semibold mb-4">AI content acceleration that scales with your team</h2>
-          <p class="text-lg text-white/75 mb-4">Deliver more content, faster—while maintaining consistency, compliance, and quality across every market.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="4" data-ai-suffix="×">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Faster content velocity with AI assistance</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="70" data-ai-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in time spent on localization workflows</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="200" data-ai-suffix="+">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics, CRM, and automation</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-ai-count="99.99" data-ai-suffix="%" data-ai-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime backed by managed WebEngine infrastructure</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80" alt="AI analytics dashboard" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-ai-feature-dark" style="opacity:0.35;"></div>
-  </section>
-
-    <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-drag-subtle text-drag mb-3">Customer voices</span>
-          <h2 class="text-4xl font-bold font-semibold mb-2">Digital teams most faster with AI</h2>
-          <p class="text-gray-600 mb-0">Hear how customers launch faster, stay on-brand, and empower their teams with Content.One AI.</p>
-        </div>
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-drag text-base px-6 py-3">Read customer wins</a>
-      </div>
-     {{include /components/widgets/random_quotes.html}}
-    </div>
-  </section>
-
-  <section class="py-6 bg-ai-feature text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to accelerate your content with AI?</h2>
-          <p class="text-lg text-white/75 mb-4">Partner with Content.One to build an AI-driven content supply chain that powers every channel.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-ai-feature">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
 <style>
-  .ai-acceleration-page .bg-gradient-ai-feature {
-    background: linear-gradient(135deg, #0f172a 0%, #4338ca 45%, #22d3ee 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .genai-feature-page .genai-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .ai-acceleration-page .bg-gradient-ai-feature-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.25) 100%);
+  .genai-feature-page .genai-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
-  .ai-acceleration-page .bg-ai-feature {
-    background-color: #4338ca;
+  @media (min-width: 640px) { .genai-feature-page .genai-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .ai-acceleration-page .text-ai-feature {
-    color: #4338ca !important;
+  .genai-feature-page .genai-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .genai-feature-page .genai-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
   }
-  .ai-acceleration-page .bg-ai-feature-subtle {
-    background-color: rgba(67, 56, 202, 0.12) !important;
+  .genai-feature-page .genai-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .ai-acceleration-page .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
+  .genai-feature-page .genai-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .ai-acceleration-page .logo-card__image {
-    max-height: 48px;
+  @media (min-width: 768px) { .genai-feature-page .genai-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .genai-feature-page .genai-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .genai-feature-page .genai-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
+  }
+  @media (min-width: 1024px) { .genai-feature-page .genai-hero__lede { font-size: 20px; line-height: 30px; } }
+  .genai-feature-page .genai-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-hero__ctas { flex-direction: row; gap: 16px; } }
+  .genai-feature-page .genai-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .genai-feature-page .genai-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .genai-feature-page .genai-hero__cta--primary:hover { background-color: #2F3F94; }
+  .genai-feature-page .genai-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .genai-feature-page .genai-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .genai-feature-page .genai-hero__media { width: 100%; }
+  .genai-feature-page .genai-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .genai-feature-page .genai-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .genai-feature-page .genai-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .genai-feature-page .genai-trust__container { padding: 0 2rem; } }
+  .genai-feature-page .genai-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .genai-feature-page .genai-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .genai-feature-page .genai-trust__logo { display: inline-flex; }
+  .genai-feature-page .genai-trust__logo-img {
+    max-height: 36px;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
   }
-  .ai-acceleration-page .logo-card:hover .logo-card__image,
-  .ai-acceleration-page .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
-    opacity: 1;
+  .genai-feature-page .genai-trust__logo:hover .genai-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .genai-feature-page .genai-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .genai-feature-page .genai-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .genai-feature-page .genai-features__container { padding: 0 2rem; } }
+  .genai-feature-page .genai-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .genai-feature-page .genai-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .genai-feature-page .genai-features__title { font-size: 36px; line-height: 44px; } }
+  .genai-feature-page .genai-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .genai-feature-page .genai-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .genai-feature-page .genai-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .genai-feature-page .genai-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .genai-feature-page .genai-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .genai-feature-page .genai-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  /* Asset-backed icons: mask the SVG so the brand #4255BD shows through
+     regardless of the source SVG's stroke color. */
+  .genai-feature-page .genai-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .genai-feature-page .genai-features__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .genai-feature-page .genai-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .genai-feature-page .genai-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .genai-feature-page .genai-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .genai-feature-page .genai-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .genai-feature-page .genai-highlights__container { padding: 0 2rem; } }
+  .genai-feature-page .genai-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-highlights__row { flex-direction: row; gap: 96px; }
+    .genai-feature-page .genai-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .genai-feature-page .genai-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .genai-feature-page .genai-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .genai-feature-page .genai-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .genai-feature-page .genai-highlights__content { flex: 1 1 0; } }
+  .genai-feature-page .genai-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .genai-feature-page .genai-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .genai-feature-page .genai-highlights__title { font-size: 30px; line-height: 38px; } }
+  .genai-feature-page .genai-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .genai-feature-page .genai-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .genai-feature-page .genai-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .genai-feature-page .genai-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .genai-feature-page .genai-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .genai-feature-page .genai-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .genai-feature-page .genai-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .genai-feature-page .genai-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .genai-feature-page .genai-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .genai-feature-page .genai-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .genai-feature-page .genai-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .genai-feature-page .genai-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Stats (DARK, solidified cards, side image right) ───────────────── */
+  .genai-feature-page .genai-stats {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .genai-feature-page .genai-stats__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-stats__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-stats__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+  }
+  .genai-feature-page .genai-stats__copy {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .genai-feature-page .genai-stats__media { width: 100%; }
+  .genai-feature-page .genai-stats__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .genai-feature-page .genai-stats__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 560px;
+  }
+  .genai-feature-page .genai-stats__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .genai-feature-page .genai-stats__title { font-size: 30px; line-height: 38px; } }
+  .genai-feature-page .genai-stats__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .genai-feature-page .genai-stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  .genai-feature-page .genai-stats__tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .genai-feature-page .genai-stats__number {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 4px;
+  }
+  .genai-feature-page .genai-stats__label {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .genai-feature-page .genai-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .genai-feature-page .genai-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .genai-feature-page .genai-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .genai-feature-page .genai-customers__container { padding: 0 2rem; } }
+  .genai-feature-page .genai-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .genai-feature-page .genai-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .genai-feature-page .genai-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .genai-feature-page .genai-customers__title { font-size: 30px; line-height: 38px; } }
+  .genai-feature-page .genai-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .genai-feature-page .genai-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .genai-feature-page .genai-customers__cta:hover { background: #f9fafb; }
+  .genai-feature-page .genai-customers .review-feature-chip { display: none; }
+  .genai-feature-page .genai-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
+  // Stats count-up animation — runs when each [data-genai-count] scrolls into view.
   document.addEventListener('DOMContentLoaded', function () {
-    var aiCounterObserver = new IntersectionObserver(function (entries) {
+    var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-ai-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-ai-suffix') || '';
-          var format = el.getAttribute('data-ai-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          aiCounterObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-genai-count'));
+        if (isNaN(endValue)) return;
+        var suffix = el.getAttribute('data-genai-suffix') || '';
+        var format = el.getAttribute('data-genai-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          var display = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            var finalValue = format === 'decimal' ? endValue.toFixed(2) : Math.round(endValue).toLocaleString();
+            el.textContent = finalValue + suffix;
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
 
-    document.querySelectorAll('.ai-acceleration-page [data-ai-count]').forEach(function (counter) {
-      aiCounterObserver.observe(counter);
+    document.querySelectorAll('.genai-feature-page [data-genai-count]').forEach(function (counter) {
+      counterObserver.observe(counter);
     });
   });
 </script>

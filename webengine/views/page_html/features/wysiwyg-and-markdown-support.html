@@ -1,367 +1,824 @@
 <div class="wysiwyg-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-wysiwyg text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold text-white font-bold mb-4">Visual tools for marketers, structure for developers—together in Content.One.</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One’s authoring experience, Editor Suite, gives every team the freedom to create rich content while safeguarding structure, compliance, and omnichannel reuse.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">Tour the editor</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
+
+  <!-- ════════════ HERO — dark gradient + text left + product image right at lg+. -->
+  <section class="wysiwyg-hero">
+    <div class="wysiwyg-hero__container">
+      <div class="wysiwyg-hero__layout">
+
+        <div class="wysiwyg-hero__content">
+          <div class="wysiwyg-hero__heading-group">
+            <span class="wysiwyg-hero__overline">Editor Suite &amp; Markdown</span>
+            <h1 class="wysiwyg-hero__title">Visual tools for marketers, structure for developers—together in Content.One.</h1>
+          </div>
+
+          <p class="wysiwyg-hero__subheading">Content.One's authoring experience, Editor Suite, gives every team the freedom to create rich content while safeguarding structure, compliance, and omnichannel reuse.</p>
+
+          <div class="wysiwyg-hero__ctas">
+            <a href="/book-a-demo/" class="wysiwyg-hero__cta wysiwyg-hero__cta--primary">Tour the Editor</a>
+            <a href="/product/" class="wysiwyg-hero__cta wysiwyg-hero__cta--secondary">Explore Content.One</a>
           </div>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Content.One WYSIWYG editor" class="w-full h-full object-cover">
+
+        <div class="wysiwyg-hero__media">
+          <img src="https://kfg6bckb.media.zestyio.com/WYSIWYG-Announcement.png" alt="Content.One Editor Suite WYSIWYG editor" class="wysiwyg-hero__media-img" loading="eager" />
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TRUST / SOCIAL PROOF — dynamic customer logo loop on dark #060813. -->
+  <section class="wysiwyg-trust">
+    <div class="wysiwyg-trust__container">
+      <p class="wysiwyg-trust__heading">Trusted by fast-moving teams</p>
+      <div class="wysiwyg-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="wysiwyg-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="wysiwyg-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — pure black, 6-card uniform dark grid with #18214e icon tiles. -->
+  <section class="wysiwyg-features">
+    <div class="wysiwyg-features__container">
+      <div class="wysiwyg-features__heading-group">
+        <h2 class="wysiwyg-features__title">Everything marketers love about Editor Suite—supercharged with Content.One</h2>
+        <p class="wysiwyg-features__subheading">Create rich articles, product updates, and influencer stories with Editor Suite's familiar toolbar while tapping structured data, reusable Blocks, and omnichannel publishing.</p>
+      </div>
+      <div class="wysiwyg-features__grid">
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/type-square.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">Rich Editor Suite toolbar</p>
+            <p class="wysiwyg-features__card-body">Headings, tables, embeds, media manager, and brand-safe styles keep marketers productive.</p>
+          </div>
+        </article>
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/code-circle-01.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">Markdown &amp; Duo Mode</p>
+            <p class="wysiwyg-features__card-body">Toggle between visual editing, Markdown, or side-by-side views for technical writers and content ops teams.</p>
+          </div>
+        </article>
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/cube-03.rJOEETqGze.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">Reusable Blocks &amp; components</p>
+            <p class="wysiwyg-features__card-body">Insert pre-built CTAs, testimonial sliders, or custom design system Blocks directly into the editor.</p>
+          </div>
+        </article>
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/colors.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">Design system aware</p>
+            <p class="wysiwyg-features__card-body">Keep every entry on-brand by binding tokens, spacing rules, and color palettes to Editor Suite controls.</p>
+          </div>
+        </article>
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/search-sm.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">SEO &amp; metadata tabs</p>
+            <p class="wysiwyg-features__card-body">Dedicated tabs for meta tags, OpenGraph, schema, and localization keep stories ready for search.</p>
+          </div>
+        </article>
+        <article class="wysiwyg-features__card">
+          <div class="wysiwyg-features__icon" aria-hidden="true">
+            <span class="wysiwyg-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/layout-alt-04.svg')"></span>
+          </div>
+          <div class="wysiwyg-features__card-text">
+            <p class="wysiwyg-features__card-title">Omnichannel preview</p>
+            <p class="wysiwyg-features__card-body">Preview responsive layouts and headless renderings before publishing across web, mobile, and AI touchpoints.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — 2 rows of image+text, image alternates sides at lg+. -->
+  <section class="wysiwyg-highlights">
+    <div class="wysiwyg-highlights__container">
+
+      <!-- Row 1: image left, text right at lg+ — "Empower teams without bottlenecks" + 2x2 cells -->
+      <div class="wysiwyg-highlights__row">
+        <div class="wysiwyg-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Content---Edit-Content-Tab-with-DUO-Mode.jpg" alt="Content.One DUO Mode authoring view" class="wysiwyg-highlights__img" loading="lazy" />
+        </div>
+        <div class="wysiwyg-highlights__content">
+          <div class="wysiwyg-highlights__heading-group">
+            <h2 class="wysiwyg-highlights__title">Empower teams without bottlenecks</h2>
+            <p class="wysiwyg-highlights__lede">Editor Suite inside Content.One combines visual editing with structured governance. Drag-and-drop Freestyle pages, structured collections, and workflow approvals work as one.</p>
+          </div>
+          <div class="wysiwyg-highlights__cells">
+            <div class="wysiwyg-highlights__cell">
+              <p class="wysiwyg-highlights__cell-title">Flexible editing modes</p>
+              <p class="wysiwyg-highlights__cell-body">Switch between Editor Suite, Markdown, or JSON views to match each contributor's comfort level.</p>
+            </div>
+            <div class="wysiwyg-highlights__cell">
+              <p class="wysiwyg-highlights__cell-title">Freestyle synergy</p>
+              <p class="wysiwyg-highlights__cell-body">Compose content in Editor Suite, then drop it into Freestyle layouts for a full no-code experience.</p>
+            </div>
+            <div class="wysiwyg-highlights__cell">
+              <p class="wysiwyg-highlights__cell-title">Collaboration built-in</p>
+              <p class="wysiwyg-highlights__cell-body">Invite stakeholders to comment, review, or approve content before it goes live.</p>
+            </div>
+            <div class="wysiwyg-highlights__cell">
+              <p class="wysiwyg-highlights__cell-title">Audit-ready</p>
+              <p class="wysiwyg-highlights__cell-body">Audit trails record every change—ideal for regulated industries and enterprise compliance.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </section> 
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-4 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Authoring for every workflow</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Rich text, Markdown, structured Blocks—work how you want.</h2>
-          <p class="text-gray-600 mb-0">Launch campaigns, update pages, and manage headless content from one intuitive interface. Duo Mode lets writers toggle Editor Suite and Markdown; developers trust the underlying schema.</p>
+      <!-- Row 2: text left, image right at lg+ — "Consistent storytelling" + icon-list -->
+      <div class="wysiwyg-highlights__row wysiwyg-highlights__row--reverse">
+        <div class="wysiwyg-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="Content.One SEO tab" class="wysiwyg-highlights__img" loading="lazy" />
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 grid-cols-2 md:grid-cols-3 gap-3">
-            {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
-            <div class="flex-1">
-              <div class="border rounded-xl p-3 h-full">
-                <a href="{{cus.getURL()}}" class="logo-card flex items-center justify-center h-full">
-                  <img src="{{cus.logo.getImage(120)}}" class="logo-card__image" alt="{{cus.name}} logo">
-                </a>
-              </div>
-            </div>
-            {{/each}}
+        <div class="wysiwyg-highlights__content">
+          <div class="wysiwyg-highlights__heading-group">
+            <h2 class="wysiwyg-highlights__title">Consistent storytelling across every channel</h2>
+            <p class="wysiwyg-highlights__lede">Reusable templates, structured content models, and localization controls ensure everything authored in Editor Suite is ready for web, mobile, kiosks, and AI experiences.</p>
           </div>
+          <ul class="wysiwyg-highlights__icon-list">
+            <li class="wysiwyg-highlights__icon-row">
+              <span class="wysiwyg-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              </span>
+              <p class="wysiwyg-highlights__icon-text">Reusable Blocks accelerate landing page launches while maintaining visual consistency.</p>
+            </li>
+            <li class="wysiwyg-highlights__icon-row">
+              <span class="wysiwyg-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+              </span>
+              <p class="wysiwyg-highlights__icon-text">Structured models feed headless experiences, voice assistants, and partner portals.</p>
+            </li>
+            <li class="wysiwyg-highlights__icon-row">
+              <span class="wysiwyg-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8l6 6"/><path d="M4 14l6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="M22 22l-5-10-5 10"/><path d="M14 18h6"/></svg>
+              </span>
+              <p class="wysiwyg-highlights__icon-text">Localization tabs streamline translating and approving content across regions.</p>
+            </li>
+            <li class="wysiwyg-highlights__icon-row">
+              <span class="wysiwyg-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+              </span>
+              <p class="wysiwyg-highlights__icon-text">SEO, metadata, and accessibility fields travel with every entry for unified governance.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════ STATS STRIP — "Author faster, publish smarter" + 4 animated count-up tiles. -->
+  <section class="wysiwyg-stats">
+    <div class="wysiwyg-stats__container">
+      <div class="wysiwyg-stats__heading-group">
+        <h2 class="wysiwyg-stats__title">Author faster, publish smarter</h2>
+        <p class="wysiwyg-stats__lede">Editor Suite inside Content.One boosts marketer productivity while giving engineering teams confidence in structure and compliance.</p>
+      </div>
+      <div class="wysiwyg-stats__grid">
+        <div class="wysiwyg-stats__tile">
+          <p class="wysiwyg-stats__number"><span data-wysiwyg-count="50" data-wysiwyg-suffix="%">0</span></p>
+          <p class="wysiwyg-stats__label">Increase in marketer output</p>
+        </div>
+        <div class="wysiwyg-stats__tile">
+          <p class="wysiwyg-stats__number"><span data-wysiwyg-count="40" data-wysiwyg-suffix="%">0</span></p>
+          <p class="wysiwyg-stats__label">Reduction in dev support requests</p>
+        </div>
+        <div class="wysiwyg-stats__tile">
+          <p class="wysiwyg-stats__number"><span data-wysiwyg-count="99.99" data-wysiwyg-suffix="%" data-wysiwyg-format="decimal">0</span></p>
+          <p class="wysiwyg-stats__label">Uptime for authoring operations</p>
+        </div>
+        <div class="wysiwyg-stats__tile">
+          <p class="wysiwyg-stats__number"><span data-wysiwyg-count="150" data-wysiwyg-suffix="+">0</span></p>
+          <p class="wysiwyg-stats__label">Integrations across analytics &amp; automation</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Customer voices</span>
-          <h2 class="text-4xl font-bold font-semibold mb-2">Marketers who move faster with Content.One</h2>
-          <p class="text-gray-600 mb-0">Teams across industries rely on Content.One’s editor to keep content fresh and campaigns on schedule.</p>
+  <!-- ════════════ CUSTOMER VOICES — "Marketers who move faster with Content.One" + random_quotes widget. -->
+  <section class="wysiwyg-customers">
+    <div class="wysiwyg-customers__container">
+      <div class="wysiwyg-customers__header">
+        <div class="wysiwyg-customers__header-text">
+          <h2 class="wysiwyg-customers__title">Marketers who move faster with Content.One</h2>
+          <p class="wysiwyg-customers__lede">Teams across industries rely on Content.One's editor to keep content fresh and campaigns on schedule.</p>
         </div>
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-wysiwyg text-base px-6 py-3">See customer wins</a>
+        <a href="/customers/" class="wysiwyg-customers__cta">See customer wins</a>
       </div>
       {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-wysiwyg text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to give your authors superpowers?</h2>
-          <p class="text-lg text-white/75 mb-4">Bring visual creation and structured governance together with Editor Suite inside Content.One.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-wysiwyg">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
 <style>
-  .bg-gradient-wysiwyg {
-    background: linear-gradient(135deg, #111827 0%, #4f46e5 45%, #06b6d4 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .wysiwyg-feature-page .wysiwyg-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
+    position: relative;
+    overflow: hidden;
   }
-  .bg-gradient-wysiwyg-dark {
-    background: linear-gradient(180deg, rgba(17, 24, 39, 0.85) 0%, rgba(17, 24, 39, 0.25) 100%);
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-hero { padding: 128px 0 96px; } }
+  .wysiwyg-feature-page .wysiwyg-hero__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-  .bg-wysiwyg {
-    background-color: #4f46e5;
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-hero__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-hero__layout {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: stretch;
   }
-  .text-wysiwyg {
-    color: #4f46e5 !important;
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-hero__layout { flex-direction: row; gap: 64px; align-items: center; }
   }
-  .bg-wysiwyg-subtle {
-    background-color: rgba(79, 70, 229, 0.12) !important;
+  .wysiwyg-feature-page .wysiwyg-hero__content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    max-width: 480px;
   }
-  .btn-outline-wysiwyg {
-    border-color: #4f46e5;
-    color: #4f46e5;
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-hero__content { max-width: 640px; } }
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-hero__content { flex: 0 0 auto; width: 50%; max-width: 560px; }
   }
-  .btn-outline-wysiwyg:hover {
-    background-color: #4f46e5;
-    color: #fff;
+  .wysiwyg-feature-page .wysiwyg-hero__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
-  .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
+  .wysiwyg-feature-page .wysiwyg-hero__overline {
+    align-self: flex-start;
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border-radius: 9999px;
+    background: #fafafa;
+    border: 1px solid #e5e5e5;
+    color: #404040;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
   }
-  .logo-card__image {
-    max-height: 48px;
+  .wysiwyg-feature-page .wysiwyg-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: 0;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-hero__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -0.96px; } }
+  .wysiwyg-feature-page .wysiwyg-hero__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    max-width: 480px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-hero__subheading { font-size: 16px; line-height: 24px; letter-spacing: normal; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-hero__subheading { font-size: 20px; line-height: 30px; } }
+  .wysiwyg-feature-page .wysiwyg-hero__ctas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-hero__ctas { flex-direction: row; } }
+  .wysiwyg-feature-page .wysiwyg-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .wysiwyg-feature-page .wysiwyg-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .wysiwyg-feature-page .wysiwyg-hero__cta--primary:hover { background-color: #2F3F94; }
+  .wysiwyg-feature-page .wysiwyg-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .wysiwyg-feature-page .wysiwyg-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .wysiwyg-feature-page .wysiwyg-hero__media {
+    width: 100%;
+    max-width: 640px;
+    align-self: center;
+  }
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-hero__media { flex: 1 1 0; max-width: none; align-self: stretch; display: flex; align-items: center; }
+  }
+  .wysiwyg-feature-page .wysiwyg-hero__media-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust / Social Proof ───────────────────────────────────────────── */
+  .wysiwyg-feature-page .wysiwyg-trust {
+    background: #060813;
+    padding: 96px 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    text-align: center;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-trust__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-trust__heading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-trust__heading { font-size: 20px; line-height: 30px; } }
+  .wysiwyg-feature-page .wysiwyg-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+  }
+  .wysiwyg-feature-page .wysiwyg-trust__logo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    transition: opacity 0.2s ease;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-trust__logo { height: 48px; } }
+  .wysiwyg-feature-page .wysiwyg-trust__logo-img {
+    display: block;
+    height: 100%;
     width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
-  }
-  .logo-card:hover .logo-card__image,
-  .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
+    max-width: 100%;
+    filter: grayscale(1) invert(1) brightness(1);
     opacity: 1;
   }
+  .wysiwyg-feature-page .wysiwyg-trust__body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+
+  /* ─── Features Grid (Figma 13911:8713 + responsive variants) ──────────
+     Light variant — white bg, white cards with subtle border, dark text,
+     light-lavender icon tiles. Mirrors the drag-n-drop page's light-theme
+     features grid to create a dark→light→dark rhythm on the page. */
+  .wysiwyg-feature-page .wysiwyg-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: center;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-features__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    max-width: 768px;
+    width: 100%;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-features__title { font-size: 36px; line-height: 44px; letter-spacing: -0.72px; } }
+  .wysiwyg-feature-page .wysiwyg-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #404040;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-features__subheading { font-size: 20px; line-height: 30px; } }
+  .wysiwyg-feature-page .wysiwyg-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    width: 100%;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .wysiwyg-feature-page .wysiwyg-features__card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+    align-items: flex-start;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .wysiwyg-feature-page .wysiwyg-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  /* Asset-backed icons: mask the SVG so the brand color (#4255BD) shows
+     through regardless of the source SVG's stroke color. */
+  .wysiwyg-feature-page .wysiwyg-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__card-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    min-height: 72px;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .wysiwyg-feature-page .wysiwyg-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-highlights__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-highlights__row { flex-direction: row; gap: 96px; }
+    .wysiwyg-feature-page .wysiwyg-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__media {
+    width: 100%;
+    max-width: 720px;
+  }
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-highlights__content { flex: 1 1 0; } }
+  .wysiwyg-feature-page .wysiwyg-highlights__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-highlights__title { font-size: 30px; line-height: 38px; } }
+  .wysiwyg-feature-page .wysiwyg-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .wysiwyg-feature-page .wysiwyg-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .wysiwyg-feature-page .wysiwyg-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .wysiwyg-feature-page .wysiwyg-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .wysiwyg-feature-page .wysiwyg-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .wysiwyg-feature-page .wysiwyg-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .wysiwyg-feature-page .wysiwyg-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Stats Strip ────────────────────────────────────────────────────── */
+  .wysiwyg-feature-page .wysiwyg-stats {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-stats__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-stats__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-stats__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-stats__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 768px;
+  }
+  .wysiwyg-feature-page .wysiwyg-stats__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-stats__title { font-size: 30px; line-height: 38px; } }
+  .wysiwyg-feature-page .wysiwyg-stats__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-stats__grid { grid-template-columns: repeat(4, 1fr); } }
+  .wysiwyg-feature-page .wysiwyg-stats__tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .wysiwyg-feature-page .wysiwyg-stats__number {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 4px;
+  }
+  .wysiwyg-feature-page .wysiwyg-stats__label {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .wysiwyg-feature-page .wysiwyg-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .wysiwyg-feature-page .wysiwyg-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .wysiwyg-feature-page .wysiwyg-customers__container { padding: 0 2rem; } }
+  .wysiwyg-feature-page .wysiwyg-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .wysiwyg-feature-page .wysiwyg-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .wysiwyg-feature-page .wysiwyg-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .wysiwyg-feature-page .wysiwyg-customers__title { font-size: 30px; line-height: 38px; } }
+  .wysiwyg-feature-page .wysiwyg-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .wysiwyg-feature-page .wysiwyg-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .wysiwyg-feature-page .wysiwyg-customers__cta:hover { background: #f9fafb; }
+  .wysiwyg-feature-page .wysiwyg-customers .review-feature-chip { display: none; }
+  .wysiwyg-feature-page .wysiwyg-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
+  }
+
 </style>
 
 <script>
+  // Stats count-up animation — runs when each [data-wysiwyg-count] scrolls into view.
   document.addEventListener('DOMContentLoaded', function () {
     var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-wysiwyg-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-wysiwyg-suffix') || '';
-          var format = el.getAttribute('data-wysiwyg-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          counterObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-wysiwyg-count'));
+        if (isNaN(endValue)) return;
+        var suffix = el.getAttribute('data-wysiwyg-suffix') || '';
+        var format = el.getAttribute('data-wysiwyg-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          var display = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            var finalValue = format === 'decimal' ? endValue.toFixed(2) : Math.round(endValue).toLocaleString();
+            el.textContent = finalValue + suffix;
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
-
-    document.querySelectorAll('[data-wysiwyg-count]').forEach(function (counter) {
+    document.querySelectorAll('.wysiwyg-feature-page [data-wysiwyg-count]').forEach(function (counter) {
       counterObserver.observe(counter);
     });
   });
 </script>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Editor Suite + Content.One</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Everything marketers love about Editor Suite - supercharged with Content.One</h2>
-          <p class="text-gray-600 text-lg mb-0">Create rich articles, product updates, and influencer stories with Editor Suite’s familiar toolbar while tapping structured data, reusable Blocks, and omnichannel publishing.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Rich Editor Suite toolbar</h3>
-              <p class="text-gray-600 mb-0">Headings, tables, embeds, media manager, and brand-safe styles keep marketers productive.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Markdown &amp; Duo Mode</h3>
-              <p class="text-gray-600 mb-0">Toggle between visual editing, Markdown, or side-by-side views for technical writers and content ops teams.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Reusable Blocks &amp; components</h3>
-              <p class="text-gray-600 mb-0">Insert pre-built CTAs, testimonial sliders, or custom design system Blocks directly into the editor.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Design system aware</h3>
-              <p class="text-gray-600 mb-0">Keep every entry on-brand by binding tokens, spacing rules, and color palettes to Editor Suite controls.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">SEO &amp; metadata tabs</h3>
-              <p class="text-gray-600 mb-0">Dedicated tabs for meta tags, OpenGraph, schema, and localization keep stories ready for search.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Omnichannel preview</h3>
-              <p class="text-gray-600 mb-0">Preview responsive layouts and headless renderings before publishing across web, mobile, and AI touchpoints.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Empower teams without bottlenecks</h2>
-          <p class="text-gray-600 mb-4">Editor Suite inside Content.One combines visual editing with structured governance. Drag-and-drop Freestyle pages, structured collections, and workflow approvals work as one.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Flexible editing modes</h3>
-                  <p class="text-gray-600 text-sm mb-0">Switch between Editor Suite, Markdown, or JSON views to match each contributor’s comfort level.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Freestyle synergy</h3>
-                  <p class="text-gray-600 text-sm mb-0">Compose content in , then drop it into Freestyle layouts for a full no-code experience.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Collaboration built-in</h3>
-                  <p class="text-gray-600 text-sm mb-0">Invite stakeholders to comment, review, or approve content before it goes live.</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <h3 class="text-lg font-semibold">Audit-ready</h3>
-                  <p class="text-gray-600 text-sm mb-0">Audit trails record every change—ideal for regulated industries and enterprise compliance.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---Edit-Content-Tab-with-DUO-Mode.jpg" alt="Authoring Duo Mode" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Content---SEO-Tab.jpg" alt="SEO tab in Content.One" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-wysiwyg-subtle text-wysiwyg mb-3">Scale with structure</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Consistent storytelling across every channel</h2>
-          <p class="text-gray-600 text-lg mb-4">Reusable templates, structured content models, and localization controls ensure everything authored in Editor Suite is ready for web, mobile, kiosks, and AI experiences.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-wysiwyg text-xl" aria-hidden="true"><path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-              <span>Reusable Blocks accelerate landing page launches while maintaining visual consistency.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-wysiwyg text-xl" aria-hidden="true"><path d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434zM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21zM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z"/></svg>
-              <span>Structured models feed headless experiences, voice assistants, and partner portals.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-wysiwyg text-xl" aria-hidden="true"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
-  <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
-              <span>Localization tabs streamline translating and approving content across regions.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-wysiwyg text-xl" aria-hidden="true"><path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
-  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg>
-              <span>SEO, metadata, and accessibility fields travel with every entry for unified governance.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-3xl font-bold text-white font-semibold mb-4">Author faster, publish smarter</h2>
-          <p class="text-lg text-white/75 mb-4">Editor Suite inside Content.One boosts marketer productivity while giving engineering teams confidence in structure and compliance.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="50" data-wysiwyg-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Increase in marketer output</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="40" data-wysiwyg-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in dev support requests</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="99.99" data-wysiwyg-suffix="%" data-wysiwyg-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime for authoring operations</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-wysiwyg-count="150" data-wysiwyg-suffix="+">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Integrations across analytics &amp; automation</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trail screenshot" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-wysiwyg-dark" style="opacity:0.35;"></div>
-  </section>
