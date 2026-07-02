@@ -132,28 +132,25 @@
   }
   .hospital-industry-page .hospital-light-band .c1-industry-feature-icon-img { background-color: #4255BD; }
 
-  /* Dark-theme override for the shared /components/forms/zoho-form.html include. Selectors are scoped
-     to .c1-industry-form-wrap and qualified with chained classes so they beat Tailwind utility specificity. */
+  /* Contact form overrides for the shared /components/forms/zoho-form.html include.
+     Section wrapper is the light #eceef9 bg from Figma 14031:569492. The Zoho form
+     ships light-friendly defaults; only tweaks needed here are the taller textarea
+     and the pill-shaped submit button with skeuomorphic shadow. Scoped to
+     .c1-industry-form-wrap; specificity beats the Tailwind utilities on the form.  */
   .c1-industry-page .c1-industry-form-wrap form.needs-validation { gap: 1.5rem; }
-  .c1-industry-page .c1-industry-form-wrap label { color: #d4d4d4; font-weight: 500; }
-  .c1-industry-page .c1-industry-form-wrap input[type="text"],
-  .c1-industry-page .c1-industry-form-wrap input[type="email"],
-  .c1-industry-page .c1-industry-form-wrap textarea {
-    background-color: #0a0a0a;
-    border-color: #404040;
-    color: #ffffff;
-    padding: 0.625rem 0.875rem;
-  }
-  .c1-industry-page .c1-industry-form-wrap input::placeholder,
-  .c1-industry-page .c1-industry-form-wrap textarea::placeholder { color: #737373; }
-  .c1-industry-page .c1-industry-form-wrap input:focus,
-  .c1-industry-page .c1-industry-form-wrap textarea:focus { border-color: #4255BD; outline: none; box-shadow: 0 0 0 3px rgba(66,85,189,0.3); }
-  .c1-industry-page .c1-industry-form-wrap textarea { min-height: 10rem; resize: vertical; }
+  .c1-industry-page .c1-industry-form-wrap label { color: #404040; font-weight: 500; }
+  .c1-industry-page .c1-industry-form-wrap textarea { min-height: 8rem; resize: vertical; }
   .c1-industry-page .c1-industry-form-wrap button[type="submit"] {
     background-color: #31429b;
-    border: 2px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
     font-weight: 600;
     padding: 0.75rem 1.125rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
   .c1-industry-page .c1-industry-form-wrap button[type="submit"]:hover { background-color: #2F3F94; }
 </style>
