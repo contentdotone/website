@@ -1,33 +1,40 @@
 <!--
-  Hospital industry page — composed from 9 reusable industry Blocks per bobby's
-  design ask (msg 1516903214849462282). Each include below maps to a single
-  Figma node + a single block file under /-/block/. The blocks are the
-  c1-industry-content instance for now; future industry pages can either reuse
-  these files or duplicate to swap in industry-specific copy.
+  Hospital industry page — composed from the reusable industry Blocks per
+  bobby's design ask. This page applies the Apple-scale dark/light rhythm
+  used on the /product-tour/* feature pages:
 
-  Block roster:
+    DARK  — hero (gradient royal)
+    LIGHT — social proof / carousels / AI governance / feature grid
+              (wrapped in .hospital-light-band; per-section overrides live
+               in the <style> block below)
+    DARK  — industries list ("Different industries. Same enterprise CMS.")
+    DARK  — enterprise callout / testimonial / FAQ / contact form
+
+  Block roster (updated after split):
     1. c1_industry_hero               — Figma 13759:27117
     2. c1_industry_social_proof       — Figma 13863:10628
     3. c1_industry_specific_carousels — Figma 13764:2186
     4. c1_ai_governance_highlight     — Figma 13769:2848
-    5. c1_industry_feature_grid       — Figma 13771:3583  (+ industries sub-section)
+    5. c1_industry_feature_grid       — Figma 13771:3583 (sub-A only)
+   5b. c1_industry_industries_list    — split from feature grid (dark reset)
     6. c1_enterprise_callout          — Figma 13781:4251
     7. c1_testimonial_carousel        — Figma 13782:4694
     8. c1_industry_faq                — Figma 13799:6181
     9. c1_industry_contact_form       — Figma 13800:6538
 
-  The shared <style> + <script> blocks below stay at the orchestrator level
-  because they reference selectors that span multiple blocks (carousel JS
-  targets .c1-industry-carousel, FAQ styling targets .c1-industry-faq, the form
-  dark theme is scoped .c1-industry-form-wrap inside the page wrapper).
   Loader provides nav + footer; this view is just the page body.
 -->
-<div class="c1-industry-page bg-ink text-white">
+<div class="c1-industry-page hospital-industry-page bg-ink text-white">
   {{include /components/industry/c1_industry_hero.html}}
-  {{include /components/industry/c1_industry_social_proof.html}}
-  {{include /components/industry/c1_industry_specific_carousels.html}}
-  {{include /components/industry/c1_ai_governance_highlight.html}}
-  {{include /components/industry/c1_industry_feature_grid.html}}
+
+  <div class="hospital-light-band">
+    {{include /components/industry/c1_industry_social_proof.html}}
+    {{include /components/industry/c1_industry_specific_carousels.html}}
+    {{include /components/industry/c1_ai_governance_highlight.html}}
+    {{include /components/industry/c1_industry_feature_grid.html}}
+  </div>
+
+  {{include /components/industry/c1_industry_industries_list.html}}
   {{include /components/industry/c1_enterprise_callout.html}}
   {{include /components/industry/c1_testimonial_carousel.html}}
   {{include /components/industry/c1_industry_faq.html}}
@@ -53,6 +60,61 @@
       inset 0 0 0 1px rgba(0, 0, 0, 0.18),
       inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
+
+  /* ───────────────────────────────────────────────────────────────────────
+     LIGHT BAND — Apple-scale rhythm. Flip the 4 middle industry blocks to
+     light theme via scoped overrides on the shared blocks' existing hooks.
+     Text/bg swaps only; layout stays untouched. Scoped to .hospital-light-band
+     so other industry pages using the same blocks are unaffected.
+     ─────────────────────────────────────────────────────────────────────── */
+  .hospital-industry-page .hospital-light-band { background: #ffffff; }
+
+  /* --- Social proof (block 2): flip to white bg, dark heading, swap
+         reversed white SVGs for color/dark logos where available. Kin
+         reversed logo is hidden on light since only the white variant
+         ships; the other 5 brands read fine on white. --- */
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] { background: #ffffff; }
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] p { color: #171717; }
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] img[alt="The Salvation Army"],
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] img[alt="Sony"],
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] img[alt="Singlife"] {
+    filter: invert(1);
+  }
+  .hospital-industry-page .hospital-light-band section[data-figma-node="13863:10628"] img[alt="Kin Insurance"] {
+    display: none;
+  }
+
+  /* --- Carousels (block 3): flip wrapper bg to white. The carousels
+         themselves have their own dark image + gradient overlay so they
+         render fine on a light section. --- */
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels { background: #ffffff; }
+
+  /* --- AI governance highlight (block 4): section has no bg — inherits
+         from wrapper (white now). Swap heading white → dark and muted
+         body copy from #b1bae7 → #525252. --- */
+  .hospital-industry-page .hospital-light-band .c1-ai-governance-highlight h2,
+  .hospital-industry-page .hospital-light-band > section:nth-of-type(3) h2 { color: #171717; }
+  .hospital-industry-page .hospital-light-band > section:nth-of-type(3) p { color: #525252; }
+  .hospital-industry-page .hospital-light-band > section:nth-of-type(3) span[class*="bg-[#fafafa]"] {
+    background: #f5f5f5;
+    border-color: #e5e5e5;
+    color: #404040;
+  }
+
+  /* --- Feature grid sub-A (block 5): flip pure-black bg to white,
+         heading white → dark, body muted → #525252, card bg + border to
+         light equivalents. Icon tile keeps the royal fill (reads fine on
+         both themes). --- */
+  .hospital-industry-page .hospital-light-band > section.bg-black { background: #ffffff !important; }
+  .hospital-industry-page .hospital-light-band > section.bg-black h2 { color: #171717; }
+  .hospital-industry-page .hospital-light-band > section.bg-black > div > div.max-w-3xl p { color: #525252; }
+  .hospital-industry-page .hospital-light-band .c1-industry-feature-card {
+    background: #ffffff;
+    border-color: #eaecf0;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .hospital-industry-page .hospital-light-band .c1-industry-feature-card .font-body.font-semibold { color: #171717; }
+  .hospital-industry-page .hospital-light-band .c1-industry-feature-card p:not(.font-semibold) { color: #525252; }
 
   /* Dark-theme override for the shared /components/forms/zoho-form.html include. Selectors are scoped
      to .c1-industry-form-wrap and qualified with chained classes so they beat Tailwind utility specificity. */
