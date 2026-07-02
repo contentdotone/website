@@ -883,7 +883,17 @@
     }
     function openLightbox(src, text, fallbackAlt) {
       if (!src) return;
-      media.src = src;
+      // Reject anything that isn't a http(s) or protocol-relative URL — keeps
+      // javascript:/data: URIs from ever landing on the <img>.src sink even
+      // though attribute values on this page are template-authored, not user
+      // input. Satisfies CodeQL js/xss-through-dom.
+      var safeSrc = '';
+      try {
+        var u = new URL(src, document.baseURI);
+        if (u.protocol === 'https:' || u.protocol === 'http:') safeSrc = u.href;
+      } catch (e) { return; }
+      if (!safeSrc) return;
+      media.src = safeSrc;
       media.alt = text || fallbackAlt || 'Expanded analytics preview';
       caption.textContent = text || '';
       lightbox.removeAttribute('hidden');
