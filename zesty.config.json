@@ -841,6 +841,18 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-06-22T21:00:49Z",
                 "createdAt": "2026-06-22T21:00:49Z"
+            },
+            "/drupal-vs-content-one.html": {
+                "zuid": "11-e490cad19a-rpqsb0",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-02T13:21:08Z",
+                "createdAt": "2026-07-02T13:21:08Z"
+            },
+            "/sanity-vs-content-one.html": {
+                "zuid": "11-e2b088fd9c-63s2z1",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-02T13:21:08Z",
+                "createdAt": "2026-07-02T13:21:08Z"
             }
         },
         "styles": {
