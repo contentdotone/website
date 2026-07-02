@@ -1,295 +1,829 @@
-<div class="audit-logs-page">
-  <section class="py-6 py-lg-7 bg-gradient-audit text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-audit mb-3">Compliance-ready observability</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Know who changed what&mdash;and when.</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One's auditing tools give you a complete, real-time history of every action across your content system. From edits to approvals, rollbacks to publishing, stay accountable and compliant at scale.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-audit">Tour the audit trail</a>
-            <a href="/security/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Review security controls</a>
-          </div>
+<div class="audit-feature-page">
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="audit-hero">
+    <div class="audit-hero__container">
+      <div class="audit-hero__copy">
+        <p class="audit-hero__eyebrow"><span class="audit-hero__dot" aria-hidden="true"></span>Audit logs &amp; activity tracking</p>
+        <h1 class="audit-hero__title">Know who changed what — and when.</h1>
+        <p class="audit-hero__lede">Content.One's auditing tools give you a complete, real-time history of every action across your content system. From edits to approvals, rollbacks to publishing — stay accountable and compliant at scale.</p>
+        <div class="audit-hero__ctas">
+          <a href="/book-a-demo/" class="audit-hero__cta audit-hero__cta--primary">Tour the audit trail</a>
+          <a href="/security/" class="audit-hero__cta audit-hero__cta--secondary">Review security controls</a>
         </div>
-        <div class="lg:col-span-6"> 
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Content.One audit trail dashboard" class="w-full h-full object-cover">
+      </div>
+      <div class="audit-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Content.One audit trail dashboard" class="audit-hero__img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes. -->
+  <section class="audit-trust">
+    <div class="audit-trust__container">
+      <p class="audit-trust__overline">Trusted by governance-focused teams</p>
+      <div class="audit-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="audit-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="audit-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 audit capability cards. -->
+  <section class="audit-features">
+    <div class="audit-features__container">
+      <div class="audit-features__heading-group">
+        <h2 class="audit-features__title">Governance built into every change</h2>
+        <p class="audit-features__subheading">Every edit, approval, deploy, and rollback captured — filterable in seconds, exportable on demand, and pipelined to the tools your security team already uses.</p>
+      </div>
+      <div class="audit-features__grid">
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">Full activity logs</p>
+            <p class="audit-features__card-body">Every content, template, media, and permission change tracked with author, timestamp, and diff — no drop-outs.</p>
+          </div>
+        </article>
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">Instant filtering</p>
+            <p class="audit-features__card-body">Slice by user, time window, entity type, environment, or change type — surface the exact revision in seconds.</p>
+          </div>
+        </article>
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">One-click rollback</p>
+            <p class="audit-features__card-body">Side-by-side diff previews on every version. Restore the exact state you need with a single click.</p>
+          </div>
+        </article>
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">Chain of custody</p>
+            <p class="audit-features__card-body">Provable history for security, legal, and operations — every asset accountable from draft to publish.</p>
+          </div>
+        </article>
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">Audit-ready exports</p>
+            <p class="audit-features__card-body">Generate CSV summaries on demand or schedule recurring deliveries for audit committees and governance reviews.</p>
+          </div>
+        </article>
+        <article class="audit-features__card">
+          <div class="audit-features__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          </div>
+          <div class="audit-features__card-text">
+            <p class="audit-features__card-title">SIEM &amp; incident piping</p>
+            <p class="audit-features__card-body">Stream events to Splunk, Datadog, Slack, or your incident-response tools via webhooks and REST endpoints.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="audit-highlights">
+    <div class="audit-highlights__container">
+
+      <!-- Row 1: image left, text right — "Every action, captured in real time" + 2x2 cells. -->
+      <div class="audit-highlights__row">
+        <div class="audit-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/audit-log-stream.png" alt="Live audit stream events" class="audit-highlights__img" loading="lazy" />
+        </div>
+        <div class="audit-highlights__content">
+          <div class="audit-highlights__heading-group">
+            <h2 class="audit-highlights__title">Every action, captured in real time</h2>
+            <p class="audit-highlights__lede">Full activity logs span content entries, templates, media assets, and user permissions. Watch changes populate as teams collaborate across regions and channels.</p>
+          </div>
+          <div class="audit-highlights__cells">
+            <div class="audit-highlights__cell">
+              <p class="audit-highlights__cell-title">Live event stream</p>
+              <p class="audit-highlights__cell-body">Edits, assignments, approvals, and rollbacks appear the moment they happen.</p>
+            </div>
+            <div class="audit-highlights__cell">
+              <p class="audit-highlights__cell-title">Environment scoped</p>
+              <p class="audit-highlights__cell-body">Filter production changes separately from stage or preview activity.</p>
+            </div>
+            <div class="audit-highlights__cell">
+              <p class="audit-highlights__cell-title">Deep entity coverage</p>
+              <p class="audit-highlights__cell-body">Every content model, template, media asset, and role change is logged.</p>
+            </div>
+            <div class="audit-highlights__cell">
+              <p class="audit-highlights__cell-title">Search by user or asset</p>
+              <p class="audit-highlights__cell-body">Trace an incident to the exact person and revision in seconds.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="audit-glow audit-glow--one"></div>
-    <div class="audit-glow audit-glow--two hidden md:block"></div>
-  </section>
 
-  <section class="py-6 border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-5">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-audit-subtle text-audit mb-3">Enterprise-grade visibility</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Every action, captured in real time.</h2>
-          <p class="text-gray-600 mb-4">Full activity logs span content entries, templates, media assets, and user permissions. Filter changes in seconds and surface the exact revision you need.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/></svg>
-              <span>Full activity logs for content, templates, and user actions.</span>
+      <!-- Row 2 reverse: image right, text left — "Compliance is built into the workflow" + 4 bullets. -->
+      <div class="audit-highlights__row audit-highlights__row--reverse">
+        <div class="audit-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/activity-log-history-list.png" alt="Activity log history list" class="audit-highlights__img" loading="lazy" />
+        </div>
+        <div class="audit-highlights__content">
+          <div class="audit-highlights__heading-group">
+            <h2 class="audit-highlights__title">Compliance is built into the workflow</h2>
+            <p class="audit-highlights__lede">Keep a provable chain of custody for every asset so security, legal, and operations teams can verify changes without slowing campaigns.</p>
+          </div>
+          <ul class="audit-highlights__icon-list">
+            <li class="audit-highlights__icon-row">
+              <span class="audit-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="audit-highlights__icon-text">Traceability that stands up to SOC 2, HIPAA, and industry-specific audit requirements.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/></svg>
-              <span>Instant filtering by user, time period, change type, or environment.</span>
+            <li class="audit-highlights__icon-row">
+              <span class="audit-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="audit-highlights__icon-text">Immutable log storage — logs can't be silently edited or deleted, even by admins.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
-  <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/></svg>
-              <span>Roll back with confidence using side-by-side diff previews.</span>
+            <li class="audit-highlights__icon-row">
+              <span class="audit-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="audit-highlights__icon-text">Export audit-ready CSVs or schedule automated deliveries to governance committees.</p>
+            </li>
+            <li class="audit-highlights__icon-row">
+              <span class="audit-highlights__icon" aria-hidden="true">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+              </span>
+              <p class="audit-highlights__icon-text">Retention windows and archival policies configurable per environment and content type.</p>
             </li>
           </ul>
         </div>
-        <div class="lg:col-span-7">
-          <div class="grid grid-cols-12 gap-4 gap-3">
-            <div class="md:col-span-6">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-                <div class="p-6">
-                  <a href="https://hj5v68xn.media.zestyio.com/audit-log-stream.png" class="audit-lightbox-trigger block rounded-xl overflow-hidden mb-3 aspect-[16/10] max-h-[440px]" data-audit-lightbox="audit-stream" aria-label="Expand live audit stream events screenshot">
-                    <img src="https://hj5v68xn.media.zestyio.com/audit-log-stream.png" alt="Live audit stream events" class="w-full h-full object-cover">
-                  </a>
-                  <h3 class="text-lg font-semibold mb-2">Live event stream</h3>
-                  <p class="text-gray-600 text-sm mb-0">Watch changes populate in real time as teams collaborate across regions and channels.</p>
-                </div>
-              </div>
-            </div>
-            <div class="md:col-span-6">
-              <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full mt-md-5">
-                <div class="p-6">
-                  <a href="https://hj5v68xn.media.zestyio.com/audit-log-insights.png" class="audit-lightbox-trigger block rounded-xl overflow-hidden mb-3 aspect-[16/10] max-h-[440px]" data-audit-lightbox="audit-insights" aria-label="Expand audit insights detail screenshot">
-                    <img src="https://hj5v68xn.media.zestyio.com/audit-log-insights.png" alt="Audit insights detail" class="w-full h-full object-cover">
-                  </a>
-                  <h3 class="text-lg font-semibold mb-2">Contextual insights</h3>
-                  <p class="text-gray-600 text-sm mb-0">Surface who approved, deployed, or reverted content&mdash;with full diff history and metadata.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
+
     </div>
   </section>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-audit-subtle text-audit mb-3">Protect your brand</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Compliance is built into the workflow.</h2>
-          <p class="text-gray-600 mb-4">Content.One keeps a provable chain of custody for every asset so security, legal, and operations teams can verify changes without slowing campaigns.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/></svg>
-              <span>Maintain traceability for security, legal, and operational requirements.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path d="M8.5 6.5a.5.5 0 0 0-1 0v3.793L6.354 9.146a.5.5 0 1 0-.708.708l2 2a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 10.293z"/>
-  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z"/></svg>
-              <span>Export audit-ready CSV summaries or schedule automated deliveries.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M6 3.5A1.5 1.5 0 0 1 7.5 2h1A1.5 1.5 0 0 1 10 3.5v1A1.5 1.5 0 0 1 8.5 6v1H14a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0V8h-5v.5a.5.5 0 0 1-1 0v-1A.5.5 0 0 1 2 7h5.5V6A1.5 1.5 0 0 1 6 4.5zM8.5 5a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5zM0 11.5A1.5 1.5 0 0 1 1.5 10h1A1.5 1.5 0 0 1 4 11.5v1A1.5 1.5 0 0 1 2.5 14h-1A1.5 1.5 0 0 1 0 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5A1.5 1.5 0 0 1 7.5 10h1a1.5 1.5 0 0 1 1.5 1.5v1A1.5 1.5 0 0 1 8.5 14h-1A1.5 1.5 0 0 1 6 12.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5zm4.5.5a1.5 1.5 0 0 1 1.5-1.5h1a1.5 1.5 0 0 1 1.5 1.5v1a1.5 1.5 0 0 1-1.5 1.5h-1a1.5 1.5 0 0 1-1.5-1.5zm1.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5z"/></svg>
-              <span>Pipe audit events into SIEM, Slack, or ticketing tools with webhooks.</span>
-            </li>
-          </ul>
+  <!-- ════════════ CODE VIEWER — DARK, tabbed audit-data snippets (API / CSV / webhook). -->
+  <section class="audit-code">
+    <div class="audit-code__container">
+      <div class="audit-code__heading-group">
+        <h2 class="audit-code__title">Pipe audit data straight into your stack</h2>
+        <p class="audit-code__lede">APIs, CSVs, and webhooks surface the same data your team sees in the UI — so dashboards, incident tooling, and data lakes stay in lockstep with the source of truth.</p>
+      </div>
+      <div class="audit-code__panel">
+        <div class="audit-code__tabs">
+          <button class="audit-code__tab is-active" data-audit-code-tab="api" type="button">Audit API</button>
+          <button class="audit-code__tab" data-audit-code-tab="csv" type="button">CSV export</button>
+          <button class="audit-code__tab" data-audit-code-tab="webhook" type="button">Webhook event</button>
+          <span class="audit-code__meta"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> Governance payloads</span>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl overflow-hidden shadow-lg">
-            <img src="https://hj5v68xn.media.zestyio.com/activity-log-history-list.png" alt="Security and compliance team collaborating" class="w-full h-full object-cover">
-          </div>
+        <div class="audit-code__pane is-active" data-audit-code-pane="api">
+          <pre class="audit-code__pre"><code>GET https://api.contentone.com/v1/audit/logs?entity=content&amp;env=production
+Accept: application/json
+Authorization: Bearer $CONTENTONE_TOKEN
+
+{
+  "next_cursor": "eyJvZmZzZXQiOjE1MDB9",
+  "events": [
+    {
+      "id": "aud_01HZ9K8...",
+      "actor": { "id": "usr_7d21", "email": "gisele@zesty.io" },
+      "action": "content.publish",
+      "entity": { "type": "landing_page", "id": "7-a3b8c9d2", "path": "/franchise-cms/" },
+      "at": "2026-07-02T11:58:04Z",
+      "env": "production",
+      "diff_url": "/audit/aud_01HZ9K8/diff"
+    }
+  ]
+}</code></pre>
+        </div>
+        <div class="audit-code__pane" data-audit-code-pane="csv">
+          <pre class="audit-code__pre"><code>event_id,actor_email,action,entity_type,entity_path,env,at
+aud_01HZ9K8,gisele@zesty.io,content.publish,landing_page,/franchise-cms/,production,2026-07-02T11:58:04Z
+aud_01HZ9K7,randy@zesty.io,content.approve,landing_page,/franchise-cms/,stage,2026-07-02T11:57:11Z
+aud_01HZ9K6,kaya@zesty.io,content.edit,landing_page,/franchise-cms/,stage,2026-07-02T11:55:42Z
+aud_01HZ9K5,ardeay@zesty.io,role.grant,user,usr_7d21,production,2026-07-02T09:14:03Z</code></pre>
+        </div>
+        <div class="audit-code__pane" data-audit-code-pane="webhook">
+          <pre class="audit-code__pre"><code>POST https://siem.acme.com/ingest/contentone
+Content-Type: application/json
+X-ContentOne-Signature: t=1719921484,v1=8a3d92...
+
+{
+  "event": "audit.content.publish",
+  "id": "aud_01HZ9K8",
+  "actor": { "id": "usr_7d21", "email": "gisele@zesty.io" },
+  "entity": { "type": "landing_page", "id": "7-a3b8c9d2" },
+  "env": "production",
+  "at": "2026-07-02T11:58:04Z",
+  "severity": "info"
+}</code></pre>
         </div>
       </div>
+      <ul class="audit-code__bullets">
+        <li><span class="audit-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Rate-limited, cursor-paginated endpoints ready for data-lake ingestion — <code>GET /v1/audit/logs</code>.</li>
+        <li><span class="audit-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Signed webhook payloads (<code>X-ContentOne-Signature</code>) with configurable delivery + retry policies.</li>
+        <li><span class="audit-code__check" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Column-preserving CSV exports match the UI view — filters, sorts, and columns come along.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-audit-subtle text-audit mb-3">Connected audit data</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">APIs, CSVs, and RESTful endpoints keep stakeholders aligned.</h2>
-          <p class="text-gray-600 text-lg mb-0">Integrate audit logs into existing workflows or build custom governance dashboards with the same data surfaced in the UI.</p>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="audit-customers">
+    <div class="audit-customers__container">
+      <div class="audit-customers__header">
+        <div class="audit-customers__header-text">
+          <h2 class="audit-customers__title">Auditable workflows trusted by digital leaders</h2>
+          <p class="audit-customers__lede">Enterprise teams rely on Content.One to maintain governance without slowing launches — provable chain of custody from draft to production.</p>
         </div>
+        <a href="/customers/" class="audit-customers__cta">See customer wins</a>
       </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-3xl mb-3" aria-hidden="true"><path fill-rule="evenodd" d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.759 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6M14.886 7.9v.164c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456v-1.3c-1.114 0-1.49-.362-1.49-1.456V4.352C14.51 2.759 13.75 2 12.138 2h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6M7.5 11.5V9.207l-1.621 1.621-.707-.707L6.792 8.5H4.5v-1h2.293L5.172 5.879l.707-.707L7.5 6.792V4.5h1v2.293l1.621-1.621.707.707L9.208 7.5H11.5v1H9.207l1.621 1.621-.707.707L8.5 9.208V11.5z"/></svg>
-              <h3 class="text-lg font-semibold mb-2">Audit APIs</h3>
-              <p class="text-gray-600 text-sm mb-0">Query or paginate raw log data programmatically to power internal dashboards, data warehouses, or monitoring pipelines.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-3xl mb-3" aria-hidden="true"><path fill-rule="evenodd" d="M7.646 10.854a.5.5 0 0 0 .708 0l2-2a.5.5 0 0 0-.708-.708L8.5 9.293V5.5a.5.5 0 0 0-1 0v3.793L6.354 8.146a.5.5 0 1 0-.708.708z"/>
-  <path d="M4.406 3.342A5.53 5.53 0 0 1 8 2c2.69 0 4.923 2 5.166 4.579C14.758 6.804 16 8.137 16 9.773 16 11.569 14.502 13 12.687 13H3.781C1.708 13 0 11.366 0 9.318c0-1.763 1.266-3.223 2.942-3.593.143-.863.698-1.723 1.464-2.383m.653.757c-.757.653-1.153 1.44-1.153 2.056v.448l-.445.049C2.064 6.805 1 7.952 1 9.318 1 10.785 2.23 12 3.781 12h8.906C13.98 12 15 10.988 15 9.773c0-1.216-1.02-2.228-2.313-2.228h-.5v-.5C12.188 4.825 10.328 3 8 3a4.53 4.53 0 0 0-2.941 1.1z"/></svg>
-              <h3 class="text-lg font-semibold mb-2">Downloadable CSVs</h3>
-              <p class="text-gray-600 text-sm mb-0">Generate granular CSV exports on demand or schedule recurring deliveries for audit committees and governance reviews.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-audit text-3xl mb-3" aria-hidden="true"><path d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.08 2.08 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.92 1.92 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0M5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4z"/></svg>
-              <h3 class="text-lg font-semibold mb-2">RESTful endpoints</h3>
-              <p class="text-gray-600 text-sm mb-0">Connect RESTful endpoints to SIEM platforms, incident response tools, or custom middleware using secure tokens.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="bg-white rounded-lg shadow border-0 shadow-sm mt-4">
-        <div class="p-6 flex flex-col lg:flex-row items-start gap-4">
-          <div class="bg-audit-subtle text-audit rounded-xl p-4">
-            <code class="block text-audit text-sm mb-2">GET /v1/audit/logs?entity=content&env=production</code>
-            <code class="block text-audit text-sm mb-0">Accept: application/json</code>
-          </div>
-          <div class="text-gray-600 text-sm">
-            <p class="mb-2">Use rate-limited endpoints to sync with data lakes or trigger alerts when sensitive models change.</p>
-            <p class="mb-0">Prefer spreadsheets? Download the exact view as CSV with one click&mdash;filters and columns preserved.</p>
-          </div>
-        </div>
-      </div>
+      {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-7 xl:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3 text-white">Auditable workflows trusted by digital leaders</h2>
-          <p class="text-lg text-white/75 mb-0">Teams across industries rely on Content.One to maintain governance without slowing launches.</p>
-        </div>
-      </div>
-
-            {{include /components/widgets/random_quotes.html}}
-
-      <div class="text-center mt-5">
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-audit">Explore customer stories</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Ready to activate audit logs across your content stack?</h2>
-          <p class="text-lg text-gray-600 mb-4">Give every stakeholder clear visibility into who changed what, when, and why&mdash;all from a single source of truth.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-royal text-white hover:bg-royalDark text-base px-6 py-3">Talk to our team</a>
-            <a href="/product_tour/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-audit text-base px-6 py-3">Take the product tour</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
-
-<div class="modal fade audit-lightbox-modal" id="auditLightboxModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content bg-transparent border-0">
-      <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-      <div class="modal-body p-0">
-        <img src="" alt="" class="audit-lightbox-image rounded-xl shadow-lg w-full h-auto">
-      </div>
-    </div>
-  </div>
 </div>
 
 <style>
-  .audit-logs-page .bg-gradient-audit {
-    background: linear-gradient(135deg, #0b1120 0%, #1d4ed8 40%, #22d3ee 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .audit-feature-page .audit-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .audit-logs-page .bg-audit {
-    background-color: #1d4ed8;
-  }
-  .audit-logs-page .text-audit {
-    color: #1d4ed8 !important;
-  }
-  .audit-logs-page .bg-audit-subtle {
-    background-color: rgba(29, 78, 216, 0.12) !important;
-  }
-  .audit-logs-page .btn-outline-audit {
-    border-color: #1d4ed8;
-    color: #1d4ed8;
-  }
-  .audit-logs-page .btn-outline-audit:hover {
-    background-color: #1d4ed8;
-    color: #fff;
-  }
-  .audit-logs-page .audit-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(120px);
-    pointer-events: none;
-  }
-  .audit-logs-page .audit-glow--one {
-    width: 260px;
-    height: 260px;
-    background: rgba(34, 211, 238, 0.55);
-    top: -120px;
-    right: -80px;
-  }
-  .audit-logs-page .audit-glow--two {
-    width: 320px;
-    height: 320px;
-    background: rgba(29, 78, 216, 0.45);
-    bottom: -160px;
-    left: -140px;
-  }
-  .audit-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
-  }
-  .audit-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
+  .audit-feature-page .audit-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
     align-items: center;
   }
-  .audit-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
+  @media (min-width: 640px) { .audit-feature-page .audit-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .audit-feature-page .audit-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
+  }
+  .audit-feature-page .audit-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .audit-feature-page .audit-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
+  }
+  .audit-feature-page .audit-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
+  }
+  .audit-feature-page .audit-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .audit-feature-page .audit-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .audit-feature-page .audit-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
+  }
+  @media (min-width: 1024px) { .audit-feature-page .audit-hero__lede { font-size: 20px; line-height: 30px; } }
+  .audit-feature-page .audit-hero__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 16px; }
+  @media (min-width: 640px) { .audit-feature-page .audit-hero__ctas { flex-direction: row; gap: 16px; } }
+  .audit-feature-page .audit-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
+  }
+  .audit-feature-page .audit-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+  }
+  .audit-feature-page .audit-hero__cta--primary:hover { background-color: #2F3F94; }
+  .audit-feature-page .audit-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
+  }
+  .audit-feature-page .audit-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .audit-feature-page .audit-hero__media { width: 100%; }
+  .audit-feature-page .audit-hero__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .audit-feature-page .audit-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .audit-feature-page .audit-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-trust__container { padding: 0 2rem; } }
+  .audit-feature-page .audit-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
+  }
+  .audit-feature-page .audit-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .audit-feature-page .audit-trust__logo { display: inline-flex; }
+  .audit-feature-page .audit-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .audit-feature-page .audit-trust__logo:hover .audit-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .audit-feature-page .audit-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .audit-feature-page .audit-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-features__container { padding: 0 2rem; } }
+  .audit-feature-page .audit-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .audit-feature-page .audit-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-features__title { font-size: 36px; line-height: 44px; } }
+  .audit-feature-page .audit-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .audit-feature-page .audit-features__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .audit-feature-page .audit-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
+  }
+  .audit-feature-page .audit-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .audit-feature-page .audit-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  .audit-feature-page .audit-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .audit-feature-page .audit-features__card-text { display: flex; flex-direction: column; gap: 4px; }
+  .audit-feature-page .audit-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .audit-feature-page .audit-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .audit-feature-page .audit-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .audit-feature-page .audit-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-highlights__container { padding: 0 2rem; } }
+  .audit-feature-page .audit-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .audit-feature-page .audit-highlights__row { flex-direction: row; gap: 96px; }
+    .audit-feature-page .audit-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .audit-feature-page .audit-highlights__media { width: 100%; max-width: 720px; }
+  @media (min-width: 1024px) {
+    .audit-feature-page .audit-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .audit-feature-page .audit-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .audit-feature-page .audit-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .audit-feature-page .audit-highlights__content { flex: 1 1 0; } }
+  .audit-feature-page .audit-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .audit-feature-page .audit-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-highlights__title { font-size: 30px; line-height: 38px; } }
+  .audit-feature-page .audit-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .audit-feature-page .audit-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .audit-feature-page .audit-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .audit-feature-page .audit-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .audit-feature-page .audit-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .audit-feature-page .audit-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .audit-feature-page .audit-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .audit-feature-page .audit-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .audit-feature-page .audit-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .audit-feature-page .audit-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .audit-feature-page .audit-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Code Viewer (DARK, 3-tab) ──────────────────────────────────────── */
+  .audit-feature-page .audit-code {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .audit-feature-page .audit-code__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-code__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-code__container { padding: 0 2rem; } }
+  .audit-feature-page .audit-code__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 720px;
+  }
+  .audit-feature-page .audit-code__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-code__title { font-size: 36px; line-height: 44px; } }
+  .audit-feature-page .audit-code__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .audit-feature-page .audit-code__lede { font-size: 18px; line-height: 28px; } }
+  .audit-feature-page .audit-code__panel {
+    background: #060813;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  }
+  .audit-feature-page .audit-code__tabs {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .audit-feature-page .audit-code__tab {
+    appearance: none;
+    background: transparent;
+    border: 1px solid transparent;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+  }
+  .audit-feature-page .audit-code__tab:hover { color: #ffffff; background: rgba(140, 155, 230, 0.08); }
+  .audit-feature-page .audit-code__tab.is-active {
+    color: #ffffff;
+    background: rgba(66, 85, 189, 0.35);
+    border-color: rgba(140, 155, 230, 0.4);
+  }
+  .audit-feature-page .audit-code__meta {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #8C9BE6;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+  }
+  .audit-feature-page .audit-code__pane { display: none; }
+  .audit-feature-page .audit-code__pane.is-active { display: block; }
+  .audit-feature-page .audit-code__pre {
+    margin: 0;
+    padding: 24px;
+    background: #060813;
+    color: #d8dcf3;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', ui-monospace, monospace;
+    font-size: 13px;
+    line-height: 20px;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  .audit-feature-page .audit-code__pre code { color: inherit; background: transparent; }
+  .audit-feature-page .audit-code__bullets {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-code__bullets { grid-template-columns: repeat(3, 1fr); gap: 24px; } }
+  .audit-feature-page .audit-code__bullets li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .audit-feature-page .audit-code__bullets code {
+    background: rgba(66, 85, 189, 0.28);
+    color: #d8dcf3;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-family: 'JetBrains Mono', 'Fira Code', 'SF Mono', ui-monospace, monospace;
+    font-size: 12px;
+  }
+  .audit-feature-page .audit-code__check {
+    flex-shrink: 0;
+    color: #8C9BE6;
+    width: 20px;
+    height: 20px;
+    display: block;
+    padding-top: 1px;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .audit-feature-page .audit-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .audit-feature-page .audit-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .audit-feature-page .audit-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .audit-feature-page .audit-customers__container { padding: 0 2rem; } }
+  .audit-feature-page .audit-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .audit-feature-page .audit-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .audit-feature-page .audit-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .audit-feature-page .audit-customers__title { font-size: 30px; line-height: 38px; } }
+  .audit-feature-page .audit-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .audit-feature-page .audit-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .audit-feature-page .audit-customers__cta:hover { background: #f9fafb; }
+  .audit-feature-page .audit-customers .review-feature-chip { display: none; }
+  .audit-feature-page .audit-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
   }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    var modalEl = document.getElementById('auditLightboxModal');
-    if (!modalEl) return;
-    var modalImg = modalEl.querySelector('.audit-lightbox-image');
-    if (!modalImg) return;
-    if (typeof bootstrap === 'undefined' || !bootstrap.Modal) return;
-
-    var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
-    var triggers = document.querySelectorAll('.audit-lightbox-trigger');
-
-    triggers.forEach(function (trigger) {
-      trigger.addEventListener('click', function (event) {
-        event.preventDefault();
-        var targetSrc = trigger.getAttribute('href');
-        var innerImage = trigger.querySelector('img');
-        var imgAlt = innerImage ? innerImage.getAttribute('alt') : 'Expanded audit screenshot';
-        modalImg.src = targetSrc;
-        modalImg.alt = imgAlt || 'Expanded audit screenshot';
-        lightboxModal.show();
+    var tabs = document.querySelectorAll('.audit-feature-page [data-audit-code-tab]');
+    var panes = document.querySelectorAll('.audit-feature-page [data-audit-code-pane]');
+    if (!tabs.length || !panes.length) return;
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        var target = tab.getAttribute('data-audit-code-tab');
+        tabs.forEach(function (t) { t.classList.toggle('is-active', t === tab); });
+        panes.forEach(function (p) { p.classList.toggle('is-active', p.getAttribute('data-audit-code-pane') === target); });
       });
-    });
-
-    modalEl.addEventListener('hidden.bs.modal', function () {
-      modalImg.src = '';
-      modalImg.alt = '';
     });
   });
 </script>
