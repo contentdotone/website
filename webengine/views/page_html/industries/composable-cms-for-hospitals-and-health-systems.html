@@ -66,6 +66,17 @@
       inset 0 0 0 1px rgba(0, 0, 0, 0.18),
       inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
+  /* Icon-tile mask-image glyph — driven by inline --icon-url on each
+     span. Default fill is white for the dark base theme; light-band
+     override below flips to royal (#4255BD). */
+  .c1-industry-page .c1-industry-feature-icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #ffffff;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
 
   /* ───────────────────────────────────────────────────────────────────────
      LIGHT BAND — flip industry-specific carousels, AI governance highlight,
@@ -119,7 +130,7 @@
     border: 0 !important;
     box-shadow: none;
   }
-  .hospital-industry-page .hospital-light-band .c1-industry-feature-icon svg { color: #4255BD; }
+  .hospital-industry-page .hospital-light-band .c1-industry-feature-icon-img { background-color: #4255BD; }
 
   /* Dark-theme override for the shared /components/forms/zoho-form.html include. Selectors are scoped
      to .c1-industry-form-wrap and qualified with chained classes so they beat Tailwind utility specificity. */
