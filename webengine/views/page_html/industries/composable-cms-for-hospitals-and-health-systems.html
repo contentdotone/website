@@ -33,10 +33,10 @@
 <div class="c1-industry-page hospital-industry-page bg-ink text-white">
   {{include /components/industry/c1_industry_hero.html}}
   {{include /components/industry/c1_industry_social_proof.html}}
-  {{include /components/industry/c1_industry_specific_carousels.html}}
-  {{include /components/industry/c1_ai_governance_highlight.html}}
 
   <div class="hospital-light-band">
+    {{include /components/industry/c1_industry_specific_carousels.html}}
+    {{include /components/industry/c1_ai_governance_highlight.html}}
     {{include /components/industry/c1_industry_feature_grid.html}}
   </div>
 
@@ -68,20 +68,47 @@
   }
 
   /* ───────────────────────────────────────────────────────────────────────
-     LIGHT BAND — flip the feature grid ("Built for the largest content
-     operations") to a light section. Sits between the dark carousels/AI
-     governance above and the dark industries-list below, giving the page
-     a mid-scroll light beat that echoes the product-tour rhythm.
-     Scoped to .hospital-light-band so other industry pages using this
-     block are unaffected.
+     LIGHT BAND — flip industry-specific carousels, AI governance highlight,
+     and the feature grid to a light section (bg #ffffff, primary text
+     #171717, secondary text #525252). Matches the drag-n-drop features-
+     grid light variant (Figma 13911:8713). The image + carousel slides
+     inside these blocks keep their internal dark treatments, so they read
+     as raised media on a light section. Scoped to .hospital-light-band so
+     other industry pages using these blocks are unaffected.
+
+     Text-color mapping (bobby's shorthand → hex):
+       .text-primary   → #171717   (H2 + card titles)
+       .text-secondary → #525252   (body copy)
      ─────────────────────────────────────────────────────────────────────── */
   .hospital-industry-page .hospital-light-band { background: #ffffff; }
+
+  /* Global flip inside the light band: H2 → primary text (#171717),
+     P → secondary text (#525252). Exceptions carved out below for the
+     carousel overlay cards which sit on dark images and need to stay
+     white-on-dark. */
+  .hospital-industry-page .hospital-light-band h2 { color: #171717; }
+  .hospital-industry-page .hospital-light-band p { color: #525252; }
+
+  /* Carousels (block 3): the media itself keeps its dark image + gradient
+     overlay so overlay copy inside .c1-industry-slide / .c1-industry-card
+     stays white on dark. */
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels { background: #ffffff; }
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels .c1-industry-slide h2,
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels .c1-industry-slide p,
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels .c1-industry-card h2,
+  .hospital-industry-page .hospital-light-band .c1-industry-features-carousels .c1-industry-card p {
+    color: #ffffff;
+  }
+
+  /* Feature grid sub-A (block 5) — pure-black bg to white, headings +
+     card treatment aligned with Figma 13911:8713. Icon tile keeps royal
+     fill on both themes so cards still pop. */
   .hospital-industry-page .hospital-light-band > section.bg-black { background: #ffffff !important; }
   .hospital-industry-page .hospital-light-band > section.bg-black h2 { color: #171717; }
   .hospital-industry-page .hospital-light-band > section.bg-black > div > div.max-w-3xl p { color: #525252; }
   .hospital-industry-page .hospital-light-band .c1-industry-feature-card {
     background: #ffffff;
-    border-color: #eaecf0;
+    border-color: rgba(0, 0, 0, 0.1);
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   }
   .hospital-industry-page .hospital-light-band .c1-industry-feature-card .font-body.font-semibold { color: #171717; }
