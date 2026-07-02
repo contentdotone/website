@@ -1,491 +1,257 @@
-<div class="nonprofit-industry-page">
-  <section class="py-6 section-padding py-lg-7 bg-gradient-nonprofit text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white text-nonprofit mb-3">Non-profit teams</span>
-          <h1 class="text-4xl font-bold font-bold text-white mb-4">Power federated non-profit experiences without a dev army.</h1>
-          <p class="text-lg text-white/75 mb-4">Content.One helps global charities, foundations, and NGOs launch compliant, multi-site experiences faster than ever. Empower chapters, partner agencies, and volunteers while headquarters keeps governance tight.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="#nonprofit-demo-form" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-nonprofit">Book a non-profit demo</a>
-             
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <a href="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1400&q=80" class="nonprofit-lightbox-trigger block rounded-xl overflow-hidden shadow-lg aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="hero" aria-label="Expand non-profit collaboration preview">
-            <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80" alt="Non-profit marketing team collaborating" class="w-full h-full object-cover">
-          </a>
-        </div>
-      </div> 
-    </div>
-    <div class="nonprofit-glow nonprofit-glow--one"></div>
-    <div class="nonprofit-glow nonprofit-glow--two hidden md:block"></div>
-  </section>
+<!--
+  Non-profits industry page — composed from the reusable industry Blocks
+  (with 3 non-profit variants forked for on-audience copy) matching the
+  hospital orchestrator's dark/light rhythm exactly:
 
-  <section class="py-6 section-padding border-t">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div id="nonprofitSpeedCarousel" class="carousel slide rounded-xl shadow-lg overflow-hidden mb-4 mb-lg-0" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#nonprofitSpeedCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Chapter websites slide"></button>
-              <button type="button" data-bs-target="#nonprofitSpeedCarousel" data-bs-slide-to="1" aria-label="Campaign landing slide"></button>
-              <button type="button" data-bs-target="#nonprofitSpeedCarousel" data-bs-slide-to="2" aria-label="Publishing workflows slide"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="https://hj5v68xn.media.zestyio.com/Blocks.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="speed-carousel-1" aria-label="Expand chapter builder screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" class="block nonprofit-carousel-img" alt="Blocks powering chapter websites">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Chapter Websites in Minutes</h3>
-                  <p class="text-sm mb-0">Distribute approved layouts so local teams launch mission-ready pages fast.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="speed-carousel-2" aria-label="Expand authoring without developers screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/blocks-step-2.png" class="block nonprofit-carousel-img" alt="Authoring interface for campaigns">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Campaign Content Without Devs</h3>
-                  <p class="text-sm mb-0">Regional marketers update stories, stats, and CTA copy safely.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="speed-carousel-3" aria-label="Expand publishing coordination screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="block nonprofit-carousel-img" alt="Publishing workflows for federated teams">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Coordinated Publishing</h3>
-                  <p class="text-sm mb-0">Schedule global launches while chapters stage and preview locally.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#nonprofitSpeedCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#nonprofitSpeedCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </button>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Launch faster</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Launch program sites, fundraisers, and volunteer hubs in days.</h2>
-          <p class="text-gray-600 mb-4">Give mission-driven teams the ability to build secure, brand-aligned experiences without waiting on central IT. Reusable Blocks keep compliance-friendly disclosures and donation components consistent across every site.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/></svg>
-              <span>Empower chapters, affiliates, and partner agencies to publish with confidence.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882zm3.515 7.008L14.438 10 8 13.433 1.562 10 4.25 8.567l3.515 1.874a.5.5 0 0 0 .47 0zM8 9.433 1.562 6 8 2.567 14.438 6z"/></svg>
-              <span>Share Blocks for donation forms, impact stories, event listings, and compliance statements.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
-  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg>
-              <span>Central teams oversee design and messaging while locals tailor content for their communities.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+    DARK  — hero (nonprofit variant, gradient royal)
+    DARK  — social proof (shared reversed-logo strip)
+    DARK  — industry-specific carousels (nonprofit variant, chapter +
+              campaign copy, headings keep white-on-dark)
+    DARK  — AI governance highlight (nonprofit variant, donor/board copy)
+    LIGHT — feature grid (shared "Built for the largest content
+              operations" 6-card grid — copy is enterprise-generic, safe
+              to reuse). Icons swapped to bobby's brand SVG set with the
+              lavender tile per Figma 13911:8714.
+    DARK  — industries list ("Different industries. Same enterprise CMS.")
+              — dark resumes here per the same spec bobby set on hospital.
+    DARK  — enterprise callout / testimonial / FAQ
+    LIGHT — contact form ("Take Content.One further", lavender #eceef9
+              per Figma 14031:569492)
 
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <div id="nonprofitGovernanceCarousel" class="carousel slide rounded-xl shadow-lg overflow-hidden mb-4 mb-lg-0" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#nonprofitGovernanceCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="SSO slide"></button>
-              <button type="button" data-bs-target="#nonprofitGovernanceCarousel" data-bs-slide-to="1" aria-label="Base roles slide"></button>
-              <button type="button" data-bs-target="#nonprofitGovernanceCarousel" data-bs-slide-to="2" aria-label="Custom roles slide"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <a href="https://hj5v68xn.media.zestyio.com/sso-login-options.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="governance-carousel-1" aria-label="Expand SSO screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/sso-login-options.png" class="block nonprofit-carousel-img" alt="Single sign-on options for non-profits">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Centralized SSO</h3>
-                  <p class="text-sm mb-0">Connect Okta, Microsoft Entra ID, Google Workspace, or GitHub for unified identity.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="https://hj5v68xn.media.zestyio.com/accounts-base-roles.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="governance-carousel-2" aria-label="Expand base roles screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/accounts-base-roles.png" class="block nonprofit-carousel-img" alt="Base role management for non-profits">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Built-in Roles</h3>
-                  <p class="text-sm mb-0">Assign owners, admins, editors, and volunteers the exact access they need.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <a href="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-2.png" class="nonprofit-lightbox-trigger block aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="governance-carousel-3" aria-label="Expand custom permissions screenshot">
-                  <img src="https://hj5v68xn.media.zestyio.com/accounts-creating-custom-role-2.png" class="block nonprofit-carousel-img" alt="Custom role creation for programs">
-                </a>
-                <div class="carousel-caption hidden md:block bg-gray-900 bg-opacity-50 rounded-lg p-3">
-                  <h3 class="text-base font-semibold mb-1">Granular Permissions</h3>
-                  <p class="text-sm mb-0">Lock mission-critical messaging while enabling scoped edits down to fields.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#nonprofitGovernanceCarousel" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#nonprofitGovernanceCarousel" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </button>
-          </div>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Governance &amp; compliance</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Protect brand integrity and donor trust.</h2>
-          <p class="text-gray-600 mb-4">Role-based workflows, audit trails, and SSO integrations ensure every update is reviewable and compliant. Keep legal, fundraising, and regional teams aligned without slowing delivery.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6">
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
-  <path d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415"/></svg>Granular roles for staff, volunteers, partners, and agencies.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M10.854 7.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 9.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
-  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg>Approval workflows, version history, and audit logs for every change.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"/></svg>Support for regional compliance, accessibility, and data residency requirements.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  Block roster:
+    1. c1_nonprofit_hero              — nonprofit variant of hero
+    2. c1_industry_social_proof       — shared (Figma 13863:10628)
+    3. c1_nonprofit_specific_carousels — nonprofit variant of carousels
+    4. c1_nonprofit_ai_governance_highlight — nonprofit variant
+    5. c1_industry_feature_grid       — shared (Figma 13771:3583)
+   5b. c1_industry_industries_list    — shared (dark reset)
+    6. c1_enterprise_callout          — shared (Figma 13781:4251)
+    7. c1_testimonial_carousel        — shared (Figma 13782:4694)
+    8. c1_industry_faq                — shared (Figma 13799:6181)
+    9. c1_industry_contact_form       — shared (Figma 14031:569492)
 
-  <section class="py-6 section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" class="nonprofit-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="multisite" aria-label="Expand federated site management screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/publishing-full-screnshoot.png" alt="Federated non-profit website management" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Federated multi-site management</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Scale impact across programs, regions, and partner networks.</h2>
-          <p class="text-gray-600 mb-4">Launch and manage hundreds of mission-critical sites from a single platform. Cascade global content while allowing localized storytelling and rapid response updates.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M5.793 1a1 1 0 0 1 1.414 0l.647.646a.5.5 0 1 1-.708.708L6.5 1.707 2 6.207V12.5a.5.5 0 0 0 .5.5.5.5 0 0 1 0 1A1.5 1.5 0 0 1 1 12.5V7.207l-.146.147a.5.5 0 0 1-.708-.708zm3 1a1 1 0 0 1 1.414 0L12 3.793V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v3.293l1.854 1.853a.5.5 0 0 1-.708.708L15 8.207V13.5a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 4 13.5V8.207l-.146.147a.5.5 0 1 1-.708-.708zm.707.707L5 7.207V13.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5V7.207z"/></svg>
-              <span>Spin up new chapter or campaign sites using pre-approved templates and Blocks.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 0 1h-13A.5.5 0 0 1 1 8M7.646.146a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1-.708.708L8.5 1.707V5.5a.5.5 0 0 1-1 0V1.707L6.354 2.854a.5.5 0 1 1-.708-.708zM8 10a.5.5 0 0 1 .5.5v3.793l1.146-1.147a.5.5 0 0 1 .708.708l-2 2a.5.5 0 0 1-.708 0l-2-2a.5.5 0 0 1 .708-.708L7.5 14.293V10.5A.5.5 0 0 1 8 10"/></svg>
-              <span>Share global announcements instantly while chapters customize local action items.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg>
-              <span>Manage partner agencies and creative shops with scoped access and audit-ready workflows.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  Loader provides nav + footer; this view is just the page body.
+-->
+<div class="c1-industry-page nonprofit-industry-page bg-ink text-white">
+  {{include /components/industry/c1_nonprofit_hero.html}}
+  {{include /components/industry/c1_industry_social_proof.html}}
 
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <a href="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" class="nonprofit-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="ai" aria-label="Expand AI acceleration screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/ai-chatbot-contentone.jpg" alt="AI acceleration for non-profit content" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Agentic AI</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Accelerate storytelling, fundraising, and localization with AI.</h2>
-          <p class="text-gray-600 mb-4">Draft appeals, translate updates, and personalize donor journeys in seconds. Agentic AI works within your guardrails so every message stays on mission and compliant.</p>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M6 12.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5M3 8.062C3 6.76 4.235 5.765 5.53 5.886a26.6 26.6 0 0 0 4.94 0C11.765 5.765 13 6.76 13 8.062v1.157a.93.93 0 0 1-.765.935c-.845.147-2.34.346-4.235.346s-3.39-.2-4.235-.346A.93.93 0 0 1 3 9.219zm4.542-.827a.25.25 0 0 0-.217.068l-.92.9a25 25 0 0 1-1.871-.183.25.25 0 0 0-.068.495c.55.076 1.232.149 2.02.193a.25.25 0 0 0 .189-.071l.754-.736.847 1.71a.25.25 0 0 0 .404.062l.932-.97a25 25 0 0 0 1.922-.188.25.25 0 0 0-.068-.495c-.538.074-1.207.145-1.98.189a.25.25 0 0 0-.166.076l-.754.785-.842-1.7a.25.25 0 0 0-.182-.135"/>
-  <path d="M8.5 1.866a1 1 0 1 0-1 0V3h-2A4.5 4.5 0 0 0 1 7.5V8a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1v1a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-1a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1v-.5A4.5 4.5 0 0 0 10.5 3h-2zM14 7.5V13a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5A3.5 3.5 0 0 1 5.5 4h5A3.5 3.5 0 0 1 14 7.5"/></svg>
-              <span>Generate donor appeals, volunteer outreach, and impact recaps instantly.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path d="M4.545 6.714 4.11 8H3l1.862-5h1.284L8 8H6.833l-.435-1.286zm1.634-.736L5.5 3.956h-.049l-.679 2.022z"/>
-  <path d="M0 2a2 2 0 0 1 2-2h7a2 2 0 0 1 2 2v3h3a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-3H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h7a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zm7.138 9.995q.289.451.63.846c-.748.575-1.673 1.001-2.768 1.292.178.217.451.635.555.867 1.125-.359 2.08-.844 2.886-1.494.777.665 1.739 1.165 2.93 1.472.133-.254.414-.673.629-.89-1.125-.253-2.057-.694-2.82-1.284.681-.747 1.222-1.651 1.621-2.757H14V8h-3v1.047h.765c-.318.844-.74 1.546-1.272 2.13a6 6 0 0 1-.415-.492 2 2 0 0 1-.94.31"/></svg>
-              <span>Localize across languages and regions while keeping required disclosures locked.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>
-              <span>Optimize messaging with AI-informed recommendations based on engagement data.</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="nonprofit-light-band">
+    {{include /components/industry/c1_nonprofit_specific_carousels.html}}
+    {{include /components/industry/c1_nonprofit_ai_governance_highlight.html}}
+    {{include /components/industry/c1_industry_feature_grid.html}}
+  </div>
 
-  <section class="py-6 section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <a href="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" class="nonprofit-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="audit" aria-label="Expand audit screenshot">
-            <img src="https://hj5v68xn.media.zestyio.com/Audit-Trail.ryVgSYUclx.png" alt="Audit trails for non-profit content" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Transparency &amp; reporting</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Track every change for grants, compliance, and stewardship.</h2>
-          <p class="text-gray-600 mb-4">Audit-ready logs, version history, and exportable reports provide full visibility for boards, auditors, and grant partners. Connect activity data to donor CRMs or BI tools for unified insight.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6">
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M5 10.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0-2a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
-  <path d="M3 0h10a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-1h1v1a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v1H1V2a2 2 0 0 1 2-2"/>
-  <path d="M1 5v-.5a.5.5 0 0 1 1 0V5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0V8h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1zm0 3v-.5a.5.5 0 0 1 1 0v.5h.5a.5.5 0 0 1 0 1h-2a.5.5 0 0 1 0-1z"/></svg>Exportable audit trails for grant documentation and compliance reviews.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path fill-rule="evenodd" d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5"/>
-  <path fill-rule="evenodd" d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z"/></svg>APIs send activity data to BI tools, CRMs, or stewardship dashboards.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8m4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5"/>
-  <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/></svg>Token-based authentication keeps integrations secure across partner ecosystems.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <a href="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1400&q=80" class="nonprofit-lightbox-trigger block rounded-xl overflow-hidden shadow-lg mb-4 mb-lg-0 aspect-[16/10] max-h-[440px]" data-nonprofit-lightbox="integrations" aria-label="Expand integrations image">
-            <img src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?auto=format&fit=crop&w=1200&q=80" alt="Non-profit integrations and data" class="w-full h-full object-cover">
-          </a>
-        </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Connected tech stack</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Integrates seamlessly with your grant and donor systems.</h2>
-          <p class="text-gray-600 mb-4">From donor engagement to grant reporting, Content.One works with the tools you already use so marketing, fundraising, and IT stay in sync.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-            <div class="flex-1">
-              <div class="integration-tile">
-                <span class="text-sm font-semibold text-gray-600">Salesforce NPSP</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="integration-tile">
-                <span class="text-sm font-semibold text-gray-600">Blackbaud</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="integration-tile">
-                <span class="text-sm font-semibold text-gray-600">HubSpot &amp; Marketo</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="integration-tile">
-                <span class="text-sm font-semibold text-gray-600">Google Analytics &amp; Tag Manager</span>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="integration-tile">
-                <span class="text-sm font-semibold text-gray-600">Google Ad Grants</span>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm mb-4">
-            <div class="p-6">
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M6 0a.5.5 0 0 1 .5.5V3h3V.5a.5.5 0 0 1 1 0V3h1a.5.5 0 0 1 .5.5v3A3.5 3.5 0 0 1 8.5 10c-.002.434-.01.845-.04 1.22-.041.514-.126 1.003-.317 1.424a2.08 2.08 0 0 1-.97 1.028C6.725 13.9 6.169 14 5.5 14c-.998 0-1.61.33-1.974.718A1.92 1.92 0 0 0 3 16H2c0-.616.232-1.367.797-1.968C3.374 13.42 4.261 13 5.5 13c.581 0 .962-.088 1.218-.219.241-.123.4-.3.514-.55.121-.266.193-.621.23-1.09.027-.34.035-.718.037-1.141A3.5 3.5 0 0 1 4 6.5v-3a.5.5 0 0 1 .5-.5h1V.5A.5.5 0 0 1 6 0M5 4v2.5A2.5 2.5 0 0 0 7.5 9h1A2.5 2.5 0 0 0 11 6.5V4z"/></svg>Headless APIs connect to reporting dashboards, mobile apps, or data warehouses.</li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-nonprofit mr-2" aria-hidden="true"><path d="M4 11H2v3h2zm5-4H7v7h2zm5-5v12h-2V2zm-2-1a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM6 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm-5 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1z"/></svg>Sync engagement results across CRMs, marketing automation, and analytics.</li>
-              </ul>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6">
-              <h3 class="text-base font-semibold font-semibold mb-3 text-nonprofit">Trusted by Fortune 500 and high-impact non-profits</h3>
-              <ul class="list-none m-0 p-0 grid gap-2 text-gray-600 text-sm mb-0">
-                <li>- Saves time and cost by simplifying complex digital operations.</li>
-                <li>- Enables local autonomy while ensuring global oversight.</li>
-                <li>- Delivers scalable, secure, and high-performing digital experiences.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-start">
-        <div class="lg:col-span-4">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Mission-driven success</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Non-profit leaders trust Content.One.</h2>
-          <p class="text-gray-600 mb-4">From global NGOs to national foundations, Content.One helps mission-driven teams centralize governance, accelerate storytelling, and amplify impact without scaling development costs.</p>
-          {{include /components/ctas/book-button.html}}
-        </div>
-        <div class="lg:col-span-8">
-         {{include /components/widgets/random_quotes_micro.html}}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 section-padding bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=1200&q=80" alt="Donor and volunteer engagement" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-nonprofit-subtle text-nonprofit mb-3">Trusted by mission-driven teams</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Global non-profits, foundations, and NGOs rely on Content.One.</h2>
-          <p class="text-gray-600 mb-4">Partner agencies, in-house creatives, and distributed marketing teams leverage Content.One to stay agile while protecting brand integrity.</p>
-          {{include /components/widgets/logos.html}}
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="nonprofit-demo-form" class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Free non-profit CMS assessment</h2>
-          <p class="text-lg text-gray-600 mb-0">In 20 minutes, we will show how Content.One helps large non-profits streamline governance, unify multi-site experiences, and accelerate campaigns.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <div class="bg-white rounded-lg shadow border-0 shadow-lg">
-            <div class="p-6 p-4 p-lg-5">
-              {{include /components/forms/zoho-form.html}}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  {{include /components/industry/c1_industry_industries_list.html}}
+  {{include /components/industry/c1_enterprise_callout.html}}
+  {{include /components/industry/c1_testimonial_carousel.html}}
+  {{include /components/industry/c1_industry_faq.html}}
+  {{include /components/industry/c1_industry_contact_form.html}}
 </div>
 
-<div class="modal fade nonprofit-lightbox-modal" id="nonprofitLightboxModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered modal-xl">
-    <div class="modal-content bg-transparent border-0">
-      <button type="button" class="text-gray-500 hover:text-gray-900 text-2xl leading-none cursor-pointer btn-close-white ml-auto mr-2 mt-2" data-bs-dismiss="modal" aria-label="Close"></button>
-      <div class="modal-body p-0">
-        <img src="" alt="" class="nonprofit-lightbox-image rounded-xl shadow-lg w-full h-auto">
-      </div>
-    </div>
-
 <style>
-  .nonprofit-industry-page .bg-gradient-nonprofit {
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 45%, #10b981 100%);
+  .c1-industry-page { background: #0B0F1C; }
+  /* Hero gradient — same royal → ink treatment as hospital. */
+  .c1-industry-page .c1-industry-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
+  .c1-industry-page .c1-industry-faq > summary::-webkit-details-marker { display: none; }
+  .c1-industry-page .c1-industry-faq > summary::marker { content: ""; }
+
+  .c1-industry-page .c1-industry-slide { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
+  .c1-industry-page .c1-industry-slide.is-active { opacity: 1; pointer-events: auto; }
+  .c1-industry-page .c1-industry-dot { background: #404040; transition: background 200ms; cursor: pointer; border: 0; padding: 0; }
+  .c1-industry-page .c1-industry-dot.is-active { background: #d4d4d4; }
+
+  /* Skeumorphic Featured Icon (used on the dark base theme; light-band
+     override below flips the tile fill for the light features grid). */
+  .c1-industry-page .c1-industry-feature-icon {
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
-  .nonprofit-industry-page .text-nonprofit {
-    color: #1e3a8a !important;
+  .c1-industry-page .c1-industry-feature-icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #ffffff;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
   }
-  .nonprofit-industry-page .bg-nonprofit-subtle {
-    background-color: rgba(30, 58, 138, 0.12) !important;
+
+  /* ───────────────────────────────────────────────────────────────────────
+     LIGHT BAND — same treatment as hospital. Flip carousels + AI
+     governance + feature grid to white with primary-text (#171717)
+     headings and secondary-text (#525252) body copy. Carousel overlay
+     copy inside .c1-industry-slide / .c1-industry-card stays white on
+     dark image. Feature-grid icon tile flips to lavender + royal SVG per
+     Figma 13911:8714.
+     Scoped to .nonprofit-light-band so shared blocks used by other
+     industry pages are unaffected.
+     ─────────────────────────────────────────────────────────────────────── */
+  .nonprofit-industry-page .nonprofit-light-band { background: #ffffff; }
+  .nonprofit-industry-page .nonprofit-light-band h2 { color: #171717; }
+  .nonprofit-industry-page .nonprofit-light-band p { color: #525252; }
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-features-carousels { background: #ffffff; }
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-features-carousels .c1-industry-slide h2,
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-features-carousels .c1-industry-slide p,
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-features-carousels .c1-industry-card h2,
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-features-carousels .c1-industry-card p {
+    color: #ffffff;
   }
-  .nonprofit-industry-page .nonprofit-glow {
-    position: absolute;
-    border-radius: 50%;
-    filter: blur(140px);
-    pointer-events: none;
-  }
-  .nonprofit-industry-page .nonprofit-glow--one {
-    width: 320px;
-    height: 320px;
-    background: rgba(16, 185, 129, 0.35);
-    top: -140px;
-    right: -120px;
-  }
-  .nonprofit-industry-page .nonprofit-glow--two {
-    width: 360px;
-    height: 360px;
-    background: rgba(30, 64, 175, 0.35);
-    bottom: -160px;
-    left: -140px;
-  }
-  .nonprofit-carousel-img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-  }
-  @media (max-width: 576px) {
-    .nonprofit-carousel-img {
-      height: 240px;
-    }
-  }
-  .integration-tile {
+
+  /* Feature grid sub-A — Figma 13911:8713/8714 tokens. */
+  .nonprofit-industry-page .nonprofit-light-band > section.bg-black { background: #ffffff !important; }
+  .nonprofit-industry-page .nonprofit-light-band > section.bg-black h2 { color: #171717; }
+  .nonprofit-industry-page .nonprofit-light-band > section.bg-black > div > div.max-w-3xl p { color: #525252; }
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-feature-card {
     background: #ffffff;
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 1rem;
-    padding: 1.25rem;
-    box-shadow: 0 0.75rem 2rem rgba(15, 23, 42, 0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 96px;
+    border-color: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   }
-  .nonprofit-lightbox-trigger {
-    position: relative;
-    cursor: zoom-in;
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-feature-card .font-body.font-semibold { color: #171717; }
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-feature-card p:not(.font-semibold) { color: #525252; }
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-feature-icon {
+    background-color: #d8dcf3 !important;
+    border: 0 !important;
+    box-shadow: none;
   }
-  .nonprofit-lightbox-modal .modal-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .nonprofit-industry-page .nonprofit-light-band .c1-industry-feature-icon-img { background-color: #4255BD; }
+
+  /* Contact form overrides — same treatment as hospital (Figma 14031:569492). */
+  .c1-industry-page .c1-industry-form-wrap form.needs-validation { gap: 1.5rem; }
+  .c1-industry-page .c1-industry-form-wrap label { color: #404040; font-weight: 500; }
+  .c1-industry-page .c1-industry-form-wrap textarea { min-height: 8rem; resize: vertical; }
+  .c1-industry-page .c1-industry-form-wrap button[type="submit"] {
+    background-color: #31429b;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 0.75rem 1.125rem;
+    border-radius: 9999px;
+    border: 2px solid rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
-  .nonprofit-lightbox-modal .modal-content {
-    background: rgba(15, 23, 42, 0.92);
-    backdrop-filter: blur(4px);
-  }
-  .nonprofit-industry-page .card h2,
-  .nonprofit-industry-page .card h3 {
-    color: #0f172a;
-  }
-  .nonprofit-industry-page .card .text-grey,
-  .nonprofit-industry-page .text-grey {
-    color: #64748b;
-  }
+  .c1-industry-page .c1-industry-form-wrap button[type="submit"]:hover { background-color: #2F3F94; }
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    var modalEl = document.getElementById('nonprofitLightboxModal');
-    if (!modalEl) return;
-    if (typeof bootstrap === 'undefined' || !bootstrap.Modal) return;
-
-    var modalImg = modalEl.querySelector('.nonprofit-lightbox-image');
-    if (!modalImg) return;
-
-    var lightboxModal = new bootstrap.Modal(modalEl, { focus: true });
-    document.querySelectorAll('.nonprofit-lightbox-trigger').forEach(function (trigger) {
-      trigger.addEventListener('click', function (event) {
-        event.preventDefault();
-        var targetSrc = trigger.getAttribute('href');
-        var innerImage = trigger.querySelector('img');
-        var imgAlt = innerImage ? innerImage.getAttribute('alt') : 'Expanded screenshot';
-        modalImg.src = targetSrc;
-        modalImg.alt = imgAlt || 'Expanded screenshot';
-        lightboxModal.show();
+  // Industry-specific carousel — same JS as hospital orchestrator, operates on
+  // every .c1-industry-carousel element. Auto-advances while in viewport, pauses
+  // on hover, and supports dot-click jumps.
+  (function () {
+    function initCarousel(el) {
+      var slides = el.querySelectorAll('.c1-industry-slide');
+      if (slides.length === 0) return;
+      var interval = parseInt(el.getAttribute('data-interval'), 10) || 3000;
+      var current = 0;
+      var timer = null;
+      var inView = false;
+      var hovered = false;
+      function show(i) {
+        slides[current].classList.remove('is-active');
+        current = ((i % slides.length) + slides.length) % slides.length;
+        slides[current].classList.add('is-active');
+      }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function maybeStart() {
+        stop();
+        if (inView && !hovered) {
+          timer = setInterval(function () { show(current + 1); }, interval);
+        }
+      }
+      el.querySelectorAll('.c1-industry-dot').forEach(function (d) {
+        d.addEventListener('click', function () {
+          show(parseInt(d.getAttribute('data-dot'), 10) || 0);
+          maybeStart();
+        });
       });
-    });
+      el.addEventListener('mouseenter', function () { hovered = true; stop(); });
+      el.addEventListener('mouseleave', function () { hovered = false; maybeStart(); });
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            inView = entry.isIntersecting;
+            maybeStart();
+          });
+        }, { root: null, rootMargin: '0px 0px -25% 0px', threshold: 0 });
+        io.observe(el);
+      } else {
+        inView = true;
+        maybeStart();
+      }
+    }
+    function init() {
+      document.querySelectorAll('.c1-industry-carousel').forEach(initCarousel);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 
-    modalEl.addEventListener('hidden.bs.modal', function () {
-      modalImg.src = '';
-      modalImg.alt = '';
-    });
-  });
+  // Testimonial carousel — click prev/next to cycle quote + attribution + image.
+  // Same 3-quote roster as hospital (Salvation Army / Sony / Psyonix) — leaves
+  // room to swap in nonprofit-heavy testimonials in a later pass.
+  (function () {
+    var testimonials = [
+      {
+        quote: "“Load times have improved dramatically, and stability has been night and day compared to our old platform. We’ve seen a 50% increase in traffic and double the location-search activity since launch.”",
+        name: "Andrew Dobney",
+        title: "Director of Digital Strategy",
+        company: "The Salvation Army",
+        image: "https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg"
+      },
+      {
+        quote: "“By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months.”",
+        name: "Matthew Parnell",
+        title: "MARCOM Manager",
+        company: "Sony Electronics",
+        image: "https://hj5v68xn.media.zestyio.com/matt.jpg"
+      },
+      {
+        quote: "“Community polls, audio players, and other cool widgets snap into place on Content.One. We can brand everything without waiting on developers.”",
+        name: "Kyle Lemmon",
+        title: "Marketing Manager",
+        company: "Psyonix",
+        image: "https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg"
+      }
+    ];
+    function initTestimonial(section) {
+      var quoteEl = section.querySelector('[data-testimonial-quote]');
+      var nameTitleEl = section.querySelector('[data-testimonial-name-title]');
+      var companyEl = section.querySelector('[data-testimonial-company]');
+      var avatarEls = section.querySelectorAll('[data-testimonial-avatar], [data-testimonial-portrait]');
+      var prevBtn = section.querySelector('[data-testimonial-prev]');
+      var nextBtn = section.querySelector('[data-testimonial-next]');
+      if (!quoteEl || !nameTitleEl || !companyEl || !prevBtn || !nextBtn) return;
+      var i = 0;
+      function render() {
+        var t = testimonials[i];
+        quoteEl.textContent = t.quote;
+        nameTitleEl.textContent = t.name + ', ' + t.title;
+        companyEl.textContent = t.company;
+        avatarEls.forEach(function (img) {
+          img.src = t.image;
+          img.alt = t.name + ', ' + t.title + ' at ' + t.company;
+        });
+      }
+      function go(delta) {
+        i = (i + delta + testimonials.length) % testimonials.length;
+        render();
+      }
+      prevBtn.addEventListener('click', function () { go(-1); });
+      nextBtn.addEventListener('click', function () { go(1); });
+    }
+    function init() {
+      document.querySelectorAll('[data-testimonial-carousel]').forEach(initTestimonial);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', init);
+    } else {
+      init();
+    }
+  })();
 </script>
