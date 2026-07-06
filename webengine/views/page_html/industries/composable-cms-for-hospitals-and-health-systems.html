@@ -49,8 +49,26 @@
 
 <style>
   .c1-industry-page { background: #0B0F1C; }
-  /* Hero gradient — Figma 13759:27117. Top-to-bottom #19214e → #060813. */
+  /* Hero gradient — Figma 13759:27117. Top-to-bottom #19214e → #060813.
+     Hospital hero adds a scoped photo overlay at 12% on top of the
+     gradient (per bobby) via a ::before pseudo-element. Copy inside the
+     hero already sits inside relative-positioned wrappers, so bumping
+     the layer above the overlay just needs the overlay to be aria-hidden
+     and z-index: 0 with the rest of the hero content on z-index: 1. */
   .c1-industry-page .c1-industry-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
+  .hospital-industry-page .c1-industry-hero { position: relative; isolation: isolate; }
+  .hospital-industry-page .c1-industry-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://hj5v68xn.media.zestyio.com/pexels-juan-moccagatta-2159466094-36595248.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hospital-industry-page .c1-industry-hero > * { position: relative; z-index: 1; }
   .c1-industry-page .c1-industry-faq > summary::-webkit-details-marker { display: none; }
   .c1-industry-page .c1-industry-faq > summary::marker { content: ""; }
 
