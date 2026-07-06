@@ -1,263 +1,264 @@
 <!--
-  Franchise & chain brands industry page — composed from the reusable
-  industry Blocks (with 5 franchise variants forked for on-audience
-  copy) matching the hospital / non-profits / insurance orchestrators'
-  dark/light rhythm exactly:
-
-    DARK  — hero (franchise variant, gradient royal + photo overlay)
-    DARK  — social proof (shared reversed-logo strip)
-    DARK  — industry-specific carousels (franchise variant, location +
-              campaign + coordinated-launch copy)
-    DARK  — AI governance highlight (franchise variant, corporate +
-              legal + board copy)
-    LIGHT — feature grid (shared 6-card grid, icons render brand-royal
-              on the lavender tile per Figma 13911:8714)
-    DARK  — industries list (franchise variant, leads with Hospitals &
-              health systems to cross-signal breadth)
-    DARK  — enterprise callout / testimonial / FAQ (franchise variant,
-              generic base ready for franchise-specific Q&As later)
-    LIGHT — contact form ("Take Content.One further" per Figma 14031:569492)
-
-  Hero copy uses kaya's approved PR #49 spec:
-    - H1: "A franchise CMS that streamlines content operations."
-    - Subhead: "Finally, an AI-driven franchise website builder..."
-    - Primary CTA: "Launch Today" → https://launch.content.one
-
-  Block roster:
-    1. c1_franchise_hero              — franchise variant of hero
-    2. c1_industry_social_proof       — shared (Figma 13863:10628)
-    3. c1_franchise_specific_carousels — franchise variant of carousels
-    4. c1_franchise_ai_governance_highlight — franchise variant
-    5. c1_industry_feature_grid       — shared (Figma 13771:3583)
-   5b. c1_franchise_industries_list   — franchise variant (leads with hospitals)
-    6. c1_enterprise_callout          — shared (Figma 13781:4251)
-    7. c1_testimonial_carousel        — shared (Figma 13782:4694)
-    8. c1_franchise_industry_faq      — franchise variant (generic base, ready to author)
-    9. c1_industry_contact_form       — shared (Figma 14031:569492)
-
-  Loader provides nav + footer; this view is just the page body.
+  Franchise & chain brands industry page.
+  Loader (views/industries) provides nav + footer; this is just the page body.
+  Visual language mirrors the hospital industry page (hospital-figma branch):
+  dark base, royal accents, light social-proof slab, alternating feature rows.
 -->
-<div class="c1-industry-page franchise-industry-page bg-ink text-white">
-  {{include /components/industry/c1_franchise_hero.html}}
-  {{include /components/industry/c1_industry_social_proof.html}}
+<div class="franchise-industry-page bg-ink text-white">
 
-  <div class="franchise-light-band">
-    {{include /components/industry/c1_franchise_specific_carousels.html}}
-    {{include /components/industry/c1_franchise_ai_governance_highlight.html}}
-    {{include /components/industry/c1_industry_feature_grid.html}}
-  </div>
+  <!-- ════════════ HERO ════════════ -->
+  <section class="franchise-hero relative overflow-hidden">
+    <div class="max-w-7xl mx-auto lg:max-w-none">
+      <div class="flex flex-col lg:flex-row items-stretch">
 
-  {{include /components/industry/c1_franchise_industries_list.html}}
-  {{include /components/industry/c1_enterprise_callout.html}}
-  {{include /components/industry/c1_testimonial_carousel.html}}
-  {{include /components/industry/c1_franchise_industry_faq.html}}
-  {{include /components/industry/c1_industry_contact_form.html}}
+        <div class="flex-1 min-w-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
+          <div class="w-full max-w-[480px] lg:max-w-[640px] mx-auto lg:ml-auto lg:mr-0">
+            <span class="inline-flex items-center px-2 py-0.5 rounded-full bg-[#fafafa] border border-[#e5e5e5] text-xs font-medium text-[#404040] mb-4">Franchise &amp; chain brands</span>
+            <h1 class="font-display font-semibold text-white
+                       text-[30px] leading-[38px]
+                       md:text-[36px] md:leading-[44px] md:tracking-[-0.72px]
+                       lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px]
+                       mb-6">Fast local marketing, without losing brand control.</h1>
+            <p class="text-[#b1bae7]
+                      text-sm leading-5 tracking-[0.14px]
+                      md:text-base md:leading-6 md:tracking-normal
+                      lg:text-xl lg:leading-[30px]
+                      mb-8 lg:mb-12">Content.One is built for franchise systems and chain brands where content has to stay on-brand, publish fast, and scale across dozens — or thousands — of locations. Corporate teams move quickly; franchisees and field marketers execute locally — without creating brand chaos.</p>
+
+            <form class="flex flex-col sm:flex-row gap-4 sm:gap-3 items-stretch sm:items-start" action="/contact-us/" method="get">
+              <div class="flex-1 min-w-0">
+                <input type="email" name="email" placeholder="Enter your email" required
+                       class="block w-full bg-white border border-[#d4d4d4] rounded-lg px-3.5 py-3 text-base text-[#171717] placeholder:text-[#737373] shadow-sm focus:outline-none focus:border-royal focus:ring-2 focus:ring-royal/30" />
+                <p class="mt-2 text-sm text-[#b1bae7]">We care about your data in our <a href="/privacy-policy/" class="underline decoration-[#d4d4d4] hover:text-white">privacy policy</a>.</p>
+              </div>
+              <a href="#franchise-demo-form" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-[18px] py-3 text-base shadow-sm border-2 border-white/[0.12] transition shrink-0 sm:self-start">Book a demo</a>
+            </form>
+          </div>
+        </div>
+
+        <div class="relative lg:flex-1 lg:min-w-0 lg:self-stretch">
+          <div class="px-6 sm:px-8 md:px-12 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
+            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.png"
+                 alt="Content.One dashboard preview for franchise marketing teams"
+                 class="block mx-auto rounded-xl border border-white/10 shadow-2xl shadow-black/40 object-cover
+                        w-full max-w-[480px]
+                        md:max-w-[640px]
+                        lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] lg:rounded-none lg:border-0 lg:shadow-none" />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SOCIAL PROOF ════════════ -->
+  <section class="bg-[#eceef9] py-24">
+    <div class="max-w-7xl mx-auto px-8 flex flex-col items-center md:items-start gap-8">
+      <p class="text-sm leading-5 md:text-base md:leading-6 lg:text-xl lg:leading-[30px] font-semibold text-[#171717] text-center w-full max-w-[480px] md:max-w-none mx-auto">Trusted by enterprise marketing, brand, and field operations teams.</p>
+      <div class="flex flex-wrap items-center justify-center gap-8 w-full max-w-[480px] md:max-w-none mx-auto md:mx-0 md:px-0 px-8">
+        <img src="https://hj5v68xn.media.zestyio.com/The_Salvation_Army.svg.B1cJ5BL9le.png" alt="The Salvation Army" class="shrink-0 object-contain" width="61" height="72" style="width:61px;height:72px;">
+        <img src="https://hj5v68xn.media.zestyio.com/sonyHero.svg" alt="Sony" class="shrink-0 object-contain" width="114" height="40" style="width:114px;height:40px;">
+        <img src="https://hj5v68xn.media.zestyio.com/singlifeHero.svg" alt="Singlife" class="shrink-0 object-contain" width="129" height="40" style="width:129px;height:40px;">
+        <img src="https://hj5v68xn.media.zestyio.com/phoenixSunsHero.svg" alt="Phoenix Suns" class="shrink-0 object-contain" width="76" height="74" style="width:76px;height:74px;">
+        <img src="https://hj5v68xn.media.zestyio.com/Wattpad_Vertical_Logo_Orange_RGB.png" alt="Wattpad" class="shrink-0 object-contain" width="70" height="60" style="width:70px;height:60px;">
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES 1 — Move faster at the corporate level ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6">
+          <div class="relative rounded-2xl overflow-hidden border border-white/10 shadow-xl shadow-black/40 bg-white">
+            <img src="https://hj5v68xn.media.zestyio.com/Blocks.png" alt="Reusable Blocks publishing across every location site" class="w-full block">
+          </div>
+        </div>
+        <div class="lg:col-span-6 lg:pl-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Corporate speed</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Move faster at the corporate level.</h2>
+          <p class="text-lg text-white/70 mb-6">Launch national campaigns once and distribute them across every location, region, and brand site — without the bottleneck queue of edits between marketing, web teams, agencies, and IT.</p>
+          <ul class="list-none m-0 p-0 grid gap-3 text-white/80">
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Launch a campaign once and roll it out to every location site or page.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Reuse structured content for promos, menus, services, events, landing pages, and seasonal offers.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Update globally in minutes — hours of manual edits become one controlled change.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Reduce the back-and-forth between marketing, web teams, agencies, and IT.</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES 2 — Enable local teams ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div class="lg:col-span-6 lg:order-1 order-2 lg:pr-6">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold text-royalLite tracking-wider uppercase mb-4">Local execution</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-4">Enable local teams, without risking the brand.</h2>
+          <p class="text-lg text-white/70 mb-6">Give franchisees and field marketers a path to publish quickly and consistently. Guardrails on what they can edit keep every page on-brand, regardless of who's behind the keyboard.</p>
+          <ul class="list-none m-0 p-0 grid gap-3 text-white/80">
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Brand-approved templates franchisees can publish from, with no learning curve.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Guardrails for local edits — hours, specials, staff, events — without breaking layout or messaging.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Role-based access so each franchisee edits only what they should — and nothing they shouldn't.</span></li>
+            <li class="flex items-start gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite mt-0.5 shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span>Approval workflows for changes that require corporate oversight before they go live.</span></li>
+          </ul>
+        </div>
+        <div class="lg:col-span-6 lg:order-2 order-1">
+          <div class="rounded-2xl overflow-hidden border border-white/10 bg-white shadow-xl shadow-black/40">
+            <img src="https://hj5v68xn.media.zestyio.com/accounts-base-roles.png" alt="Role-based access for franchisees and field editors" class="w-full block">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES 3 — Built for multi-location scale ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Built for multi-location scale.</h2>
+        <p class="text-lg text-white/70 m-0">The platform stays organized as you grow — from a regional chain to a thousand-location system — without forcing a rebuild of your stack.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-6">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Location-driven content modeling.</h3>
+          <p class="text-white/65 text-sm m-0">Store pages, regions, and service areas modeled as structured content — so the right data shows up automatically as you add, merge, or close locations.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-6">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Consistent SEO at scale.</h3>
+          <p class="text-white/65 text-sm m-0">Standardized page structures and structured-data-friendly content keep every location, region, and brand site discoverable — without per-location SEO drift.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-6">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Multi-user collaboration.</h3>
+          <p class="text-white/65 text-sm m-0">Corporate marketing, franchisees, agencies, and support teams work in the same platform — with the access, workflows, and review steps your brand requires.</p>
+        </article>
+        <article class="rounded-2xl border border-white/10 bg-white/[0.03] p-7">
+          <div class="w-12 h-12 rounded-lg bg-royal/20 text-royalLite flex items-center justify-center mb-6">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold mb-3">Flexible delivery.</h3>
+          <p class="text-white/65 text-sm m-0">Multi-site, headless, or hybrid — Content.One fits your architecture without forcing a rebuild of your whole stack. REST + GraphQL APIs, your front end of choice.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ WHAT YOU GET ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">What you get.</h2>
+        <p class="text-lg text-white/70 m-0">An enterprise CMS built around the realities of franchise and chain operations — control where you need it, speed where you don't.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 max-w-5xl mx-auto">
+        <ul class="list-none m-0 p-0 grid gap-5 text-white/85">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Corporate-controlled templates with field-level guardrails</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Location, region, and brand content models out of the box</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Role-based access for franchisees, agencies, and corporate teams</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Approval workflows scoped to the change, not the user</span></li>
+        </ul>
+        <ul class="list-none m-0 p-0 grid gap-5 text-white/85">
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Bulk-publish a campaign across every location site in one click</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Standardized SEO patterns and structured data per location</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Headless, multi-site, or hybrid delivery — your front end, your call</span></li>
+          <li class="flex items-center gap-3"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royalLite shrink-0" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg><span class="font-semibold">Dedicated support, migration engineering, and 99.99% uptime SLA</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12 lg:mb-16">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Frequently asked questions</h2>
+        <p class="text-lg text-white/70 m-0">Questions that come up most often with franchise and chain operations evaluating Content.One.</p>
+      </div>
+
+      <div class="max-w-3xl mx-auto grid gap-0 divide-y divide-white/10">
+        <details open class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How do you support both corporate control and local flexibility?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Templates, fields, and components are scoped by role. Corporate locks the parts of the page that have to stay consistent — disclaimers, brand voice, layout — and opens the rest to franchisees and field marketers. Locals never see what they're not supposed to touch.</p>
+        </details>
+        <details class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">Can a single campaign go out to every location at once?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Yes. Schedule a national campaign once at the system level and it propagates to every location site automatically. Locations can stage and preview before it goes live; corporate sees a single status across the rollout.</p>
+        </details>
+        <details class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How does Content.One handle franchisee onboarding?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">New franchisees get a pre-scoped role, a set of templates, and access to only the location records that belong to them. SSO and SCIM provisioning are included, so adding or removing a franchisee is a single change in your IdP.</p>
+        </details>
+        <details class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">Does it work with our existing front end?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Yes — Content.One is composable, headless, or hybrid. REST + GraphQL APIs and structured content models mean your existing Next.js, React, or proprietary front end can read from Content.One without a rewrite.</p>
+        </details>
+        <details class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">How is SEO managed across thousands of location pages?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Location, region, and service-area structured data is built into the content model — so every location page ships with consistent metadata, schema.org markup, and canonical patterns. Corporate sets the patterns once; every page follows.</p>
+        </details>
+        <details class="franchise-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-6 list-none">
+            <span class="font-semibold text-lg">What's included in enterprise pricing?</span>
+            <span class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center shrink-0 transition group-open:rotate-45"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-white/70 pb-6 m-0">Dedicated support management, a 99.99% uptime SLA, named on-call engineers, migration engineering against your timeline, single tenancy, SOC 2 Type II, and bring-your-own-model AI. Volume packaging is sized to the number of locations and brands you operate.</p>
+        </details>
+      </div>
+
+      <div class="mt-16 text-center max-w-2xl mx-auto">
+        <h3 class="font-display text-2xl font-semibold mb-2">Book a Demo</h3>
+        <p class="text-white/65 mb-6">30 minutes with our team, scoped to your franchise or chain footprint.</p>
+        <a href="#franchise-demo-form" class="inline-flex items-center justify-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition">Schedule a Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CONTACT ════════════ -->
+  <section id="franchise-demo-form" class="py-16 lg:py-24 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-center font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-12 lg:mb-16">Take Content.One Further</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 max-w-6xl mx-auto items-start">
+        <div>
+          <h3 class="font-display text-3xl font-bold mb-4">Talk to a Content Expert</h3>
+          <p class="text-white/65 m-0">For franchise and chain teams ready to scope packaging, contractual terms, and migration across every location, region, and brand.</p>
+        </div>
+        <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-8">
+          {{include /components/forms/zoho-form.html}}
+        </div>
+      </div>
+    </div>
+  </section>
+
 </div>
 
 <style>
-  .c1-industry-page { background: #0B0F1C; }
-  /* Hero gradient — same royal → ink treatment as hospital / non-profits /
-     insurance. Franchise hero can carry a photo overlay via ::before once
-     bobby supplies the image URL (same pattern as the other 3 pages). */
-  .c1-industry-page .c1-industry-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
-  .c1-industry-page .c1-industry-faq > summary::-webkit-details-marker { display: none; }
-  .c1-industry-page .c1-industry-faq > summary::marker { content: ""; }
-
-  .c1-industry-page .c1-industry-slide { opacity: 0; transition: opacity 400ms ease; pointer-events: none; }
-  .c1-industry-page .c1-industry-slide.is-active { opacity: 1; pointer-events: auto; }
-  .c1-industry-page .c1-industry-dot { background: #404040; transition: background 200ms; cursor: pointer; border: 0; padding: 0; }
-  .c1-industry-page .c1-industry-dot.is-active { background: #d4d4d4; }
-
-  /* Skeumorphic Featured Icon (used on the dark base theme; light-band
-     override below flips the tile fill for the light features grid). */
-  .c1-industry-page .c1-industry-feature-icon {
-    box-shadow:
-      0 1px 2px 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
-  }
-  .c1-industry-page .c1-industry-feature-icon-img {
-    width: 24px;
-    height: 24px;
-    display: block;
-    background-color: #ffffff;
-    -webkit-mask: var(--icon-url) center / contain no-repeat;
-    mask: var(--icon-url) center / contain no-repeat;
-  }
-
-  /* ───────────────────────────────────────────────────────────────────────
-     LIGHT BAND — same treatment as hospital / non-profits / insurance.
-     Flip carousels + AI governance + feature grid to white with primary-
-     text (#171717) headings and secondary-text (#525252) body copy.
-     Carousel overlay copy inside .c1-industry-slide / .c1-industry-card
-     stays white on dark image. Feature-grid icon tile flips to lavender
-     + royal SVG per Figma 13911:8714. Scoped to .franchise-light-band so
-     shared blocks used by other industry pages are unaffected.
-     ─────────────────────────────────────────────────────────────────────── */
-  .franchise-industry-page .franchise-light-band { background: #ffffff; }
-  .franchise-industry-page .franchise-light-band h2 { color: #171717; }
-  .franchise-industry-page .franchise-light-band p { color: #525252; }
-  .franchise-industry-page .franchise-light-band .c1-industry-features-carousels { background: #ffffff; }
-  .franchise-industry-page .franchise-light-band .c1-industry-features-carousels .c1-industry-slide h2,
-  .franchise-industry-page .franchise-light-band .c1-industry-features-carousels .c1-industry-slide p,
-  .franchise-industry-page .franchise-light-band .c1-industry-features-carousels .c1-industry-card h2,
-  .franchise-industry-page .franchise-light-band .c1-industry-features-carousels .c1-industry-card p {
-    color: #ffffff;
-  }
-
-  /* Feature grid sub-A — Figma 13911:8713/8714 tokens. */
-  .franchise-industry-page .franchise-light-band > section.bg-black { background: #ffffff !important; }
-  .franchise-industry-page .franchise-light-band > section.bg-black h2 { color: #171717; }
-  .franchise-industry-page .franchise-light-band > section.bg-black > div > div.max-w-3xl p { color: #525252; }
-  .franchise-industry-page .franchise-light-band .c1-industry-feature-card {
-    background: #ffffff;
-    border-color: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  }
-  .franchise-industry-page .franchise-light-band .c1-industry-feature-card .font-body.font-semibold { color: #171717; }
-  .franchise-industry-page .franchise-light-band .c1-industry-feature-card p:not(.font-semibold) { color: #525252; }
-  .franchise-industry-page .franchise-light-band .c1-industry-feature-icon {
-    background-color: #d8dcf3 !important;
-    border: 0 !important;
-    box-shadow: none;
-  }
-  .franchise-industry-page .franchise-light-band .c1-industry-feature-icon-img { background-color: #4255BD; }
-
-  /* Contact form overrides — same treatment as hospital / non-profits /
-     insurance (Figma 14031:569492). */
-  .c1-industry-page .c1-industry-form-wrap form.needs-validation { gap: 1.5rem; }
-  .c1-industry-page .c1-industry-form-wrap label { color: #404040; font-weight: 500; }
-  .c1-industry-page .c1-industry-form-wrap textarea { min-height: 8rem; resize: vertical; }
-  .c1-industry-page .c1-industry-form-wrap button[type="submit"] {
-    background-color: #31429b;
-    color: #ffffff;
-    font-weight: 600;
-    padding: 0.75rem 1.125rem;
-    border-radius: 9999px;
-    border: 2px solid rgba(255, 255, 255, 0.12);
-    box-shadow:
-      0 1px 2px 0 rgba(0, 0, 0, 0.05),
-      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
-      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
-  }
-  .c1-industry-page .c1-industry-form-wrap button[type="submit"]:hover { background-color: #2F3F94; }
+  .franchise-industry-page { background: #0B0F1C; }
+  .franchise-industry-page .franchise-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
+  .franchise-industry-page .franchise-faq > summary::-webkit-details-marker { display: none; }
+  .franchise-industry-page .franchise-faq > summary::marker { content: ""; }
 </style>
-
-<script>
-  // Industry-specific carousel — same JS as the other 3 industry orchestrators,
-  // operates on every .c1-industry-carousel element. Auto-advances while in
-  // viewport, pauses on hover, and supports dot-click jumps.
-  (function () {
-    function initCarousel(el) {
-      var slides = el.querySelectorAll('.c1-industry-slide');
-      if (slides.length === 0) return;
-      var interval = parseInt(el.getAttribute('data-interval'), 10) || 3000;
-      var current = 0;
-      var timer = null;
-      var inView = false;
-      var hovered = false;
-      function show(i) {
-        slides[current].classList.remove('is-active');
-        current = ((i % slides.length) + slides.length) % slides.length;
-        slides[current].classList.add('is-active');
-      }
-      function stop() { if (timer) { clearInterval(timer); timer = null; } }
-      function maybeStart() {
-        stop();
-        if (inView && !hovered) {
-          timer = setInterval(function () { show(current + 1); }, interval);
-        }
-      }
-      el.querySelectorAll('.c1-industry-dot').forEach(function (d) {
-        d.addEventListener('click', function () {
-          show(parseInt(d.getAttribute('data-dot'), 10) || 0);
-          maybeStart();
-        });
-      });
-      el.addEventListener('mouseenter', function () { hovered = true; stop(); });
-      el.addEventListener('mouseleave', function () { hovered = false; maybeStart(); });
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            inView = entry.isIntersecting;
-            maybeStart();
-          });
-        }, { root: null, rootMargin: '0px 0px -25% 0px', threshold: 0 });
-        io.observe(el);
-      } else {
-        inView = true;
-        maybeStart();
-      }
-    }
-    function init() {
-      document.querySelectorAll('.c1-industry-carousel').forEach(initCarousel);
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-  })();
-
-  // Testimonial carousel — click prev/next to cycle quote + attribution + image.
-  // Same 3-quote roster as hospital / non-profits / insurance.
-  (function () {
-    var testimonials = [
-      {
-        quote: "“Load times have improved dramatically, and stability has been night and day compared to our old platform. We’ve seen a 50% increase in traffic and double the location-search activity since launch.”",
-        name: "Andrew Dobney",
-        title: "Director of Digital Strategy",
-        company: "The Salvation Army",
-        image: "https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg"
-      },
-      {
-        quote: "“By using Content.One as our CMS, we were able to soft launch in six weeks and fully launch within two months.”",
-        name: "Matthew Parnell",
-        title: "MARCOM Manager",
-        company: "Sony Electronics",
-        image: "https://hj5v68xn.media.zestyio.com/matt.jpg"
-      },
-      {
-        quote: "“Community polls, audio players, and other cool widgets snap into place on Content.One. We can brand everything without waiting on developers.”",
-        name: "Kyle Lemmon",
-        title: "Marketing Manager",
-        company: "Psyonix",
-        image: "https://hj5v68xn.media.zestyio.com/kyle-lemon.jpg"
-      }
-    ];
-    function initTestimonial(section) {
-      var quoteEl = section.querySelector('[data-testimonial-quote]');
-      var nameTitleEl = section.querySelector('[data-testimonial-name-title]');
-      var companyEl = section.querySelector('[data-testimonial-company]');
-      var avatarEls = section.querySelectorAll('[data-testimonial-avatar], [data-testimonial-portrait]');
-      var prevBtn = section.querySelector('[data-testimonial-prev]');
-      var nextBtn = section.querySelector('[data-testimonial-next]');
-      if (!quoteEl || !nameTitleEl || !companyEl || !prevBtn || !nextBtn) return;
-      var i = 0;
-      function render() {
-        var t = testimonials[i];
-        quoteEl.textContent = t.quote;
-        nameTitleEl.textContent = t.name + ', ' + t.title;
-        companyEl.textContent = t.company;
-        avatarEls.forEach(function (img) {
-          img.src = t.image;
-          img.alt = t.name + ', ' + t.title + ' at ' + t.company;
-        });
-      }
-      function go(delta) {
-        i = (i + delta + testimonials.length) % testimonials.length;
-        render();
-      }
-      prevBtn.addEventListener('click', function () { go(-1); });
-      nextBtn.addEventListener('click', function () { go(1); });
-    }
-    function init() {
-      document.querySelectorAll('[data-testimonial-carousel]').forEach(initTestimonial);
-    }
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', init);
-    } else {
-      init();
-    }
-  })();
-</script>
