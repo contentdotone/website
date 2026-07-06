@@ -1,0 +1,236 @@
+<!-- C1 Nonprofit Industry FAQ — used on the non-profits industry page.
+     Same layout as c1_hospital_industry_faq.html (Figma 13799:6181):
+     centered heading, <details name=> accordion (one open at a time via
+     the shared name), plus/minus icon toggle, Book-a-Demo trio-portrait
+     card below. 18 FAQ items authored specifically for enterprise
+     non-profits. Some answers carry [bracketed] notes flagging claims
+     kaya/bobby need to confirm (certifications, migration timelines)
+     before publishing. -->
+<section class="bg-[#060813] py-24">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-16">
+
+    <!-- Heading + subhead, centered -->
+    <div class="flex flex-col gap-5 items-center text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Frequently asked questions</h2>
+      <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">Questions that come up most often when enterprise non-profits, foundations, and NGOs evaluate Content.One.</p>
+    </div>
+
+    <!-- FAQ accordion list — 18 non-profit-authored items -->
+    <div class="max-w-3xl mx-auto w-full flex flex-col gap-8">
+
+      <details open name="c1-nonprofit-faq" class="c1-industry-faq group">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What makes Content.One different from a traditional CMS like WordPress or Drupal?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Traditional platforms couple content to a single site, which is why multi-chapter non-profits end up maintaining dozens of separate installations — each with its own plugins, patches, and version drift. Content.One is a federated platform: one governed content system powering all of your properties, with automatic security updates, global CDN hosting, and APIs that deliver content to websites, mobile apps, chatbots, and reporting tools. Headquarters keeps governance tight while chapters and partners publish confidently.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Do our editors and chapter volunteers need to be technical?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">No. Editors work with visual drag-and-drop pages, WYSIWYG authoring, and pre-approved Blocks &mdash; no code required. Developers set up templates and components once; after that, program staff, chapter communicators, and volunteers publish independently. That&rsquo;s the &ldquo;without a dev army&rdquo; promise: local autonomy without local IT overhead.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What are Blocks, and why do they matter for non-profits?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Blocks are reusable, centrally governed components &mdash; donation forms, impact story layouts, event listings, compliance disclosures &mdash; that chapters assemble into pages. Because Blocks are shared, a change to your donation form or a required legal disclosure updates everywhere at once, and local teams can&rsquo;t accidentally break brand or compliance standards while building their own pages.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">We have dozens of chapters and affiliates. Can each manage its own site?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes &mdash; this is Content.One&rsquo;s core architecture. Each chapter, region, or partner agency gets its own site spun up from pre-approved templates and Blocks, with scoped access to edit only what belongs to them. Headquarters cascades global content &mdash; campaign messaging, policy statements, crisis updates &mdash; instantly across every property, while locals tailor stories, events, and calls to action for their communities.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How do we keep brand and compliance consistent across all locations?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Granular roles for staff, volunteers, partners, and agencies determine exactly who can edit what. Approval workflows route sensitive changes through review, version history makes every edit reversible, and audit logs record every change. Legal and fundraising teams stay aligned with regional editors without becoming a bottleneck.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How fast can we launch a new chapter site, campaign site, or volunteer hub?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Days, not months. Because new sites start from pre-approved templates and shared Blocks, spinning up a program site, fundraiser, or event hub doesn&rsquo;t require a development cycle &mdash; chapters launch brand-aligned, compliant experiences on their own timeline.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Does Content.One support multiple languages and regions?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. Built-in multilingual and localization tools let you manage translations across regions, and agentic AI can accelerate localization while keeping required disclosures locked in every language. Regional compliance and data residency requirements are supported for international federations.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Can we build a searchable directory of chapters, service locations, or partners?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes &mdash; Global Directory is a dedicated Content.One solution. Each chapter, clinic, or partner organization becomes a structured, filterable record with location data, services, hours, and contacts. Because the directory is API-driven, the same records can power a &ldquo;find help near you&rdquo; locator on your main site, chapter sites, and a mobile app simultaneously.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Who keeps hundreds of directory records accurate?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">You can delegate maintenance: each chapter or partner updates its own record within fields headquarters defines, with optional approval workflows before changes go live. Stale hours and dead phone numbers are a governance problem, and scoped editing solves it without creating a headquarters bottleneck.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What is a Story Hub, and why do enterprise non-profits build one?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Story Hub centralizes your impact stories, testimonials, photos, and video into one tagged, searchable library the whole organization draws from. Instead of stories scattered across chapter sites and shared drives, development, communications, and chapters find and reuse the right story in seconds &mdash; on landing pages, donor emails, grant reports, and social.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does Content.One&rsquo;s AI help our small communications team?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Agentic AI drafts donor appeals, volunteer outreach, and impact recaps inside your governance guardrails &mdash; so generated content stays on-brand and required disclosures stay locked. It also translates updates for regional audiences and surfaces AI-informed recommendations based on engagement data. The goal is acceleration, not autopilot: workflows and approvals still apply.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Can we add an AI chatbot so supporters can find answers themselves?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. The Org AI Chatbot solution turns your governed content into a conversational assistant &mdash; answering questions about programs, locations, volunteering, and giving using only your approved content, so answers stay accurate and on-mission.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Does it integrate with our donor CRM and fundraising stack?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. Content.One connects with Salesforce NPSP, Blackbaud, HubSpot, Marketo, and Google Analytics/Tag Manager, and headless APIs plus webhooks sync engagement data to BI tools, data warehouses, and stewardship dashboards. Marketing, fundraising, and IT work from the same picture.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Can Content.One help us maximize our Google Ad Grant?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. Google Ad Grants integration plus built-in SEO and analytics tools help you build the fast, well-structured landing pages that Ad Grant campaigns require &mdash; so your $10,000/month grant drives traffic to pages that load quickly, convert, and comply with program policies.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does the platform support grant reporting and board transparency?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Every change is captured in exportable, audit-ready logs with full version history &mdash; documentation you can hand to auditors, grant partners, and boards. APIs push activity data into your BI tools or CRM so stewardship reporting reflects what&rsquo;s actually happening across your digital properties.</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Is the platform secure enough for an organization our size?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Security is handled at the platform level: automatic security updates (no plugin patching across dozens of sites), SSO with granular role-based access, token-based authentication for integrations, and audit trails on every change. [Confirm and list specific certifications — SOC 2, GDPR posture, data residency options — before publishing this answer.]</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">We&rsquo;re consolidating years of content from multiple legacy sites. What does migration look like?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Content.One provides a dedicated migration planning tool [migration.content.one] that maps your existing content into the platform. Most enterprise non-profits use migration as the moment to consolidate redundant chapter microsites into one governed federated platform and retire a decade of content debt. [Add typical timeline and services detail.]</p>
+      </details>
+
+      <details name="c1-nonprofit-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How do we evaluate whether Content.One fits our organization?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Start with the free 20-minute non-profit CMS assessment. We&rsquo;ll walk through how large non-profits use Content.One to streamline governance, unify multi-site experiences, and accelerate campaigns &mdash; mapped to your chapter structure, tech stack, and team.</p>
+      </details>
+
+    </div>
+
+    <!-- Book a Demo panel — bg #19214e, rounded card centered inside the section -->
+    <div class="bg-[#19214e] rounded-2xl pt-8 pb-10 px-8 flex flex-col items-center gap-8 text-center">
+      <div class="relative h-14 w-[120px]" aria-hidden="true">
+        <img src="https://hj5v68xn.media.zestyio.com/randy.apuzzo.san.diego.graffiti.3.jpg" alt="" class="absolute left-0 top-2 w-12 h-12 rounded-full border border-white object-cover" />
+        <img src="https://hj5v68xn.media.zestyio.com/bobak.zahedi.san.diego.graffiti.jpg" alt="" class="absolute left-[72px] top-2 w-12 h-12 rounded-full border border-white object-cover" />
+        <img src="https://hj5v68xn.media.zestyio.com/gisele.blair.san.diego.graffiti.jpg" alt="" class="absolute left-8 top-0 w-14 h-14 rounded-full border border-white object-cover" />
+      </div>
+      <div class="flex flex-col gap-2 items-center max-w-3xl">
+        <h3 class="font-body font-semibold text-white text-xl leading-[30px] m-0">Book a Demo</h3>
+        <p class="font-body text-[#b1bae7] text-base leading-6 m-0">30 minutes with our team, scoped to your chapter structure and your programs.</p>
+      </div>
+      <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-[#31429b] hover:bg-royalDark text-white font-semibold text-base leading-6 px-[18px] py-3 border-2 border-white/[0.12] shadow-sm transition">Schedule a Demo</a>
+    </div>
+
+  </div>
+</section>
