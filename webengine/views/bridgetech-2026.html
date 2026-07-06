@@ -56,23 +56,19 @@
       min-width: 180px; min-height: 76px; box-sizing: border-box; text-align: center;
     }
     .host-logo img { display: block; }
-    /* CauseCircle: source is a square canvas with the mark+wordmark centered
-       vertically. Content occupies roughly the middle 30% of height. Zoom in
-       to that band by cropping via aspect-ratio + object-fit: cover so the
-       wordmark reads. brightness(0) invert(1) renders the dark-navy wordmark
-       as white for the dark hero. */
+    /* CauseCircle: 2.png is a wide horizontal lockup (mark + wordmark, ~5.2:1)
+       with a dark-navy wordmark. Render at natural aspect and invert to white
+       so it reads on the dark hero. */
     .host-logo--causecircle img {
-      height: 32px; width: 132px;
-      object-fit: cover; object-position: center;
+      height: 30px; width: auto;
       filter: brightness(0) invert(1);
     }
     /* Content.One: royal SVG is wide (4.45:1), render at natural aspect. */
     .host-logo--contentone img { height: 34px; width: auto; }
-    /* BridgeTECH source (BridgeTECH_323.webp) is a composite card: brand mark
-       up top (bridge illustration + wordmark) with a sponsor row (AFP · DMAW ·
-       NonProfitPRO) at the bottom third. Show only the brand mark so it reads
-       at chip scale. object-fit: cover + object-position: top center preserves
-       the brand's real proportions. */
+    /* BridgeTECH: 1.png is a composite card (bridge illustration + wordmark up
+       top; sponsor row AFP · DMAW · NonProfitPRO at the bottom third). Crop to
+       just the brand mark via object-fit: cover + object-position: top center;
+       preserves the brand's real proportions at chip scale. */
     .host-logo--bridgetech img {
       height: 48px; width: 132px;
       object-fit: cover; object-position: top center;
@@ -131,13 +127,13 @@
         <p class="text-xs uppercase tracking-wider text-white/50 font-semibold mb-4">Hosted by</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
           <div class="host-logo host-logo--causecircle">
-            <img src="https://hj5v68xn.media.zestyio.com/CauseCircle-Logo.png" alt="CauseCircle" />
+            <img src="https://hj5v68xn.media.zestyio.com/2.png" alt="CauseCircle" />
           </div>
           <div class="host-logo host-logo--contentone">
             <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-royal.svg" alt="Content.One" />
           </div>
           <div class="host-logo host-logo--bridgetech">
-            <img src="https://hj5v68xn.media.zestyio.com/BridgeTECH_323.webp" alt="BridgeTECH 2026" />
+            <img src="https://hj5v68xn.media.zestyio.com/1.png" alt="BridgeTECH 2026" />
           </div>
         </div>
       </div>
