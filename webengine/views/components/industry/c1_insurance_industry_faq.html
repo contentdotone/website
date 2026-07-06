@@ -1,101 +1,169 @@
 <!-- C1 Insurance Industry FAQ — used on the insurance industry page.
-     Figma 13799:6181 (Untitled-C1) — centered heading + 8-item accordion
+     Figma 13799:6181 (Untitled-C1) — centered heading + 13-item accordion
      using <details name=> grouping (one-at-a-time via shared name), with
      plus/minus icon toggle. Below the FAQ list, a Book-a-Demo trio-
-     portrait card. Content is currently the generic enterprise FAQ set
-     inherited from the hospital variant; ready to be re-authored with
-     insurance-specific Q&As once bobby drops a brief. -->
+     portrait card. FAQ set authored specifically for enterprise
+     carriers, brokerages, and regulated brands — leans on Singlife
+     agency-model results (67% faster dev, 42% fewer agency resources,
+     69% faster page loads, 37% fewer QA resources, +185% first-year
+     traffic, 1-month Philippines expansion launch, 100% uptime).
+     Answers include inline cross-links into /product-tour/*, /solutions/*,
+     the Singlife customer story, and /contact-us/. -->
 <section class="bg-[#060813] py-24">
   <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-16">
 
     <!-- Heading + subhead, centered -->
     <div class="flex flex-col gap-5 items-center text-center max-w-3xl mx-auto">
       <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Frequently asked questions</h2>
-      <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">Questions that come up most often in enterprise procurement, security, and legal reviews of Content.One.</p>
+      <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">Questions that come up most often when enterprise carriers, brokerages, and regulated brands evaluate Content.One.</p>
     </div>
 
-    <!-- FAQ accordion list -->
+    <!-- FAQ accordion list — 13 insurance-authored items -->
     <div class="max-w-3xl mx-auto w-full flex flex-col gap-8">
-      <details open name="c1-industry-faq" class="c1-industry-faq group">
+
+      <details open name="c1-insurance-faq" class="c1-industry-faq group">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">What is Content.One?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How is Content.One different from the traditional CMS our teams use today?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Content.One is the enterprise CMS we built as a foundation for AI-era content operations. Marketing teams use it to draft, govern, translate, and ship content across web, mobile, and every other channel. Generative AI accelerates the work; your security, brand, and compliance teams keep control of every word that ships.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">A traditional CMS ties content to one site and every change to a development sprint. Content.One puts every policy page, microsite, and agent portal on one platform, so business units assemble and publish approved experiences without waiting on developers. Marketing moves faster, and compliance sees everything.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">Is Content.One a headless CMS?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Do our marketing and content teams need developers to publish?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes — and also composable and hybrid. Pick the architecture that fits each project. REST + GraphQL APIs, structured content models, and a built-in delivery layer mean you can ship a marketing site, a native app, or a partner integration from the same source of truth.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">No. Teams build pages from approved templates and disclosure-ready <a href="/product-tour/reusable-component-libraries/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Blocks</a> &mdash; no code, no development backlog. Developers and agencies set up templates once; after that, business units publish securely on their own.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does generative AI work on Content.One?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What are Blocks, and why do they matter for an insurer?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">AI is scoped to your brand voice, your terminology, and the rules your team set. Drafts, summaries, translations, and component variations are produced inside the same approval flow as human-authored content; every suggestion is logged and reviewable. Bring your own model — Anthropic, OpenAI, Google, or your own private inference endpoint.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0"><a href="/product-tour/reusable-component-libraries/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Blocks</a> are reusable components &mdash; rate tables, product summaries, required disclosures &mdash; that compliance approves once and every team uses everywhere. Update a Block and it updates on every page that uses it, across regions, lines of business, and brands. Teams move fast, and disclosure language holds.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">How do enterprise customers migrate from their current CMS?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does Content.One keep our content compliant?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Migration engineering is included in enterprise contracts. We staff against your timeline, model your existing schemas in Content.One, write the migration scripts, and run staged cutovers so you ship without downtime.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0"><a href="/product-tour/single-sign-on-sso-and-roles/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Role-based permissions</a> define exactly what legal, marketing, and compliance can each edit and approve. <a href="/product-tour/workflow-automation-and-approvals/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Custom approval workflows</a> route regulated content through review before it ships, and <a href="/product-tour/template-versioning-and-rollbacks/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">version history with rollback</a> makes every change reversible. Control is why your teams can move quickly: nothing publishes outside the guardrails.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">Does Content.One support single sign-on?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How fast can we launch a new product line, microsite, or campaign?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes — SAML 2.0 and OIDC, connected to Okta, Microsoft Entra ID, Google Workspace, GitHub, and any IdP your IAM team already manages. SCIM provisioning is included.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Days, not months. New sites and pages start from reusable templates and approved Blocks, so a rate change, product launch, or compliance notice doesn&rsquo;t wait on a development sprint. <a href="/customers/singlife/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Singlife</a>&rsquo;s agency built its Philippines expansion site from scratch in one month, ahead of schedule.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">Who owns the content created on Content.One?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">A rate change or regulatory notice just landed. How fast can we update every affected page?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">You do. Your content, schemas, and audit logs are yours to export at any time in open formats. Nothing is held hostage; nothing is silently used to train a third-party model.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Once. Because disclosures and product content live in <a href="/product-tour/reusable-component-libraries/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">shared components</a>, one approved update cascades to every page, site, and region that uses it. Publishing is one click to production, with the change <a href="/product-tour/audit-logs-and-activity-tracking/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">logged and reversible</a>.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">What's included in enterprise pricing?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">We support captive agents, brokers, and regional teams. Can each have its own site?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Dedicated support management, the 99.99% uptime SLA, named on-call engineers, migration engineering, single-tenancy + regional data residency, SOC 2 Type II, BAA-eligible deployments, and bring-your-own-model AI. Volume packaging and custom add-ons are quoted around your operation.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. Cascade approved layouts and content across hundreds of agent and broker sites through <a href="/solutions/federated-multisite/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">federated multi-site</a> while central governance stays tight. Regional teams and partners tailor what&rsquo;s local; brand and compliance standards stay fixed.</p>
       </details>
-      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
         <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
-          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does Content.One compare to a traditional headless CMS?</span>
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">We run multiple brands. Does that work on one platform?</span>
           <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
             <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
             <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
           </span>
         </summary>
-        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Headless-only CMSs assume you'll build the marketing experience yourself. Content.One ships with the editor, the AI scaffolding, the multi-site governance, and the audit-ready compliance layer — and still gives you the headless APIs underneath. You get the velocity of a hosted product with the architecture of a headless platform.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. Reusable site templates serve specific regions, lines of business, or brands, and shared standards federate across the portfolio with automated updates. One platform, one governance model, every brand.</p>
       </details>
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">We work with agencies instead of a large development staff. Is that a fit?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">It&rsquo;s the model the platform is built for. <a href="/customers/singlife/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Singlife</a>&rsquo;s agency reported 67% faster development, 42% fewer agency resources, and one-button deployment on its build &mdash; and described the learning curve as &ldquo;surprisingly easy.&rdquo; Your agency ships the build; your teams run the content.</p>
+      </details>
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does AI help our content team without creating compliance risk?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0"><a href="/product-tour/generative-ai-content-acceleration/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">AI drafts</a> policy summaries, campaign copy, and regulatory updates inside your guardrails &mdash; locked disclosures can&rsquo;t be overridden, and every suggestion runs through your approval flow. Your team approves, edits, or rejects before anything ships. Speed without risk.</p>
+      </details>
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Can AI help us localize content across states and languages?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes. AI drafts <a href="/product-tour/multilingual-and-localization-tools/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">localized versions across languages, states, and regions</a>, with required disclosures locked in every one. Your regional and compliance teams review before publish, so local speed never outruns local rules.</p>
+      </details>
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What results have insurers seen on Content.One?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0"><a href="/customers/singlife/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Singlife</a> launched its expansion site in one month and grew traffic 185% in the first year at 100% uptime. Its agency cut development time 67%, page load times 69%, and QA resources 37%. Fewer sprints, faster launches, cleaner audits.</p>
+      </details>
+
+      <details name="c1-insurance-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How do we evaluate whether Content.One fits our organization?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Book the free <a href="/contact-us/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">20-minute insurance CMS assessment</a>. We&rsquo;ll map the platform to your lines of business, your compliance workflow, and your agent network, and show you how insurers like <a href="/customers/singlife/" class="underline decoration-[#8C9BE6] underline-offset-2 hover:text-white transition-colors">Singlife</a> launch in weeks instead of quarters.</p>
+      </details>
+
     </div>
 
     <!-- Book a Demo panel — bg #19214e, rounded card centered inside the section -->
@@ -107,7 +175,7 @@
       </div>
       <div class="flex flex-col gap-2 items-center max-w-3xl">
         <h3 class="font-body font-semibold text-white text-xl leading-[30px] m-0">Book a Demo</h3>
-        <p class="font-body text-[#b1bae7] text-base leading-6 m-0">30 minutes with our team, scoped to your stack and your industry.</p>
+        <p class="font-body text-[#b1bae7] text-base leading-6 m-0">30 minutes with our team, scoped to your lines of business and your compliance workflow.</p>
       </div>
       <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-[#31429b] hover:bg-royalDark text-white font-semibold text-base leading-6 px-[18px] py-3 border-2 border-white/[0.12] shadow-sm transition">Schedule a Demo</a>
     </div>
