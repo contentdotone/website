@@ -48,12 +48,22 @@
     /* Host logo cluster — bg tint so real logos read on dark hero */
     .host-logo {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 10px 20px; border-radius: 10px;
+      padding: 14px 24px; border-radius: 12px;
       background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14);
       color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em;
-      min-width: 140px; text-align: center;
+      min-width: 180px; min-height: 76px; box-sizing: border-box; text-align: center;
     }
-    .host-logo img { max-height: 32px; width: auto; display: block; }
+    .host-logo img { height: 40px; width: auto; display: block; }
+    /* BridgeTECH source (BridgeTECH_323.webp) is a composite card: brand mark
+       up top (bridge illustration + wordmark, ~323×120) with a sponsor row
+       (AFP · DMAW · NonProfitPRO) at the bottom third. Show only the brand
+       mark so it reads at chip scale. object-fit: cover + object-position:
+       top center preserves the brand's real proportions. */
+    .host-logo--bridgetech img {
+      height: 48px; width: 132px;
+      object-fit: cover; object-position: top center;
+      border-radius: 4px;
+    }
   </style>
 
   {{include /-/isolated-page-marketing-snippet.html}}
@@ -112,7 +122,7 @@
           <div class="host-logo">
             <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-royal.svg" alt="Content.One" />
           </div>
-          <div class="host-logo">
+          <div class="host-logo host-logo--bridgetech">
             <img src="https://hj5v68xn.media.zestyio.com/BridgeTECH_323.webp" alt="BridgeTECH 2026" />
           </div>
         </div>
