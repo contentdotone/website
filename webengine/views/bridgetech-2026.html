@@ -45,20 +45,34 @@
     .hero-glow { position: absolute; border-radius: 50%; filter: blur(140px); pointer-events: none; }
     .hero-glow--amber { width: 380px; height: 380px; background: rgba(217, 119, 6, 0.32); top: -140px; right: -80px; }
     .hero-glow--royal { width: 420px; height: 420px; background: rgba(66, 85, 189, 0.42); bottom: -180px; left: -140px; }
-    /* Host logo cluster — bg tint so real logos read on dark hero */
+    /* Host logo cluster — bg tint so real logos read on dark hero. Each brand
+       gets a size + crop tuned to its source file so the three chips feel
+       like siblings instead of three unrelated shapes. */
     .host-logo {
       display: inline-flex; align-items: center; justify-content: center;
-      padding: 14px 24px; border-radius: 12px;
+      padding: 14px 22px; border-radius: 12px;
       background: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14);
       color: #ffffff; font-family: 'DM Sans', system-ui, sans-serif; font-weight: 700; letter-spacing: -0.01em;
       min-width: 180px; min-height: 76px; box-sizing: border-box; text-align: center;
     }
-    .host-logo img { height: 40px; width: auto; display: block; }
+    .host-logo img { display: block; }
+    /* CauseCircle: source is a square canvas with the mark+wordmark centered
+       vertically. Content occupies roughly the middle 30% of height. Zoom in
+       to that band by cropping via aspect-ratio + object-fit: cover so the
+       wordmark reads. brightness(0) invert(1) renders the dark-navy wordmark
+       as white for the dark hero. */
+    .host-logo--causecircle img {
+      height: 32px; width: 132px;
+      object-fit: cover; object-position: center;
+      filter: brightness(0) invert(1);
+    }
+    /* Content.One: royal SVG is wide (4.45:1), render at natural aspect. */
+    .host-logo--contentone img { height: 34px; width: auto; }
     /* BridgeTECH source (BridgeTECH_323.webp) is a composite card: brand mark
-       up top (bridge illustration + wordmark, ~323×120) with a sponsor row
-       (AFP · DMAW · NonProfitPRO) at the bottom third. Show only the brand
-       mark so it reads at chip scale. object-fit: cover + object-position:
-       top center preserves the brand's real proportions. */
+       up top (bridge illustration + wordmark) with a sponsor row (AFP · DMAW ·
+       NonProfitPRO) at the bottom third. Show only the brand mark so it reads
+       at chip scale. object-fit: cover + object-position: top center preserves
+       the brand's real proportions. */
     .host-logo--bridgetech img {
       height: 48px; width: 132px;
       object-fit: cover; object-position: top center;
@@ -116,10 +130,10 @@
       <div class="mt-14 pt-8 border-t border-white/10 max-w-3xl mx-auto">
         <p class="text-xs uppercase tracking-wider text-white/50 font-semibold mb-4">Hosted by</p>
         <div class="flex flex-wrap items-center justify-center gap-4">
-          <div class="host-logo">
-            <img src="https://hj5v68xn.media.zestyio.com/CC-Light-Logo.png" alt="CauseCircle" />
+          <div class="host-logo host-logo--causecircle">
+            <img src="https://hj5v68xn.media.zestyio.com/CauseCircle-Logo.png" alt="CauseCircle" />
           </div>
-          <div class="host-logo">
+          <div class="host-logo host-logo--contentone">
             <img src="https://hj5v68xn.media.zestyio.com/content-one_full-logo-royal.svg" alt="Content.One" />
           </div>
           <div class="host-logo host-logo--bridgetech">
