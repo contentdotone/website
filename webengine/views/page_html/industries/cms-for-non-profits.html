@@ -51,8 +51,25 @@
 
 <style>
   .c1-industry-page { background: #0B0F1C; }
-  /* Hero gradient — same royal → ink treatment as hospital. */
+  /* Hero gradient — same royal → ink treatment as hospital. Non-profit
+     hero adds a scoped photo overlay at 12% on top of the gradient (per
+     bobby, same pattern as hospital). Copy inside the hero already sits
+     in relative-positioned wrappers; z-index bumps the content above
+     the overlay. */
   .c1-industry-page .c1-industry-hero { background: linear-gradient(180deg, #19214e 0%, #060813 100%); }
+  .nonprofit-industry-page .c1-industry-hero { position: relative; isolation: isolate; }
+  .nonprofit-industry-page .c1-industry-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("https://hj5v68xn.media.zestyio.com/ismael-paramo-Cns0h4ypRyA-unsplash.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .nonprofit-industry-page .c1-industry-hero > * { position: relative; z-index: 1; }
   .c1-industry-page .c1-industry-faq > summary::-webkit-details-marker { display: none; }
   .c1-industry-page .c1-industry-faq > summary::marker { content: ""; }
 
