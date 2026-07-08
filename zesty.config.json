@@ -853,6 +853,138 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-02T13:21:08Z",
                 "createdAt": "2026-07-02T13:21:08Z"
+            },
+            "/components/industry/c1_finance_ai_governance_highlight.html": {
+                "zuid": "11-ec9df1e4ff-808kdt",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_finance_hero.html": {
+                "zuid": "11-b2c4c28282-00wh22",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_finance_industries_list.html": {
+                "zuid": "11-a4e8dff182-3rf30d",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_finance_industry_faq.html": {
+                "zuid": "11-c6c6b0d683-r4lkxn",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_finance_specific_carousels.html": {
+                "zuid": "11-eeacc7cb84-r0cs3f",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_gov_ai_governance_highlight.html": {
+                "zuid": "11-c2e1deb385-hssdqq",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_gov_hero.html": {
+                "zuid": "11-aca8cd9086-kbbtjd",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_gov_industries_list.html": {
+                "zuid": "11-d8f082fc86-mkkpn1",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_gov_industry_faq.html": {
+                "zuid": "11-c8f5aefc87-mrl0hc",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_gov_specific_carousels.html": {
+                "zuid": "11-a4c7c6eb88-78ztcw",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_hospital_industries_list.html": {
+                "zuid": "11-b4f7c8d589-b0tz7c",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_hospital_industry_faq.html": {
+                "zuid": "11-a2a2adcc8a-mppg2z",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_insurance_ai_governance_highlight.html": {
+                "zuid": "11-ecb3aebe8b-rj5gf1",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_insurance_hero.html": {
+                "zuid": "11-c881b0a48c-fwn016",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_insurance_industries_list.html": {
+                "zuid": "11-9eceb68e8d-61wkrs",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_insurance_industry_faq.html": {
+                "zuid": "11-a28bddf78d-zxzqv4",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_insurance_specific_carousels.html": {
+                "zuid": "11-a28fa5eb8e-d87blc",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_nonprofit_ai_governance_highlight.html": {
+                "zuid": "11-b2d6ddd48f-3lbvb1",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_nonprofit_hero.html": {
+                "zuid": "11-a8f6b9b890-8k2rt7",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_nonprofit_industries_list.html": {
+                "zuid": "11-fad6b69b91-7dft3s",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_nonprofit_industry_faq.html": {
+                "zuid": "11-90ed9bfe91-gnnkxj",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/components/industry/c1_nonprofit_specific_carousels.html": {
+                "zuid": "11-e490cee992-1dv3th",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T14:39:19Z",
+                "createdAt": "2026-07-08T14:39:19Z"
             }
         },
         "styles": {
