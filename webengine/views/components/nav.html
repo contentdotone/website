@@ -98,6 +98,24 @@
   .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(180deg); }
   .mobile-nav-group[open] > summary { color: #4255BD; background: rgba(66,85,189,0.06); }
   .mobile-nav-group + .mobile-nav-group, .mobile-nav-group + a, a + .mobile-nav-group { margin-top: .25rem; }
+
+  /* Figma 14057:8502 desktop nav — pill buttons + skeuomorphic shadow */
+  .c1-nav-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .375rem;
+    padding: .625rem 1rem; border-radius: 9999px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 1rem; line-height: 1.5;
+    white-space: nowrap; transition: background-color .18s ease, color .18s ease;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 0 rgba(0,0,0,0.05);
+  }
+  .c1-nav-btn--secondary { background: #fafafa; color: #171717; border: 1px solid #d4d4d4; }
+  .c1-nav-btn--secondary:hover { background: #f4f4f5; }
+  .c1-nav-btn--primary { background: #31429b; color: #ffffff; border: 2px solid rgba(255,255,255,0.12); }
+  .c1-nav-btn--primary:hover { background: #2F3F94; }
+  /* Header shell — 72px, white bg, bottom border + shadow-xs */
+  header.sticky-nav > nav { border-bottom: 1px solid #e5e5e5; box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05); }
+  @media (min-width: 1024px) {
+    header.sticky-nav > nav > .max-w-7xl { min-height: 72px; padding-top: 0; padding-bottom: 0; }
+  }
 </style>
 <!-- Checkbox + offcanvas panel + backdrop live OUTSIDE the sticky-nav header.
      Reason: sticky-nav uses `transform`/`will-change: transform` for its slide
@@ -200,7 +218,7 @@
           <ul class="flex flex-row items-center gap-1 mx-auto m-0 list-none p-0">
             <li>
               <details name="navmenu" class="nav-details">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Solutions
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
@@ -213,7 +231,7 @@
             </li>
             <li>
               <details name="navmenu" class="nav-details">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Industries
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
@@ -225,11 +243,11 @@
               </details>
             </li>
             <li>
-              <a class="block px-3 py-2 text-gray-700 hover:text-royal rounded-md" href="/customers/">Customers</a>
+              <a class="block px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold" href="/customers/">Customers</a>
             </li>
             <li>
               <details name="navmenu" class="nav-details nav-menu-wide">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Features
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
@@ -271,7 +289,7 @@
             </li>
             <li>
               <details name="navmenu" class="nav-details nav-menu-right">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Resources
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
@@ -311,11 +329,16 @@
             </li>
           </ul>
         </div>
-        <div class="flex flex-row items-center gap-2">
+        <div class="flex flex-row items-center gap-3">
+            <!-- Log In pill (secondary) — Figma 14051:7554;13557:585;1624:262067 -->
+            <a href="https://app.zesty.io" class="c1-nav-btn c1-nav-btn--secondary hidden lg:inline-flex" data-utm-link>
+              Log In
+            </a>
+            <!-- Get Started Now pill (primary royal) — Figma 14051:7554;13557:585;1624:262069 -->
             <details name="navmenu" class="nav-details nav-menu-right">
-              <summary class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition cursor-pointer">
-                <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-1" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-                Get Started
+              <summary class="c1-nav-btn c1-nav-btn--primary cursor-pointer list-none">
+                <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+                Get Started Now
               </summary>
               <ul class="nav-menu" id="nav-cta-dropdown">
                 <li><a class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-royal/10" href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
