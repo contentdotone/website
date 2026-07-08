@@ -1,0 +1,115 @@
+<!-- C1 Hospital Industry FAQ — used on the hospital industry page.
+     Figma 13799:6181 (Untitled-C1) — centered heading + 8-item accordion
+     using <details name=> grouping (one-at-a-time via shared name), with
+     plus/minus icon toggle. Below the FAQ list, a Book-a-Demo trio-
+     portrait card. Companion to c1_nonprofit_industry_faq.html which
+     carries a nonprofit-specific 18-item FAQ list. -->
+<section class="bg-[#060813] py-24">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8 max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col gap-16">
+
+    <!-- Heading + subhead, centered -->
+    <div class="flex flex-col gap-5 items-center text-center max-w-3xl mx-auto">
+      <h2 class="font-display font-semibold text-white text-[30px] leading-[38px] lg:text-[36px] lg:leading-[44px] lg:tracking-[-0.72px] m-0">Frequently asked questions</h2>
+      <p class="font-body text-[#b1bae7] text-lg leading-7 lg:text-xl lg:leading-[30px] m-0">Questions that come up most often in enterprise procurement, security, and legal reviews of Content.One.</p>
+    </div>
+
+    <!-- FAQ accordion list -->
+    <div class="max-w-3xl mx-auto w-full flex flex-col gap-8">
+      <details open name="c1-industry-faq" class="c1-industry-faq group">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What is Content.One?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Content.One is the enterprise CMS we built as a foundation for AI-era content operations. Marketing teams use it to draft, govern, translate, and ship content across web, mobile, and every other channel. Generative AI accelerates the work; your security, brand, and compliance teams keep control of every word that ships.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Is Content.One a headless CMS?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes — and also composable and hybrid. Pick the architecture that fits each project. REST + GraphQL APIs, structured content models, and a built-in delivery layer mean you can ship a marketing site, a native app, or a partner integration from the same source of truth.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does generative AI work on Content.One?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">AI is scoped to your brand voice, your terminology, and the rules your team set. Drafts, summaries, translations, and component variations are produced inside the same approval flow as human-authored content; every suggestion is logged and reviewable. Bring your own model — Anthropic, OpenAI, Google, or your own private inference endpoint.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How do enterprise customers migrate from their current CMS?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Migration engineering is included in enterprise contracts. We staff against your timeline, model your existing schemas in Content.One, write the migration scripts, and run staged cutovers so you ship without downtime.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Does Content.One support single sign-on?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Yes — SAML 2.0 and OIDC, connected to Okta, Microsoft Entra ID, Google Workspace, GitHub, and any IdP your IAM team already manages. SCIM provisioning is included.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">Who owns the content created on Content.One?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">You do. Your content, schemas, and audit logs are yours to export at any time in open formats. Nothing is held hostage; nothing is silently used to train a third-party model.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">What's included in enterprise pricing?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Dedicated support management, the 99.99% uptime SLA, named on-call engineers, migration engineering, single-tenancy + regional data residency, SOC 2 Type II, BAA-eligible deployments, and bring-your-own-model AI. Volume packaging and custom add-ons are quoted around your operation.</p>
+      </details>
+      <details name="c1-industry-faq" class="c1-industry-faq group pt-6 border-t border-[#e5e5e5]">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-body font-semibold text-white text-base leading-6 m-0">How does Content.One compare to a traditional headless CMS?</span>
+          <span class="w-6 h-6 shrink-0 text-[#b1bae7]" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="font-body text-[#b1bae7] text-base leading-6 mt-1 m-0">Headless-only CMSs assume you'll build the marketing experience yourself. Content.One ships with the editor, the AI scaffolding, the multi-site governance, and the audit-ready compliance layer — and still gives you the headless APIs underneath. You get the velocity of a hosted product with the architecture of a headless platform.</p>
+      </details>
+    </div>
+
+    <!-- Book a Demo panel — bg #19214e, rounded card centered inside the section -->
+    <div class="bg-[#19214e] rounded-2xl pt-8 pb-10 px-8 flex flex-col items-center gap-8 text-center">
+      <div class="relative h-14 w-[120px]" aria-hidden="true">
+        <img src="https://hj5v68xn.media.zestyio.com/randy.apuzzo.san.diego.graffiti.3.jpg" alt="" class="absolute left-0 top-2 w-12 h-12 rounded-full border border-white object-cover" />
+        <img src="https://hj5v68xn.media.zestyio.com/bobak.zahedi.san.diego.graffiti.jpg" alt="" class="absolute left-[72px] top-2 w-12 h-12 rounded-full border border-white object-cover" />
+        <img src="https://hj5v68xn.media.zestyio.com/gisele.blair.san.diego.graffiti.jpg" alt="" class="absolute left-8 top-0 w-14 h-14 rounded-full border border-white object-cover" />
+      </div>
+      <div class="flex flex-col gap-2 items-center max-w-3xl">
+        <h3 class="font-body font-semibold text-white text-xl leading-[30px] m-0">Book a Demo</h3>
+        <p class="font-body text-[#b1bae7] text-base leading-6 m-0">30 minutes with our team, scoped to your stack and your industry.</p>
+      </div>
+      <a href="/contact-us/" class="inline-flex items-center justify-center rounded-lg bg-[#31429b] hover:bg-royalDark text-white font-semibold text-base leading-6 px-[18px] py-3 border-2 border-white/[0.12] shadow-sm transition">Schedule a Demo</a>
+    </div>
+
+  </div>
+</section>
