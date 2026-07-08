@@ -985,6 +985,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-08T14:39:19Z",
                 "createdAt": "2026-07-08T14:39:19Z"
+            },
+            "/bridgetech-2026.html": {
+                "zuid": "11-b2fea1c6ae-6hj622",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-08T20:03:13Z",
+                "createdAt": "2026-07-08T20:03:13Z"
             }
         },
         "styles": {
