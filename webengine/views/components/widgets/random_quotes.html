@@ -36,7 +36,7 @@
         </div>
         {{if {review.related_features} }}
           {{each {review.related_features} as feature}}
-          <span class="inline-flex items-center bg-royal/10 text-royal rounded-full px-3 py-2 text-sm font-semibold mr-1 mb-1">{{this.title}}</span>
+          <span class="review-feature-chip inline-flex items-center bg-royal/10 text-royal rounded-full px-3 py-2 text-sm font-semibold mr-1 mb-1">{{this.title}}</span>
           {{/each}}
         {{/if}}
       </div>

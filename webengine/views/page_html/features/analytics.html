@@ -1,468 +1,791 @@
 <div class="analytics-feature-page">
-  <section class="py-6 py-lg-7 bg-gradient-analytics relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <div class="grid grid-cols-12 gap-4 items-center gap-6">
-        <div class="lg:col-span-6">
-          <h1 class="text-4xl font-bold font-bold mb-4 text-white">Google Analytics, integrated right into Content.One.</h1>
-          <p class="text-lg text-white/75 mb-4 text-gray-600">Give marketing teams instant insight—no extra tabs, no complex dashboards. Content.One surfaces key GA metrics alongside the content they describe, so you can plan, publish, and optimize without leaving the CMS.</p>
-          <div class="flex flex-wrap gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-royal">See integrated analytics</a>
-            <a href="/product/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">Explore Content.One</a>
-          </div>
+
+  <!-- ════════════ HERO — gradient #19214e → #060813, dual CTAs, right-side image. -->
+  <section class="analytics-hero">
+    <div class="analytics-hero__container">
+      <div class="analytics-hero__copy">
+        <p class="analytics-hero__eyebrow"><span class="analytics-hero__dot" aria-hidden="true"></span>Analytics</p>
+        <h1 class="analytics-hero__title">Google Analytics, integrated right into Content.One.</h1>
+        <p class="analytics-hero__lede">Give marketing teams instant insight—no extra tabs, no complex dashboards. Content.One surfaces key GA metrics alongside the content they describe, so you can plan, publish, and optimize without leaving the CMS.</p>
+        <div class="analytics-hero__ctas">
+          <a href="/book-a-demo/" class="analytics-hero__cta analytics-hero__cta--primary">See integrated analytics</a>
+          <a href="/product/" class="analytics-hero__cta analytics-hero__cta--secondary">Explore Content.One</a>
         </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Content.One analytics dashboard" class="w-full h-full object-cover">
+      </div>
+      <div class="analytics-hero__media">
+        <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Content.One analytics dashboard" class="analytics-hero__img" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ TRUST STRIP — dark #060813, customer logo silhouettes in white. -->
+  <section class="analytics-trust">
+    <div class="analytics-trust__container">
+      <p class="analytics-trust__overline">Trusted by fast-moving teams</p>
+      <div class="analytics-trust__logos">
+        {{each customer as cus where cus.name not like '%technical%' limit 6 sort by rand()}}
+        <a href="{{cus.getURL()}}" class="analytics-trust__logo">
+          <img src="{{cus.logo.getImage(120)}}" alt="{{cus.name}} logo" class="analytics-trust__logo-img">
+        </a>
+        {{/each}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FEATURES GRID — LIGHT, 6 capability cards w/ icon badges. -->
+  <section class="analytics-features">
+    <div class="analytics-features__container">
+      <div class="analytics-features__heading-group">
+        <h2 class="analytics-features__title">Essentials marketers use most—no custom reports required</h2>
+        <p class="analytics-features__subheading">Traffic, engagement, acquisition, conversion, and trend context appear right where you edit content.</p>
+      </div>
+      <div class="analytics-features__grid">
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/bar-chart-10.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Traffic &amp; engagement</p>
+            <p class="analytics-features__card-body">Users, sessions, page views, avg. engagement time, and bounce rate—tied to the specific page or entry.</p>
+          </div>
+        </article>
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/chart-breakout-circle.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Acquisition snapshots</p>
+            <p class="analytics-features__card-body">See the top channels and sources driving traffic—without building GA reports or switching tabs.</p>
+          </div>
+        </article>
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/bar-chart-square-up.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Conversion context</p>
+            <p class="analytics-features__card-body">Surface high-level goals or events relevant to the content you're viewing so you can connect changes to outcomes.</p>
+          </div>
+        </article>
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/pie-chart-02.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Trend indicators</p>
+            <p class="analytics-features__card-body">Period-over-period deltas (7-day vs. prior 7-day) show directional changes at a glance.</p>
+          </div>
+        </article>
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/layout-alt-01.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Auto-mapped pages</p>
+            <p class="analytics-features__card-body">URLs, Content IDs, and publish history align automatically with GA paths—no spreadsheets.</p>
+          </div>
+        </article>
+        <article class="analytics-features__card">
+          <div class="analytics-features__icon" aria-hidden="true">
+            <span class="analytics-features__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/share-06.HJCsi09MMg.svg')"></span>
+          </div>
+          <div class="analytics-features__card-text">
+            <p class="analytics-features__card-title">Deep-dive handoff</p>
+            <p class="analytics-features__card-body">When deeper analysis is needed, jump to the exact GA view—no hunting for filters or paths.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ ALTERNATING HIGHLIGHTS — LIGHT, 2 rows alternate at lg+. -->
+  <section class="analytics-highlights">
+    <div class="analytics-highlights__container">
+
+      <!-- Row 1: lightbox-enabled dashboard image left, text right + 2x2 cells. -->
+      <div class="analytics-highlights__row">
+        <div class="analytics-highlights__media">
+          <a
+            href="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png"
+            class="analytics-lightbox-trigger"
+            data-analytics-lightbox-src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png"
+            data-analytics-lightbox-caption="Content.One surfaces GA4 dashboards beside the page you're editing.">
+            <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Integrated analytics inside Content.One" class="analytics-highlights__img" loading="lazy" />
+            <span class="analytics-highlights__expand" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="analytics-highlights__content">
+          <div class="analytics-highlights__heading-group">
+            <h2 class="analytics-highlights__title">Why integrated analytics matters</h2>
+            <p class="analytics-highlights__lede">Jumping between tools slows decision-making and fragments context. Surfacing GA metrics alongside the pages they describe removes guesswork and shortens the path from insight to action.</p>
+          </div>
+          <div class="analytics-highlights__cells">
+            <div class="analytics-highlights__cell">
+              <p class="analytics-highlights__cell-title">Context never lost</p>
+              <p class="analytics-highlights__cell-body">Metrics stay glued to each entry, so marketers never lose context when editing.</p>
+            </div>
+            <div class="analytics-highlights__cell">
+              <p class="analytics-highlights__cell-title">Real-time trends</p>
+              <p class="analytics-highlights__cell-body">Auto-refreshing data shows trends in real time—no custom GA reports required.</p>
+            </div>
+            <div class="analytics-highlights__cell">
+              <p class="analytics-highlights__cell-title">Click-to-expand</p>
+              <p class="analytics-highlights__cell-body">Open full-fidelity dashboards in a lightbox when analysts need detail.</p>
+            </div>
+            <div class="analytics-highlights__cell">
+              <p class="analytics-highlights__cell-title">Faster decisions</p>
+              <p class="analytics-highlights__cell-body">47% less tab switching and 3× quicker content decisions reported by customers.</p>
+            </div>
           </div>
         </div>
       </div>
-    </div> 
-  </section>
 
- 
-  <section class="py-6 border-t analytics-lightbox-section">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6 lg:order-2">
-          <div class="analytics-lightbox-frame rounded-xl shadow-lg overflow-hidden">
-            <a
-              href="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png"
-              class="analytics-lightbox-trigger block relative aspect-[16/10] max-h-[440px]"
-              data-analytics-lightbox-src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png"
-              data-analytics-lightbox-caption="Content.One surfaces GA4 dashboards beside the page you’re editing.">
-              <img src="https://hj5v68xn.media.zestyio.com/Dashboard.r1QeBKLqxl.png" alt="Integrated analytics inside Content.One" class="max-w-full h-auto w-full" loading="lazy">
-              <div class="analytics-lightbox-overlay">
-                <div>
-                  <p class="analytics-lightbox-eyebrow mb-1">Click to expand</p>
-                  <p class="text-lg font-semibold text-white mb-0">Content.One dashboard preview</p>
-                </div>
-                <span class="analytics-lightbox-icon" aria-hidden="true">
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" aria-hidden="true"><path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707m4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707m0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707m-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707"/></svg>
-                </span>
-              </div> 
-            </a> 
-          </div>
-        
+      <!-- Row 2: image right, text left + 4 icon-bullet list. -->
+      <div class="analytics-highlights__row analytics-highlights__row--reverse">
+        <div class="analytics-highlights__media">
+          <img src="https://hj5v68xn.media.zestyio.com/analytics-images.jpg" alt="Analytics insights" class="analytics-highlights__img" loading="lazy" />
         </div>
-        <div class="lg:col-span-6 lg:order-1">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics-subtle text-analytics mb-3">Integrated intelligence</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Why integrated analytics matters</h2>
-          <p class="text-gray-600 mb-4">Jumping between tools slows decision-making and fragments context. By surfacing GA metrics alongside the pages they describe, Content.One removes guesswork and shortens the path from insight to action.</p>
-          <div class="analytics-stat-grid mb-4">
-            <div class="analytics-stat-chip">
-              <span class="label">Time saved</span>
-              <strong>47%</strong>
-              <small>less tab switching reported</small>
-            </div>
-            <div class="analytics-stat-chip">
-              <span class="label">Insights faster</span>
-              <strong>3×</strong>
-              <small>quicker content decisions</small>
-            </div>
+        <div class="analytics-highlights__content">
+          <div class="analytics-highlights__heading-group">
+            <h2 class="analytics-highlights__title">The value of not opening Google Analytics</h2>
+            <p class="analytics-highlights__lede">Most daily questions don't require custom GA explorations. Content.One answers them in-place so marketers move faster.</p>
           </div>
-          <ul class="list-none m-0 p-0 grid gap-3 text-gray-600 mb-0">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/></svg>
-              <span>Metrics stay glued to each entry, so marketers never lose context.</span>
+          <ul class="analytics-highlights__icon-list">
+            <li class="analytics-highlights__icon-row">
+              <span class="analytics-highlights__icon" aria-hidden="true">
+                <span class="analytics-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/check-circle.svg')"></span>
+              </span>
+              <p class="analytics-highlights__icon-text">"Is this page trending up or down?" Sparkline + delta badges show direction instantly.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"/></svg>
-              <span>Auto-refreshing data shows trends in real time; no custom GA reports required.</span>
+            <li class="analytics-highlights__icon-row">
+              <span class="analytics-highlights__icon" aria-hidden="true">
+                <span class="analytics-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/check-circle.svg')"></span>
+              </span>
+              <p class="analytics-highlights__icon-text">"Which posts are resonating this week?" Top-content widgets summarize winners by section.</p>
             </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M5 2V0H0v5h2v6H0v5h5v-2h6v2h5v-5h-2V5h2V0h-5v2zm6 1v2h2v6h-2v2H5v-2H3V5h2V3zm1-2h3v3h-3zm3 11v3h-3v-3zM4 15H1v-3h3zM1 4V1h3v3z"/></svg>
-              <span>Click-to-expand visuals give analysts full fidelity dashboards when they need detail.</span>
+            <li class="analytics-highlights__icon-row">
+              <span class="analytics-highlights__icon" aria-hidden="true">
+                <span class="analytics-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/check-circle.svg')"></span>
+              </span>
+              <p class="analytics-highlights__icon-text">"Did the update help?" Post-publish comparisons show before/after impact.</p>
+            </li>
+            <li class="analytics-highlights__icon-row">
+              <span class="analytics-highlights__icon" aria-hidden="true">
+                <span class="analytics-highlights__icon-img" style="--icon-url: url('https://hj5v68xn.media.zestyio.com/check-circle.svg')"></span>
+              </span>
+              <p class="analytics-highlights__icon-text">Need deeper analysis? Jump straight into the matching GA report with one click.</p>
             </li>
           </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════ STATS — DARK, solidified card surface, royalLite labels. -->
+  <section class="analytics-stats">
+    <div class="analytics-stats__container">
+      <div class="analytics-stats__heading-group">
+        <h2 class="analytics-stats__title">Content performance summaries your team will actually read</h2>
+        <p class="analytics-stats__lede">Content.One rolls up performance into clean summaries so anyone can spot trends, opportunities, and wins.</p>
+      </div>
+      <div class="analytics-stats__grid">
+        <div class="analytics-stats__tile">
+          <p class="analytics-stats__number"><span data-analytics-count="75" data-analytics-suffix="%">0</span></p>
+          <p class="analytics-stats__label">Faster answers to daily content questions</p>
+        </div>
+        <div class="analytics-stats__tile">
+          <p class="analytics-stats__number"><span data-analytics-count="60" data-analytics-suffix="%">0</span></p>
+          <p class="analytics-stats__label">Reduction in ad-hoc GA logins for marketers</p>
+        </div>
+        <div class="analytics-stats__tile">
+          <p class="analytics-stats__number"><span data-analytics-count="150" data-analytics-suffix="%">0</span></p>
+          <p class="analytics-stats__label">Increase in content iterations using real data</p>
+        </div>
+        <div class="analytics-stats__tile">
+          <p class="analytics-stats__number"><span data-analytics-count="99.99" data-analytics-suffix="%" data-analytics-format="decimal">0</span></p>
+          <p class="analytics-stats__label">Uptime for analytics widgets inside Content.One</p>
         </div>
       </div>
     </div>
   </section>
 
-   <section class="py-6 bg-gray-600">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col lg:flex-row items-start justify-between gap-4 mb-5">
-        <div>
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics-subtle text-analytics mb-3">Customer voices</span>
-          <h2 class="text-4xl font-bold font-semibold mb-2">Teams turning insights into action with Content.One</h2>
-          <p class="text-gray-600 mb-0">Integrated analytics keep marketers informed and campaigns agile.</p>
+  <!-- ════════════ CUSTOMER VOICES — LIGHT, includes random_quotes widget. -->
+  <section class="analytics-customers">
+    <div class="analytics-customers__container">
+      <div class="analytics-customers__header">
+        <div class="analytics-customers__header-text">
+          <h2 class="analytics-customers__title">Teams turning insights into action with Content.One</h2>
+          <p class="analytics-customers__lede">Integrated analytics keep marketers informed and campaigns agile.</p>
         </div>
-        <a href="/customers/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer btn-outline-analytics text-base px-6 py-3">See customer wins</a>
+        <a href="/customers/" class="analytics-customers__cta">See customer wins</a>
       </div>
       {{include /components/widgets/random_quotes.html}}
     </div>
   </section>
 
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center mb-5">
-        <div class="xl:col-span-8 xl:col-start-3">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics-subtle text-analytics mb-3">What you can see at a glance</span>
-          <h2 class="text-4xl font-bold font-semibold mb-3">Essentials marketers use most—no custom reports required</h2>
-          <p class="text-gray-600 text-lg mb-0">Traffic, engagement, acquisition, conversion, and trend context appear right where you edit content.</p>
-        </div>
-      </div>
-      <div class="grid grid-cols-12 gap-4 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">01</span>
-              <h3 class="text-lg font-semibold mb-2">Traffic &amp; engagement</h3>
-              <p class="text-gray-600 mb-0">Users, sessions, page views, avg. engagement time, bounce/engagement rate—tied to the specific page or entry.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">02</span>
-              <h3 class="text-lg font-semibold mb-2">Acquisition snapshots</h3>
-              <p class="text-gray-600 mb-0">See the top channels and sources driving traffic—without building GA reports or switching tabs.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">03</span>
-              <h3 class="text-lg font-semibold mb-2">Conversion context</h3>
-              <p class="text-gray-600 mb-0">Surface high-level goals or events relevant to the content you’re viewing so you can connect changes to outcomes.</p>
-            </div> 
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">04</span>
-              <h3 class="text-lg font-semibold mb-2">Trend indicators</h3>
-              <p class="text-gray-600 mb-0">Period-over-period deltas (7-day vs. prior 7-day) show directional changes at a glance.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">05</span>
-              <h3 class="text-lg font-semibold mb-2">Auto-mapped pages</h3>
-              <p class="text-gray-600 mb-0">URLs, Content IDs, and publish history align automatically with GA paths—no spreadsheets.</p>
-            </div>
-          </div>
-        </div>
-        <div class="flex-1">
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm h-full">
-            <div class="p-6">
-              <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics text-white rounded-full px-3 py-2 mb-3">06</span>
-              <h3 class="text-lg font-semibold mb-2">Deep-dive handoff</h3>
-              <p class="text-gray-600 mb-0">When deeper analysis is needed, jump to the exact GA view—no hunting for filters or paths.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
+  <!-- Lightbox modal — preserved from prior page for the dashboard expand. -->
   <div class="analytics-lightbox" id="analyticsLightbox" hidden>
     <div class="analytics-lightbox__backdrop" data-analytics-lightbox-close></div>
     <div class="analytics-lightbox__dialog" role="dialog" aria-modal="true" aria-label="Expanded analytics preview" tabindex="-1">
       <button type="button" class="analytics-lightbox__close" data-analytics-lightbox-close aria-label="Close analytics preview">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="inline-block w-4 h-4" aria-hidden="true"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" width="16" height="16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/></svg>
       </button>
-      <img src="" alt="" class="analytics-lightbox__media rounded-xl shadow-lg">
-      <p class="analytics-lightbox__caption text-white/75 mb-0"></p>
+      <img src="" alt="" class="analytics-lightbox__media">
+      <p class="analytics-lightbox__caption"></p>
     </div>
   </div>
 
-  <section class="py-6 bg-gray-100 border-t border-b">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">The value of not opening Google Analytics</h2>
-          <p class="text-gray-600 mb-4">Most daily questions don’t require custom GA explorations. Content.One answers them in-place so marketers move faster.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"/></svg>
-              <span>“Is this page trending up or down?” Sparkline + delta badges show direction instantly.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.73 1.73 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.73 1.73 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.73 1.73 0 0 0 3.407 2.31zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"/></svg>
-              <span>“Which posts are resonating this week?” Top-content widgets summarize winners by section.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41m-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9"/>
-  <path fill-rule="evenodd" d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5 5 0 0 0 8 3M3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9z"/></svg>
-              <span>“Did the update help?” Post-publish comparisons show before/after impact.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-  <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/></svg>
-              <span>Need deeper analysis? Jump straight into the matching GA report with one click.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/analytics-images.jpg" alt="Analytics insights" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/analytics-team-image.jpg" alt="Team reviewing analytics" class="w-full h-full object-cover">
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-analytics-subtle text-analytics mb-3">Automated page data</span>
-          <h2 class="text-4xl font-bold font-semibold mb-4">Automated page data = less manual work</h2>
-          <p class="text-gray-600 text-lg mb-4">Content.One keeps GA and content in sync automatically: URL mapping, metadata awareness, publish timestamps, and structured context remove reporting chaos.</p>
-          <div class="bg-white rounded-lg shadow border-0 shadow-sm">
-            <div class="p-6 text-gray-600 text-sm">
-              <p class="mb-1">✅ Auto-mapped URLs & IDs: Content entries align to analytics paths automatically.</p>
-              <p class="mb-1">✅ Meta awareness: Titles, descriptions, and taxonomy inform views—no spreadsheets.</p>
-              <p class="mb-1">✅ Publication timestamps: Traffic changes align with publish/revision history.</p>
-              <p class="mb-0">✅ Content model context: See how templates, categories, or authors perform without manual tagging.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-gray-900 text-white relative overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6 items-center">
-        <div class="lg:col-span-6">
-          <h2 class="text-3xl font-bold font-semibold mb-4 text-white">Content performance summaries your team will actually read</h2>
-          <p class="text-lg text-white/75 mb-4">Content.One rolls up performance into clean summaries so anyone can spot trends, opportunities, and wins.</p>
-          <div class="grid grid-cols-12 gap-4 grid-cols-1 sm:grid-cols-2 gap-3">
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-analytics-count="75" data-analytics-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Faster answers to daily content questions</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-analytics-count="60" data-analytics-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Reduction in ad-hoc GA logins for marketers</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-analytics-count="150" data-analytics-suffix="%">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Increase in content iterations using real data</p>
-                </div>
-              </div>
-            </div>
-            <div class="flex-1">
-              <div class="bg-white rounded-lg shadow bg-transparent border border-white/25 h-full">
-                <div class="p-6">
-                  <p class="text-2xl font-bold font-semibold text-white mb-1" data-analytics-count="99.99" data-analytics-suffix="%" data-analytics-format="decimal">0</p>
-                  <p class="text-white/75 mb-0 text-sm">Uptime for analytics widgets inside Content.One</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden opacity-75">
-            <img src="https://hj5v68xn.media.zestyio.com/analytics-zoom.jpg" alt="Analytics details" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="absolute top-0 bottom-0 left-0 right-0 bg-gradient-analytics-dark" style="opacity:0.35;"></div>
-  </section>
-
-  <section class="py-6">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 gap-6">
-        <div class="lg:col-span-6">
-          <h2 class="text-4xl font-bold font-semibold mb-4">Benefits across the content lifecycle</h2>
-          <p class="text-gray-600 mb-4">Analytics inside the CMS keeps every stage informed.</p>
-          <ul class="list-none m-0 p-0 grid gap-3">
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"/></svg>
-              <span>Draft: Reference historical performance of similar content before outlining.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M9.752 6.193c.599.6 1.73.437 2.528-.362s.96-1.932.362-2.531c-.599-.6-1.73-.438-2.528.361-.798.8-.96 1.933-.362 2.532"/>
-  <path d="M15.811 3.312c-.363 1.534-1.334 3.626-3.64 6.218l-.24 2.408a2.56 2.56 0 0 1-.732 1.526L8.817 15.85a.51.51 0 0 1-.867-.434l.27-1.899c.04-.28-.013-.593-.131-.956a9 9 0 0 0-.249-.657l-.082-.202c-.815-.197-1.578-.662-2.191-1.277-.614-.615-1.079-1.379-1.275-2.195l-.203-.083a10 10 0 0 0-.655-.248c-.363-.119-.675-.172-.955-.132l-1.896.27A.51.51 0 0 1 .15 7.17l2.382-2.386c.41-.41.947-.67 1.524-.734h.006l2.4-.238C9.005 1.55 11.087.582 12.623.208c.89-.217 1.59-.232 2.08-.188.244.023.435.06.57.093q.1.026.16.045c.184.06.279.13.351.295l.029.073a3.5 3.5 0 0 1 .157.721c.055.485.051 1.178-.159 2.065m-4.828 7.475.04-.04-.107 1.081a1.54 1.54 0 0 1-.44.913l-1.298 1.3.054-.38c.072-.506-.034-.993-.172-1.418a9 9 0 0 0-.164-.45c.738-.065 1.462-.38 2.087-1.006M5.205 5c-.625.626-.94 1.351-1.004 2.09a9 9 0 0 0-.45-.164c-.424-.138-.91-.244-1.416-.172l-.38.054 1.3-1.3c.245-.246.566-.401.91-.44l1.08-.107zm9.406-3.961c-.38-.034-.967-.027-1.746.163-1.558.38-3.917 1.496-6.937 4.521-.62.62-.799 1.34-.687 2.051.107.676.483 1.362 1.048 1.928.564.565 1.25.941 1.924 1.049.71.112 1.429-.067 2.048-.688 3.079-3.083 4.192-5.444 4.556-6.987.183-.771.18-1.345.138-1.713a3 3 0 0 0-.045-.283 3 3 0 0 0-.3-.041Z"/>
-  <path d="M7.009 12.139a7.6 7.6 0 0 1-1.804-1.352A7.6 7.6 0 0 1 3.794 8.86c-1.102.992-1.965 5.054-1.839 5.18.125.126 3.936-.896 5.054-1.902Z"/></svg>
-              <span>Publish: Watch early engagement immediately after launch to confirm the rollout.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path fill-rule="evenodd" d="M11.5 2a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M9.05 3a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0V3zM4.5 7a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M2.05 8a2.5 2.5 0 0 1 4.9 0H16v1H6.95a2.5 2.5 0 0 1-4.9 0H0V8zm9.45 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m-2.45 1a2.5 2.5 0 0 1 4.9 0H16v1h-2.05a2.5 2.5 0 0 1-4.9 0H0v-1z"/></svg>
-              <span>Optimize: Adjust headlines, CTAs, or media and check deltas days later.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M15 14s1 0 1-1-1-4-5-4-5 3-5 4 1 1 1 1zm-7.978-1L7 12.996c.001-.264.167-1.03.76-1.72C8.312 10.629 9.282 10 11 10c1.717 0 2.687.63 3.24 1.276.593.69.758 1.457.76 1.72l-.008.002-.014.002zM11 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4m3-2a3 3 0 1 1-6 0 3 3 0 0 1 6 0M6.936 9.28a6 6 0 0 0-1.23-.247A7 7 0 0 0 5 9c-4 0-5 3-5 4q0 1 1 1h4.216A2.24 2.24 0 0 1 5 13c0-1.01.377-2.042 1.09-2.904.243-.294.526-.569.846-.816M4.92 10A5.5 5.5 0 0 0 4 13H1c0-.26.164-1.03.76-1.724.545-.636 1.492-1.256 3.16-1.275ZM1.5 5.5a3 3 0 1 1 6 0 3 3 0 0 1-6 0m3-2a2 2 0 1 0 0 4 2 2 0 0 0 0-4"/></svg>
-              <span>Collaborate: Share page-level insights with editors, designers, SEO, and leadership.</span>
-            </li>
-            <li class="flex gap-3">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="text-analytics text-xl" aria-hidden="true"><path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0z"/>
-  <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1z"/>
-  <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0z"/></svg>
-              <span>Report: Pull quick rollups for standups or stakeholder updates without custom dashboards.</span>
-            </li>
-          </ul>
-        </div>
-        <div class="lg:col-span-6">
-          <div class="rounded-xl shadow-lg overflow-hidden">
-            <img src="https://hj5v68xn.media.zestyio.com/analytics-team-image.jpg" alt="Marketing team reviewing insights" class="w-full h-full object-cover">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-6 bg-analytics text-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-12 gap-4 justify-center text-center">
-        <div class="lg:col-span-8 lg:col-start-3">
-          <h2 class="text-3xl font-bold font-semibold mb-3">Bring analytics to where work happens</h2>
-          <p class="text-lg text-white/75 mb-4">Content.One’s GA integration turns insight into action inside your content workflow.</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <a href="/book-a-demo/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-white text-gray-900 hover:bg-gray-100 text-base px-6 py-3 text-analytics">Talk to our team</a>
-            <a href="/solutions/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer border border-white text-white hover:bg-white/10 text-base px-6 py-3">See all solutions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 </div>
 
 <style>
-  .analytics-feature-page .bg-gradient-analytics {
-    background: linear-gradient(135deg, #0f172a 0%, #4f46e5 45%, #22c55e 100%);
+  /* ─── Hero ───────────────────────────────────────────────────────────── */
+  .analytics-feature-page .analytics-hero {
+    background: linear-gradient(180deg, #19214e 0%, #060813 100%);
+    padding: 96px 0 80px;
   }
-  .analytics-feature-page .bg-gradient-analytics-dark {
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.85) 0%, rgba(15, 23, 42, 0.25) 100%);
+  .analytics-feature-page .analytics-hero__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 48px;
+    align-items: center;
   }
-  .analytics-feature-page .bg-analytics {
-    background-color: #4f46e5;
+  @media (min-width: 640px) { .analytics-feature-page .analytics-hero__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) {
+    .analytics-feature-page .analytics-hero__container { grid-template-columns: 1fr 1fr; gap: 64px; padding: 0 2rem; }
   }
-  .analytics-feature-page .text-analytics {
-    color: #4f46e5 !important;
+  .analytics-feature-page .analytics-hero__copy { display: flex; flex-direction: column; gap: 16px; }
+  .analytics-feature-page .analytics-hero__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 8px;
+    padding: 4px 10px;
+    border-radius: 9999px;
+    background: rgba(177, 186, 231, 0.12);
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    margin: 0;
   }
-  .analytics-feature-page .bg-analytics-subtle {
-    background-color: rgba(79, 70, 229, 0.12) !important;
+  .analytics-feature-page .analytics-hero__dot {
+    width: 6px; height: 6px; border-radius: 9999px; background: #8C9BE6;
   }
-  .analytics-lightbox-section .analytics-lightbox-frame img { display: block; }
-  .analytics-feature-page .analytics-lightbox-frame {
-    background: radial-gradient(circle at top, rgba(99, 102, 241, 0.15), transparent 65%);
-    border: 1px solid rgba(15, 23, 42, 0.08);
+  .analytics-feature-page .analytics-hero__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.96px;
+    margin: 0;
   }
-  .analytics-feature-page .analytics-lightbox-trigger {
-    cursor: zoom-in;
+  @media (min-width: 768px) { .analytics-feature-page .analytics-hero__title { font-size: 48px; line-height: 60px; letter-spacing: -1.44px; } }
+  @media (min-width: 1280px) { .analytics-feature-page .analytics-hero__title { font-size: 60px; line-height: 72px; letter-spacing: -1.8px; } }
+  .analytics-feature-page .analytics-hero__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+    max-width: 560px;
   }
-  .analytics-feature-page .analytics-lightbox-overlay {
-    position: absolute;
-    inset: 0;
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-hero__lede { font-size: 20px; line-height: 30px; } }
+  .analytics-feature-page .analytics-hero__ctas {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 1.25rem;
-    color: #fff;
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0) 40%, rgba(15, 23, 42, 0.75) 100%);
-    opacity: 0;
-    transition: opacity .25s ease;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
   }
-  .analytics-feature-page .analytics-lightbox-trigger:hover .analytics-lightbox-overlay,
-  .analytics-feature-page .analytics-lightbox-trigger:focus .analytics-lightbox-overlay {
-    opacity: 1;
+  @media (min-width: 640px) { .analytics-feature-page .analytics-hero__ctas { flex-direction: row; gap: 16px; } }
+  .analytics-feature-page .analytics-hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    box-shadow:
+      0 1px 2px 0 rgba(0, 0, 0, 0.05),
+      inset 0 0 0 1px rgba(0, 0, 0, 0.18),
+      inset 0 -2px 0 0 rgba(0, 0, 0, 0.05);
   }
-  .analytics-feature-page .analytics-lightbox-eyebrow {
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    font-size: .75rem;
-    color: rgba(255, 255, 255, 0.65);
+  .analytics-feature-page .analytics-hero__cta--primary {
+    background-color: #31429b;
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.12);
   }
-  .analytics-feature-page .analytics-lightbox-icon {
-    background: rgba(255, 255, 255, 0.15);
-    border-radius: 999px;
-    padding: .65rem .95rem;
-    font-size: 1.25rem;
+  .analytics-feature-page .analytics-hero__cta--primary:hover { background-color: #2F3F94; }
+  .analytics-feature-page .analytics-hero__cta--secondary {
+    background-color: #ffffff;
+    color: #404040;
+    border: 1px solid #d4d4d4;
   }
-  .analytics-feature-page .analytics-lightbox-thumbs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-  .analytics-feature-page .analytics-lightbox-thumb {
-    border: 0;
-    background: transparent;
-    padding: 0;
-    border-radius: 1rem;
-    overflow: hidden;
-    position: relative;
-    min-width: 180px;
-    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.15);
-  }
-  .analytics-feature-page .analytics-lightbox-thumb img {
+  .analytics-feature-page .analytics-hero__cta--secondary:hover { background-color: #f9fafb; }
+  .analytics-feature-page .analytics-hero__media { width: 100%; }
+  .analytics-feature-page .analytics-hero__img {
     display: block;
     width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
-  .analytics-feature-page .analytics-lightbox-thumb span {
-    position: absolute;
-    bottom: .5rem;
-    left: .75rem;
-    right: .75rem;
-    font-size: .85rem;
+
+  /* ─── Trust Strip ────────────────────────────────────────────────────── */
+  .analytics-feature-page .analytics-trust {
+    background: #060813;
+    padding: 64px 0;
+  }
+  .analytics-feature-page .analytics-trust__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-trust__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-trust__container { padding: 0 2rem; } }
+  .analytics-feature-page .analytics-trust__overline {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-weight: 600;
-    color: #fff;
-    text-shadow: 0 2px 8px rgba(15, 23, 42, 0.8);
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    text-align: center;
   }
-  .analytics-feature-page .analytics-stat-grid {
+  .analytics-feature-page .analytics-trust__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px 48px;
+  }
+  .analytics-feature-page .analytics-trust__logo { display: inline-flex; }
+  .analytics-feature-page .analytics-trust__logo-img {
+    max-height: 36px;
+    width: auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.85;
+    transition: opacity 0.15s ease;
+  }
+  .analytics-feature-page .analytics-trust__logo:hover .analytics-trust__logo-img { opacity: 1; }
+
+  /* ─── Features Grid (LIGHT) ──────────────────────────────────────────── */
+  .analytics-feature-page .analytics-features {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .analytics-feature-page .analytics-features__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-features__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-features__container { padding: 0 2rem; } }
+  .analytics-feature-page .analytics-features__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 768px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .analytics-feature-page .analytics-features__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 30px;
+    line-height: 38px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .analytics-feature-page .analytics-features__title { font-size: 36px; line-height: 44px; } }
+  .analytics-feature-page .analytics-features__subheading {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .analytics-feature-page .analytics-features__grid {
     display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
-  .analytics-feature-page .analytics-stat-chip {
-    border: 1px solid rgba(15, 23, 42, 0.08);
-    border-radius: 1rem;
-    padding: 1rem 1.25rem;
-    background: #fff;
-    box-shadow: 0 10px 26px rgba(15, 23, 42, 0.07);
+  @media (min-width: 640px) { .analytics-feature-page .analytics-features__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-features__grid { grid-template-columns: repeat(3, 1fr); } }
+  .analytics-feature-page .analytics-features__card {
+    border-radius: 16px;
+    border: 1px solid #eaecf0;
+    background: #ffffff;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
   }
-  .analytics-feature-page .analytics-stat-chip .label {
-    font-size: .75rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-    color: #64748b;
-  }
-  .analytics-feature-page .analytics-stat-chip strong {
-    display: block;
-    font-size: 2rem;
-    line-height: 1.1;
-    color: #0f172a;
-  }
-  .analytics-feature-page .analytics-stat-chip small {
-    color: #475569;
-  }
-  .analytics-lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(2, 6, 23, 0.82);
+  .analytics-feature-page .analytics-features__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #d8dcf3;
+    border: 2px solid rgba(255, 255, 255, 0.12);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1.5rem;
+    color: #4255BD;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  }
+  .analytics-feature-page .analytics-features__icon svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+    color: #4255BD;
+  }
+  /* Asset-backed icons: mask the SVG so the brand color shows through. */
+  .analytics-feature-page .analytics-features__icon-img {
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .analytics-feature-page .analytics-features__card-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .analytics-feature-page .analytics-features__card-title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .analytics-feature-page .analytics-features__card-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+
+  /* ─── Alternating Highlights (LIGHT) ─────────────────────────────────── */
+  .analytics-feature-page .analytics-highlights {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .analytics-feature-page .analytics-highlights__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 96px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-highlights__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-highlights__container { padding: 0 2rem; } }
+  .analytics-feature-page .analytics-highlights__row {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    align-items: center;
+  }
+  @media (min-width: 1024px) {
+    .analytics-feature-page .analytics-highlights__row { flex-direction: row; gap: 96px; }
+    .analytics-feature-page .analytics-highlights__row--reverse { flex-direction: row-reverse; }
+  }
+  .analytics-feature-page .analytics-highlights__media { width: 100%; max-width: 720px; position: relative; }
+  @media (min-width: 1024px) {
+    .analytics-feature-page .analytics-highlights__media { flex: 1 1 0; max-width: none; }
+  }
+  .analytics-feature-page .analytics-highlights__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+  }
+  .analytics-feature-page .analytics-lightbox-trigger {
+    display: block;
+    position: relative;
+    cursor: zoom-in;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  .analytics-feature-page .analytics-highlights__expand {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 9999px;
+    background: rgba(15, 23, 42, 0.75);
+    color: #ffffff;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  .analytics-feature-page .analytics-lightbox-trigger:hover .analytics-highlights__expand,
+  .analytics-feature-page .analytics-lightbox-trigger:focus .analytics-highlights__expand {
+    opacity: 1;
+  }
+  .analytics-feature-page .analytics-highlights__content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-highlights__content { flex: 1 1 0; } }
+  .analytics-feature-page .analytics-highlights__heading-group { display: flex; flex-direction: column; gap: 8px; }
+  .analytics-feature-page .analytics-highlights__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .analytics-feature-page .analytics-highlights__title { font-size: 30px; line-height: 38px; } }
+  .analytics-feature-page .analytics-highlights__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-highlights__lede { font-size: 18px; line-height: 28px; } }
+  .analytics-feature-page .analytics-highlights__cells {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-top: 16px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-highlights__cells { grid-template-columns: repeat(2, 1fr); } }
+  .analytics-feature-page .analytics-highlights__cell { display: flex; flex-direction: column; gap: 4px; }
+  .analytics-feature-page .analytics-highlights__cell-title {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 0;
+  }
+  .analytics-feature-page .analytics-highlights__cell-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #737373;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .analytics-feature-page .analytics-highlights__icon-list {
+    list-style: none;
+    margin: 16px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 560px;
+  }
+  .analytics-feature-page .analytics-highlights__icon-row { display: flex; align-items: flex-start; gap: 16px; }
+  .analytics-feature-page .analytics-highlights__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    color: #4255BD;
+    display: block;
+    padding-top: 2px;
+  }
+  .analytics-feature-page .analytics-highlights__icon svg { display: block; width: 24px; height: 24px; }
+  .analytics-feature-page .analytics-highlights__icon-img {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-color: #4255BD;
+    -webkit-mask: var(--icon-url) center / contain no-repeat;
+    mask: var(--icon-url) center / contain no-repeat;
+  }
+  .analytics-feature-page .analytics-highlights__icon-text {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    flex: 1;
+  }
+
+  /* ─── Stats (DARK, solidified cards) ─────────────────────────────────── */
+  .analytics-feature-page .analytics-stats {
+    background: #0c1027;
+    padding: 96px 0;
+  }
+  .analytics-feature-page .analytics-stats__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-stats__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-stats__container { padding: 0 2rem; } }
+  .analytics-feature-page .analytics-stats__heading-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 768px;
+  }
+  .analytics-feature-page .analytics-stats__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  @media (min-width: 768px) { .analytics-feature-page .analytics-stats__title { font-size: 30px; line-height: 38px; } }
+  .analytics-feature-page .analytics-stats__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+  }
+  .analytics-feature-page .analytics-stats__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-stats__grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-stats__grid { grid-template-columns: repeat(4, 1fr); } }
+  .analytics-feature-page .analytics-stats__tile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 12px;
+    padding: 24px;
+  }
+  .analytics-feature-page .analytics-stats__number {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 36px;
+    line-height: 44px;
+    margin: 0 0 4px;
+  }
+  .analytics-feature-page .analytics-stats__label {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    color: #b1bae7;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+
+  /* ─── Customer Voices (LIGHT) ────────────────────────────────────────── */
+  .analytics-feature-page .analytics-customers {
+    background: #ffffff;
+    padding: 96px 0;
+  }
+  .analytics-feature-page .analytics-customers__container {
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  @media (min-width: 640px) { .analytics-feature-page .analytics-customers__container { padding: 0 1.5rem; } }
+  @media (min-width: 1024px) { .analytics-feature-page .analytics-customers__container { padding: 0 2rem; } }
+  .analytics-feature-page .analytics-customers__header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+  @media (min-width: 1024px) {
+    .analytics-feature-page .analytics-customers__header { flex-direction: row; align-items: flex-end; }
+  }
+  .analytics-feature-page .analytics-customers__title {
+    font-family: 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    color: #171717;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0 0 8px;
+  }
+  @media (min-width: 768px) { .analytics-feature-page .analytics-customers__title { font-size: 30px; line-height: 38px; } }
+  .analytics-feature-page .analytics-customers__lede {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 500;
+    color: #525252;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0;
+    max-width: 640px;
+  }
+  .analytics-feature-page .analytics-customers__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid #d4d4d4;
+    background: #ffffff;
+    color: #344054;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 12px 18px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+    flex-shrink: 0;
+  }
+  .analytics-feature-page .analytics-customers__cta:hover { background: #f9fafb; }
+  .analytics-feature-page .analytics-customers .review-feature-chip { display: none; }
+  .analytics-feature-page .analytics-customers .bg-white.rounded-2xl {
+    border: 1px solid #eaecf0;
+  }
+
+  /* ─── Lightbox modal ─────────────────────────────────────────────────── */
+  .analytics-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(6, 8, 19, 0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
     z-index: 2000;
   }
-  .analytics-lightbox[hidden] {
-    display: none;
-  }
+  .analytics-lightbox[hidden] { display: none; }
   .analytics-lightbox__dialog {
     position: relative;
     max-width: min(960px, 90vw);
@@ -473,96 +796,79 @@
     width: 100%;
     height: auto;
     display: block;
+    border-radius: 12px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
   .analytics-lightbox__caption {
-    margin-top: 1rem;
-    font-size: .95rem;
+    margin-top: 16px;
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.75);
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
   }
   .analytics-lightbox__close {
     border: 0;
     background: rgba(15, 23, 42, 0.75);
-    color: #fff;
-    border-radius: 999px;
-    padding: .35rem .55rem;
-    font-size: 1rem;
+    color: #ffffff;
+    border-radius: 9999px;
+    width: 32px;
+    height: 32px;
     position: absolute;
-    top: -.5rem;
-    right: -.5rem;
+    top: -16px;
+    right: -16px;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
   }
   .analytics-lightbox__backdrop {
     position: absolute;
     inset: 0;
     cursor: zoom-out;
   }
-  body.analytics-lightbox-open {
-    overflow: hidden;
-  }
-  .analytics-feature-page .logo-card {
-    min-height: 96px;
-    transition: transform .2s ease;
-  }
-  .analytics-feature-page .logo-card__image {
-    max-height: 48px;
-    width: auto;
-    filter: grayscale(100%);
-    opacity: 0.6;
-    transition: filter .2s ease, opacity .2s ease;
-  }
-  .analytics-feature-page .logo-card:hover .logo-card__image,
-  .analytics-feature-page .logo-card:focus .logo-card__image {
-    filter: grayscale(0%);
-    opacity: 1;
-  }
+  body.analytics-lightbox-open { overflow: hidden; }
 </style>
 
 <script>
+  // Stats count-up animation
   document.addEventListener('DOMContentLoaded', function () {
-    var analyticsObserver = new IntersectionObserver(function (entries) {
+    var counterObserver = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          var el = entry.target;
-          var endValue = parseFloat(el.getAttribute('data-analytics-count'));
-          if (isNaN(endValue)) return;
-          var suffix = el.getAttribute('data-analytics-suffix') || '';
-          var format = el.getAttribute('data-analytics-format');
-          var duration = 1600;
-          var startTimestamp = null;
-
-          var step = function (timestamp) {
-            if (!startTimestamp) startTimestamp = timestamp;
-            var progress = Math.min((timestamp - startTimestamp) / duration, 1);
-            var value = progress * endValue;
-            var display = format === 'decimal'
-              ? value.toFixed(2)
-              : Math.floor(value).toLocaleString();
-            el.textContent = display + suffix;
-            if (progress < 1) {
-              window.requestAnimationFrame(step);
-            } else {
-              var finalValue = format === 'decimal'
-                ? endValue.toFixed(2)
-                : Math.round(endValue).toLocaleString();
-              el.textContent = finalValue + suffix;
-            }
-          };
-
-          window.requestAnimationFrame(step);
-          analyticsObserver.unobserve(el);
+        if (!entry.isIntersecting) return;
+        var el = entry.target;
+        var endValue = parseFloat(el.getAttribute('data-analytics-count'));
+        if (isNaN(endValue)) return;
+        var suffix = el.getAttribute('data-analytics-suffix') || '';
+        var format = el.getAttribute('data-analytics-format');
+        var duration = 1600;
+        var startTimestamp = null;
+        function step(timestamp) {
+          if (!startTimestamp) startTimestamp = timestamp;
+          var progress = Math.min((timestamp - startTimestamp) / duration, 1);
+          var value = progress * endValue;
+          var display = format === 'decimal'
+            ? value.toFixed(2)
+            : Math.floor(value).toLocaleString();
+          el.textContent = display + suffix;
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            var finalValue = format === 'decimal' ? endValue.toFixed(2) : Math.round(endValue).toLocaleString();
+            el.textContent = finalValue + suffix;
+          }
         }
+        window.requestAnimationFrame(step);
+        counterObserver.unobserve(el);
       });
     }, { threshold: 0.4 });
 
     document.querySelectorAll('.analytics-feature-page [data-analytics-count]').forEach(function (counter) {
-      analyticsObserver.observe(counter);
+      counterObserver.observe(counter);
     });
   });
 </script>
 
 <script>
+  // Lightbox open/close for the dashboard preview.
   document.addEventListener('DOMContentLoaded', function () {
     var lightbox = document.getElementById('analyticsLightbox');
     if (!lightbox) return;
@@ -573,15 +879,21 @@
       if (lightbox.hasAttribute('hidden')) return;
       lightbox.setAttribute('hidden', 'hidden');
       document.body.classList.remove('analytics-lightbox-open');
-      if (media) {
-        media.src = '';
-        media.alt = '';
-      }
+      if (media) { media.src = ''; media.alt = ''; }
     }
-
     function openLightbox(src, text, fallbackAlt) {
       if (!src) return;
-      media.src = src;
+      // Reject anything that isn't a http(s) or protocol-relative URL — keeps
+      // javascript:/data: URIs from ever landing on the <img>.src sink even
+      // though attribute values on this page are template-authored, not user
+      // input. Satisfies CodeQL js/xss-through-dom.
+      var safeSrc = '';
+      try {
+        var u = new URL(src, document.baseURI);
+        if (u.protocol === 'https:' || u.protocol === 'http:') safeSrc = u.href;
+      } catch (e) { return; }
+      if (!safeSrc) return;
+      media.src = safeSrc;
       media.alt = text || fallbackAlt || 'Expanded analytics preview';
       caption.textContent = text || '';
       lightbox.removeAttribute('hidden');
@@ -591,20 +903,14 @@
     lightbox.querySelectorAll('[data-analytics-lightbox-close]').forEach(function (closer) {
       closer.addEventListener('click', closeLightbox);
     });
-
     document.addEventListener('keydown', function (event) {
       if (event.key === 'Escape') closeLightbox();
     });
-
     document.querySelectorAll('.analytics-lightbox-trigger').forEach(function (trigger) {
       trigger.addEventListener('click', function (event) {
         event.preventDefault();
-        var src = trigger.getAttribute('data-analytics-lightbox-src') ||
-          trigger.getAttribute('href') ||
-          (trigger.querySelector('img') && (trigger.querySelector('img').currentSrc || trigger.querySelector('img').src));
-        var text = trigger.getAttribute('data-analytics-lightbox-caption') ||
-          trigger.getAttribute('aria-label') ||
-          (trigger.querySelector('img') && trigger.querySelector('img').alt);
+        var src = trigger.getAttribute('data-analytics-lightbox-src') || trigger.getAttribute('href');
+        var text = trigger.getAttribute('data-analytics-lightbox-caption') || trigger.getAttribute('aria-label');
         openLightbox(src, text, trigger.getAttribute('aria-label'));
       });
     });
