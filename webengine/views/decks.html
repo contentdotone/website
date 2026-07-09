@@ -56,6 +56,12 @@
       radial-gradient(800px 480px at 100% -10%, rgba(54,179,126,0.45), transparent 60%),
       radial-gradient(900px 520px at 0% 110%, rgba(66,85,189,0.45), transparent 55%),
       #080b18; }
+    /* Segment-focused hospital deck — warmer cyan/amber to distinguish from
+       the original hospital-pitch deck's cool cyan/royal treatment. */
+    .deck-preview-hospital-two { background:
+      radial-gradient(800px 480px at 100% -10%, rgba(255,171,0,0.24), transparent 60%),
+      radial-gradient(900px 520px at 0% 110%, rgba(13,202,240,0.35), transparent 55%),
+      #080b18; }
     .deck-preview { background-image:
       linear-gradient(rgba(124,140,240,0.06) 1px, transparent 1px),
       linear-gradient(90deg, rgba(124,140,240,0.06) 1px, transparent 1px);
@@ -99,7 +105,7 @@
   <!-- ════════════ DECK CARDS ════════════ -->
   <section class="py-16 lg:py-24 bg-paper">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
         <!-- ─── Card: Hospitals / Healthcare ─── -->
         <article class="group flex flex-col bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-1 transition">
@@ -162,6 +168,28 @@
             <p class="text-gray-700 text-sm leading-relaxed -mt-1">A walk through how embedded senior engineers become an extension of your team — proven by The Salvation Army shipping a national platform with zero added headcount, and Sony going from kickoff to soft launch in six weeks.</p>
             <a href="/fractional-devs-pitch.html" class="mt-auto inline-flex items-center justify-between rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 text-sm transition">
               <span>Open the On-Demand Devs deck</span>
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+
+        <!-- ─── Card: Hospitals — Two-segment (Large + Rural) ─── -->
+        <article class="group flex flex-col bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-1 transition">
+          <a href="/hospital-deck.html" class="relative deck-preview deck-preview-hospital-two aspect-[16/10] flex flex-col justify-end p-5 text-white overflow-hidden">
+            <div class="absolute top-4 right-4 inline-flex items-center gap-1.5 bg-white/10 backdrop-blur border border-white/20 rounded-full px-2.5 py-1 text-[10px] font-mono uppercase tracking-wider">
+              <svg viewBox="0 0 24 24" class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+              12 slides
+            </div>
+            <p class="font-mono text-[10px] tracking-[0.3em] uppercase text-amber-200/85 mb-2">Hospital pitch · Two audiences</p>
+            <h3 class="font-display text-2xl md:text-3xl font-bold leading-tight">Look bigger.<br/>Move faster.<br/><span class="text-cyan-300">Keep care local.</span></h3>
+          </a>
+          <div class="p-6 flex flex-col gap-4 flex-1">
+            <p class="text-xs font-mono uppercase tracking-wider text-danger m-0">The problem</p>
+            <p class="text-gray-700 text-sm leading-relaxed -mt-1">Two hospital worlds, same broken website story — health systems drowning in acquired sites and IT dependency, and rural hospitals with no marketing team watching younger patients drive to the regional competitor.</p>
+            <p class="text-xs font-mono uppercase tracking-wider text-success m-0">The story</p>
+            <p class="text-gray-700 text-sm leading-relaxed -mt-1">A pain → pleasure island walk for both audiences at once: how Content.One unifies acquisitions under one brand for large systems, and lets rural admin teams keep a modern site running with zero dev — same content engine underneath.</p>
+            <a href="/hospital-deck.html" class="mt-auto inline-flex items-center justify-between rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 text-sm transition">
+              <span>Open the Two-Segment deck</span>
               <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
