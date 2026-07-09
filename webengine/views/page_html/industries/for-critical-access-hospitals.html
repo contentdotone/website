@@ -10,10 +10,28 @@
   convention (see project_zesty_url_patterns memory). Loader wraps nav/footer.
 -->
 
+<style>
+  /* Rural hospital hero uses the same corridor photo as the composable
+     hospital page (::before at ~12% opacity) so the CAH page reads as a
+     sibling of the health-systems page — same brand mood, same imagery. */
+  .cah-page .cah-hero { position: relative; isolation: isolate; }
+  .cah-page .cah-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("https://hj5v68xn.media.zestyio.com/pexels-juan-moccagatta-2159466094-36595248.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .cah-page .cah-hero > * { position: relative; z-index: 1; }
+</style>
+
 <div class="cah-page bg-white text-ink">
 
   <!-- HERO — dark, rural-hospital-first positioning -->
-  <section class="relative overflow-hidden text-white" style="background: linear-gradient(180deg, #0B1029 0%, #060813 100%);">
+  <section class="cah-hero relative overflow-hidden text-white" style="background: linear-gradient(180deg, #0B1029 0%, #060813 100%);">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-36 pb-16 lg:pb-24 relative">
       <div class="max-w-4xl">
         <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">Critical Access &amp; Rural Hospitals · ADA-compliant · HIPAA-conscious</span>
