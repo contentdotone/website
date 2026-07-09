@@ -117,20 +117,30 @@
     header.sticky-nav > nav > .max-w-7xl { min-height: 72px; padding-top: 0; padding-bottom: 0; }
   }
 
-  /* Figma 14057:8503 / 9162 — mega-menu dropdown: full-width, centered content */
+  /* Figma 14057:8503 / 9162 — mega-menu dropdown: full-width, centered content.
+     position: fixed instead of absolute — the sticky-nav <header> uses
+     `will-change: transform` which creates a new containing block; absolute
+     positioning was resolving inside the flex row rather than below the
+     header. Fixed positioning is deterministic relative to the viewport. */
   @media (min-width: 1024px) {
-    /* Escape the parent <li> positioning so mega-menu can anchor to the <header>. */
-    .nav-details.nav-mega { position: static; }
     .nav-details.nav-mega > .nav-menu {
-      left: 0; right: 0; top: 100%;
-      min-width: 0; width: auto; max-width: none;
-      padding: 0; padding-top: 0;
-      border-radius: 0;
+      position: fixed !important;
+      left: 0 !important; right: 0 !important; top: 72px !important;
+      width: 100vw !important;
+      min-width: 0 !important; max-width: none !important;
+      margin-top: 0 !important; padding: 0 !important;
+      border-radius: 0 !important;
       border-top: 1px solid #E5E5E5;
+      background: #fff;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
       overflow: hidden;
+      z-index: 1040;
     }
     /* Active summary state — filled gray pill w/ rotated caret */
     .nav-details[open] > summary { background: #F5F5F5; color: #171717; }
+    /* Belt-and-suspenders: kill default <li> markers on the top nav ul */
+    header.sticky-nav ul { list-style: none !important; }
+    header.sticky-nav ul > li { list-style: none !important; }
   }
   /* Inner container matches the main-nav container width + padding so mega
      menu content aligns with the logo/nav items above it. */
