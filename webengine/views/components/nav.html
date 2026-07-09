@@ -117,16 +117,26 @@
     header.sticky-nav > nav > .max-w-7xl { min-height: 72px; padding-top: 0; padding-bottom: 0; }
   }
 
-  /* Figma 14057:8503 / 9162 — mega-menu dropdown */
+  /* Figma 14057:8503 / 9162 — mega-menu dropdown: full-width, centered content */
   @media (min-width: 1024px) {
+    /* Escape the parent <li> positioning so mega-menu can anchor to the <header>. */
+    .nav-details.nav-mega { position: static; }
     .nav-details.nav-mega > .nav-menu {
-      min-width: 68rem; padding: 1.25rem 1.5rem 0; padding-top: 1.25rem;
-      border-radius: 12px; overflow: hidden;
+      left: 0; right: 0; top: 100%;
+      min-width: 0; width: auto; max-width: none;
+      padding: 0; padding-top: 0;
+      border-radius: 0;
+      border-top: 1px solid #E5E5E5;
+      overflow: hidden;
     }
-    .nav-details.nav-mega.nav-menu-wide > .nav-menu { min-width: 76rem; padding: 1.25rem 1.5rem 0; padding-top: 1.25rem; }
     /* Active summary state — filled gray pill w/ rotated caret */
     .nav-details[open] > summary { background: #F5F5F5; color: #171717; }
   }
+  /* Inner container matches the main-nav container width + padding so mega
+     menu content aligns with the logo/nav items above it. */
+  .c1-mega-inner { max-width: 80rem; margin: 0 auto; padding: 1.25rem 1rem 0; }
+  @media (min-width: 640px) { .c1-mega-inner { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  @media (min-width: 1024px) { .c1-mega-inner { padding-left: 0.75rem; padding-right: 0.75rem; } }
   .c1-mega-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 12px; }
   .c1-mega-col-hd { color: #4255BD; font-size: 14px; font-weight: 600; padding: .25rem .5rem .75rem; }
   .c1-mega-item {
@@ -145,11 +155,11 @@
   .c1-mega-item:hover .c1-mega-item__icon { color: #31429b; }
   .c1-mega-item__title { font-size: 14px; font-weight: 600; color: #171717; line-height: 1.25; }
   .c1-mega-item__tag { font-size: 13px; color: #737373; margin-top: 2px; line-height: 1.35; }
-  .c1-mega-actions {
+  /* Actions strip: full-width band, content centered in .c1-mega-inner. */
+  .c1-mega-actions { background: #FAFAFA; border-top: 1px solid #F5F5F5; margin-top: 1rem; }
+  .c1-mega-actions__row {
     display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
-    padding: 1rem 1.5rem; gap: 1rem;
-    background: #FAFAFA; margin: 1rem -1.5rem 0;
-    border-top: 1px solid #F5F5F5;
+    padding-top: 1rem; padding-bottom: 1rem; gap: 1rem;
   }
   .c1-mega-actions__left { font-size: 14px; color: #525252; }
   .c1-mega-actions__left a { color: #31429b; font-weight: 600; text-decoration: none; }
@@ -268,6 +278,7 @@
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
                 <div class="nav-menu">
+                  <div class="c1-mega-inner">
                   <div class="c1-mega-grid">
                     {{each product_solutions as solution}}
                       <a class="c1-mega-item" href="{{indy.getUrl()}}">
@@ -278,7 +289,9 @@
                       </a>
                     {{/each}}
                   </div>
+                  </div>
                   <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
                     <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
                     <div class="c1-mega-actions__right">
                       <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
@@ -294,6 +307,7 @@
                         Migration Plan
                       </a>
                     </div>
+                    </div>
                   </div>
                 </div>
               </details>
@@ -305,6 +319,7 @@
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
                 <div class="nav-menu">
+                  <div class="c1-mega-inner">
                   <div class="c1-mega-grid">
                     {{each industries as indy}}
                       <a class="c1-mega-item" href="{{indy.getUrl()}}">
@@ -315,7 +330,9 @@
                       </a>
                     {{/each}}
                   </div>
+                  </div>
                   <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
                     <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
                     <div class="c1-mega-actions__right">
                       <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
@@ -330,6 +347,7 @@
                         <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                         Migration Plan
                       </a>
+                    </div>
                     </div>
                   </div>
                 </div>
@@ -360,7 +378,9 @@
                       </div>
                     {{/each}}
                   </div>
+                  </div>
                   <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
                     <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
                     <div class="c1-mega-actions__right">
                       <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
@@ -375,6 +395,7 @@
                         <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
                         Migration Plan
                       </a>
+                    </div>
                     </div>
                   </div>
                 </div>
