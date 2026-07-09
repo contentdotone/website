@@ -37,11 +37,30 @@
 
   <style>
     body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #FAFAFC; color: #0B0F1C; }
-    /* Feature row */
-    .feature-row { display: flex; align-items: flex-start; gap: 10px; padding: 8px 0; font-size: 15px; line-height: 1.45; color: #171717; }
-    .feature-row svg { flex-shrink: 0; margin-top: 3px; color: #4255BD; }
-    .feature-row--dark { color: #E5E7EB; }
-    .feature-row--dark svg { color: #8C9BE6; }
+    /* Feature accordion — click to expand a description under each feature */
+    .feature-acc { display: block; border-top: 1px solid #F1F3F5; }
+    .feature-acc:last-of-type { border-bottom: 1px solid #F1F3F5; }
+    .feature-acc > summary {
+      display: flex; align-items: flex-start; gap: 10px;
+      padding: 10px 0; font-size: 15px; line-height: 1.45; color: #171717;
+      cursor: pointer; list-style: none; user-select: none;
+    }
+    .feature-acc > summary::-webkit-details-marker { display: none; }
+    .feature-acc > summary::marker { content: ""; }
+    .feature-acc > summary > .feat-check { flex-shrink: 0; margin-top: 3px; color: #4255BD; }
+    .feature-acc > summary > span { flex: 1; }
+    .feature-acc > summary > .feat-chevron { flex-shrink: 0; margin-top: 4px; color: #A3A6B4; transition: transform .2s ease; }
+    .feature-acc[open] > summary > .feat-chevron { transform: rotate(180deg); }
+    .feature-acc > p { margin: 0 0 10px 30px; font-size: 14px; color: #525252; line-height: 1.55; }
+    .feature-acc--dark { border-top-color: rgba(255,255,255,0.08); }
+    .feature-acc--dark:last-of-type { border-bottom-color: rgba(255,255,255,0.08); }
+    .feature-acc--dark > summary { color: #E5E7EB; }
+    .feature-acc--dark > summary > .feat-check { color: #8C9BE6; }
+    .feature-acc--dark > summary > .feat-chevron { color: #6B7280; }
+    .feature-acc--dark > p { color: #A3A6B4; }
+    /* Enterprise pitch block — replaces the feature list on the enterprise card */
+    .plan-card__pitch { color: #E5E7EB; font-size: 15px; line-height: 1.6; padding: 4px 0; }
+    .plan-card__pitch p + p { margin-top: 12px; }
     /* Plan card */
     .plan-card {
       background: #ffffff; border: 1px solid #E5E7EB; border-radius: 16px;
@@ -117,10 +136,38 @@
             <strong>3 seats</strong> · Unlimited websites
           </div>
           <div class="plan-card__section-hd">Everything for content teams</div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Visual drag &amp; drop pages</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>WYSIWYG &amp; markdown authoring</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Generative AI content acceleration</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>GEO &amp; SEO tooling</span></div>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Visual drag &amp; drop pages</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Compose pages visually with a block editor — designers and marketers ship without waiting on engineering.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>WYSIWYG &amp; markdown authoring</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Rich-text and markdown editors side-by-side. Every author picks whichever fits how they write.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Generative AI content acceleration</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Drafting, rewriting, translating, and generating content variations powered by Claude and built into every field.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>GEO &amp; SEO tooling</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Meta tags, canonical, hreflang, schema.org, sitemap, and OpenGraph handled automatically across every locale.</p>
+          </details>
         </div>
 
         <!-- SCALE — featured -->
@@ -138,17 +185,117 @@
             <strong>10 seats</strong> · Unlimited websites
           </div>
           <div class="plan-card__section-hd">Everything in Launch, plus</div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Analytics</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Scheduled publishing &amp; expiry</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Automated personalization</span></div>
-          <div class="feature-row"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Automated translations &amp; localization</span></div>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Analytics</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Built-in dashboards for traffic, engagement, and content performance — no third-party tag or separate seat required.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Scheduled publishing &amp; expiry</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Schedule any piece of content to go live and retire automatically when a campaign ends. Time-based rollouts with no cron scripts.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automated personalization</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Deliver different content to different audiences based on segment, location, referrer, or account — no engineering handoffs.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Automated translations &amp; localization</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>One source of truth, localized per market. AI-drafted translations with human review workflows built in.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Headless APIs &amp; SDKs</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Query content via REST and GraphQL. Official SDKs for React, Vue, iOS, and Android with type-safe schemas.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Reusable component libraries</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Design-once, use-everywhere blocks with brand-safe governance so every site inherits the same components.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Visual + code-based templating</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Ship templates from Figma or code — both paths stay in sync. Designers and developers work in parallel.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Template versioning &amp; rollbacks</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Every template change is versioned automatically. Roll back to any prior state in seconds.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Webhooks for real-time integrations</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Fire events on content changes to sync your search index, cache, data warehouse, or downstream apps.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Global CDN hosting</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Multi-region edge delivery included on every plan — no separate CDN contract to negotiate or maintain.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>SSO &amp; role-based permissions</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>SAML SSO via Okta, Azure AD, and Google. Granular role permissions per site and per content model.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Workflow automation &amp; approvals</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Multi-stage review + approval flows with per-role gates for regulated content and multi-team publishing.</p>
+          </details>
+          <details class="feature-acc">
+            <summary>
+              <svg class="feat-check w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+              <span>Audit logs &amp; activity tracking</span>
+              <svg class="feat-chevron w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+            </summary>
+            <p>Every content, user, and admin action captured for compliance, forensics, and internal audit trails.</p>
+          </details>
         </div>
 
-        <!-- ENTERPRISE — dark -->
+        <!-- ENTERPRISE — dark, custom-solution pitch (no feature list) -->
         <div class="plan-card plan-card--dark">
           <div>
             <div class="plan-card__name">Enterprise</div>
-            <p class="plan-card__desc">For engineering-driven brands running federated architectures across every property.</p>
+            <p class="plan-card__desc">Custom packages available.</p>
           </div>
           <a href="/contact-us/?plan=enterprise" class="plan-card__cta">
             Request pricing
@@ -157,16 +304,10 @@
           <div class="plan-card__seats">
             <strong>Unlimited seats</strong> · Unlimited websites
           </div>
-          <div class="plan-card__section-hd">Everything in Scale, plus</div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Headless APIs &amp; SDKs</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Reusable component libraries</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Visual + code-based templating</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Template versioning &amp; rollbacks</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Webhooks for real-time integrations</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Global CDN hosting</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>SSO &amp; role-based permissions</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Workflow automation &amp; approvals</span></div>
-          <div class="feature-row feature-row--dark"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Audit logs &amp; activity tracking</span></div>
+          <div class="plan-card__pitch">
+            <p>Looking for a custom solution for your franchise, non-profit, or federated organization?</p>
+            <p>Contact our sales team for a full consultation.</p>
+          </div>
         </div>
 
       </div>
