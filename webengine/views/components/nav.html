@@ -118,16 +118,14 @@
   }
 
   /* Figma 14057:8503 / 9162 — mega-menu dropdown: full-width, centered content.
-     position: fixed instead of absolute — the sticky-nav <header> uses
-     `will-change: transform` which creates a new containing block; absolute
-     positioning was resolving inside the flex row rather than below the
-     header. Fixed positioning is deterministic relative to the viewport. */
+     .nav-mega is position: static so its .nav-menu (position: absolute) escapes
+     the <li> containing block and anchors to <header> (position: relative),
+     giving a full-viewport-width panel that follows the sticky-nav slide. */
   @media (min-width: 1024px) {
+    .nav-details.nav-mega { position: static; }
     .nav-details.nav-mega > .nav-menu {
-      position: fixed !important;
-      left: 0 !important; right: 0 !important; top: 72px !important;
-      width: 100vw !important;
-      min-width: 0 !important; max-width: none !important;
+      left: 0 !important; right: 0 !important; top: 100% !important;
+      min-width: 0 !important; max-width: none !important; width: auto !important;
       margin-top: 0 !important; padding: 0 !important;
       border-radius: 0 !important;
       border-top: 1px solid #E5E5E5;
@@ -138,9 +136,6 @@
     }
     /* Active summary state — filled gray pill w/ rotated caret */
     .nav-details[open] > summary { background: #F5F5F5; color: #171717; }
-    /* Belt-and-suspenders: kill default <li> markers on the top nav ul */
-    header.sticky-nav ul { list-style: none !important; }
-    header.sticky-nav ul > li { list-style: none !important; }
   }
   /* Inner container matches the main-nav container width + padding so mega
      menu content aligns with the logo/nav items above it. */
@@ -388,7 +383,6 @@
                         {{/each}}
                       </div>
                     {{/each}}
-                  </div>
                   </div>
                   </div>
                   <div class="c1-mega-actions">
