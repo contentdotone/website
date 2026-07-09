@@ -342,10 +342,17 @@
         <img src="{{globals.logo_full.getImage()}}" width="160" height="36" alt="Content.One Logo" loading="eager" fetchpriority="high" />
       </a>
 
-      <!-- Mobile hamburger — labels the hidden checkbox -->
-      <label for="nav-offcanvas-toggle" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Open navigation">
-        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </label>
+      <!-- Tablet CTA cluster + hamburger. Log In + Get Started Now show from
+           md+ (Figma 14071:7086); hamburger shows below lg. On desktop (lg+)
+           the full desktop nav below takes over and this whole cluster is
+           replaced by its version inside .hidden lg:flex. -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a href="https://app.zesty.io" class="c1-nav-btn c1-nav-btn--secondary hidden md:inline-flex" data-utm-link>Log In</a>
+        <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary hidden md:inline-flex">Get Started Now</a>
+        <label for="nav-offcanvas-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Open navigation">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </label>
+      </div>
 
       <!-- Desktop nav content: full menu with dropdowns. Hidden below lg. -->
       <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-6">
