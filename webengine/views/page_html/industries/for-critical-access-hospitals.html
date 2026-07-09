@@ -30,20 +30,37 @@
 
 <div class="cah-page bg-white text-ink">
 
-  <!-- HERO — dark, rural-hospital-first positioning -->
+  <!-- HERO — dark, rural-hospital-first positioning. Two-column at lg+ with
+       the Content.One editor screenshot (Medical-Freestyle) on the right,
+       mirroring the composable-cms-for-hospitals page pattern. -->
   <section class="cah-hero relative overflow-hidden text-white" style="background: linear-gradient(180deg, #0B1029 0%, #060813 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 lg:pt-36 pb-16 lg:pb-24 relative">
-      <div class="max-w-4xl">
-        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">Critical Access &amp; Rural Hospitals · ADA-compliant · HIPAA-conscious</span>
-        <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="letter-spacing:-1.5px; line-height:1.05;">
-          Look bigger. Get found. <span class="text-royalLite">Keep care local.</span>
-        </h1>
-        <p class="text-lg md:text-xl text-white/75 max-w-3xl leading-relaxed mb-8">
-          A modern hospital website your admin can actually maintain — <span class="text-white font-medium">ADA-compliant, HIPAA-designed</span>, with no marketing team, no developer, and no monthly vendor bill. Built for critical-access, rural, and small PPS facilities that still need to compete with the regional health system down the highway.
-        </p>
-        <div class="flex flex-wrap gap-3">
-          <a href="#cah-demo" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Book a rural-hospital demo</a>
-          <a href="#cah-fit" class="inline-flex items-center rounded-lg border border-white/25 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Is this a fit for us?</a>
+    <div class="max-w-7xl mx-auto lg:max-w-none">
+      <div class="flex flex-col lg:flex-row items-stretch">
+        <!-- Left: copy + CTAs -->
+        <div class="flex-1 min-w-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
+          <div class="w-full max-w-[520px] lg:max-w-[640px] mx-auto lg:ml-auto lg:mr-0">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">Critical Access · ADA-compliant · Designed for HIPAA compliance</span>
+            <h1 class="font-display font-semibold text-white text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] md:tracking-[-0.72px] lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] mb-6">
+              Look bigger. Get found. <span class="text-royalLite">Keep care local.</span>
+            </h1>
+            <p class="text-[#b1bae7] text-sm leading-5 md:text-base md:leading-6 lg:text-lg lg:leading-7 mb-8 lg:mb-10">
+              A modern hospital website your admin can actually maintain — <span class="text-white font-medium">ADA-compliant and designed for HIPAA compliance</span>, with no marketing team, no developer, and no monthly vendor bill.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#cah-demo" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Book a rural-hospital demo</a>
+              <a href="#cah-fit" class="inline-flex items-center rounded-lg border border-white/25 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Is this a fit?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: editor screenshot. On lg+ it's absolute-flush to the right
+             edge; on mobile it stacks below the copy in a boxed frame. -->
+        <div class="relative lg:flex-1 lg:min-w-0 lg:self-stretch">
+          <div class="px-6 sm:px-8 md:px-12 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
+            <img src="https://hj5v68xn.media.zestyio.com/Medical-Freestyle.png"
+                 alt="Content.One editor preview: an admin editing an Urgent Care service page for a hospital site"
+                 class="block mx-auto rounded-xl border border-white/10 shadow-2xl shadow-black/40 object-cover w-full max-w-[520px] md:max-w-[680px] lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] lg:rounded-none lg:border-0 lg:shadow-none" />
+          </div>
         </div>
       </div>
     </div>
@@ -114,16 +131,16 @@
           <p class="text-white/70 text-sm leading-relaxed">Meta, schema.org, sitemap, and Google Business alignment handled automatically. Your services rank when a resident searches "urgent care near [town]".</p>
         </div>
         <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
-          <h3 class="font-display font-semibold text-xl mb-3">HIPAA-designed patient links.</h3>
-          <p class="text-white/70 text-sm leading-relaxed">Bill pay, portal, price transparency, ClearBalance, patient forms, financing — all link out to your authorized HIPAA systems. PHI never touches the marketing site.</p>
+          <h3 class="font-display font-semibold text-xl mb-3">Patient links, designed for HIPAA compliance.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Bill pay, portal, price transparency, ClearBalance, patient forms, financing — all link out to your approved patient systems. PHI never touches the marketing site.</p>
         </div>
         <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
           <h3 class="font-display font-semibold text-xl mb-3">Board notices, community news, Facebook Live — published in one click.</h3>
           <p class="text-white/70 text-sm leading-relaxed">AI-assisted summaries turn a board meeting or Facebook Live into a website news post. Quarterly board update templates included.</p>
         </div>
         <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
-          <h3 class="font-display font-semibold text-xl mb-3">Security, patching, HIPAA posture — handled.</h3>
-          <p class="text-white/70 text-sm leading-relaxed">No plugins. No WordPress patching. No vendor waiting-list. Encryption, uptime, versioning, and HIPAA-compliant infrastructure quietly maintained by Content.One.</p>
+          <h3 class="font-display font-semibold text-xl mb-3">Security &amp; patching, handled.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">No plugins. No WordPress patching. No vendor waiting-list. Encryption, uptime, and versioning quietly maintained by Content.One — infrastructure designed for HIPAA compliance.</p>
         </div>
       </div>
     </div>
@@ -221,13 +238,13 @@
     </div>
   </section>
 
-  <!-- COMPLIANCE — ADA + HIPAA dedicated section -->
+  <!-- COMPLIANCE — ADA + Designed for HIPAA compliance -->
   <section id="cah-compliance" class="py-20 lg:py-28 bg-paper border-t border-gray-100">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="max-w-3xl mb-14">
+      <div class="max-w-3xl mb-12">
         <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-4">Built for healthcare compliance</span>
-        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">ADA-compliant. HIPAA-designed.</h2>
-        <p class="text-lg text-gray-600 leading-relaxed">Rural hospital admins can't spend weekends reading WCAG spec or HIPAA guidance. Content.One handles the boring, boilerplate compliance work at the platform level so your site launches — and stays — on the right side of both.</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">ADA-compliant. Designed for HIPAA compliance.</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">Content.One handles the boilerplate at the platform layer so your team doesn't have to.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
@@ -240,40 +257,34 @@
             </div>
             <div>
               <div class="text-xs uppercase tracking-widest font-mono text-royal">ADA compliance</div>
-              <h3 class="font-display text-2xl font-bold">Accessibility baked into every page.</h3>
+              <h3 class="font-display text-2xl font-bold">Accessible by default.</h3>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed">Every page template Content.One ships with is <span class="font-semibold text-ink">WCAG 2.2 AA-aligned by default</span> — the accessibility standard the ADA references for digital experiences. Rural hospitals get an ADA-compliant website out of the box, without a specialist review after every content update.</p>
-          <ul class="mt-2 space-y-2 text-sm text-gray-700">
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Semantic HTML, heading hierarchy, and landmark regions on every template.</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Color contrast, text sizing, and focus states meeting WCAG 2.2 AA thresholds.</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Keyboard-navigable everything: nav, forms, service pages, provider profiles.</span></li>
+          <p class="text-gray-600 leading-relaxed">Every template is <span class="font-semibold text-ink">WCAG 2.2 AA-aligned</span> — the standard the ADA references for digital experiences.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Semantic HTML, contrast, focus states, and keyboard nav built into every template.</span></li>
             <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Alt-text prompts on every image upload — admins get a nudge, not a manual.</span></li>
             <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Ongoing accessibility monitoring so gaps get flagged as your content grows.</span></li>
           </ul>
-          <p class="text-xs text-gray-500 mt-2">Real talk: no vendor makes your site legally bulletproof — but Content.One removes the "we haven't looked at this in three years" gap that most rural hospital sites are living inside.</p>
         </div>
 
-        <!-- HIPAA -->
+        <!-- HIPAA — "Designed for HIPAA compliance" (not "HIPAA compliant") -->
         <div class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-xl bg-success/10 text-success inline-flex items-center justify-center">
               <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
             <div>
-              <div class="text-xs uppercase tracking-widest font-mono text-success">HIPAA compliance</div>
-              <h3 class="font-display text-2xl font-bold">Designed around your PHI boundaries.</h3>
+              <div class="text-xs uppercase tracking-widest font-mono text-success">Designed for HIPAA compliance</div>
+              <h3 class="font-display text-2xl font-bold">Supports your compliance posture.</h3>
             </div>
           </div>
-          <p class="text-gray-600 leading-relaxed">Content.One is a <span class="font-semibold text-ink">HIPAA-designed marketing website layer</span>. PHI stays where it belongs — in your EHR, your patient portal, or your approved system — and the website is engineered to link out cleanly instead of ever touching sensitive data.</p>
-          <ul class="mt-2 space-y-2 text-sm text-gray-700">
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Portal, bill pay, and forms link out to your HIPAA-authorized systems (TruBridge, MyCareCorner, ClearBalance, FastHealth).</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>No PHI collection on the marketing site — appointment intake goes straight to the authorized platform.</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Encryption in transit and at rest across the platform.</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Role-based access + audit logs on content changes for compliance visibility.</span></li>
-            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic security patching + 99.99% uptime handled by Content.One — no IT team required to maintain HIPAA posture.</span></li>
+          <p class="text-gray-600 leading-relaxed">Content.One is <span class="font-semibold text-ink">designed for HIPAA compliance</span> at the marketing website layer — it supports your compliance program, it doesn't replace it or make your site automatically compliant.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>PHI stays in your approved systems (EHR, portal, TruBridge/MyCareCorner). The site links out — never collects or stores PHI.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Encryption in transit and at rest, RBAC, audit logs on content changes.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic security patching + 99.99% uptime — no IT team required.</span></li>
           </ul>
-          <p class="text-xs text-gray-500 mt-2">Straightforward framing: Content.One is designed for HIPAA compliance at the marketing website layer. Actual PHI handling stays with the EHR/portal/approved system your hospital already runs.</p>
         </div>
 
       </div>
