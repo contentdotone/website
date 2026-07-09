@@ -124,7 +124,6 @@
   @media (min-width: 1024px) {
     .nav-details.nav-mega { position: static; }
     .nav-details.nav-mega > .nav-menu {
-      display: block !important;
       left: 0 !important; right: 0 !important; top: 100% !important;
       min-width: 0 !important; max-width: none !important; width: auto !important;
       margin-top: 0 !important; padding: 0 !important;
@@ -132,30 +131,8 @@
       border-top: 1px solid #E5E5E5;
       background: #fff;
       box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
-      overflow: hidden !important;
+      overflow: hidden;
       z-index: 1040;
-      /* Closed state — container is 0 tall, contents invisible.
-         Open state (hover / focus-within / [open]) — container expands top-down
-         and child rows fade in as the space opens up. */
-      max-height: 0;
-      transition: max-height .32s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .nav-details.nav-mega:hover > .nav-menu,
-    .nav-details.nav-mega:focus-within > .nav-menu,
-    .nav-details.nav-mega[open] > .nav-menu {
-      max-height: 100vh;
-    }
-    /* Row-level fade: the grid + action-bar children start invisible and fade
-       in ~100ms after the container starts expanding, so the eye sees the
-       container open first and then the links resolve into it. */
-    .nav-details.nav-mega > .nav-menu > * {
-      opacity: 0;
-      transition: opacity .22s ease .10s;
-    }
-    .nav-details.nav-mega:hover > .nav-menu > *,
-    .nav-details.nav-mega:focus-within > .nav-menu > *,
-    .nav-details.nav-mega[open] > .nav-menu > * {
-      opacity: 1;
     }
     /* Active summary state — filled gray pill w/ rotated caret */
     .nav-details[open] > summary { background: #F5F5F5; color: #171717; }
