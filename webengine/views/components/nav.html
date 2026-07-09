@@ -64,11 +64,12 @@
   .nav-details summary > .nav-caret { transition: transform .2s; }
   .nav-details[open] > summary > .nav-caret { transform: rotate(180deg); }
 
-  /* Pure-CSS offcanvas mobile menu using a hidden checkbox */
+  /* Pure-CSS offcanvas mobile menu using a hidden checkbox. Slides in from
+     the RIGHT per bobby (Figma 14071:7200). */
   #nav-offcanvas-toggle { position: absolute; left: -9999px; }
   .offcanvas-nav-panel {
     transition: transform .25s ease;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     will-change: transform;
     z-index: 1080; /* above sticky-nav (1030), modal-shim (1055), backdrop (1070) */
   }
@@ -219,7 +220,7 @@
 
 <label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 lg:hidden cursor-pointer" aria-hidden="true"></label>
 
-<aside class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 bg-white shadow-2xl overflow-y-auto lg:hidden flex flex-col" id="mobileNav" style="width: 20rem; max-width: 90vw;">
+<aside class="offcanvas-nav-panel fixed top-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto lg:hidden flex flex-col" id="mobileNav" style="width: 20rem; max-width: 90vw;">
   <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100 gap-3">
     <a href="/" class="text-gray-900 inline-flex items-center shrink-0">
       <img src="{{globals.logo.getImage(40)}}" width="40" height="40" alt="Content.One" class="w-10 h-10" />
