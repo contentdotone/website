@@ -1009,6 +1009,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-09T19:36:03Z",
                 "createdAt": "2026-07-09T19:36:03Z"
+            },
+            "/llms.txt": {
+                "zuid": "11-ccbee5b0ac-bhk6pg",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-10T15:02:46Z",
+                "createdAt": "2026-07-10T15:02:46Z"
             }
         },
         "styles": {
