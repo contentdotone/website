@@ -64,73 +64,98 @@
   .nav-details summary > .nav-caret { transition: transform .2s; }
   .nav-details[open] > summary > .nav-caret { transform: rotate(180deg); }
 
-  /* Pure-CSS offcanvas mobile menu using a hidden checkbox. Slides in from
-     the RIGHT per bobby (Figma 14071:7200). */
+  /* Mobile + tablet nav panel — Figma 14071:8710 (tablet) / 14074:10037 (mobile).
+     Full-width push-down panel below the sticky nav, no right-slide, no scrim.
+     Hamburger swaps to X-close in the sticky-nav header when panel is open. */
   #nav-offcanvas-toggle { position: absolute; left: -9999px; }
+  .offcanvas-backdrop { display: none !important; }
   .offcanvas-nav-panel {
-    transition: transform .25s ease;
-    transform: translateX(100%);
-    will-change: transform;
-    z-index: 1080; /* above sticky-nav (1030), modal-shim (1055), backdrop (1070) */
+    position: fixed;
+    top: var(--c1-nav-h, 64px);
+    left: 0; right: 0; bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease, visibility .2s;
+    z-index: 1080;
   }
-  .offcanvas-backdrop { z-index: 1070; }
-  #nav-offcanvas-toggle:checked ~ .offcanvas-backdrop { display: block; }
-  #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel { transform: translateX(0); }
-  .offcanvas-backdrop { display: none; }
-  @media (min-width: 1024px) {
-    /* Disable offcanvas behavior on desktop — show inline.
-       overflow MUST be visible on desktop so absolute-positioned dropdown menus
-       can escape the panel's bounds instead of being clipped or pushing layout. */
-    .offcanvas-nav-panel {
-      transform: none !important;
-      position: static !important;
-      box-shadow: none !important;
-      background: transparent !important;
-      overflow: visible !important;
+  #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  /* Lock body scroll behind the open panel (below lg) AND force the sticky
+     nav back into view so the X-close is always reachable — even if the user
+     opened the drawer while scrolled past the sentinel. */
+  @media (max-width: 1023.98px) {
+    html:has(#nav-offcanvas-toggle:checked) { overflow: hidden; }
+    html:has(#nav-offcanvas-toggle:checked) .sticky-nav.is-fixed {
+      transform: translateY(0) !important;
+      background-color: #fff !important;
     }
-    .offcanvas-backdrop { display: none !important; }
+  }
+  /* Hamburger ↔ X-close icon swap in the sticky-nav header */
+  .nav-toggle-close { display: none; }
+  #nav-offcanvas-toggle:checked ~ header .nav-toggle-open { display: none; }
+  #nav-offcanvas-toggle:checked ~ header .nav-toggle-close { display: inline-block; }
+
+  @media (min-width: 1024px) {
+    /* Desktop uses inline top-nav; hide the drawer entirely. */
+    .offcanvas-nav-panel { display: none !important; }
   }
 
-  /* Mobile nav accordion styling */
+  /* Row-style dropdown groups inside the drawer. Summary is a full-width tap
+     row with a chevron; expands accordion-style in place (bobby chose (a)). */
   .mobile-nav-group > summary { list-style: none; }
   .mobile-nav-group > summary::-webkit-details-marker { display: none; }
   .mobile-nav-group > summary::marker { content: ""; }
   .mobile-nav-group .mobile-nav-caret { transition: transform .2s ease; }
-  .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(180deg); }
-  .mobile-nav-group[open] > summary { color: #4255BD; background: rgba(66,85,189,0.06); }
-  .mobile-nav-group + .mobile-nav-group, .mobile-nav-group + a, a + .mobile-nav-group { margin-top: .25rem; }
+  .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(90deg); }
+  .mobile-nav-group[open] > summary { color: #31429b; }
 
-  /* Figma 14071:7086 → 9195 tablet nav. On md+ (768px–1023px) the off-canvas
-     panel takes the full viewport and expanded sub-lists render as a 2-col
-     icon grid matching the mega-menu shell. */
+  /* Item card — 40x40 icon tile + title + subheading. Used at ALL breakpoints
+     below lg (mobile + tablet). Icons are always visible per Figma. */
+  .mobile-nav-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px; border-radius: 8px;
+    color: #171717 !important; text-decoration: none !important;
+    background: transparent !important;
+    transition: background-color .15s ease;
+  }
+  .mobile-nav-item:hover { background: #F5F5F5 !important; }
+  .mobile-nav-item__icon {
+    flex-shrink: 0; width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #F5F5F5; border-radius: 8px; color: #525252;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  }
+  .mobile-nav-item__icon img,
+  .mobile-nav-item__icon svg { width: 20px; height: 20px; object-fit: contain; }
+  .mobile-nav-item__title { font-size: 14px; font-weight: 600; color: #171717; line-height: 1.25; display: block; }
+  .mobile-nav-item__tag { font-size: 13px; color: #737373; margin-top: 2px; line-height: 1.35; display: block; }
+
+  /* Section header — royal-blue eyebrow above Features sub-sections */
+  .mobile-nav-section-hd {
+    color: #4255BD; font-size: 12px; font-weight: 600;
+    padding: 12px 12px 6px; text-transform: none; letter-spacing: 0;
+  }
+
+  /* Mobile (< 768): single-column stack for expanded groups */
+  .mobile-nav-group[open] > .mobile-nav-body {
+    display: flex; flex-direction: column; gap: 4px; padding: 8px 4px 12px;
+  }
+
+  /* Tablet (768–1023): 2-column grid for expanded groups (Figma 14071:8710) */
   @media (min-width: 768px) and (max-width: 1023.98px) {
-    .offcanvas-nav-panel { width: 90vw !important; max-width: none !important; }
     .mobile-nav-group[open] > .mobile-nav-body {
       display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 4px 24px; padding: 12px 16px 20px;
+      gap: 4px 20px; padding: 12px 16px 20px;
     }
-    .mobile-nav-item {
-      display: flex; align-items: flex-start; gap: 12px;
-      padding: 10px; border-radius: 8px;
-      color: #171717 !important; text-decoration: none !important;
-      background: transparent !important;
-      transition: background-color .15s ease;
-    }
-    .mobile-nav-item:hover { background: #F5F5F5 !important; }
-    .mobile-nav-item__icon {
-      flex-shrink: 0; width: 40px; height: 40px;
-      display: inline-flex; align-items: center; justify-content: center;
-      background: #F5F5F5; border-radius: 8px; color: #525252;
-      box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
-    }
-    .mobile-nav-item__title { font-size: 14px; font-weight: 600; color: #171717; line-height: 1.25; display: block; }
-    .mobile-nav-item__tag { font-size: 13px; color: #737373; margin-top: 2px; line-height: 1.35; display: block; }
-    /* Column-header for Features sub-sections in the tablet panel */
-    .mobile-nav-body .mobile-nav-section-hd {
-      grid-column: 1 / -1;
-      color: #4255BD; font-size: 14px; font-weight: 600;
-      padding: .5rem .625rem .25rem;
-    }
+    .mobile-nav-body .mobile-nav-section-hd { grid-column: 1 / -1; }
   }
 
   /* Figma 14057:8502 desktop nav — pill buttons + skeuomorphic shadow */
@@ -220,32 +245,21 @@
 
 <label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 lg:hidden cursor-pointer" aria-hidden="true"></label>
 
-<aside class="offcanvas-nav-panel fixed top-0 right-0 bottom-0 bg-white shadow-2xl overflow-y-auto lg:hidden flex flex-col" id="mobileNav" style="width: 90vw;">
-  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100 gap-3">
-    <a href="/" class="text-gray-900 inline-flex items-center shrink-0">
-      <img src="{{globals.logo.getImage(40)}}" width="40" height="40" alt="Content.One" class="w-10 h-10" />
-      <span class="ml-2 font-display font-semibold text-gray-900 md:hidden">Content.One</span>
-    </a>
-    <!-- Tablet-only CTA cluster mirrors the Figma tablet header (14071:7200
-         onwards): Log In pill + Get Started Now pill sit inside the open
-         panel so the CTAs stay visible while the user drills into the menu. -->
-    <div class="hidden md:flex items-center gap-3 ml-auto">
-      <a href="https://accounts.content.one" class="c1-nav-btn c1-nav-btn--secondary" data-utm-link>Log In</a>
-      <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary">Get Started Now</a>
-    </div>
-    <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 w-9 h-9 inline-flex items-center justify-center rounded-md hover:bg-gray-100 text-2xl leading-none cursor-pointer shrink-0" aria-label="Close navigation">&times;</label>
-  </div>
+<aside class="offcanvas-nav-panel lg:hidden flex flex-col" id="mobileNav">
+  <!-- The sticky-nav header (visible above) already carries the logo, tablet
+       Log In / Get Started pills, and the hamburger (which swaps to X-close
+       when the panel is open) — so this panel is content-only. -->
 
-  <nav class="flex-1 px-5 py-4">
+  <nav class="flex-1 px-4 py-4 max-w-[1280px] w-full mx-auto">
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Solutions</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
         {{each product_solutions as solution where show_in_nav = "1"}}
           <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{solution.getUrl()}}">
-            <span class="mobile-nav-item__icon hidden md:inline-flex">
+            <span class="mobile-nav-item__icon inline-flex">
               <img src="{{solution.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
             </span>
             <span>
@@ -258,14 +272,14 @@
     </details>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Industries</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
         {{each industries as indy where show_in_nav = "1"}}
           <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">
-            <span class="mobile-nav-item__icon hidden md:inline-flex">
+            <span class="mobile-nav-item__icon inline-flex">
               <img src="{{indy.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
             </span>
             <span>
@@ -277,19 +291,19 @@
       </div>
     </details>
 
-    <a href="/customers/" class="block px-3 py-3 rounded-lg text-gray-900 font-display font-semibold hover:bg-royal/5">Customers</a>
+    <a href="/customers/" class="block p-3 rounded-lg text-gray-800 text-sm font-semibold hover:bg-royal/5">Customers</a>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Features</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
       <div class="mobile-nav-body pl-3 pr-2 py-1">
         {{each product_sections as section order by section.sort_order}}
-          <div class="mobile-nav-section-hd px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-gray-400 md:text-royal md:normal-case md:tracking-normal md:text-sm font-semibold">{{section.section_name}}</div>
+          <div class="mobile-nav-section-hd">{{section.section_name}}</div>
           {{each product_tour_pages as nav_page where product_section = '{section.zuid}' AND show_in_nav = "1" order by nav_page.position asc }}
             <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{nav_page.getUrl()}}">
-              <span class="mobile-nav-item__icon hidden md:inline-flex">
+              <span class="mobile-nav-item__icon inline-flex">
                 <img src="{{nav_page.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
               </span>
               <span>
@@ -303,13 +317,13 @@
     </details>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Resources</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/blog/">
-          <span class="mobile-nav-item__icon hidden md:inline-flex">
+          <span class="mobile-nav-item__icon inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
           </span>
           <span>
@@ -318,7 +332,7 @@
           </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://docs.zesty.io/">
-          <span class="mobile-nav-item__icon hidden md:inline-flex">
+          <span class="mobile-nav-item__icon inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </span>
           <span>
@@ -327,7 +341,7 @@
           </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://github.com/contentdotone">
-          <span class="mobile-nav-item__icon hidden md:inline-flex">
+          <span class="mobile-nav-item__icon inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
           </span>
           <span>
@@ -336,7 +350,7 @@
           </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/brand/">
-          <span class="mobile-nav-item__icon hidden md:inline-flex">
+          <span class="mobile-nav-item__icon inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
           </span>
           <span>
@@ -348,8 +362,10 @@
     </details>
   </nav>
 
-  <div class="px-5 py-4 border-t border-gray-100 bg-gray-50">
-    <a href="/contact-us/" class="flex items-center justify-center w-full rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 transition">
+  <!-- Mobile-only footer CTA. On tablet the Log In + Get Started pills stay
+       in the sticky-nav header above, so no need to duplicate here. -->
+  <div class="px-5 py-6 md:hidden">
+    <a href="/contact-us/" class="flex items-center justify-center w-full rounded-full bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 transition shadow-sm">
       <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-2" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
       Get Started
     </a>
@@ -371,8 +387,9 @@
       <div class="flex items-center gap-3 lg:hidden">
         <a href="https://accounts.content.one" class="c1-nav-btn c1-nav-btn--secondary hidden md:inline-flex" data-utm-link>Log In</a>
         <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary hidden md:inline-flex">Get Started Now</a>
-        <label for="nav-offcanvas-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Open navigation">
-          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        <label for="nav-offcanvas-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" class="nav-toggle-open w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg viewBox="0 0 24 24" class="nav-toggle-close w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6"/></svg>
         </label>
       </div>
 
