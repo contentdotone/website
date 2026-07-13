@@ -1,0 +1,573 @@
+<!--
+  Content.One for Critical-Access & Rural Hospitals — dedicated solutions page
+  targeted at CAHs, small PPS, and rural facilities per the hospital-deck
+  knowledge base. Distinct from /composable-cms-for-hospitals-and-health-systems/
+  which pitches large health systems / IDNs; this page speaks to CEOs, COOs,
+  and admin owners with no marketing team.
+
+  URL: this file at page_html/industries/for-critical-access-hospitals.html
+  serves at /industries/for-critical-access-hospitals/ under Zesty's clean-URL
+  convention (see project_zesty_url_patterns memory). Loader wraps nav/footer.
+-->
+
+<style>
+  /* Rural hospital hero uses the same corridor photo as the composable
+     hospital page (::before at ~12% opacity) so the CAH page reads as a
+     sibling of the health-systems page — same brand mood, same imagery. */
+  .cah-page .cah-hero { position: relative; isolation: isolate; }
+  .cah-page .cah-hero::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("https://hj5v68xn.media.zestyio.com/pexels-juan-moccagatta-2159466094-36595248.jpeg");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.14;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .cah-page .cah-hero > * { position: relative; z-index: 1; }
+</style>
+
+<div class="cah-page bg-white text-ink">
+
+  <!-- HERO — dark, rural-hospital-first positioning. Two-column at lg+ with
+       the Content.One editor screenshot (Medical-Freestyle) on the right,
+       mirroring the composable-cms-for-hospitals page pattern. -->
+  <section class="cah-hero relative overflow-hidden text-white" style="background: linear-gradient(180deg, #0B1029 0%, #060813 100%);">
+    <div class="max-w-7xl mx-auto lg:max-w-none">
+      <div class="flex flex-col lg:flex-row items-stretch">
+        <!-- Left: copy + CTAs -->
+        <div class="flex-1 min-w-0 px-6 sm:px-8 md:px-12 lg:px-16 xl:pl-24 xl:pr-12 pt-24 lg:pt-32 pb-6 lg:pb-24 flex flex-col justify-center">
+          <div class="w-full max-w-[520px] lg:max-w-[640px] mx-auto lg:ml-auto lg:mr-0">
+            <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-6">HIPAA compliant · Secure · ADA compliant</span>
+            <h1 class="font-display font-semibold text-white text-[30px] leading-[38px] md:text-[36px] md:leading-[44px] md:tracking-[-0.72px] lg:text-[48px] lg:leading-[60px] lg:tracking-[-0.96px] mb-6">
+              Modern website technology at <span class="text-royalLite">affordable pricing.</span>
+            </h1>
+            <p class="text-[#b1bae7] text-sm leading-5 md:text-base md:leading-6 lg:text-lg lg:leading-7 mb-8 lg:mb-10">
+              Keep patients informed about the services you provide and help prevent patient leakage with a hospital website that is easy to update and maintain — without additional headcount, heavy IT support, or high marketing costs.
+            </p>
+            <div class="flex flex-wrap gap-3">
+              <a href="#cah-demo" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Book a 20-minute demo</a>
+              <a href="#cah-fit" class="inline-flex items-center rounded-lg border border-white/25 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Is this a fit?</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: editor screenshot. On lg+ it's absolute-flush to the right
+             edge; on mobile it stacks below the copy in a boxed frame. -->
+        <div class="relative lg:flex-1 lg:min-w-0 lg:self-stretch">
+          <div class="px-6 sm:px-8 md:px-12 pt-3 pb-8 lg:absolute lg:inset-0 lg:left-0 lg:p-0 lg:overflow-visible lg:flex lg:items-end">
+            <img src="https://hj5v68xn.media.zestyio.com/Medical-Freestyle.png"
+                 alt="Content.One editor preview: an admin editing an Urgent Care service page for a hospital site"
+                 class="block mx-auto rounded-xl border border-white/10 shadow-2xl shadow-black/40 object-cover w-full max-w-[520px] md:max-w-[680px] lg:max-w-none lg:w-[979px] lg:mx-0 lg:mb-[-70px] lg:rounded-none lg:border-0 lg:shadow-none" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN ISLAND — what small hospitals live with -->
+  <section class="py-20 lg:py-28 bg-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-danger/10 text-danger text-xs font-semibold uppercase tracking-wider mb-4">Sound familiar?</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">When the website falls behind, patients go elsewhere.</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">The rural hospital website problem isn't a marketing problem. It's a staffing, budget, and vendor problem — and it costs you patients every quarter.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">No marketing team.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Zero to one marketing FTE. Website updates fall to an office admin, a rotating vendor, or don't happen at all.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Younger patients drive to the regional hospital.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">They search online first. If your primary-care, ER, imaging, or wellness pages don't show up, you never had a chance.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Bill pay, portal, forms — links go stale.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Every broken link is a patient who can't pay, can't enroll, can't book. No one told you the page was down.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Board updates and community notices sit in Facebook.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Public meetings, quarterly board notes, community health programs — all trapped in social posts. Nothing lives on the website.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Security, patching, uptime — one more thing to worry about.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">A plugin or page breaks. The website vendor is unreachable. Now the site is down, patients are blocked, and every ADA or HIPAA gap becomes your problem.</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-6">
+          <div class="w-10 h-10 rounded-lg bg-danger/10 text-danger inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Patient outmigration is a direct revenue issue.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Especially higher-margin outpatient services — everyday care that could stay in town if patients could find it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLEASURE ISLAND — where you land -->
+  <section class="py-20 lg:py-28 text-white" style="background: linear-gradient(180deg, #060813 0%, #101940 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 text-white text-xs font-semibold uppercase tracking-wider mb-4">Where you land</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">A modern hospital website your admin runs and fully controls.</h2>
+        <p class="text-lg text-white/75 leading-relaxed">Content.One is the CMS + hosting + security + AI-assisted publishing layer — priced for rural hospital budgets and built for teams without a dev.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">Simple no-code editing.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Your CEO's admin, office manager, or CFO can update service pages, board notices, and provider bios without a ticket to a vendor.</p>
+        </div>
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">ADA-compliant service page templates.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Emergency care, primary care, lab, radiology, EMS, rehab, transitional care, immunizations, screenings, wellness — all templates ship with WCAG 2.2 accessibility built in. Fill in the content, ship a compliant page.</p>
+        </div>
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">Local SEO on service, city, and county.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Meta, schema.org, sitemap, and Google Business alignment handled automatically. Your services rank when a patient searches "urgent care near [town]".</p>
+        </div>
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">HIPAA-compliant patient links.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">Bill pay, portal, price transparency, ClearBalance, patient forms, financing — all link out to your approved patient systems. PHI never touches the marketing site.</p>
+        </div>
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">Board notices, community news, Facebook Live — published in one click.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">AI-assisted summaries turn a board meeting or Facebook Live into a website news post. Quarterly board update templates included.</p>
+        </div>
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-7">
+          <h3 class="font-display font-semibold text-xl mb-3">Security &amp; patching, handled.</h3>
+          <p class="text-white/70 text-sm leading-relaxed">No plugins. No WordPress patching. No vendor waiting-list. Encryption, uptime, and versioning quietly maintained by Content.One — HIPAA-compliant infrastructure.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTEGRATIONS — friendly to your existing stack -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-10">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-4">Works with the systems you already use</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">Your healthcare technology stays in place, securely.</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">Content.One connects your website with the systems your patients and staff already use, while supporting HIPAA compliance, secure access, and safer website management.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">EHR &amp; patient portals</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Epic, MyChart, TruBridge, &amp; more</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">Payments &amp; patient financing</p>
+          <p class="text-sm text-gray-600 leading-relaxed">ClearBalance, bill-pay tools, &amp; more</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">Price transparency</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Claraprice, FAIR, Clarify, &amp; more</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">Scheduling &amp; forms</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Appointments, intake, referrals, &amp; more</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">Search, socials &amp; discovery</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Google, Meta, directories, &amp; more</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <p class="font-display text-lg font-bold text-ink mb-2">Security &amp; compliance</p>
+          <p class="text-sm text-gray-600 leading-relaxed">Encryption, access controls, audit logs, &amp; more</p>
+        </div>
+      </div>
+
+      <div class="mt-10 text-center">
+        <a href="#cah-demo" class="inline-flex items-center gap-2 rounded-lg bg-royal text-white hover:bg-royalDark font-semibold px-6 py-3 transition shadow-sm">
+          See how Content.One works seamlessly with your existing technology
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY FEATURES for hospitals with small admins. Dark section, positioned
+       as the 5th section per ardeay. 7 icon cards + one screenshot anchor
+       that visually breaks up the grid. -->
+  <section id="cah-features" class="py-20 lg:py-28 text-white" style="background: linear-gradient(180deg, #060813 0%, #0B1029 100%);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-white/10 border border-white/15 text-xs font-semibold uppercase tracking-wider mb-4">Built for small admin teams</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">Key features for hospitals with small admins.</h2>
+        <p class="text-lg text-white/70 leading-relaxed">Every capability below is one your admin can actually use — without a marketing team, without a developer, without a training course.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+
+        <!-- Board Updates -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-royal/20 text-royalLite inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Board Updates</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Quarterly board notes, public meeting notices, and community updates published in one click — with a repeatable template your admin fills in.</p>
+        </div>
+
+        <!-- Easy to Blog -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-info/20 text-info inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Easy to blog.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">WYSIWYG + markdown side-by-side. Write a community-health post or a service update the way you'd write an email — publish direct.</p>
+        </div>
+
+        <!-- Staff / Key Personnel Pages -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-success/20 text-success inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Staff &amp; key personnel pages.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Provider profiles, admin leadership, board members — one template, easy updates. New staff live on the site the day they start.</p>
+        </div>
+
+        <!-- Drag and drop editing -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-warning/20 text-warning inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="5 9 2 12 5 15"/><polyline points="9 5 12 2 15 5"/><polyline points="15 19 12 22 9 19"/><polyline points="19 9 22 12 19 15"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="12" y1="2" x2="12" y2="22"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Drag-and-drop editing.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Compose service pages, homepages, and campaigns visually. No code, no ticket, no "wait til the vendor gets back to us."</p>
+        </div>
+
+        <!-- AI page generation -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-royal/20 text-royalLite inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v3M12 18v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M3 12h3M18 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">AI page generation.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Draft a new service page, community campaign, or landing page in seconds — AI-assisted with your voice, your locations, and your data.</p>
+        </div>
+
+        <!-- Automated SEO marketing -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-info/20 text-info inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><path d="M8 11h6M11 8v6"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Automated SEO marketing.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Meta, schema.org, sitemap, and OpenGraph handled automatically. Service pages rank in local search without a specialist review.</p>
+        </div>
+
+        <!-- Google Analytics reporting -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-success/20 text-success inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Google Analytics reporting.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Traffic, service-page visits, appointment clicks, portal clicks, bill-pay clicks — all wired to Google Analytics with dashboards that answer "is it working?"</p>
+        </div>
+
+        <!-- Service discovery via content indexing -->
+        <div class="rounded-2xl bg-white/[0.04] border border-white/10 p-6">
+          <div class="w-11 h-11 rounded-xl bg-royalLite/20 text-royalLite inline-flex items-center justify-center mb-4">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"/></svg>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2 text-white">Service discovery, indexed automatically.</h3>
+          <p class="text-sm text-white/70 leading-relaxed">Every service, provider, and location page is structured so search engines and AI assistants can index it — patients find your care without your admin ever touching the plumbing.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF — PetDesk / 350+ clinic story. Rural hospitals hear
+       "AI-powered SaaS for small clinics" and go "sure sure sure" — this
+       proves Content.One already runs a many-small-clinics network at scale. -->
+  <section class="py-20 lg:py-28 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left: story + quote -->
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-success/10 text-success text-xs font-semibold uppercase tracking-wider mb-5">Empowering 350+ digital health systems</span>
+          <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5" style="letter-spacing:-1px; line-height:1.05;">
+            Powering <span class="text-royal">350+ clinic websites</span> for PetDesk — no plugins, no headaches, no new hires.
+          </h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            PetDesk is the engagement platform vet clinics run on. Content.One is the multisite technology that has powered their websites, addressing challenges common to rural hospitals: limited staff, limited resources, and a pressing need to keep website information current.
+          </p>
+          <blockquote class="border-l-4 border-royal pl-5 py-2 text-lg italic text-ink leading-relaxed">
+            "The platform allowed us to double our website builds and services using our existing staff. Every account manager became proficient in a few days."
+            <footer class="mt-3 text-sm text-gray-500 not-italic">PetDesk — Content.One customer story</footer>
+          </blockquote>
+
+          <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="rounded-xl border border-gray-200 p-4">
+              <div class="font-display text-2xl font-bold text-royal">350+</div>
+              <div class="text-xs text-gray-600 mt-1">Clinic websites powered</div>
+            </div>
+            <div class="rounded-xl border border-gray-200 p-4">
+              <div class="font-display text-2xl font-bold text-royal">4×</div>
+              <div class="text-xs text-gray-600 mt-1">Faster to go live</div>
+            </div>
+            <div class="rounded-xl border border-gray-200 p-4">
+              <div class="font-display text-2xl font-bold text-royal">Seconds</div>
+              <div class="text-xs text-gray-600 mt-1">To spin up a new site from template</div>
+            </div>
+            <div class="rounded-xl border border-gray-200 p-4">
+              <div class="font-display text-2xl font-bold text-royal">Days</div>
+              <div class="text-xs text-gray-600 mt-1">For a new admin to become proficient</div>
+            </div>
+          </div>
+
+          <a href="/customers/petdesk/" class="mt-8 inline-flex items-center gap-2 text-royal hover:text-royalDark font-semibold">
+            Read the full PetDesk case study
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <!-- Right: logo cluster -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-paper border border-gray-200 p-8 flex flex-col gap-6">
+            <div>
+              <p class="text-xs uppercase tracking-widest font-mono text-gray-500 mb-4">Platform partner</p>
+              <img src="https://hj5v68xn.media.zestyio.com/The-PetDesk-App-Revolutionizing-Pet-Care-for-Clients.png" alt="PetDesk" class="h-14 md:h-16 w-auto" />
+            </div>
+            <div class="border-t border-gray-100 pt-6">
+              <p class="text-xs uppercase tracking-widest font-mono text-gray-500 mb-4">One of the 350+ clinics</p>
+              <div class="flex items-center gap-4">
+                <img src="https://hj5v68xn.media.zestyio.com/02e18063fdb6181bcd2e66e17b2ec6c8.jpg" alt="Silver Springs Shores Animal Hospital" class="h-16 w-auto rounded-md" />
+                <div>
+                  <div class="font-semibold text-ink">Silver Springs Shores Animal Hospital</div>
+                  <div class="text-xs text-gray-500 mt-1">Community-owned clinic · Content.One-powered site</div>
+                </div>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-6">
+              You're not alone. 350+ healthcare and clinic teams already trust Content.One with their websites — so your team can focus on patients, not plumbing.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPLIANCE — ADA + HIPAA compliance -->
+  <section id="cah-compliance" class="py-20 lg:py-28 bg-paper border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-4">Built for healthcare compliance</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">ADA and HIPAA compliant.</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">Content.One handles compliance at the website layer so your team doesn't have to.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+
+        <!-- ADA -->
+        <div class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal inline-flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-widest font-mono text-royal">ADA compliance</div>
+              <h3 class="font-display text-2xl font-bold">We take care of ADA compliance.</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">Website accessibility is <span class="font-semibold text-ink">mandatory</span> for many healthcare organizations. Failing to meet applicable ADA requirements can create legal and financial risk. Content.One builds accessibility into the website experience — reducing the work placed on your internal team.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Pages are structured for screen readers.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Navigation can be used without a mouse.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Text and buttons are designed for readable contrast.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Image uploads prompt the editor to add alternative text.</span></li>
+          </ul>
+          <!-- Whitepaper CTA — links to placeholder until sam ships the ADA
+               requirements whitepaper URL. When available, swap the href. -->
+          <a href="/resources/ada-hospital-websites/" class="mt-3 inline-flex items-center gap-2 text-royal hover:text-royalDark font-semibold text-sm">
+            Learn what the latest ADA requirements mean for your hospital website
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+
+        <!-- HIPAA compliance card. Direct "HIPAA compliant" language on this page
+             is approved per sam's 2026-07-10 update after legal-expert review;
+             other public pages should still use the earlier hedged phrasing
+             unless the same review scope is confirmed. -->
+        <div class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <div class="w-12 h-12 rounded-xl bg-success/10 text-success inline-flex items-center justify-center">
+              <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            </div>
+            <div>
+              <div class="text-xs uppercase tracking-widest font-mono text-success">HIPAA compliant</div>
+              <h3 class="font-display text-2xl font-bold">Keep patient information secure.</h3>
+            </div>
+          </div>
+          <p class="text-gray-600 leading-relaxed">Content.One supports secure healthcare website operations. Your website works alongside the hospital's EHR, patient portal, payment, donation, and other approved systems — with <span class="font-semibold text-ink">HIPAA-compliant support</span> for patient-portal connections and security controls that don't create more work for your team.</p>
+          <ul class="space-y-2 text-sm text-gray-700">
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Patient information stays in your approved systems — EHR, patient portal, and other authorized platforms.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>HIPAA-compliant support for patient-portal connections, payment providers, and donation systems.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Security and access controls handled at the platform layer — encryption, role-based access, audit logs.</span></li>
+            <li class="flex gap-2"><svg viewBox="0 0 24 24" class="w-5 h-5 text-success shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Automatic security patching + 99.99% uptime — no IT team required.</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- INCIDENT READINESS — preparing for the unexpected. Sits after
+       compliance and before the fit list so it lands with the reader
+       as one more platform-layer thing they don't have to manage. -->
+  <section id="cah-readiness" class="py-20 lg:py-28 bg-white border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <span class="inline-flex items-center px-3 py-1 rounded-full bg-danger text-white text-xs font-semibold uppercase tracking-wider mb-4">Ready when it matters</span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">Being prepared for the unexpected is crucial.</h2>
+        <p class="text-lg text-gray-600 leading-relaxed">Storms, cyber incidents, service changes, community advisories — when your community needs the website most, it can't be down or waiting on a vendor to answer.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">99.99% uptime.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Global CDN, redundant infrastructure, and automatic failover keep your site up during the storm — no one to call, no ticket to file.</p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <div class="w-10 h-10 rounded-lg bg-warning/10 text-warning inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Emergency notice in seconds.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Facility closures, service advisories, community health alerts — your admin publishes the moment they hit save. No vendor delay, no developer queue.</p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <div class="w-10 h-10 rounded-lg bg-info/10 text-info inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Fearless updates.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Update with peace of mind. Every content and template change is versioned, making it quick and easy to return to the last good version if something goes wrong.</p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6">
+          <div class="w-10 h-10 rounded-lg bg-success/10 text-success inline-flex items-center justify-center mb-4"><svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <h3 class="font-display font-semibold text-lg mb-2">Cybersecurity, aligned.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">Aligns with cybersecurity frameworks and mandates like Rural Texas Strong UCI.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SUPPORT — human team behind the platform. Follows readiness section
+       because it answers 'who's on the other end when I need someone?' — a
+       critical question for a rural admin who is the whole team. Pairs a
+       Salvation Army testimonial with G2 recognition scores. -->
+  <section id="cah-support" class="py-20 lg:py-28 bg-paper border-t border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+
+        <!-- Left: intro + testimonial -->
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-5">Support that shows up</span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold mb-5" style="letter-spacing:-0.9px;">If you don't have a large marketing team, Content.One Support <span class="text-royal">will be</span> your team.</h2>
+          <p class="text-lg text-gray-600 leading-relaxed mb-8">
+            Changes to your website shouldn't take days. The Content.One support team is dedicated to understanding your needs, responding quickly, and resolving requests fast.
+          </p>
+
+          <div class="rounded-2xl bg-white border border-gray-200 p-7">
+            <svg viewBox="0 0 24 24" class="w-8 h-8 text-royal mb-3" fill="currentColor"><path d="M6 17h3l2-4V7H5v6h3zm8 0h3l2-4V7h-6v6h3z"/></svg>
+            <blockquote class="text-lg text-ink leading-relaxed italic">
+              "You can tell when a vendor truly learns your organization — not just the product. The Support Team came in understanding who we are, not just what we need."
+            </blockquote>
+            <div class="mt-4 flex items-center gap-3 pt-4 border-t border-gray-100">
+              <img src="https://hj5v68xn.media.zestyio.com/jon-aren.jpg" alt="Jon Aren" class="w-11 h-11 rounded-full object-cover" />
+              <div>
+                <div class="font-semibold text-ink text-sm">Jon Aren</div>
+                <div class="text-xs text-gray-500">The Salvation Army — Content.One customer</div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6">
+            <a href="/customers/the-salvation-army/" class="inline-flex items-center gap-2 rounded-lg border border-royal text-royal hover:bg-royal hover:text-white font-semibold px-5 py-2.5 text-sm transition">
+              Read the full Salvation Army case study
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: G2 recognition + scores -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl bg-white border border-gray-200 p-7">
+            <div class="flex items-center gap-2 mb-4">
+              <span class="w-8 h-8 rounded-full bg-warning text-white inline-flex items-center justify-center font-bold text-sm">G2</span>
+              <span class="text-xs uppercase tracking-widest font-mono text-gray-500">Recognized on G2</span>
+            </div>
+            <p class="font-display text-xl font-bold text-ink leading-snug mb-3">Top 20 Headless CMS, Globally.</p>
+            <p class="text-xs text-gray-500 italic mb-4">G2 is the largest independent software review platform.</p>
+            <p class="text-sm text-gray-600 mb-6">Based on verified customer reviews — across the categories that matter most to a small admin team: setup, support, and ease of doing business.</p>
+
+            <div class="space-y-4">
+              <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                <div>
+                  <div class="text-xs uppercase tracking-widest font-mono text-gray-500 mb-1">Quality of Support</div>
+                  <div class="text-xs text-gray-500">G2 verified</div>
+                </div>
+                <div class="font-display text-3xl font-bold text-royal">9.8</div>
+              </div>
+              <div class="flex items-center justify-between border-b border-gray-100 pb-3">
+                <div>
+                  <div class="text-xs uppercase tracking-widest font-mono text-gray-500 mb-1">Ease of Setup</div>
+                  <div class="text-xs text-gray-500">G2 verified</div>
+                </div>
+                <div class="font-display text-3xl font-bold text-royal">9.6</div>
+              </div>
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-xs uppercase tracking-widest font-mono text-gray-500 mb-1">Ease of Doing Business</div>
+                  <div class="text-xs text-gray-500">G2 verified</div>
+                </div>
+                <div class="font-display text-3xl font-bold text-royal">10.0</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR — sanity check -->
+  <section id="cah-fit" class="py-20 lg:py-28 bg-paper">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-4">Is this you?</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-6" style="letter-spacing:-0.9px;">Content.One for CAHs is a fit if…</h2>
+      <ul class="space-y-4 text-lg text-gray-700">
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>You're a critical-access hospital with limited marketing staff.</span></li>
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>You own the website — alongside plenty of other pressing matters.</span></li>
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Younger patients drive out of town because they don't know all the services you offer.</span></li>
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>Your EMR, payment portal, and donation systems need to work seamlessly with the site.</span></li>
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>You want a modern, easy-to-update, secure website — without added expense.</span></li>
+        <li class="flex gap-3"><svg viewBox="0 0 24 24" class="w-6 h-6 text-royal shrink-0 mt-1" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg><span>ADA, HIPAA, and security aren't optional — and resources are tight.</span></li>
+      </ul>
+
+      <div class="mt-10">
+        <a href="#cah-demo" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 transition shadow">
+          Book a 20-minute demo to see how we help
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="cah-demo" class="py-16 lg:py-24 text-white" style="background: linear-gradient(180deg, #0B1029 0%, #060813 100%);">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">See how Content.One can improve your website.</h2>
+      <p class="text-lg text-white/75 mb-8 max-w-2xl mx-auto">Explore tools for building a modern hospital website — from service page templates and board updates to seamless connections with your existing systems — all with transparent, affordable pricing.</p>
+      <a href="/contact-us/?src=for-critical-access-hospitals" class="inline-flex items-center gap-2 rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition text-base shadow">
+        Book a 20-minute demo
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+      </a>
+    </div>
+  </section>
+
+</div>
