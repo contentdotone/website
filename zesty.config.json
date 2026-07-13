@@ -1015,6 +1015,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-10T15:02:46Z",
                 "createdAt": "2026-07-10T15:02:46Z"
+            },
+            "/vendor-partnerships.html": {
+                "zuid": "11-f88692d3cf-tf9vls",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-13T17:33:55Z",
+                "createdAt": "2026-07-13T17:33:55Z"
             }
         },
         "styles": {
