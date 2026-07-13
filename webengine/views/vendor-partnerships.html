@@ -124,28 +124,34 @@
       <p class="text-lg text-gray-600 leading-relaxed">By joining the Partner Network, your company becomes part of the ecosystem surrounding those experiences.</p>
     </div>
 
-    <!-- Customer logo row -->
-    <div class="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 py-8 mb-12 border-y border-gray-100">
-      <span class="font-display text-lg font-semibold text-gray-500">The Salvation Army</span>
-      <span class="font-display text-lg font-semibold text-gray-500">Acorns</span>
-      <span class="font-display text-lg font-semibold text-gray-500">Rocket League</span>
-      <span class="font-display text-lg font-semibold text-gray-500">Sony</span>
-      <span class="font-display text-lg font-semibold text-gray-500">Phoenix Suns</span>
+    <!-- Customer logo row — real logos from the customer content model.
+         Filter matches the pattern used on hospital-deck / feature pages. -->
+    <div class="py-8 mb-12 border-y border-gray-100">
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <a href="{{cus.getURL()}}" class="inline-flex items-center opacity-70 hover:opacity-100 transition">
+            <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}}" class="h-10 md:h-12 w-auto max-w-[160px] object-contain" loading="lazy" />
+          </a>
+        {{/each}}
+      </div>
     </div>
 
     <!-- Proof stats -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="rounded-2xl border border-gray-200 bg-paper p-7">
-        <div class="font-display text-4xl font-bold text-royal mb-2" style="letter-spacing:-0.9px;">3,000+</div>
-        <p class="text-gray-600 leading-relaxed">Locations unified for a national nonprofit organization</p>
+        <div class="font-display text-4xl font-bold text-royal mb-2" style="letter-spacing:-0.9px;">10+ Years</div>
+        <p class="text-gray-600 leading-relaxed">Trusted by digital teams for over a decade — Content.One is a mature, battle-tested platform.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 bg-paper p-7">
         <div class="font-display text-2xl md:text-3xl font-bold text-ink mb-2" style="letter-spacing:-0.6px;">Multiple industries</div>
-        <p class="text-gray-600 leading-relaxed">From nonprofit and healthcare to finance and entertainment</p>
+        <p class="text-gray-600 leading-relaxed">From nonprofit and healthcare to finance and entertainment.</p>
       </div>
       <div class="rounded-2xl border border-gray-200 bg-paper p-7">
-        <div class="font-display text-2xl md:text-3xl font-bold text-ink mb-2" style="letter-spacing:-0.6px;">Enterprise-ready</div>
-        <p class="text-gray-600 leading-relaxed">Built for organizations where websites and content are critical operations</p>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-8 h-8 rounded-full bg-warning text-white inline-flex items-center justify-center font-bold text-xs">G2</span>
+          <div class="font-display text-lg font-bold text-ink" style="letter-spacing:-0.4px;">Near-perfect scores</div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">Standout ratings for <span class="font-semibold text-ink">Ease of doing business</span> and <span class="font-semibold text-ink">Support</span> from verified G2 reviewers.</p>
       </div>
     </div>
   </div>
