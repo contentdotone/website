@@ -243,12 +243,15 @@
         <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
-        {{each product_solutions as solution}}
-          <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">
+        {{each product_solutions as solution where show_in_nav = "1"}}
+          <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{solution.getUrl()}}">
             <span class="mobile-nav-item__icon hidden md:inline-flex">
-              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              <img src="{{solution.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
             </span>
-            <span><span class="mobile-nav-item__title">{{solution.seo_link_title}}</span></span>
+            <span>
+              <span class="mobile-nav-item__title">{{solution.nav_title}}</span>
+              <span class="mobile-nav-item__tag">{{solution.nav_subheading}}</span>
+            </span>
           </a>
         {{/each}}
       </div>
@@ -260,12 +263,15 @@
         <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </summary>
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
-        {{each industries as indy}}
+        {{each industries as indy where show_in_nav = "1"}}
           <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">
             <span class="mobile-nav-item__icon hidden md:inline-flex">
-              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg>
+              <img src="{{indy.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
             </span>
-            <span><span class="mobile-nav-item__title">{{indy.seo_link_title}}</span></span>
+            <span>
+              <span class="mobile-nav-item__title">{{indy.nav_title}}</span>
+              <span class="mobile-nav-item__tag">{{indy.nav_subheading}}</span>
+            </span>
           </a>
         {{/each}}
       </div>
@@ -281,12 +287,15 @@
       <div class="mobile-nav-body pl-3 pr-2 py-1">
         {{each product_sections as section order by section.sort_order}}
           <div class="mobile-nav-section-hd px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-gray-400 md:text-royal md:normal-case md:tracking-normal md:text-sm font-semibold">{{section.section_name}}</div>
-          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc }}
+          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' AND show_in_nav = "1" order by nav_page.position asc }}
             <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{nav_page.getUrl()}}">
               <span class="mobile-nav-item__icon hidden md:inline-flex">
-                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                <img src="{{nav_page.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
               </span>
-              <span><span class="mobile-nav-item__title">{{nav_page.seo_link_title}}</span></span>
+              <span>
+                <span class="mobile-nav-item__title">{{nav_page.nav_title}}</span>
+                <span class="mobile-nav-item__tag">{{nav_page.nav_subheading}}</span>
+              </span>
             </a>
           {{/each}}
         {{/each}}
@@ -301,27 +310,39 @@
       <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/blog/">
           <span class="mobile-nav-item__icon hidden md:inline-flex">
-            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            <img src="{{blog.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
           </span>
-          <span><span class="mobile-nav-item__title">Blog</span></span>
+          <span>
+            <span class="mobile-nav-item__title">{{blog.nav_title}}</span>
+            <span class="mobile-nav-item__tag">{{blog.nav_subheading}}</span>
+          </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://docs.zesty.io/">
           <span class="mobile-nav-item__icon hidden md:inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
           </span>
-          <span><span class="mobile-nav-item__title">Documentation</span></span>
+          <span>
+            <span class="mobile-nav-item__title">Documentation</span>
+            <span class="mobile-nav-item__tag">Feature &amp; platform docs</span>
+          </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://github.com/contentdotone">
           <span class="mobile-nav-item__icon hidden md:inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
           </span>
-          <span><span class="mobile-nav-item__title">Github &amp; Commit Log</span></span>
+          <span>
+            <span class="mobile-nav-item__title">Github &amp; Commit Log</span>
+            <span class="mobile-nav-item__tag">Latest updates to Content.One</span>
+          </span>
         </a>
         <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/brand/">
           <span class="mobile-nav-item__icon hidden md:inline-flex">
             <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
           </span>
-          <span><span class="mobile-nav-item__title">Brand</span></span>
+          <span>
+            <span class="mobile-nav-item__title">Brand</span>
+            <span class="mobile-nav-item__tag">Logo and Color Palette</span>
+          </span>
         </a>
       </div>
     </details>
@@ -368,12 +389,15 @@
                 <div class="nav-menu">
                   <div class="c1-mega-inner">
                   <div class="c1-mega-grid">
-                    {{each product_solutions as solution}}
-                      <a class="c1-mega-item" href="{{indy.getUrl()}}">
+                    {{each product_solutions as solution where show_in_nav = "1"}}
+                      <a class="c1-mega-item" href="{{solution.getUrl()}}">
                         <span class="c1-mega-item__icon">
-                          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                          <img src="{{solution.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
                         </span>
-                        <span><span class="c1-mega-item__title">{{solution.seo_link_title}}</span></span>
+                        <span>
+                          <span class="c1-mega-item__title">{{solution.nav_title}}</span>
+                          <span class="c1-mega-item__tag">{{solution.nav_subheading}}</span>
+                        </span>
                       </a>
                     {{/each}}
                   </div>
@@ -409,12 +433,15 @@
                 <div class="nav-menu">
                   <div class="c1-mega-inner">
                   <div class="c1-mega-grid">
-                    {{each industries as indy}}
+                    {{each industries as indy where show_in_nav = "1"}}
                       <a class="c1-mega-item" href="{{indy.getUrl()}}">
                         <span class="c1-mega-item__icon">
-                          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h.01M15 9h.01M9 13h.01M15 13h.01M9 17h.01M15 17h.01"/></svg>
+                          <img src="{{indy.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
                         </span>
-                        <span><span class="c1-mega-item__title">{{indy.seo_link_title}}</span></span>
+                        <span>
+                          <span class="c1-mega-item__title">{{indy.nav_title}}</span>
+                          <span class="c1-mega-item__tag">{{indy.nav_subheading}}</span>
+                        </span>
                       </a>
                     {{/each}}
                   </div>
@@ -456,12 +483,15 @@
                     {{each product_sections as section order by section.sort_order}}
                       <div>
                         <div class="c1-mega-col-hd">{{section.section_name}}</div>
-                        {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc }}
+                        {{each product_tour_pages as nav_page where product_section = '{section.zuid}' AND show_in_nav = "1" order by nav_page.position asc }}
                           <a class="c1-mega-item" href="{{nav_page.getUrl()}}">
                             <span class="c1-mega-item__icon">
-                              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+                              <img src="{{nav_page.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
                             </span>
-                            <span><span class="c1-mega-item__title">{{nav_page.seo_link_title}}</span></span>
+                            <span>
+                              <span class="c1-mega-item__title">{{nav_page.nav_title}}</span>
+                              <span class="c1-mega-item__tag">{{nav_page.nav_subheading}}</span>
+                            </span>
                           </a>
                         {{/each}}
                       </div>
@@ -501,11 +531,11 @@
                   <div class="c1-mega-grid">
                     <a class="c1-mega-item" href="/blog/">
                       <span class="c1-mega-item__icon">
-                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                        <img src="{{blog.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
                       </span>
                       <span>
-                        <span class="c1-mega-item__title">Blog</span>
-                        <span class="c1-mega-item__tag">Thought leadership &amp; platform updates</span>
+                        <span class="c1-mega-item__title">{{blog.nav_title}}</span>
+                        <span class="c1-mega-item__tag">{{blog.nav_subheading}}</span>
                       </span>
                     </a>
                     <a class="c1-mega-item" target="_blank" rel="noopener" href="https://docs.zesty.io/">
@@ -514,7 +544,7 @@
                       </span>
                       <span>
                         <span class="c1-mega-item__title">Documentation</span>
-                        <span class="c1-mega-item__tag">Browse the developer docs</span>
+                        <span class="c1-mega-item__tag">Feature &amp; platform docs</span>
                       </span>
                     </a>
                     <a class="c1-mega-item" target="_blank" rel="noopener" href="https://github.com/contentdotone">
@@ -523,7 +553,7 @@
                       </span>
                       <span>
                         <span class="c1-mega-item__title">Github &amp; Commit Log</span>
-                        <span class="c1-mega-item__tag">Public repos and recent commits</span>
+                        <span class="c1-mega-item__tag">Latest updates to Content.One</span>
                       </span>
                     </a>
                     <a class="c1-mega-item" href="/brand/">
@@ -532,7 +562,7 @@
                       </span>
                       <span>
                         <span class="c1-mega-item__title">Brand</span>
-                        <span class="c1-mega-item__tag">Logos, colors, &amp; brand assets</span>
+                        <span class="c1-mega-item__tag">Logo and Color Palette</span>
                       </span>
                     </a>
                   </div>
