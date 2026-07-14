@@ -3,6 +3,17 @@
 
 <!-- ════════════ HERO (apple-scale) ════════════ -->
 <section class="co-hero relative overflow-hidden py-24">
+  <!-- Decorative nucleus centered behind the H1. object-contain +
+       constrained max dimensions keep it fully inside the hero at
+       every viewport (overflow-hidden on the section is a belt-and-
+       suspenders safety net). -->
+  <img
+    src="https://hj5v68xn.media.zestyio.com/nucleus-center.svg"
+    alt=""
+    aria-hidden="true"
+    class="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[640px] max-h-[80%] object-contain"
+    style="z-index:1"
+  />
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
     <div class="text-center max-w-5xl mx-auto mb-14 md:mb-20">
       <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8">
