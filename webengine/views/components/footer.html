@@ -1,13 +1,17 @@
-<!-- Footer — Figma 14143:10855 (bobby, 2026-07-14).
-     5-column desktop layout on lg+: logo/tagline column + 4 link-group
-     columns. Stacks vertically at <lg. All links hardcoded per the
-     Figma copy — no CMS loops. Bottom bar: copyright/legal + social. -->
+<!-- Footer — Figma 14143:10855 (desktop) + 14143:11116 (mobile/tablet).
+     Desktop (lg+): 5-column grid — logo/tagline + 4 link-group columns.
+     Mobile/tablet: 2-column grid where groups pair as Figma spec —
+       LEFT: Solutions + Industries + Customers + Platform + Governance + Tools
+       RIGHT: For Content Teams + For Developers + Resources
+     Achieved by regrouping Tools under Platform/Governance and leaving
+     Resources standalone as the 4th group.
+     All links hardcoded — no CMS loops. -->
 <footer class="pt-16 pb-12 lg:pt-20 lg:pb-12 border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 lg:gap-x-12">
+    <div class="grid grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 lg:gap-x-12">
 
-      <!-- Logo + tagline -->
-      <div class="lg:col-span-3 sm:col-span-2">
+      <!-- Logo + tagline (always full width) -->
+      <div class="col-span-2 lg:col-span-3">
         <a href="/" class="inline-block mb-6">
           <img src="{{globals.logo_full.getImage(160)}}" width="160" height="36" alt="Content.One" class="h-8 w-auto" />
         </a>
@@ -73,7 +77,9 @@
         </div>
       </div>
 
-      <!-- Group: Platform / Governance -->
+      <!-- Group: Platform / Governance / Tools
+           (Tools grouped here so mobile 2-col grid lines up per Figma —
+           on desktop this column is just slightly taller than before.) -->
       <div class="lg:col-span-2 space-y-8">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Platform</p>
@@ -91,10 +97,18 @@
             <li><a href="/features/workflow-automation-and-approvals/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Workflows</a></li>
           </ul>
         </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Tools</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="https://launch.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Launch</a></li>
+            <li><a href="https://migration.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Migration</a></li>
+            <li><a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Agentic Report</a></li>
+          </ul>
+        </div>
       </div>
 
-      <!-- Group: Resources / Tools -->
-      <div class="lg:col-span-3 space-y-8">
+      <!-- Group: Resources (standalone; Tools moved to Platform column) -->
+      <div class="lg:col-span-3">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Resources</p>
           <ul class="list-none p-0 m-0 space-y-3">
@@ -102,14 +116,6 @@
             <li><a href="https://docs.zesty.io/" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Documentation</a></li>
             <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Github &amp; Commit Log</a></li>
             <li><a href="/brand/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Brand</a></li>
-          </ul>
-        </div>
-        <div>
-          <p class="text-sm font-semibold text-gray-500 mb-4">Tools</p>
-          <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="https://launch.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Launch</a></li>
-            <li><a href="https://migration.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Migration</a></li>
-            <li><a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Agentic Report</a></li>
           </ul>
         </div>
       </div>
