@@ -17,24 +17,10 @@
       <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-light" style="color:rgba(255,255,255,.78)">
         One platform to orchestrate website, mobile, and headless content experiences — so marketing teams can manage, scale, and deliver campaigns across every local and global market.
       </p>
-      <div class="flex flex-wrap gap-3 justify-center items-center">
-        <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
+      <div class="flex justify-center">
+        <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
           <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-          Start Demo
-        </a>
-        <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-          Agentic Report
-        </a>
-        <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          Migration Plan
-        </a>
-      </div>
-      <div class="mt-6 flex justify-center">
-        <a href="/contact-us/" class="inline-flex items-center gap-1.5 text-white/80 hover:text-white font-semibold transition group/cta">
-          Or book a demo with our team
-          <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Book a demo
         </a>
       </div>
     </div>
