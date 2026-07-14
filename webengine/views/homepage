@@ -32,8 +32,8 @@
      bottom-right. Fallback color set for browsers that don't render
      the gradient. */
   .co-hero {
-    background-color: #060813;
-    background-image: linear-gradient(151.81deg, #19214E 0%, #060813 53.133%);
+    background-color: #0B0F1C;
+    background-image: linear-gradient(151.81deg, #19214E 0%, #0B0F1C 53.133%);
   }
   .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
