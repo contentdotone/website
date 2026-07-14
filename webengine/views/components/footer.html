@@ -1,94 +1,141 @@
-<!-- Footer — pure HTML/CSS mobile accordion via <details>; no JS, no Bootstrap. -->
-<footer class="pt-12 mt-12">
+<!-- Footer — Figma 14143:10855 (bobby, 2026-07-14).
+     5-column desktop layout on lg+: logo/tagline column + 4 link-group
+     columns. Stacks vertically at <lg. All links hardcoded per the
+     Figma copy — no CMS loops. Bottom bar: copyright/legal + social. -->
+<footer class="pt-16 pb-12 lg:pt-20 lg:pb-12 border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
-      <div class="md:col-span-7 lg:col-span-5">
-        <div class="mb-16 xl:mb-0">
-          <div class="mb-4">
-            <a href="#"><img src="{{globals.logo.getImage(100)}}" alt="logo" /></a>
-          </div>
-          <p class="mb-8">Content.One, a content management system for organizations to create and move content at scale.</p>
-          {{include /components/ctas/email-subscription-form.html}}
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 lg:gap-x-12">
+
+      <!-- Logo + tagline -->
+      <div class="lg:col-span-3 sm:col-span-2">
+        <a href="/" class="inline-block mb-6">
+          <img src="{{globals.logo_full.getImage(160)}}" width="160" height="36" alt="Content.One" class="h-8 w-auto" />
+        </a>
+        <p class="text-sm text-gray-600 leading-relaxed max-w-[280px]">One platform. Every channel. Every team. The CMS foundation enterprise marketing is built on.</p>
+      </div>
+
+      <!-- Group: Solutions / Industries / Customers -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Solutions</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/solutions/org-ai-chatbot/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Org AI Chatbot</a></li>
+            <li><a href="/solutions/marketing-website/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Marketing Website</a></li>
+            <li><a href="/solutions/federated-multisite/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Federated Website</a></li>
+            <li><a href="/solutions/global-directory/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Global Directory</a></li>
+            <li><a href="/solutions/ai-document-management/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">AI Doc Management</a></li>
+            <li><a href="/solutions/mobile-app/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Mobile Apps</a></li>
+            <li><a href="/solutions/story-hub/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Story Hub</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Industries</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/for-nonprofits/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Nonprofits</a></li>
+            <li><a href="/for-insurance/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Insurance</a></li>
+            <li><a href="/for-government/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Government</a></li>
+            <li><a href="/for-financial/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Financial</a></li>
+            <li><a href="/franchise-cms/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Franchise &amp; Chains</a></li>
+            <li><a href="/for-critical-access-hospitals/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Hospitals &amp; Health</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Customers</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/customers/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Case Studies</a></li>
+          </ul>
         </div>
       </div>
-      <div class="md:col-span-4 md:col-start-9 lg:col-span-6 lg:col-start-7">
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          <details class="footer-col" open>
-            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
-              <h5 class="font-display font-semibold m-0">Industries</h5>
-              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <ul class="list-none m-0 py-3 lg:py-0">
-              {{each industries as indy}}
-              <li class="mb-2">
-                <a href="{{indy.getUrl()}}" class="no-underline text-current">{{indy.seo_link_title}}</a>
-              </li>
-              {{/each}}
-            </ul>
-          </details>
-          <details class="footer-col" open>
-            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
-              <h5 class="font-display font-semibold m-0">Solutions</h5>
-              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <ul class="list-none m-0 py-3 lg:py-0">
-              {{each product_solutions as solution}}
-              <li class="mb-2">
-                <a href="{{indy.getUrl()}}" class="no-underline text-current">{{solution.seo_link_title}}</a>
-              </li>
-              {{/each}}
-            </ul>
-          </details>
-          <details class="footer-col" open>
-            <summary class="mb-3 pb-2 flex justify-between items-center border-b border-gray-200 lg:border-b-0 cursor-pointer list-none">
-              <h5 class="font-display font-semibold m-0">Resources</h5>
-              <svg viewBox="0 0 24 24" class="w-4 h-4 lg:hidden footer-caret" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="6 9 12 15 18 9"/></svg>
-            </summary>
-            <ul class="list-none m-0 py-3 lg:py-0">
-              <li class="mb-2"><a href="https://docs.zesty.io/" target="_blank" class="no-underline text-current">Docs</a></li>
-              <li class="mb-2"><a href="/about/" class="no-underline text-current">About</a></li>
-              <li class="mb-2"><a href="/blog/" class="no-underline text-current">Blog</a></li>
-              <li class="mb-2"><a href="/brand/" class="no-underline text-current">Brand</a></li>
-              <li class="mb-2"><a href="/contact-us/" class="no-underline text-current">Contact Us</a></li>
-            </ul>
-          </details>
+
+      <!-- Group: For Content Teams / For Developers -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">For Content Teams</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/features/visual-drag-n-drop-pages/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Visual Drag &amp; Drop</a></li>
+            <li><a href="/features/wysiwyg-and-markdown-support/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Authoring</a></li>
+            <li><a href="/features/generative-ai-content-acceleration/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Generative AI</a></li>
+            <li><a href="/features/analytics/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Analytics</a></li>
+            <li><a href="/features/scheduled-publishing-and-expiry/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Publishing Control</a></li>
+            <li><a href="/features/geo-and-seo/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">GEO &amp; SEO</a></li>
+            <li><a href="/features/personalization/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Personalization</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">For Developers</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/features/headless-and-apis/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">API &amp; Headless</a></li>
+            <li><a href="/features/reusable-component-libraries/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Block Components</a></li>
+            <li><a href="/features/visual-code-based-templating/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Coding &amp; Templating</a></li>
+            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Github &amp; Local Dev</a></li>
+            <li><a href="/features/webhooks-for-real-time-integrations/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Webhook Integrations</a></li>
+          </ul>
         </div>
       </div>
+
+      <!-- Group: Platform / Governance -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Platform</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/features/automated-security-updates/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Automatic Updates</a></li>
+            <li><a href="/features/multilingual-and-localization-tools/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Multi-Lingual</a></li>
+            <li><a href="/features/global-cdn-hosting/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">CDN &amp; Hosting</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Governance</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/features/audit-logs-and-activity-tracking/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Audit Logs</a></li>
+            <li><a href="/features/single-sign-on-sso-and-roles/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">SSO &amp; Roles</a></li>
+            <li><a href="/features/workflow-automation-and-approvals/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Workflows</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Group: Resources / Tools -->
+      <div class="lg:col-span-3 space-y-8">
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Resources</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="/blog/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Blog</a></li>
+            <li><a href="https://docs.zesty.io/" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Documentation</a></li>
+            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Github &amp; Commit Log</a></li>
+            <li><a href="/brand/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Brand</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-sm font-semibold text-gray-500 mb-4">Tools</p>
+          <ul class="list-none p-0 m-0 space-y-3">
+            <li><a href="https://launch.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Launch</a></li>
+            <li><a href="https://migration.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Migration</a></li>
+            <li><a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Agentic Report</a></li>
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 mb-3">
-    <div class="grid grid-cols-1 md:grid-cols-12 items-center">
-      <div class="md:col-span-9">
-        <div class="text-sm mb-3 md:mb-0 flex items-center flex-wrap gap-2">
-          <img src="{{globals.logo.getImage(24)}}" alt="content one logo" />
-          Copyright © {{site.date(Y)}}
-          Content.one
-          <span class="mx-1">|</span>
-          <a href="{{truepath(7-fad0aeb5b5-3r0226)}}" class="no-underline text-current">Privacy Policy</a>
-          <span class="mx-1">|</span>
-          <a href="{{truepath(7-8e8083f4d0-8sctrw)}}" class="no-underline text-current">Terms and Conditions</a>
-        </div>
+
+    <!-- Bottom bar: copyright/legal on the left, social icons on the right. -->
+    <div class="mt-14 pt-8 border-t border-gray-200 flex flex-col-reverse sm:flex-row items-start sm:items-center justify-between gap-4">
+      <p class="text-sm text-gray-600 m-0">
+        Copyright © {{site.date(Y)}} Content.One
+        <span class="mx-1 text-gray-400">|</span>
+        <a href="{{truepath(7-fad0aeb5b5-3r0226)}}" class="underline text-gray-600 hover:text-royal transition">Privacy Policy</a>
+        <span class="mx-1 text-gray-400">|</span>
+        <a href="{{truepath(7-8e8083f4d0-8sctrw)}}" class="underline text-gray-600 hover:text-royal transition">Terms and Conditions</a>
+      </p>
+      <div class="flex items-center gap-4">
+        <a href="https://www.linkedin.com/company/contentdotone" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-gray-500 hover:text-royal transition inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.446-2.136 2.94v5.666H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.063 2.063 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        </a>
+        <a href="https://www.facebook.com/contentdotone/" target="_blank" rel="noopener" aria-label="Facebook" class="text-gray-500 hover:text-royal transition inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://github.com/contentdotone" target="_blank" rel="noopener" aria-label="GitHub" class="text-gray-500 hover:text-royal transition inline-flex">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
       </div>
-      <div class="md:col-span-3"></div>
     </div>
   </div>
 </footer>
-
-<style>
-  .footer-col > summary::-webkit-details-marker, .footer-col > summary::marker { display: none; content: ""; }
-  .footer-col > .footer-caret { transition: transform .2s; }
-  .footer-col[open] > summary > .footer-caret { transform: rotate(180deg); }
-  /* On desktop: always expanded, regardless of [open] state */
-  @media (min-width: 1024px) {
-    .footer-col > summary { pointer-events: none; }
-    .footer-col > summary > .footer-caret { display: none; }
-    .footer-col > ul { display: block !important; }
-  }
-  /* On mobile: start collapsed (override `open`), expand on tap */
-  @media (max-width: 1023.98px) {
-    .footer-col:not([data-keep-open]) { /* default closed on mobile */ }
-    .footer-col > ul { display: none; }
-    .footer-col[open] > ul { display: block; }
-  }
-</style>
-
