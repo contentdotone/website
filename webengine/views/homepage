@@ -3,17 +3,6 @@
 
 <!-- ════════════ HERO (apple-scale) ════════════ -->
 <section class="co-hero relative overflow-hidden py-24">
-  <!-- Decorative nucleus centered behind the H1. object-contain +
-       constrained max dimensions keep it fully inside the hero at
-       every viewport (overflow-hidden on the section is a belt-and-
-       suspenders safety net). -->
-  <img
-    src="https://hj5v68xn.media.zestyio.com/nucleus-center.svg"
-    alt=""
-    aria-hidden="true"
-    class="pointer-events-none select-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] max-w-[640px] max-h-[80%] object-contain"
-    style="z-index:1"
-  />
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
     <div class="text-center max-w-5xl mx-auto mb-14 md:mb-20">
       <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8">
@@ -42,9 +31,19 @@
      Diagonal linear gradient, deep royal-navy top-left → near-black
      bottom-right. Fallback color set for browsers that don't render
      the gradient. */
+  /* Nucleus SVG is the hero's full background — cover-sized + center-
+     positioned so it fills the hero at every viewport. The gradient
+     sits behind as a second background layer, providing atmospheric
+     color anywhere the SVG has transparency (edges, negative space)
+     and matching the #0C1027 of the social-proof band at the bottom. */
   .co-hero {
     background-color: #0C1027;
-    background-image: linear-gradient(180deg, #253274 0%, #0C1027 53.133%);
+    background-image:
+      url("https://hj5v68xn.media.zestyio.com/nucleus-center.svg"),
+      linear-gradient(180deg, #253274 0%, #0C1027 53.133%);
+    background-size: cover, auto;
+    background-position: center center, center center;
+    background-repeat: no-repeat, no-repeat;
   }
   .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
