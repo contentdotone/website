@@ -112,40 +112,44 @@
 </section>
 
 <!-- ════════════ FEATURES SECTION — Figma 13882:5843 (Untitled-C1) ════════════ -->
-<section class="bg-black py-24" data-figma-node="13882:5843">
+<!-- Light-theme flip per bobby (2026-07-14): bg-black → bg-white, text
+     recolored to Untitled UI text-primary (#171717 / text-ink), text-
+     secondary (#404040 / text-gray-700), text-tertiary (#525252 /
+     text-gray-600) so contrast meets WCAG AA on white. -->
+<section class="bg-white py-24" data-figma-node="13882:5843">
   <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-col gap-16">
     <!-- Heading + supporting text -->
     <div class="max-w-[768px] flex flex-col gap-5">
-      <h2 class="font-display font-semibold text-white text-[28px] leading-[36px] md:text-[36px] md:leading-[44px]" style="letter-spacing:-0.72px">All your content needs, in one platform.</h2>
-      <p class="font-sans font-medium text-[#b1bae7] text-base leading-6">
+      <h2 class="font-display font-semibold text-ink text-[28px] leading-[36px] md:text-[36px] md:leading-[44px]" style="letter-spacing:-0.72px">All your content needs, in one platform.</h2>
+      <p class="font-sans font-medium text-gray-700 text-base leading-6">
         Content.One is an enterprise content management system with AI built-in. Teams use it to draft, govern, and publish content across every channel they need to be on. Generative AI accelerates the work; your team controls every word that ships.
       </p>
     </div>
     <!-- 4-card grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Card 1 — stars-01 (AI drafts) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-white border border-gray-200 transition hover:border-royal/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-[10px] bg-royal/10 text-royal flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/>
             <path d="M5 16l.75 2.25L8 19l-2.25.75L5 22l-.75-2.25L2 19l2.25-.75L5 16z"/>
           </svg>
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">AI creates drafts, for humans to refine.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">AI drafts, summaries, translations, and variants. Your team approves, edits, or rejects before anything goes live. Brand voice and approval flow are built in.</p>
+            <h3 class="font-sans font-semibold text-ink text-lg leading-7">AI creates drafts, for humans to refine.</h3>
+            <p class="font-sans text-gray-600 text-base leading-6">AI drafts, summaries, translations, and variants. Your team approves, edits, or rejects before anything goes live. Brand voice and approval flow are built in.</p>
           </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-royal hover:text-royalDark font-sans font-semibold text-base leading-6 group/cta transition">
             Learn more
             <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
       </article>
       <!-- Card 2 — browser (Visual editing) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-white border border-gray-200 transition hover:border-royal/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-[10px] bg-royal/10 text-royal flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="3" y="4" width="18" height="16" rx="2"/>
             <line x1="3" y1="9" x2="21" y2="9"/>
             <circle cx="6.5" cy="6.5" r="0.6" fill="currentColor"/>
@@ -155,19 +159,19 @@
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">Visual editing lets you build pages, without code.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">Drag, drop, edit, publish. Reusable blocks. Approval flows that move with the content, not a parallel ticket system.</p>
+            <h3 class="font-sans font-semibold text-ink text-lg leading-7">Visual editing lets you build pages, without code.</h3>
+            <p class="font-sans text-gray-600 text-base leading-6">Drag, drop, edit, publish. Reusable blocks. Approval flows that move with the content, not a parallel ticket system.</p>
           </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-royal hover:text-royalDark font-sans font-semibold text-base leading-6 group/cta transition">
             Learn more
             <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
       </article>
       <!-- Card 3 — database-01 (Enterprise platform) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-white border border-gray-200 transition hover:border-royal/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-[10px] bg-royal/10 text-royal flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <ellipse cx="12" cy="5" rx="9" ry="3"/>
             <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
             <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
@@ -175,19 +179,19 @@
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">An enterprise-grade platform powers it all.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">Composable, hybrid, or headless, pick your architecture. REST and GraphQL APIs, custom endpoints, structured content models that work long-term.</p>
+            <h3 class="font-sans font-semibold text-ink text-lg leading-7">An enterprise-grade platform powers it all.</h3>
+            <p class="font-sans text-gray-600 text-base leading-6">Composable, hybrid, or headless, pick your architecture. REST and GraphQL APIs, custom endpoints, structured content models that work long-term.</p>
           </div>
-          <a href="/solutions/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+          <a href="/solutions/" class="inline-flex items-center gap-1.5 text-royal hover:text-royalDark font-sans font-semibold text-base leading-6 group/cta transition">
             Learn more
             <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
         </div>
       </article>
       <!-- Card 4 — lock-02 (Trust) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-white border border-gray-200 transition hover:border-royal/40 hover:shadow-lg">
+        <div class="w-12 h-12 rounded-[10px] bg-royal/10 text-royal flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <rect x="4" y="11" width="16" height="10" rx="2"/>
             <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
             <circle cx="12" cy="16" r="1"/>
@@ -195,10 +199,10 @@
         </div>
         <div class="flex flex-col gap-4">
           <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">Trust is baked-into Content.One by default.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">OWASP-certified. Roles, audit logs, environment separation, SSO. AI guardrails you configure, not us.</p>
+            <h3 class="font-sans font-semibold text-ink text-lg leading-7">Trust is baked-into Content.One by default.</h3>
+            <p class="font-sans text-gray-600 text-base leading-6">OWASP-certified. Roles, audit logs, environment separation, SSO. AI guardrails you configure, not us.</p>
           </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
+          <a href="/features/" class="inline-flex items-center gap-1.5 text-royal hover:text-royalDark font-sans font-semibold text-base leading-6 group/cta transition">
             Learn more
             <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </a>
