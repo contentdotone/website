@@ -91,6 +91,54 @@
   </div>
 </section>
 
+<!-- SOCIAL PROOF -->
+<section class="py-20 lg:py-28 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-12">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-royal/10 text-royal text-xs font-semibold uppercase tracking-wider mb-4">Proven experience. Real impact.</span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-4" style="letter-spacing:-0.9px;">More than 10 years of turning complex digital challenges into measurable impact.</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">Content.One helps enterprise and mission-driven organizations modernize high-impact digital experiences. Our partners gain access to credible experts, proven customer stories, and practical insights their audiences can use.</p>
+    </div>
+
+    <!-- 3 proof-stat cards using the same visual grammar as vendor-partnerships -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      <div class="rounded-2xl border border-gray-200 bg-paper p-7">
+        <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal inline-flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold text-ink mb-2" style="letter-spacing:-0.4px;">10+ years</h3>
+        <p class="text-gray-600 leading-relaxed">Building scalable digital infrastructure.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 bg-paper p-7">
+        <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal inline-flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold text-ink mb-2" style="letter-spacing:-0.4px;">Enterprise-proven</h3>
+        <p class="text-gray-600 leading-relaxed">Trusted across nonprofit, entertainment, finance, and more.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 bg-paper p-7">
+        <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal inline-flex items-center justify-center mb-5">
+          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3 class="font-display text-xl font-bold text-ink mb-2" style="letter-spacing:-0.4px;">Built for complexity</h3>
+        <p class="text-gray-600 leading-relaxed">Supporting distributed teams, multiple sites, and mission-critical content.</p>
+      </div>
+    </div>
+
+    <!-- Customer logo row — real logos from the customer content model
+         (same {{each customer}} loop used on vendor-partnerships). -->
+    <div class="pt-8 border-t border-gray-100">
+      <div class="flex flex-wrap items-center justify-center gap-x-12 gap-y-8">
+        {{each customer as cus where cus.name not like '%technical%' AND cus.name not like '%Federated Websites%' limit 6 sort by rand()}}
+          <a href="{{cus.getURL()}}" class="inline-flex items-center opacity-70 hover:opacity-100 transition">
+            <img src="{{cus.logo.getImage(160)}}" alt="{{cus.name}}" class="h-10 md:h-12 w-auto max-w-[160px] object-contain" loading="lazy" />
+          </a>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- INTRODUCTORY VALUE -->
 <section class="py-20 lg:py-28 bg-paper border-t border-gray-100">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
