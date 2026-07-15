@@ -152,42 +152,42 @@
     <div class="ic-panels">
 
       <div class="ic-panel ic-shown" data-i="0">
-        <span class="ic-mobile-pill md:hidden">Nonprofits</span>
+        <span class="ic-mobile-pill">Nonprofits</span>
         <h3 class="ic-h">You don't need a dev army to run a national non-profit.</h3>
         <p class="ic-body">Content.One gives federated non-profits and foundations one platform to manage every chapter's site — with the brand guardrails and approval flows your board expects. See how organizations like the Salvation Army do it.</p>
         <a href="/for-nonprofits/" class="ic-cta">Learn about the Nonprofit CMS</a>
       </div>
 
       <div class="ic-panel" data-i="1">
-        <span class="ic-mobile-pill md:hidden">Insurance</span>
+        <span class="ic-mobile-pill">Insurance</span>
         <h3 class="ic-h">A rate change shouldn't need a developer sprint.</h3>
         <p class="ic-body">Content.One gives insurance marketing and compliance teams one platform to launch policy pages, microsites, and agent portals — disclosures locked, approvals built in, federated across captive agents, brokers, and regional teams, with SOC 2 and GDPR on by default.</p>
         <a href="/for-insurance/" class="ic-cta">Learn about the Insurance CMS</a>
       </div>
 
       <div class="ic-panel" data-i="2">
-        <span class="ic-mobile-pill md:hidden">Franchise &amp; Chains</span>
+        <span class="ic-mobile-pill">Franchise &amp; Chains</span>
         <h3 class="ic-h">Every location on-brand. Every launch on time.</h3>
         <p class="ic-body">Content.One gives national franchise brands and multi-location chains one platform to run corporate campaigns, local landing pages, and franchisee microsites — brand guardrails locked, approvals scoped by region, and rollouts to every location in hours, not weeks.</p>
         <a href="/franchise-cms/" class="ic-cta">Learn about the Franchise &amp; Chain CMS</a>
       </div>
 
       <div class="ic-panel" data-i="3">
-        <span class="ic-mobile-pill md:hidden">Financial</span>
+        <span class="ic-mobile-pill">Financial</span>
         <h3 class="ic-h">Marketing speed. Compliance built in.</h3>
         <p class="ic-body">Content.One gives banks and fintech teams one platform to launch landing pages, onboard products, and manage disclosures — with SOC 2, dual-control approvals, and audit trails locked in from day one. See how regulated teams ship campaigns days faster without cutting corners.</p>
         <a href="/for-financial/" class="ic-cta">Learn about the Financial CMS</a>
       </div>
 
       <div class="ic-panel" data-i="4">
-        <span class="ic-mobile-pill md:hidden">Government</span>
+        <span class="ic-mobile-pill">Government</span>
         <h3 class="ic-h">Constituent services shouldn't have a backlog.</h3>
         <p class="ic-body">Content.One helps federal, state, county, and municipal teams publish benefit info, permit portals, and agency sites at AI speed — with accessibility, policy governance, and audit trails built in, not bolted on.</p>
         <a href="/for-government/" class="ic-cta">Learn about the Government CMS</a>
       </div>
 
       <div class="ic-panel" data-i="5">
-        <span class="ic-mobile-pill md:hidden">Hospitals</span>
+        <span class="ic-mobile-pill">Hospitals</span>
         <h3 class="ic-h">Patients search online first. Is your website ready?</h3>
         <p class="ic-body">Content.One is the CMS, hosting, and compliance layer behind healthcare websites. From regional health systems running composable, multi-site architecture to critical access hospitals running lean on a single admin. HIPAA aware and ADA compliance built in, so your team can focus on patients.</p>
         <a href="/for-critical-access-hospitals/" class="ic-cta">Learn about the Healthcare CMS</a>
@@ -226,11 +226,17 @@
   .ic-panel { display: none; text-align: center; max-width: 640px; margin: 0 auto; }
   .ic-panel.ic-shown { display: block; }
 
+  /* Hidden by default so the base rule can't be beaten by Tailwind's
+     md:hidden (equal specificity, mine loads later). Media query below
+     opts back in only on mobile. */
   .ic-mobile-pill {
-    display: inline-flex; align-items: center;
+    display: none; align-items: center;
     padding: 8px 18px; margin-bottom: 32px;
     background: #eceef9; border: 1px solid #3d52c2; border-radius: 9999px;
     font-size: 14px; font-weight: 600; color: #253274;
+  }
+  @media (max-width: 767px) {
+    .ic-mobile-pill { display: inline-flex; }
   }
 
   .ic-h {
