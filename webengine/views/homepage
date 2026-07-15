@@ -27,23 +27,15 @@
 </section>
 
 <style>
-  /* Hero background — Figma node 13849:10870.
-     Diagonal linear gradient, deep royal-navy top-left → near-black
-     bottom-right. Fallback color set for browsers that don't render
-     the gradient. */
-  /* Nucleus SVG is the hero's full background — cover-sized + center-
-     positioned so it fills the hero at every viewport. The gradient
-     sits behind as a second background layer, providing atmospheric
-     color anywhere the SVG has transparency (edges, negative space)
-     and matching the #0C1027 of the social-proof band at the bottom. */
+  /* Hero base color matches the social-proof section directly below
+     (#0C1027) so the two dark bands read as one continuous surface.
+     Nucleus SVG cover-sized on top of the flat base. */
   .co-hero {
     background-color: #0C1027;
-    background-image:
-      url("https://hj5v68xn.media.zestyio.com/nucleus-center.svg"),
-      linear-gradient(180deg, #253274 0%, #0C1027 53.133%);
-    background-size: cover, auto;
-    background-position: center center, center center;
-    background-repeat: no-repeat, no-repeat;
+    background-image: url("https://hj5v68xn.media.zestyio.com/nucleus-center.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
