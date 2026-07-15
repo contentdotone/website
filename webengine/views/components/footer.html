@@ -8,10 +8,11 @@
      All links hardcoded — no CMS loops. -->
 <footer class="pt-16 pb-12 lg:pt-20 lg:pb-12 border-t border-gray-100">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-2 lg:grid-cols-12 gap-y-10 gap-x-8 lg:gap-x-12">
+    <div class="grid grid-cols-2 lg:grid-cols-[320px_repeat(4,minmax(0,1fr))] gap-y-10 gap-x-8">
 
-      <!-- Logo + tagline (always full width) -->
-      <div class="col-span-2 lg:col-span-3">
+      <!-- Logo + tagline (always full width on mobile; 320px fixed column on lg+
+           so the 4 link groups can each fill an equal share of the remainder) -->
+      <div class="col-span-2 lg:col-span-1">
         <a href="/" class="inline-block mb-6">
           <img src="{{globals.logo_full.getImage(160)}}" width="160" height="36" alt="Content.One" class="h-8 w-auto" />
         </a>
@@ -19,60 +20,60 @@
       </div>
 
       <!-- Group: Solutions / Industries / Customers -->
-      <div class="lg:col-span-2 space-y-8">
+      <div class="lg:col-span-1 space-y-8">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Solutions</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/solutions/org-ai-chatbot/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Org AI Chatbot</a></li>
-            <li><a href="/solutions/marketing-website/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Marketing Website</a></li>
-            <li><a href="/solutions/federated-multisite/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Federated Website</a></li>
-            <li><a href="/solutions/global-directory/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Global Directory</a></li>
-            <li><a href="/solutions/ai-document-management/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">AI Doc Management</a></li>
-            <li><a href="/solutions/mobile-app/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Mobile Apps</a></li>
-            <li><a href="/solutions/story-hub/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Story Hub</a></li>
+            <li><a href="/solutions/org-ai-chatbot/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Org AI Chatbot</a></li>
+            <li><a href="/solutions/marketing-website/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Marketing Website</a></li>
+            <li><a href="/solutions/federated-multisite/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Federated Website</a></li>
+            <li><a href="/solutions/global-directory/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Global Directory</a></li>
+            <li><a href="/solutions/ai-document-management/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">AI Doc Management</a></li>
+            <li><a href="/solutions/mobile-app/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Mobile Apps</a></li>
+            <li><a href="/solutions/story-hub/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Story Hub</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Industries</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/for-nonprofits/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Nonprofits</a></li>
-            <li><a href="/for-insurance/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Insurance</a></li>
-            <li><a href="/for-government/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Government</a></li>
-            <li><a href="/for-financial/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Financial</a></li>
-            <li><a href="/franchise-cms/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Franchise &amp; Chains</a></li>
-            <li><a href="/for-critical-access-hospitals/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Hospitals &amp; Health</a></li>
+            <li><a href="/for-nonprofits/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Nonprofits</a></li>
+            <li><a href="/for-insurance/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Insurance</a></li>
+            <li><a href="/for-government/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Government</a></li>
+            <li><a href="/for-financial/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Financial</a></li>
+            <li><a href="/franchise-cms/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Franchise &amp; Chains</a></li>
+            <li><a href="/for-critical-access-hospitals/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Hospitals &amp; Health</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Customers</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/customers/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Case Studies</a></li>
+            <li><a href="/customers/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Case Studies</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Group: For Content Teams / For Developers -->
-      <div class="lg:col-span-2 space-y-8">
+      <div class="lg:col-span-1 space-y-8">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">For Content Teams</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/features/visual-drag-n-drop-pages/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Visual Drag &amp; Drop</a></li>
-            <li><a href="/features/wysiwyg-and-markdown-support/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Authoring</a></li>
-            <li><a href="/features/generative-ai-content-acceleration/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Generative AI</a></li>
-            <li><a href="/features/analytics/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Analytics</a></li>
-            <li><a href="/features/scheduled-publishing-and-expiry/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Publishing Control</a></li>
-            <li><a href="/features/geo-and-seo/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">GEO &amp; SEO</a></li>
-            <li><a href="/features/personalization/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Personalization</a></li>
+            <li><a href="/features/visual-drag-n-drop-pages/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Visual Drag &amp; Drop</a></li>
+            <li><a href="/features/wysiwyg-and-markdown-support/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Authoring</a></li>
+            <li><a href="/features/generative-ai-content-acceleration/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Generative AI</a></li>
+            <li><a href="/features/analytics/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Analytics</a></li>
+            <li><a href="/features/scheduled-publishing-and-expiry/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Publishing Control</a></li>
+            <li><a href="/features/geo-and-seo/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">GEO &amp; SEO</a></li>
+            <li><a href="/features/personalization/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Personalization</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">For Developers</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/features/headless-and-apis/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">API &amp; Headless</a></li>
-            <li><a href="/features/reusable-component-libraries/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Block Components</a></li>
-            <li><a href="/features/visual-code-based-templating/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Coding &amp; Templating</a></li>
-            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Github &amp; Local Dev</a></li>
-            <li><a href="/features/webhooks-for-real-time-integrations/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Webhook Integrations</a></li>
+            <li><a href="/features/headless-and-apis/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">API &amp; Headless</a></li>
+            <li><a href="/features/reusable-component-libraries/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Block Components</a></li>
+            <li><a href="/features/visual-code-based-templating/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Coding &amp; Templating</a></li>
+            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Github &amp; Local Dev</a></li>
+            <li><a href="/features/webhooks-for-real-time-integrations/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Webhook Integrations</a></li>
           </ul>
         </div>
       </div>
@@ -80,43 +81,43 @@
       <!-- Group: Platform / Governance / Resources
            (Resources sub-stacked here per bobby — Tools moved to the
            standalone 4th column below, swapped with Resources.) -->
-      <div class="lg:col-span-2 space-y-8">
+      <div class="lg:col-span-1 space-y-8">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Platform</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/features/automated-security-updates/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Automatic Updates</a></li>
-            <li><a href="/features/multilingual-and-localization-tools/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Multi-Lingual</a></li>
-            <li><a href="/features/global-cdn-hosting/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">CDN &amp; Hosting</a></li>
+            <li><a href="/features/automated-security-updates/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Automatic Updates</a></li>
+            <li><a href="/features/multilingual-and-localization-tools/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Multi-Lingual</a></li>
+            <li><a href="/features/global-cdn-hosting/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">CDN &amp; Hosting</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Governance</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/features/audit-logs-and-activity-tracking/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Audit Logs</a></li>
-            <li><a href="/features/single-sign-on-sso-and-roles/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">SSO &amp; Roles</a></li>
-            <li><a href="/features/workflow-automation-and-approvals/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Workflows</a></li>
+            <li><a href="/features/audit-logs-and-activity-tracking/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Audit Logs</a></li>
+            <li><a href="/features/single-sign-on-sso-and-roles/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">SSO &amp; Roles</a></li>
+            <li><a href="/features/workflow-automation-and-approvals/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Workflows</a></li>
           </ul>
         </div>
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Resources</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="/blog/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Blog</a></li>
-            <li><a href="https://docs.zesty.io/" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Documentation</a></li>
-            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Github &amp; Commit Log</a></li>
-            <li><a href="/brand/" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Brand</a></li>
+            <li><a href="/blog/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Blog</a></li>
+            <li><a href="https://docs.zesty.io/" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Documentation</a></li>
+            <li><a href="https://github.com/contentdotone" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Github &amp; Commit Log</a></li>
+            <li><a href="/brand/" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Brand</a></li>
           </ul>
         </div>
       </div>
 
       <!-- Group: Tools (standalone; swapped with Resources per bobby) -->
-      <div class="lg:col-span-3">
+      <div class="lg:col-span-1">
         <div>
           <p class="text-sm font-semibold text-gray-500 mb-4">Tools</p>
           <ul class="list-none p-0 m-0 space-y-3">
-            <li><a href="https://agent.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Agent</a></li>
-            <li><a href="https://launch.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Launch</a></li>
-            <li><a href="https://migration.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Migration</a></li>
-            <li><a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-sm font-semibold text-gray-600 hover:text-royal transition no-underline">Agentic Report</a></li>
+            <li><a href="https://agent.content.one" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Agent</a></li>
+            <li><a href="https://launch.content.one" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Launch</a></li>
+            <li><a href="https://migration.content.one" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Migration</a></li>
+            <li><a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-sm font-medium text-gray-600 hover:text-royal transition no-underline">Agentic Report</a></li>
           </ul>
         </div>
       </div>
