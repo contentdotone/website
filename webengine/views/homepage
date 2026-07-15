@@ -130,6 +130,161 @@
   </div>
 </section>
 
+<!-- ════════════ INDUSTRY CAROUSEL — Figma 14160:70547 → 14168:12150 (desktop) + 14164:11790 (mobile)
+     6 industry panels behind a pill tab strip. On mobile: tabs hidden, dot
+     navigation + a single active-pill indicator at the top of the panel.
+     Franchise & Chains copy is a placeholder since the Figma frame had the
+     Nonprofits H2/body duplicated in — flagged to bobby. Insurance +
+     Hospitals CTA labels also corrected from Figma-side typos. ════════════ -->
+<section class="industry-carousel py-16 lg:py-24 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Desktop tab strip -->
+    <div class="hidden md:flex flex-wrap justify-center gap-3 mb-16">
+      <button type="button" class="ic-tab ic-active" data-i="0">Nonprofits</button>
+      <button type="button" class="ic-tab" data-i="1">Insurance</button>
+      <button type="button" class="ic-tab" data-i="2">Franchise &amp; Chains</button>
+      <button type="button" class="ic-tab" data-i="3">Financial</button>
+      <button type="button" class="ic-tab" data-i="4">Government</button>
+      <button type="button" class="ic-tab" data-i="5">Hospitals</button>
+    </div>
+
+    <!-- Panels — one visible at a time via .ic-shown -->
+    <div class="ic-panels">
+
+      <div class="ic-panel ic-shown" data-i="0">
+        <span class="ic-mobile-pill md:hidden">Nonprofits</span>
+        <h3 class="ic-h">You don't need a dev army to run a national non-profit.</h3>
+        <p class="ic-body">Content.One gives federated non-profits and foundations one platform to manage every chapter's site — with the brand guardrails and approval flows your board expects. See how organizations like the Salvation Army do it.</p>
+        <a href="/for-nonprofits/" class="ic-cta">Learn about the Nonprofit CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="1">
+        <span class="ic-mobile-pill md:hidden">Insurance</span>
+        <h3 class="ic-h">A rate change shouldn't need a developer sprint.</h3>
+        <p class="ic-body">Content.One gives insurance marketing and compliance teams one platform to launch policy pages, microsites, and agent portals — disclosures locked, approvals built in, federated across captive agents, brokers, and regional teams, with SOC 2 and GDPR on by default.</p>
+        <a href="/for-insurance/" class="ic-cta">Learn about the Insurance CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="2">
+        <span class="ic-mobile-pill md:hidden">Franchise &amp; Chains</span>
+        <h3 class="ic-h">Every location on-brand. Every launch on time.</h3>
+        <p class="ic-body">Content.One gives national franchise brands and multi-location chains one platform to run corporate campaigns, local landing pages, and franchisee microsites — brand guardrails locked, approvals scoped by region, and rollouts to every location in hours, not weeks.</p>
+        <a href="/franchise-cms/" class="ic-cta">Learn about the Franchise &amp; Chain CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="3">
+        <span class="ic-mobile-pill md:hidden">Financial</span>
+        <h3 class="ic-h">Marketing speed. Compliance built in.</h3>
+        <p class="ic-body">Content.One gives banks and fintech teams one platform to launch landing pages, onboard products, and manage disclosures — with SOC 2, dual-control approvals, and audit trails locked in from day one. See how regulated teams ship campaigns days faster without cutting corners.</p>
+        <a href="/for-financial/" class="ic-cta">Learn about the Financial CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="4">
+        <span class="ic-mobile-pill md:hidden">Government</span>
+        <h3 class="ic-h">Constituent services shouldn't have a backlog.</h3>
+        <p class="ic-body">Content.One helps federal, state, county, and municipal teams publish benefit info, permit portals, and agency sites at AI speed — with accessibility, policy governance, and audit trails built in, not bolted on.</p>
+        <a href="/for-government/" class="ic-cta">Learn about the Government CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="5">
+        <span class="ic-mobile-pill md:hidden">Hospitals</span>
+        <h3 class="ic-h">Patients search online first. Is your website ready?</h3>
+        <p class="ic-body">Content.One is the CMS, hosting, and compliance layer behind healthcare websites. From regional health systems running composable, multi-site architecture to critical access hospitals running lean on a single admin. HIPAA aware and ADA compliance built in, so your team can focus on patients.</p>
+        <a href="/for-critical-access-hospitals/" class="ic-cta">Learn about the Healthcare CMS</a>
+      </div>
+
+    </div>
+
+    <!-- Dot navigation — primary on mobile, secondary indicator on desktop -->
+    <div class="flex justify-center gap-2 mt-10">
+      <button type="button" class="ic-dot ic-active" data-i="0" aria-label="Nonprofits"></button>
+      <button type="button" class="ic-dot" data-i="1" aria-label="Insurance"></button>
+      <button type="button" class="ic-dot" data-i="2" aria-label="Franchise & Chains"></button>
+      <button type="button" class="ic-dot" data-i="3" aria-label="Financial"></button>
+      <button type="button" class="ic-dot" data-i="4" aria-label="Government"></button>
+      <button type="button" class="ic-dot" data-i="5" aria-label="Hospitals"></button>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Industry carousel — Figma 14160:70547 → 14168:12150 */
+  .ic-tab {
+    display: inline-flex; align-items: center;
+    padding: 10px 22px; border: 1px solid #d4d4d4; border-radius: 9999px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 16px; font-weight: 600; color: #525252;
+    background: #fff; cursor: pointer; white-space: nowrap;
+    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+  }
+  @media (min-width: 1024px) {
+    .ic-tab { font-size: 18px; padding: 12px 28px; }
+  }
+  .ic-tab:hover { border-color: #4255BD; color: #253274; }
+  .ic-tab.ic-active { background: #eceef9; border-color: #3d52c2; color: #253274; }
+
+  .ic-panel { display: none; text-align: center; max-width: 640px; margin: 0 auto; }
+  .ic-panel.ic-shown { display: block; }
+
+  .ic-mobile-pill {
+    display: inline-flex; align-items: center;
+    padding: 8px 18px; margin-bottom: 32px;
+    background: #eceef9; border: 1px solid #3d52c2; border-radius: 9999px;
+    font-size: 14px; font-weight: 600; color: #253274;
+  }
+
+  .ic-h {
+    font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600;
+    font-size: 32px; line-height: 1.15; letter-spacing: -0.9px;
+    color: #171717; margin: 0 0 20px;
+  }
+  @media (min-width: 768px) { .ic-h { font-size: 40px; letter-spacing: -0.96px; margin-bottom: 24px; } }
+  @media (min-width: 1024px) { .ic-h { font-size: 48px; line-height: 1.25; } }
+
+  .ic-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 18px; line-height: 1.5; color: #525252;
+    margin: 0 auto 40px; max-width: 480px;
+  }
+  @media (min-width: 768px) { .ic-body { font-size: 20px; line-height: 30px; margin-bottom: 48px; } }
+
+  .ic-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border: 1px solid #d4d4d4; border-radius: 9999px;
+    background: #fafafa; color: #171717;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05);
+    transition: background-color .15s ease;
+  }
+  .ic-cta:hover { background: #f4f4f5; }
+
+  .ic-dot {
+    width: 8px; height: 8px; border-radius: 9999px;
+    background: #d4d4d4; border: 0; padding: 0; cursor: pointer;
+    transition: background-color .15s ease, width .2s ease;
+  }
+  .ic-dot:hover { background: #a3a3a3; }
+  .ic-dot.ic-active { background: #3d52c2; width: 24px; }
+</style>
+
+<script>
+  (function () {
+    var root = document.querySelector('.industry-carousel');
+    if (!root) return;
+    var tabs = root.querySelectorAll('.ic-tab');
+    var panels = root.querySelectorAll('.ic-panel');
+    var dots = root.querySelectorAll('.ic-dot');
+    function setActive(i) {
+      tabs.forEach(function (t, j) { t.classList.toggle('ic-active', j === i); });
+      panels.forEach(function (p, j) { p.classList.toggle('ic-shown', j === i); });
+      dots.forEach(function (d, j) { d.classList.toggle('ic-active', j === i); });
+    }
+    tabs.forEach(function (t, i) { t.addEventListener('click', function () { setActive(i); }); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { setActive(i); }); });
+  })();
+</script>
+
 <!-- ════════════ FEATURES SECTION — Figma 13882:5843 (Untitled-C1) ════════════ -->
 <!-- Light-theme flip per bobby (2026-07-14): bg-black → bg-white, text
      recolored to Untitled UI text-primary (#171717 / text-ink), text-
