@@ -95,17 +95,26 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-      <!-- Left column: kicker + H2 + description -->
+      <!-- Left column: kicker + H2 + description + solution image
+           (image swaps to match whichever accordion tab is active) -->
       <div>
         <p class="text-base font-semibold mb-3" style="color:#253274">Solutions</p>
         <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-[1.2] mb-5" style="letter-spacing:-0.72px">One platform. Seven ways to ship.</h2>
-        <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">Every solution runs on the same governed content, the same approval flows, the same source of truth. Start with one. Add the rest when you're ready — nothing to re-platform.</p>
+        <p class="text-lg lg:text-xl text-gray-600 leading-relaxed mb-10">Every solution runs on the same governed content, the same approval flows, the same source of truth. Start with one. Add the rest when you're ready — nothing to re-platform.</p>
+        <div class="sol-image">
+          <img
+            src="https://hj5v68xn.media.zestyio.com/marketing-website.svg"
+            alt="Solution illustration"
+            class="w-full h-auto"
+            loading="lazy"
+          />
+        </div>
       </div>
 
       <!-- Right column: exclusive accordion of 7 solutions -->
       <div class="sol-accordion">
 
-        <div class="sol-tab sol-active" data-i="0">
+        <div class="sol-tab sol-active" data-i="0" data-img="https://hj5v68xn.media.zestyio.com/marketing-website.svg" data-alt="Marketing Website">
           <button type="button" class="sol-title">Marketing Website</button>
           <div class="sol-body">
             <p>Launch pages in minutes, not sprints.<br>Drag-and-drop building for marketers, real extensibility for developers — with SEO, previews, and approvals built into every save.</p>
@@ -116,7 +125,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="1">
+        <div class="sol-tab" data-i="1" data-img="https://hj5v68xn.media.zestyio.com/federated-multisite.svg" data-alt="Federated Multisite">
           <button type="button" class="sol-title">Federated Multisite</button>
           <div class="sol-body">
             <p>Hundreds of sites. One set of standards.<br>HQ sets the guardrails; local teams publish fast. The Salvation Army runs 350+ locations this way.</p>
@@ -127,7 +136,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="2">
+        <div class="sol-tab" data-i="2" data-img="https://hj5v68xn.media.zestyio.com/org-ai-chatbot.svg" data-alt="Org AI Chatbot">
           <button type="button" class="sol-title">Org AI Chatbot</button>
           <div class="sol-body">
             <p>An AI chatbot grounded in truth.<br>Answer questions across web, apps, and portals using only your governed content — moderation and audit logs included.</p>
@@ -138,7 +147,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="3">
+        <div class="sol-tab" data-i="3" data-img="https://hj5v68xn.media.zestyio.com/global-directory.svg" data-alt="Global Directory">
           <button type="button" class="sol-title">Global Directory</button>
           <div class="sol-body">
             <p>Every location, findable. Every profile, current.<br>Centralize chapters, branches, and teams in one searchable directory — with claiming workflows that keep listings accurate.</p>
@@ -149,7 +158,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="4">
+        <div class="sol-tab" data-i="4" data-img="https://hj5v68xn.media.zestyio.com/ai-document-management.svg" data-alt="AI Document Management">
           <button type="button" class="sol-title">AI Document Management</button>
           <div class="sol-body">
             <p>Stop hunting for the right file.<br>AI tags and catalogs every asset and document, so marketing, sales, and ops pull approved content — not last year's version.</p>
@@ -160,7 +169,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="5">
+        <div class="sol-tab" data-i="5" data-img="https://hj5v68xn.media.zestyio.com/mobile-app.svg" data-alt="Mobile Apps">
           <button type="button" class="sol-title">Mobile Apps</button>
           <div class="sol-body">
             <p>Update your app without an app store release.<br>Publish once and it's live everywhere — iOS, Android, kiosks. Field teams contribute from their phones; managers approve in minutes.</p>
@@ -171,7 +180,7 @@
           </div>
         </div>
 
-        <div class="sol-tab" data-i="6">
+        <div class="sol-tab" data-i="6" data-img="https://hj5v68xn.media.zestyio.com/story-hub.svg" data-alt="Story Hub">
           <button type="button" class="sol-title">Story Hub</button>
           <div class="sol-body">
             <p>Tell a story once. Use it everywhere.<br>Turn blogs and supporter stories into a structured library that feeds your site, emails, campaigns, and AI — no copy-pasting between tools.</p>
@@ -218,6 +227,10 @@
   .sol-learn:hover { color: #4255BD; }
   .sol-learn svg { transition: transform .15s ease; }
   .sol-learn:hover svg { transform: translateX(2px); }
+  /* Solution image container — image swaps via JS on tab click. Small
+     fade so the change reads as intentional. */
+  .sol-image img { transition: opacity .2s ease; }
+  .sol-image.sol-image-fading img { opacity: 0; }
 </style>
 
 <script>
@@ -225,8 +238,25 @@
     var root = document.querySelector('.sol-accordion');
     if (!root) return;
     var tabs = root.querySelectorAll('.sol-tab');
+    var imgWrap = document.querySelector('.sol-image');
+    var imgEl = imgWrap ? imgWrap.querySelector('img') : null;
+    // Preload all solution images so the first swap on each doesn't flash.
+    tabs.forEach(function (t) {
+      var url = t.getAttribute('data-img');
+      if (url) { var pre = new Image(); pre.src = url; }
+    });
     function setActive(i) {
       tabs.forEach(function (t, j) { t.classList.toggle('sol-active', j === i); });
+      if (!imgEl) return;
+      var next = tabs[i].getAttribute('data-img');
+      var alt = tabs[i].getAttribute('data-alt') || 'Solution illustration';
+      if (!next || next === imgEl.getAttribute('src')) return;
+      imgWrap.classList.add('sol-image-fading');
+      window.setTimeout(function () {
+        imgEl.src = next;
+        imgEl.alt = alt;
+        imgWrap.classList.remove('sol-image-fading');
+      }, 180);
     }
     tabs.forEach(function (t, i) {
       var title = t.querySelector('.sol-title');
