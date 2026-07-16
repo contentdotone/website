@@ -436,92 +436,60 @@
       <p class="text-lg text-white/80 leading-relaxed">Tell us about your company, the customers you support, and the kind of partnership you would like to explore. We will review your submission and contact you when we identify a strong opportunity for alignment.</p>
     </div>
 
-    <form action="/contact-us/?src=vendor-partnerships" method="post" class="rounded-2xl bg-white/[0.05] border border-white/10 p-6 md:p-10 backdrop-blur">
+    <!-- Zoho Forms embed — Content.One Partner Interest.
+         Do NOT rename any `name` attributes below (SingleLine, SingleLine1,
+         SingleLine2, SingleLine3, Email, Dropdown, Website) — Zoho drops
+         empty values on submission if the field names don't match its schema. -->
+    <form
+      action="https://forms.zohopublic.com/zestyio/form/ContentOneVendorInterest/formperma/0JPOpP-MMBtm-EZFrAt2IkNgtWx1VJoroU1uWcs3UVM/htmlRecords/submit"
+      name="form"
+      id="form"
+      method="POST"
+      accept-charset="UTF-8"
+      enctype="multipart/form-data"
+      class="rounded-2xl bg-white/[0.05] border border-white/10 p-6 md:p-10 backdrop-blur"
+    >
+      <input type="hidden" name="zf_referrer_name" value="vendor-partnerships-page">
+      <input type="hidden" name="zf_redirect_url" value="">
+      <input type="hidden" name="zc_gad" value="">
+
       <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
         <label class="block">
-          <span class="block text-sm font-semibold text-white/90 mb-2">First name</span>
-          <input type="text" name="first_name" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="Jane" />
+          <span class="block text-sm font-semibold text-white/90 mb-2">First name <span class="text-warning">*</span></span>
+          <input type="text" name="SingleLine2" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
         </label>
         <label class="block">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Last name</span>
-          <input type="text" name="last_name" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="Doe" />
+          <span class="block text-sm font-semibold text-white/90 mb-2">Last name <span class="text-warning">*</span></span>
+          <input type="text" name="SingleLine" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
         </label>
         <label class="block">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Work email</span>
-          <input type="email" name="email" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="jane@company.com" />
+          <span class="block text-sm font-semibold text-white/90 mb-2">Email <span class="text-warning">*</span></span>
+          <input type="email" name="Email" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="jane@company.com" />
         </label>
         <label class="block">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Company name</span>
-          <input type="text" name="company" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          <span class="block text-sm font-semibold text-white/90 mb-2">Company <span class="text-warning">*</span></span>
+          <input type="text" name="SingleLine1" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
         </label>
-        <label class="block md:col-span-2">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Company website</span>
-          <input type="url" name="website" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="https://" />
+        <label class="block">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Title</span>
+          <input type="text" name="SingleLine3" maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+        </label>
+        <label class="block">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Website</span>
+          <input type="url" name="Website" maxlength="2083" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="https://" />
         </label>
       </div>
 
-      <label class="block mb-5">
-        <span class="block text-sm font-semibold text-white/90 mb-2">What type of partner are you?</span>
-        <select name="partner_type" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition">
-          <option value="" class="text-ink">Choose one</option>
-          <option value="digital_web_agency" class="text-ink">Digital or web agency</option>
-          <option value="development_agency" class="text-ink">Development or implementation agency</option>
-          <option value="creative_agency" class="text-ink">Creative or marketing agency</option>
-          <option value="consultant" class="text-ink">Consultant</option>
-          <option value="technology_platform" class="text-ink">Technology platform</option>
-          <option value="integration_provider" class="text-ink">Integration provider</option>
-          <option value="professional_service" class="text-ink">Professional service company</option>
-          <option value="other" class="text-ink">Other</option>
-        </select>
-      </label>
-
-      <label class="block mb-5">
-        <span class="block text-sm font-semibold text-white/90 mb-2">What does your company provide?</span>
-        <textarea name="offering" rows="3" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="A short description of your services, technology, or expertise."></textarea>
-      </label>
-
-      <label class="block mb-5">
-        <span class="block text-sm font-semibold text-white/90 mb-2">Who are your primary customers?</span>
-        <textarea name="customers" rows="3" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="Industries, roles, company sizes, geographies."></textarea>
-      </label>
-
-      <fieldset class="mb-5">
-        <legend class="block text-sm font-semibold text-white/90 mb-3">How would you like to work with Content.One?</legend>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="marketplace_listing" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Marketplace listing</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="agency_partnership" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Agency partnership</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="technology_integration" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Technology or integration partnership</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="joint_content" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Joint content or co-marketing</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="events_education" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Events or customer education</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition">
-            <input type="checkbox" name="collab[]" value="strategic_partnership" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">Broader strategic partnership</span>
-          </label>
-          <label class="flex items-center gap-3 rounded-lg bg-white/5 border border-white/10 px-4 py-3 cursor-pointer hover:bg-white/10 transition sm:col-span-2">
-            <input type="checkbox" name="collab[]" value="open_to_exploring" class="w-4 h-4 accent-warning" />
-            <span class="text-sm">I am open to exploring the right model</span>
-          </label>
-        </div>
-      </fieldset>
-
       <label class="block mb-6">
-        <span class="block text-sm font-semibold text-white/90 mb-2">Anything else we should know?</span>
-        <textarea name="notes" rows="3" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition"></textarea>
+        <span class="block text-sm font-semibold text-white/90 mb-2">Partnership type <span class="text-warning">*</span></span>
+        <select name="Dropdown" required class="w-full rounded-lg bg-white/10 border border-white/15 text-white px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition">
+          <option value="-Select-" class="text-ink">— Select —</option>
+          <option value="Marketplace Listing" class="text-ink">Marketplace Listing</option>
+          <option value="Agency Partner" class="text-ink">Agency Partner</option>
+          <option value="Technology/Service Partner" class="text-ink">Technology / Service Partner</option>
+          <option value="I am open to exploring any" class="text-ink">I am open to exploring any</option>
+          <option value="Individual Partner" class="text-ink">Individual Partner</option>
+        </select>
       </label>
 
       <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-white text-royalDark hover:bg-gray-100 font-semibold px-8 py-3.5 transition shadow">
