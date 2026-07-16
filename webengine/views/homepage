@@ -91,31 +91,32 @@
      royal-blue metric numbers in a row.
      Mobile: H2 centered, metrics stacked in a single column, CTA at
      the bottom. -->
-<section class="bg-white py-24">
+<section class="bg-[#fafafa] py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <!-- Header row -->
     <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 mb-16 text-center lg:text-left">
       <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink max-w-2xl mx-auto lg:mx-0 leading-[1.2]" style="letter-spacing:-0.72px">Real results from customers running on Content.One.</h2>
-      <a href="/customers/" class="hidden lg:inline-flex items-center justify-center rounded-full bg-[#fafafa] border border-gray-300 text-ink font-semibold px-[18px] py-3 hover:bg-gray-100 transition shadow-sm shrink-0">
+      <a href="/customers/" class="hidden lg:inline-flex items-center justify-center rounded-full bg-white border border-gray-300 text-ink font-semibold px-[18px] py-3 hover:bg-gray-100 transition shadow-sm shrink-0">
         View Case Studies
       </a>
     </div>
 
-    <!-- Metrics: 1 col on mobile, 4 cols on desktop, centered content -->
-    <div class="grid grid-cols-1 lg:grid-cols-4 gap-y-12 gap-x-8">
-      <div class="flex flex-col items-center text-center gap-3">
+    <!-- Metric cards: white bg + 1px #e5e5e5 border + 12px radius + 20px
+         padding per Figma 14155:10510. 1 col mobile, 4 cols desktop. -->
+    <div class="grid grid-cols-1 lg:grid-cols-4 gap-6">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
         <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">3000+</p>
         <p class="text-gray-600 leading-6 max-w-xs m-0">Salvation Army locations on one federated platform</p>
       </div>
-      <div class="flex flex-col items-center text-center gap-3">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
         <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">99.99%</p>
         <p class="text-gray-600 leading-6 max-w-xs m-0">Production uptime across the enterprise customer base</p>
       </div>
-      <div class="flex flex-col items-center text-center gap-3">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
         <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">6 wks</p>
         <p class="text-gray-600 leading-6 max-w-xs m-0">Kickoff to soft launch — Sony Electronics</p>
       </div>
-      <div class="flex flex-col items-center text-center gap-3">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
         <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">+50%</p>
         <p class="text-gray-600 leading-6 max-w-xs m-0">Web traffic growth post-migration — The Salvation Army</p>
       </div>
