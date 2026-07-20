@@ -277,6 +277,16 @@
      fade so the change reads as intentional. */
   .sol-image img { transition: opacity .2s ease; }
   .sol-image.sol-image-fading img { opacity: 0; }
+
+  /* Suppress every transition/animation on the accordion while JS
+     measures each state's height for the min-height lock, so the
+     temporary class swaps don't produce a visible flash. */
+  .sol-accordion.sol-measuring,
+  .sol-accordion.sol-measuring *,
+  .sol-accordion.sol-measuring *::before {
+    transition: none !important;
+    animation: none !important;
+  }
 </style>
 
 <script>
@@ -297,6 +307,40 @@
     var timerId = null;
     var manual = false;
     var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Lock the accordion column to the height of its tallest expanded
+    // state so switching tabs never shifts layout. Measurement toggles
+    // sol-active across each tab (transitions suppressed via
+    // .sol-measuring) and takes the max offsetHeight.
+    function lockMinHeight() {
+      root.style.minHeight = '';
+      root.classList.add('sol-measuring');
+      var maxH = 0;
+      for (var i = 0; i < tabs.length; i++) {
+        for (var j = 0; j < tabs.length; j++) {
+          tabs[j].classList.toggle('sol-active', j === i);
+        }
+        var h = root.offsetHeight;
+        if (h > maxH) maxH = h;
+      }
+      // Restore the original active tab.
+      for (var k = 0; k < tabs.length; k++) {
+        tabs[k].classList.toggle('sol-active', k === currentIdx);
+      }
+      root.style.minHeight = maxH + 'px';
+      // Re-enable transitions after the paint that reflects the restore.
+      window.requestAnimationFrame(function () {
+        root.classList.remove('sol-measuring');
+      });
+    }
+    lockMinHeight();
+    // Re-measure on resize (debounced) since copy wraps differently
+    // at narrower widths.
+    var resizeT = null;
+    window.addEventListener('resize', function () {
+      if (resizeT) window.clearTimeout(resizeT);
+      resizeT = window.setTimeout(lockMinHeight, 150);
+    });
 
     function setActive(i) {
       currentIdx = i;
