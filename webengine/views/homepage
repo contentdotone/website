@@ -217,7 +217,7 @@
     left: -4px; top: 0;
     width: 4px; height: 0;
     background: #3d52c2;
-    animation: sol-progress 3s linear forwards;
+    animation: sol-progress 4s linear forwards;
   }
   /* When the section leaves the middle-50% viewport band we freeze the
      progress line at whatever height it reached. */
@@ -246,8 +246,20 @@
     transition: color .15s ease;
   }
   .sol-accordion .sol-tab:not(.sol-active) .sol-title:hover { color: #253274; }
-  .sol-accordion .sol-body { display: none; margin-top: 16px; }
-  .sol-accordion .sol-tab.sol-active .sol-body { display: block; }
+  /* Body opens/closes on a smooth max-height + opacity + margin-top
+     transition instead of an instant display: none swap. */
+  .sol-accordion .sol-body {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height .4s ease, opacity .3s ease .05s, margin-top .4s ease;
+  }
+  .sol-accordion .sol-tab.sol-active .sol-body {
+    max-height: 400px;
+    opacity: 1;
+    margin-top: 16px;
+  }
   .sol-accordion .sol-body p {
     color: #525252; font-size: 16px; line-height: 24px;
     margin: 0 0 16px;
@@ -308,7 +320,7 @@
     function startTimer() {
       if (timerId || manual || reduceMotion) return;
       root.classList.remove('sol-paused');
-      timerId = window.setInterval(advance, 3000);
+      timerId = window.setInterval(advance, 4000);
     }
     function stopTimer(pauseVisual) {
       if (timerId) { window.clearInterval(timerId); timerId = null; }
