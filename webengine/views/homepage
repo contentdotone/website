@@ -117,7 +117,7 @@
       </div>
 
       <!-- Accordion of 7 solutions -->
-      <div class="sol-accordion order-2 lg:order-1">
+      <div class="sol-accordion order-2 lg:order-1 md:max-w-[640px] md:mr-auto">
 
         <div class="sol-tab sol-active" data-i="0" data-img="https://hj5v68xn.media.zestyio.com/marketing-website.svg" data-alt="Marketing Website">
           <button type="button" class="sol-title">Marketing Website</button>
