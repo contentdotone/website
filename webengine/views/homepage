@@ -805,7 +805,7 @@
             <span class="feat-label">{{section.section_name}}</span>
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
-          <div class="feat-body grid grid-cols-1 gap-6 pt-2">
+          <div class="feat-body grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 pt-2">
             {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
               {{if {nav_page.show_in_nav} == 1}}
               <a href="{{nav_page.getUrl()}}" class="feat-item">
