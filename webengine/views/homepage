@@ -786,11 +786,13 @@
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
-            <a href="{{page.getUrl()}}" class="feat-item">
-              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
-              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
-            </a>
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
             {{/each}}
           </div>
         </details>
@@ -803,11 +805,13 @@
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 gap-6 pt-2">
-            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
-            <a href="{{page.getUrl()}}" class="feat-item">
-              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
-              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
-            </a>
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
             {{/each}}
           </div>
         </details>
@@ -824,11 +828,13 @@
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
-            <a href="{{page.getUrl()}}" class="feat-item">
-              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
-              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
-            </a>
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
             {{/each}}
           </div>
         </details>
@@ -841,11 +847,13 @@
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
-            <a href="{{page.getUrl()}}" class="feat-item">
-              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
-              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
-            </a>
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
             {{/each}}
           </div>
         </details>
