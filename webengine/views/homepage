@@ -365,20 +365,28 @@
      Franchise & Chains copy is a placeholder since the Figma frame had the
      Nonprofits H2/body duplicated in — flagged to bobby. Insurance +
      Hospitals CTA labels also corrected from Figma-side typos. ════════════ -->
-<section class="industry-carousel py-16 lg:py-24 bg-[#eceef9]">
+<section class="industry-carousel pt-16 pb-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Industries eyebrow above the tab strip -->
-    <p class="hidden md:block text-sm font-semibold text-royal text-center mb-6">Industries</p>
-    <!-- Desktop tab strip — segmented-control style: only the active
-         pill has a white card + shadow, inactive pills are text-only -->
-    <div class="hidden md:flex flex-wrap justify-center gap-1 mb-14">
-      <button type="button" class="ic-tab ic-active" data-i="0">Nonprofits</button>
-      <button type="button" class="ic-tab" data-i="1">Insurance</button>
-      <button type="button" class="ic-tab" data-i="2">Franchise &amp; Chains</button>
-      <button type="button" class="ic-tab" data-i="3">Financial</button>
-      <button type="button" class="ic-tab" data-i="4">Government</button>
-      <button type="button" class="ic-tab" data-i="5">Hospitals</button>
-    </div>
+    <!-- Lavender rounded card holds the whole carousel (Figma
+         container 14203:577852: max-w-1280 px-8 py-12 rounded-xl).
+         Section stays white; the tint is scoped to this inner card. -->
+    <div class="bg-[#eceef9] rounded-xl px-6 py-10 lg:px-8 lg:py-12">
+      <!-- Industries eyebrow above the tab strip -->
+      <p class="hidden md:block text-sm font-semibold text-center mb-6" style="color:#253274">Industries</p>
+      <!-- Desktop tab strip — segmented-control inside a white pill
+           with drop-shadow-md. Active tab has an inner lavender pill
+           that matches the outer container so it reads as a "cutout".
+           64px (Figma spacing-7xl) below to the heading. -->
+      <div class="hidden md:flex justify-center mb-16">
+        <div class="ic-tabs-shell inline-flex items-center gap-1 bg-white rounded-[10px] p-1 shadow-md">
+          <button type="button" class="ic-tab ic-active" data-i="0">Nonprofits</button>
+          <button type="button" class="ic-tab" data-i="1">Insurance</button>
+          <button type="button" class="ic-tab" data-i="2">Franchise &amp; Chains</button>
+          <button type="button" class="ic-tab" data-i="3">Financial</button>
+          <button type="button" class="ic-tab" data-i="4">Government</button>
+          <button type="button" class="ic-tab" data-i="5">Hospitals</button>
+        </div>
+      </div>
 
     <!-- Panels — one visible at a time via .ic-shown -->
     <div class="ic-panels">
@@ -436,29 +444,28 @@
       <button type="button" class="ic-dot" data-i="4" aria-label="Government"></button>
       <button type="button" class="ic-dot" data-i="5" aria-label="Hospitals"></button>
     </div>
+    </div><!-- /lavender card -->
   </div>
 </section>
 
 <style>
   /* Industry carousel — Figma 14203:577851 (desktop) + 14203:577981 (mobile).
-     Section bg is soft royal-tint #eceef9. Tab strip is segmented-control
-     style: inactive tabs are transparent text-only, active tab pops as a
-     white pill with a subtle skeuomorphic shadow. */
+     Section stays white; the lavender #eceef9 tint is a rounded inner card
+     (px-6/8 py-10/12). Tabs sit inside a white pill shell (ic-tabs-shell)
+     with a drop-shadow-md. Inactive tabs are transparent text; the active
+     tab gets a lavender inner pill matching the outer container — the
+     "cutout" effect from the Untitled UI segmented-control. */
   .ic-tab {
-    display: inline-flex; align-items: center;
-    padding: 10px 22px; border: 0; border-radius: 9999px;
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 36px; padding: 8px 10px; border: 0; border-radius: 6px;
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
-    font-size: 16px; font-weight: 600; color: #525252;
+    font-size: 14px; font-weight: 600; color: #737373;
     background: transparent; cursor: pointer; white-space: nowrap;
-    transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
-  }
-  @media (min-width: 1024px) {
-    .ic-tab { font-size: 18px; padding: 12px 28px; }
+    transition: background-color .15s ease, color .15s ease;
   }
   .ic-tab:hover { color: #253274; }
   .ic-tab.ic-active {
-    background: #fff; color: #253274;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.06);
+    background: #eceef9; color: #253274;
   }
 
   .ic-panel { display: none; text-align: center; max-width: 640px; margin: 0 auto; }
