@@ -256,7 +256,11 @@
     transition: max-height .4s ease, opacity .3s ease .05s, margin-top .4s ease;
   }
   .sol-accordion .sol-tab.sol-active .sol-body {
-    max-height: 400px;
+    /* Cap is generous so no panel's copy gets silently clipped. Real
+       height is measured by JS and locked into min-height on the
+       accordion, so this only needs to be large enough to enable the
+       expand transition. */
+    max-height: 800px;
     opacity: 1;
     margin-top: 16px;
   }
@@ -334,6 +338,15 @@
       });
     }
     lockMinHeight();
+    // Remeasure once web fonts finish loading — Satoshi/DM Sans arrive
+    // async, and pre-font metrics differ from final metrics enough to
+    // shift a locked height by 10-20px per panel.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(lockMinHeight);
+    }
+    // Belt-and-braces: also remeasure after full page load (all images
+    // + late CSS in), in case fonts.ready isn't supported.
+    window.addEventListener('load', lockMinHeight);
     // Re-measure on resize (debounced) since copy wraps differently
     // at narrower widths.
     var resizeT = null;
