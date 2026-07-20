@@ -365,10 +365,13 @@
      Franchise & Chains copy is a placeholder since the Figma frame had the
      Nonprofits H2/body duplicated in — flagged to bobby. Insurance +
      Hospitals CTA labels also corrected from Figma-side typos. ════════════ -->
-<section class="industry-carousel py-16 lg:py-24 bg-white border-t border-gray-100">
+<section class="industry-carousel py-16 lg:py-24 bg-[#eceef9]">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Desktop tab strip -->
-    <div class="hidden md:flex flex-wrap justify-center gap-3 mb-16">
+    <!-- Industries eyebrow above the tab strip -->
+    <p class="hidden md:block text-sm font-semibold text-royal text-center mb-6">Industries</p>
+    <!-- Desktop tab strip — segmented-control style: only the active
+         pill has a white card + shadow, inactive pills are text-only -->
+    <div class="hidden md:flex flex-wrap justify-center gap-1 mb-14">
       <button type="button" class="ic-tab ic-active" data-i="0">Nonprofits</button>
       <button type="button" class="ic-tab" data-i="1">Insurance</button>
       <button type="button" class="ic-tab" data-i="2">Franchise &amp; Chains</button>
@@ -437,20 +440,26 @@
 </section>
 
 <style>
-  /* Industry carousel — Figma 14160:70547 → 14168:12150 */
+  /* Industry carousel — Figma 14203:577851 (desktop) + 14203:577981 (mobile).
+     Section bg is soft royal-tint #eceef9. Tab strip is segmented-control
+     style: inactive tabs are transparent text-only, active tab pops as a
+     white pill with a subtle skeuomorphic shadow. */
   .ic-tab {
     display: inline-flex; align-items: center;
-    padding: 10px 22px; border: 1px solid #d4d4d4; border-radius: 9999px;
+    padding: 10px 22px; border: 0; border-radius: 9999px;
     font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
     font-size: 16px; font-weight: 600; color: #525252;
-    background: #fff; cursor: pointer; white-space: nowrap;
-    transition: background-color .15s ease, border-color .15s ease, color .15s ease;
+    background: transparent; cursor: pointer; white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
   }
   @media (min-width: 1024px) {
     .ic-tab { font-size: 18px; padding: 12px 28px; }
   }
-  .ic-tab:hover { border-color: #4255BD; color: #253274; }
-  .ic-tab.ic-active { background: #eceef9; border-color: #3d52c2; color: #253274; }
+  .ic-tab:hover { color: #253274; }
+  .ic-tab.ic-active {
+    background: #fff; color: #253274;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.06);
+  }
 
   .ic-panel { display: none; text-align: center; max-width: 640px; margin: 0 auto; }
   .ic-panel.ic-shown { display: block; }
