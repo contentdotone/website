@@ -867,13 +867,16 @@
 <style>
   /* Features section — Figma 14207:578347 (desktop) + 14210:579115 (mobile) */
   .features-section { position: relative; overflow: hidden; }
-  /* Facets decoration — right-anchored SVG overlay per bobby.
-     Content sits above via z-10 on the max-w container. */
+  /* Facets decoration — top-right anchored SVG overlay per bobby,
+     capped at 300px tall. Content sits above via z-10 on the max-w
+     container. */
   .features-section::before {
     content: "";
     position: absolute;
-    inset: 0;
-    background: url('https://hj5v68xn.media.zestyio.com/facets-right.svg') no-repeat right center / auto 100%;
+    top: 0; right: 0;
+    width: 100%;
+    height: 300px;
+    background: url('https://hj5v68xn.media.zestyio.com/facets-right.svg') no-repeat top right / auto 100%;
     pointer-events: none;
     z-index: 0;
   }
