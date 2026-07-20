@@ -751,7 +751,8 @@
      recolored to Untitled UI text-primary (#171717 / text-ink), text-
      secondary (#404040 / text-gray-700), text-tertiary (#525252 /
      text-gray-600) so contrast meets WCAG AA on white. -->
-<section class="bg-white py-24" data-figma-node="13882:5843">
+<!-- HIDDEN per bobby 2026-07-20 — "All your content needs, in one platform." -->
+<section class="bg-white py-24 hidden" data-figma-node="13882:5843">
   <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-col gap-16">
     <!-- Heading + supporting text -->
     <div class="max-w-[768px] flex flex-col gap-5">
@@ -847,7 +848,8 @@
   </div>
 </section>
 
-{{ include /components/features/block_highlight.html }}
+<!-- HIDDEN per bobby 2026-07-20 — "Beautiful content pages, fast and easy" -->
+<div class="hidden">{{ include /components/features/block_highlight.html }}</div>
 
 <!--Priority — Why Choose Content.One (left-aligned cards, inline links per Untitled UI pattern) -->
 <section class="py-12 xl:py-20">
@@ -900,11 +902,14 @@
   </div>
 </section>
 
-{{ include /components/features/analytics_highlight.html }}
+<!-- HIDDEN per bobby 2026-07-20 — "Integrated Analytics & Marketing Data Insights" -->
+<div class="hidden">{{ include /components/features/analytics_highlight.html }}</div>
 
-{{include /components/product-section.html}}
+<!-- HIDDEN per bobby 2026-07-20 — "Intelligence built in, not bolted on." -->
+<div class="hidden">{{include /components/product-section.html}}</div>
 
-{{include /components/homepage/personas.html}}
+<!-- HIDDEN per bobby 2026-07-20 — "Who is Content.One for" -->
+<div class="hidden">{{include /components/homepage/personas.html}}</div>
 
 <!-- Explore More -->
 <section class="py-12 xl:py-20 bg-gray-900 text-gray-300">
