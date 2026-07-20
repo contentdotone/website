@@ -757,7 +757,7 @@
      every <details> open on ≥lg widths and hides chevrons so all
      content is visible in the 2-row desktop grid. -->
 <section class="features-section bg-[#0c1027] py-16 lg:py-24">
-  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header -->
     <div class="max-w-[768px] mb-12 lg:mb-16">
       <p class="text-base font-semibold mb-3" style="color:#b1bae7">Features</p>
@@ -866,6 +866,17 @@
 
 <style>
   /* Features section — Figma 14207:578347 (desktop) + 14210:579115 (mobile) */
+  .features-section { position: relative; overflow: hidden; }
+  /* Facets decoration — right-anchored SVG overlay per bobby.
+     Content sits above via z-10 on the max-w container. */
+  .features-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('https://hj5v68xn.media.zestyio.com/facets-right.svg') no-repeat right center / auto 100%;
+    pointer-events: none;
+    z-index: 0;
+  }
   .features-section .feat-card > summary {
     list-style: none;
     cursor: pointer;
