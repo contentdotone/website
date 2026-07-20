@@ -783,7 +783,7 @@
         <details class="feat-card lg:col-span-2 bg-[#19214e] rounded-xl p-4 lg:p-8" open>
           <summary class="feat-summary">
             <span class="feat-label">{{section.section_name}}</span>
-            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
             {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
