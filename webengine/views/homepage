@@ -765,127 +765,91 @@
       <p class="text-lg lg:text-xl leading-relaxed" style="color:#b1bae7">Marketers build, developers extend, IT governs. Same platform, same source of truth.</p>
     </div>
 
-    <!-- Card stack -->
+    <!-- Card stack — data-driven from Zesty product_tour_pages
+         (nav_icon / nav_title / nav_subheading fields).
+         Sections come from product_sections in sort_order:
+           1 Content Teams   → row 1, spans 2 cols on lg
+           2 Developers      → row 1, spans 1 col on lg
+           4 Platform        → row 2, spans 1 col on lg
+           5 Governance ...  → row 2, spans 1 col on lg
+         Uses `limit N,1` on the sections loop so each card block
+         can wrap the correct one into its own grid position. -->
     <div class="flex flex-col gap-6 lg:gap-8">
 
       <!-- ─── Row 1: Content Teams (2/3) + Developers (1/3) ─── -->
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
-        <!-- For Content Teams -->
+        {{each product_sections as section order by section.sort_order limit 0,1}}
         <details class="feat-card lg:col-span-2 bg-[#19214e] rounded-xl p-4 lg:p-8" open>
           <summary class="feat-summary">
-            <span class="feat-label">For Content Teams</span>
+            <span class="feat-label">{{section.section_name}}</span>
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11l4 12 2-5 5-2L9 11z"/><path d="M6 3v2M3 6h2M15 5l1-1M18 8l1-1M5 15l-1 1"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Visual Drag &amp; Drop</p><p class="feat-sub">Freestyle web builder</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2" fill="currentColor" stroke="none"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Authoring</p><p class="feat-sub">WYSIWYG &amp; Markdown support</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l1.7 5.4L19 9l-5.3 1.6L12 16l-1.7-5.4L5 9l5.3-1.6L12 2z"/><path d="M18.5 15.5l.7 2.2 2.3.8-2.3.8-.7 2.2-.7-2.2-2.3-.8 2.3-.8.7-2.2z"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Generative AI</p><p class="feat-sub">Prompt to create content</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Analytics</p><p class="feat-sub">Integrated with Google</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><rect x="8" y="13" width="3" height="3"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Publishing Control</p><p class="feat-sub">Schedule your content</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg></div>
-              <div class="feat-text"><p class="feat-title">GEO &amp; SEO</p><p class="feat-sub">Reach your target market</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="10" r="3"/><path d="M6.5 20a5.5 5.5 0 0 1 11 0"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Personalization</p><p class="feat-sub">Launch targeted experiences</p></div>
-            </div>
+            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
+            <a href="{{page.getUrl()}}" class="feat-item">
+              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
+            </a>
+            {{/each}}
           </div>
         </details>
+        {{/each}}
 
-        <!-- For Developers -->
+        {{each product_sections as section order by section.sort_order limit 1,1}}
         <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
           <summary class="feat-summary">
-            <span class="feat-label">For Developers</span>
+            <span class="feat-label">{{section.section_name}}</span>
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 gap-6 pt-2">
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><path d="M10 6.5h4M10 17.5h4M6.5 10v4M17.5 10v4"/></svg></div>
-              <div class="feat-text"><p class="feat-title">APIs &amp; Headless</p><p class="feat-sub">Built for enterprise content</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l9 5v10l-9 5-9-5V7l9-5z"/><path d="M12 12l9-5M12 12L3 7M12 12v10"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Block Components</p><p class="feat-sub">Reusable building blocks</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="10 9 7 12 10 15"/><polyline points="14 9 17 12 14 15"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Coding &amp; Templating</p><p class="feat-sub">For consistent web layouts</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 9v6a3 3 0 0 0 3 3h6"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Github &amp; Local Dev</p><p class="feat-sub">Build locally, launch globally</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="2"/><path d="M16.24 7.76a6 6 0 0 1 0 8.49m-8.48-.01a6 6 0 0 1 0-8.49m11.31-2.82a10 10 0 0 1 0 14.14m-14.14 0a10 10 0 0 1 0-14.14"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Webhook Integrations</p><p class="feat-sub">Trigger workflows on content change</p></div>
-            </div>
+            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
+            <a href="{{page.getUrl()}}" class="feat-item">
+              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
+            </a>
+            {{/each}}
           </div>
         </details>
+        {{/each}}
       </div>
 
       <!-- ─── Row 2: Platform + Governance & Security ─── -->
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
 
-        <!-- Platform -->
+        {{each product_sections as section order by section.sort_order limit 2,1}}
         <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
           <summary class="feat-summary">
-            <span class="feat-label">Platform</span>
+            <span class="feat-label">{{section.section_name}}</span>
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Automatic Updates</p><p class="feat-sub">Seamless across all channels</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Multi-Lingual</p><p class="feat-sub">Localization that scales</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg></div>
-              <div class="feat-text"><p class="feat-title">CDN &amp; Hosting</p><p class="feat-sub">Global content delivery</p></div>
-            </div>
+            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
+            <a href="{{page.getUrl()}}" class="feat-item">
+              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
+            </a>
+            {{/each}}
           </div>
         </details>
+        {{/each}}
 
-        <!-- Governance & Security -->
+        {{each product_sections as section order by section.sort_order limit 3,1}}
         <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
           <summary class="feat-summary">
-            <span class="feat-label">Governance &amp; Security</span>
+            <span class="feat-label">{{section.section_name}}</span>
             <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
           </summary>
           <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="12" r="1" fill="currentColor" stroke="none"/><circle cx="4" cy="18" r="1" fill="currentColor" stroke="none"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Audit Logs</p><p class="feat-sub">Updated in real-time</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-              <div class="feat-text"><p class="feat-title">SSO / Roles</p><p class="feat-sub">Customize your permissions</p></div>
-            </div>
-            <div class="feat-item">
-              <div class="feat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
-              <div class="feat-text"><p class="feat-title">Workflows</p><p class="feat-sub">Structured to fit your needs</p></div>
-            </div>
+            {{each product_tour_pages as page where product_section = '{section.zuid}' and show_in_nav = 1 order by page.position asc}}
+            <a href="{{page.getUrl()}}" class="feat-item">
+              <div class="feat-icon"><img src="{{page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+              <div class="feat-text"><p class="feat-title">{{page.nav_title}}</p><p class="feat-sub">{{page.nav_subheading}}</p></div>
+            </a>
+            {{/each}}
           </div>
         </details>
+        {{/each}}
       </div>
 
     </div>
@@ -916,7 +880,10 @@
   .features-section .feat-item {
     display: flex; align-items: flex-start; gap: 12px;
     min-width: 0;
+    text-decoration: none;
+    transition: opacity .15s ease;
   }
+  .features-section .feat-item:hover { opacity: 0.85; }
   .features-section .feat-icon {
     flex-shrink: 0;
     width: 40px; height: 40px;
@@ -924,8 +891,19 @@
     border-radius: 8px;
     display: flex; align-items: center; justify-content: center;
     color: #171717;
+    /* Belt-and-braces centering: flex above handles the flow, and this
+       ensures any child (svg or img) that ignores flex sits centered
+       against the box edges. */
+    text-align: center;
   }
-  .features-section .feat-icon svg { width: 20px; height: 20px; }
+  .features-section .feat-icon svg,
+  .features-section .feat-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
   .features-section .feat-text {
     display: flex; flex-direction: column; gap: 2px;
     min-width: 0;
