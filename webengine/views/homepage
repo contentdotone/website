@@ -107,7 +107,7 @@
 
       <!-- Image card — light gray bg, rounded-xl, square aspect. Image
            swaps to match whichever accordion tab is active. -->
-      <div class="sol-image order-1 lg:order-2 bg-[#fafafa] rounded-xl aspect-square flex items-center justify-center p-8 lg:p-16">
+      <div class="sol-image order-1 lg:order-2 bg-[#fafafa] rounded-xl aspect-square hidden lg:flex items-center justify-center p-8 lg:p-16">
         <img
           src="https://hj5v68xn.media.zestyio.com/marketing-website.svg"
           alt="Marketing Website illustration"
