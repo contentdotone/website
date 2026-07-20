@@ -96,7 +96,7 @@
 
     <!-- Intro block (full width, left-aligned, max 768px) -->
     <div class="max-w-3xl mb-16">
-      <p class="text-base font-semibold mb-3" style="color:#253274">Features</p>
+      <p class="text-base font-semibold mb-3" style="color:#253274">Solutions</p>
       <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-[1.2] mb-5" style="letter-spacing:-0.72px">One platform. Seven ways to ship.</h2>
       <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">Every solution runs on the same governed content, the same approval flows, the same source of truth. Start with one. Add the rest when you're ready — nothing to re-platform.</p>
     </div>
