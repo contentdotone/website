@@ -204,11 +204,40 @@
 <style>
   /* Solutions accordion — Figma 14180:576842 */
   .sol-accordion .sol-tab {
+    position: relative;
     border-left: 4px solid #f5f5f5;
     padding: 16px 24px;
     transition: border-color .15s ease;
   }
-  .sol-accordion .sol-tab.sol-active { border-left-color: #3d52c2; }
+  /* Active-tab progress line: overlays the gray border, grows top-to-
+     bottom over 3s to visualize the auto-advance timer. */
+  .sol-accordion .sol-tab.sol-active::before {
+    content: "";
+    position: absolute;
+    left: -4px; top: 0;
+    width: 4px; height: 0;
+    background: #3d52c2;
+    animation: sol-progress 3s linear forwards;
+  }
+  /* When the section leaves the middle-50% viewport band we freeze the
+     progress line at whatever height it reached. */
+  .sol-accordion.sol-paused .sol-tab.sol-active::before {
+    animation-play-state: paused;
+  }
+  /* No auto-advance for users on manual mode (clicked a tab) — show the
+     border-left in royal instead of the progress bar. */
+  .sol-accordion.sol-manual .sol-tab.sol-active { border-left-color: #3d52c2; }
+  .sol-accordion.sol-manual .sol-tab.sol-active::before { display: none; }
+  @keyframes sol-progress {
+    from { height: 0; }
+    to { height: 100%; }
+  }
+  /* Reduced-motion users: no growing bar, static full-height royal
+     border on the active tab. */
+  @media (prefers-reduced-motion: reduce) {
+    .sol-accordion .sol-tab.sol-active { border-left-color: #3d52c2; }
+    .sol-accordion .sol-tab.sol-active::before { display: none; }
+  }
   .sol-accordion .sol-title {
     display: block; width: 100%; text-align: left;
     background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
@@ -242,6 +271,7 @@
   (function () {
     var root = document.querySelector('.sol-accordion');
     if (!root) return;
+    var section = root.closest('section');
     var tabs = root.querySelectorAll('.sol-tab');
     var imgWrap = document.querySelector('.sol-image');
     var imgEl = imgWrap ? imgWrap.querySelector('img') : null;
@@ -250,22 +280,69 @@
       var url = t.getAttribute('data-img');
       if (url) { var pre = new Image(); pre.src = url; }
     });
+
+    var currentIdx = 0;
+    var timerId = null;
+    var manual = false;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     function setActive(i) {
+      currentIdx = i;
       tabs.forEach(function (t, j) { t.classList.toggle('sol-active', j === i); });
-      if (!imgEl) return;
-      var next = tabs[i].getAttribute('data-img');
-      var alt = tabs[i].getAttribute('data-alt') || 'Solution illustration';
-      if (!next || next === imgEl.getAttribute('src')) return;
-      imgWrap.classList.add('sol-image-fading');
-      window.setTimeout(function () {
-        imgEl.src = next;
-        imgEl.alt = alt;
-        imgWrap.classList.remove('sol-image-fading');
-      }, 180);
+      if (imgEl) {
+        var next = tabs[i].getAttribute('data-img');
+        var alt = tabs[i].getAttribute('data-alt') || 'Solution illustration';
+        if (next && next !== imgEl.getAttribute('src')) {
+          imgWrap.classList.add('sol-image-fading');
+          window.setTimeout(function () {
+            imgEl.src = next;
+            imgEl.alt = alt;
+            imgWrap.classList.remove('sol-image-fading');
+          }, 180);
+        }
+      }
     }
+
+    function advance() { setActive((currentIdx + 1) % tabs.length); }
+
+    function startTimer() {
+      if (timerId || manual || reduceMotion) return;
+      root.classList.remove('sol-paused');
+      timerId = window.setInterval(advance, 3000);
+    }
+    function stopTimer(pauseVisual) {
+      if (timerId) { window.clearInterval(timerId); timerId = null; }
+      if (pauseVisual) root.classList.add('sol-paused');
+    }
+
+    // Only auto-advance when the section sits in the middle 50% of the
+    // viewport. rootMargin: -25% top and bottom shrinks the observer
+    // root to just the middle band; when any part of the section
+    // intersects that band we're "in view".
+    if ('IntersectionObserver' in window && section) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) startTimer();
+          else stopTimer(true);
+        });
+      }, { rootMargin: '-25% 0px -25% 0px' });
+      io.observe(section);
+    } else if (!reduceMotion) {
+      // No IO support → just auto-advance always.
+      startTimer();
+    }
+
+    // Manual tab click → stop auto-advance permanently for this pageview
+    // and switch the active-state visual from the growing bar to a
+    // static full-height royal border (via .sol-manual on the root).
     tabs.forEach(function (t, i) {
       var title = t.querySelector('.sol-title');
-      if (title) title.addEventListener('click', function () { setActive(i); });
+      if (title) title.addEventListener('click', function () {
+        manual = true;
+        stopTimer(false);
+        root.classList.add('sol-manual');
+        setActive(i);
+      });
     });
   })();
 </script>
