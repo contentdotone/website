@@ -1153,8 +1153,9 @@
 <!-- HIDDEN per bobby 2026-07-20 — "Beautiful content pages, fast and easy" -->
 <div class="hidden">{{ include /components/features/block_highlight.html }}</div>
 
+<!-- HIDDEN per bobby 2026-07-21 — "Plan, secure, and manage content across every channel." -->
 <!--Priority — Why Choose Content.One (left-aligned cards, inline links per Untitled UI pattern) -->
-<section class="py-12 xl:py-20">
+<section class="py-12 xl:py-20 hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl mb-12">
       <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Why Content.One</p>
@@ -1213,8 +1214,9 @@
 <!-- HIDDEN per bobby 2026-07-20 — "Who is Content.One for" -->
 <div class="hidden">{{include /components/homepage/personas.html}}</div>
 
+<!-- HIDDEN per bobby 2026-07-21 — "Explore More of Content.One" -->
 <!-- Explore More -->
-<section class="py-12 xl:py-20 bg-gray-900 text-gray-300">
+<section class="py-12 xl:py-20 bg-gray-900 text-gray-300 hidden">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-1 lg:grid-cols-12 mb-12 xl:mb-16">
       <div class="lg:col-span-10 lg:col-start-2">
