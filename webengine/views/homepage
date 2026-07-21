@@ -763,7 +763,7 @@
     <div class="max-w-[768px] mb-12 lg:mb-16">
       <p class="text-base font-semibold mb-3" style="color:#b1bae7">Features</p>
       <h2 class="font-display text-3xl lg:text-4xl font-semibold text-white leading-[1.2] mb-5" style="letter-spacing:-0.72px">Every team works in one place.</h2>
-      <p class="text-lg lg:text-xl leading-relaxed" style="color:#b1bae7">Marketers build, developers extend, IT governs. Same platform, same source of truth.</p>
+      <p class="text-lg lg:text-xl leading-relaxed" style="color:#b1bae7">Marketers build, developers extend, IT governs.<br>Same platform, same source of truth.</p>
     </div>
 
     <!-- Card stack — data-driven from Zesty product_tour_pages
