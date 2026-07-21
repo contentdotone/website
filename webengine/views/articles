@@ -64,7 +64,7 @@
           </div>
           {{end-if}}
 
-          <a href="/contact-us/" class="inline-flex items-center justify-center rounded-full bg-royalDark hover:bg-royal transition text-white font-semibold px-5 py-3 text-sm shadow-sm">
+          <a href="/contact-us/" class="hidden lg:inline-flex items-center justify-center rounded-full bg-royalDark hover:bg-royal transition text-white font-semibold px-5 py-3 text-sm shadow-sm">
             Book a Demo
           </a>
         </aside>
