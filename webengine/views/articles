@@ -70,7 +70,7 @@
         </aside>
 
         <!-- ─── Body copy ─── -->
-        <article class="article-content order-1 lg:order-2 max-w-none">
+        <article class="article-content order-1 lg:order-2 max-w-[720px]">
           {{this.body}}
         </article>
 
