@@ -13,7 +13,7 @@
         <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">AI-Driven Marketing at Scale</span>
       </span>
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-display font-bold text-white mb-7 leading-none" style="letter-spacing:-0.02em">One Platform.<br/>Every Channel.<br/>Every Team.</h1>
-      <p class="text-xl font-semibold leading-[30px] mb-10 max-w-3xl mx-auto" style="color:rgba(255,255,255,.78)">
+      <p class="text-xl font-normal leading-[30px] mb-10 max-w-3xl mx-auto" style="color:rgba(255,255,255,.78)">
         The CMS foundation enterprise marketing is built on. One platform for website, mobile, and headless content — so marketing teams can manage, scale, and ship campaigns in every market, local to global.
       </p>
       <div class="flex justify-center">
