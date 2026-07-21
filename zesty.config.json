@@ -1015,6 +1015,18 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-10T15:02:46Z",
                 "createdAt": "2026-07-10T15:02:46Z"
+            },
+            "/vendor-partnerships.html": {
+                "zuid": "11-f88692d3cf-tf9vls",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-13T17:33:55Z",
+                "createdAt": "2026-07-13T17:33:55Z"
+            },
+            "/media-partnerships.html": {
+                "zuid": "11-c0c59ee59e-1s1spq",
+                "type": "ajax-json",
+                "updatedAt": "2026-07-14T21:50:34Z",
+                "createdAt": "2026-07-14T21:50:34Z"
             }
         },
         "styles": {
