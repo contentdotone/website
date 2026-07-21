@@ -56,6 +56,9 @@
                 {{end-if}}
               </div>
             </a>
+            {{if {author.bio} }}
+            <p class="text-sm text-gray-600 leading-relaxed m-0">{{author.bio}}</p>
+            {{end-if}}
             {{/each}}
           </div>
           {{end-if}}
