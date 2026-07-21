@@ -5,27 +5,26 @@
      body copy renders correctly. -->
 <main class="article-page">
 
-  <!-- ════════════ HERO ════════════ -->
+  <!-- ════════════ HERO — Figma 13846:33756 (5 breakpoints) ════════════ -->
   <section class="article-hero bg-[#060813] pt-14 lg:pt-20 pb-12 lg:pb-16">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-[1fr_auto] gap-10 lg:gap-16 items-center">
-        <div class="max-w-2xl">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div>
           {{if {this.category} }}
           <span class="inline-block bg-white/10 text-white/85 font-semibold uppercase text-xs tracking-[0.16em] rounded px-3 py-1.5 mb-5">{{categories.filter({this.category}).name}}</span>
           {{end-if}}
-          <h1 class="font-display text-white font-semibold leading-[1.15] mb-4 text-3xl md:text-4xl lg:text-5xl" style="letter-spacing:-0.02em">{{this.title}}</h1>
-          <div class="flex flex-wrap gap-x-3 gap-y-1 text-sm text-white/60">
+          <h1 class="font-display text-white font-semibold leading-[1.15] mb-4 text-3xl md:text-4xl lg:text-[44px]" style="letter-spacing:-0.02em">{{this.title}}</h1>
+          <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-white/60">
             {{if {this.publish_date} }}
             <span>{{this.publish_date.date(Y-m-d)}}</span>
-            <span aria-hidden="true">·</span>
             {{end-if}}
             <span id="articleReadTime">Estimating read time...</span>
           </div>
         </div>
         {{if {this.main_image} }}
-        <div class="w-full lg:w-[420px] shrink-0">
+        <div class="w-full">
           <button class="w-full block p-0 border-0 bg-transparent cursor-zoom-in" type="button" data-hero-lightbox data-hero-src="{{this.main_image.getImage()}}" aria-label="Open hero image">
-            <img src="{{this.main_image.getImage(840,560,crop)}}" alt="{{this.title}} cover image" class="w-full aspect-[3/2] object-cover rounded-2xl border border-white/10" loading="eager" />
+            <img src="{{this.main_image.getImage(1200,720,crop)}}" alt="{{this.title}} cover image" class="w-full aspect-[5/3] object-cover rounded-2xl border border-white/10" loading="eager" />
           </button>
         </div>
         {{end-if}}
