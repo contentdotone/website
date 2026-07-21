@@ -78,16 +78,11 @@
     </div>
   </section>
 
-  <!-- ════════════ BOOK A DEMO CTA ════════════ -->
-  <section class="bg-[#060813] py-16 lg:py-20">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-      <h2 class="font-display text-white text-2xl lg:text-3xl font-semibold mb-3 leading-[1.2]" style="letter-spacing:-0.02em">Book a Demo</h2>
-      <p class="text-white/70 mb-8">See how Content.One helps enterprise marketing teams manage, scale, and ship in every market.</p>
-      <a href="/contact-us/" class="inline-flex items-center rounded-full bg-royal hover:bg-white hover:text-royal transition text-white font-semibold px-6 py-3">
-        Schedule a Meeting
-      </a>
-    </div>
-  </section>
+  <!-- ════════════ CONTACT / CONSULTATION FORM ════════════
+       Same sales_personal_cta block used at the bottom of the homepage
+       (free consultation copy + Gisele Blair contact card on the left,
+       Zoho form on the right). -->
+  {{blocks('/-/block/sales_personal_cta.html')}}
 
   {{if {this.bottom_cta} }}
   {{blocks({this.bottom_cta})}}
