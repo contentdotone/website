@@ -42,7 +42,7 @@
              below the article content. ─── -->
         <aside class="article-aside order-2 lg:order-1 lg:sticky lg:top-24 flex flex-col gap-6">
           {{if {this.authors} }}
-          <div class="flex flex-col gap-4">
+          <div class="flex flex-col gap-6">
             {{each {this.authors} as author}}
             <a href="{{author.getURL()}}" class="flex items-center gap-3 no-underline group">
               {{if {author.image} }}
@@ -58,7 +58,7 @@
               </div>
             </a>
             {{if {author.bio} }}
-            <p class="text-sm text-gray-600 leading-relaxed m-0">{{author.bio}}</p>
+            <p class="text-sm leading-relaxed m-0" style="color:#525252">{{author.bio}}</p>
             {{end-if}}
             {{/each}}
           </div>
