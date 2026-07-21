@@ -757,7 +757,7 @@
      starts open, the others collapsed (chevron-right style). JS forces
      every <details> open on ≥lg widths and hides chevrons so all
      content is visible in the 2-row desktop grid. -->
-<section class="features-section bg-[#0c1027] py-16 lg:py-24">
+<section class="features-section bg-[#060813] py-16 lg:py-24">
   <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <!-- Header -->
     <div class="max-w-[768px] mb-12 lg:mb-16">
