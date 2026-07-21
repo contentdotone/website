@@ -975,6 +975,77 @@
   })();
 </script>
 
+<!-- ════════════ BLOG SECTION — Figma 14217:579597 (desktop) + 14217:579521 + 14217:579441 ════════════
+     "From the Content.One team." — 3 latest articles pulled from
+     the CMS (sorted publish_date desc, limit 3). Each card renders
+     the article's main_image, category name, title, and first
+     author's avatar + name. Wraps to a single column stack on
+     mobile via flex-wrap + min-w-[320px] on each card. Ends with
+     "View all Articles" pill CTA to /blog/. -->
+<section class="blog-latest bg-white py-16 lg:py-24">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-16 items-center">
+
+    <!-- Heading (left-aligned) -->
+    <div class="w-full">
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-[1.2]" style="letter-spacing:-0.72px">From the Content.One team.</h2>
+    </div>
+
+    <!-- 3-up card row -->
+    <div class="w-full flex flex-wrap gap-8 lg:gap-x-8 lg:gap-y-12 items-start">
+      {{each articles as article sort by publish_date desc limit 3}}
+      <a href="{{article.getURL()}}" class="blog-latest__card flex-1 min-w-[320px] flex flex-col gap-4">
+        <div class="blog-latest__image aspect-[3/2] rounded-2xl overflow-hidden border border-black/10">
+          {{if {article.main_image} }}
+          <img src="{{article.main_image.getImage(768,512,crop)}}" alt="{{article.title}} cover image" class="w-full h-full object-cover" loading="lazy" />
+          {{end-if}}
+        </div>
+        <div class="flex flex-col gap-5 px-4">
+          <div class="flex flex-col gap-2">
+            {{if {article.category} }}
+            <p class="text-sm font-semibold text-gray-700 m-0">{{article.category.name}}</p>
+            {{end-if}}
+            <div class="flex gap-4 items-start">
+              <h3 class="flex-1 text-lg font-semibold text-ink leading-7 m-0 line-clamp-2" style="font-family:'Satoshi','DM Sans',system-ui,sans-serif">{{article.title}}</h3>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-ink mt-1"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          {{if {article.authors} }}
+          <div class="flex items-center gap-3">
+            {{each {article.authors} as author limit 1}}
+              <div class="w-10 h-10 rounded-full overflow-hidden border border-black/10 shrink-0 bg-[#cfcbdc]">
+                {{if {author.image} }}
+                <img src="{{author.image.getImage(80,80,crop)}}" alt="{{author.name}}" class="w-full h-full object-cover" loading="lazy" />
+                {{end-if}}
+              </div>
+              <span class="text-sm font-semibold text-gray-700 whitespace-nowrap">{{author.name}}</span>
+            {{/each}}
+          </div>
+          {{end-if}}
+        </div>
+      </a>
+      {{/each}}
+    </div>
+
+    <!-- View all CTA -->
+    <a href="/blog/" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-royalDark hover:bg-royal transition text-white font-semibold px-[18px] py-3 shadow-sm">
+      View all Articles
+    </a>
+  </div>
+</section>
+
+<style>
+  .blog-latest__card { text-decoration: none; }
+  .blog-latest__card:hover .blog-latest__image img { transform: scale(1.02); }
+  .blog-latest__image img { transition: transform .4s ease; }
+  /* Tailwind CDN may not ship line-clamp — inline the fallback. */
+  .blog-latest .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
 <!-- ════════════ (below) HIDDEN LEGACY FEATURES SECTION — Figma 13882:5843 (Untitled-C1) ════════════ -->
 <!-- Light-theme flip per bobby (2026-07-14): bg-black → bg-white, text
      recolored to Untitled UI text-primary (#171717 / text-ink), text-
