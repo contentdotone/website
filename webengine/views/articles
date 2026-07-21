@@ -38,8 +38,10 @@
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)] gap-10 lg:gap-16 items-start">
 
-        <!-- ─── Sticky sidebar: author + CTA ─── -->
-        <aside class="article-aside lg:sticky lg:top-24 flex flex-col gap-6">
+        <!-- ─── Sticky sidebar: author + CTA. On lg+ sits left of body;
+             on smaller widths order flips so author + bio + CTA render
+             below the article content. ─── -->
+        <aside class="article-aside order-2 lg:order-1 lg:sticky lg:top-24 flex flex-col gap-6">
           {{if {this.authors} }}
           <div class="flex flex-col gap-4">
             {{each {this.authors} as author}}
@@ -69,7 +71,7 @@
         </aside>
 
         <!-- ─── Body copy ─── -->
-        <article class="article-content max-w-none">
+        <article class="article-content order-1 lg:order-2 max-w-none">
           {{this.body}}
         </article>
 
