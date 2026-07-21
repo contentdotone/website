@@ -93,6 +93,9 @@
       </div>
     </div>
   </section>
+
+  <!-- ════════════ CONTACT FORM — same industry block used on blog articles ════════════ -->
+  {{include /components/industry/c1_industry_contact_form.html}}
 </main>
 
 <style>
