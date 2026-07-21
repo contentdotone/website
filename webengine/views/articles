@@ -78,11 +78,10 @@
     </div>
   </section>
 
-  <!-- ════════════ CONTACT / CONSULTATION FORM ════════════
-       Same sales_personal_cta block used at the bottom of the homepage
-       (free consultation copy + Gisele Blair contact card on the left,
-       Zoho form on the right). -->
-  {{blocks('/-/block/sales_personal_cta.html')}}
+  <!-- ════════════ CONTACT FORM ════════════
+       Same c1_industry_contact_form used at the bottom of every industry
+       landing page ("Take Content.One further" lavender band). -->
+  {{include /components/industry/c1_industry_contact_form.html}}
 
   {{if {this.bottom_cta} }}
   {{blocks({this.bottom_cta})}}
