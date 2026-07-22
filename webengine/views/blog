@@ -18,7 +18,7 @@
   <!-- ════════════ FEATURED HERO (most recent article) ════════════ -->
   <section class="pb-10 lg:pb-14">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-      {{each articles as article sort by _created desc limit 1}}
+      {{each articles as article sort by publish_date desc limit 1}}
       <a href="{{article.getURL()}}" class="blog-hero-card block relative rounded-2xl overflow-hidden aspect-[16/9] group border border-black/10 no-underline">
         {{if {article.main_image} }}
         <img src="{{article.main_image.getImage(1600,900,crop)}}" alt="{{article.title}} cover image" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="eager" />
@@ -46,7 +46,7 @@
   <section class="py-12 lg:py-16">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" data-blog-grid data-page-size="6">
-        {{each articles as article sort by _created desc limit 1,100}}
+        {{each articles as article sort by publish_date desc limit 1,100}}
         <a href="{{article.getURL()}}" class="blog-card flex flex-col gap-4 group no-underline" data-blog-card>
           <div class="aspect-[3/2] rounded-xl overflow-hidden border border-black/10">
             {{if {article.main_image} }}
