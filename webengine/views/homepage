@@ -64,7 +64,7 @@
 </script>
 
 <!-- ════════════ SOCIAL PROOF — Figma 13873:4138 (Untitled-C1) ════════════ -->
-<section class="bg-[#0c1027] py-24" data-figma-node="13873:4138">
+<section class="bg-[#060813] py-24" data-figma-node="13873:4138">
   <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <div class="flex flex-col gap-8 items-center">
       <p class="font-sans font-semibold text-white text-center text-base sm:text-xl leading-[24px] sm:leading-[30px] max-w-3xl">
@@ -868,19 +868,6 @@
 <style>
   /* Features section — Figma 14207:578347 (desktop) + 14210:579115 (mobile) */
   .features-section { position: relative; overflow: hidden; }
-  /* Facets decoration — top-right anchored SVG overlay per bobby,
-     capped at 300px tall. Content sits above via z-10 on the max-w
-     container. */
-  .features-section::before {
-    content: "";
-    position: absolute;
-    top: 0; right: 0;
-    width: 100%;
-    height: 300px;
-    background: url('https://hj5v68xn.media.zestyio.com/facets-right.svg') no-repeat top right / auto 100%;
-    pointer-events: none;
-    z-index: 0;
-  }
   .features-section .feat-card > summary {
     list-style: none;
     cursor: pointer;
