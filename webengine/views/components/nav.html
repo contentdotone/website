@@ -247,7 +247,7 @@
 
 <aside class="offcanvas-nav-panel lg:hidden flex flex-col" id="mobileNav">
   <!-- The sticky-nav header (visible above) already carries the logo, tablet
-       Log In / Get Started pills, and the hamburger (which swaps to X-close
+       Get Started pill, and the hamburger (which swaps to X-close
        when the panel is open) — so this panel is content-only. -->
 
   <nav class="flex-1 px-4 py-4 max-w-[1280px] w-full mx-auto">
@@ -372,12 +372,11 @@
         <img src="{{globals.logo_full.getImage()}}" width="160" height="36" alt="Content.One Logo" loading="eager" fetchpriority="high" />
       </a>
 
-      <!-- Tablet CTA cluster + hamburger. Log In + Get Started Now show from
-           md+ (Figma 14071:7086); hamburger shows below lg. On desktop (lg+)
+      <!-- Tablet CTA cluster + hamburger. Get Started Now shows from md+
+           (Figma 14071:7086); hamburger shows below lg. On desktop (lg+)
            the full desktop nav below takes over and this whole cluster is
            replaced by its version inside .hidden lg:flex. -->
       <div class="flex items-center gap-3 lg:hidden">
-        <a href="https://accounts.content.one" class="c1-nav-btn c1-nav-btn--secondary hidden md:inline-flex" data-utm-link>Log In</a>
         <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary hidden md:inline-flex">Get Started Now</a>
         <label for="nav-offcanvas-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Toggle navigation">
           <svg viewBox="0 0 24 24" class="nav-toggle-open w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
@@ -601,10 +600,6 @@
           </ul>
         </div>
         <div class="flex flex-row items-center gap-3">
-            <!-- Log In pill (secondary) — Figma 14051:7554;13557:585;1624:262067 -->
-            <a href="https://accounts.content.one" class="c1-nav-btn c1-nav-btn--secondary hidden md:inline-flex" data-utm-link>
-              Log In
-            </a>
             <!-- Get Started Now pill (primary royal) — Figma 14051:7554;13557:585;1624:262069.
                  Direct link to /contact-us/ per bobby; the three primary CTAs
                  (Start Demo / Agentic Report / Migration Plan) are already
