@@ -18,7 +18,7 @@
   <!-- ════════════ FEATURED HERO (most recent article) ════════════ -->
   <section class="pb-10 lg:pb-14">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
-      {{each articles as article sort by publish_date desc limit 1}}
+      {{each articles as article sort by _created desc limit 1}}
       <a href="{{article.getURL()}}" class="blog-hero-card block relative rounded-2xl overflow-hidden aspect-[16/9] group border border-black/10 no-underline">
         {{if {article.main_image} }}
         <img src="{{article.main_image.getImage(1600,900,crop)}}" alt="{{article.title}} cover image" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="eager" />
@@ -46,7 +46,7 @@
   <section class="py-12 lg:py-16">
     <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" data-blog-grid data-page-size="6">
-        {{each articles as article sort by publish_date desc limit 1,100}}
+        {{each articles as article sort by _created desc limit 1,100}}
         <a href="{{article.getURL()}}" class="blog-card flex flex-col gap-4 group no-underline" data-blog-card>
           <div class="aspect-[3/2] rounded-xl overflow-hidden border border-black/10">
             {{if {article.main_image} }}
@@ -57,8 +57,8 @@
           </div>
           <div class="flex flex-col gap-2 px-1">
             <p class="text-sm font-semibold text-gray-700 m-0">{{categories.filter({article.category}).name}}</p>
-            <div class="flex gap-3 items-start">
-              <h3 class="blog-card__title flex-1 text-lg font-semibold text-ink leading-7 m-0" style="font-family:'Satoshi','DM Sans',system-ui,sans-serif">{{article.title}}</h3>
+            <div class="flex gap-3 items-start blog-card__title-row">
+              <h3 class="blog-card__title flex-1 text-lg font-semibold text-ink leading-7 m-0" style="font-family:'Satoshi','DM Sans',system-ui,sans-serif" title="{{article.title}}">{{article.title}}</h3>
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-ink mt-1"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </div>
             {{if {article.authors} }}
@@ -105,11 +105,17 @@
   [data-blog-grid] [data-blog-card] { display: none; }
   [data-blog-grid] [data-blog-card].is-visible { display: flex; }
 
+  /* Title always occupies exactly 2 line-heights so every card in the
+     grid has the same overall height regardless of copy length. The
+     title element itself line-clamps to 2 lines with an ellipsis; the
+     h3's native title attr provides the full-title tooltip on hover. */
+  .blog-card__title-row { min-height: 56px; }
   .blog-card__title {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    cursor: help;
   }
 </style>
 
