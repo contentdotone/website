@@ -64,40 +64,177 @@
   .nav-details summary > .nav-caret { transition: transform .2s; }
   .nav-details[open] > summary > .nav-caret { transform: rotate(180deg); }
 
-  /* Pure-CSS offcanvas mobile menu using a hidden checkbox */
+  /* Mobile + tablet nav panel — Figma 14071:8710 (tablet) / 14074:10037 (mobile).
+     Full-width push-down panel below the sticky nav, no right-slide, no scrim.
+     Hamburger swaps to X-close in the sticky-nav header when panel is open. */
   #nav-offcanvas-toggle { position: absolute; left: -9999px; }
+  .offcanvas-backdrop { display: none !important; }
   .offcanvas-nav-panel {
-    transition: transform .25s ease;
-    transform: translateX(-100%);
-    will-change: transform;
-    z-index: 1080; /* above sticky-nav (1030), modal-shim (1055), backdrop (1070) */
+    position: fixed;
+    top: var(--c1-nav-h, 64px);
+    left: 0; right: 0; bottom: 0;
+    background: #fff;
+    overflow-y: auto;
+    transform: translateY(-8px);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: transform .2s ease, opacity .2s ease, visibility .2s;
+    z-index: 1080;
   }
-  .offcanvas-backdrop { z-index: 1070; }
-  #nav-offcanvas-toggle:checked ~ .offcanvas-backdrop { display: block; }
-  #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel { transform: translateX(0); }
-  .offcanvas-backdrop { display: none; }
-  @media (min-width: 1024px) {
-    /* Disable offcanvas behavior on desktop — show inline.
-       overflow MUST be visible on desktop so absolute-positioned dropdown menus
-       can escape the panel's bounds instead of being clipped or pushing layout. */
-    .offcanvas-nav-panel {
-      transform: none !important;
-      position: static !important;
-      box-shadow: none !important;
-      background: transparent !important;
-      overflow: visible !important;
+  #nav-offcanvas-toggle:checked ~ .offcanvas-nav-panel {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  /* Lock body scroll behind the open panel (below lg) AND force the sticky
+     nav back into view so the X-close is always reachable — even if the user
+     opened the drawer while scrolled past the sentinel. */
+  @media (max-width: 1023.98px) {
+    html:has(#nav-offcanvas-toggle:checked) { overflow: hidden; }
+    html:has(#nav-offcanvas-toggle:checked) .sticky-nav.is-fixed {
+      transform: translateY(0) !important;
+      background-color: #fff !important;
     }
-    .offcanvas-backdrop { display: none !important; }
+  }
+  /* Hamburger ↔ X-close icon swap in the sticky-nav header */
+  .nav-toggle-close { display: none; }
+  #nav-offcanvas-toggle:checked ~ header .nav-toggle-open { display: none; }
+  #nav-offcanvas-toggle:checked ~ header .nav-toggle-close { display: inline-block; }
+
+  @media (min-width: 1024px) {
+    /* Desktop uses inline top-nav; hide the drawer entirely. */
+    .offcanvas-nav-panel { display: none !important; }
   }
 
-  /* Mobile nav accordion styling */
+  /* Row-style dropdown groups inside the drawer. Summary is a full-width tap
+     row with a chevron; expands accordion-style in place (bobby chose (a)). */
   .mobile-nav-group > summary { list-style: none; }
   .mobile-nav-group > summary::-webkit-details-marker { display: none; }
   .mobile-nav-group > summary::marker { content: ""; }
   .mobile-nav-group .mobile-nav-caret { transition: transform .2s ease; }
-  .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(180deg); }
-  .mobile-nav-group[open] > summary { color: #4255BD; background: rgba(66,85,189,0.06); }
-  .mobile-nav-group + .mobile-nav-group, .mobile-nav-group + a, a + .mobile-nav-group { margin-top: .25rem; }
+  .mobile-nav-group[open] > summary > .mobile-nav-caret { transform: rotate(90deg); }
+  .mobile-nav-group[open] > summary { color: #31429b; }
+
+  /* Item card — 40x40 icon tile + title + subheading. Used at ALL breakpoints
+     below lg (mobile + tablet). Icons are always visible per Figma. */
+  .mobile-nav-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    padding: 12px; border-radius: 8px;
+    color: #171717 !important; text-decoration: none !important;
+    background: transparent !important;
+    transition: background-color .15s ease;
+  }
+  .mobile-nav-item:hover { background: #F5F5F5 !important; }
+  .mobile-nav-item__icon {
+    flex-shrink: 0; width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #F5F5F5; border-radius: 8px; color: #525252;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  }
+  .mobile-nav-item__icon img,
+  .mobile-nav-item__icon svg { width: 20px; height: 20px; object-fit: contain; }
+  .mobile-nav-item__title { font-size: 14px; font-weight: 600; color: #171717; line-height: 1.25; display: block; }
+  .mobile-nav-item__tag { font-size: 13px; color: #737373; margin-top: 2px; line-height: 1.35; display: block; }
+
+  /* Section header — royal-blue eyebrow above Features sub-sections */
+  .mobile-nav-section-hd {
+    color: #4255BD; font-size: 12px; font-weight: 600;
+    padding: 12px 12px 6px; text-transform: none; letter-spacing: 0;
+  }
+
+  /* Mobile (< 768): single-column stack for expanded groups */
+  .mobile-nav-group[open] > .mobile-nav-body {
+    display: flex; flex-direction: column; gap: 4px; padding: 8px 4px 12px;
+  }
+
+  /* Tablet (768–1023): 2-column grid for expanded groups (Figma 14071:8710) */
+  @media (min-width: 768px) and (max-width: 1023.98px) {
+    .mobile-nav-group[open] > .mobile-nav-body {
+      display: grid; grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px 20px; padding: 12px 16px 20px;
+    }
+    .mobile-nav-body .mobile-nav-section-hd { grid-column: 1 / -1; }
+  }
+
+  /* Figma 14057:8502 desktop nav — pill buttons + skeuomorphic shadow */
+  .c1-nav-btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .375rem;
+    padding: .625rem 1rem; border-radius: 9999px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; font-weight: 600; font-size: 1rem; line-height: 1.5;
+    white-space: nowrap; transition: background-color .18s ease, color .18s ease;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 0 rgba(0,0,0,0.05);
+  }
+  .c1-nav-btn--secondary { background: #fafafa; color: #171717; border: 1px solid #d4d4d4; }
+  .c1-nav-btn--secondary:hover { background: #f4f4f5; }
+  .c1-nav-btn--primary { background: #31429b; color: #ffffff; border: 2px solid rgba(255,255,255,0.12); }
+  .c1-nav-btn--primary:hover { background: #2F3F94; }
+  /* Header shell — 72px, white bg, bottom border + shadow-xs */
+  header.sticky-nav > nav { border-bottom: 1px solid #e5e5e5; box-shadow: 0 1px 1px 0 rgba(0,0,0,0.05); }
+  @media (min-width: 1024px) {
+    header.sticky-nav > nav > .max-w-7xl { min-height: 72px; padding-top: 0; padding-bottom: 0; }
+  }
+
+  /* Figma 14057:8503 / 9162 — mega-menu dropdown: full-width, centered content.
+     .nav-mega is position: static so its .nav-menu (position: absolute) escapes
+     the <li> containing block and anchors to <header> (position: relative),
+     giving a full-viewport-width panel that follows the sticky-nav slide. */
+  @media (min-width: 1024px) {
+    .nav-details.nav-mega { position: static; }
+    .nav-details.nav-mega > .nav-menu {
+      left: 0 !important; right: 0 !important; top: 100% !important;
+      min-width: 0 !important; max-width: none !important; width: auto !important;
+      margin-top: 0 !important; padding: 0 !important;
+      border-radius: 0 !important;
+      border-top: 1px solid #E5E5E5;
+      background: #fff;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.08);
+      overflow: hidden;
+      z-index: 1040;
+    }
+    /* Active summary state — filled gray pill w/ rotated caret */
+    .nav-details[open] > summary { background: #F5F5F5; color: #171717; }
+  }
+  /* Inner container matches the main-nav container width + padding so mega
+     menu content aligns with the logo/nav items above it. */
+  .c1-mega-inner { max-width: 80rem; margin: 0 auto; padding: 1.25rem 1rem 0; }
+  @media (min-width: 640px) { .c1-mega-inner { padding-left: 1.5rem; padding-right: 1.5rem; } }
+  @media (min-width: 1024px) { .c1-mega-inner { padding-left: 0.75rem; padding-right: 0.75rem; } }
+  .c1-mega-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px 12px; }
+  .c1-mega-col-hd { color: #4255BD; font-size: 14px; font-weight: 600; padding: .25rem .5rem .75rem; }
+  .c1-mega-item {
+    display: flex; align-items: flex-start; gap: .75rem;
+    padding: .625rem .625rem; border-radius: 8px;
+    color: #171717; text-decoration: none;
+    transition: background-color .15s ease;
+  }
+  .c1-mega-item:hover { background: #F5F5F5; color: #171717; }
+  .c1-mega-item__icon {
+    flex-shrink: 0; width: 40px; height: 40px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: #F5F5F5; border-radius: 8px; color: #525252;
+    box-shadow: inset 0 0 0 1px rgba(0,0,0,0.06);
+  }
+  .c1-mega-item:hover .c1-mega-item__icon { color: #31429b; }
+  .c1-mega-item__title { font-size: 14px; font-weight: 600; color: #171717; line-height: 1.25; display: block; }
+  .c1-mega-item__tag { font-size: 13px; color: #737373; margin-top: 2px; line-height: 1.35; display: block; }
+  /* Actions strip: full-width band, content centered in .c1-mega-inner. */
+  .c1-mega-actions { background: #FAFAFA; border-top: 1px solid #F5F5F5; margin-top: 1rem; }
+  .c1-mega-actions__row {
+    display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    padding-top: 1rem; padding-bottom: 1rem; gap: 1rem;
+  }
+  .c1-mega-actions__left { font-size: 14px; color: #525252; }
+  .c1-mega-actions__left a { color: #31429b; font-weight: 600; text-decoration: none; }
+  .c1-mega-actions__left a:hover { text-decoration: underline; }
+  .c1-mega-actions__right { display: flex; gap: 1.25rem; }
+  .c1-mega-actions__right a {
+    display: inline-flex; align-items: center; gap: .375rem;
+    font-size: 14px; font-weight: 600; color: #171717; text-decoration: none;
+  }
+  .c1-mega-actions__right a svg { color: #31429b; }
+  .c1-mega-actions__right a:hover { color: #31429b; }
 </style>
 <!-- Checkbox + offcanvas panel + backdrop live OUTSIDE the sticky-nav header.
      Reason: sticky-nav uses `transform`/`will-change: transform` for its slide
@@ -108,77 +245,123 @@
 
 <label for="nav-offcanvas-toggle" class="offcanvas-backdrop fixed inset-0 bg-black/40 lg:hidden cursor-pointer" aria-hidden="true"></label>
 
-<aside class="offcanvas-nav-panel fixed top-0 left-0 bottom-0 bg-white shadow-2xl overflow-y-auto lg:hidden flex flex-col" id="mobileNav" style="width: 20rem; max-width: 90vw;">
-  <div class="flex items-center justify-between px-5 py-4 border-b border-gray-100">
-    <a href="/" class="text-gray-900 inline-flex items-center">
-      <img src="{{globals.logo.getImage(40)}}" width="40" height="40" alt="Content.One" class="w-10 h-10" />
-      <span class="ml-2 font-display font-semibold text-gray-900">Content.One</span>
-    </a>
-    <label for="nav-offcanvas-toggle" class="text-gray-500 hover:text-gray-900 w-9 h-9 inline-flex items-center justify-center rounded-md hover:bg-gray-100 text-2xl leading-none cursor-pointer" aria-label="Close navigation">&times;</label>
-  </div>
+<aside class="offcanvas-nav-panel lg:hidden flex flex-col" id="mobileNav">
+  <!-- The sticky-nav header (visible above) already carries the logo, tablet
+       Get Started pill, and the hamburger (which swaps to X-close
+       when the panel is open) — so this panel is content-only. -->
 
-  <nav class="flex-1 px-3 py-4">
+  <nav class="flex-1 px-4 py-4 max-w-[1280px] w-full mx-auto">
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Solutions</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
-      <ul class="list-none m-0 pl-3 pr-2 py-1">
-        {{each product_solutions as solution}}
-          <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">{{solution.seo_link_title}}</a></li>
+      <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
+        {{each product_solutions as solution where show_in_nav = "1"}}
+          <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{solution.getUrl()}}">
+            <span class="mobile-nav-item__icon inline-flex">
+              <img src="{{solution.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+            </span>
+            <span>
+              <span class="mobile-nav-item__title">{{solution.nav_title}}</span>
+              <span class="mobile-nav-item__tag">{{solution.nav_subheading}}</span>
+            </span>
+          </a>
         {{/each}}
-      </ul>
+      </div>
     </details>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Industries</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
-      <ul class="list-none m-0 pl-3 pr-2 py-1">
-        {{each industries as indy}}
-          <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">{{indy.seo_link_title}}</a></li>
+      <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
+        {{each industries as indy where show_in_nav = "1"}}
+          <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{indy.getUrl()}}">
+            <span class="mobile-nav-item__icon inline-flex">
+              <img src="{{indy.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+            </span>
+            <span>
+              <span class="mobile-nav-item__title">{{indy.nav_title}}</span>
+              <span class="mobile-nav-item__tag">{{indy.nav_subheading}}</span>
+            </span>
+          </a>
         {{/each}}
-      </ul>
+      </div>
     </details>
 
-    <a href="/customers/" class="block px-3 py-3 rounded-lg text-gray-900 font-display font-semibold hover:bg-royal/5">Customers</a>
+    <a href="/customers/" class="block p-3 rounded-lg text-gray-800 text-sm font-semibold hover:bg-royal/5">Customers</a>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Features</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
-      <div class="pl-3 pr-2 py-1">
+      <div class="mobile-nav-body pl-3 pr-2 py-1">
         {{each product_sections as section order by section.sort_order}}
-          <div class="px-3 pt-3 pb-1 text-xs uppercase tracking-wider text-gray-400 font-semibold">{{section.section_name}}</div>
-          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc }}
-            <a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{nav_page.getUrl()}}">{{nav_page.seo_link_title}}</a>
+          <div class="mobile-nav-section-hd">{{section.section_name}}</div>
+          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' AND show_in_nav = "1" order by nav_page.position asc }}
+            <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="{{nav_page.getUrl()}}">
+              <span class="mobile-nav-item__icon inline-flex">
+                <img src="{{nav_page.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+              </span>
+              <span>
+                <span class="mobile-nav-item__title">{{nav_page.nav_title}}</span>
+                <span class="mobile-nav-item__tag">{{nav_page.nav_subheading}}</span>
+              </span>
+            </a>
           {{/each}}
         {{/each}}
       </div>
     </details>
 
     <details class="mobile-nav-group" name="mobilemenu">
-      <summary class="flex items-center justify-between px-3 py-3 rounded-lg text-gray-900 font-display font-semibold cursor-pointer hover:bg-royal/5">
+      <summary class="flex items-center justify-between p-3 rounded-lg text-gray-800 text-sm font-semibold cursor-pointer hover:bg-royal/5">
         <span>Resources</span>
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-400 mobile-nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
       </summary>
-      <ul class="list-none m-0 pl-3 pr-2 py-1">
-        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/blog/">Blog</a></li>
-        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://docs.zesty.io/">Documentation</a></li>
-        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://github.com/contentdotone">GitHub</a></li>
-        <li><a class="block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/contact-us/">Contact Us</a></li>
-      </ul>
+      <div class="mobile-nav-body list-none m-0 pl-3 pr-2 py-1">
+        <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/blog/">
+          <span class="mobile-nav-item__icon inline-flex">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </span>
+          <span>
+            <span class="mobile-nav-item__title">Blog</span>
+            <span class="mobile-nav-item__tag">The latest from our team</span>
+          </span>
+        </a>
+        <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://docs.zesty.io/">
+          <span class="mobile-nav-item__icon inline-flex">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </span>
+          <span>
+            <span class="mobile-nav-item__title">Documentation</span>
+            <span class="mobile-nav-item__tag">Feature &amp; platform docs</span>
+          </span>
+        </a>
+        <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" target="_blank" rel="noopener" href="https://github.com/contentdotone">
+          <span class="mobile-nav-item__icon inline-flex">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+          </span>
+          <span>
+            <span class="mobile-nav-item__title">Github &amp; Commit Log</span>
+            <span class="mobile-nav-item__tag">Latest updates to Content.One</span>
+          </span>
+        </a>
+        <a class="mobile-nav-item block px-3 py-2 text-sm text-gray-600 rounded-md hover:bg-royal/5 hover:text-royal" href="/brand/">
+          <span class="mobile-nav-item__icon inline-flex">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+          </span>
+          <span>
+            <span class="mobile-nav-item__title">Brand</span>
+            <span class="mobile-nav-item__tag">Logo and Color Palette</span>
+          </span>
+        </a>
+      </div>
     </details>
   </nav>
 
-  <div class="px-5 py-4 border-t border-gray-100 bg-gray-50">
-    <a href="/contact-us/" class="flex items-center justify-center w-full rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 transition">
-      <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-2" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-      Get Started
-    </a>
-  </div>
 </aside>
 
 <header class="sticky-nav" data-sticky-nav>
@@ -189,154 +372,241 @@
         <img src="{{globals.logo_full.getImage()}}" width="160" height="36" alt="Content.One Logo" loading="eager" fetchpriority="high" />
       </a>
 
-      <!-- Mobile hamburger — labels the hidden checkbox -->
-      <label for="nav-offcanvas-toggle" class="lg:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Open navigation">
-        <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-      </label>
+      <!-- Tablet CTA cluster + hamburger. Get Started Now shows from md+
+           (Figma 14071:7086); hamburger shows below lg. On desktop (lg+)
+           the full desktop nav below takes over and this whole cluster is
+           replaced by its version inside .hidden lg:flex. -->
+      <div class="flex items-center gap-3 lg:hidden">
+        <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary hidden md:inline-flex">Get Started Now</a>
+        <label for="nav-offcanvas-toggle" class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 cursor-pointer" aria-label="Toggle navigation">
+          <svg viewBox="0 0 24 24" class="nav-toggle-open w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+          <svg viewBox="0 0 24 24" class="nav-toggle-close w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 6l12 12M6 18L18 6"/></svg>
+        </label>
+      </div>
 
       <!-- Desktop nav content: full menu with dropdowns. Hidden below lg. -->
       <div class="hidden lg:flex lg:flex-1 lg:items-center lg:justify-between lg:ml-6">
         <div class="flex flex-1 items-center">
           <ul class="flex flex-row items-center gap-1 mx-auto m-0 list-none p-0">
             <li>
-              <details name="navmenu" class="nav-details">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+              <details name="navmenu" class="nav-details nav-mega">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Solutions
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
-                <ul class="nav-menu">
-                  {{each product_solutions as solution}}
-                    <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-royal/10 hover:text-royal" href="{{indy.getUrl()}}">{{solution.seo_link_title}}</a></li>
-                  {{/each}}
-                </ul>
-              </details>
-            </li>
-            <li>
-              <details name="navmenu" class="nav-details">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
-                  Industries
-                  <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </summary>
-                <ul class="nav-menu">
-                  {{each industries as indy}}
-                    <li><a class="block px-4 py-2 text-sm text-gray-700 hover:bg-royal/10 hover:text-royal" href="{{indy.getUrl()}}">{{indy.seo_link_title}}</a></li>
-                  {{/each}}
-                </ul>
-              </details>
-            </li>
-            <li>
-              <a class="block px-3 py-2 text-gray-700 hover:text-royal rounded-md" href="/customers/">Customers</a>
-            </li>
-            <li>
-              <details name="navmenu" class="nav-details nav-menu-wide">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
-                  Features
-                  <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-                </summary>
                 <div class="nav-menu">
-                  <div class="grid grid-cols-1 lg:grid-cols-12 gap-3">
-                    <div class="lg:col-span-3">
-                      {{each product_sections as section order by section.sort_order limit 0,1}}
-                        <div>
-                          <div class="px-2 py-1 text-xs uppercase tracking-wider text-gray-500 font-semibold">{{section.section_name}}</div>
-                          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc }}
-                          <a class="block px-2 py-1.5 text-sm text-gray-700 hover:bg-royal/10 hover:text-royal rounded" href="{{nav_page.getUrl()}}">{{nav_page.seo_link_title}}</a>
-                          {{/each}}
-                        </div>
-                      {{/each}}
+                  <div class="c1-mega-inner">
+                  <div class="c1-mega-grid">
+                    {{each product_solutions as solution where show_in_nav = "1"}}
+                      <a class="c1-mega-item" href="{{solution.getUrl()}}">
+                        <span class="c1-mega-item__icon">
+                          <img src="{{solution.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+                        </span>
+                        <span>
+                          <span class="c1-mega-item__title">{{solution.nav_title}}</span>
+                          <span class="c1-mega-item__tag">{{solution.nav_subheading}}</span>
+                        </span>
+                      </a>
+                    {{/each}}
+                  </div>
+                  </div>
+                  <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
+                    <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
+                    <div class="c1-mega-actions__right">
+                      <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+                        Start Demo
+                      </a>
+                      <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                        Agentic Report
+                      </a>
+                      <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Migration Plan
+                      </a>
                     </div>
-                    <div class="lg:col-span-4">
-                      {{each product_sections as section order by section.sort_order limit 1,1}}
-                        <div>
-                          <div class="px-2 py-1 text-xs uppercase tracking-wider text-gray-500 font-semibold">{{section.section_name}}</div>
-                          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' }}
-                          <a class="block px-2 py-1.5 text-sm text-gray-700 hover:bg-royal/10 hover:text-royal rounded" href="{{nav_page.getUrl()}}">{{nav_page.seo_link_title}}</a>
-                          {{/each}}
-                        </div>
-                      {{/each}}
-                    </div>
-                    <div class="lg:col-span-3">
-                      {{each product_sections as section order by section.sort_order limit 2,2}}
-                        <div>
-                          <div class="px-2 py-1 text-xs uppercase tracking-wider text-gray-500 font-semibold">{{section.section_name}}</div>
-                          {{each product_tour_pages as nav_page where product_section = '{section.zuid}' }}
-                          <a class="block px-2 py-1.5 text-sm text-gray-700 hover:bg-royal/10 hover:text-royal rounded" href="{{nav_page.getUrl()}}">{{nav_page.seo_link_title}}</a>
-                          {{/each}}
-                        </div>
-                      {{/each}}
                     </div>
                   </div>
                 </div>
               </details>
             </li>
             <li>
-              <details name="navmenu" class="nav-details nav-menu-right">
-                <summary class="flex items-center gap-1 px-3 py-2 text-gray-700 hover:text-royal rounded-md">
+              <details name="navmenu" class="nav-details nav-mega">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
+                  Industries
+                  <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="nav-menu">
+                  <div class="c1-mega-inner">
+                  <div class="c1-mega-grid">
+                    {{each industries as indy where show_in_nav = "1"}}
+                      <a class="c1-mega-item" href="{{indy.getUrl()}}">
+                        <span class="c1-mega-item__icon">
+                          <img src="{{indy.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+                        </span>
+                        <span>
+                          <span class="c1-mega-item__title">{{indy.nav_title}}</span>
+                          <span class="c1-mega-item__tag">{{indy.nav_subheading}}</span>
+                        </span>
+                      </a>
+                    {{/each}}
+                  </div>
+                  </div>
+                  <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
+                    <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
+                    <div class="c1-mega-actions__right">
+                      <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+                        Start Demo
+                      </a>
+                      <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                        Agentic Report
+                      </a>
+                      <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Migration Plan
+                      </a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </li>
+            <li>
+              <a class="block px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold" href="/customers/">Customers</a>
+            </li>
+            <li>
+              <details name="navmenu" class="nav-details nav-mega nav-menu-wide">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
+                  Features
+                  <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+                </summary>
+                <div class="nav-menu">
+                  <div class="c1-mega-inner">
+                  <div class="c1-mega-grid">
+                    {{each product_sections as section order by section.sort_order}}
+                      <div>
+                        <div class="c1-mega-col-hd">{{section.section_name}}</div>
+                        {{each product_tour_pages as nav_page where product_section = '{section.zuid}' AND show_in_nav = "1" order by nav_page.position asc }}
+                          <a class="c1-mega-item" href="{{nav_page.getUrl()}}">
+                            <span class="c1-mega-item__icon">
+                              <img src="{{nav_page.nav_icon.getImage(40)}}" alt="" class="w-5 h-5 object-contain" />
+                            </span>
+                            <span>
+                              <span class="c1-mega-item__title">{{nav_page.nav_title}}</span>
+                              <span class="c1-mega-item__tag">{{nav_page.nav_subheading}}</span>
+                            </span>
+                          </a>
+                        {{/each}}
+                      </div>
+                    {{/each}}
+                  </div>
+                  </div>
+                  <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
+                    <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
+                    <div class="c1-mega-actions__right">
+                      <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+                        Start Demo
+                      </a>
+                      <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                        Agentic Report
+                      </a>
+                      <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Migration Plan
+                      </a>
+                    </div>
+                    </div>
+                  </div>
+                </div>
+              </details>
+            </li>
+            <li>
+              <details name="navmenu" class="nav-details nav-mega">
+                <summary class="flex items-center gap-1 px-3 py-2 text-[#404040] hover:text-royal hover:bg-gray-50 rounded-md text-sm font-semibold">
                   Resources
                   <svg viewBox="0 0 24 24" class="w-3 h-3 nav-caret" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
                 </summary>
-                <div class="nav-menu" style="min-width:20rem;">
-                  <a class="block px-3 py-2 mb-3 rounded hover:bg-royal/10 text-gray-700" href="/blog/">
-                    <div class="flex items-center">
-                      <svg viewBox="0 0 24 24" class="w-6 h-6 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                      <div class="ml-3 leading-tight">
-                        <h5 class="mb-1 font-semibold text-base">Blog</h5>
-                        <p class="m-0 text-sm">Thought Leadership &amp; Platform Updates</p>
-                      </div>
+                <div class="nav-menu">
+                  <div class="c1-mega-inner">
+                  <div class="c1-mega-grid">
+                    <a class="c1-mega-item" href="/blog/">
+                      <span class="c1-mega-item__icon">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                      </span>
+                      <span>
+                        <span class="c1-mega-item__title">Blog</span>
+                        <span class="c1-mega-item__tag">The latest from our team</span>
+                      </span>
+                    </a>
+                    <a class="c1-mega-item" target="_blank" rel="noopener" href="https://docs.zesty.io/">
+                      <span class="c1-mega-item__icon">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                      </span>
+                      <span>
+                        <span class="c1-mega-item__title">Documentation</span>
+                        <span class="c1-mega-item__tag">Feature &amp; platform docs</span>
+                      </span>
+                    </a>
+                    <a class="c1-mega-item" target="_blank" rel="noopener" href="https://github.com/contentdotone">
+                      <span class="c1-mega-item__icon">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
+                      </span>
+                      <span>
+                        <span class="c1-mega-item__title">Github &amp; Commit Log</span>
+                        <span class="c1-mega-item__tag">Latest updates to Content.One</span>
+                      </span>
+                    </a>
+                    <a class="c1-mega-item" href="/brand/">
+                      <span class="c1-mega-item__icon">
+                        <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
+                      </span>
+                      <span>
+                        <span class="c1-mega-item__title">Brand</span>
+                        <span class="c1-mega-item__tag">Logo and Color Palette</span>
+                      </span>
+                    </a>
+                  </div>
+                  </div>
+                  <div class="c1-mega-actions">
+                    <div class="c1-mega-inner c1-mega-actions__row">
+                    <div class="c1-mega-actions__left">Ready to get started? <a href="/contact-us/">Book a demo</a></div>
+                    <div class="c1-mega-actions__right">
+                      <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
+                        Start Demo
+                      </a>
+                      <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+                        Agentic Report
+                      </a>
+                      <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
+                        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+                        Migration Plan
+                      </a>
                     </div>
-                  </a>
-                  <a class="block px-3 py-2 mb-3 rounded hover:bg-royal/10 text-gray-700" target="_blank" href="https://docs.zesty.io/">
-                    <div class="flex items-center">
-                      <svg viewBox="0 0 24 24" class="w-6 h-6 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-                      <div class="ml-3 leading-tight">
-                        <h5 class="mb-1 font-semibold text-base">Documentation</h5>
-                        <p class="m-0 text-sm">Browse our Documentation</p>
-                      </div>
                     </div>
-                  </a>
-                  <a class="block px-3 py-2 rounded hover:bg-royal/10 text-gray-700" target="_blank" href="https://github.com/contentdotone">
-                    <div class="flex items-center">
-                      <svg viewBox="0 0 24 24" class="w-6 h-6 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="9" y="2" width="6" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/></svg>
-                      <div class="ml-3 leading-tight">
-                        <h5 class="mb-1 font-semibold text-base">
-                          Github and Commit Log
-                          <span class="text-royal ml-1" id="changelog"></span>
-                        </h5>
-                        <p class="m-0 text-sm">Visit our GitHub public repos and commits</p>
-                      </div>
-                    </div>
-                  </a>
+                  </div>
                 </div>
               </details>
             </li>
           </ul>
         </div>
-        <div class="flex flex-row items-center gap-2">
-            <details name="navmenu" class="nav-details nav-menu-right">
-              <summary class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2.5 transition cursor-pointer">
-                <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning mr-1" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-                Get Started
-              </summary>
-              <ul class="nav-menu" id="nav-cta-dropdown">
-                <li><a class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-royal/10" href="https://launch.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
-                  <svg viewBox="0 0 16 16" class="w-4 h-4" fill="currentColor"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-                  Start Demo
-                </a></li>
-                <li><a class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-royal/10" href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-                  Agentic Report
-                </a></li>
-                <li><a class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-royal/10" href="https://migration.content.one" target="_blank" rel="noopener noreferrer" data-utm-link>
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-                  Migration Plan
-                </a></li>
-                <li><hr class="my-2 border-t border-gray-200"></li>
-                <li><a class="flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-royal/10" href="/contact-us/">
-                  <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M9 16l2 2 4-4"/></svg>
-                  Book Demo
-                </a></li>
-              </ul>
-            </details>
+        <div class="flex flex-row items-center gap-3">
+            <!-- Get Started Now pill (primary royal) — Figma 14051:7554;13557:585;1624:262069.
+                 Direct link to /contact-us/ per bobby; the three primary CTAs
+                 (Start Demo / Agentic Report / Migration Plan) are already
+                 reachable via each mega-menu's action bar footer. -->
+            <a href="/contact-us/" class="c1-nav-btn c1-nav-btn--primary">
+              Get Started Now
+            </a>
 
             <script>
               // UTM cookie passthrough — minimal JS, no Bootstrap dependency
