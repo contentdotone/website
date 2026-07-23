@@ -1,324 +1,103 @@
+<!-- Blog article page — Figma 13847:35436 (desktop) + 35971 / 36993 / 37758 / 38522 (responsive).
+     Dark hero (category chip + title + date/read time + cover image), 2-col body
+     (sticky author sidebar + article content), dark "Book a Demo" CTA at bottom.
+     .article-content typography + Bootstrap-compat block preserved so CMS-authored
+     body copy renders correctly. -->
 <main class="article-page">
-  <section class="article-hero">
-    <div class="article-hero__backdrop"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="article-hero__inner"> 
-        <div class="article-hero__content">
-          <div class="article-hero__eyebrow">{{categories.filter({this.category}).name}}</div>
-          <h1 class="article-hero__title">{{this.title}}</h1>
-          <div class="article-hero__meta">
+
+  <!-- ════════════ HERO — Figma 13846:33756 (5 breakpoints) ════════════ -->
+  <section class="article-hero bg-[#060813] pt-14 lg:pt-20 pb-12 lg:pb-16">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+        <div>
+          {{if {this.category} }}
+          <span class="inline-block bg-white/10 text-white/85 font-semibold uppercase text-xs tracking-[0.16em] rounded px-3 py-1.5 mb-5">{{categories.filter({this.category}).name}}</span>
+          {{end-if}}
+          <h1 class="font-display text-white font-semibold leading-[1.15] mb-4 text-3xl md:text-4xl lg:text-[44px]" style="letter-spacing:-0.02em">{{this.title}}</h1>
+          <div class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-white/60">
             {{if {this.publish_date} }}
             <span>{{this.publish_date.date(Y-m-d)}}</span>
-            {{/if}}
+            {{end-if}}
             <span id="articleReadTime">Estimating read time...</span>
-          </div>
-          <div class="article-hero__authors">
-            {{each {this.authors} as author}}
-            <a href="{{author.getURL()}}" class="author-pill">
-              {{if {author.image} }}
-              <img src="{{author.image.getImage(80,80,crop)}}" alt="{{author.name}} headshot">
-              {{else}}
-              <span class="author-pill__initials">{{author.name.subwords(1)}}</span>
-              {{/if}}
-              <div>
-                <div class="author-pill__name">{{author.name}}</div>
-                {{if {author.title} }}
-                <div class="author-pill__title">{{author.title}}</div>
-                {{/if}}
-              </div>
-            </a>
-            {{/each}} 
           </div>
         </div>
         {{if {this.main_image} }}
-        <button class="article-hero__media" type="button" data-hero-lightbox data-hero-src="{{this.main_image.getImage()}}" aria-label="Open hero image">
-          <img src="{{this.main_image.getImage()}}" alt="{{this.title}} hero image">
-        </button>
-        {{/if}}
+        <div class="w-full">
+          <button class="w-full block p-0 border-0 bg-transparent cursor-zoom-in" type="button" data-hero-lightbox data-hero-src="{{this.main_image.getImage()}}" aria-label="Open hero image">
+            <img src="{{this.main_image.getImage(1200,720,crop)}}" alt="{{this.title}} cover image" class="w-full aspect-[5/3] object-cover rounded-2xl border border-white/10" loading="eager" />
+          </button>
+        </div>
+        {{end-if}}
       </div>
     </div>
   </section>
 
-  <section class="article-body-section">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="article-grid">
-        <article class="article-content">
-          {{this.body}}
+  <!-- ════════════ BODY ════════════ -->
+  <section class="article-body-section bg-white py-16 lg:py-24">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-[240px_minmax(0,1fr)] gap-10 lg:gap-16 items-start">
 
-          <p><strong>Need help solving for {{this.title}} with your organization?</strong> <strong><a href="/contact-us/">Click Here</a></strong> to Setup a time to talk through a solution.</p>
-          
-            <h2>Meet the Author{{if preg_match('/,/',{this.authors})}}s{{/if}}</h2>
-            
-              {{each {this.authors} as author}}
-              <div class="article-author-card mb-3">
-                <a class="article-author-image" href="{{author.getURL()}}">
-                  {{if {author.image} }}
-                  <img src="{{author.image.getImage(200,220,crop)}}" alt="{{author.name}} headshot">
-                  {{/if}}
-                </a>
-                <div>
-                  <h5><a href="{{author.getURL()}}">{{author.name}}</a></h5>
-                  {{if {author.title} }}
-                  <strong class="article-author-card__role">{{author.title}}</strong>
-                  {{/if}}
-                  {{if {author.bio} }}
-                  <p>{{author.bio.subwords(24)}}</p>
-                  {{/if}}
-                  <a href="/contact-us/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer bg-royal text-white hover:bg-royalDark mt-2">Book a call with {{author.name}}</a>
-                </div>
+        <!-- ─── Sticky sidebar: author + CTA. On lg+ sits left of body;
+             on smaller widths order flips so author + bio + CTA render
+             below the article content, capped at 416px and centered. ─── -->
+        <aside class="article-aside order-2 lg:order-1 w-full max-w-[416px] mx-auto lg:max-w-none lg:mx-0 lg:sticky lg:top-24 flex flex-col gap-4">
+          {{if {this.authors} }}
+          <div class="flex flex-col gap-4">
+            {{each {this.authors} as author}}
+            <a href="{{author.getURL()}}" class="flex items-center gap-3 no-underline group">
+              {{if {author.image} }}
+              <img src="{{author.image.getImage(96,96,crop)}}" alt="{{author.name}}" class="w-11 h-11 rounded-full object-cover border border-black/10 shrink-0" loading="lazy" />
+              {{else}}
+              <span class="w-11 h-11 rounded-full bg-royal text-white flex items-center justify-center font-semibold shrink-0">{{author.name.subwords(1)}}</span>
+              {{end-if}}
+              <div class="flex flex-col min-w-0">
+                <span class="text-sm font-semibold text-ink group-hover:text-royal transition">{{author.name}}</span>
+                {{if {author.title} }}
+                <span class="text-xs text-gray-500 truncate">{{author.title}}</span>
+                {{end-if}}
               </div>
- 
-              
-              {{/each}}
-            
-          
-        </article>
-        <aside class="article-aside">
-          <div class="article-panel">
-            <h2>Related Content.One Solutions</h2>
-            <div class="article-card-grid">
-              {{each {this.related_solutions} as solution}}
-              <a href="{{solution.getURL()}}" class="article-card">
-                <div class="article-card__title">{{solution.title}}</div>
-                {{if {solution.solution_short_description} }}
-                <p>{{solution.solution_short_description.subwords(18)}}...</p>
-                {{/if}}
-              </a>
-              {{/each}}
-            </div>
-          </div> 
-  
-          <div class="article-panel">
-            <h2>Related Product Concepts</h2>
-            <div class="article-panel filled">
-                <div class="article-chip-grid">
-                {{each {this.related_product_sections} as section}}
-                <a href="{{section.getURL()}}" class="article-chip">{{section.section_name}}</a>
-                {{/each}}
-                </div>
-            </div>
+            </a>
+            {{if {author.bio} }}
+            <p class="text-sm leading-relaxed m-0" style="color:#525252">{{author.bio}}</p>
+            {{end-if}}
+            {{/each}}
           </div>
+          {{end-if}}
 
-           <div class="article-panel article-panel--sticky">
-            <h2>Partner with Content.One</h2>
-            <div class="article-panel filled">
-              <p>Let's work together to solve for {{this.title}} and improve your organizations digital ROI</p>
-              <a href="/contact-us/" class="inline-flex items-center font-semibold px-4 py-2 rounded transition cursor-pointer text-base px-6 py-3 bg-royal text-white hover:bg-royalDark">Book a Call</a>
-            </div>
-
-            <div class="article-panel filled">
-              {{blocks({this.side_bar_cta})}}
-            </div>
-          </div>
-
-
-
-          
+          <a href="/contact-us/" class="hidden lg:inline-flex items-center justify-center rounded-full bg-royalDark hover:bg-royal transition text-white font-semibold px-5 py-3 text-sm shadow-sm">
+            Book a Demo
+          </a>
         </aside>
+
+        <!-- ─── Body copy ─── -->
+        <article class="article-content order-1 lg:order-2 max-w-[720px]">
+          {{this.body}}
+        </article>
+
       </div>
     </div>
   </section>
-  
+
+  <!-- ════════════ CONTACT FORM ════════════
+       Same c1_industry_contact_form used at the bottom of every industry
+       landing page ("Take Content.One further" lavender band). -->
+  {{include /components/industry/c1_industry_contact_form.html}}
+
+  {{if {this.bottom_cta} }}
   {{blocks({this.bottom_cta})}}
+  {{end-if}}
+
 </main>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
   @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap");
 
-  .article-page {
-    --ink: #0b0f1a;
-    --muted: #1b2337;
-    --soft: #f5f6fb;
-    --accent: #4255bd;
-    --accent-strong: #1f2b6b;
-    --card: #ffffff;
-    --brand-dark: #0b0f1a; 
-    --brand-mid: #4255bd;
-    --brand-bright: #6f7bf7;
-    font-family: "Satoshi", "Segoe UI", sans-serif;
-    color: var(--ink);
-    background: linear-gradient(180deg, rgba(11, 15, 26, 0.04) 0%, rgba(66, 85, 189, 0.08) 50%, rgba(245, 246, 251, 0.6) 100%);
-  }
+  .article-page { font-family: "Satoshi", "Segoe UI", sans-serif; color: #0B0F1C; }
 
-  .article-hero {
-    position: relative;
-    padding: 5rem 0 3.5rem;
-    overflow: hidden;
-  }
-
-  .article-hero__backdrop {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(circle at 20% 20%, rgba(66, 85, 189, 0.35), transparent 55%),
-      radial-gradient(circle at 80% 10%, rgba(111, 123, 247, 0.3), transparent 45%),
-      linear-gradient(120deg, rgba(11, 15, 26, 0.2), rgba(11, 15, 26, 0));
-    opacity: 0.9;
-  }
-
-  .article-hero__inner {
-    position: relative;
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 1.5rem;
-    align-items: center;
-    animation: fade-up 0.9s ease-out both;
-  }
-
-  .article-hero__eyebrow {
-    display: inline-flex;
-    padding: 0.35rem 0.9rem;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    background: rgba(11, 15, 26, 0.08);
-  }
-
-  .article-hero__title {
-    font-family: "DM Sans", "Segoe UI", sans-serif;
-    font-size: clamp(2.6rem, 4vw, 4rem);
-    line-height: 1.1;
-    margin: 1.2rem 0 1rem;
-  }
- 
-  .article-hero__meta {
-    display: flex;
-    gap: 1.2rem;
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  .article-hero__authors {
-    margin-top: 1.6rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.75rem; 
-  } 
-  .article-content .accordion .accordion-header{
-    margin-top: 0px !important;
-  }
- 
-  .accordion {
-    margin-bottom: 1.6rem;
-  }
-  .article-hero__media {
-    border-radius: 4px;
-    overflow: hidden;
-    box-shadow: 0 24px 50px rgba(15, 23, 42, 0.18);
-    padding: 0;
-    border: 0;
-    background: transparent;
-    cursor: zoom-in;
-  }
-
-  .article-hero__media img {
-    width: 100%;
-    height: 100%;
-    display: block;
-    object-fit: cover;
-  }
-
-  .article-lightbox {
-    position: fixed;
-    inset: 0;
-    background: rgba(15, 23, 42, 0.82);
-    display: grid;
-    place-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.25s ease;
-    z-index: 2000;
-  }
-
-  .article-lightbox.is-open {
-    opacity: 1;
-    pointer-events: auto;
-  }
-
-  .article-lightbox__image {
-    max-width: min(92vw, 1100px);
-    max-height: 86vh;
-    border-radius: 4px;
-    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
-  }
-
-  .article-lightbox__close {
-    position: fixed; 
-    top: 24px;
-    right: 24px;
-    width: 44px;
-    height: 44px;
-    border-radius: 4px;
-    border: none; 
-    background: rgba(255, 255, 255, 0.12);
-    color: #fff;
-    font-size: 1.5rem;
-    cursor: pointer;
-  }
-
-
-  .author-pill {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(11, 15, 26, 0.12);
-    border-radius: 4px;
-    padding: 0.4rem 0.9rem 0.4rem 0.4rem;
-    backdrop-filter: blur(6px);
-  }
-
-  .author-pill img {
-    width: 38px;
-    height: 38px;
-    border-radius: 4px;
-    object-fit: cover;
-  }
-
-  .author-pill__initials {
-    width: 38px;
-    height: 38px;
-    border-radius: 4px;
-    display: grid;
-    place-items: center;
-    font-weight: 700;
-    background: var(--accent);
-    color: #fff;
-  }
-
-  .author-pill__name {
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-
-  .author-pill__title {
-    font-size: 0.75rem;
-    color: var(--muted);
-  }
-
-  .article-body-section {
-    padding: 1rem 0 4rem;
-  }
-
-  .article-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
-    gap: 3rem;
-  }
-
-  .article-content {
-    background: var(--card);
-    border-radius: 4px;
-    padding: 2.5rem 2.8rem;
-    box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
-    animation: fade-up 0.9s ease-out 0.1s both;
-  }
-
-  /* Tailwind's preflight (loaded via cdn.tailwindcss.com) resets h1-h6 + strong/b
-     to inherit font-size + font-weight. Restore visual hierarchy explicitly here. */
+  /* Body copy typography — Tailwind's preflight resets h1-h6 to inherit, so
+     restore visual hierarchy here for anything rendered inside .article-content
+     (the CMS-authored body). */
   .article-content h1,
   .article-content h2,
   .article-content h3,
@@ -326,39 +105,39 @@
   .article-content h5,
   .article-content h6 {
     font-family: "DM Sans", "Segoe UI", sans-serif;
-    color: var(--ink);
+    color: #0B0F1C;
     line-height: 1.25;
-    margin-top: 2rem;
-    margin-bottom: 0.75rem;
+    margin-top: 2.25rem;
+    margin-bottom: 0.9rem;
+    letter-spacing: -0.01em;
   }
   .article-content h1 { font-size: 2.25rem; font-weight: 700; line-height: 1.2; margin-top: 2.5rem; }
-  .article-content h2 { font-size: 1.875rem; font-weight: 700; }
-  .article-content h3 { font-size: 1.5rem; font-weight: 600; }
-  .article-content h4 { font-size: 1.25rem; font-weight: 600; line-height: 1.35; }
-  .article-content h5 { font-size: 1.125rem; font-weight: 600; line-height: 1.4; }
-  .article-content h6 { font-size: 1rem; font-weight: 600; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.04em; }
+  .article-content h2 { font-size: 1.75rem; font-weight: 700; }
+  .article-content h3 { font-size: 1.375rem; font-weight: 600; }
+  .article-content h4 { font-size: 1.125rem; font-weight: 600; line-height: 1.4; }
+  .article-content h5 { font-size: 1rem; font-weight: 600; line-height: 1.4; }
+  .article-content h6 { font-size: 0.875rem; font-weight: 600; line-height: 1.4; text-transform: uppercase; letter-spacing: 0.05em; }
 
   .article-content p,
   .article-content li {
-    color: var(--ink);
+    color: #0B0F1C;
     line-height: 1.7;
-    font-size: 1.05rem;
+    font-size: 1rem;
   }
-
   .article-content p { margin: 0 0 1rem; }
-
   .article-content strong,
   .article-content b { font-weight: 700; }
   .article-content em,
   .article-content i { font-style: italic; }
 
   .article-content a {
-    color: var(--brand-mid, #3f51b5);
+    color: #4255BD;
     text-decoration: underline;
-    text-decoration-color: rgba(63, 81, 181, 0.35);
+    text-decoration-color: rgba(66, 85, 189, 0.35);
+    text-underline-offset: 3px;
   }
   .article-content a:hover {
-    color: var(--brand-dark, #0f172a);
+    color: #2F3F94;
     text-decoration-color: currentColor;
   }
 
@@ -374,196 +153,48 @@
   .article-content li > ol { margin: 0.25rem 0; }
 
   .article-content blockquote {
-    border-left: 4px solid var(--accent);
+    border-left: 4px solid #4255BD;
     margin: 2rem 0;
     padding: 0.4rem 1.4rem;
-    background: rgba(66, 85, 189, 0.08);
+    background: rgba(66, 85, 189, 0.06);
+    border-radius: 0 6px 6px 0;
+  }
+  .article-content blockquote p:last-child { margin-bottom: 0; }
+
+  .article-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5rem 0;
   }
 
-  .article-aside {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    align-self: start;
+  .article-content .accordion .accordion-header { margin-top: 0 !important; }
+  .accordion { margin-bottom: 1.6rem; }
+
+  /* Hero image lightbox */
+  .article-lightbox {
+    position: fixed; inset: 0;
+    background: rgba(15, 23, 42, 0.82);
+    display: grid; place-items: center;
+    opacity: 0; pointer-events: none;
+    transition: opacity 0.25s ease;
+    z-index: 2000;
   }
-
-  .article-panel {
-    
-    padding: 1.6rem 0 0 0;
+  .article-lightbox.is-open { opacity: 1; pointer-events: auto; }
+  .article-lightbox__image {
+    max-width: min(92vw, 1100px);
+    max-height: 86vh;
+    border-radius: 8px;
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.4);
   }
-
-  .article-panel--sticky {
-    position: sticky;
-    top: 2rem;
-    align-self: start;
-    height: fit-content;
-  }
-
-  .article-panel.filled {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 4px;
-    padding: 1.6rem;
-    border: 1px solid rgba(11, 15, 26, 0.08);
-    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
-    animation: fade-up 0.9s ease-out 0.15s both;
-  }
-
-  .article-panel h2 {
-    font-size: 1.1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--accent-strong);
-    margin-bottom: 1rem;
-  }
-
-  .article-card-grid {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .article-card {
-    display: block;
-    padding: 1rem 1.1rem;
-    border-radius: 4px;
-    border: 1px solid rgba(11, 15, 26, 0.08);
-    text-decoration: none;
-    color: inherit;
-    background: #ffffff;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .article-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 14px 24px rgba(15, 23, 42, 0.12);
-  }
-
-  .article-card__title {
-    font-weight: 600;
-    margin-bottom: 0.35rem;
-  }
-
-  .article-card p {
-    color: var(--muted);
-    margin: 0;
-    font-size: 0.9rem;
-  }
-
-  .article-chip-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-
-  .article-chip {
-    display: inline-flex;
-    padding: 0.5rem 0.9rem;
-    border-radius: 4px;
-    border: 1px solid rgba(11, 15, 26, 0.12);
-    background: rgba(66, 85, 189, 0.12);
-    color: var(--accent-strong);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 600;
-  }
-
-  .article-author-grid {
-    display: grid;
-    gap: 1rem;
-  }
-
-  .article-author-card {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.9rem;
-    align-items: start;
-    padding: 0.8rem;
-    border-radius: 4px;
-    background: #fff;
-    border: 1px solid rgba(11, 15, 26, 0.08);
-  }
-
-  .article-author-image {
-    align-self: start;
-    display: inline-flex;
-  }
-
-  .article-author-card img {
-    width: 70px;
-    height: 70px;
-    border-radius: 4px;
-    object-fit: cover;
-  }
-
-  .article-author-card__name {
-    font-weight: 600;
-  }
-
-  .article-author-card__role {
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-
-  .article-author-card p {
-    margin: 0.4rem 0 0;
-    font-size: 0.85rem;
-    color: var(--muted);
-  }
-
-  @keyframes fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(18px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @media (max-width: 992px) {
-    .article-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .article-content {
-      padding: 2rem;
-    }
-
-    .article-hero__inner {
-      grid-template-columns: 1fr;
-    }
-
-    .article-hero__media {
-      max-width: 280px;
-      justify-self: start;
-    }
-
-    .article-panel--sticky {
-      position: static;
-    }
-  }
-
-  @media (max-width: 640px) {
-    .article-hero {
-      padding: 4rem 0 2.5rem;
-    }
-
-    .article-content {
-      padding: 1.6rem;
-    }
-
-    .article-author-card {
-      grid-template-columns: 1fr;
-      text-align: center;
-    }
-
-    .article-author-card img {
-      margin: 0 auto;
-    }
-
-    .article-hero__media {
-      max-width: 220px;
-    }
+  .article-lightbox__close {
+    position: fixed; top: 24px; right: 24px;
+    width: 44px; height: 44px;
+    border-radius: 8px; border: none;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 </style>
 
@@ -573,83 +204,64 @@
 </div>
 
 <script>
+  // Read-time estimate — inline before content renders so the hero shows a value.
   (function () {
     var content = document.querySelector(".article-content");
     var target = document.getElementById("articleReadTime");
-    if (!content || !target) {
-      return;
-    }
+    if (!content || !target) return;
     var text = content.textContent || "";
     var words = text.trim().split(/\s+/).filter(Boolean).length;
     var minutes = Math.max(1, Math.ceil(words / 220));
     target.textContent = minutes + " min read";
   })();
 
+  // Hero image lightbox
   (function () {
     var trigger = document.querySelector("[data-hero-lightbox]");
     var lightbox = document.getElementById("articleLightbox");
-    if (!trigger || !lightbox) {
-      return;
-    }
+    if (!trigger || !lightbox) return;
     var image = lightbox.querySelector(".article-lightbox__image");
     var close = lightbox.querySelector(".article-lightbox__close");
     var src = trigger.getAttribute("data-hero-src");
     var alt = trigger.querySelector("img") ? trigger.querySelector("img").alt : "Hero image";
-
     function openLightbox() {
-      image.src = src;
-      image.alt = alt;
+      image.src = src; image.alt = alt;
       lightbox.classList.add("is-open");
       lightbox.setAttribute("aria-hidden", "false");
     }
-
     function closeLightbox() {
       lightbox.classList.remove("is-open");
       lightbox.setAttribute("aria-hidden", "true");
     }
-
     trigger.addEventListener("click", openLightbox);
     close.addEventListener("click", closeLightbox);
     lightbox.addEventListener("click", function (event) {
-      if (event.target === lightbox) {
-        closeLightbox();
-      }
+      if (event.target === lightbox) closeLightbox();
     });
   })();
 
+  // Add BS table classes so tables in CMS body get the compat styles below.
   (function () {
     var tables = document.querySelectorAll(".article-content table");
-    if (!tables.length) {
-      return;
-    }
+    if (!tables.length) return;
     tables.forEach(function (table) {
       table.classList.add("table", "table-striped", "table-hover");
     });
   })();
 
+  // Auto-convert an "FAQ" H2/H3 section into a Bootstrap accordion.
   (function () {
     var article = document.querySelector(".article-content");
-    if (!article) {
-      return;
-    }
-    var faqHeading = article.querySelector("h2, h3, h4");
+    if (!article) return;
+    var faqHeading = null;
     var headings = article.querySelectorAll("h2, h3, h4");
     headings.forEach(function (heading) {
       var text = (heading.textContent || "").trim().toLowerCase();
-      if (text === "faq" || text === "faqs") {
-        faqHeading = heading;
-      }
+      if (text === "faq" || text === "faqs") faqHeading = heading;
     });
-    if (!faqHeading) {
-      return;
-    }
+    if (!faqHeading) return;
     var faqSection = faqHeading.closest("section") || faqHeading.parentElement;
-    if (!faqSection) {
-      return;
-    }
-    if (faqSection.querySelector(".accordion")) {
-      return;
-    }
+    if (!faqSection || faqSection.querySelector(".accordion")) return;
 
     var items = [];
     var nodes = Array.prototype.slice.call(faqSection.children);
@@ -657,35 +269,24 @@
     var i = startIndex;
     while (i < nodes.length) {
       var node = nodes[i];
-      if (node.tagName && node.tagName.toLowerCase() === faqHeading.tagName.toLowerCase()) {
-        break;
-      }
+      if (node.tagName && node.tagName.toLowerCase() === faqHeading.tagName.toLowerCase()) break;
       if (node.tagName && node.tagName.toLowerCase() === "h3") {
         var question = node;
         var answerNodes = [];
         var j = i + 1;
         while (j < nodes.length) {
           var next = nodes[j];
-          if (next.tagName && next.tagName.toLowerCase() === "h3") {
-            break;
-          }
-          if (next.tagName && /^(h2|h4|section)$/.test(next.tagName.toLowerCase())) {
-            break;
-          }
+          if (next.tagName && next.tagName.toLowerCase() === "h3") break;
+          if (next.tagName && /^(h2|h4|section)$/.test(next.tagName.toLowerCase())) break;
           answerNodes.push(next);
           j += 1;
         }
-        if (answerNodes.length) {
-          items.push({ question: question, answers: answerNodes });
-        }
+        if (answerNodes.length) items.push({ question: question, answers: answerNodes });
         i = j - 1;
       }
       i += 1;
     }
-
-    if (!items.length) {
-      return;
-    }
+    if (!items.length) return;
 
     var accordionId = "articleFaqAccordion";
     var accordion = document.createElement("div");
@@ -697,11 +298,9 @@
       var collapseId = accordionId + "-collapse-" + index;
       var accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
-
       var header = document.createElement("h3");
       header.className = "accordion-header";
       header.id = itemId;
-
       var button = document.createElement("button");
       button.className = "accordion-button collapsed";
       button.type = "button";
@@ -710,21 +309,17 @@
       button.setAttribute("aria-expanded", "false");
       button.setAttribute("aria-controls", collapseId);
       button.textContent = item.question.textContent || "";
-
       header.appendChild(button);
-
       var collapse = document.createElement("div");
       collapse.className = "accordion-collapse collapse";
       collapse.id = collapseId;
       collapse.setAttribute("aria-labelledby", itemId);
       collapse.setAttribute("data-bs-parent", "#" + accordionId);
-
       var body = document.createElement("div");
       body.className = "accordion-body";
       item.answers.forEach(function (answerNode) {
         body.appendChild(answerNode.cloneNode(true));
       });
-
       collapse.appendChild(body);
       accordionItem.appendChild(header);
       accordionItem.appendChild(collapse);
@@ -735,9 +330,7 @@
     faqSection.insertBefore(accordion, insertionPoint);
     items.forEach(function (item) {
       item.question.remove();
-      item.answers.forEach(function (answerNode) {
-        answerNode.remove();
-      });
+      item.answers.forEach(function (answerNode) { answerNode.remove(); });
     });
   })();
 </script>
@@ -760,7 +353,6 @@
   .article-content [class*="col-"] { box-sizing:border-box; }
   .article-content .col { flex:1 0 0%; }
   .article-content .col-auto { flex:0 0 auto; width:auto; }
-  /* Generated columns 1-12 */
   .article-content .col-1 { flex:0 0 auto; width:8.3333%; }
   .article-content .col-2 { flex:0 0 auto; width:16.6667%; }
   .article-content .col-3 { flex:0 0 auto; width:25%; }
@@ -787,7 +379,7 @@
   .article-content .flex-row{flex-direction:row!important}.article-content .flex-column{flex-direction:column!important}.article-content .flex-wrap{flex-wrap:wrap!important}.article-content .flex-nowrap{flex-wrap:nowrap!important}.article-content .flex-grow-1{flex-grow:1!important}.article-content .flex-shrink-0{flex-shrink:0!important}.article-content .flex-fill{flex:1 1 auto!important}
   .article-content .justify-content-start{justify-content:flex-start!important}.article-content .justify-content-end{justify-content:flex-end!important}.article-content .justify-content-center{justify-content:center!important}.article-content .justify-content-between{justify-content:space-between!important}.article-content .justify-content-around{justify-content:space-around!important}.article-content .justify-content-evenly{justify-content:space-evenly!important}
   .article-content .align-items-start{align-items:flex-start!important}.article-content .align-items-end{align-items:flex-end!important}.article-content .align-items-center{align-items:center!important}.article-content .align-items-stretch{align-items:stretch!important}.article-content .align-items-baseline{align-items:baseline!important}
-  /* ---- spacing 0-5 (using 0/.25/.5/1/1.5/3 rem scale) -------------- */
+  /* ---- spacing 0-5 -------------------------------------------------- */
   .article-content .m-0{margin:0!important}.article-content .m-1{margin:.25rem!important}.article-content .m-2{margin:.5rem!important}.article-content .m-3{margin:1rem!important}.article-content .m-4{margin:1.5rem!important}.article-content .m-5{margin:3rem!important}.article-content .m-auto{margin:auto!important}
   .article-content .mt-0{margin-top:0!important}.article-content .mt-1{margin-top:.25rem!important}.article-content .mt-2{margin-top:.5rem!important}.article-content .mt-3{margin-top:1rem!important}.article-content .mt-4{margin-top:1.5rem!important}.article-content .mt-5{margin-top:3rem!important}.article-content .mt-auto{margin-top:auto!important}
   .article-content .mb-0{margin-bottom:0!important}.article-content .mb-1{margin-bottom:.25rem!important}.article-content .mb-2{margin-bottom:.5rem!important}.article-content .mb-3{margin-bottom:1rem!important}.article-content .mb-4{margin-bottom:1.5rem!important}.article-content .mb-5{margin-bottom:3rem!important}.article-content .mb-auto{margin-bottom:auto!important}
