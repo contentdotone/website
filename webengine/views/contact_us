@@ -57,20 +57,25 @@
                 <div class="lg:-mb-36">
                     <!-- Trusted-by logo strip, subtle above the form. filter:brightness(0)+opacity
                          forces every logo (reversed white, colored SVG, raster PNG/AVIF) to render as
-                         the same near-black mark so the strip reads consistently on white. -->
+                         the same near-black mark so the strip reads consistently on white.
+                         Rocket League + PetDesk source assets have decorative marks (shield /
+                         colored circle) that get cropped in CSS so only the wordmarks show. -->
                     <div class="mb-4 text-center">
                         <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-4">Trusted by</p>
-                        <div class="flex items-center justify-around gap-4 px-2">
-                            <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
-                            <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
-                            <!-- Rocket League: source PNG (2560x928) has the shield on the left + wordmark on the
-                                 right. Crop the shield off via an overflow-hidden viewport and a negative
-                                 margin so only the "ROCKET LEAGUE" wordmark shows. -->
+                        <div class="flex items-center justify-around gap-5 px-2">
+                            <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <!-- Rocket League: source PNG (2560x928) has the shield on the left +
+                                 stacked "ROCKET / LEAGUE" wordmark on the right. Chop the shield. -->
                             <div class="h-8 overflow-hidden shrink-0" style="width:66px;">
                                 <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8" style="width:auto;max-width:none;margin-left:-24px;filter:brightness(0);opacity:.55" loading="lazy" />
                             </div>
-                            <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="h-7 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
-                            <img src="https://hj5v68xn.media.zestyio.com/PetDesk-logo.avif" alt="PetDesk" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <!-- PetDesk: source (800x200 exported PNG) has a colored circle badge on
+                                 the left + "PetDesk®" wordmark on the right. Chop the circle. -->
+                            <div class="h-6 overflow-hidden shrink-0" style="width:68px;">
+                                <img src="https://hj5v68xn.media.zestyio.com/PetDesk-logo.avif" alt="PetDesk" class="h-6" style="width:auto;max-width:none;margin-left:-28px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            </div>
                         </div>
                     </div>
                     <div class="bg-white shadow-sm rounded-2xl">
