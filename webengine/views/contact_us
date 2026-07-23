@@ -63,7 +63,12 @@
                         <div class="flex items-center justify-around gap-4 px-2">
                             <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
                             <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
-                            <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <!-- Rocket League: source PNG (2560x928) has the shield on the left + wordmark on the
+                                 right. Crop the shield off via an overflow-hidden viewport and a negative
+                                 margin so only the "ROCKET LEAGUE" wordmark shows. -->
+                            <div class="h-8 overflow-hidden shrink-0" style="width:66px;">
+                                <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8" style="width:auto;max-width:none;margin-left:-24px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            </div>
                             <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="h-7 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
                             <img src="https://hj5v68xn.media.zestyio.com/PetDesk-logo.avif" alt="PetDesk" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
                         </div>
