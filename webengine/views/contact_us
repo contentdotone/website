@@ -38,23 +38,19 @@
                             </div>
                         </div>
                     </div>
-                    <!-- Trust signals -->
-                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
-                            <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
-                            <p class="text-xs text-gray-500 m-0 mt-1">Routed straight to a content specialist.</p>
-                        </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
-                            <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
-                            <p class="text-xs text-gray-500 m-0 mt-1">Enterprise-grade controls, encryption, audit logs.</p>
-                        </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
-                            <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
-                            <p class="text-xs text-gray-500 m-0 mt-1">Production reliability, global CDN included.</p>
-                        </div>
-                    </div>
+                    <!-- Customer voice — moved to left column per kaya, under the 3 steps. -->
+                    <figure class="mt-10 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
+                        <blockquote class="text-base text-ink leading-relaxed m-0">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a 50% increase in traffic since launch."</blockquote>
+                        <figcaption class="mt-4 flex items-center gap-3">
+                            <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-10 h-10 rounded-full object-cover" />
+                            <div>
+                                <p class="text-sm font-semibold text-ink m-0">Andrew Dobney</p>
+                                <p class="text-xs text-gray-500 m-0">Director of Digital Strategy · The Salvation Army</p>
+                            </div>
+                        </figcaption>
+                    </figure>
                 </div>
-                <div class="lg:-mb-36">
+                <div>
                     <!-- Trusted-by logo strip, subtle above the form. filter:brightness(0)+opacity
                          forces every logo (reversed white, colored SVG, raster PNG/AVIF) to render as
                          the same near-black mark so the strip reads consistently on white.
@@ -83,17 +79,21 @@
                             {{include /components/forms/zoho-form.html}}
                         </div>
                     </div>
-                    <!-- Customer voice, directly under the form per kaya. -->
-                    <figure class="mt-6 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
-                        <blockquote class="text-base text-ink leading-relaxed m-0">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a 50% increase in traffic since launch."</blockquote>
-                        <figcaption class="mt-4 flex items-center gap-3">
-                            <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-10 h-10 rounded-full object-cover" />
-                            <div>
-                                <p class="text-sm font-semibold text-ink m-0">Andrew Dobney</p>
-                                <p class="text-xs text-gray-500 m-0">Director of Digital Strategy · The Salvation Army</p>
-                            </div>
-                        </figcaption>
-                    </figure>
+                    <!-- Trust signals — moved under the form per kaya (swap with testimonial). -->
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Routed straight to a content specialist.</p>
+                        </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Enterprise-grade controls, encryption, audit logs.</p>
+                        </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Production reliability, global CDN included.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
