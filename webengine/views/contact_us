@@ -4,10 +4,6 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
                 <div class="xl:pr-12">
                     <div class="mb-8">
-                        <span class="inline-flex items-center gap-2 bg-white text-royal rounded-full px-3 py-1.5 mb-4 font-semibold uppercase text-xs tracking-wider">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                            Talk with our team
-                        </span>
                         <h1 class="font-display text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-[1.05]">{{this.title}}</h1>
                         <div class="prose prose-slate max-w-none text-lg leading-relaxed">{{this.body}}</div>
                     </div>
