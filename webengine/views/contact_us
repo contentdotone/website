@@ -4,7 +4,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
                 <div class="xl:pr-12">
                     <div class="mb-8">
-                        <h1 class="font-display text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Demo</h1>
+                        <h1 class="font-display text-[2.7rem] md:text-[3.375rem] font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Demo</h1>
                         <div class="prose prose-slate max-w-none text-lg leading-relaxed">
                             <p>Here&rsquo;s what to expect next.</p>
                             <p style="margin-top:2.5rem;"><b>1. Discovery Call (15 minutes)</b></p>
