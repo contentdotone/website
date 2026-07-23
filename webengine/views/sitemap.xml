@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+  Custom sitemap.xml — overrides Zesty's auto-generated default.
+
+  Zesty's auto-generated sitemap only indexes content items registered in the
+  CMS (pagesets, templatesets). That misses every top-level standalone HTML
+  view in webengine/views/*.html, which are statically routed and not tied to
+  a model. This template re-publishes the same CMS coverage via Parsley loops
+  AND adds the standalone landing pages by hand.
+
+  When you add a NEW public-facing standalone HTML page at webengine/views/,
+  add a matching <url> entry under the "Standalone landing pages" block below.
+  Internal pitches, decks, and previews (hospital-pitch, hospital-deck,
+  hospital-landing, nonprofit-pitch, fractional-devs-pitch,
+  wegive-integration-pitch, embedded-engineers, support-team, decks,
+  compare, afp-icon, tw-preview, test) are intentionally excluded per
+  kaya (2026-07-23).
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ── Homepage ─────────────────────────────────────────────────────── -->
+  <url><loc>https://www.content.one/</loc><priority>1.0</priority></url>
+
+  <!-- ── Static top-level pages (templatesets, no iteration) ──────────── -->
+  <url><loc>https://www.content.one/about/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/blog/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/brand/</loc><priority>0.6</priority></url>
+  <url><loc>https://www.content.one/contact-us/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/customers/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/features/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/press/</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/privacy-policy/</loc><priority>0.5</priority></url>
+  <url><loc>https://www.content.one/product/</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/solutions/</loc><priority>0.9</priority></url>
+
+  <!-- ── Templateset-driven landing pages (single-instance CMS views) ─── -->
+  <url><loc>https://www.content.one/influencer-partnerships/</loc><priority>0.7</priority></url>
+
+  <!-- ── Standalone landing pages (top-level *.html views) ────────────── -->
+  <!-- When you add a new public-facing standalone HTML page, append a row.
+       Vendor partnerships is intentionally omitted — the content item is
+       currently misnested under /thank-you/vendor-partnerships/ and should
+       be re-parented in Zesty before indexing at the intended URL. -->
+  <url><loc>https://www.content.one/bridgetech-2026.html</loc><priority>0.6</priority></url>
+  <url><loc>https://www.content.one/content-one-launches-mcp-enabled-ai-cms.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.content.one/contentful-vs-content-one.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/drupal-vs-content-one.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/free-tools.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/github-integration.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.content.one/mcp-press-release.html</loc><priority>0.7</priority></url>
+  <url><loc>https://www.content.one/pricing.html</loc><priority>0.9</priority></url>
+  <url><loc>https://www.content.one/sanity-vs-content-one.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/sitecore-vs-content-one.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/website-redesign-rfp-template.html</loc><priority>0.8</priority></url>
+  <url><loc>https://www.content.one/why-building-websites-is-still-hard.html</loc><priority>0.7</priority></url>
+
+  <!-- ── CMS pagesets — iterated live so new items get indexed automatically ─ -->
+  {{each industries as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.9</priority></url>
+  {{/each}}
+
+  {{each customer as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.8</priority></url>
+  {{/each}}
+
+  {{each articles as item sort by publish_date desc}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.7</priority></url>
+  {{/each}}
+
+  {{each landing_pages as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.8</priority></url>
+  {{/each}}
+
+  {{each leadership as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.6</priority></url>
+  {{/each}}
+
+  {{each categories as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.7</priority></url>
+  {{/each}}
+
+  {{each marketing_downloads as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.7</priority></url>
+  {{/each}}
+
+  {{each product_solutions as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.8</priority></url>
+  {{/each}}
+
+  {{each product_tour_pages as item}}
+  <url><loc>https://www.content.one{{item.getURL()}}</loc><priority>0.8</priority></url>
+  {{/each}}
+
+</urlset>
