@@ -4,8 +4,16 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
                 <div class="xl:pr-12">
                     <div class="mb-8">
-                        <h1 class="font-display text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-[1.05]">{{this.title}}</h1>
-                        <div class="prose prose-slate max-w-none text-lg leading-relaxed">{{this.body}}</div>
+                        <h1 class="font-display text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Demo</h1>
+                        <div class="prose prose-slate max-w-none text-lg leading-relaxed">
+                            <p>Here&rsquo;s what to expect next.</p>
+                            <p style="margin-top:2.5rem;"><b>1. Discovery Call (15 minutes)</b></p>
+                            <p>We start with a short conversation to understand your organization&rsquo;s needs, challenges, and goals so we can tailor the demo to what matters most to your team.</p>
+                            <p style="margin-top:2.5rem;"><b>2. Personalized Platform Demo</b></p>
+                            <p>Content.One is so fast and flexible, we&rsquo;ll have your personalized demo ready within days. You can expect an MVP or &ldquo;first draft&rdquo; of what your website(s) and digital experiences will become.</p>
+                            <p style="margin-top:2.5rem;"><b>3. Follow-Up and Next Steps</b></p>
+                            <p>After the demo, we&rsquo;ll address any remaining questions, explore additional needs, and provide clear pricing and implementation options for your team.</p>
+                        </div>
                     </div>
                     <!-- Trust signals -->
                     <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
