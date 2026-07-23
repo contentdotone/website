@@ -17,32 +17,17 @@
                     </div>
                     <!-- Trust signals -->
                     <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                            </div>
-                            <div>
-                                <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
-                                <p class="text-xs text-gray-500 m-0">Routed straight to a content specialist.</p>
-                            </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Routed straight to a content specialist.</p>
                         </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            </div>
-                            <div>
-                                <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
-                                <p class="text-xs text-gray-500 m-0">Enterprise-grade controls, encryption, audit logs.</p>
-                            </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Enterprise-grade controls, encryption, audit logs.</p>
                         </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
-                            </div>
-                            <div>
-                                <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
-                                <p class="text-xs text-gray-500 m-0">Production reliability, global CDN included.</p>
-                            </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Production reliability, global CDN included.</p>
                         </div>
                     </div>
                     <!-- Customer voice -->
