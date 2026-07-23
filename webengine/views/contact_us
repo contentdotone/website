@@ -63,8 +63,8 @@
                             <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
                             <!-- Rocket League: source PNG (2560x928) has the shield on the left +
                                  stacked "ROCKET / LEAGUE" wordmark on the right. Chop the shield. -->
-                            <div class="h-8 overflow-hidden shrink-0" style="width:57.5px;">
-                                <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8" style="width:auto;max-width:none;margin-left:-32.5px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            <div class="h-8 overflow-hidden shrink-0" style="width:57px;">
+                                <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8" style="width:auto;max-width:none;margin-left:-33px;filter:brightness(0);opacity:.55" loading="lazy" />
                             </div>
                             <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="w-auto shrink-0" style="height:25.2px;filter:brightness(0);opacity:.55" loading="lazy" />
                             <!-- PetDesk: source (800x200 exported PNG) has a colored circle badge on
