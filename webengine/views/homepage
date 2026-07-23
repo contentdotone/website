@@ -2,8 +2,7 @@
 <!-- HOMEPAGE V2 — design refresh mockup against Untitled UI patterns -->
 
 <!-- ════════════ HERO (apple-scale) ════════════ -->
-<section class="co-hero relative overflow-hidden pt-24 md:pt-28 lg:pt-36 pb-20 md:pb-28 lg:pb-32">
-  <div class="co-hero__bg absolute top-0 left-0 w-full h-full"></div>
+<section class="co-hero relative overflow-hidden py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative" style="z-index:2">
     <div class="text-center max-w-5xl mx-auto mb-14 md:mb-20">
       <span class="co-hero__badge inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-8">
@@ -11,30 +10,16 @@
           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
           <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
         </span>
-        <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">Rethinking content management for modern teams</span>
+        <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">AI-Driven Marketing at Scale</span>
       </span>
-      <h1 class="text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[6.5rem] xl:text-[7.5rem] font-display font-semibold text-white mb-7 leading-[0.95]" style="letter-spacing:-0.045em">AI-Driven <span class="rotate">Content</span><br/>Marketing at Scale.</h1>
-      <p class="text-lg md:text-xl lg:text-2xl mb-10 max-w-3xl mx-auto leading-relaxed font-light" style="color:rgba(255,255,255,.78)">
-        One platform to orchestrate website, mobile, and headless content experiences — so marketing teams can manage, scale, and deliver campaigns across every local and global market.
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-[72px] font-display font-bold text-white mb-7 leading-none" style="letter-spacing:-0.02em">One Platform.<br/>Every Channel.<br/>Every Team.</h1>
+      <p class="text-xl font-normal leading-[30px] mb-10 max-w-3xl mx-auto" style="color:rgba(255,255,255,.78)">
+        The CMS foundation enterprise marketing is built on. One platform for website, mobile, and headless content — so marketing teams can manage, scale, and ship campaigns in every market, local to global.
       </p>
-      <div class="flex flex-wrap gap-3 justify-center items-center">
-        <a href="https://launch.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
+      <div class="flex justify-center">
+        <a href="/contact-us/" class="inline-flex items-center gap-2 rounded-full bg-white text-royal hover:bg-gray-100 font-semibold px-7 py-3.5 transition shadow-xl shadow-royal/30 text-base">
           <svg viewBox="0 0 16 16" class="w-4 h-4 text-warning" fill="currentColor" aria-hidden="true"><path d="M5.52.359A.5.5 0 0 1 6 0h4a.5.5 0 0 1 .474.658L8.694 6H12.5a.5.5 0 0 1 .395.807l-7 9a.5.5 0 0 1-.873-.454L6.823 9.5H3.5a.5.5 0 0 1-.48-.641l2.5-8.5z"/></svg>
-          Start Demo
-        </a>
-        <a href="https://analysis.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
-          Agentic Report
-        </a>
-        <a href="https://migration.content.one" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-full border border-white/30 text-white hover:bg-white/10 font-semibold px-7 py-3.5 transition text-base">
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="1" y="3" width="15" height="13" rx="1"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-          Migration Plan
-        </a>
-      </div>
-      <div class="mt-6 flex justify-center">
-        <a href="/contact-us/" class="inline-flex items-center gap-1.5 text-white/80 hover:text-white font-semibold transition group/cta">
-          Or book a demo with our team
-          <svg viewBox="0 0 24 24" class="w-4 h-4 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+          Book a demo
         </a>
       </div>
     </div>
@@ -42,23 +27,15 @@
 </section>
 
 <style>
-  .co-hero { background-color: #050816; }
-  .co-hero__bg {
-    background:
-      radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,60,255,0.35) 0%, transparent 60%),
-      radial-gradient(ellipse 80% 60% at 50% 100%, rgba(56,189,248,0.12) 0%, transparent 70%),
-      linear-gradient(180deg, #050816 0%, #0a0d24 60%, #050816 100%);
-    z-index: 0;
-  }
-  .co-hero__bg::after {
-    content: ""; position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 64px 64px;
-    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
-    -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
-    pointer-events: none;
+  /* Hero base color matches the social-proof section directly below
+     (#0C1027) so the two dark bands read as one continuous surface.
+     Nucleus SVG cover-sized on top of the flat base. */
+  .co-hero {
+    background-color: #0C1027;
+    background-image: url("https://hj5v68xn.media.zestyio.com/nucleus-center.svg");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
   .co-hero__badge { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: #c7d2fe; backdrop-filter: blur(8px); }
   .rotate { display: inline-block; transition: opacity .2s ease, transform .2s ease; }
@@ -87,7 +64,7 @@
 </script>
 
 <!-- ════════════ SOCIAL PROOF — Figma 13873:4138 (Untitled-C1) ════════════ -->
-<section class="bg-[#0c1027] py-24" data-figma-node="13873:4138">
+<section class="bg-[#060813] py-24" data-figma-node="13873:4138">
   <div class="max-w-[1280px] mx-auto px-6 lg:px-8">
     <div class="flex flex-col gap-8 items-center">
       <p class="font-sans font-semibold text-white text-center text-base sm:text-xl leading-[24px] sm:leading-[30px] max-w-3xl">
@@ -102,195 +79,568 @@
         <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" width="129" height="40" class="h-[34px] sm:h-[40px] w-auto" loading="lazy" />
       </div>
       <p class="font-sans font-medium text-white text-center text-base leading-[24px] max-w-3xl">
-        From Fortune 500 brands to mission-driven non-profits. The teams content quality matters most to.
+        From Fortune 500 brands to mission-driven non-profits.
       </p>
     </div>
   </div>
 </section>
 
-<!-- ════════════ STAT STRIP (apple-scale numbers) ════════════ -->
-<section class="bg-paper py-20 lg:py-28">
+<!-- ════════════ SOLUTIONS SECTION — Figma 14182:577105 ════════════
+     Layout: intro block on top (kicker + H2 + description), then a
+     2-col row below with the accordion on the left and the active
+     solution's illustration inside a light-gray card on the right.
+     On mobile the image card stacks above the accordion so the
+     visual leads. -->
+<section class="bg-white py-24">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-3xl mb-12 lg:mb-16">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.32em] text-royal mb-4">By the numbers</p>
-      <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-ink leading-[1.05]" style="letter-spacing:-0.025em">Measured on the customers running on Content.One.</h2>
+
+    <!-- Intro block (full width, left-aligned, max 768px) -->
+    <div class="max-w-3xl mb-16">
+      <p class="text-base font-semibold mb-3" style="color:#253274">Solutions</p>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-[1.2] mb-5" style="letter-spacing:-0.72px">One platform. Seven ways to ship.</h2>
+      <p class="text-lg lg:text-xl text-gray-600 leading-relaxed">Every solution runs on the same governed content, the same approval flows, the same source of truth. Start with one. Add the rest when you're ready — nothing to re-platform.</p>
     </div>
-    <div class="grid grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 rounded-3xl overflow-hidden border border-gray-200">
-      <div class="bg-white p-8 lg:p-10 flex flex-col">
-        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">3,000<span class="text-royal">+</span></div>
-        <p class="text-gray-600 text-sm mt-5 leading-snug">Salvation Army locations on one federated platform</p>
+
+    <!-- 2-col: accordion (left on lg+) + image card (right on lg+).
+         Mobile stacks image → accordion so the visual leads. -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
+
+      <!-- Image card — light gray bg, rounded-xl, square aspect. Image
+           swaps to match whichever accordion tab is active. -->
+      <div class="sol-image order-1 lg:order-2 bg-[#fafafa] rounded-xl aspect-square hidden lg:flex items-center justify-center p-8 lg:p-16">
+        <img
+          src="https://hj5v68xn.media.zestyio.com/marketing-website.svg"
+          alt="Marketing Website illustration"
+          class="w-full h-full object-contain max-w-md"
+          loading="lazy"
+        />
       </div>
-      <div class="bg-white p-8 lg:p-10 flex flex-col">
-        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">99.99<span class="text-royal">%</span></div>
-        <p class="text-gray-600 text-sm mt-5 leading-snug">Production uptime across the enterprise customer base</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 flex flex-col">
-        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em">6 <span class="text-royal">wks</span></div>
-        <p class="text-gray-600 text-sm mt-5 leading-snug">Kickoff to soft launch — Sony Electronics</p>
-      </div>
-      <div class="bg-white p-8 lg:p-10 flex flex-col">
-        <div class="font-display text-5xl md:text-6xl lg:text-7xl font-semibold text-ink leading-[0.9]" style="letter-spacing:-0.03em"><span class="text-royal">+</span>50%</div>
-        <p class="text-gray-600 text-sm mt-5 leading-snug">Web traffic growth post-migration — The Salvation Army</p>
+
+      <!-- Accordion of 7 solutions -->
+      <div class="sol-accordion order-2 lg:order-1 md:max-w-[640px] md:mr-auto">
+
+        <div class="sol-tab sol-active" data-i="0" data-img="https://hj5v68xn.media.zestyio.com/marketing-website.svg" data-alt="Marketing Website">
+          <button type="button" class="sol-title">Marketing Website</button>
+          <div class="sol-body">
+            <p>Launch pages in minutes, not sprints.<br>Drag-and-drop building for marketers, real extensibility for developers — with SEO, previews, and approvals built into every save.</p>
+            <a href="/solutions/marketing-website/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="1" data-img="https://hj5v68xn.media.zestyio.com/federated-multisite.svg" data-alt="Federated Multisites">
+          <button type="button" class="sol-title">Federated Multisites</button>
+          <div class="sol-body">
+            <p>Hundreds of sites. One set of standards.<br>HQ sets the guardrails; local teams publish fast. The Salvation Army runs 350+ locations this way.</p>
+            <a href="/solutions/federated-multisite/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="2" data-img="https://hj5v68xn.media.zestyio.com/org-ai-chatbot.svg" data-alt="Org AI Chatbot">
+          <button type="button" class="sol-title">Org AI Chatbot</button>
+          <div class="sol-body">
+            <p>An AI chatbot grounded in truth.<br>Answer questions across web, apps, and portals using only your governed content — moderation and audit logs included.</p>
+            <a href="/solutions/org-ai-chatbot/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="3" data-img="https://hj5v68xn.media.zestyio.com/global-directory.svg" data-alt="Global Directory">
+          <button type="button" class="sol-title">Global Directory</button>
+          <div class="sol-body">
+            <p>Every location, findable. Every profile, current.<br>Centralize chapters, branches, and teams in one searchable directory — with claiming workflows that keep listings accurate.</p>
+            <a href="/solutions/global-directory/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="4" data-img="https://hj5v68xn.media.zestyio.com/ai-document-management.svg" data-alt="AI Document Management">
+          <button type="button" class="sol-title">AI Document Management</button>
+          <div class="sol-body">
+            <p>Stop hunting for the right file.<br>AI tags and catalogs every asset and document, so marketing, sales, and ops pull approved content — not last year's version.</p>
+            <a href="/solutions/ai-document-management/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="5" data-img="https://hj5v68xn.media.zestyio.com/mobile-app.svg" data-alt="Mobile Apps">
+          <button type="button" class="sol-title">Mobile Apps</button>
+          <div class="sol-body">
+            <p>Update your app without an app store release.<br>Publish once and it's live everywhere — iOS, Android, kiosks. Field teams contribute from their phones; managers approve in minutes.</p>
+            <a href="/solutions/mobile-app/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="sol-tab" data-i="6" data-img="https://hj5v68xn.media.zestyio.com/story-hub.svg" data-alt="Story Hub">
+          <button type="button" class="sol-title">Story Hub</button>
+          <div class="sol-body">
+            <p>Tell a story once. Use it everywhere.<br>Turn blogs and supporter stories into a structured library that feeds your site, emails, campaigns, and AI — no copy-pasting between tools.</p>
+            <a href="/solutions/story-hub/" class="sol-learn">
+              Learn more
+              <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
 </section>
 
-<!-- ════════════ FEATURES SECTION — Figma 13882:5843 (Untitled-C1) ════════════ -->
-<section class="bg-black py-24" data-figma-node="13882:5843">
-  <div class="max-w-[1280px] mx-auto px-6 lg:px-8 flex flex-col gap-16">
-    <!-- Heading + supporting text -->
-    <div class="max-w-[768px] flex flex-col gap-5">
-      <h2 class="font-display font-semibold text-white text-[28px] leading-[36px] md:text-[36px] md:leading-[44px]" style="letter-spacing:-0.72px">All your content needs, in one platform.</h2>
-      <p class="font-sans font-medium text-[#b1bae7] text-base leading-6">
-        Content.One is an enterprise content management system with AI built-in. Teams use it to draft, govern, and publish content across every channel they need to be on. Generative AI accelerates the work; your team controls every word that ships.
-      </p>
-    </div>
-    <!-- 4-card grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-      <!-- Card 1 — stars-01 (AI drafts) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 2l1.5 4.5L18 8l-4.5 1.5L12 14l-1.5-4.5L6 8l4.5-1.5L12 2z"/>
-            <path d="M5 16l.75 2.25L8 19l-2.25.75L5 22l-.75-2.25L2 19l2.25-.75L5 16z"/>
-          </svg>
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">AI creates drafts, for humans to refine.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">AI drafts, summaries, translations, and variants. Your team approves, edits, or rejects before anything goes live. Brand voice and approval flow are built in.</p>
-          </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
-            Learn more
-            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
-      <!-- Card 2 — browser (Visual editing) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="3" y="4" width="18" height="16" rx="2"/>
-            <line x1="3" y1="9" x2="21" y2="9"/>
-            <circle cx="6.5" cy="6.5" r="0.6" fill="currentColor"/>
-            <circle cx="9" cy="6.5" r="0.6" fill="currentColor"/>
-            <circle cx="11.5" cy="6.5" r="0.6" fill="currentColor"/>
-          </svg>
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">Visual editing lets you build pages, without code.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">Drag, drop, edit, publish. Reusable blocks. Approval flows that move with the content, not a parallel ticket system.</p>
-          </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
-            Learn more
-            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
-      <!-- Card 3 — database-01 (Enterprise platform) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <ellipse cx="12" cy="5" rx="9" ry="3"/>
-            <path d="M3 5v6c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
-            <path d="M3 11v6c0 1.66 4.03 3 9 3s9-1.34 9-3v-6"/>
-          </svg>
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">An enterprise-grade platform powers it all.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">Composable, hybrid, or headless, pick your architecture. REST and GraphQL APIs, custom endpoints, structured content models that work long-term.</p>
-          </div>
-          <a href="/solutions/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
-            Learn more
-            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
-      <!-- Card 4 — lock-02 (Trust) -->
-      <article class="group flex flex-col gap-16 p-6 rounded-xl bg-black/40 border border-[#19214e] transition hover:bg-black/60 hover:border-royal/40">
-        <div class="w-12 h-12 rounded-[10px] bg-[#18214e] border-2 border-white/[0.12] flex items-center justify-center relative shrink-0" style="box-shadow:0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05)">
-          <svg viewBox="0 0 24 24" class="w-5 h-5 text-white" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="11" width="16" height="10" rx="2"/>
-            <path d="M8 11V8a4 4 0 0 1 8 0v3"/>
-            <circle cx="12" cy="16" r="1"/>
-          </svg>
-        </div>
-        <div class="flex flex-col gap-4">
-          <div class="flex flex-col gap-1">
-            <h3 class="font-sans font-semibold text-white text-lg leading-7">Trust is baked-into Content.One by default.</h3>
-            <p class="font-sans text-white/70 text-base leading-6">OWASP-certified. Roles, audit logs, environment separation, SSO. AI guardrails you configure, not us.</p>
-          </div>
-          <a href="/features/" class="inline-flex items-center gap-1.5 text-white font-sans font-semibold text-base leading-6 group/cta">
-            Learn more
-            <svg viewBox="0 0 24 24" class="w-5 h-5 transition-transform group-hover/cta:translate-x-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </a>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
+<style>
+  /* Solutions accordion — Figma 14180:576842 */
+  .sol-accordion .sol-tab {
+    position: relative;
+    border-left: 4px solid #f5f5f5;
+    padding: 16px 24px;
+    transition: border-color .15s ease;
+  }
+  /* Active-tab progress line: overlays the gray border, grows top-to-
+     bottom over 3s to visualize the auto-advance timer. */
+  .sol-accordion .sol-tab.sol-active::before {
+    content: "";
+    position: absolute;
+    left: -4px; top: 0;
+    width: 4px; height: 0;
+    background: #3d52c2;
+    animation: sol-progress 4s linear forwards;
+  }
+  /* When the section leaves the middle-50% viewport band we freeze the
+     progress line at whatever height it reached. */
+  .sol-accordion.sol-paused .sol-tab.sol-active::before {
+    animation-play-state: paused;
+  }
+  /* No auto-advance for users on manual mode (clicked a tab) — show the
+     border-left in royal instead of the progress bar. */
+  .sol-accordion.sol-manual .sol-tab.sol-active { border-left-color: #3d52c2; }
+  .sol-accordion.sol-manual .sol-tab.sol-active::before { display: none; }
+  @keyframes sol-progress {
+    from { height: 0; }
+    to { height: 100%; }
+  }
+  /* Reduced-motion users: no growing bar, static full-height royal
+     border on the active tab. */
+  @media (prefers-reduced-motion: reduce) {
+    .sol-accordion .sol-tab.sol-active { border-left-color: #3d52c2; }
+    .sol-accordion .sol-tab.sol-active::before { display: none; }
+  }
+  .sol-accordion .sol-title {
+    display: block; width: 100%; text-align: left;
+    background: none; border: 0; padding: 0; margin: 0; cursor: pointer;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 18px; line-height: 28px; font-weight: 600; color: #171717;
+    transition: color .15s ease;
+  }
+  .sol-accordion .sol-tab:not(.sol-active) .sol-title:hover { color: #253274; }
+  /* Body opens/closes on a smooth max-height + opacity + margin-top
+     transition instead of an instant display: none swap. */
+  .sol-accordion .sol-body {
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    margin-top: 0;
+    transition: max-height .4s ease, opacity .3s ease .05s, margin-top .4s ease;
+  }
+  .sol-accordion .sol-tab.sol-active .sol-body {
+    /* Cap is generous so no panel's copy gets silently clipped. Real
+       height is measured by JS and locked into min-height on the
+       accordion, so this only needs to be large enough to enable the
+       expand transition. */
+    max-height: 800px;
+    opacity: 1;
+    margin-top: 16px;
+  }
+  .sol-accordion .sol-body p {
+    color: #525252; font-size: 16px; line-height: 24px;
+    margin: 0 0 16px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+  }
+  .sol-learn {
+    display: inline-flex; align-items: center; gap: 6px;
+    color: #253274; font-weight: 600; font-size: 16px;
+    text-decoration: none; transition: color .15s ease;
+  }
+  .sol-learn:hover { color: #4255BD; }
+  .sol-learn svg { transition: transform .15s ease; }
+  .sol-learn:hover svg { transform: translateX(2px); }
+  /* Solution image container — image swaps via JS on tab click. Small
+     fade so the change reads as intentional. */
+  .sol-image img { transition: opacity .2s ease; }
+  .sol-image.sol-image-fading img { opacity: 0; }
 
-{{ include /components/features/block_highlight.html }}
+  /* Suppress every transition/animation on the accordion while JS
+     measures each state's height for the min-height lock, so the
+     temporary class swaps don't produce a visible flash. */
+  .sol-accordion.sol-measuring,
+  .sol-accordion.sol-measuring *,
+  .sol-accordion.sol-measuring *::before {
+    transition: none !important;
+    animation: none !important;
+  }
+</style>
 
-<!--Priority — Why Choose Content.One (left-aligned cards, inline links per Untitled UI pattern) -->
-<section class="py-12 xl:py-20">
+<script>
+  (function () {
+    var root = document.querySelector('.sol-accordion');
+    if (!root) return;
+    var section = root.closest('section');
+    var tabs = root.querySelectorAll('.sol-tab');
+    var imgWrap = document.querySelector('.sol-image');
+    var imgEl = imgWrap ? imgWrap.querySelector('img') : null;
+    // Preload all solution images so the first swap on each doesn't flash.
+    tabs.forEach(function (t) {
+      var url = t.getAttribute('data-img');
+      if (url) { var pre = new Image(); pre.src = url; }
+    });
+
+    var currentIdx = 0;
+    var timerId = null;
+    var manual = false;
+    var reduceMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Lock the accordion column to the height of its tallest expanded
+    // state so switching tabs never shifts layout. Measurement toggles
+    // sol-active across each tab (transitions suppressed via
+    // .sol-measuring) and takes the max offsetHeight.
+    function lockMinHeight() {
+      root.style.minHeight = '';
+      root.classList.add('sol-measuring');
+      var maxH = 0;
+      for (var i = 0; i < tabs.length; i++) {
+        for (var j = 0; j < tabs.length; j++) {
+          tabs[j].classList.toggle('sol-active', j === i);
+        }
+        var h = root.offsetHeight;
+        if (h > maxH) maxH = h;
+      }
+      // Restore the original active tab.
+      for (var k = 0; k < tabs.length; k++) {
+        tabs[k].classList.toggle('sol-active', k === currentIdx);
+      }
+      root.style.minHeight = maxH + 'px';
+      // Re-enable transitions after the paint that reflects the restore.
+      window.requestAnimationFrame(function () {
+        root.classList.remove('sol-measuring');
+      });
+    }
+    lockMinHeight();
+    // Remeasure once web fonts finish loading — Satoshi/DM Sans arrive
+    // async, and pre-font metrics differ from final metrics enough to
+    // shift a locked height by 10-20px per panel.
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(lockMinHeight);
+    }
+    // Belt-and-braces: also remeasure after full page load (all images
+    // + late CSS in), in case fonts.ready isn't supported.
+    window.addEventListener('load', lockMinHeight);
+    // Re-measure on resize (debounced) since copy wraps differently
+    // at narrower widths.
+    var resizeT = null;
+    window.addEventListener('resize', function () {
+      if (resizeT) window.clearTimeout(resizeT);
+      resizeT = window.setTimeout(lockMinHeight, 150);
+    });
+
+    function setActive(i) {
+      currentIdx = i;
+      tabs.forEach(function (t, j) { t.classList.toggle('sol-active', j === i); });
+      if (imgEl) {
+        var next = tabs[i].getAttribute('data-img');
+        var alt = tabs[i].getAttribute('data-alt') || 'Solution illustration';
+        if (next && next !== imgEl.getAttribute('src')) {
+          imgWrap.classList.add('sol-image-fading');
+          window.setTimeout(function () {
+            imgEl.src = next;
+            imgEl.alt = alt;
+            imgWrap.classList.remove('sol-image-fading');
+          }, 180);
+        }
+      }
+    }
+
+    function advance() { setActive((currentIdx + 1) % tabs.length); }
+
+    function startTimer() {
+      if (timerId || manual || reduceMotion) return;
+      root.classList.remove('sol-paused');
+      timerId = window.setInterval(advance, 4000);
+    }
+    function stopTimer(pauseVisual) {
+      if (timerId) { window.clearInterval(timerId); timerId = null; }
+      if (pauseVisual) root.classList.add('sol-paused');
+    }
+
+    // Only auto-advance when the section sits in the middle 50% of the
+    // viewport. rootMargin: -25% top and bottom shrinks the observer
+    // root to just the middle band; when any part of the section
+    // intersects that band we're "in view".
+    if ('IntersectionObserver' in window && section) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) startTimer();
+          else stopTimer(true);
+        });
+      }, { rootMargin: '-25% 0px -25% 0px' });
+      io.observe(section);
+    } else if (!reduceMotion) {
+      // No IO support → just auto-advance always.
+      startTimer();
+    }
+
+    // Manual tab click → stop auto-advance permanently for this pageview
+    // and switch the active-state visual from the growing bar to a
+    // static full-height royal border (via .sol-manual on the root).
+    tabs.forEach(function (t, i) {
+      var title = t.querySelector('.sol-title');
+      if (title) title.addEventListener('click', function () {
+        manual = true;
+        stopTimer(false);
+        root.classList.add('sol-manual');
+        setActive(i);
+      });
+    });
+  })();
+</script>
+
+<!-- ════════════ INDUSTRY CAROUSEL — Figma 14160:70547 → 14168:12150 (desktop) + 14164:11790 (mobile)
+     6 industry panels behind a pill tab strip. On mobile: tabs hidden, dot
+     navigation + a single active-pill indicator at the top of the panel.
+     Franchise & Chains copy is a placeholder since the Figma frame had the
+     Nonprofits H2/body duplicated in — flagged to bobby. Insurance +
+     Hospitals CTA labels also corrected from Figma-side typos. ════════════ -->
+<section class="industry-carousel pt-16 pb-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="max-w-2xl mb-12">
-      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Why Content.One</p>
-      <h2 class="font-display text-3xl md:text-4xl font-bold tracking-tight">Plan, secure, and manage content across every channel.</h2>
+    <!-- Lavender rounded card holds the whole carousel (Figma
+         container 14203:577852: max-w-1280 px-8 py-12 rounded-xl).
+         Section stays white; the tint is scoped to this inner card. -->
+    <div class="bg-[#eceef9] rounded-xl px-6 py-10 lg:px-8 lg:py-12">
+      <!-- Industries eyebrow above the tab strip -->
+      <p class="hidden md:block text-sm font-semibold text-center mb-6" style="color:#253274">Industries</p>
+      <!-- Desktop tab strip — segmented-control inside a white pill
+           with drop-shadow-md. Active tab has an inner lavender pill
+           that matches the outer container so it reads as a "cutout".
+           64px (Figma spacing-7xl) below to the heading. -->
+      <div class="hidden md:flex justify-center mb-16">
+        <div class="ic-tabs-shell inline-flex items-center gap-1 bg-white rounded-[10px] p-1 shadow-md">
+          <button type="button" class="ic-tab ic-active" data-i="0">Nonprofits</button>
+          <button type="button" class="ic-tab" data-i="1">Insurance</button>
+          <button type="button" class="ic-tab" data-i="2">Franchise &amp; Chains</button>
+          <button type="button" class="ic-tab" data-i="3">Financial</button>
+          <button type="button" class="ic-tab" data-i="4">Government</button>
+          <button type="button" class="ic-tab" data-i="5">Hospitals</button>
+        </div>
+      </div>
+
+    <!-- Panels — one visible at a time via .ic-shown -->
+    <div class="ic-panels">
+
+      <div class="ic-panel ic-shown" data-i="0">
+        <span class="ic-mobile-pill">Nonprofits</span>
+        <h3 class="ic-h">You don't need a dev army to run a national non-profit.</h3>
+        <p class="ic-body">Content.One gives federated non-profits and foundations one platform to manage every chapter's site — with the brand guardrails and approval flows your board expects. See how organizations like the Salvation Army do it.</p>
+        <a href="/for-nonprofits/" class="ic-cta">Learn about the Nonprofit CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="1">
+        <span class="ic-mobile-pill">Insurance</span>
+        <h3 class="ic-h">A rate change shouldn't need a developer sprint.</h3>
+        <p class="ic-body">Content.One gives insurance marketing and compliance teams one platform to launch policy pages, microsites, and agent portals — disclosures locked, approvals built in, federated across captive agents, brokers, and regional teams, with SOC 2 and GDPR on by default.</p>
+        <a href="/for-insurance/" class="ic-cta">Learn about the Insurance CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="2">
+        <span class="ic-mobile-pill">Franchise &amp; Chains</span>
+        <h3 class="ic-h">Every location on-brand. Every launch on time.</h3>
+        <p class="ic-body">Content.One gives national franchise brands and multi-location chains one platform to run corporate campaigns, local landing pages, and franchisee microsites — brand guardrails locked, approvals scoped by region, and rollouts to every location in hours, not weeks.</p>
+        <a href="/franchise-cms/" class="ic-cta">Learn about the Franchise &amp; Chain CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="3">
+        <span class="ic-mobile-pill">Financial</span>
+        <h3 class="ic-h">Marketing speed. Compliance built in.</h3>
+        <p class="ic-body">Content.One gives banks and fintech teams one platform to launch landing pages, onboard products, and manage disclosures — with SOC 2, dual-control approvals, and audit trails locked in from day one. See how regulated teams ship campaigns days faster without cutting corners.</p>
+        <a href="/for-financial/" class="ic-cta">Learn about the Financial CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="4">
+        <span class="ic-mobile-pill">Government</span>
+        <h3 class="ic-h">Constituent services shouldn't have a backlog.</h3>
+        <p class="ic-body">Content.One helps federal, state, county, and municipal teams publish benefit info, permit portals, and agency sites at AI speed — with accessibility, policy governance, and audit trails built in, not bolted on.</p>
+        <a href="/for-government/" class="ic-cta">Learn about the Government CMS</a>
+      </div>
+
+      <div class="ic-panel" data-i="5">
+        <span class="ic-mobile-pill">Hospitals</span>
+        <h3 class="ic-h">Patients search online first. Is your website ready?</h3>
+        <p class="ic-body">Content.One is the CMS, hosting, and compliance layer behind healthcare websites. From regional health systems running composable, multi-site architecture to critical access hospitals running lean on a single admin. HIPAA aware and ADA compliance built in, so your team can focus on patients.</p>
+        <a href="/for-critical-access-hospitals/" class="ic-cta">Learn about the Healthcare CMS</a>
+      </div>
+
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <article class="flex flex-col gap-4 p-7 bg-white border border-gray-200 rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-lg">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-display text-xl font-bold m-0">Agentic Page Building</h3>
-          <p class="m-0 text-gray-600 text-sm leading-relaxed">Plan, generate, and refine content at scale with AI-powered workflows.</p>
-        </div>
-        <a href="https://agent.content.one" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark mt-auto">
-          See agent.content.one
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </article>
-      <article class="flex flex-col gap-4 p-7 bg-white border border-gray-200 rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-lg">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-display text-xl font-bold m-0">Enterprise Scale &amp; Security</h3>
-          <p class="m-0 text-gray-600 text-sm leading-relaxed">Govern structure, roles, and audit trails — scale across departments securely.</p>
-        </div>
-        <a href="/features/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark mt-auto">
-          Explore the security model
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </article>
-      <article class="flex flex-col gap-4 p-7 bg-white border border-gray-200 rounded-2xl card-lift transition hover:-translate-y-1 hover:shadow-lg">
-        <div class="w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
-          <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h3 class="font-display text-xl font-bold m-0">Multisite Management</h3>
-          <p class="m-0 text-gray-600 text-sm leading-relaxed">Launch and govern content seamlessly across every site and channel.</p>
-        </div>
-        <a href="/solutions/federated-multisite/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark mt-auto">
-          See federated multisite
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </article>
+
+    <!-- Dot navigation — primary on mobile, secondary indicator on desktop -->
+    <div class="flex justify-center gap-2 mt-10">
+      <button type="button" class="ic-dot ic-active" data-i="0" aria-label="Nonprofits"></button>
+      <button type="button" class="ic-dot" data-i="1" aria-label="Insurance"></button>
+      <button type="button" class="ic-dot" data-i="2" aria-label="Franchise & Chains"></button>
+      <button type="button" class="ic-dot" data-i="3" aria-label="Financial"></button>
+      <button type="button" class="ic-dot" data-i="4" aria-label="Government"></button>
+      <button type="button" class="ic-dot" data-i="5" aria-label="Hospitals"></button>
+    </div>
+    </div><!-- /lavender card -->
+  </div>
+</section>
+
+<style>
+  /* Industry carousel — Figma 14203:577851 (desktop) + 14203:577981 (mobile).
+     Section stays white; the lavender #eceef9 tint is a rounded inner card
+     (px-6/8 py-10/12). Tabs sit inside a white pill shell (ic-tabs-shell)
+     with a drop-shadow-md. Inactive tabs are transparent text; the active
+     tab gets a lavender inner pill matching the outer container — the
+     "cutout" effect from the Untitled UI segmented-control. */
+  .ic-tab {
+    display: inline-flex; align-items: center; justify-content: center;
+    height: 36px; padding: 8px 10px; border: 0; border-radius: 6px;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 14px; font-weight: 600; color: #737373;
+    background: transparent; cursor: pointer; white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .ic-tab:hover { color: #253274; }
+  .ic-tab.ic-active {
+    background: #eceef9; color: #253274;
+  }
+
+  .ic-panel { display: none; text-align: center; max-width: 640px; margin: 0 auto; }
+  .ic-panel.ic-shown { display: block; }
+
+  /* Hidden by default so the base rule can't be beaten by Tailwind's
+     md:hidden (equal specificity, mine loads later). Media query below
+     opts back in only on mobile. */
+  .ic-mobile-pill {
+    display: none; align-items: center;
+    padding: 8px 18px; margin-bottom: 32px;
+    background: #eceef9; border: 1px solid #3d52c2; border-radius: 9999px;
+    font-size: 14px; font-weight: 600; color: #253274;
+  }
+  @media (max-width: 767px) {
+    .ic-mobile-pill { display: inline-flex; }
+  }
+
+  .ic-h {
+    font-family: 'DM Sans', system-ui, sans-serif; font-weight: 600;
+    font-size: 32px; line-height: 1.15; letter-spacing: -0.9px;
+    color: #171717; margin: 0 0 20px;
+  }
+  @media (min-width: 768px) { .ic-h { font-size: 40px; letter-spacing: -0.96px; margin-bottom: 24px; } }
+  @media (min-width: 1024px) { .ic-h { font-size: 48px; line-height: 1.25; } }
+
+  .ic-body {
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 18px; line-height: 1.5; color: #525252;
+    margin: 0 auto 40px; max-width: 480px;
+  }
+  @media (min-width: 768px) { .ic-body { font-size: 20px; line-height: 30px; margin-bottom: 48px; } }
+
+  .ic-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border: 1px solid #d4d4d4; border-radius: 9999px;
+    background: #fafafa; color: #171717;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-size: 16px; font-weight: 600; text-decoration: none;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0 0 0 1px rgba(0,0,0,0.18), inset 0 -2px 0 rgba(0,0,0,0.05);
+    transition: background-color .15s ease;
+  }
+  .ic-cta:hover { background: #f4f4f5; }
+
+  .ic-dot {
+    width: 8px; height: 8px; border-radius: 9999px;
+    background: #d4d4d4; border: 0; padding: 0; cursor: pointer;
+    transition: background-color .15s ease, width .2s ease;
+  }
+  .ic-dot:hover { background: #a3a3a3; }
+  .ic-dot.ic-active { background: #3d52c2; width: 24px; }
+</style>
+
+<script>
+  (function () {
+    var root = document.querySelector('.industry-carousel');
+    if (!root) return;
+    var tabs = root.querySelectorAll('.ic-tab');
+    var panels = root.querySelectorAll('.ic-panel');
+    var dots = root.querySelectorAll('.ic-dot');
+    function setActive(i) {
+      tabs.forEach(function (t, j) { t.classList.toggle('ic-active', j === i); });
+      panels.forEach(function (p, j) { p.classList.toggle('ic-shown', j === i); });
+      dots.forEach(function (d, j) { d.classList.toggle('ic-active', j === i); });
+    }
+    tabs.forEach(function (t, i) { t.addEventListener('click', function () { setActive(i); }); });
+    dots.forEach(function (d, i) { d.addEventListener('click', function () { setActive(i); }); });
+  })();
+</script>
+
+<!-- ════════════ METRICS SECTION — Figma 14155:10510 (desktop) + 14147:12828 (mobile) ════════════
+     Bobby's redesign: white bg, no eyebrow, no bordered card grid.
+     Desktop: H2 top-left + "View Case Studies" pill top-right, then 4
+     royal-blue metric numbers in a row.
+     Mobile: H2 centered, metrics stacked in a single column, CTA at
+     the bottom. -->
+<section class="bg-[#fafafa] py-24">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header row -->
+    <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 mb-16 text-center lg:text-left">
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink max-w-2xl mx-auto lg:mx-0 leading-[1.2]" style="letter-spacing:-0.72px">Real results from customers running on Content.One.</h2>
+      <a href="/customers/" class="hidden lg:inline-flex items-center justify-center rounded-full bg-white border border-gray-300 text-ink font-semibold px-[18px] py-3 hover:bg-gray-100 transition shadow-sm shrink-0">
+        View Case Studies
+      </a>
+    </div>
+
+    <!-- Metric cards: white bg + 1px #e5e5e5 border + 12px radius + 20px
+         padding per Figma 14155:10510. 1 col mobile, 2x2 tablet, 4 cols
+         desktop. -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
+        <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">3000+</p>
+        <p class="text-gray-600 leading-6 max-w-xs m-0">Salvation Army locations on one federated platform</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
+        <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">99.99%</p>
+        <p class="text-gray-600 leading-6 max-w-xs m-0">Production uptime across the enterprise customer base</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
+        <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">6 wks</p>
+        <p class="text-gray-600 leading-6 max-w-xs m-0">Kickoff to soft launch — Sony Electronics</p>
+      </div>
+      <div class="bg-white border border-gray-200 rounded-xl p-5 flex flex-col items-center text-center gap-3">
+        <p class="font-display text-[60px] font-semibold text-royal m-0" style="line-height:72px; letter-spacing:-1.2px">+50%</p>
+        <p class="text-gray-600 leading-6 max-w-xs m-0">Web traffic growth post-migration — The Salvation Army</p>
+      </div>
+    </div>
+
+    <!-- Mobile-only footer CTA (desktop version lives in the header) -->
+    <div class="mt-14 flex justify-center lg:hidden">
+      <a href="/customers/" class="inline-flex items-center justify-center rounded-full bg-[#fafafa] border border-gray-300 text-ink font-semibold px-[18px] py-3 hover:bg-gray-100 transition shadow-sm">
+        View Case Studies
+      </a>
     </div>
   </div>
 </section>
 
-{{ include /components/features/analytics_highlight.html }}
-
-{{include /components/product-section.html}}
-
-<!-- ════════════ TESTIMONIAL CAROUSEL ════════════ -->
+<!-- ════════════ TESTIMONIAL CAROUSEL — moved up here per bobby ════════════ -->
 <section class="bg-[#0c1027]" data-testimonial-carousel>
   <div class="mx-auto max-w-[480px] md:max-w-[640px] lg:max-w-7xl flex flex-col lg:flex-row items-stretch min-h-[480px] lg:min-h-[720px]">
     <div class="flex-1 lg:min-w-0 px-6 sm:px-8 lg:px-12 xl:px-16 py-16 lg:py-24 flex items-stretch">
@@ -397,59 +747,299 @@
   })();
 </script>
 
-{{include /components/homepage/personas.html}}
+<!-- ════════════ FEATURES SECTION — Figma 14207:578347 (desktop) + 14210:579115 (mobile) ════════════
+     Dark section on brand-900 #0c1027. Header (eyebrow + H2 + subhead)
+     then 4 category cards on brand-800 #19214e (Row 1: Content Teams
+     wider + Developers narrower; Row 2: Platform + Governance & Security
+     equal). Each card = icon + title + subtitle rows.
 
-<!-- Explore More -->
-<section class="py-12 xl:py-20 bg-gray-900 text-gray-300">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid grid-cols-1 lg:grid-cols-12 mb-12 xl:mb-16">
-      <div class="lg:col-span-10 lg:col-start-2">
-        <div class="text-center">
-          <h2 class="text-4xl md:text-5xl font-display font-bold tracking-tight mb-3 text-white">Explore More of <span class="text-royal">Content.One</span></h2>
-          <p class="text-lg m-0">Discover how <span class="text-royal">Content.One</span> can transform your organization</p>
-        </div>
-      </div>
+     On mobile the cards are collapsible <details>: "For Content Teams"
+     starts open, the others collapsed (chevron-right style). JS forces
+     every <details> open on ≥lg widths and hides chevrons so all
+     content is visible in the 2-row desktop grid. -->
+<section class="features-section bg-[#060813] py-16 lg:py-24">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="max-w-[768px] mb-12 lg:mb-16">
+      <p class="text-base font-semibold mb-3" style="color:#b1bae7">Features</p>
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold text-white leading-[1.2] mb-5" style="letter-spacing:-0.72px">Every team works in one place.</h2>
+      <p class="text-lg lg:text-xl leading-relaxed" style="color:#b1bae7">Marketers build, developers extend, IT governs.<br>Same platform, same source of truth.</p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 xl:gap-8">
-      <a href="/product_tour/" class="security-card group h-full rounded-2xl p-6 xxl:p-12 no-underline block relative overflow-hidden">
-        <div class="inline-flex items-center justify-center bg-white icon-tile mb-4">
-          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
-        </div>
-        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Features</h3>
-        <p class="m-0 text-gray-300 mb-4">We have you and your team covered with features marketing teams need.</p>
-        <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-royalLite group-hover:text-white transition">
-          See features
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
+    <!-- Card stack — data-driven from Zesty product_tour_pages
+         (nav_icon / nav_title / nav_subheading fields).
+         Sections come from product_sections in sort_order:
+           1 Content Teams   → row 1, spans 2 cols on lg
+           2 Developers      → row 1, spans 1 col on lg
+           4 Platform        → row 2, spans 1 col on lg
+           5 Governance ...  → row 2, spans 1 col on lg
+         Uses `limit N,1` on the sections loop so each card block
+         can wrap the correct one into its own grid position. -->
+    <div class="flex flex-col gap-6 lg:gap-8">
 
-      <a href="/solutions/" class="security-card group h-full rounded-2xl p-6 xxl:p-12 no-underline block relative overflow-hidden">
-        <div class="inline-flex items-center justify-center bg-white icon-tile mb-4">
-          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
-        </div>
-        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Solutions</h3>
-        <p class="m-0 text-gray-300 mb-4">From Marketing Website to custom AI Content Applications.</p>
-        <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-royalLite group-hover:text-white transition">
-          See solutions
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
+      <!-- ─── Row 1: Content Teams (2/3) + Developers (1/3) ─── -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
 
-      <a href="/customers/" class="security-card group h-full rounded-2xl p-6 xxl:p-12 no-underline block relative overflow-hidden">
-        <div class="inline-flex items-center justify-center icon-tile bg-white mb-4">
-          <svg viewBox="0 0 24 24" class="w-7 h-7 text-royal" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 6h6M9 10h6M9 14h6M9 18h2"/></svg>
-        </div>
-        <h3 class="font-display text-2xl font-semibold mb-3 text-white">Customers</h3>
-        <p class="m-0 text-gray-300 mb-4">We serve multi-faceted large organizations.</p>
-        <span class="inline-flex items-center gap-1.5 text-sm font-semibold text-royalLite group-hover:text-white transition">
-          Read customer stories
-          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </span>
-      </a>
+        {{each product_sections as section order by section.sort_order limit 0,1}}
+        <details class="feat-card lg:col-span-2 bg-[#19214e] rounded-xl p-4 lg:p-8" open>
+          <summary class="feat-summary">
+            <span class="feat-label">{{section.section_name}}</span>
+            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+          </summary>
+          <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
+            {{/each}}
+          </div>
+        </details>
+        {{/each}}
+
+        {{each product_sections as section order by section.sort_order limit 1,1}}
+        <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
+          <summary class="feat-summary">
+            <span class="feat-label">{{section.section_name}}</span>
+            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+          </summary>
+          <div class="feat-body grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6 pt-2">
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
+            {{/each}}
+          </div>
+        </details>
+        {{/each}}
+      </div>
+
+      <!-- ─── Row 2: Platform + Governance & Security ─── -->
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+
+        {{each product_sections as section order by section.sort_order limit 2,1}}
+        <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
+          <summary class="feat-summary">
+            <span class="feat-label">{{section.section_name}}</span>
+            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+          </summary>
+          <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
+            {{/each}}
+          </div>
+        </details>
+        {{/each}}
+
+        {{each product_sections as section order by section.sort_order limit 3,1}}
+        <details class="feat-card bg-[#19214e] rounded-xl p-4 lg:p-8">
+          <summary class="feat-summary">
+            <span class="feat-label">{{section.section_name}}</span>
+            <svg class="feat-chev feat-chev-mobile" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+          </summary>
+          <div class="feat-body grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 pt-2">
+            {{each product_tour_pages as nav_page where product_section = '{section.zuid}' order by nav_page.position asc}}
+              {{if {nav_page.show_in_nav} == 1}}
+              <a href="{{nav_page.getUrl()}}" class="feat-item">
+                <div class="feat-icon"><img src="{{nav_page.nav_icon.getImage()}}" alt="" loading="lazy" /></div>
+                <div class="feat-text"><p class="feat-title">{{nav_page.nav_title}}</p><p class="feat-sub">{{nav_page.nav_subheading}}</p></div>
+              </a>
+              {{end-if}}
+            {{/each}}
+          </div>
+        </details>
+        {{/each}}
+      </div>
+
     </div>
   </div>
 </section>
+
+<style>
+  /* Features section — Figma 14207:578347 (desktop) + 14210:579115 (mobile) */
+  .features-section { position: relative; overflow: hidden; }
+  .features-section .feat-card > summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+  }
+  .features-section .feat-card > summary::-webkit-details-marker { display: none; }
+  .features-section .feat-label {
+    color: #b1bae7;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .features-section .feat-chev { color: #b1bae7; transition: transform .2s ease; }
+  .features-section .feat-card[open] > summary .feat-chev { transform: rotate(90deg); }
+
+  .features-section .feat-item {
+    display: flex; align-items: flex-start; gap: 12px;
+    min-width: 0;
+    text-decoration: none;
+    transition: opacity .15s ease;
+  }
+  .features-section .feat-item:hover { opacity: 0.85; }
+  .features-section .feat-icon {
+    flex-shrink: 0;
+    width: 40px; height: 40px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    color: #171717;
+    /* Belt-and-braces centering: flex above handles the flow, and this
+       ensures any child (svg or img) that ignores flex sits centered
+       against the box edges. */
+    text-align: center;
+  }
+  .features-section .feat-icon svg,
+  .features-section .feat-icon img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    margin: auto;
+  }
+  .features-section .feat-text {
+    display: flex; flex-direction: column; gap: 2px;
+    min-width: 0;
+  }
+  .features-section .feat-title {
+    color: #fff;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+  }
+  .features-section .feat-sub {
+    color: #b1bae7;
+    font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  /* Desktop: cards are always visible, chevrons hidden. JS forces open. */
+  @media (min-width: 1024px) {
+    .features-section .feat-chev-mobile { display: none; }
+    .features-section .feat-card > summary { cursor: default; padding-bottom: 24px; }
+  }
+</style>
+
+<script>
+  (function () {
+    var section = document.querySelector('.features-section');
+    if (!section) return;
+    var cards = section.querySelectorAll('.feat-card');
+    var mq = window.matchMedia('(min-width: 1024px)');
+    function sync() {
+      if (mq.matches) {
+        cards.forEach(function (c) { c.open = true; });
+      }
+    }
+    sync();
+    if (mq.addEventListener) {
+      mq.addEventListener('change', sync);
+    } else if (mq.addListener) {
+      mq.addListener(sync);
+    }
+  })();
+</script>
+
+<!-- ════════════ BLOG SECTION — Figma 14217:579597 (desktop) + 14217:579521 + 14217:579441 ════════════
+     "From the Content.One team." — 3 latest articles pulled from
+     the CMS (sorted publish_date desc, limit 3). Each card renders
+     the article's main_image, category name, title, and first
+     author's avatar + name. Wraps to a single column stack on
+     mobile via flex-wrap + min-w-[320px] on each card. Ends with
+     "View all Articles" pill CTA to /blog/. -->
+<section class="blog-latest bg-white py-16 lg:py-24">
+  <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col gap-10 lg:gap-16 items-center">
+
+    <!-- Heading (left-aligned) -->
+    <div class="w-full">
+      <h2 class="font-display text-3xl lg:text-4xl font-semibold text-ink leading-[1.2]" style="letter-spacing:-0.72px">From the Content.One team.</h2>
+    </div>
+
+    <!-- 3-up card row -->
+    <div class="w-full flex flex-wrap gap-8 lg:gap-x-8 lg:gap-y-12 items-start">
+      {{each articles as article sort by publish_date desc limit 3}}
+      <a href="{{article.getURL()}}" class="blog-latest__card flex-1 min-w-[320px] flex flex-col gap-4">
+        <div class="blog-latest__image aspect-[3/2] rounded-2xl overflow-hidden border border-black/10">
+          {{if {article.main_image} }}
+          <img src="{{article.main_image.getImage(768,512,crop)}}" alt="{{article.title}} cover image" class="w-full h-full object-cover" loading="lazy" />
+          {{else}}
+          <img src="https://hj5v68xn.media.zestyio.com/blog-preview-fallback.jpg" alt="{{article.title}} cover image" class="w-full h-full object-cover" loading="lazy" />
+          {{end-if}}
+        </div>
+        <div class="flex flex-col gap-5 px-4">
+          <div class="flex flex-col gap-2">
+            <p class="text-sm font-semibold text-gray-700 m-0">{{categories.filter({article.category}).name}}</p>
+            <div class="flex gap-4 items-start blog-latest__title-row">
+              <h3 class="blog-latest__title flex-1 text-lg font-semibold text-ink leading-7 m-0" style="font-family:'Satoshi','DM Sans',system-ui,sans-serif">{{article.title}}</h3>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-ink mt-1"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+            </div>
+          </div>
+          {{if {article.authors} }}
+          <div class="flex items-center gap-3">
+            {{each {article.authors} as author limit 1}}
+              <div class="w-10 h-10 rounded-full overflow-hidden border border-black/10 shrink-0 bg-[#cfcbdc]">
+                {{if {author.image} }}
+                <img src="{{author.image.getImage(80,80,crop)}}" alt="{{author.name}}" class="w-full h-full object-cover" loading="lazy" />
+                {{end-if}}
+              </div>
+              <span class="text-sm font-semibold text-gray-700 whitespace-nowrap">{{author.name}}</span>
+            {{/each}}
+          </div>
+          {{end-if}}
+        </div>
+      </a>
+      {{/each}}
+    </div>
+
+    <!-- View all CTA -->
+    <a href="/blog/" class="inline-flex items-center justify-center gap-1.5 rounded-full bg-royalDark hover:bg-royal transition text-white font-semibold px-[18px] py-3 shadow-sm">
+      View all Articles
+    </a>
+  </div>
+</section>
+
+<style>
+  .blog-latest__card { text-decoration: none; }
+  .blog-latest__card:hover .blog-latest__image img { transform: scale(1.02); }
+  .blog-latest__image img { transition: transform .4s ease; }
+  /* Title always occupies 2 line heights so cards align regardless of
+     copy length. line-clamp for the visual truncation on longer titles. */
+  .blog-latest__title-row { min-height: 56px; }
+  .blog-latest__title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+</style>
+
+<!-- REMOVED per bobby 2026-07-22 — legacy hidden homepage sections
+     ("All your content needs", "Beautiful content pages", "Integrated
+     Analytics", "Intelligence built in", "Who is Content.One for",
+     "Plan, secure, and manage", "Explore More of Content.One").
+     Available in git history if any need to be brought back. -->
 
 {{blocks('/-/block/sales_personal_cta.html') }}
 
