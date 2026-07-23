@@ -32,6 +32,17 @@
                     </div>
                 </div>
                 <div class="lg:-mb-36">
+                    <!-- Trusted-by logo strip, subtle above the form. filter:brightness(0)+opacity
+                         forces both light and reversed logo variants to render as the same near-black
+                         mark so the strip reads consistently on white. -->
+                    <div class="mb-4 text-center">
+                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-4">Trusted by</p>
+                        <div class="flex items-center justify-around gap-6 px-2">
+                            <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <img src="https://hj5v68xn.media.zestyio.com/phoenix_suns.svg" alt="Phoenix Suns" class="h-10 w-auto" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                        </div>
+                    </div>
                     <div class="bg-white shadow-sm rounded-2xl">
                         <div class="p-6">
                             {{include /components/forms/zoho-form.html}}
