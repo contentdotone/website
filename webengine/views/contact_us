@@ -30,8 +30,15 @@
                             <p class="text-xs text-gray-500 m-0 mt-1">Production reliability, global CDN included.</p>
                         </div>
                     </div>
-                    <!-- Customer voice -->
-                    <figure class="mt-8 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
+                </div>
+                <div class="lg:-mb-36">
+                    <div class="bg-white shadow-sm rounded-2xl">
+                        <div class="p-6">
+                            {{include /components/forms/zoho-form.html}}
+                        </div>
+                    </div>
+                    <!-- Customer voice, directly under the form per kaya. -->
+                    <figure class="mt-6 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
                         <blockquote class="text-base text-ink leading-relaxed m-0">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a 50% increase in traffic since launch."</blockquote>
                         <figcaption class="mt-4 flex items-center gap-3">
                             <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-10 h-10 rounded-full object-cover" />
@@ -41,13 +48,6 @@
                             </div>
                         </figcaption>
                     </figure>
-                </div>
-                <div class="lg:-mb-36">
-                    <div class="bg-white shadow-sm rounded-2xl">
-                        <div class="p-6">
-                            {{include /components/forms/zoho-form.html}}
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
