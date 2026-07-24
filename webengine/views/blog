@@ -1,159 +1,143 @@
-<main class="blog-index">
-  <section class="blog-hero">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="blog-hero__content">
-        <p class="blog-hero__eyebrow">Content.One Journal</p>
-        <h1 class="blog-hero__title">Latest perspectives on content, AI, and delivery.</h1>
-        <p class="blog-hero__subtitle">Fresh thinking from the teams building modern digital experiences.</p>
-      </div>
-    </div> 
+<!-- /blog landing — Figma 1626:287000 (desktop) + 1631:338401 (mobile).
+     Layout: header (eyebrow + H1 + sub) → featured hero card (most
+     recent article, full-width w/ image + overlay copy) → category tab
+     row + "Most recent" sort dropdown → 3-col grid of remaining articles.
+     Cards render category / title / author avatar + name + date, with a
+     fallback cover image for articles missing main_image. -->
+<main class="blog-index bg-white">
+
+  <!-- ════════════ HEADER ════════════ -->
+  <section class="pt-16 lg:pt-20 pb-8 lg:pb-10">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-royal font-semibold text-base mb-3">Our blog</p>
+      <h1 class="font-display text-4xl lg:text-5xl font-semibold text-ink leading-[1.15] mb-4" style="letter-spacing:-0.02em">Resources and insights</h1>
+      <p class="text-lg lg:text-xl text-gray-600 max-w-2xl">The latest industry news, interviews, technologies, and resources.</p>
+    </div>
   </section>
 
-  <section class="blog-grid-section">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="blog-grid">
-        {{each articles as article sort by publish_date desc}}
-        <article class="blog-card">
-          <a href="{{article.getURL()}}" class="blog-card__link">
+  <!-- ════════════ FEATURED HERO (most recent article) ════════════ -->
+  <section class="pb-10 lg:pb-14">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      {{each articles as article sort by publish_date desc limit 1}}
+      <a href="{{article.getURL()}}" class="blog-hero-card block relative rounded-2xl overflow-hidden aspect-[16/9] group border border-black/10 no-underline">
+        {{if {article.main_image} }}
+        <img src="{{article.main_image.getImage(1600,900,crop)}}" alt="{{article.title}} cover image" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="eager" />
+        {{else}}
+        <img src="https://hj5v68xn.media.zestyio.com/blog-preview-fallback.jpg" alt="{{article.title}} cover image" class="absolute inset-0 w-full h-full object-cover transition duration-500 group-hover:scale-[1.02]" loading="eager" />
+        {{end-if}}
+        <!-- Bottom-fade overlay so the copy is legible over the image. -->
+        <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/85 via-black/50 to-transparent pointer-events-none"></div>
+        <div class="absolute inset-x-0 bottom-0 p-6 md:p-10 lg:p-12 max-w-3xl text-white">
+          <span class="inline-block bg-white/10 backdrop-blur text-white uppercase font-semibold tracking-[0.12em] text-xs rounded px-3 py-1.5 mb-4">{{categories.filter({article.category}).name}}</span>
+          <h2 class="font-display text-2xl md:text-3xl lg:text-[32px] font-semibold leading-tight mb-3" style="letter-spacing:-0.02em">{{article.title}}</h2>
+          {{if {article.body} }}
+          <p class="text-white/85 text-base md:text-lg leading-relaxed max-w-2xl">{{article.body.striptags().subwords(24)}}...</p>
+          {{end-if}}
+        </div>
+      </a>
+      {{/each}}
+    </div>
+  </section>
+
+  <!-- ════════════ ARTICLE GRID (rest — skip featured) ════════════
+       All non-featured articles render; JS below shows 6 at a time and
+       reveals the next batch on "Load more" click. Button hides once
+       everything is visible. -->
+  <section class="py-12 lg:py-16">
+    <div class="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12" data-blog-grid data-page-size="6">
+        {{each articles as article sort by publish_date desc limit 1,100}}
+        <a href="{{article.getURL()}}" class="blog-card flex flex-col gap-4 group no-underline" data-blog-card>
+          <div class="aspect-[3/2] rounded-xl overflow-hidden border border-black/10">
             {{if {article.main_image} }}
-            <div class="blog-card__media">
-              <img src="{{article.main_image.getImage(800,520,crop)}}" alt="{{article.title}} cover image">
+            <img src="{{article.main_image.getImage(768,512,crop)}}" alt="{{article.title}} cover image" class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+            {{else}}
+            <img src="https://hj5v68xn.media.zestyio.com/blog-preview-fallback.jpg" alt="{{article.title}} cover image" class="w-full h-full object-cover transition duration-500 group-hover:scale-[1.03]" loading="lazy" />
+            {{end-if}}
+          </div>
+          <div class="flex flex-col gap-2 px-1">
+            <p class="text-sm font-semibold text-gray-700 m-0">{{categories.filter({article.category}).name}}</p>
+            <div class="flex gap-3 items-start blog-card__title-row">
+              <h3 class="blog-card__title flex-1 text-lg font-semibold text-ink leading-7 m-0" style="font-family:'Satoshi','DM Sans',system-ui,sans-serif" title="{{article.title}}">{{article.title}}</h3>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 text-ink mt-1"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </div>
-            {{/if}} 
-            <div class="blog-card__body">
-              <div class="blog-card__meta">
-                {{if {article.publish_date} }}
-                <span>{{article.publish_date.date(Y-m-d)}}</span>
-                {{/if}}
-                {{if {article.authors} }}
-                <span>
-                  {{each {article.authors} as author}}
-                  {{author.name}}{{author._arraycomma}}
-                  {{/each}}
-                </span>
-                {{/if}}
+            {{if {article.authors} }}
+            <div class="flex items-center gap-3 mt-2">
+              {{each {article.authors} as author limit 1}}
+              <div class="w-10 h-10 rounded-full overflow-hidden border border-black/10 shrink-0 bg-[#cfcbdc]">
+                {{if {author.image} }}
+                <img src="{{author.image.getImage(80,80,crop)}}" alt="{{author.name}}" class="w-full h-full object-cover" loading="lazy" />
+                {{end-if}}
               </div>
-              <h2 class="blog-card__title">{{article.title}}</h2>
-              {{if {article.body} }}
-              <p class="blog-card__excerpt">{{article.body.striptags().subwords(28)}}...</p>
-              {{/if}}
-              <span class="blog-card__cta">Read article</span>
+              <div class="text-sm min-w-0">
+                <p class="font-semibold text-ink m-0 leading-tight truncate">{{author.name}}</p>
+                {{if {article.publish_date} }}
+                <p class="text-gray-500 m-0 leading-tight">{{article.publish_date.date(M j, Y)}}</p>
+                {{end-if}}
+              </div>
+              {{/each}}
             </div>
-          </a>
-        </article>
+            {{end-if}}
+          </div>
+        </a>
         {{/each}}
+      </div>
+
+      <!-- Load more — reveals the next batch (page-size) of hidden cards
+           on each click. JS below hides the button once everything is shown. -->
+      <div class="flex justify-center mt-12 lg:mt-16">
+        <button type="button" data-blog-load-more class="inline-flex items-center gap-2 rounded-full bg-white border border-gray-300 text-ink font-semibold px-6 py-3 hover:bg-gray-50 transition shadow-sm">
+          Load more
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
       </div>
     </div>
   </section>
+
+  <!-- ════════════ CONTACT FORM — same industry block used on blog articles ════════════ -->
+  {{include /components/industry/c1_industry_contact_form.html}}
 </main>
 
 <style>
-  @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap");
-  @import url("https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700&display=swap");
+  /* Grid cards past the currently-visible batch are hidden until Load more
+     bumps the count. Styling by attribute keeps the initial render server-
+     side (no flash of full grid before JS runs — hydration hides in bulk). */
+  [data-blog-grid] [data-blog-card] { display: none; }
+  [data-blog-grid] [data-blog-card].is-visible { display: flex; }
 
-  .blog-index {
-    --ink: #111827;
-    --muted: #4b5563;
-    --card: #ffffff;
-    --brand-dark: #0f172a;
-    --brand-mid: #3f51b5;
-    --brand-bright: #6f7bf7;
-    font-family: "Satoshi", "Segoe UI", sans-serif;
-    color: var(--ink);
-    background: linear-gradient(180deg, rgba(15, 23, 42, 0.06) 0%, rgba(63, 81, 181, 0.08) 50%, rgba(111, 123, 247, 0.05) 100%);
-  }
-
-  .blog-hero {
-    padding: 4.5rem 0 3rem;
-  }
-
-  .blog-hero__content {
-    max-width: 720px;
-  }
-
-  .blog-hero__eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    font-size: 0.75rem;
-    color: var(--muted);
-  }
-
-  .blog-hero__title {
-    font-family: "DM Sans", "Segoe UI", sans-serif;
-    font-size: clamp(2.4rem, 4vw, 3.6rem);
-    margin: 1rem 0;
-  }
-
-  .blog-hero__subtitle {
-    color: var(--muted);
-    font-size: 1.05rem;
-  }
-
-  .blog-grid-section {
-    padding: 0 0 4rem;
-  }
-
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 1.5rem;
-  }
-
-  .blog-card {
-    background: var(--card);
-    border-radius: 4px;
-    box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-    overflow: hidden;
-  }
-
-  .blog-card__link {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    color: inherit;
-    text-decoration: none;
-    height: 100%;
-  }
-
-  .blog-card__media img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    display: block;
-  }
-
-  .blog-card__body {
-    padding: 1.6rem;
-    display: grid;
-    gap: 0.8rem;
-  }
-
-  .blog-card__meta {
-    display: flex;
-    gap: 1rem;
-    font-size: 0.85rem;
-    color: var(--muted);
-    flex-wrap: wrap;
-  }
-
+  /* Title always occupies exactly 2 line-heights so every card in the
+     grid has the same overall height regardless of copy length. The
+     title element itself line-clamps to 2 lines with an ellipsis; the
+     h3's native title attr provides the full-title tooltip on hover. */
+  .blog-card__title-row { min-height: 56px; }
   .blog-card__title {
-    font-family: "DM Sans", "Segoe UI", sans-serif;
-    font-size: 1.5rem;
-    margin: 0;
-  }
-
-  .blog-card__excerpt {
-    color: var(--muted);
-    margin: 0;
-  }
-
-  .blog-card__cta {
-    font-weight: 600;
-    color: var(--brand-mid);
-  }
-
-  @media (max-width: 640px) {
-    .blog-hero {
-      padding: 3.5rem 0 2.5rem;
-    }
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    cursor: help;
   }
 </style>
+
+<script>
+  (function () {
+    var grid = document.querySelector('[data-blog-grid]');
+    if (!grid) return;
+    var pageSize = parseInt(grid.getAttribute('data-page-size'), 10) || 6;
+    var cards = grid.querySelectorAll('[data-blog-card]');
+    var button = document.querySelector('[data-blog-load-more]');
+    var shown = 0;
+    function showNext() {
+      var target = Math.min(cards.length, shown + pageSize);
+      for (var i = shown; i < target; i++) {
+        cards[i].classList.add('is-visible');
+      }
+      shown = target;
+      if (button && shown >= cards.length) button.style.display = 'none';
+    }
+    // Initial batch (also hides the button if there aren't enough
+    // articles to need Load more).
+    showNext();
+    if (button) button.addEventListener('click', showNext);
+  })();
+</script>
