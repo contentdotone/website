@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Optimizely vs Content.One, CMS 13 migration, pricing, governance</title>
+  <meta name="description" content="Comparing Optimizely and Content.One for content operations? See real pricing, the CMS 13 migration wave, and where each platform actually fits." />
+  <meta property="og:title" content="Optimizely vs Content.One" />
+  <meta property="og:description" content="Pricing, CMS 13 migration, .NET dependency, Opal AI credits, and where each one actually fits." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/optimizely-vs-content-one.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .versus-faq > summary::-webkit-details-marker { display: none; }
+    .versus-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="versus-page">
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-5">Side-by-side comparison</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Optimizely vs Content.One</h1>
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Optimizely is a mature, .NET-based enterprise DXP built for organizations with dedicated development teams. Content.One is built for franchise, multi-location, and federated networks that need marketer-led publishing without a standing .NET bench or a multi-year implementation budget.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ G2 / REVIEWS ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">What real customers say</h2>
+        <p class="text-gray-600">Independent review scores from G2 and Capterra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="40" height="40" alt="Content.One" class="rounded-lg" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Content.One</p>
+              <p class="text-gray-500 text-xs m-0">G2 + Capterra review profiles</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 36 reviews (reflecting the transition from Zesty.io)</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Ease of use for non-developers. Hands-on support, "goes above and beyond." Customers report dropping their own software and database maintenance after migrating.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/content-one/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/143834/Zesty-io/reviews/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=optimizely.com&sz=128" width="40" height="40" alt="Optimizely" class="rounded-lg bg-gray-50 p-1" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Optimizely</p>
+              <p class="text-gray-500 text-xs m-0">G2 review profile (CMS-specific)</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.0</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor" opacity="0.35"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across ~200 CMS-specific reviews on G2</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Mature content modeling and multi-language support. Two recurring flags: a steep learning curve for editors, and platform complexity that shows up in longer implementations and more developer touch than teams expect.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/optimizely-content-cloud/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/167159/Optimizely/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AT A GLANCE , 4 CARDS ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">At a glance</h2>
+        <p class="text-gray-600">The four things that show up most often when teams evaluate Optimizely vs Content.One.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Pricing that lands 2× the quote</h3>
+          <p class="text-gray-600 text-sm m-0">Optimizely never publishes pricing. Real contracts run from a $36,000 minimum to $150,000–$300,000+ for enterprise, and year-one costs commonly land 100–200% above the quote once services and overages are added.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">The CMS 13 migration wave</h3>
+          <p class="text-gray-600 text-sm m-0">CMS 13 made Optimizely Graph mandatory, introduced Visual Builder as the default editor, and moved the platform to .NET 10. Organizations on earlier versions are facing real migration work whether they want it or not.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Review sentiment</h3>
+          <p class="text-gray-600 text-sm m-0">Optimizely's CMS-specific G2 profile holds 4.0/5 across ~200 reviews. Reviewers consistently cite a steep learning curve and platform complexity. Content.One holds 4.6/5 across 36 reviews (reflecting the Zesty.io transition).</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Three product families, separately licensed</h3>
+          <p class="text-gray-600 text-sm m-0">Optimizely splits pricing across Content Cloud, Commerce Cloud, and Intelligence Cloud, each with its own usage-based overage schedule. Opal AI runs on a separate credit model that can add 20–40% to annual cost unpredictably.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ COMPARISON TABLE ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">The comparison</h2>
+        <p class="text-gray-600">Capability by capability. Why each one matters in the right-hand column.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-700">
+              <th class="font-display font-semibold p-4 w-1/4">Capability</th>
+              <th class="font-display font-semibold p-4 w-1/4">Content.One</th>
+              <th class="font-display font-semibold p-4 w-1/4">Optimizely</th>
+              <th class="font-display font-semibold p-4 w-1/4">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+
+            <tr class="bg-royal/5"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Fit and architecture</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Best for</td><td class="p-4 align-top">Franchise, multi-location, and federated networks needing marketer-led publishing</td><td class="p-4 align-top">Large enterprises with dedicated .NET development teams</td><td class="p-4 align-top text-gray-600">Two different buyers, two different budget shapes</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Architecture</td><td class="p-4 align-top">Web Engine and Parsley templating, agentic page builder</td><td class="p-4 align-top">.NET-based PaaS/SaaS, component-driven</td><td class="p-4 align-top text-gray-600">.NET dependency drives most of Optimizely's implementation cost</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Developer dependency</td><td class="p-4 align-top">Low, marketers build pages directly; Engineer on Demand covers custom work</td><td class="p-4 align-top">High, .NET development required for most customization</td><td class="p-4 align-top text-gray-600">Developer bottleneck determines how fast a marketing team can ship</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Pricing and plans</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Pricing model</td><td class="p-4 align-top">Instance-based, scales with number of properties</td><td class="p-4 align-top">Modular across 3 product families, usage-based, not published</td><td class="p-4 align-top text-gray-600">Modular pricing turns "how much" into a scoping negotiation, not a quote</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Typical cost</td><td class="p-4 align-top">Custom, scoped to instance count and support level</td><td class="p-4 align-top">$36,000 minimum, $150,000–$300,000+ enterprise, often 100–200% above quote in year one</td><td class="p-4 align-top text-gray-600">Buyer guides consistently warn the quote is 25–40% of year-one real cost</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI pricing</td><td class="p-4 align-top">Included agentic content and page generation</td><td class="p-4 align-top">Opal AI, credit-based consumption, can add 20–40% to annual cost</td><td class="p-4 align-top text-gray-600">Credit-based AI billing makes annual budgeting unpredictable</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Forced migration risk</td><td class="p-4 align-top">No equivalent forced architectural migration in the roadmap</td><td class="p-4 align-top">CMS 13 made Optimizely Graph, Visual Builder, and .NET 10 mandatory for the installed base</td><td class="p-4 align-top text-gray-600">The migration is a project even for organizations that weren't planning one</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Editorial experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Content modeling</td><td class="p-4 align-top">Custom content types, reusable components</td><td class="p-4 align-top">Block-based, component-driven</td><td class="p-4 align-top text-gray-600">Reviewers rate Optimizely's modeling highly; Content.One's shipping model is simpler for smaller teams</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Visual page building</td><td class="p-4 align-top">Native agentic page builder, prompt-to-page</td><td class="p-4 align-top">Visual Builder (mandatory as of CMS 13)</td><td class="p-4 align-top text-gray-600">Agentic generation removes the "who builds this component first" bottleneck</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI content generation</td><td class="p-4 align-top">Native agentic content and page generation, included</td><td class="p-4 align-top">Opal AI, credit-based consumption pricing</td><td class="p-4 align-top text-gray-600">Included AI removes a variable line item from renewal conversations</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Developer experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">API type</td><td class="p-4 align-top">REST and GraphQL</td><td class="p-4 align-top">Optimizely Graph (mandatory), REST</td><td class="p-4 align-top text-gray-600">CMS 13 made Graph the assumed integration surface</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Implementation partner required</td><td class="p-4 align-top">Optional, Engineer on Demand available for custom builds and migrations</td><td class="p-4 align-top">Typically yes for PaaS deployments</td><td class="p-4 align-top text-gray-600">Partner-mediated delivery is where quoted costs balloon into real costs</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Security, localization, commerce</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Localization</td><td class="p-4 align-top">Built-in, locale fallback chains</td><td class="p-4 align-top">Strong, mature multi-language tooling</td><td class="p-4 align-top text-gray-600">Optimizely's localization depth is a genuine strength; Content.One's is more streamlined</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Experimentation and personalization</td><td class="p-4 align-top">Included</td><td class="p-4 align-top">Intelligence Cloud, separately licensed</td><td class="p-4 align-top text-gray-600">Optimizely's experimentation depth is a full additional product</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Commerce</td><td class="p-4 align-top">Not a core focus</td><td class="p-4 align-top">Commerce Cloud, separately licensed</td><td class="p-4 align-top text-gray-600">Teams that need commerce should evaluate Optimizely's full stack seriously</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Security</td><td class="p-4 align-top">SSO, audit logs, encryption at rest, role-based access</td><td class="p-4 align-top">SSO, role-based access, enterprise-grade</td><td class="p-4 align-top text-gray-600">Both cover the enterprise checklist; Content.One's audit logs ship without a separately-priced tier</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BODY TEXT ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Optimizely vs Content.One: two different bets on who builds the site</h2>
+      <div class="prose prose-gray max-w-none space-y-6 text-gray-700 text-base leading-7">
+        <p>Optimizely is a mature, .NET-based enterprise DXP built for large organizations with dedicated development teams and a genuine need for deep localization, experimentation, and regulatory compliance tooling. It shows up consistently on enterprise CMS shortlists for good reason: reviewers praise its content modeling and multi-language support, and it handles complex, high-traffic deployments well.</p>
+        <p>The tradeoff is developer dependency and pricing complexity. Optimizely is sales-gated end to end, with no published pricing, three separately-licensed product families that most buyers end up combining, and a track record of quoted prices landing far below what organizations actually pay once professional services and overages are factored in.</p>
+        <p>Content.One takes a different approach for a specific kind of buyer: franchise networks, multi-location service organizations, and federated nonprofits that need governed, marketer-led publishing across dozens or hundreds of properties, without a standing .NET development team or a multi-year implementation budget.</p>
+        <h3 class="font-display text-2xl font-bold mt-10 mb-3 text-ink">Where Content.One takes the lead</h3>
+        <p>The clearest gap shows up in pricing transparency and predictability. Optimizely's quoted price is reliably not the real price. Buyer guides warn that initial quotes represent only 25% to 40% of actual year-one costs once professional services, overages, and Opal AI's variable consumption are factored in, and negotiation case studies describe quotes as high as $385,000 before talks even started. Content.One's governance, security, and AI features ship as part of the platform rather than as separately negotiated line items.</p>
+        <p>The CMS 13 migration is the other piece worth naming directly. Making Optimizely Graph and Visual Builder mandatory, on top of a .NET 10 upgrade, means organizations on earlier versions are facing real implementation work whether they want it or not. That's exactly the moment worth evaluating whether the same budget is better spent staying inside an architecture with another forced migration likely down the road, or moving to a platform built around marketer-led publishing from the start. Content.One's agentic page builder removes the developer bottleneck for routine page changes entirely, and its governed workflow model handles multi-site approvals as a built-in feature rather than custom .NET configuration.</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="font-display text-2xl font-bold mb-3">When Optimizely wins</h3>
+        <p class="text-gray-700 text-base leading-7">If you're a large enterprise already deep in the .NET ecosystem, with dedicated development resources and a genuine need for mature localization, experimentation, and regulatory compliance tooling, Optimizely's depth is real and hard to fully replicate elsewhere. Reviewers consistently rate its content modeling and multi-language capabilities well, and organizations already running Commerce Cloud or Intelligence Cloud alongside the CMS get tighter integration by staying inside the same ecosystem. For that specific buyer, absorbing the CMS 13 migration and the platform's pricing complexity can still be the right call.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+        <p class="text-gray-600">The questions that come up most often when teams compare Optimizely and Content.One.</p>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">How much does Optimizely actually cost compared to Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Optimizely doesn't publish pricing. Real contracts start around $36,000 a year and commonly reach $150,000 to $300,000+ for enterprise deployments, often landing 100% to 200% above the initial quote once professional services are included. Content.One's pricing scales with instance count, with governance and security features included rather than priced separately.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What does Optimizely's CMS 13 migration actually require?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">It made Optimizely Graph mandatory, introduced Visual Builder as the default editing experience, and moved the platform to .NET 10. Organizations on earlier CMS versions face real migration work, including API and integration changes.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Content.One have an equivalent AI feature to Opal AI?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Content.One's agentic content and page generation is included in the platform rather than priced through a separate credit-based consumption model like Opal AI.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Do we need .NET developers to run Content.One the way we'd need them for Optimizely?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">No. Content.One's agentic page builder lets marketers build and edit pages without touching code. Engineer on Demand covers any genuinely custom development work on an as-needed basis.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is Optimizely a bad platform?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">No. It's a mature, capable enterprise DXP, particularly strong on localization, experimentation, and regulatory compliance. It's built for large organizations with dedicated development teams, which is a different buyer than the franchise, multi-location, and federated organizations Content.One is built for.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Can Content.One migrate an existing Optimizely site?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Content.One's migration model runs in parallel to the existing site, and Engineer on Demand covers the implementation work directly rather than requiring a separate systems integrator engagement.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to compare hands-on?</h2>
+      <p class="text-lg text-white/80 mb-8">Start a build, or get an estimate for migrating off Optimizely. Both take a few minutes.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Compare Content.One, cross-links to every other Vs landing + the blog. -->
+    <div class="pb-8 mb-8 border-b border-white/10">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/50 mb-4">Compare Content.One</p>
+      <nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+        <a href="/contentful-vs-content-one.html" class="text-white/70 hover:text-white">Contentful</a>
+        <a href="/drupal-vs-content-one.html" class="text-white/70 hover:text-white">Drupal</a>
+        <a href="/sanity-vs-content-one.html" class="text-white/70 hover:text-white">Sanity</a>
+        <a href="/sitecore-vs-content-one.html" class="text-white/70 hover:text-white">Sitecore</a>
+        <a href="/storyblok-vs-content-one.html" class="text-white/70 hover:text-white">Storyblok</a>
+        <a href="/contentstack-vs-content-one.html" class="text-white/70 hover:text-white">Contentstack</a>
+        <a href="/adobe-experience-manager-vs-content-one.html" class="text-white/70 hover:text-white">Adobe Experience Manager</a>
+        <a href="/blog/" class="text-white/70 hover:text-white">Blog</a>
+      </nav>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+        <span class="text-sm text-white/70">© 2026 Content.One, built for federated organizations.</span>
+      </div>
+      <div class="flex items-center gap-5 text-sm text-white/70">
+        <a href="/contact-us/" class="hover:text-white">Contact</a>
+        <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+        <a href="/terms/" class="hover:text-white">Terms</a>
+        <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+        <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
