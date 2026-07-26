@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adobe Experience Manager vs Content.One, DXP comparison, AEM 6.5 EOL, pricing</title>
+  <meta name="description" content="Comparing Adobe Experience Manager (AEM) and Content.One for multi-location content operations? See pricing, implementation timelines, and the AEM 6.5 deadline forcing the conversation." />
+  <meta property="og:title" content="Adobe Experience Manager vs Content.One" />
+  <meta property="og:description" content="Pricing, AEM 6.5 EOL, implementation cost, multi-site governance, and how each fits marketer-led vs developer-led teams." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/adobe-experience-manager-vs-content-one.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .versus-faq > summary::-webkit-details-marker { display: none; }
+    .versus-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<!-- ════════════ AEM 6.5 EOL BANNER (per kaya) ════════════
+     Full-width alert bar above the sticky header. Uses warning-toned
+     amber so it reads as an announcement, not decoration. -->
+<div class="bg-warning text-ink border-b border-warning/60">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex flex-col md:flex-row md:items-center md:justify-center gap-2 md:gap-4 text-sm md:text-base text-center md:text-left">
+    <svg viewBox="0 0 24 24" class="w-5 h-5 shrink-0 mx-auto md:mx-0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+      <line x1="12" y1="9" x2="12" y2="13"/>
+      <line x1="12" y1="17" x2="12.01" y2="17"/>
+    </svg>
+    <p class="m-0 leading-snug"><span class="font-semibold">Adobe Experience Manager 6.5 support ends soon.</span> Escape the Adobe costs and unlock the power of Content.One, a truly agentic DXP.</p>
+    <a href="/contact-us/" class="inline-flex items-center justify-center rounded-md bg-ink text-white font-semibold text-sm px-4 py-2 hover:bg-royalDark transition shrink-0 mx-auto md:mx-0 md:ml-2">Book a demo</a>
+  </div>
+</div>
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="versus-page">
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-5">Side-by-side comparison</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Adobe Experience Manager vs Content.One</h1>
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Adobe Experience Manager is a deep enterprise DXP built for teams already inside Adobe Experience Cloud with dedicated Java developers. Content.One is built for marketing-led, multi-location networks that need governed publishing across dozens or thousands of properties without a permanent implementation team.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ G2 / REVIEWS ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">What real customers say</h2>
+        <p class="text-gray-600">Independent review scores from G2 and Capterra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="40" height="40" alt="Content.One" class="rounded-lg" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Content.One</p>
+              <p class="text-gray-500 text-xs m-0">G2 + Capterra review profiles</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 36 reviews (reflecting the transition from Zesty.io)</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Ease of use for non-developers. Hands-on support, "goes above and beyond." Customers report dropping their own software and database maintenance after migrating.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/content-one/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/143834/Zesty-io/reviews/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=adobe.com&sz=128" width="40" height="40" alt="Adobe Experience Manager" class="rounded-lg bg-gray-50 p-1" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Adobe Experience Manager</p>
+              <p class="text-gray-500 text-xs m-0">G2 review profile</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.2</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 548 reviews on G2</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Mature, capable platform. Two consistent complaints across 548 reviews: a steep learning curve (75+ mentions) and high cost (50+ mentions). Best-fit for teams with dedicated Java developers.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/adobe-experience-manager/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/153953/Adobe-Experience-Manager/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AT A GLANCE, 4 CARDS ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">At a glance</h2>
+        <p class="text-gray-600">The four things that show up most often when teams evaluate AEM vs Content.One.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Cost structure</h3>
+          <p class="text-gray-600 text-sm m-0">AEM licensing runs $30K to $200K+/year depending on modules, and implementation typically costs 2–4× the annual license in year one (partner ecosystem data). Content.One pricing scales with instance count, not a stack of separately licensed modules.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">AEM 6.5 end of life</h3>
+          <p class="text-gray-600 text-sm m-0">The on-prem LTS version loses Adobe support on <strong>August 31, 2026</strong>. Anyone still on 6.5 needs a migration plan now, either to AEM as a Cloud Service or to a different platform entirely.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="4"/><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Who runs it</h3>
+          <p class="text-gray-600 text-sm m-0">G2 reviewers consistently flag AEM's steep learning curve (75+ mentions) and high cost (50+ mentions). It's built for teams with dedicated Java developers, not for a lean marketing team that needs to publish independently.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="9 12 11 14 15 10"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Marketer-led publishing</h3>
+          <p class="text-gray-600 text-sm m-0">Content.One's agentic page builder and Engineer on Demand exist to solve exactly the problem AEM implementations create: too much developer dependency for day-to-day publishing.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ COMPARISON TABLE ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">The comparison</h2>
+        <p class="text-gray-600">Capability by capability. Why each one matters in the right-hand column.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-700">
+              <th class="font-display font-semibold p-4 w-1/4">Capability</th>
+              <th class="font-display font-semibold p-4 w-1/4">Content.One</th>
+              <th class="font-display font-semibold p-4 w-1/4">Adobe Experience Manager</th>
+              <th class="font-display font-semibold p-4 w-1/4">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+
+            <tr class="bg-royal/5"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Fit and audience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Best for</td><td class="p-4 align-top">Franchise, multi-location, and federated networks that need marketer-led publishing</td><td class="p-4 align-top">Large enterprises already inside Adobe Experience Cloud, with dedicated Java development teams</td><td class="p-4 align-top text-gray-600">Different buyers, different implementations</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Developer dependency</td><td class="p-4 align-top">Low. Marketers can build pages directly; Engineer on Demand covers the rest</td><td class="p-4 align-top">High. Requires Java/J2EE-certified developers for most customization</td><td class="p-4 align-top text-gray-600">Who's on the hook for every routine change</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Pricing and implementation</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Pricing model</td><td class="p-4 align-top">Instance-based, scales with number of properties</td><td class="p-4 align-top">Modular licensing, $30K to $200K+/year depending on modules, plus implementation</td><td class="p-4 align-top text-gray-600">One number vs a stack of module licenses</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Typical implementation cost</td><td class="p-4 align-top">Included setup, no separate multi-year implementation project</td><td class="p-4 align-top">2–4× annual license cost in year one, often $120K to $1M+ total</td><td class="p-4 align-top text-gray-600">Year-one spend and time-to-live vary by an order of magnitude</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Implementation partner required</td><td class="p-4 align-top">Optional; Engineer on Demand available for complex builds and migrations</td><td class="p-4 align-top">Typically yes, Adobe-certified Solution Partner</td><td class="p-4 align-top text-gray-600">Standing team vs as-needed help</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Deployment and lifecycle</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">On-prem end of life</td><td class="p-4 align-top">Not applicable, cloud-native from day one</td><td class="p-4 align-top">AEM 6.5 LTS support ends August 31, 2026</td><td class="p-4 align-top text-gray-600">Migration deadline for on-prem 6.5 customers</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Page build time (internal benchmark)</td><td class="p-4 align-top">~1 hour for pages that typically take 32 hours in a legacy enterprise CMS</td><td class="p-4 align-top">Not published</td><td class="p-4 align-top text-gray-600">Agent handles scaffolding; human reviews</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Editorial experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Visual page building</td><td class="p-4 align-top">Native agentic page builder, prompt-to-page</td><td class="p-4 align-top">Template-based authoring, requires developer-built components</td><td class="p-4 align-top text-gray-600">Marketers ship pages without filing a ticket</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Content modeling</td><td class="p-4 align-top">Custom content types, reusable components</td><td class="p-4 align-top">Component-based, JCR repository</td><td class="p-4 align-top text-gray-600">Both structured; Content.One is drop-in for marketers</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Digital asset management</td><td class="p-4 align-top">Included asset management</td><td class="p-4 align-top">Full DAM included (AEM Assets)</td><td class="p-4 align-top text-gray-600">AEM Assets is more mature for very large asset libraries</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Forms</td><td class="p-4 align-top">Included</td><td class="p-4 align-top">Separate AEM Forms module, separately licensed</td><td class="p-4 align-top text-gray-600">Bundled vs another line item</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Multi-site and localization</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Multi-site governance</td><td class="p-4 align-top">Built for federated and multi-location structures from the ground up</td><td class="p-4 align-top">Multi-site Manager (MSM), configurable but complex to set up</td><td class="p-4 align-top text-gray-600">Local-unit control shipping as a product vs a project</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Localization</td><td class="p-4 align-top">Built-in, locale fallback chains</td><td class="p-4 align-top">Strong, mature localization tooling</td><td class="p-4 align-top text-gray-600">Both viable; AEM's tooling is older and more customizable</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">AI and governance</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI content generation</td><td class="p-4 align-top">Native agentic content and page generation</td><td class="p-4 align-top">Adobe Firefly and Content Hub, licensed separately, still maturing</td><td class="p-4 align-top text-gray-600">In-platform vs additional Adobe SKUs</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Security</td><td class="p-4 align-top">SSO, audit logs, encryption at rest, role-based access</td><td class="p-4 align-top">SSO, role-based access, enterprise-grade</td><td class="p-4 align-top text-gray-600">Comparable feature sets; different configuration burdens</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BODY TEXT ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Adobe Experience Manager vs Content.One: two different bets on scale</h2>
+      <div class="prose prose-gray max-w-none space-y-6 text-gray-700 text-base leading-7">
+        <p>Adobe Experience Manager is Adobe's enterprise content and asset management platform, and it's genuinely strong at what it's built for. If you're already deep in Adobe Experience Cloud (Analytics, Target, Real-Time CDP, Adobe Commerce) and you've got a Java-capable development team on staff or on retainer, AEM slots into that ecosystem cleanly. It shows up on G2's list of top content management software for a reason.</p>
+        <p>The catch is what it takes to get there. AEM doesn't publish pricing. You talk to Adobe sales, and depending on which modules you need (Sites, Assets, Forms, Screens), you're looking at license costs anywhere from $30,000 a year for a single module up to $200,000+ for a multi-module enterprise deployment, plus implementation that typically runs 2 to 4 times that license cost in year one. A $60,000/year AEM Sites deployment commonly books $120,000 to $240,000 of partner implementation before the team even takes over day-to-day operation.</p>
+        <p>Content.One takes the opposite approach for a specific kind of buyer: franchise networks, multi-location service organizations, and federated nonprofits that need governed, on-brand content across dozens or thousands of properties, but don't have the budget or headcount for a permanent AEM implementation team.</p>
+        <h3 class="font-display text-2xl font-bold mt-10 mb-3 text-ink">Where Content.One takes the lead</h3>
+        <p>The honest version of this comparison isn't "AEM is bad." It's that AEM was built for a different buyer. If you're running a single, large, complex enterprise site with a dedicated development team, the platform's depth makes sense. Most franchise networks, dental service organizations, and multi-chapter nonprofits aren't that buyer. They're marketing-led, they've got dozens to thousands of nearly-identical properties, and they need a location manager to update hours or a promo without opening a ticket.</p>
+        <p>That's where the gap shows up in practice. AEM's own reviewers, even the ones giving it high marks, keep naming the same two issues: the learning curve and the cost. Content.One's agentic page builder exists specifically to remove the developer bottleneck from routine publishing. Internal benchmarks put a typical enterprise page build at about an hour with the agent handling the scaffolding, down from roughly 32 hours in a legacy component-based CMS like AEM.</p>
+        <p>Cost is the other half of it. AEM's real number isn't the license fee Adobe quotes you, it's the license plus 2 to 4× that in implementation, plus the ongoing Java development team to maintain it. Content.One's Engineer on Demand model exists so migrations and custom work happen on an as-needed basis instead of requiring a standing team.</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="font-display text-2xl font-bold mb-3">When AEM wins</h3>
+        <p class="text-gray-700 text-base leading-7">If you're already running Adobe Analytics, Adobe Target, Real-Time CDP, and Adobe Commerce, and your organization has the internal Java expertise (or budget for a certified Solution Partner) to run a multi-year implementation, AEM's tight integration across the Adobe Experience Cloud is a real advantage that's hard to replicate outside Adobe's ecosystem. It's also a defensible choice for organizations managing genuinely complex, high-volume digital asset libraries where AEM Assets' maturity matters more than publishing speed. If that's your situation and the budget's already allocated, AEM's depth is legitimate, not just legacy inertia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+        <p class="text-gray-600">The questions that come up most often when teams compare AEM and Content.One.</p>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What happens if we're still on AEM 6.5 after August 2026?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Adobe ends support for AEM 6.5 LTS on August 31, 2026. After that date, you're running an unsupported on-prem system, which means no security patches and no official help if something breaks. Organizations still on 6.5 need a migration plan now, whether that's to AEM as a Cloud Service or an alternative platform.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Why doesn't Adobe publish AEM pricing?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">AEM pricing is modular and negotiated per organization based on which components you need (Sites, Assets, Forms, Screens) and your usage volume. Adobe sends every prospect to a sales conversation rather than a pricing page, which is standard for enterprise DXP but makes it hard to budget without already talking to them.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Do we need Java developers to run Content.One the way we'd need them for AEM?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">No. Content.One's agentic page builder lets marketers build and edit pages without touching code. Engineer on Demand covers anything that genuinely needs custom development, on an as-needed basis rather than a permanent headcount requirement.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Can Content.One migrate an existing AEM instance?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. The <a href="https://migration.content.one" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">migration.content.one</a> tool assesses your current AEM setup and gives you a timeline and cost estimate, and Engineer on Demand handles the actual migration work.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is AEM overkill for a franchise or multi-location network?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Often, yes. AEM's Multi-Site Manager can technically support a multi-location structure, but it's built for organizations with the development resources to configure and maintain that complexity. Most franchise and multi-location teams are marketing-led, not engineering-led, which is the gap Content.One is built to close.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Content.One handle digital asset management the way AEM Assets does?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One includes asset management built into the same platform, though AEM Assets remains the more mature option for organizations with very large, complex digital asset libraries as their primary need rather than website publishing.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to compare hands-on?</h2>
+      <p class="text-lg text-white/80 mb-8">Start a build, or get an estimate for migrating off AEM, both take a few minutes.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Compare Content.One, cross-links to every other Vs landing + the blog. -->
+    <div class="pb-8 mb-8 border-b border-white/10">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/50 mb-4">Compare Content.One</p>
+      <nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+        <a href="/contentful-vs-content-one.html" class="text-white/70 hover:text-white">Contentful</a>
+        <a href="/drupal-vs-content-one.html" class="text-white/70 hover:text-white">Drupal</a>
+        <a href="/sanity-vs-content-one.html" class="text-white/70 hover:text-white">Sanity</a>
+        <a href="/sitecore-vs-content-one.html" class="text-white/70 hover:text-white">Sitecore</a>
+        <a href="/contentstack-vs-content-one.html" class="text-white/70 hover:text-white">Contentstack</a>
+        <a href="/storyblok-vs-content-one.html" class="text-white/70 hover:text-white">Storyblok</a>
+        <a href="/blog/" class="text-white/70 hover:text-white">Blog</a>
+      </nav>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+        <span class="text-sm text-white/70">© 2026 Content.One, built for federated organizations.</span>
+      </div>
+      <div class="flex items-center gap-5 text-sm text-white/70">
+        <a href="/contact-us/" class="hover:text-white">Contact</a>
+        <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+        <a href="/terms/" class="hover:text-white">Terms</a>
+        <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+        <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
