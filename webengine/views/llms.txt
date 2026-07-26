@@ -27,12 +27,15 @@ Three free tools sit at the top of the funnel: a site analysis and onboarding to
 - [Blog](https://www.content.one/blog/): Articles on content operations, headless CMS, AI search, and managing multi-location and federated websites.
 - [About Content.One](https://www.content.one/about/): Company background, the Zesty.io heritage, and the team behind the platform.
 - [Contact and demo](https://www.content.one/contact-us/): Talk to the team, request a demo, or ask about pricing.
+- [Pricing](https://www.content.one/pricing.html): Plan tiers and how Content.One is priced.
 
 ## Free tools
 
+- [Free tools overview](https://www.content.one/free-tools.html): Index of the free tools Content.One publishes for CMS evaluation, SEO/GEO readiness, and migration planning.
 - [Launch: site analysis and onboarding](https://launch.content.one): Enter a domain and get a pre-configured Content.One instance, with an automated read of your current site.
 - [Analysis: GEO and SEO readiness audit](https://analysis.content.one): A standalone audit of how ready a site is for search engines and AI search. No account required.
 - [Migration: platform migration planner](https://migration.content.one): Plan a move from another CMS to Content.One, scoped to your content and site structure.
+- [Website redesign RFP template](https://www.content.one/website-redesign-rfp-template.html): Free downloadable RFP template for scoping a website redesign.
 
 ## Platform and features
 
@@ -85,6 +88,15 @@ Three free tools sit at the top of the funnel: a site analysis and onboarding to
 
 ## Comparisons and alternatives
 
+Head-to-head landing pages:
+
+- [Contentful vs Content.One](https://www.content.one/contentful-vs-content-one.html): Side-by-side comparison of pricing, hosting, federated multisite, SSO, and G2 reviews.
+- [Drupal vs Content.One](https://www.content.one/drupal-vs-content-one.html): Cost of ownership, hosting, multisite, developer dependency, and G2 reviews compared.
+- [Sanity vs Content.One](https://www.content.one/sanity-vs-content-one.html): Pricing, hosting, developer dependency, federated multisite, and MCP compared.
+- [Sitecore vs Content.One](https://www.content.one/sitecore-vs-content-one.html): DXP comparison covering pricing, implementation, personalization, and multisite.
+
+Alternatives explainers:
+
 - [Contentful alternatives](https://www.content.one/blog/contentful-alternatives/): What content teams look for when evaluating alternatives to Contentful.
 - [Drupal alternative](https://www.content.one/blog/drupal-alternative/): Considerations for teams migrating away from Drupal.
 - [Sitecore alternative](https://www.content.one/blog/sitecore-alternative/): Options for distributed organizations and multi-site teams leaving Sitecore.
@@ -128,6 +140,19 @@ Three free tools sit at the top of the funnel: a site analysis and onboarding to
 - [PetDesk](https://www.content.one/customers/petdesk/): Content operations for a multi-location vertical.
 - [JackPocket by DraftKings](https://www.content.one/customers/jackpocket-by-draftkings/): Content delivery for a consumer app.
 - [Cornershop by Uber](https://www.content.one/customers/cornershop-by-uber/): Content management for a marketplace.
+
+## Press releases
+
+- [Content.One launches MCP-enabled AI CMS](https://www.content.one/content-one-launches-mcp-enabled-ai-cms.html): Announcement of MCP support and agentic content workflows in Content.One.
+- [Content.One MCP press release](https://www.content.one/mcp-press-release.html): Press release covering the Model Context Protocol server rollout.
+
+## Partnerships
+
+- [Media partner network](https://www.content.one/influencer-partnerships/): Publisher, creator, and analyst partnership program for Content.One.
+
+## Integrations
+
+- [GitHub integration](https://www.content.one/github-integration.html): Overview of the GitHub integration for local development, templating, and continuous deployment.
 
 ## Optional
 

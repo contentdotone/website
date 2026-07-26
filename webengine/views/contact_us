@@ -1,48 +1,45 @@
 <main class="pb-24">
-    <section class="bg-royal/10 pt-12 xl:pt-32 py-12">
+    <section class="bg-royal/10 pt-[2.565rem] xl:pt-[6.84rem] pb-[2.7rem]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
                 <div class="xl:pr-12">
                     <div class="mb-8">
-                        <span class="inline-flex items-center gap-2 bg-white text-royal rounded-full px-3 py-1.5 mb-4 font-semibold uppercase text-xs tracking-wider">
-                            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
-                            Talk with our team
-                        </span>
-                        <h1 class="font-display text-5xl md:text-6xl font-bold tracking-tight mb-4 leading-[1.05]">{{this.title}}</h1>
-                        <div class="prose prose-slate max-w-none text-lg leading-relaxed">{{this.body}}</div>
-                    </div>
-                    <!-- Trust signals -->
-                    <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <h1 class="font-display text-[2.43rem] md:text-[3.04rem] font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Demo</h1>
+                        <p class="text-lg leading-relaxed mb-8">Here&rsquo;s what to expect next.</p>
+
+                        <!-- 3 steps, icon + title (royal) + subtitle (gray-600) per kaya's reference -->
+                        <div class="flex items-start gap-4 mt-6">
+                            <div class="shrink-0 w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
                             </div>
                             <div>
-                                <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
-                                <p class="text-xs text-gray-500 m-0">Routed straight to a content specialist.</p>
+                                <p class="text-royal text-lg font-semibold m-0 leading-snug">1. Discovery Call (15 minutes)</p>
+                                <p class="text-gray-600 text-base m-0 mt-1 leading-snug">We start with a short conversation to understand your organization&rsquo;s needs, challenges, and goals so we can tailor the demo to what matters most to your team.</p>
                             </div>
                         </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+
+                        <div class="flex items-start gap-4 mt-6">
+                            <div class="shrink-0 w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/><polygon points="10 8 15 10.5 10 13" fill="currentColor" stroke="none"/></svg>
                             </div>
                             <div>
-                                <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
-                                <p class="text-xs text-gray-500 m-0">Enterprise-grade controls, encryption, audit logs.</p>
+                                <p class="text-royal text-lg font-semibold m-0 leading-snug">2. Personalized Platform Demo</p>
+                                <p class="text-gray-600 text-base m-0 mt-1 leading-snug">Content.One is so fast and flexible, we&rsquo;ll have your personalized demo ready within days. You can expect an MVP or &ldquo;first draft&rdquo; of what your website(s) will become.</p>
                             </div>
                         </div>
-                        <div class="rounded-2xl border border-gray-200 bg-white p-4 flex items-start gap-3">
-                            <div class="w-8 h-8 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
-                                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg>
+
+                        <div class="flex items-start gap-4 mt-6">
+                            <div class="shrink-0 w-11 h-11 rounded-xl bg-royal/10 text-royal flex items-center justify-center">
+                                <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="8 12 11 15 16 9"/></svg>
                             </div>
                             <div>
-                                <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
-                                <p class="text-xs text-gray-500 m-0">Production reliability, global CDN included.</p>
+                                <p class="text-royal text-lg font-semibold m-0 leading-snug">3. Follow-Up and Next Steps</p>
+                                <p class="text-gray-600 text-base m-0 mt-1 leading-snug">After the demo, we&rsquo;ll address any remaining questions, explore additional needs, and provide clear pricing and implementation options for your team.</p>
                             </div>
                         </div>
                     </div>
-                    <!-- Customer voice -->
-                    <figure class="mt-8 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
+                    <!-- Customer voice — moved to left column per kaya, under the 3 steps. -->
+                    <figure class="mt-10 rounded-2xl bg-white shadow-sm border border-gray-200 p-6">
                         <blockquote class="text-base text-ink leading-relaxed m-0">"Load times have improved dramatically, and stability has been night-and-day compared to our old platform. We've seen a 50% increase in traffic since launch."</blockquote>
                         <figcaption class="mt-4 flex items-center gap-3">
                             <img src="https://hj5v68xn.media.zestyio.com/andrew-dobney.jpg" alt="Andrew Dobney" class="w-10 h-10 rounded-full object-cover" />
@@ -53,10 +50,48 @@
                         </figcaption>
                     </figure>
                 </div>
-                <div class="lg:-mb-36">
+                <div>
+                    <!-- Trusted-by logo strip, subtle above the form. filter:brightness(0)+opacity
+                         forces every logo (reversed white, colored SVG, raster PNG/AVIF) to render as
+                         the same near-black mark so the strip reads consistently on white.
+                         Rocket League + PetDesk source assets have decorative marks (shield /
+                         colored circle) that get cropped in CSS so only the wordmarks show. -->
+                    <div class="mb-4 text-center">
+                        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-4">Trusted by</p>
+                        <div class="flex items-center justify-around gap-5 px-2">
+                            <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-6 w-auto shrink-0" style="filter:brightness(0);opacity:.55" loading="lazy" />
+                            <!-- Rocket League: source PNG (2560x928) has the shield on the left +
+                                 stacked "ROCKET / LEAGUE" wordmark on the right. Chop the shield. -->
+                            <div class="h-8 overflow-hidden shrink-0" style="width:55px;">
+                                <img src="https://hj5v68xn.media.zestyio.com/Rocket_League_logo.svg.png" alt="Rocket League" class="h-8" style="width:auto;max-width:none;margin-left:-35px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            </div>
+                            <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="w-auto shrink-0" style="height:26.46px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            <!-- PetDesk: source (800x200 exported PNG) has a colored circle badge on
+                                 the left + "PetDesk®" wordmark on the right. Chop the circle. -->
+                            <div class="h-6 overflow-hidden shrink-0" style="width:68px;">
+                                <img src="https://hj5v68xn.media.zestyio.com/PetDesk-logo.avif" alt="PetDesk" class="h-6" style="width:auto;max-width:none;margin-left:-28px;filter:brightness(0);opacity:.55" loading="lazy" />
+                            </div>
+                        </div>
+                    </div>
                     <div class="bg-white shadow-sm rounded-2xl">
                         <div class="p-6">
                             {{include /components/forms/zoho-form.html}}
+                        </div>
+                    </div>
+                    <!-- Trust signals — moved under the form per kaya (swap with testimonial). -->
+                    <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">Reply within 1 business day</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Routed straight to a content specialist.</p>
+                        </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">SOC 2 Type II</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Enterprise-grade controls, encryption, audit logs.</p>
+                        </div>
+                        <div class="rounded-2xl border border-gray-200 bg-white p-4">
+                            <p class="text-sm font-semibold text-ink m-0">99.99% uptime</p>
+                            <p class="text-xs text-gray-500 m-0 mt-1">Production reliability, global CDN included.</p>
                         </div>
                     </div>
                 </div>
