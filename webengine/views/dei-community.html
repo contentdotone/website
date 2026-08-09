@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diversity, Equity, Inclusion &amp; Community | Content.One</title>
+  <meta name="description" content="See how Content.One advances inclusion and access through its workplace, nonprofit CMS, community partnerships, sponsorships, and speaking engagements." />
+  <meta property="og:title" content="More voices. Better systems. Stronger communities." />
+  <meta property="og:description" content="Content.One supports inclusive teams, accessible digital experiences, and mission-driven communities." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/dei-community.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens. `warm` is the one warm accent introduced
+       for this page per the DEI brief (2026-08-09) — used sparingly on the
+       belief-statement highlights and section eyebrows. No rainbow palette,
+       no demographic stock imagery. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            warm: '#D97757',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    details.faq > summary::-webkit-details-marker { display: none; }
+    details.faq > summary::marker { content: ""; }
+
+    /* Belief-statement highlight underline. Subtle warm underline that
+       animates in on load — respects reduced-motion per brief. */
+    .highlight {
+      background-image: linear-gradient(120deg, #D97757 0%, #D97757 100%);
+      background-repeat: no-repeat;
+      background-size: 100% 0.18em;
+      background-position: 0 88%;
+      transition: background-size 400ms ease;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .highlight {
+        background-size: 0% 0.18em;
+      }
+      .highlight.on {
+        background-size: 100% 0.18em;
+      }
+    }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="dei-page">
+
+  <!-- ════════════ 1 — HERO ════════════ -->
+  <section class="pt-16 lg:pt-24 pb-16 lg:pb-20 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-6">
+            <span class="w-8 h-px bg-warm"></span>
+            Diversity, equity, inclusion &amp; access
+          </span>
+          <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-ink mb-6 leading-[1.05]">More voices.<br/>Better systems.<br/>Stronger communities.</h1>
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-2xl mb-8">Content.One helps organizations share stories, services, and opportunities with the people they serve. We work to bring that same spirit of access and participation to our team, our product, and the communities we support.</p>
+          <div class="flex flex-wrap gap-3 mb-4">
+            <a href="/contact-us/?ref=dei-speaking" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3.5 transition shadow-sm">
+              Invite us to speak
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="/contact-us/?ref=dei-sponsorship" class="inline-flex items-center gap-2 rounded-lg border border-ink/15 hover:border-royal text-ink hover:text-royal font-semibold px-6 py-3.5 transition">
+              Request sponsorship
+            </a>
+          </div>
+          <p class="text-sm text-gray-500">Planning a nonprofit event or DEI initiative? Let&rsquo;s talk.</p>
+        </div>
+        <!-- Editorial image slot. Per brief: real event or team image, or a
+             restrained collage of real community moments. No generic staged
+             workplace imagery. Placeholder swaps in once sam supplies. -->
+        <div class="lg:col-span-5">
+          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-royal via-royalDark to-ink shadow-xl relative">
+            <div class="absolute inset-0 flex items-end p-8">
+              <div class="text-white">
+                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/60 mb-2">Community in practice</p>
+                <p class="font-display text-2xl font-semibold leading-snug">A quiet, ongoing commitment—shown in the work, not the words.</p>
+              </div>
+            </div>
+            <!-- Subtle warm-accent glow behind text -->
+            <div class="absolute top-8 left-8 w-24 h-24 rounded-full bg-warm/40 blur-3xl" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 2 — BELIEF STATEMENT (editorial pause) ════════════ -->
+  <section class="py-24 lg:py-32 bg-paper border-y border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink leading-tight mb-8" style="letter-spacing:-0.9px;">Inclusion is something you build.</h2>
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">It lives in who gets <span class="highlight" data-highlight>heard</span>, who gets <span class="highlight" data-highlight>access</span>, and who has the tools to <span class="highlight" data-highlight>act</span>. For us, that means doing the work inside Content.One, designing for more people, and investing in the nonprofit community beyond our walls.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 3 — SHARED COMMITMENT (Content.One + CauseCircle) ════════════ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-8">
+        <span class="w-8 h-px bg-warm"></span>
+        Content.One + CauseCircle
+      </span>
+      <!-- Two logos, equal visual weight per brief. CauseCircle logo asset
+           TBD — placeholder wordmark until sam supplies the SVG. -->
+      <div class="flex items-center justify-center gap-6 md:gap-10 mb-10">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" alt="Content.One" class="h-8 md:h-10 w-auto" />
+        <div class="w-px h-8 md:h-10 bg-gray-200" aria-hidden="true"></div>
+        <span class="font-display text-2xl md:text-3xl font-semibold text-ink tracking-tight">CauseCircle</span>
+      </div>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-6 leading-tight" style="letter-spacing:-0.9px;">One commitment. Two ways we put it to work.</h2>
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed mx-auto" style="max-width:700px;">Content.One and CauseCircle are committed to advancing diversity, equity, inclusion, and access—in how we work, what we build, and the communities we support. Together, we help nonprofits share stories more equitably, make digital participation more accessible, and ensure the people closest to a cause can help shape its narrative. We know this work is ongoing, and we remain committed to listening, learning, and taking meaningful action.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 4 — HOW THE COMMITMENT SHOWS UP (3 cards) ════════════ -->
+  <section class="py-20 lg:py-28 bg-paper border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-4" style="letter-spacing:-0.9px;">The work has to show up in the work.</h2>
+        <p class="text-gray-600 text-lg">Our approach is ongoing, practical, and open to improvement.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <!-- People-in-conversation icon -->
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-ink m-0">Inside our company</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">We work to make hiring, collaboration, learning, and decision-making more inclusive—so people can contribute fully and different perspectives can shape the outcome.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <!-- Accessible publishing icon (universal-access on a document) -->
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="4" r="1.5" fill="currentColor" stroke="none"/><path d="M4 8h16"/><path d="M12 8v6"/><path d="M8 20l4-6 4 6"/><path d="M9.5 12h5"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-ink m-0">In the product</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Content.One helps distributed teams publish within clear roles, shared standards, and accessible patterns. Central teams can protect what matters while local voices stay close to the communities they serve.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-4">
+          <div class="w-12 h-12 rounded-xl bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <!-- Community / gathering icon -->
+            <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 4 10 15 15 0 0 1-4 10"/><path d="M12 2a15 15 0 0 0-4 10 15 15 0 0 0 4 10"/><path d="M2 12h20"/></svg>
+          </div>
+          <h3 class="font-display text-xl font-semibold text-ink m-0">In the community</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">We sponsor, speak, and partner where practical support can help nonprofit leaders learn, connect, and bring more voices into the work.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 5 — EVENTS & ORGANIZATIONS SUPPORTED ════════════ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
+          <span class="w-8 h-px bg-warm"></span>
+          Community in practice
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-4" style="letter-spacing:-0.9px;">We support the people moving the sector forward.</h2>
+        <p class="text-gray-600 text-lg">We partner with gatherings and organizations that strengthen nonprofit leadership, fundraising, storytelling, inclusion, and access.</p>
+      </div>
+
+      <!-- 4-column logo grid on desktop, 2 on tablet, 1-2 on mobile per brief.
+           Hard-coded for launch; sam's brief calls for a CMS-driven schema
+           (org name, logo, alt, URL, year, location, relationship type,
+           description, optional photo). Flagged as a follow-up. -->
+      <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto">
+        <a href="https://www.ajoin.org/" target="_blank" rel="noopener" class="group rounded-2xl border border-gray-200 bg-paper p-6 md:p-8 flex flex-col items-center gap-3 hover:border-royal/30 hover:shadow-sm transition">
+          <div class="h-16 flex items-center justify-center w-full">
+            <span class="font-display text-2xl font-bold text-ink group-hover:text-royal transition">Ajoin</span>
+          </div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-warm">Sponsor</p>
+          <p class="text-sm text-gray-600 text-center leading-snug">Advancing equity and access in the nonprofit sector.</p>
+        </a>
+        <a href="https://nonprofitstorytelling.com/" target="_blank" rel="noopener" class="group rounded-2xl border border-gray-200 bg-paper p-6 md:p-8 flex flex-col items-center gap-3 hover:border-royal/30 hover:shadow-sm transition">
+          <div class="h-16 flex items-center justify-center w-full">
+            <span class="font-display text-lg font-bold text-ink group-hover:text-royal transition text-center leading-tight">Nonprofit<br/>Storytelling<br/>Conference</span>
+          </div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-warm">Sponsor</p>
+          <p class="text-sm text-gray-600 text-center leading-snug">Where nonprofit storytellers sharpen their craft.</p>
+        </a>
+        <a href="https://afpglobal.org/" target="_blank" rel="noopener" class="group rounded-2xl border border-gray-200 bg-paper p-6 md:p-8 flex flex-col items-center gap-3 hover:border-royal/30 hover:shadow-sm transition">
+          <div class="h-16 flex items-center justify-center w-full">
+            <span class="font-display text-2xl font-bold text-ink group-hover:text-royal transition">AFP</span>
+          </div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-warm">Community partner</p>
+          <p class="text-sm text-gray-600 text-center leading-snug">Association of Fundraising Professionals.</p>
+        </a>
+        <a href="/bridgetech-2026.html" class="group rounded-2xl border border-gray-200 bg-paper p-6 md:p-8 flex flex-col items-center gap-3 hover:border-royal/30 hover:shadow-sm transition">
+          <div class="h-16 flex items-center justify-center w-full">
+            <span class="font-display text-2xl font-bold text-ink group-hover:text-royal transition">BridgeTech</span>
+          </div>
+          <p class="text-xs uppercase tracking-wider font-semibold text-warm">Program supporter</p>
+          <p class="text-sm text-gray-600 text-center leading-snug">Nonprofit technology community &amp; annual gathering.</p>
+        </a>
+      </div>
+
+      <div class="max-w-3xl mx-auto text-center mt-12">
+        <p class="text-sm text-gray-500 mb-6">Sponsorship can take many forms—from financial support and event participation to practical expertise and shared programming.</p>
+        <a href="/contact-us/?ref=dei-sponsorship" class="inline-flex items-center gap-2 rounded-lg bg-ink hover:bg-royalDark text-white font-semibold px-6 py-3 transition">
+          Tell us about your initiative
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 6 — SPEAKING ENGAGEMENTS ════════════ -->
+  <section class="py-20 lg:py-28 bg-paper border-y border-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        <div class="lg:col-span-7">
+          <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
+            <span class="w-8 h-px bg-warm"></span>
+            Speaking &amp; learning
+          </span>
+          <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-5" style="letter-spacing:-0.9px;">Bring a practical conversation to your audience.</h2>
+          <p class="text-lg text-gray-700 leading-relaxed mb-8">Content.One speakers share useful, field-tested perspectives for nonprofit, technology, and mission-driven audiences. We consult and train through speaking engagements, for select initiatives—for free.</p>
+          <a href="/contact-us/?ref=dei-speaking" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3.5 transition shadow-sm mb-4">
+            Invite Content.One to speak
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <p class="text-sm text-gray-500 mb-8">Tell us about your audience, format, and goals. We&rsquo;ll suggest the right speaker and topic.</p>
+        </div>
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-gray-200 bg-white p-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500 mb-4">Topics we speak on</p>
+            <ul class="space-y-3">
+              <li class="flex gap-3 items-start">
+                <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-ink leading-relaxed">Inclusive digital transformation</span>
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-ink leading-relaxed">Accessible nonprofit web experiences</span>
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-ink leading-relaxed">Content governance that gives local teams a voice</span>
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-ink leading-relaxed">Responsible AI for mission-driven organizations</span>
+              </li>
+              <li class="flex gap-3 items-start">
+                <svg viewBox="0 0 24 24" class="w-5 h-5 text-royal shrink-0 mt-0.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span class="text-ink leading-relaxed">Building trust through clear, usable content</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 7 — SPONSORSHIP INVITATION ════════════ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
+        <span class="w-8 h-px bg-warm"></span>
+        Sponsorships &amp; partnerships
+      </span>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-5" style="letter-spacing:-0.9px;">Have an initiative that deserves support?</h2>
+      <p class="text-lg text-gray-700 leading-relaxed mb-4">We consider nonprofit events, programs, and DEI/IDEA initiatives where our funding, platform knowledge, or participation can make a useful contribution.</p>
+      <p class="text-base text-gray-500 leading-relaxed mb-8 max-w-2xl mx-auto"><em>The best fit is clear: a defined community, a practical goal, and a specific way Content.One can help.</em></p>
+      <a href="/contact-us/?ref=dei-sponsorship" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-8 py-3.5 transition shadow-sm">
+        Request sponsorship
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════ 8 — CLOSING CTA ════════════ -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center relative overflow-hidden">
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-64 h-64 rounded-full bg-warm/20 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Let&rsquo;s make room for more people to participate.</h2>
+      <p class="text-lg md:text-xl text-white/80 mb-10">Invite us into the conversation—or tell us what you&rsquo;re building.</p>
+      <div class="flex flex-wrap gap-3 justify-center mb-6">
+        <a href="/contact-us/?ref=dei-speaking" class="inline-flex items-center gap-2 rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3.5 transition shadow">
+          Invite us to speak
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="/contact-us/?ref=dei-sponsorship" class="inline-flex items-center gap-2 rounded-lg border border-white/30 hover:bg-white/10 text-white font-semibold px-6 py-3.5 transition">
+          Request sponsorship
+        </a>
+      </div>
+      <a href="/contact-us/" class="inline-flex items-center gap-1.5 text-sm text-white/80 hover:text-white underline underline-offset-4">
+        Or talk to our team
+        <svg viewBox="0 0 24 24" class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ (optional per brief; team has operational answers) ════════════ -->
+  <section class="py-20 lg:py-28 bg-white border-t border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ink mb-3" style="letter-spacing:-0.9px;">Frequently asked questions</h2>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What kinds of initiatives does Content.One consider?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0 leading-relaxed">We consider nonprofit events, education programs, community gatherings, and DEI/IDEA initiatives aligned with access, storytelling, technology, fundraising, and mission-driven work.</p>
+        </details>
+        <details class="faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What kinds of support are available?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0 leading-relaxed">Support may include sponsorship, a speaker, event participation, practical expertise, or another form of partnership. Availability depends on the initiative and timing.</p>
+        </details>
+        <details class="faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Who can request a speaker?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0 leading-relaxed">Nonprofits, associations, conference organizers, community groups, and mission-aligned organizations are welcome to contact us.</p>
+        </details>
+        <details class="faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does submitting a request guarantee support?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0 leading-relaxed">No. Every request is reviewed for fit, timing, and available resources.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+    <div class="flex items-center gap-3">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+      <span class="text-sm text-white/70">© 2026 Content.One, built for federated organizations.</span>
+    </div>
+    <div class="flex items-center gap-5 text-sm text-white/70">
+      <a href="/contact-us/" class="hover:text-white">Contact</a>
+      <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      <a href="/terms/" class="hover:text-white">Terms</a>
+      <a href="/blog/" class="hover:text-white">Blog</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Reveal highlight underlines on the belief-statement heard/access/act
+  // words. Uses IntersectionObserver so it fires only on scroll-in.
+  // Respects reduced-motion via the CSS media query on .highlight itself.
+  document.addEventListener('DOMContentLoaded', function () {
+    var els = document.querySelectorAll('[data-highlight]');
+    if (!('IntersectionObserver' in window)) {
+      els.forEach(function (el) { el.classList.add('on'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('on');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    els.forEach(function (el) { io.observe(el); });
+  });
+</script>
+
+</body>
+</html>
