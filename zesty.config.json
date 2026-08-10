@@ -1016,6 +1016,12 @@
                 "updatedAt": "2026-07-10T15:02:46Z",
                 "createdAt": "2026-07-10T15:02:46Z"
             },
+            "/sitemap.xml": {
+                "zuid": "11-a0eaa6de93-2zzclz",
+                "type": "snippet",
+                "updatedAt": "2026-08-07T16:22:50Z",
+                "createdAt": "2026-08-07T16:22:50Z"
+            },
             "/vendor-partnerships.html": {
                 "zuid": "11-f88692d3cf-tf9vls",
                 "type": "ajax-json",
@@ -1033,6 +1039,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-07-26T00:11:15Z",
                 "createdAt": "2026-07-26T00:11:15Z"
+            },
+            "/dei-community.html": {
+                "zuid": "11-d2e987b9a9-pfp2n4",
+                "type": "ajax-json",
+                "updatedAt": "2026-08-10T15:46:28Z",
+                "createdAt": "2026-08-10T15:46:28Z"
             }
         },
         "styles": {
