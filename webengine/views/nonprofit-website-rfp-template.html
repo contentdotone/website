@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonprofit Website RFP Template (Free Download) | Content.One</title>
+  <meta name="description" content="A free nonprofit website RFP template built for multi-chapter organizations and associations. Covers chapter governance, volunteer permissions, accessibility, and donations." />
+  <meta property="og:title" content="Nonprofit Website RFP Template (Free Download)" />
+  <meta property="og:description" content="A free RFP template written for nonprofits and associations, not adapted from a corporate one." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/nonprofit-website-rfp-template.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #FAFAFC; color: #0B0F1C; }
+    .rfp-faq > summary::-webkit-details-marker { display: none; }
+    .rfp-faq > summary::marker { content: ""; }
+    .rfp-hero-bg {
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,60,255,0.30) 0%, transparent 60%),
+        radial-gradient(ellipse 80% 60% at 50% 100%, rgba(56,189,248,0.10) 0%, transparent 70%),
+        linear-gradient(180deg, #050816 0%, #0a0d24 60%, #060813 100%);
+    }
+    .rfp-hero-bg::after {
+      content: ""; position: absolute; inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
+      -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black 0%, transparent 70%);
+      pointer-events: none;
+    }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<!-- Header -->
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">Talk to our team</a>
+  </div>
+</header>
+
+<!-- ════════════ HERO — split: copy left, download form right ════════════ -->
+<section class="rfp-hero-bg relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative pt-16 lg:pt-24 pb-20 lg:pb-28" style="z-index:2">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+
+      <!-- LEFT: copy -->
+      <div class="lg:col-span-7 text-white">
+        <span class="inline-flex items-center gap-2 rounded-full px-3 py-1.5 mb-6" style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); color:#c7d2fe; backdrop-filter:blur(8px);">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-60"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+          </span>
+          <span class="text-[0.7rem] font-semibold tracking-[0.18em] uppercase">Free nonprofit website RFP template</span>
+        </span>
+        <h1 class="font-display font-semibold text-4xl md:text-5xl lg:text-6xl mb-6 leading-[1.05]" style="letter-spacing:-0.035em">The Nonprofit Website RFP Template</h1>
+        <p class="text-lg md:text-xl mb-8 leading-relaxed font-light" style="color:rgba(255,255,255,.82)">A free RFP template written for nonprofits and associations, not adapted from a corporate one. Chapter governance, volunteer permissions, WCAG accessibility, and donation platform integration each get their own section. Takes about twenty minutes to fill in.</p>
+
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-6 text-white/85 text-base mb-2">
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 shrink-0 mt-0.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>12 pre-written RFP sections</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 shrink-0 mt-0.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>15 vendor questions across four groups</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 shrink-0 mt-0.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Weighted 10-criteria scorecard</span></li>
+          <li class="flex items-start gap-3"><svg class="w-5 h-5 shrink-0 mt-0.5 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Chapter, volunteer &amp; accessibility sections</span></li>
+        </ul>
+      </div>
+
+      <!-- RIGHT: form card -->
+      <div class="lg:col-span-5">
+        <div class="bg-white rounded-2xl shadow-2xl shadow-black/30 ring-1 ring-white/10 p-7 lg:p-8">
+          <div class="mb-5">
+            <h2 class="font-display font-semibold text-2xl text-ink m-0 mb-1.5" style="letter-spacing:-0.02em">Get the template</h2>
+            <p class="text-gray-600 text-sm m-0">Sent to your inbox as an editable document. No sales call attached.</p>
+          </div>
+          <!-- Zoho form endpoint reused from generic RFP (ContentOneContentDownload).
+               Referrer_name segments this submission set as nonprofit. Organization
+               name goes in SingleLine; organization type dropdown goes in Dropdown
+               field. If Zoho schema doesn't already have Dropdown, either add it or
+               provision a dedicated nonprofit-form endpoint. Flagged in PR #95 body. -->
+          <form action="https://forms.zohopublic.com/zestyio/form/ContentOneContentDownload/formperma/rd3o2hydsIvFnURD5qNtaU6spUYAsVa2TcBkOf6274Q/htmlRecords/submit"
+                name="rfp-form" method="POST" accept-charset="UTF-8" enctype="multipart/form-data" id="rfp-form" class="grid grid-cols-1 gap-4 needs-validation" novalidate>
+            <input type="hidden" name="zf_referrer_name" value="Content.One Website — Nonprofit Website RFP Template" />
+            <input type="hidden" name="zf_redirect_url" value="" />
+            <input type="hidden" name="zc_gad" value="" />
+            <!-- Last name stays hidden with placeholder so Zoho's schema still validates. -->
+            <input type="hidden" name="Name_Last" value="—" />
+
+            <div>
+              <label for="rfpFirstName" class="block text-sm font-medium text-gray-700 mb-1.5">First name <span class="text-danger">*</span></label>
+              <input type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="rfpFirstName" name="Name_First" maxlength="255" placeholder="e.g. Jordan" required />
+            </div>
+            <div>
+              <label for="rfpEmail" class="block text-sm font-medium text-gray-700 mb-1.5">Email <span class="text-danger">*</span></label>
+              <input type="email" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="rfpEmail" name="Email" maxlength="255" placeholder="you@organization.org" required />
+            </div>
+            <div>
+              <label for="rfpOrg" class="block text-sm font-medium text-gray-700 mb-1.5">Organization name <span class="text-danger">*</span></label>
+              <input type="text" class="w-full rounded-lg border border-gray-300 px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal" id="rfpOrg" name="SingleLine" maxlength="255" placeholder="e.g. Second Harvest Food Bank" required />
+            </div>
+            <div>
+              <label for="rfpOrgType" class="block text-sm font-medium text-gray-700 mb-1.5">Organization type <span class="text-danger">*</span></label>
+              <select id="rfpOrgType" name="Dropdown" required class="w-full rounded-lg border border-gray-300 bg-white px-3 py-2.5 text-base focus:outline-none focus:ring-2 focus:ring-royal/40 focus:border-royal">
+                <option value="-Select-">— Select —</option>
+                <option value="Charity or foundation">Charity or foundation</option>
+                <option value="Trade or professional association">Trade or professional association</option>
+                <option value="Multi-chapter or federated network">Multi-chapter or federated network</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <button class="w-full inline-flex items-center justify-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-3 text-base transition shadow-lg shadow-royal/20" type="submit">
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+              Email me the template
+            </button>
+            <p class="text-xs text-gray-500 m-0 text-center">You'll get the template + occasional Content.One updates. Unsubscribe anytime.</p>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ Variant switcher — link to generic RFP for non-nonprofit teams ════════════ -->
+<section class="bg-white border-b border-gray-100">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 text-center">
+    <p class="text-sm text-gray-600 m-0">Not a nonprofit? <a href="/website-redesign-rfp-template.html" class="text-royal hover:text-royalDark font-semibold underline underline-offset-4">Grab the general website redesign RFP template →</a></p>
+  </div>
+</section>
+
+<!-- ════════════ "What's inside" ════════════ -->
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 lg:mb-16">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Inside the template</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-ink mb-4">Sections generic RFPs skip, pre-written for nonprofit reality</h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">Each block is fillable copy, not a blank prompt. Edit the sample language rather than drafting from a header.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="rounded-2xl border border-gray-200 p-6 bg-paper">
+        <div class="flex items-center gap-3 mb-3"><span class="font-display font-semibold text-royal text-2xl">01</span><h3 class="font-display font-semibold text-lg text-ink m-0">12 pre-written RFP sections</h3></div>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">Organization background, project scope with written exclusions, chapter and affiliate structure, content migration, integrations, accessibility, budget range, timeline, and evaluation criteria — each with sample language you can edit.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 p-6 bg-paper">
+        <div class="flex items-center gap-3 mb-3"><span class="font-display font-semibold text-royal text-2xl">02</span><h3 class="font-display font-semibold text-lg text-ink m-0">15 vendor questions across four groups</h3></div>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">Platform and CMS, migration and SEO preservation, governance and permissions, and ongoing support. The questions that separate agencies who have run a multi-chapter project from agencies who have not.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 p-6 bg-paper">
+        <div class="flex items-center gap-3 mb-3"><span class="font-display font-semibold text-royal text-2xl">03</span><h3 class="font-display font-semibold text-lg text-ink m-0">Weighted 10-criteria scorecard</h3></div>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">Score every proposal on the same terms so the decision holds up in front of a board or a grant committee, rather than coming down to whoever presented last.</p>
+      </div>
+      <div class="rounded-2xl border border-gray-200 p-6 bg-paper">
+        <div class="flex items-center gap-3 mb-3"><span class="font-display font-semibold text-royal text-2xl">04</span><h3 class="font-display font-semibold text-lg text-ink m-0">Nonprofit-specific sections you will not find elsewhere</h3></div>
+        <p class="text-gray-600 text-sm leading-relaxed m-0">Chapter and affiliate governance, volunteer editor permissions, WCAG accessibility requirements, donation and payment platform integration, and CRM handoff.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ "Why nonprofit website RFPs need their own template" ════════════ -->
+<section class="bg-paper py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-10">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Why a nonprofit-specific template</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-ink mb-4">Why nonprofit website RFPs need their own template</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">Generic RFP templates assume one organization, one website, and a paid content team. Most nonprofits have none of those things. You have chapters or affiliates who want their own pages, volunteers who need to publish without breaking anything, a board that wants to see the numbers before it signs, and accessibility obligations that a corporate template never mentions.</p>
+    </div>
+
+    <div class="space-y-7">
+      <div>
+        <h3 class="font-display font-semibold text-xl text-ink mb-2">1. Federated ownership breaks the "one team owns the site" assumption</h3>
+        <p class="text-gray-700 leading-relaxed m-0">In a federated organization, national owns the brand, chapters own their local content, and nobody has agreed in writing who can publish what. If the RFP does not settle that question, the vendor guesses, and you find out which way they guessed after launch.</p>
+      </div>
+      <div>
+        <h3 class="font-display font-semibold text-xl text-ink mb-2">2. Volunteers editing on a Tuesday evening is a real requirement</h3>
+        <p class="text-gray-700 leading-relaxed m-0">Corporate templates ask about the CMS as a technical requirement. For a nonprofit, the real question is whether a volunteer chapter coordinator can update an event listing without a support ticket. That belongs in the RFP, and this template puts it there.</p>
+      </div>
+      <div>
+        <h3 class="font-display font-semibold text-xl text-ink mb-2">3. Accessibility is far cheaper to specify than to remediate</h3>
+        <p class="text-gray-700 leading-relaxed m-0">Nonprofits serving the public carry obligations that a marketing brochure site does not. There is a WCAG section for it, with language you can hand directly to a vendor.</p>
+      </div>
+      <div>
+        <h3 class="font-display font-semibold text-xl text-ink mb-2">4. Boards and grant committees want a defensible decision</h3>
+        <p class="text-gray-700 leading-relaxed m-0">Two years from now, when someone asks why you chose the vendor you did, the RFP and the scored evaluation rubric are the answer. That is not just documentation, it is the institutional memory that helps the next person make a better call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ Associations & membership organizations ════════════ -->
+<section class="bg-white py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="rounded-2xl border border-gray-200 bg-paper p-8 lg:p-10">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">Associations and membership orgs</p>
+      <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-ink mb-4">Trade associations, alumni networks &amp; membership bodies</h2>
+      <p class="text-gray-700 text-lg leading-relaxed mb-4">These organizations run into a version of the same problem, with member data attached. An <strong>association website RFP</strong> has to cover member authentication, gated content tiers, dues and renewals, event registration, and how the website talks to the AMS. Generic templates skip all of it.</p>
+      <p class="text-gray-700 text-lg leading-relaxed m-0">The template includes those sections. If you are running an association rather than a charity, the chapter governance sections map onto regions or special interest groups without changes.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ "What happens after you send the RFP" ════════════ -->
+<section class="bg-paper py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royal mb-3">After you send it</p>
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight text-ink mb-4">What happens after you send the RFP</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">Most nonprofits send an RFP, collect five proposals with wildly different prices, and have no structured way to compare them. The scorecard is the part people tell us they use most, because it turns a room full of opinions into a number the board can see.</p>
+    </div>
+    <div class="rounded-2xl bg-ink text-white p-8 lg:p-10">
+      <p class="text-white/85 text-lg leading-relaxed m-0">Want a read on your current site <em>before</em> you write the RFP? The <a href="https://analysis.content.one" target="_blank" rel="noopener" class="text-royalLite hover:text-white underline underline-offset-4">free website analysis tool</a> checks your existing pages for SEO and AI search readiness and gives you something concrete to put in the background section.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ Soft Content.One mention — nonprofit angle ════════════ -->
+<section class="bg-ink text-white py-16 lg:py-24">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="font-mono text-[0.7rem] uppercase tracking-[0.28em] text-royalLite mb-4">Where the template comes from</p>
+    <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight mb-5" style="letter-spacing:-0.025em">Built from real nonprofit and multi-chapter web projects</h2>
+    <p class="text-white/80 text-lg leading-relaxed mb-4">Content.One powers websites for organizations that run dozens, sometimes thousands, of regional sites under a single brand, including <a href="/customers/" class="text-royalLite hover:text-white underline-offset-4 hover:underline">The Salvation Army</a> and others whose chapter structure looks exactly like what this template is scoped to solve. Years of helping nonprofit teams scope, procure, and deliver multi-chapter redesigns is where the harder sections of the template come from — particularly the governance, volunteer editor, and accessibility chapters.</p>
+    <p class="text-white/80 text-lg leading-relaxed">Use the template with any vendor. If you would like a conversation about how Content.One specifically fits a multi-chapter redesign, <a href="/cms-for-non-profits/" class="text-royalLite hover:text-white underline-offset-4 hover:underline">see how we support nonprofits</a> or <a href="/contact-us/" class="text-royalLite hover:text-white underline-offset-4 hover:underline">talk to our team</a>. The template is yours either way.</p>
+  </div>
+</section>
+
+<!-- ════════════ FAQ ════════════ -->
+<section class="bg-[#060813] text-white py-16 lg:py-24">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="font-display font-semibold text-3xl md:text-4xl tracking-tight mb-3" style="letter-spacing:-0.025em">Frequently asked questions</h2>
+      <p class="text-white/75 text-lg leading-relaxed">Common questions teams ask before they start drafting a nonprofit website RFP.</p>
+    </div>
+
+    <div class="flex flex-col gap-7">
+      <details open class="rfp-faq group">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">Is the nonprofit website RFP template really free?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">Yes. Enter an email address and it arrives as an editable document you can adapt however you like.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">How long should a nonprofit website RFP be?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">Eight to fifteen pages covers almost every project. Longer RFPs do not produce better proposals, they produce longer ones. The template lands in that range once filled in.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">Do we need an RFP at all?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">If a board, a grant condition, or a procurement policy requires competitive bids, yes. For smaller projects a scoped brief and three conversations are often faster and get you to the same place.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">Does this work for a multi-chapter or federated organization?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">That is what it was written for. Chapter governance, local publishing permissions, and shared brand control each get their own section, because those are the requirements corporate templates leave out.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">Can we use it for an association or membership site?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">Yes. Member authentication, gated content, dues, and AMS integration are covered, and the chapter sections map onto regions or interest groups.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">What budget range should we put in the RFP?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">Put in a real one. Leaving it out does not get you cheaper proposals, it gets you proposals scoped at random. A range is enough, and the template explains how to set one.</p>
+      </details>
+      <details class="rfp-faq group pt-6 border-t border-white/10">
+        <summary class="flex items-start justify-between gap-4 cursor-pointer list-none">
+          <span class="font-display font-semibold text-white text-lg leading-7 m-0">Should the RFP name a CMS?</span>
+          <span class="w-6 h-6 shrink-0 text-royalLite" aria-hidden="true">
+            <svg viewBox="0 0 24 24" class="w-6 h-6 group-open:hidden" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+            <svg viewBox="0 0 24 24" class="w-6 h-6 hidden group-open:block" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          </span>
+        </summary>
+        <p class="text-white/75 text-base leading-relaxed mt-3 m-0">Name your requirements rather than a product. Say what editors need to do without a developer, how many sites or chapters you run, and what has to integrate. Let vendors propose the platform against that.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ Footer CTA — anchor back to form, no direct file link ════════════ -->
+<section class="bg-paper py-16">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="font-display font-semibold text-2xl md:text-3xl tracking-tight text-ink mb-4">Get the template</h2>
+    <p class="text-gray-600 text-lg mb-7">Enter your email and the template arrives in your inbox as an editable document. No sales call attached.</p>
+    <a href="#rfp-form" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-6 py-3 text-base transition shadow-lg shadow-royal/20">
+      <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v7a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-7"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+      Email me the template
+    </a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-ink text-white/70 text-sm py-10 border-t border-white/10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="m-0">&copy; 2026 Content.One — an enterprise CMS for multi-site organizations.</p>
+    <div class="flex items-center gap-6">
+      <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+      <a href="/contact-us/" class="hover:text-white">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Bootstrap-style needs-validation pattern
+  (function () {
+    'use strict';
+    var forms = document.querySelectorAll('.needs-validation');
+    Array.prototype.forEach.call(forms, function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  })();
+</script>
+
+</body>
+</html>
