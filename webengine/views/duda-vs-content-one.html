@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Duda vs Content.One, pricing, multi-site governance, migration</title>
+  <meta name="description" content="Comparing Duda and Content.One for a multi-site network? See published pricing, real cost at 80 sites, shared content models, MCP access, and where each fits." />
+  <meta property="og:title" content="Duda vs Content.One" />
+  <meta property="og:description" content="Published pricing, per-site cost at scale, shared content, MCP access, and where each one actually fits." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/duda-vs-content-one.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .versus-faq > summary::-webkit-details-marker { display: none; }
+    .versus-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/features/" class="hover:text-royal">Features</a>
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/about/" class="hover:text-royal">About</a>
+      <a href="/blog/" class="hover:text-royal">Blog</a>
+    </nav>
+    <a href="/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Book a demo
+    </a>
+  </div>
+</header>
+
+<main class="versus-page">
+
+  <!-- ════════════ HERO ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center px-3 py-1 rounded-full bg-white text-royal text-xs font-semibold uppercase tracking-wider mb-5">Side-by-side comparison</span>
+      <h1 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Duda vs Content.One</h1>
+      <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8">Duda is a website builder made for agencies, SaaS platforms, and hosts that sell websites to other businesses. Content.One is built for franchise, multi-location, and federated networks that own their properties and need to govern content across all of them from one place.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ G2 / REVIEWS ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">What real customers say</h2>
+        <p class="text-gray-600">Independent review scores from G2 and Capterra.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="40" height="40" alt="Content.One" class="rounded-lg" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Content.One</p>
+              <p class="text-gray-500 text-xs m-0">G2 + Capterra review profiles</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across 36 reviews (reflecting the transition from Zesty.io)</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Ease of use for non-developers, hands-on support, and customers reporting they stopped running their own software and database maintenance after migrating.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/content-one/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/143834/Zesty-io/reviews/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-8 flex flex-col gap-5">
+          <div class="flex items-center gap-3">
+            <img src="https://www.google.com/s2/favicons?domain=duda.co&sz=128" width="40" height="40" alt="Duda" class="rounded-lg bg-gray-50 p-1" />
+            <div>
+              <p class="font-display text-lg font-semibold m-0">Duda</p>
+              <p class="text-gray-500 text-xs m-0">G2 review profile</p>
+            </div>
+          </div>
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-4xl font-bold text-ink">4.6</span>
+            <div class="flex flex-col">
+              <div class="flex gap-0.5 text-warning" aria-hidden="true">
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="currentColor"><path d="M12 .587l3.668 7.431 8.2 1.192-5.934 5.787 1.401 8.169L12 18.897l-7.336 3.869 1.401-8.169L.131 9.21l8.2-1.192z"/></svg>
+              </div>
+              <span class="text-xs text-gray-500">across roughly 780 reviews on G2</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-xs uppercase tracking-wider text-gray-500 font-semibold">Customer themes</span>
+            <p class="text-gray-700 m-0 text-sm">Reviewers rate ease of use and ease of setup very highly, and support quality scores well across tiers. The reviewer base is heavily small business, at around 87% of reviews, mostly marketing, advertising, and design firms.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 pt-3 border-t border-gray-100">
+            <a href="https://www.g2.com/products/duda/reviews" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=g2.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              G2 reviews →
+            </a>
+            <a href="https://www.capterra.com/p/134280/DudaMobile/" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark">
+              <img src="https://www.google.com/s2/favicons?domain=capterra.com&sz=64" width="16" height="16" alt="" class="w-4 h-4" />
+              Capterra →
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ AT A GLANCE, 4 CARDS ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-12">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">At a glance</h2>
+        <p class="text-gray-600">The four things that come up most when a multi-site network compares Duda and Content.One.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Duda prices per site, and it adds up</h3>
+          <p class="text-gray-600 text-sm m-0">Plans run $25 to $199 a month on monthly billing, with one site included on Basic and Team, and four on Agency and White Label. Every site after that is $17 a month. An 80-site network lands around $1,361 a month on monthly billing, or roughly $13,400 a year on annual.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Built for agencies, by design</h3>
+          <p class="text-gray-600 text-sm m-0">Duda's own pricing FAQ describes the platform as built for businesses offering websites to other businesses. The account model follows from that, with team seats capped at six outside the Custom plan and client accounts scoped to the specific sites they are assigned.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Sites are separate, not federated</h3>
+          <p class="text-gray-600 text-sm m-0">Duda gives you reusable design assets like custom templates and sections. Content itself lives inside each site, so a policy change across 80 locations means 80 edits, an API script, or a Custom plan conversation.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-paper p-6 flex flex-col gap-3">
+          <div class="w-10 h-10 rounded-lg bg-royal/10 text-royal flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10"/><path d="M22 2L12 12"/><polyline points="15 2 22 2 22 9"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold m-0">Both ship MCP, on different terms</h3>
+          <p class="text-gray-600 text-sm m-0">Duda's MCP access starts on the Agency plan and runs on a metered pool of 150 monthly AI credits shared across all paid tiers. Content.One's MCP server is part of the platform, with permissions applying per request.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ COMPARISON TABLE ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">The comparison</h2>
+        <p class="text-gray-600">Capability by capability. Why each one matters in the right-hand column. Accurate as of August 2026.</p>
+      </div>
+      <div class="overflow-x-auto rounded-2xl border border-gray-200 bg-white shadow-sm">
+        <table class="w-full text-sm border-collapse min-w-[760px]">
+          <thead>
+            <tr class="bg-gray-50 border-b border-gray-200 text-left text-gray-700">
+              <th class="font-display font-semibold p-4 w-1/4">Capability</th>
+              <th class="font-display font-semibold p-4 w-1/4">Content.One</th>
+              <th class="font-display font-semibold p-4 w-1/4">Duda</th>
+              <th class="font-display font-semibold p-4 w-1/4">Why it matters</th>
+            </tr>
+          </thead>
+          <tbody class="text-gray-700">
+
+            <tr class="bg-royal/5"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Fit and architecture</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Best for</td><td class="p-4 align-top">Franchise, multi-location, and federated networks governing their own properties</td><td class="p-4 align-top">Agencies, SaaS platforms, hosts, and POS providers selling websites to SMB clients</td><td class="p-4 align-top text-gray-600">Two different buyers, and the account model follows the buyer</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Multi-site model</td><td class="p-4 align-top">Federated multisite, one platform governing many properties</td><td class="p-4 align-top">Independent sites under one account, each with its own subscription</td><td class="p-4 align-top text-gray-600">Determines whether corporate publishes once or publishes 80 times</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Content model</td><td class="p-4 align-top">Structured content shared across properties</td><td class="p-4 align-top">Site-scoped content, with reusable templates and sections for design</td><td class="p-4 align-top text-gray-600">Shared content is what makes a network update a single action</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Local autonomy</td><td class="p-4 align-top">Role-based publishing with corporate guardrails per site</td><td class="p-4 align-top">Client accounts scoped to assigned sites, no platform-level access</td><td class="p-4 align-top text-gray-600">Franchisees and chapters need to publish without seeing the whole estate</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Pricing and plans</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Pricing model</td><td class="p-4 align-top">Instance-based, scoped to property count and support level</td><td class="p-4 align-top">Published plan price plus $17 per additional site, $19 on Basic</td><td class="p-4 align-top text-gray-600">Duda's transparency is a genuine advantage at low site counts</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Published price</td><td class="p-4 align-top">Not published, scoped per network</td><td class="p-4 align-top">$25 Basic, $39 Team, $69 Agency, $199 White Label monthly, lower annually</td><td class="p-4 align-top text-gray-600">Buyers can price Duda in a browser tab, which most vendors do not allow</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Cost at 80 sites</td><td class="p-4 align-top">Scoped, includes governance and support</td><td class="p-4 align-top">About $1,361 a month on monthly billing, or roughly $13,400 a year annually</td><td class="p-4 align-top text-gray-600">Licence cost is rarely the deciding factor at this size, operating cost is</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Team seats</td><td class="p-4 align-top">Role-based access across the network</td><td class="p-4 align-top">3 on Team, 6 on Agency and White Label, custom above that</td><td class="p-4 align-top text-gray-600">A network with more than six corporate marketers hits the ceiling fast</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Editorial experience</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Page building</td><td class="p-4 align-top">Agentic page builder, prompt to page</td><td class="p-4 align-top">Drag-and-drop editor with templates, plus the Simple Editor for clients</td><td class="p-4 align-top text-gray-600">Duda's editor is one of the better ones in its category</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Design system</td><td class="p-4 align-top">Shared design system across properties</td><td class="p-4 align-top">Up to 5 custom templates and 15 custom sections on Agency and above</td><td class="p-4 align-top text-gray-600">Template caps bite when a network runs several brand variants</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Publishing a network-wide change</td><td class="p-4 align-top">Publish once, propagate to the properties in scope</td><td class="p-4 align-top">Per site, or scripted through the API</td><td class="p-4 align-top text-gray-600">This is the single biggest operational difference between the two</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Page limits</td><td class="p-4 align-top">No per-site page cap in the standard product</td><td class="p-4 align-top">Up to 1,000 pages per site on every plan</td><td class="p-4 align-top text-gray-600">Location networks with deep service or menu content run into this</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">AI and agents</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">AI content and page generation</td><td class="p-4 align-top">Included in the platform</td><td class="p-4 align-top">Included, metered against 150 monthly AI credits, top-ups purchasable</td><td class="p-4 align-top text-gray-600">Credit metering makes heavy generation a variable line item</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">MCP access</td><td class="p-4 align-top">Native MCP server, permissions applied per request</td><td class="p-4 align-top">Standard on Agency and White Label, Advanced on Custom</td><td class="p-4 align-top text-gray-600">Both platforms support agent-driven work, on different terms</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">SEO and AI visibility</td><td class="p-4 align-top">SEO and GEO analyzer agent included</td><td class="p-4 align-top">Agentic SEO included, AI Visibility priced separately from $19 to $195 a month</td><td class="p-4 align-top text-gray-600">Duda's SEO tooling is strong, the visibility layer is a separate purchase</td></tr>
+
+            <tr class="bg-royal/5 border-t border-gray-200"><td colspan="4" class="font-display font-bold text-ink px-4 py-3 uppercase tracking-wider text-xs">Platform and services</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Hosting</td><td class="p-4 align-top">Managed hosting and CDN delivery included</td><td class="p-4 align-top">Included, AWS and CloudFront, 99.5% uptime target, unlimited bandwidth</td><td class="p-4 align-top text-gray-600">Both remove the hosting question, which rules out a lot of alternatives</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">API</td><td class="p-4 align-top">REST and GraphQL</td><td class="p-4 align-top">REST partner API, documented at developer.duda.co</td><td class="p-4 align-top text-gray-600">Duda's API is well documented and widely used by its SaaS partners</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Migration support</td><td class="p-4 align-top">Engineer on Demand handles migration and custom development directly</td><td class="p-4 align-top">Import Content for one or two sites, Duda Experts for a dozen or two, sales for bulk</td><td class="p-4 align-top text-gray-600">Duda's documented path for large portfolios is a rebuild, not a content migration</td></tr>
+            <tr class="border-t border-gray-100"><td class="p-4 align-top font-semibold">Security</td><td class="p-4 align-top">SSO, audit logs, encryption at rest, role-based access</td><td class="p-4 align-top">Standard compliance and security on all plans, Advanced on Custom</td><td class="p-4 align-top text-gray-600">Advanced security sitting behind the Custom tier affects procurement timelines</td></tr>
+
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ BODY TEXT ════════════ -->
+  <section class="py-16 lg:py-24 bg-gray-50 border-t border-b border-gray-200">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl font-bold mb-8">Duda vs Content.One: one platform sells websites, the other governs a network</h2>
+      <div class="prose prose-gray max-w-none space-y-6 text-gray-700 text-base leading-7">
+        <p>Duda is good at what it was built for. Agencies and SaaS platforms use it to produce a high volume of well-built, fast, SEO-sound sites for small business clients, and the reviews back that up, with ease of use and ease of setup among its strongest scores on G2. Hosting is included, the editor is genuinely pleasant, and the white-label layer lets an agency put the whole platform under its own brand.</p>
+        <p>The model underneath all of that is a reseller model. Duda's pricing FAQ says the platform is built for businesses offering websites to other businesses, and the account structure reflects it. You buy platform access, then buy sites individually. Team members see every site in the account. Clients see only the sites assigned to them and cannot touch anything at platform level. That split works when the sites belong to different companies who happen to share a builder.</p>
+        <p>A franchise network is not that. Neither is a 60-storefront retailer or an 80-chapter nonprofit. Those organizations own every property, and the thing they need most is for corporate to change something once and have it appear everywhere it should, while each location still controls what is local to it. Content.One is built around that shape, with structured content shared across properties and role-based publishing that lets a franchisee update hours without being able to edit the brand. For a deeper look at how the pattern actually works, see our <a href="/solutions/federated-multisite/" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">federated multisite solution</a> and the write-ups on <a href="/blog/federated-multisite-cms-manage-100plus-websites-from-one-platform/" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">managing 100+ websites from one platform</a> and <a href="/blog/why-content-operations-break-in-multilocation-businesses-and-what-to-fix-first/" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">why content operations break in multi-location businesses</a>.</p>
+        <h3 class="font-display text-2xl font-bold mt-10 mb-3 text-ink">Where Content.One takes the lead</h3>
+        <p>The clearest gap is the shared content model. Duda's reusable pieces are design assets, so templates and sections carry look and feel between sites while the content inside each site stays local to it. Update a compliance disclosure across 80 locations on Duda and you are editing 80 sites, writing against the partner API, or negotiating a Custom plan. On Content.One the same change is one publish action against the properties in scope, which is the difference between an afternoon and a fortnight.</p>
+        <p>Governance is the second gap, and it shows up as a hard number. Duda caps team seats at six outside the Custom plan, and client accounts by design cannot reach platform-level features. A corporate marketing team of eight running a network of chapter editors does not fit that shape without moving to a negotiated tier, at which point the published pricing that made Duda attractive stops applying.</p>
+        <p>Migration is the third. Duda documents its own path for large portfolios honestly: rebuild one or two sites yourself with Import Content, hand a dozen or two to the Experts program, and talk to sales above a hundred. For a network moving off WordPress multisite or an aging DXP, that means a rebuild project with an implementation partner attached. Content.One runs migrations through Engineer on Demand, which is the same engineers who run the platform rather than a separate systems integrator engagement.</p>
+      </div>
+
+      <div class="mt-12 pt-8 border-t border-gray-200">
+        <h3 class="font-display text-2xl font-bold mb-3">When Duda wins</h3>
+        <p class="text-gray-700 text-base leading-7 mb-6">If you are an agency, a SaaS platform, or a host selling websites to small business clients, Duda is the better fit and it is not close. The white-label layer, the client billing, the per-site economics, and the Simple Editor all exist for that business model, and Content.One does not compete for it.</p>
+        <p class="text-gray-700 text-base leading-7">Duda also wins on transparency and on speed to first site. The pricing is published, the trial takes minutes, and a small network of ten or fifteen sites with mostly independent content will run on Duda for a few hundred dollars a month with very little to argue about. If your locations genuinely operate as separate businesses with separate content, the federated model is solving a problem you do not have yet. Duda's SEO work is also legitimately good, from Core Web Vitals through to llms.txt support, so nobody should switch away from it expecting a search improvement on its own.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ FAQ ════════════ -->
+  <section class="py-16 lg:py-24">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold mb-3">Frequently asked questions</h2>
+        <p class="text-gray-600">The questions that come up most when multi-location teams compare Duda and Content.One.</p>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">How much does Duda cost for a network of 50 or 100 sites?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Take the plan price, then add $17 a month for every site past the ones included. On the Agency plan at $69 a month with four sites included, 50 sites is about $851 a month and 100 sites is about $1,701 a month on monthly billing. Annual billing brings both down by roughly a quarter.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Is Duda a CMS?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">It manages website content, so in the broad sense yes, and G2 lists it under web content management. In practice it works as a site-scoped builder rather than a structured content platform, so content lives inside each site instead of in a shared model several sites can draw from.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Can Duda publish a change across all my locations at once?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Not through the editor. Templates and sections carry design between sites, but content changes happen per site unless you script them through the partner API or arrange it on a Custom plan.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does Duda work with AI agents and MCP?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Duda ships an MCP server, with access starting on the Agency plan, and its AI features draw on a pool of 150 monthly credits with paid top-ups. Content.One also ships a native MCP server, included in the platform, so both support agent-driven content work.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Why are Content.One reviews listed under Zesty.io?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One was rebranded from Zesty.io, and the review profiles on G2 and Capterra have not fully migrated yet.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What does moving from Duda to Content.One involve?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Content.One runs the migration in parallel with your live sites, and Engineer on Demand covers the implementation work directly. You can get a scoped estimate at <a href="https://migration.content.one" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline decoration-royal/30">migration.content.one</a>.</p>
+        </details>
+        <details class="versus-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Should a franchise network use Duda or Content.One?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">If franchisees buy and run their own sites independently, Duda handles that well. If corporate owns the brand standards and needs to push updates across every location while letting each one manage what is local, that is what federated multisite is for.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ CTA ════════════ -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-4">Ready to compare hands-on?</h2>
+      <p class="text-lg text-white/80 mb-8">Start a build, or get an estimate for moving a Duda portfolio across. Both take a few minutes.</p>
+      <div class="flex flex-wrap gap-3 justify-center">
+        <a href="https://launch.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-6 py-3 transition shadow">Start a build</a>
+        <a href="https://migration.content.one" target="_blank" rel="noopener" class="inline-flex items-center rounded-lg border border-white/30 text-white hover:bg-white/10 font-semibold px-6 py-3 transition">Get a migration estimate</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-10">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Compare Content.One, cross-links to every other Vs landing + the blog. -->
+    <div class="pb-8 mb-8 border-b border-white/10">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/50 mb-4">Compare Content.One</p>
+      <nav class="flex flex-wrap gap-x-6 gap-y-3 text-sm">
+        <a href="/contentful-vs-content-one.html" class="text-white/70 hover:text-white">Contentful</a>
+        <a href="/drupal-vs-content-one.html" class="text-white/70 hover:text-white">Drupal</a>
+        <a href="/sanity-vs-content-one.html" class="text-white/70 hover:text-white">Sanity</a>
+        <a href="/sitecore-vs-content-one.html" class="text-white/70 hover:text-white">Sitecore</a>
+        <a href="/storyblok-vs-content-one.html" class="text-white/70 hover:text-white">Storyblok</a>
+        <a href="/contentstack-vs-content-one.html" class="text-white/70 hover:text-white">Contentstack</a>
+        <a href="/adobe-experience-manager-vs-content-one.html" class="text-white/70 hover:text-white">Adobe Experience Manager</a>
+        <a href="/optimizely-vs-content-one.html" class="text-white/70 hover:text-white">Optimizely</a>
+        <a href="/blog/" class="text-white/70 hover:text-white">Blog</a>
+      </nav>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+        <span class="text-sm text-white/70">© 2026 Content.One, built for federated organizations.</span>
+      </div>
+      <div class="flex items-center gap-5 text-sm text-white/70">
+        <a href="/contact-us/" class="hover:text-white">Contact</a>
+        <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+        <a href="/terms/" class="hover:text-white">Terms</a>
+        <a href="https://agent.content.one" target="_blank" rel="noopener" class="hover:text-white">agent.content.one</a>
+        <a href="https://mcp.content.one" target="_blank" rel="noopener" class="hover:text-white">mcp.content.one</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
