@@ -123,27 +123,36 @@
           </div>
         </div>
 
-        <!-- Side visual: mission-driven card. Editorial illustration in the
-             DEI-page family — royal gradient with warm accent glow. No stock
-             photography; nothing that implies specific communities we can't
-             represent authentically. -->
-        <div class="lg:col-span-5 hidden lg:block">
-          <div class="aspect-[4/5] rounded-3xl overflow-hidden bg-gradient-to-br from-royal via-royalDark to-ink shadow-xl relative">
-            <div class="absolute top-8 left-8 w-32 h-32 rounded-full bg-warm/40 blur-3xl" aria-hidden="true"></div>
-            <div class="absolute inset-0 flex flex-col justify-between p-8 text-white">
-              <div>
-                <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/60 mb-3">Nonprofits we work with</p>
-                <p class="font-display text-2xl md:text-3xl font-semibold leading-tight">Mission-driven organizations already using Content.One to grow discovery and donor engagement.</p>
-              </div>
-              <div class="text-white/70 text-sm">
-                <p class="m-0">The Salvation Army</p>
-                <p class="m-0">Adjoin</p>
-                <p class="m-0">Association of Fundraising Professionals</p>
-                <p class="m-0">Nonprofit Storytelling Conference</p>
-              </div>
-            </div>
+        <!-- Hero image supplied by sam (2026-08-31). Culture Cares campaign
+             visual. Rounded to match the page's visual system; warm-accent
+             glow behind for continuity with the listener-exclusive tint. -->
+        <div class="lg:col-span-5 hidden lg:block relative">
+          <div class="absolute -top-6 -left-6 w-40 h-40 rounded-full bg-warm/25 blur-3xl -z-10" aria-hidden="true"></div>
+          <div class="rounded-3xl overflow-hidden shadow-xl ring-1 ring-black/5 bg-white">
+            <img src="https://hj5v68xn.media.zestyio.com/Culture-Cares.jpg" alt="Culture Cares Podcast × Content.One" class="w-full h-auto block" loading="eager" fetchpriority="high" />
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ SOCIAL PROOF — Trusted by (enterprises + nonprofits) ════════════
+       Borrowed from the sitewide client_logos block pattern
+       (grayscale + hover-to-color, flex-wrap centered strip). Hardcoded
+       here rather than using {{blocks('/-/block/client_logos.html')}} so
+       we can set the specific title sam asked for ("Trusted by leading
+       enterprises and nonprofits") and curate the mix — 3 enterprise +
+       3 nonprofit — to match this landing's audience. -->
+  <section class="py-14 lg:py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-center uppercase font-semibold tracking-[0.14em] text-royal text-sm mb-8">Trusted by leading enterprises and nonprofits</p>
+      <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-14">
+        <img src="https://hj5v68xn.media.zestyio.com/sony_reversed.svg" alt="Sony" class="h-8 sm:h-10 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" style="filter:brightness(0);opacity:.55" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/singlife_reversed.svg" alt="Singlife" class="h-8 sm:h-10 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" style="filter:brightness(0);opacity:.55" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/wattpad.svg" alt="Wattpad" class="h-8 sm:h-10 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" style="filter:brightness(0);opacity:.55" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/Adjoin-Logo.webp" alt="Adjoin" class="h-10 sm:h-12 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/IconLogoNoDate_1000x400.png" alt="Association of Fundraising Professionals" class="h-10 sm:h-12 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" loading="lazy" />
+        <img src="https://hj5v68xn.media.zestyio.com/NP-Story-Club-Pro-Image-1600x900-1.png" alt="Nonprofit Storytelling Conference" class="h-10 sm:h-12 w-auto object-contain grayscale opacity-70 hover:opacity-100 transition" loading="lazy" />
       </div>
     </div>
   </section>
