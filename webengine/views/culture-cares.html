@@ -62,7 +62,7 @@
       <a href="/cms-for-non-profits/" class="hover:text-royal">For Nonprofits</a>
       <a href="/blog/" class="hover:text-royal">Blog</a>
     </nav>
-    <a href="/contact-us/?ref=culture-cares" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+    <a href="#contact-form" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
       Book a demo
     </a>
   </div>
@@ -113,7 +113,7 @@
           </div>
 
           <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <a href="/contact-us/?ref=culture-cares" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+            <a href="#contact-form" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
               Get my complimentary assessment
               <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -183,7 +183,7 @@
         </article>
       </div>
       <div class="text-center">
-        <a href="/contact-us/?ref=culture-cares" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+        <a href="#contact-form" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
           Book my free consultation
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -231,7 +231,7 @@
         </article>
       </div>
       <div class="text-center">
-        <a href="/contact-us/?ref=culture-cares" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+        <a href="#contact-form" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
           Book my free consultation
           <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
@@ -282,20 +282,75 @@
     </div>
   </section>
 
-  <!-- ════════════ 7 — FINAL CTA ════════════ -->
-  <section class="py-20 lg:py-28 bg-gradient-to-br from-ink via-royalDark to-royal text-white text-center relative overflow-hidden">
+  <!-- ════════════ 7 — FINAL CTA + EMBEDDED DEMO FORM ════════════
+       Per sam (2026-08-31): embed the demo form in the landing itself
+       rather than routing off-page. Zoho endpoint reused from the
+       sitewide contact form (ContentOneDemoForm) with a distinct
+       zf_referrer_name so Culture Cares submissions segment for
+       campaign attribution.
+
+       Do NOT rename the `name` attributes below (Name_First, Name_Last,
+       Email, SingleLine, MultiLine) — Zoho drops empty values on
+       submit when the field names don't match its schema. -->
+  <section id="contact-form" class="py-20 lg:py-28 bg-gradient-to-br from-ink via-royalDark to-royal text-white relative overflow-hidden scroll-mt-20">
     <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-72 h-72 rounded-full bg-warm/20 blur-3xl" aria-hidden="true"></div>
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Make your mission easier to find.</h2>
-      <p class="text-lg md:text-xl text-white/80 mb-4 leading-relaxed">Your organization is already doing work worth discovering.</p>
-      <p class="text-lg md:text-xl text-white/80 mb-10 leading-relaxed">Let&rsquo;s make sure your digital front door helps the right people find it, understand it, and take the next step.</p>
-      <a href="/contact-us/?ref=culture-cares" class="inline-flex items-center gap-2 rounded-lg bg-white text-royal hover:bg-gray-100 font-semibold px-8 py-4 text-base transition shadow">
-        Book my free consultation
-        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-      </a>
-      <p class="text-sm text-white/70 mt-6 leading-relaxed">Includes a website growth conversation + AI visibility audit for Culture Cares Podcast listeners.<br/>
-        <span class="text-warm font-semibold">Limited-time listener offer.</span>
-      </p>
+      <div class="text-center mb-10">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
+          <span class="w-8 h-px bg-warm"></span>
+          Book your consultation
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Make your mission easier to find.</h2>
+        <p class="text-lg md:text-xl text-white/80 mb-3 leading-relaxed">Your organization is already doing work worth discovering.</p>
+        <p class="text-base md:text-lg text-white/75 leading-relaxed">Let&rsquo;s make sure your digital front door helps the right people find it, understand it, and take the next step.</p>
+      </div>
+
+      <form
+        action="https://forms.zohopublic.com/zestyio/form/ContentOneDemoForm/formperma/v5yu682DcRoFs5WJHMyNPgq30kitbSqJXuQGEZkwoVw/htmlRecords/submit"
+        name="culture-cares-form"
+        id="culture-cares-form"
+        method="POST"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        class="rounded-2xl bg-white/[0.05] border border-white/10 p-6 md:p-8 backdrop-blur"
+      >
+        <input type="hidden" name="zf_referrer_name" value="culture-cares-landing">
+        <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=demo">
+        <input type="hidden" name="zc_gad" value="">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">First name <span class="text-warm">*</span></span>
+            <input type="text" name="Name_First" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">Last name <span class="text-warm">*</span></span>
+            <input type="text" name="Name_Last" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+        </div>
+
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Email <span class="text-warm">*</span></span>
+          <input type="email" name="Email" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="you@organization.org" />
+        </label>
+
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Organization <span class="text-warm">*</span></span>
+          <input type="text" name="SingleLine" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+        </label>
+
+        <label class="block mb-6">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Tell us about your organization</span>
+          <textarea name="MultiLine" maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y" placeholder="Anything you'd like us to know before the call — mission focus, current CMS, particular challenges. Optional."></textarea>
+        </label>
+
+        <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-white text-royalDark hover:bg-gray-100 font-semibold px-8 py-3.5 transition shadow">
+          Book my free consultation
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="text-xs text-white/60 mt-6 leading-relaxed">Includes a website growth conversation + AI visibility audit for Culture Cares Podcast listeners. <span class="text-warm font-semibold">Limited-time listener offer.</span></p>
+      </form>
     </div>
   </section>
 
