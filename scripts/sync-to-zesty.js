@@ -95,19 +95,44 @@ function changedFilePaths() {
 
 async function apiRequest(method, endpointPath, body) {
   const url = `https://${INSTANCE_ZUID}.api.zesty.io/v1${endpointPath}`;
-  const res = await fetch(url, {
+  const options = {
     method,
     headers: {
       Authorization: `Bearer ${TOKEN}`,
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(body),
-  });
+  };
+  // Only attach a body for methods that carry one. Sending an unnecessary body
+  // (even "null") on GET/DELETE trips up some fetch implementations.
+  if (body !== undefined && body !== null) {
+    options.body = JSON.stringify(body);
+  }
+  const res = await fetch(url, options);
   if (!res.ok) {
     const text = await res.text().catch(() => '');
-    throw new Error(`${method} ${endpointPath} → ${res.status} ${text}`);
+    // Attach status + raw body onto the Error so callers can introspect (e.g.
+    // 400 "filename already exists" is a recoverable state, not a hard failure).
+    const err = new Error(`${method} ${endpointPath} → ${res.status} ${text}`);
+    err.status = res.status;
+    err.bodyText = text;
+    throw err;
   }
   return res;
+}
+
+// Scan an existing endpoint (views/stylesheets/scripts) for a resource whose
+// fileName matches. Zesty's /web/<endpoint> list is used because there's no
+// documented single-record lookup by fileName, and the list is typically small
+// enough (hundreds of views, not millions) that a linear scan is fine.
+async function findExistingZuidByFileName(endpoint, fileName) {
+  const res = await apiRequest('GET', `/web/${endpoint}`);
+  const json = await res.json().catch(() => ({}));
+  const items = Array.isArray(json.data) ? json.data : Array.isArray(json) ? json : [];
+  // Zesty sometimes serializes the field as `fileName`, sometimes `file_name`;
+  // both spellings show up in prior payload observations, so accept either.
+  const match = items.find((v) => v && (v.fileName === fileName || v.file_name === fileName));
+  if (!match) return null;
+  return match.ZUID || match.zuid || null;
 }
 
 // Each resource exists in two statuses: "dev" (the stage/working copy) and
@@ -213,13 +238,33 @@ async function createNew(nf, publish) {
   console.log(`✨ ${DRY_RUN ? '[dry-run] ' : ''}Create ${rel} → ${nf.endpoint} (fileName=${fileName}${type ? `, type=${type}` : ''})`);
   if (DRY_RUN) return { section: nf.section, configKey, zuid: 'DRYRUN-ZUID', type };
   const payload = type ? { code, fileName, type } : { code, fileName };
-  const res = await apiRequest('POST', `/web/${nf.endpoint}`, payload);
-  const json = await res.json().catch(() => ({}));
-  const zuid = extractZuid(json);
-  if (!zuid) {
-    throw new Error(`Created ${rel} but no ZUID in response: ${JSON.stringify(json).slice(0, 200)}`);
+  let zuid;
+  try {
+    const res = await apiRequest('POST', `/web/${nf.endpoint}`, payload);
+    const json = await res.json().catch(() => ({}));
+    zuid = extractZuid(json);
+    if (!zuid) {
+      throw new Error(`Created ${rel} but no ZUID in response: ${JSON.stringify(json).slice(0, 200)}`);
+    }
+    console.log(`   → new ZUID ${zuid}`);
+  } catch (err) {
+    // "filename already exists" means Zesty already has a view record for this
+    // fileName — usually because it was created manually in the editor before
+    // its ZUID made it into zesty.config.json. Instead of crashing the whole
+    // sync, look up the existing ZUID and continue as if we'd just created it.
+    // The workflow's writeback step will then map the ZUID forward so future
+    // runs treat it as normal update-in-place.
+    if (err.status === 400 && /filename already exists/i.test(err.bodyText || '')) {
+      console.warn(`   ⚠️  Zesty says fileName=${fileName} already exists — resolving existing ZUID via GET.`);
+      zuid = await findExistingZuidByFileName(nf.endpoint, fileName);
+      if (!zuid) {
+        throw new Error(`Filename conflict on ${rel} (fileName=${fileName}) but couldn't find an existing ZUID via GET /web/${nf.endpoint}. Manual mapping needed in zesty.config.json.`);
+      }
+      console.log(`   → linked existing ZUID ${zuid}`);
+    } else {
+      throw err;
+    }
   }
-  console.log(`   → new ZUID ${zuid}`);
   if (publish) {
     await apiRequest('PUT', `/web/${nf.endpoint}/${zuid}?action=publish&purge_cache=true`, { code });
     console.log(`   → published ${zuid}`);
