@@ -1,0 +1,421 @@
+<!-- ══════════════════════════════════════════════════════════════════════════
+     CMS Pricing Estimator (kaya 2026-09-11 brief section 4)
+
+     Vendor-agnostic estimator. Reads config from an inline JSON script tag
+     with id="estimator-config" that must live on the host page. Every
+     vendor page ships with its own config JSON in that block; nothing
+     vendor-specific is hardcoded here.
+
+     Include pattern (from a /page_html/cms-pricing/[vendor].html file):
+       <script type="application/json" id="estimator-config">
+         { ...vendor config per brief section 1... }
+       </script>
+       {{include /components/cms-pricing-estimator.html}}
+
+     Math verified against kaya's 3 test cases (2026-09-11):
+       #1 new/sitecoreai/500k_2m/12sites/10eds/agency  → $618k-$1,339k, 31%/21%
+       #2 renew/sitecoreai/same                        → $519k-$1,139k
+       #3 renew/legacy_xp/same                         → $595k-$1,422k (sub $265k-$567k)
+     ═════════════════════════════════════════════════════════════════════════ -->
+
+<style>
+  .cpe { --cpe-royal:#4255BD; --cpe-royalDark:#2F3F94; --cpe-ink:#0B0F1C; --cpe-success:#36B37E; --cpe-warn:#FFAB00; }
+  .cpe details > summary::-webkit-details-marker { display:none; }
+  .cpe input[type="range"] { -webkit-appearance:none; appearance:none; height:6px; background:#e5e7eb; border-radius:3px; outline:none; }
+  .cpe input[type="range"]::-webkit-slider-thumb { -webkit-appearance:none; appearance:none; width:20px; height:20px; background:var(--cpe-royal); border-radius:50%; cursor:pointer; }
+  .cpe input[type="range"]::-moz-range-thumb { width:20px; height:20px; background:var(--cpe-royal); border-radius:50%; cursor:pointer; border:none; }
+  .cpe .cpe-radio input:checked + span, .cpe .cpe-checkbox input:checked + span { border-color:var(--cpe-royal); background:rgba(66,85,189,0.06); color:var(--cpe-ink); }
+  .cpe .cpe-radio input, .cpe .cpe-checkbox input { position:absolute; opacity:0; pointer-events:none; }
+  .cpe .cpe-radio input:focus-visible + span, .cpe .cpe-checkbox input:focus-visible + span { outline:2px solid var(--cpe-royal); outline-offset:2px; }
+</style>
+
+<section id="cms-pricing-estimator" class="cpe py-14 lg:py-20 bg-white border-t border-gray-100">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="mb-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-2" data-cpe-vendor-eyebrow>Pricing estimator</p>
+      <h2 class="font-display text-2xl md:text-3xl font-bold text-ink mb-2" data-cpe-title>Enter your setup, see a three-year total.</h2>
+      <p class="text-gray-600 text-sm" data-cpe-subtitle>Low-to-high ranges built from public sources and buyer guides. Every line links to its source.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+      <!-- INPUTS -->
+      <form data-cpe-form class="lg:col-span-2 flex flex-col gap-6" novalidate onsubmit="event.preventDefault();">
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Situation</legend>
+          <div class="grid grid-cols-2 gap-2" data-cpe-situation>
+            <label class="cpe-radio relative block cursor-pointer">
+              <input type="radio" name="situation" value="new" checked />
+              <span class="block text-sm text-center px-4 py-3 rounded-lg border border-gray-300 text-gray-700 transition">Buying for the first time</span>
+            </label>
+            <label class="cpe-radio relative block cursor-pointer">
+              <input type="radio" name="situation" value="renew" />
+              <span class="block text-sm text-center px-4 py-3 rounded-lg border border-gray-300 text-gray-700 transition">Renewing existing contract</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Edition</legend>
+          <div class="flex flex-col gap-2" data-cpe-edition></div>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Annual visits</legend>
+          <input type="range" name="visits" min="0" max="4" step="1" value="1" aria-describedby="cpe-visits-label" />
+          <p id="cpe-visits-label" class="text-sm text-gray-600" data-cpe-visits-label></p>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Websites or brands</legend>
+          <input type="range" name="sites" min="1" max="100" step="1" value="12" aria-describedby="cpe-sites-label" />
+          <p id="cpe-sites-label" class="text-sm text-gray-600"><span data-cpe-sites-label>12</span></p>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Content editors</legend>
+          <input type="range" name="editors" min="1" max="100" step="1" value="10" aria-describedby="cpe-editors-label" />
+          <p id="cpe-editors-label" class="text-sm text-gray-600"><span data-cpe-editors-label>10</span></p>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Implementation</legend>
+          <div class="grid grid-cols-3 gap-2" data-cpe-implementation>
+            <label class="cpe-radio relative block cursor-pointer">
+              <input type="radio" name="implementation" value="agency" checked />
+              <span class="block text-sm text-center px-3 py-3 rounded-lg border border-gray-300 text-gray-700 transition">Agency / partner</span>
+            </label>
+            <label class="cpe-radio relative block cursor-pointer">
+              <input type="radio" name="implementation" value="inhouse" />
+              <span class="block text-sm text-center px-3 py-3 rounded-lg border border-gray-300 text-gray-700 transition">In-house team</span>
+            </label>
+            <label class="cpe-radio relative block cursor-pointer">
+              <input type="radio" name="implementation" value="mixed" />
+              <span class="block text-sm text-center px-3 py-3 rounded-lg border border-gray-300 text-gray-700 transition">Mixed</span>
+            </label>
+          </div>
+        </fieldset>
+
+        <fieldset class="flex flex-col gap-2">
+          <legend class="text-sm font-semibold text-ink mb-2">Add-ons</legend>
+          <div class="flex flex-col gap-2" data-cpe-addons></div>
+        </fieldset>
+      </form>
+
+      <!-- OUTPUT -->
+      <div class="lg:col-span-3 flex flex-col gap-6">
+
+        <!-- Headline + years -->
+        <div class="rounded-2xl border border-gray-200 bg-paper p-6 lg:p-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-2" data-cpe-headline-label>Over three years</p>
+          <p class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink leading-tight" data-cpe-headline>—</p>
+          <div class="grid grid-cols-3 gap-3 mt-6" data-cpe-years>
+            <div class="rounded-xl bg-white p-3 border border-gray-100">
+              <p class="text-xs text-gray-500 mb-1">Year 1</p>
+              <p class="text-sm font-semibold text-ink" data-cpe-y="1">—</p>
+            </div>
+            <div class="rounded-xl bg-white p-3 border border-gray-100">
+              <p class="text-xs text-gray-500 mb-1">Year 2</p>
+              <p class="text-sm font-semibold text-ink" data-cpe-y="2">—</p>
+            </div>
+            <div class="rounded-xl bg-white p-3 border border-gray-100">
+              <p class="text-xs text-gray-500 mb-1">Year 3</p>
+              <p class="text-sm font-semibold text-ink" data-cpe-y="3">—</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 mt-5">Subscription share: <span class="font-semibold text-ink" data-cpe-sub-share>—</span></p>
+          <p class="text-xs text-gray-500 mt-1 hidden" data-cpe-uplift-note></p>
+        </div>
+
+        <!-- Breakdown table -->
+        <div class="rounded-2xl border border-gray-200 bg-white overflow-hidden">
+          <table class="w-full text-sm">
+            <thead class="bg-gray-50 text-gray-700">
+              <tr>
+                <th class="text-left font-semibold p-3">Line</th>
+                <th class="text-right font-semibold p-3">Low</th>
+                <th class="text-right font-semibold p-3">High</th>
+                <th class="text-left font-semibold p-3">Source</th>
+              </tr>
+            </thead>
+            <tbody data-cpe-breakdown class="text-gray-700"></tbody>
+          </table>
+        </div>
+
+        <!-- How we got this number (collapsed) -->
+        <details class="rounded-2xl border border-gray-200 bg-white">
+          <summary class="cursor-pointer p-4 flex items-center justify-between text-sm font-semibold text-ink hover:bg-gray-50 rounded-2xl">
+            <span>How we got this number</span>
+            <svg viewBox="0 0 24 24" class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="p-5 border-t border-gray-100 text-sm text-gray-700" data-cpe-formulas></div>
+        </details>
+
+        <!-- Config notes + accurate-as-of -->
+        <div class="text-xs text-gray-500 space-y-2">
+          <ul class="list-disc list-inside space-y-1" data-cpe-notes></ul>
+          <p class="italic" data-cpe-accurate></p>
+        </div>
+
+        <!-- Content.One panel (behind feature flag per brief 4c) -->
+        <div class="rounded-2xl border-2 border-dashed border-royal/30 bg-royal/[0.03] p-6 hidden" data-cpe-c1-panel>
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-royal mb-2">Content.One for the same setup</p>
+          <p class="text-sm text-gray-700" data-cpe-c1-body>Positioning copy coming soon.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  'use strict';
+
+  var cfgEl = document.getElementById('estimator-config');
+  if (!cfgEl) { console.warn('cms-pricing-estimator: no #estimator-config found'); return; }
+  var CFG;
+  try { CFG = JSON.parse(cfgEl.textContent); } catch (e) { console.error('estimator-config JSON parse error', e); return; }
+
+  var root = document.getElementById('cms-pricing-estimator');
+  if (!root) return;
+
+  // ── Query-string state (brief 4d) ─────────────────────────────────────
+  var QS_KEYS = { situation:'s', edition:'e', visits:'v', sites:'w', editors:'u', implementation:'i', addons:'a' };
+  var params = new URLSearchParams(window.location.search);
+  function readQS() {
+    var out = {};
+    Object.keys(QS_KEYS).forEach(function(k){
+      var v = params.get(QS_KEYS[k]);
+      if (v !== null) out[k] = v;
+    });
+    return out;
+  }
+  function writeQS(state) {
+    var next = new URLSearchParams(window.location.search);
+    Object.keys(QS_KEYS).forEach(function(k){
+      var qk = QS_KEYS[k];
+      if (k === 'addons') { next.set(qk, state.addons.join(',')); if (!state.addons.length) next.delete(qk); }
+      else next.set(qk, state[k]);
+    });
+    var newUrl = window.location.pathname + '?' + next.toString();
+    window.history.replaceState(null, '', newUrl);
+  }
+
+  // ── Populate edition + addon UI from config ───────────────────────────
+  var editionEl = root.querySelector('[data-cpe-edition]');
+  CFG.editions.forEach(function(ed) {
+    var l = document.createElement('label');
+    l.className = 'cpe-radio relative block cursor-pointer';
+    l.innerHTML = '<input type="radio" name="edition" value="' + ed.id + '"' + (ed.default ? ' checked' : '') + ' />'
+      + '<span class="block text-sm px-4 py-3 rounded-lg border border-gray-300 text-gray-700 transition">' + ed.label + '</span>';
+    editionEl.appendChild(l);
+  });
+  var addonsEl = root.querySelector('[data-cpe-addons]');
+  CFG.addons.forEach(function(a) {
+    var l = document.createElement('label');
+    l.className = 'cpe-checkbox relative block cursor-pointer';
+    var priceHint = a.priced && a.annual ? ' <span class="text-xs text-gray-500">' + fmtRange(a.annual) + '/yr</span>' : ' <span class="text-xs text-gray-500 italic">not modeled</span>';
+    l.innerHTML = '<input type="checkbox" name="addons" value="' + a.id + '" />'
+      + '<span class="block text-sm px-4 py-3 rounded-lg border border-gray-300 text-gray-700 transition">' + a.label + priceHint + '</span>';
+    addonsEl.appendChild(l);
+  });
+
+  // ── Visit band labels for the range slider ────────────────────────────
+  var visitsSlider = root.querySelector('input[name="visits"]');
+  visitsSlider.max = String(CFG.visitsBands.length - 1);
+  var visitsLabelEl = root.querySelector('[data-cpe-visits-label]');
+
+  // ── Apply initial state (QS overrides defaults) ───────────────────────
+  var qs = readQS();
+  ['situation','edition','implementation'].forEach(function(name){
+    if (qs[name]) {
+      var el = root.querySelector('input[name="' + name + '"][value="' + qs[name] + '"]');
+      if (el) el.checked = true;
+    }
+  });
+  if (qs.visits) {
+    var idx = CFG.visitsBands.findIndex(function(b){ return b.id === qs.visits; });
+    if (idx >= 0) visitsSlider.value = String(idx);
+  }
+  if (qs.sites) root.querySelector('input[name="sites"]').value = qs.sites;
+  if (qs.editors) root.querySelector('input[name="editors"]').value = qs.editors;
+  if (qs.addons) {
+    qs.addons.split(',').forEach(function(id){
+      var el = root.querySelector('input[name="addons"][value="' + id + '"]');
+      if (el) el.checked = true;
+    });
+  }
+
+  // ── Vendor eyebrow ────────────────────────────────────────────────────
+  var eyebrow = root.querySelector('[data-cpe-vendor-eyebrow]');
+  if (eyebrow) eyebrow.textContent = CFG.label + ' pricing estimator';
+
+  // ── Compute + render ──────────────────────────────────────────────────
+  function readState() {
+    var form = root.querySelector('[data-cpe-form]');
+    var addons = Array.prototype.slice.call(form.querySelectorAll('input[name="addons"]:checked')).map(function(el){return el.value;});
+    var visitsIdx = parseInt(visitsSlider.value, 10);
+    return {
+      situation: form.situation.value,
+      edition: form.edition.value,
+      visits: CFG.visitsBands[visitsIdx].id,
+      sites: parseInt(form.sites.value, 10),
+      editors: parseInt(form.editors.value, 10),
+      implementation: form.implementation.value,
+      addons: addons,
+    };
+  }
+
+  function compute(state, side) {
+    // side = 'low' or 'high'; helper to pick low/high everywhere consistently.
+    function pick(pair) { return pair[side]; }
+    var u = 1 + CFG.upliftPct / 100;
+    var band = CFG.visitsBands.find(function(b){ return b.id === state.visits; });
+    var edition = CFG.editions.find(function(e){ return e.id === state.edition; });
+
+    // Subscription
+    var editorBlocks = Math.max(0, Math.ceil(Math.max(0, state.editors - CFG.editorsAdjust.includedEditors) / CFG.editorsAdjust.perBlock));
+    var editorFactor = 1 + (CFG.editorsAdjust.pctPerBlock[side] / 100) * editorBlocks;
+    var lic_y1 = band.license[side] * edition.licenseMultiplier[side] * editorFactor;
+    var lic = { y1: lic_y1, y2: lic_y1 * u, y3: lic_y1 * u * u, total: lic_y1 + lic_y1 * u + lic_y1 * u * u };
+
+    // Implementation
+    var impl_y1 = 0;
+    if (state.situation === 'new') {
+      var iAgency = CFG.implementation.agency.base[side] + CFG.implementation.agency.perAdditionalSite[side] * (state.sites - 1);
+      var iInhouse = CFG.implementation.inhouse.fteAnnual[side] * Math.max(1, Math.ceil(state.sites / CFG.implementation.inhouse.sitesPerFte));
+      impl_y1 = state.implementation === 'agency' ? iAgency
+              : state.implementation === 'inhouse' ? iInhouse
+              : (iAgency + iInhouse) / 2;
+    }
+    var impl = { y1: impl_y1, y2: 0, y3: 0, total: impl_y1 };
+
+    // Hosting
+    var host_y = band.hosting[side];
+    var host = { y1: host_y, y2: host_y, y3: host_y, total: host_y * 3 };
+
+    // Maintenance
+    var mAgency = CFG.maintenance.agency.base[side] + CFG.maintenance.agency.perSite[side] * state.sites;
+    var mInhouse = CFG.maintenance.inhouse.fteAnnual[side] * Math.max(1, Math.ceil(state.sites / CFG.maintenance.inhouse.sitesPerFte));
+    var mAnnual = state.implementation === 'agency' ? mAgency
+                : state.implementation === 'inhouse' ? mInhouse
+                : (mAgency + mInhouse) / 2;
+    var maint;
+    if (state.situation === 'new') maint = { y1: 0, y2: mAnnual, y3: mAnnual, total: mAnnual * 2 };
+    else maint = { y1: mAnnual, y2: mAnnual, y3: mAnnual, total: mAnnual * 3 };
+
+    // Add-ons (priced only)
+    var addonsAnnual = 0;
+    state.addons.forEach(function(id){
+      var a = CFG.addons.find(function(x){ return x.id === id; });
+      if (a && a.priced && a.annual) addonsAnnual += a.annual[side];
+    });
+    var addons = { y1: addonsAnnual, y2: addonsAnnual * u, y3: addonsAnnual * u * u, total: addonsAnnual + addonsAnnual * u + addonsAnnual * u * u };
+
+    var year1 = lic.y1 + impl.y1 + host.y1 + maint.y1 + addons.y1;
+    var year2 = lic.y2 + impl.y2 + host.y2 + maint.y2 + addons.y2;
+    var year3 = lic.y3 + impl.y3 + host.y3 + maint.y3 + addons.y3;
+    var total = year1 + year2 + year3;
+
+    return { lic:lic, impl:impl, host:host, maint:maint, addons:addons, year1:year1, year2:year2, year3:year3, total:total,
+             editorBlocks:editorBlocks, mAnnual:mAnnual };
+  }
+
+  function fmtK(n) { return '$' + Math.round(n / 1000).toLocaleString() + 'k'; }
+  function fmtRange(pair) { return fmtK(pair.low) + ' – ' + fmtK(pair.high); }
+
+  function render(state) {
+    var lo = compute(state, 'low');
+    var hi = compute(state, 'high');
+
+    var headlineLabel = state.situation === 'renew' ? 'Over your next three-year term' : 'Over three years';
+    root.querySelector('[data-cpe-headline-label]').textContent = headlineLabel;
+    root.querySelector('[data-cpe-headline]').textContent = fmtK(lo.total) + ' – ' + fmtK(hi.total);
+    root.querySelector('[data-cpe-y="1"]').textContent = fmtK(lo.year1) + ' – ' + fmtK(hi.year1);
+    root.querySelector('[data-cpe-y="2"]').textContent = fmtK(lo.year2) + ' – ' + fmtK(hi.year2);
+    root.querySelector('[data-cpe-y="3"]').textContent = fmtK(lo.year3) + ' – ' + fmtK(hi.year3);
+    root.querySelector('[data-cpe-sub-share]').textContent =
+      Math.round(lo.lic.total / lo.total * 100) + '% – ' + Math.round(hi.lic.total / hi.total * 100) + '%';
+
+    var upliftNote = root.querySelector('[data-cpe-uplift-note]');
+    if (state.situation === 'renew') {
+      upliftNote.textContent = 'Applies the ' + CFG.upliftPct + '% annual uplift built into most enterprise CMS renewals.';
+      upliftNote.classList.remove('hidden');
+    } else { upliftNote.classList.add('hidden'); }
+
+    // Breakdown table rows
+    var breakdown = root.querySelector('[data-cpe-breakdown]');
+    var srcMap = {};
+    CFG.sources.forEach(function(s){ srcMap[s.id] = s; });
+    function srcLinks(ids) {
+      return ids.map(function(id){
+        var s = srcMap[id]; if (!s) return id;
+        return '<a href="' + s.url + '" target="_blank" rel="noopener" class="text-royal hover:underline">' + s.label.split(',')[0] + '</a>';
+      }).join(', ');
+    }
+    var rows = [
+      { label: 'Subscription (3 years)', lo: lo.lic.total, hi: hi.lic.total, sources: ['gcloud','dxpscorecard','vendr'] },
+      { label: 'Implementation (year 1)', lo: lo.impl.total, hi: hi.impl.total, sources: ['fishtank_sai','vendr'] },
+      { label: 'Front-end hosting (3 years)', lo: lo.host.total, hi: hi.host.total, sources: ['fishtank_sai'] },
+      { label: 'Maintenance and support', lo: lo.maint.total, hi: hi.maint.total, sources: ['dwao','itjobswatch'] },
+      { label: 'Add-ons (3 years)', lo: lo.addons.total, hi: hi.addons.total, sources: state.addons.length ? state.addons.map(function(id){var a=CFG.addons.find(function(x){return x.id===id;}); return a ? a.source : null;}).filter(Boolean) : [] },
+    ];
+    breakdown.innerHTML = rows.map(function(r){
+      return '<tr class="border-t border-gray-100">'
+        + '<td class="p-3 font-medium text-ink">' + r.label + '</td>'
+        + '<td class="p-3 text-right">' + fmtK(r.lo) + '</td>'
+        + '<td class="p-3 text-right">' + fmtK(r.hi) + '</td>'
+        + '<td class="p-3 text-xs">' + srcLinks(r.sources) + '</td>'
+      + '</tr>';
+    }).join('');
+
+    // Formula panel
+    var band = CFG.visitsBands.find(function(b){return b.id === state.visits;});
+    var edition = CFG.editions.find(function(e){return e.id === state.edition;});
+    var formulas = root.querySelector('[data-cpe-formulas]');
+    formulas.innerHTML = ''
+      + '<p class="mb-3"><strong>Subscription (year 1)</strong>: band [' + fmtRange(band.license) + '] × licence multiplier [' + edition.licenseMultiplier.low + '–' + edition.licenseMultiplier.high + '] × editor factor for ' + lo.editorBlocks + ' block(s) = ' + fmtK(lo.lic.y1) + '–' + fmtK(hi.lic.y1) + '. Uplift ' + CFG.upliftPct + '% applied in years 2 and 3.</p>'
+      + '<p class="mb-3"><strong>Implementation (year 1)</strong>: ' + (state.situation === 'renew' ? '$0 on renewal.' : state.implementation + ' model at ' + state.sites + ' site(s) = ' + fmtK(lo.impl.y1) + '–' + fmtK(hi.impl.y1) + '.') + '</p>'
+      + '<p class="mb-3"><strong>Front-end hosting</strong>: band range ' + fmtRange(band.hosting) + '/yr, no uplift = ' + fmtK(lo.host.total) + '–' + fmtK(hi.host.total) + ' over 3 years.</p>'
+      + '<p class="mb-3"><strong>Maintenance</strong>: ' + fmtK(lo.mAnnual) + '–' + fmtK(hi.mAnnual) + '/yr. ' + (state.situation === 'new' ? 'Years 2 and 3 only for new purchases.' : 'All three years for renewals.') + '</p>'
+      + (state.addons.length ? '<p class="mb-3"><strong>Add-ons</strong>: ' + state.addons.length + ' selected, priced ones sum to ' + fmtK(lo.addons.y1) + '–' + fmtK(hi.addons.y1) + '/yr.</p>' : '<p class="mb-3"><strong>Add-ons</strong>: none selected.</p>')
+      ;
+
+    // Notes + accurate as of
+    var notesEl = root.querySelector('[data-cpe-notes]');
+    notesEl.innerHTML = CFG.notes.map(function(n){ return '<li>' + n + '</li>'; }).join('');
+    var accEl = root.querySelector('[data-cpe-accurate]');
+    var d = CFG.accurateAsOf.split('-'); var monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+    accEl.textContent = 'Accurate as of ' + monthNames[parseInt(d[1],10)-1] + ' ' + d[0] + '.';
+
+    // Fire analytics stub (brief 4h)
+    if (window.gtag) {
+      window.gtag('event', 'estimate_changed', { vendor: CFG.vendor, total_low: Math.round(lo.total), total_high: Math.round(hi.total) });
+    }
+
+    writeQS(state);
+  }
+
+  // ── Wire input events with debounce ────────────────────────────────────
+  var debounceTimer;
+  function scheduleRender() {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(function(){ render(readState()); }, 60);
+  }
+  function updateLabels() {
+    var s = readState();
+    root.querySelector('[data-cpe-sites-label]').textContent = String(s.sites) + (s.sites >= 100 ? '+' : '');
+    root.querySelector('[data-cpe-editors-label]').textContent = String(s.editors) + (s.editors >= 100 ? '+' : '');
+    var band = CFG.visitsBands.find(function(b){ return b.id === s.visits; });
+    if (band) visitsLabelEl.textContent = band.label;
+  }
+  root.querySelector('[data-cpe-form]').addEventListener('input', function(){ updateLabels(); scheduleRender(); });
+  root.querySelector('[data-cpe-form]').addEventListener('change', function(){ updateLabels(); scheduleRender(); });
+
+  // Initial render
+  updateLabels();
+  render(readState());
+  if (window.gtag) window.gtag('event', 'estimate_rendered', { vendor: CFG.vendor });
+})();
+</script>
