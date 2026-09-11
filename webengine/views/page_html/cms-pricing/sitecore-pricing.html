@@ -25,16 +25,67 @@
     </div>
   </section>
 
-  <!-- Estimator placeholder (brief 3b, 4a-h) - full JS component ships in Phase 2 -->
-  <section class="pb-14 lg:pb-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="rounded-2xl border-2 border-dashed border-royal/30 bg-royal/[0.03] p-8 md:p-10">
-        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-3">Sitecore pricing estimator</p>
-        <h2 class="font-display text-2xl md:text-3xl font-bold text-ink mb-3">Enter your setup, see a three-year total.</h2>
-        <p class="text-gray-600 leading-relaxed mb-0">Interactive estimator arrives with the full page. It takes seven inputs (situation, edition, annual visits, sites/brands, editors, implementation approach, add-ons) and shows a low-to-high three-year range with breakdown across licence, implementation, hosting, maintenance, and add-ons.</p>
-      </div>
-    </div>
-  </section>
+  <!-- Estimator config (kaya 2026-09-11 brief section 2). Any Wordify edit
+       to Sitecore numbers happens right here in this JSON block — no code
+       change needed. Component reads this block by id="estimator-config". -->
+  <script type="application/json" id="estimator-config">
+  {
+    "vendor": "sitecore",
+    "label": "Sitecore",
+    "currency": "USD",
+    "accurateAsOf": "2026-09",
+    "upliftPct": 5,
+    "editions": [
+      { "id": "sitecoreai", "label": "SitecoreAI (current packaging)",       "default": true,  "licenseMultiplier": { "low": 1.0, "high": 1.0 } },
+      { "id": "xmcloud",    "label": "XM Cloud (2023 to 2025 contracts)",    "default": false, "licenseMultiplier": { "low": 1.0, "high": 1.0 } },
+      { "id": "legacy_xm",  "label": "Legacy XM (subscription)",             "default": false, "licenseMultiplier": { "low": 1.0, "high": 1.0 } },
+      { "id": "legacy_xp",  "label": "Legacy XP (subscription)",             "default": false, "licenseMultiplier": { "low": 1.4, "high": 2.0 } }
+    ],
+    "visitsBands": [
+      { "id": "lt500k",  "label": "Under 500,000 visits a year", "license": { "low": 40000,  "high": 65000  }, "hosting": { "low": 8000,  "high": 10000 } },
+      { "id": "500k_2m", "label": "500,000 to 2 million",        "license": { "low": 60000,  "high": 90000  }, "hosting": { "low": 10000, "high": 35000 } },
+      { "id": "2m_5m",   "label": "2 to 5 million",              "license": { "low": 90000,  "high": 150000 }, "hosting": { "low": 25000, "high": 45000 } },
+      { "id": "5m_10m",  "label": "5 to 10 million",             "license": { "low": 140000, "high": 250000 }, "hosting": { "low": 30000, "high": 60000 } },
+      { "id": "gt10m",   "label": "More than 10 million",        "license": { "low": 220000, "high": 450000 }, "hosting": { "low": 35000, "high": 90000 } }
+    ],
+    "editorsAdjust": { "includedEditors": 10, "perBlock": 10, "pctPerBlock": { "low": 2, "high": 4 } },
+    "implementation": {
+      "agency":  { "base": { "low": 100000, "high": 230000 }, "perAdditionalSite": { "low": 9000, "high": 20000 } },
+      "inhouse": { "fteAnnual": { "low": 130000, "high": 160000 }, "sitesPerFte": 8 },
+      "mixed":   "average"
+    },
+    "maintenance": {
+      "agency":  { "base": { "low": 58000, "high": 118000 }, "perSite": { "low": 3500, "high": 11000 } },
+      "inhouse": { "fteAnnual": { "low": 130000, "high": 160000 }, "sitesPerFte": 12 },
+      "mixed":   "average"
+    },
+    "addons": [
+      { "id": "dam",             "label": "DAM beyond the included 5 power and 50 consumer users",             "priced": true,  "annual": { "low": 30000, "high": 75000 }, "note": "Content Hub as a standalone product has commonly started at $30,000 to $75,000 a year.", "source": "vendr_guide" },
+      { "id": "personalization", "label": "Personalization and search beyond 20,000 Experience Interactions", "priced": false, "annual": null, "note": "Quoted by Sitecore per tier. Not included in this estimate.", "source": "sitecore_legal" },
+      { "id": "environments",    "label": "Extra non-production environments",                                "priced": false, "annual": null, "note": "Sold as add-ons, price not published. Not included in this estimate.", "source": "fishtank_sai" },
+      { "id": "connect",         "label": "Sitecore Connect (integration platform)",                          "priced": false, "annual": null, "note": "Separate purchase, price not published. Not included in this estimate.", "source": "fishtank_sai" }
+    ],
+    "notes": [
+      "Subscription bands sit inside the public ranges on this page and are anchored to a May 2024 UK G-Cloud quote of roughly $60,000 for 2 million visits, converted at 1.27 USD to GBP.",
+      "Implementation and retainer figures are modeled from published ranges. The FTE counts in the in-house model are a Wordify assumption, not a published figure.",
+      "Renewals assume no rebuild. A move from legacy XP or XM to SitecoreAI is a headless rebuild and should be estimated as a new purchase.",
+      "Perpetual legacy licenses are not modeled. See the cost breakdown table on the page."
+    ],
+    "sources": [
+      { "id": "gcloud",         "label": "UK G-Cloud 14 pricing document, Sitecore XM Cloud (May 2024)",           "url": "https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/702955/406296886725012-pricing-document-2024-05-02-1430.pdf" },
+      { "id": "sitecore_legal", "label": "Sitecore Legal Hub, Order Definitions",                                  "url": "https://www.sitecore.com/legal/order-definitions" },
+      { "id": "fishtank_sai",   "label": "Fishtank, SitecoreAI Pricing and Packaging (Nov 2025)",                  "url": "https://www.getfishtank.com/insights/sitecoreai-pricing-and-package-guide" },
+      { "id": "fishtank_xmc",   "label": "Fishtank, Understanding XM Cloud Pricing (Nov 2024)",                    "url": "https://www.getfishtank.com/insights/sitecore-xm-cloud-pricing" },
+      { "id": "vendr",          "label": "Vendr, Sitecore pricing and plans (2026)",                               "url": "https://www.vendr.com/marketplace/sitecore" },
+      { "id": "vendr_guide",    "label": "Vendr, Sitecore buyer guide (2026)",                                     "url": "https://www.vendr.com/buyer-guides/sitecore" },
+      { "id": "dwao",           "label": "DWAO, AEM vs Sitecore cost comparison",                                  "url": "https://dwao.com/blog/aem-vs-sitecore-in-depth-cost-comparison" },
+      { "id": "itjobswatch",    "label": "ITJobsWatch, Sitecore contract rates, London",                           "url": "https://www.itjobswatch.co.uk/contracts/london/sitecore.do" },
+      { "id": "dxpscorecard",   "label": "The DXP Scorecard, SitecoreAI (Aug 2026)",                               "url": "https://www.dxpscorecard.com/platform/sitecore-ai" }
+    ]
+  }
+  </script>
+
+  {{include /components/cms-pricing-estimator.html}}
 
   <!-- H2 slot: how [Vendor] prices (Wordify) -->
   <section class="py-14 lg:py-20 bg-paper border-t border-gray-100">
