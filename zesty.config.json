@@ -1017,10 +1017,10 @@
                 "createdAt": "2026-07-10T15:02:46Z"
             },
             "/sitemap.xml": {
-                "zuid": "11-a0eaa6de93-2zzclz",
-                "type": "snippet",
-                "updatedAt": "2026-08-07T16:22:50Z",
-                "createdAt": "2026-08-07T16:22:50Z"
+                "zuid": "11-9698a3ccf9-41mjgv",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:35:00Z",
+                "createdAt": "2026-07-26T00:00:00Z"
             },
             "/vendor-partnerships.html": {
                 "zuid": "11-f88692d3cf-tf9vls",
