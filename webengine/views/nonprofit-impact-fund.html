@@ -1,0 +1,511 @@
+<!-- View auto-create trigger 2026-11-04 — sam's Content.One Nonprofit
+     Impact Fund landing page. Standalone top-level view (full head, nav,
+     footer in this file). CSR/philanthropy initiative, not a product
+     sales page. All CTAs route to /contact-us/ which carries the Zoho
+     Bookings experience on the thank-you page (PR #111). NO form on
+     this page — brief is explicit: "Do not create an application form". -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nonprofit Impact Fund | Supporting Nonprofit Fundraising &amp; Growth | Content.One</title>
+  <meta name="description" content="The Content.One Nonprofit Impact Fund supports mission-driven organizations through nonprofit event sponsorships, technology credits, strategic guidance, and resources to help fundraising teams succeed." />
+  <meta property="og:title" content="Content.One Nonprofit Impact Fund" />
+  <meta property="og:description" content="A long-term Content.One commitment to supporting nonprofits through event sponsorships, technology credits, strategic guidance, and the resources fundraising teams need to succeed." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" />
+  <link rel="canonical" href="https://www.content.one/nonprofit-impact-fund.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens. Warm accent (#D97757 terracotta) for
+       the nonprofit-family visual continuity (culture-cares, afp-lead,
+       philanthropy-day). Royal remains primary for authority; warm is
+       the accent that signals warmth + philanthropic, not a sales pitch. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            warm: '#D97757', warmDark: '#B65C40', warmLite: '#F2C8B5',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+    .nif-faq > summary::-webkit-details-marker { display: none; }
+    .nif-faq > summary::marker { content: ""; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <a href="/" class="flex items-center">
+      <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025.png" width="140" alt="Content.One" />
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="/customers/" class="hover:text-royal">Customers</a>
+      <a href="/cms-for-non-profits/" class="hover:text-royal">For Nonprofits</a>
+      <a href="/customers/salvation-army-federated-websites/" class="hover:text-royal">Salvation Army story</a>
+      <a href="mailto:hello@content.one" class="hover:text-royal">hello@content.one</a>
+    </nav>
+    <a href="https://www.content.one/contact-us/" class="inline-flex items-center rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-4 py-2 text-sm transition">
+      Let's talk
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ════════════ 1 — HERO ════════════
+       Editorial, warm-accented hero. Not a sales hook — the headline
+       speaks to the nonprofit's mission first, Content.One's role second.
+       Primary CTA → /contact-us/ (which lands on thank-you with the
+       Zoho Bookings widget via PR #111). Secondary CTA scrolls to the
+       4-pillar section explaining what the fund actually does. -->
+  <section class="pt-14 lg:pt-20 pb-14 lg:pb-20 bg-gradient-to-br from-warm/[0.08] via-warmLite/[0.12] to-white relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-[32rem] h-[32rem] rounded-full bg-warm/15 blur-3xl" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-1/4 w-80 h-80 rounded-full bg-royal/5 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <!-- Hero hierarchy flipped per sam 2026-11-04: the Fund name is now
+           the hero, the mission line is the subtext, body copy tightened
+           from 3 paragraphs to 1 crisp sentence. Information hierarchy
+           reads top-to-bottom: label -> name -> promise -> what -> CTAs. -->
+      <div class="inline-flex items-center gap-3 mb-6">
+        <span class="w-10 h-px bg-warm"></span>
+        <span class="text-xs font-semibold uppercase tracking-[0.22em] text-warmDark">A Content.One initiative</span>
+      </div>
+
+      <h1 class="font-display text-5xl md:text-6xl lg:text-[4.5rem] font-bold tracking-tight text-ink mb-7 leading-[1] max-w-5xl" style="letter-spacing:-1.4px;">The Content.One <span class="text-warm">Nonprofit Impact Fund</span>.</h1>
+
+      <!-- Hero body copy per sam 2026-11-04: lead with the deserves-support
+           promise (display weight), then explain the Fund's scope in a
+           credible paragraph, then close with the conversation invitation.
+           Written to resonate with CSR fundraising execs on nonprofit teams. -->
+      <p class="font-display text-2xl md:text-3xl lg:text-[2.25rem] text-ink leading-tight max-w-3xl mb-6" style="letter-spacing:-0.6px; font-weight:500;">Your mission deserves more than recognition. It deserves support.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-5">Through the Content.One Nonprofit Impact Fund, we&rsquo;re helping nonprofits advance their fundraising goals and amplify their community impact through event sponsorships, in-kind technology contributions, strategic expertise, and other resources.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-9">If you&rsquo;re making a difference, we&rsquo;d love to explore how we can help you make more of it.</p>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-5">
+        <a href="https://www.content.one/contact-us/" class="inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+          Let&rsquo;s talk about your mission
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a href="#how-we-support" class="inline-flex items-center gap-2 rounded-lg border border-gray-300 text-ink hover:border-ink hover:bg-white font-semibold px-6 py-4 text-base transition">
+          How we support nonprofits
+        </a>
+      </div>
+      <p class="text-sm text-gray-500 m-0">Questions or ideas? <a href="mailto:hello@content.one" class="text-warm hover:text-warmDark font-semibold">hello@content.one</a></p>
+    </div>
+  </section>
+
+  <!-- ════════════ 2 — SOCIAL PROOF + SPONSORSHIPS ════════════
+       Sam moved this up from section 4 to sit right under the hero —
+       credibility first, pitch second. Events/programs Content.One
+       supports, each labeled with role (Event Sponsor, Exhibitor, etc.).
+       Mini-CTA at bottom routes to /contact-us/.
+       NOTE: using label/role cards here instead of logo images because
+       I don't have DAM URLs for AFP ICON / AFP LEAD / NSC / Adjoin
+       logos. Flagged to sam in PR to drop image sources in when ready. -->
+  <section class="py-16 lg:py-20 bg-paper border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-3">Showing up for the nonprofit community</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-5 leading-tight" style="letter-spacing:-0.9px;">Proud to stand alongside those who make giving possible.</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">Supporting nonprofits takes more than building technology. It takes showing up &mdash; at the galas, the conferences, the local community events, and the industry conversations that move the sector forward.</p>
+      </div>
+
+      <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 mb-5">Events, programs &amp; communities we&rsquo;ve supported</p>
+
+      <!-- Roster per sam 2026-11-04: all program-level entries use
+           "Program Sponsor"; the two deep nonprofit customer partnerships
+           (Salvation Army, St. Vincent De Paul) use "Digital Transformation
+           Partner". CM World removed; St. Vincent De Paul added in its place. -->
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5 mb-12">
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">AFP ICON</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">Program Sponsor</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">AFP LEAD</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">Program Sponsor</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">Nonprofit Storytelling Conference</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">Program Sponsor</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">Adjoin</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">Program Sponsor</p>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">Kroc Center Annual Conference</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">Program Sponsor</p>
+        </div>
+        <div class="rounded-2xl border border-warm/30 bg-gradient-to-br from-warm/[0.04] to-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">The Salvation Army</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warmDark mt-3 m-0">Digital Transformation Partner</p>
+        </div>
+        <div class="rounded-2xl border border-warm/30 bg-gradient-to-br from-warm/[0.04] to-white p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-lg font-bold text-ink m-0 leading-tight">St. Vincent de Paul</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warmDark mt-3 m-0">Digital Transformation Partner</p>
+        </div>
+        <div class="rounded-2xl border border-warm/40 bg-gradient-to-br from-warm/5 to-warmLite/10 p-5 flex flex-col justify-between min-h-[8rem]">
+          <p class="font-display text-base font-bold text-warmDark m-0 leading-tight">&amp; more</p>
+          <p class="text-xs font-semibold uppercase tracking-[0.12em] text-warm mt-3 m-0">A growing roster of nonprofit conferences, galas, and educational programs</p>
+        </div>
+      </div>
+
+      <!-- Mini-CTA inside the social proof section. -->
+      <div class="rounded-2xl border-2 border-warm/30 bg-white p-6 md:p-8 flex flex-col md:flex-row md:items-center md:justify-between gap-5">
+        <div class="max-w-2xl">
+          <h3 class="font-display text-xl md:text-2xl font-bold text-ink m-0 mb-2 leading-tight">Planning a gala, program, or community initiative?</h3>
+          <p class="text-base text-gray-700 leading-relaxed m-0 mb-1">Tell us what you&rsquo;re working toward. We&rsquo;ll explore how we can help.</p>
+          <p class="text-xs text-gray-500 italic m-0">Sponsorship opportunities are considered individually based on alignment and availability.</p>
+        </div>
+        <a href="https://www.content.one/contact-us/" class="shrink-0 inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-6 py-3 text-sm transition shadow-sm self-start md:self-auto">
+          Talk to us about your initiative
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 3 — WHY WE CREATED THE FUND ════════════
+       Trimmed from ~200 words to ~80 per sam. Keeps the emotional arc
+       (nonprofits do hard work -> work takes resources -> that's why
+       the Fund exists -> payoff for communities) but strips qualifiers
+       and connective fluff. No CTAs — earns the pillar section below. -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-4">Why we created the fund</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-7 leading-tight" style="letter-spacing:-0.9px;">You focus on the impact. We help make more of it possible.</h2>
+
+      <div class="space-y-5">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Nonprofits solve the problems their communities need solved. They raise the money, mobilize the people, and turn generosity into change.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">But meaningful work takes resources &mdash; successful campaigns, strong relationships, technology that gets out of the way, and partners willing to step up.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">We&rsquo;ve worked alongside mission-driven organizations long enough to see the difference the right support can make.</p>
+      </div>
+
+      <div class="mt-8 pt-7 border-t border-gray-200 border-l-4 border-l-warm pl-6 -ml-2">
+        <p class="text-lg md:text-xl text-ink font-semibold leading-snug mb-3" style="letter-spacing:-0.3px;">The Nonprofit Impact Fund exists to extend that work &mdash; and make our resources, expertise, and network available to more organizations doing it.</p>
+        <p class="text-base text-gray-700 leading-relaxed m-0">When nonprofits succeed, communities do too.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 4 — HOW THE FUND SUPPORTS NONPROFITS (4 pillars) ════════════
+       Numbered pillar cards. Each pillar is a vertical card with its
+       lead line, three paragraphs of explainer, and a bold closing line.
+       Shared CTA at the bottom routes to /contact-us/. -->
+  <section id="how-we-support" class="py-20 lg:py-28 bg-paper border-y border-gray-100 scroll-mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-4">Our commitment in action</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-5 leading-tight" style="letter-spacing:-0.9px;">Different missions. Different needs. One shared commitment.</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">No two nonprofits face the same challenges. Our support isn&rsquo;t one program, one platform, or one type of contribution.</p>
+      </div>
+
+      <!-- Pillar cards tightened per sam 2026-11-04 — each pillar now
+           reads as 2 crisp paragraphs + a closing line, not 3-4 full
+           paragraphs. Information preserved; qualifiers stripped. -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+        <!-- Pillar 1 -->
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 md:p-8 flex flex-col gap-4">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-3xl font-bold text-warm leading-none">01</span>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 m-0">Events &amp; community sponsorships</p>
+          </div>
+          <h3 class="font-display text-xl font-bold text-ink m-0 leading-snug">Helping bring important moments to life.</h3>
+          <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+            <p class="m-0">We sponsor and collaborate with nonprofit events &mdash; galas, conferences, educational programs, sector-wide initiatives &mdash; where the right people come together to move missions forward.</p>
+            <p class="m-0">Support can include sponsorships, in-kind contributions, promotional collaboration, or other resources aligned to your initiative.</p>
+          </div>
+          <p class="text-ink text-base font-semibold leading-snug m-0 mt-2">The greatest impact often starts by helping the right people come together.</p>
+        </article>
+
+        <!-- Pillar 2 -->
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 md:p-8 flex flex-col gap-4">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-3xl font-bold text-warm leading-none">02</span>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 m-0">Technology credits &amp; in-kind support</p>
+          </div>
+          <h3 class="font-display text-xl font-bold text-ink m-0 leading-snug">Putting meaningful resources behind meaningful missions.</h3>
+          <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+            <p class="m-0">Eligible nonprofits can be considered for technology credits, nonprofit discounts, and in-kind support to strengthen digital operations, campaigns, and online presence.</p>
+            <p class="m-0">The goal: free up more of your resources for mission-critical work.</p>
+          </div>
+          <p class="text-ink text-base font-semibold leading-snug m-0 mt-2">The right technology should expand what&rsquo;s possible &mdash; not stand in the way.</p>
+        </article>
+
+        <!-- Pillar 3 -->
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 md:p-8 flex flex-col gap-4">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-3xl font-bold text-warm leading-none">03</span>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 m-0">Fundraising, storytelling &amp; digital growth</p>
+          </div>
+          <h3 class="font-display text-xl font-bold text-ink m-0 leading-snug">Helping powerful missions reach more people.</h3>
+          <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+            <p class="m-0">Authentic storytelling, thoughtful digital strategy, and meaningful donor experiences are essential to modern fundraising. We help nonprofits explore stronger ways to communicate impact and reach supporters.</p>
+            <p class="m-0">That can mean educational resources, storytelling initiatives like <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="text-warm hover:text-warmDark font-semibold underline decoration-warm/40">CauseCircle</a>, or connections to relevant expertise.</p>
+          </div>
+          <p class="text-ink text-base font-semibold leading-snug m-0 mt-2">Telling the story of your impact is often the first step toward making more of it possible.</p>
+        </article>
+
+        <!-- Pillar 4 -->
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 md:p-8 flex flex-col gap-4">
+          <div class="flex items-baseline gap-3">
+            <span class="font-display text-3xl font-bold text-warm leading-none">04</span>
+            <p class="text-xs font-semibold uppercase tracking-[0.14em] text-gray-500 m-0">Strategic technology guidance &amp; savings</p>
+          </div>
+          <h3 class="font-display text-xl font-bold text-ink m-0 leading-snug">Helping your resources go further.</h3>
+          <div class="space-y-3 text-base text-gray-600 leading-relaxed">
+            <p class="m-0">Our team takes a fresh look at your digital ecosystem &mdash; websites, fundraising tools, CRMs, communications platforms, vendors &mdash; and finds opportunities to simplify, save, and invest smarter.</p>
+            <p class="m-0">For some organizations that&rsquo;s thousands of dollars reclaimed; for others, a better way to connect systems and support long-term growth.</p>
+          </div>
+          <p class="text-ink text-base font-semibold leading-snug m-0 mt-2">Decisions that serve your organization &mdash; not more software to buy.</p>
+        </article>
+      </div>
+
+      <div class="text-center">
+        <a href="https://www.content.one/contact-us/" class="inline-flex items-center gap-2 rounded-lg bg-royal hover:bg-royalDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+          Explore how we can support your organization
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 5 — WHY CONTENT.ONE + SALVATION ARMY PROOF ════════════
+       Dark panel for visual weight. Salvation Army case = flagship proof
+       of nonprofit experience. 4 stat tiles from brief:
+       3,000+ locations / +50% traffic / +115% service clicks / 5 to 1 CMSs.
+       Explicit builder-note language: SA is NOT a Fund award recipient;
+       it's a Content.One nonprofit customer that demonstrates capability. -->
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-ink to-royalDark text-white relative overflow-hidden">
+    <div class="absolute -top-24 right-10 w-72 h-72 rounded-full bg-warm/15 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="max-w-3xl mb-14">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">Experience that goes beyond good intentions</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="letter-spacing:-0.9px;">We believe in nonprofit missions. We also understand what it takes to support them at scale.</h2>
+        <p class="text-lg text-white/85 leading-relaxed">Behind every fundraising campaign, community program, and national initiative is a team working to do more with what they have. Our experience helps connect nonprofits with practical ideas, resources, and digital expertise.</p>
+      </div>
+
+      <div class="rounded-3xl bg-white/[0.04] border border-white/10 p-8 md:p-12 mb-6">
+        <p class="text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-3">Featured impact story</p>
+        <h3 class="font-display text-2xl md:text-3xl lg:text-4xl font-bold mb-3 leading-tight" style="letter-spacing:-0.5px;">The Salvation Army</h3>
+        <p class="text-lg text-warm font-semibold mb-6 leading-snug">One mission. More than 3,000 locations. A stronger digital foundation.</p>
+        <p class="text-base text-white/85 leading-relaxed mb-8 max-w-3xl">The Salvation Army partnered with Content.One to unify a fragmented national digital ecosystem and make it easier for local teams to publish content, connect people with services, and support their communities.</p>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-8">
+          <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-5 md:p-6">
+            <p class="font-display text-3xl md:text-4xl font-bold text-warm m-0 leading-none">3,000+</p>
+            <p class="text-sm text-white/75 mt-3 m-0 leading-snug">Locations unified through one national digital platform</p>
+          </div>
+          <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-5 md:p-6">
+            <p class="font-display text-3xl md:text-4xl font-bold text-warm m-0 leading-none">+50%</p>
+            <p class="text-sm text-white/75 mt-3 m-0 leading-snug">Growth in website traffic</p>
+          </div>
+          <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-5 md:p-6">
+            <p class="font-display text-3xl md:text-4xl font-bold text-warm m-0 leading-none">+115%</p>
+            <p class="text-sm text-white/75 mt-3 m-0 leading-snug">Increase in service clicks</p>
+          </div>
+          <div class="rounded-2xl bg-white/[0.05] border border-white/10 p-5 md:p-6">
+            <p class="font-display text-3xl md:text-4xl font-bold text-warm m-0 leading-none">5 &rarr; 1</p>
+            <p class="text-sm text-white/75 mt-3 m-0 leading-snug">Content management systems consolidated</p>
+          </div>
+        </div>
+
+        <p class="text-base text-white/80 leading-relaxed mb-6 max-w-3xl italic">The transformation shows what&rsquo;s possible when organizations have a stronger digital foundation supporting their work.</p>
+
+        <a href="/customers/salvation-army-federated-websites/" class="inline-flex items-center gap-2 rounded-lg bg-white text-royalDark hover:bg-gray-100 font-semibold px-6 py-3 text-base transition shadow-sm">
+          Read The Salvation Army story
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 6 — WORKING TOGETHER ════════════
+       Conversational section — "no application process, just a conversation."
+       Explicit framing to counter any sense that visitors need to qualify. -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-4">Let&rsquo;s make an impact together</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-7 leading-tight" style="letter-spacing:-0.9px;">Tell us what you&rsquo;re working toward.</h2>
+
+      <!-- Four self-identifying entry points — kept, tightened. These do
+           real conversion work by letting visitors locate themselves. -->
+      <div class="space-y-4 mb-8">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Maybe you&rsquo;re planning an important fundraising event.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Maybe you&rsquo;re looking for a partner on a community initiative.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Maybe you&rsquo;re evaluating expensive technology or searching for better ways to reach supporters.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed">Maybe you have a bold idea that could use the right collaboration.</p>
+      </div>
+
+      <p class="font-display text-xl md:text-2xl text-ink font-bold leading-snug mb-5" style="letter-spacing:-0.3px;">We&rsquo;d love to hear about it.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-10">Every conversation starts with your mission and your goals. Where there&rsquo;s a fit, we&rsquo;ll explore how Content.One can contribute.</p>
+
+      <div class="rounded-2xl border-2 border-warm/30 bg-paper p-6 md:p-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5">
+          <a href="https://www.content.one/contact-us/" class="shrink-0 inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+            Let&rsquo;s start a conversation
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <div>
+            <p class="text-sm text-ink font-semibold m-0 mb-1">No lengthy application process.</p>
+            <p class="text-sm text-gray-600 m-0">Just a conversation about your mission and what&rsquo;s possible.</p>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm text-gray-500 mt-5">Questions or partnership ideas? Email <a href="mailto:hello@content.one" class="text-warm hover:text-warmDark font-semibold">hello@content.one</a>.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 7 — FAQ ════════════
+       7 questions from brief, native details/summary pattern.
+       First one open so visitors see the format. -->
+  <section class="py-20 lg:py-28 bg-paper border-t border-gray-100">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ink leading-tight" style="letter-spacing:-0.6px;">A little more about the Nonprofit Impact Fund.</h2>
+      </div>
+      <div class="grid gap-0 divide-y divide-gray-200 border-y border-gray-200">
+        <details open class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What is the Content.One Nonprofit Impact Fund?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="text-gray-700 pb-5 space-y-3">
+            <p class="m-0">It&rsquo;s Content.One&rsquo;s initiative to support nonprofit organizations and the communities they serve through selected sponsorships, in-kind technology support, strategic guidance, educational resources, and collaborative opportunities.</p>
+            <p class="m-0">Our aim is to contribute to the fundraising success, growth, and long-term sustainability of mission-driven organizations.</p>
+          </div>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">What kinds of organizations does the Fund support?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="text-gray-700 pb-5 space-y-3">
+            <p class="m-0">We welcome conversations with registered nonprofit organizations, foundations, nonprofit networks, fundraising teams, and mission-driven organizations.</p>
+            <p class="m-0">We&rsquo;re particularly interested in opportunities where our resources, expertise, or relationships can contribute meaningfully to an organization&rsquo;s goals.</p>
+          </div>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Can our nonprofit request sponsorship for a gala, event, or program?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="text-gray-700 pb-5 space-y-3">
+            <p class="m-0">Absolutely. We welcome conversations about nonprofit events, fundraising initiatives, community programs, and educational opportunities.</p>
+            <p class="m-0">Sponsorships and contributions are considered individually, based on the nature of the opportunity and available resources.</p>
+          </div>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Does the Fund provide direct financial grants?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">The Fund is primarily focused on in-kind technology support, applicable credits or discounts, strategic resources, and selected sponsorship opportunities rather than unrestricted cash grants. The specific form of support depends on the opportunity.</p>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Do we need to be a Content.One customer?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="text-gray-700 pb-5 space-y-3">
+            <p class="m-0">You don&rsquo;t need to be an existing Content.One customer to start a conversation with us.</p>
+            <p class="m-0">Some forms of technology support may be tied to particular services or eligibility requirements, but we&rsquo;re happy to explore your organization&rsquo;s needs and determine whether there&rsquo;s a relevant opportunity to work together.</p>
+          </div>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">Can Content.One help us review our existing technology and vendor spending?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <p class="text-gray-700 pb-5 m-0">Yes. Our team can discuss your existing digital ecosystem and explore opportunities for improving efficiency, reducing unnecessary costs, or identifying appropriate technology partners. The scope and availability of a deeper review are determined individually.</p>
+        </details>
+        <details class="nif-faq group">
+          <summary class="flex items-start justify-between gap-6 cursor-pointer py-5 list-none">
+            <span class="font-semibold text-lg text-ink">How do we get started?</span>
+            <span class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center shrink-0 transition group-open:rotate-45 text-gray-500"><svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </summary>
+          <div class="text-gray-700 pb-5 space-y-3">
+            <p class="m-0">Simply reach out through our <a href="https://www.content.one/contact-us/" class="text-warm hover:text-warmDark font-semibold underline decoration-warm/40">Contact Us page</a> to start a conversation, or email <a href="mailto:hello@content.one" class="text-warm hover:text-warmDark font-semibold underline decoration-warm/40">hello@content.one</a> with a little information about your organization and what you&rsquo;re hoping to accomplish.</p>
+            <p class="m-0">No separate application is required.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 8 — FINAL CTA ════════════
+       Warm gradient, centered, reinforces the "conversation, not application"
+       framing one more time before the user leaves or converts. -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-warm via-warmDark to-warm text-white text-center relative overflow-hidden">
+    <div class="absolute -top-20 left-1/2 -translate-x-1/2 w-[32rem] h-[32rem] rounded-full bg-white/10 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-white/80 mb-4">The Content.One Nonprofit Impact Fund</p>
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight" style="letter-spacing:-0.9px;">You&rsquo;re making an impact. We&rsquo;d love to be part of it.</h2>
+
+      <p class="text-lg text-white/90 leading-relaxed mb-4">Every fundraiser, every program, every story that moves someone to give brings your mission one step closer.</p>
+      <p class="text-base text-white/85 leading-relaxed mb-9">If your organization is doing meaningful work, we want to hear about it.</p>
+
+      <a href="https://www.content.one/contact-us/" class="inline-flex items-center gap-2 rounded-lg bg-white text-warmDark hover:bg-gray-100 font-semibold px-8 py-4 text-base transition shadow-sm">
+        Let&rsquo;s talk about your mission
+        <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <p class="text-sm text-white/80 mt-7">Have questions, a sponsorship proposal, or an idea for collaboration?<br />
+        <a href="mailto:hello@content.one" class="text-white hover:text-warmLite font-semibold underline decoration-white/40">hello@content.one</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bg-ink text-white py-12 border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Legal disclaimer (per brief FOOTER NOTE) -->
+    <p class="text-xs text-white/60 leading-relaxed max-w-4xl mb-10">The Content.One Nonprofit Impact Fund is a Content.One initiative offering selected sponsorship, technology, advisory, and community support opportunities. All contributions and support are determined individually and are subject to availability, eligibility, and applicable terms. Technology credits and discounts may apply only to specific services. The Fund does not guarantee financial grants, sponsorship awards, fundraising outcomes, or cost savings.</p>
+
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8 border-t border-white/10">
+      <div class="flex items-center gap-3">
+        <img src="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" width="24" alt="Content.One" />
+        <span class="text-sm text-white/70">&copy; 2026 Content.One, built for mission-driven organizations.</span>
+      </div>
+      <div class="flex items-center gap-5 text-sm text-white/70">
+        <a href="/cms-for-non-profits/" class="hover:text-white">For Nonprofits</a>
+        <a href="/customers/salvation-army-federated-websites/" class="hover:text-white">Salvation Army story</a>
+        <a href="/contact-us/" class="hover:text-white">Contact</a>
+        <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

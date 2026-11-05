@@ -1,0 +1,522 @@
+<!-- View auto-create trigger 2026-10-22 — sam's CauseCircle National
+     Philanthropy Spotlight landing. Standalone top-level view (full head,
+     nav, footer in this file). Event: National Philanthropy Day, Nov 15,
+     2026. CauseCircle-branded (warm palette), Content.One attribution,
+     embedded Zoho NonprofitApplicationForm. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>National Philanthropy Spotlight 2026 — CauseCircle, powered by Content.One</title>
+  <meta name="description" content="For National Philanthropy Day on November 15, CauseCircle is spotlighting nonprofits making a difference. Selected nonprofits receive sponsored features across major national media outlets. Free to participate." />
+  <meta property="og:title" content="National Philanthropy Spotlight 2026 — CauseCircle" />
+  <meta property="og:description" content="Your work deserves a bigger spotlight. In honor of National Philanthropy Day on Nov 15, CauseCircle is spotlighting nonprofits making a meaningful difference." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/2.png" />
+  <link rel="canonical" href="https://www.content.one/philanthropy-day-2026.html" />
+  <link rel="icon" href="https://hj5v68xn.media.zestyio.com/content-one-brand-2025-square.png" type="image/png" sizes="196x196" />
+
+  <!-- Tailwind CDN + brand tokens. CauseCircle leads with warm (#D97757);
+       Content.One blue (royal) is secondary attribution. Same palette used
+       in culture-cares.html + afp-lead-2026.html for the nonprofit family. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            royal: '#4255BD', royalDark: '#2F3F94', royalLite: '#8C9BE6',
+            ink: '#0B0F1C', paper: '#FAFAFC',
+            warm: '#D97757', warmDark: '#B65C40', warmLite: '#F2C8B5',
+            success: '#36B37E', info: '#0DCAF0', warning: '#FFAB00', danger: '#FF5630',
+          },
+          fontFamily: {
+            display: ['"DM Sans"', 'system-ui', 'sans-serif'],
+            sans:    ['"Satoshi"', '"DM Sans"', 'system-ui', 'sans-serif'],
+            mono:    ['"DM Mono"', 'ui-monospace', 'monospace'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.cdnfonts.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,100..900;1,500&family=DM+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/satoshi" />
+
+  <style>
+    body { font-family: 'Satoshi', 'DM Sans', system-ui, sans-serif; margin: 0; background: #fff; color: #0B0F1C; }
+  </style>
+
+  {{include /-/isolated-page-marketing-snippet.html}}
+</head>
+<body class="font-sans">
+
+<header class="bg-white border-b border-gray-100 sticky top-0 z-40">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between py-3">
+    <!-- Dual-brand lockup: CauseCircle leads, Content.One powered-by. -->
+    <a href="/" class="flex items-center gap-3">
+      <img src="https://hj5v68xn.media.zestyio.com/2.png" width="36" height="36" alt="CauseCircle" class="h-9 w-auto" />
+      <span class="flex flex-col leading-tight">
+        <span class="font-display font-bold text-ink text-base">CauseCircle</span>
+        <span class="text-[10px] uppercase tracking-[0.14em] text-gray-500 font-semibold">powered by Content.One</span>
+      </span>
+    </a>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-700">
+      <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="hover:text-warm">CauseCircle</a>
+      <a href="/cms-for-non-profits/" class="hover:text-warm">For Nonprofits</a>
+      <a href="mailto:hello@causecircle.org" class="hover:text-warm">Contact</a>
+    </nav>
+    <a href="#spotlight-form" class="inline-flex items-center rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-4 py-2 text-sm transition">
+      Submit Spotlight
+    </a>
+  </div>
+</header>
+
+<main>
+
+  <!-- ════════════ 1 — HERO ════════════
+       CauseCircle-forward hero. Warm gradient background. Logo + eyebrow,
+       H1, event date hook (Nov 15), lead paragraphs, primary CTA scrolls
+       to spotlight form at bottom. -->
+  <section class="pt-14 lg:pt-20 pb-14 lg:pb-20 bg-gradient-to-br from-warm/[0.08] via-warmLite/[0.15] to-white relative overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-warm/15 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <!-- Event eyebrow -->
+      <div class="inline-flex items-center gap-3 mb-8">
+        <img src="https://hj5v68xn.media.zestyio.com/2.png" width="48" height="48" alt="CauseCircle logo" class="h-12 w-auto" />
+        <div class="flex flex-col leading-tight">
+          <span class="text-xs font-semibold uppercase tracking-[0.14em] text-warm">CauseCircle National Philanthropy Spotlight 2026</span>
+          <span class="text-sm text-gray-600">Celebrating the nonprofits making a difference in their communities.</span>
+        </div>
+      </div>
+
+      <h1 class="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold tracking-tight text-ink mb-6 leading-[1.05] max-w-4xl" style="letter-spacing:-1px;">Your work deserves a bigger spotlight.</h1>
+
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mb-5">Every day, nonprofits are solving hard problems, strengthening communities, and creating change that deserves to be seen.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-5">In honor of <strong class="text-ink">National Philanthropy Day on November 15</strong>, CauseCircle is spotlighting nonprofits making a meaningful difference in the communities they serve.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-5">Selected nonprofits will be featured through CauseCircle&rsquo;s National Philanthropy campaign, including <strong class="text-ink">sponsored features across major national media outlets</strong>, CauseCircle communications, and our nonprofit community.</p>
+
+      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-8">And because awareness should lead somewhere meaningful, your feature can point readers directly to your <strong class="text-ink">GivingTuesday campaign, donation page, volunteer opportunity, website, or another resource you want more people to discover.</strong></p>
+
+      <div class="inline-flex items-center gap-2 rounded-full bg-warm/10 border border-warm/30 px-4 py-2 mb-8">
+        <svg viewBox="0 0 24 24" class="w-4 h-4 text-warm" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+        <span class="text-sm font-semibold text-warmDark">Free to participate. Simple to submit.</span>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+        <a href="#spotlight-form" class="inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+          Participate in the National Philanthropy Spotlight
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <p class="text-sm text-gray-500 m-0">Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmDark font-semibold">hello@causecircle.org</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 2 — PARTICIPATE IN 2 STEPS ════════════
+       Two paths side by side: new-to-CauseCircle (2 steps) vs
+       already-have-profile (skip to form). Each has distinct accent
+       so visitors can self-identify at a glance. -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-4 leading-tight" style="letter-spacing:-0.9px;">Participate in 2 Simple Steps</h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Path A: New to CauseCircle -->
+        <article class="rounded-2xl border-2 border-warm/30 bg-white p-8 md:p-10 flex flex-col gap-6">
+          <div class="flex items-center gap-3 pb-5 border-b border-gray-100">
+            <span class="w-9 h-9 rounded-full bg-warm/15 text-warm flex items-center justify-center font-bold text-sm">A</span>
+            <h3 class="font-display text-xl font-bold text-ink m-0">New to CauseCircle?</h3>
+          </div>
+
+          <div class="flex gap-4">
+            <span class="font-display text-4xl font-bold text-warm leading-none shrink-0">1</span>
+            <div>
+              <h4 class="font-display text-lg font-semibold text-ink m-0 mb-2">Add your nonprofit to CauseCircle</h4>
+              <p class="text-gray-600 text-base leading-relaxed m-0 mb-4">Create your nonprofit profile with our simple signup form. <strong class="text-ink">It&rsquo;s free and only takes a few minutes.</strong></p>
+              <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border-2 border-warm text-warm hover:bg-warm hover:text-white font-semibold px-5 py-2.5 text-sm transition">
+                Add Your Nonprofit — It&rsquo;s Free
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="flex gap-4 pt-2">
+            <span class="font-display text-4xl font-bold text-warm leading-none shrink-0">2</span>
+            <div>
+              <h4 class="font-display text-lg font-semibold text-ink m-0 mb-2">Submit your Spotlight form</h4>
+              <p class="text-gray-600 text-base leading-relaxed m-0 mb-4">Tell us a little about your organization, the impact you&rsquo;ve made this year, and the work you want more people to know about.</p>
+              <a href="#spotlight-form" class="inline-flex items-center gap-1.5 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-5 py-2.5 text-sm transition">
+                Submit Your Spotlight
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Path B: Already on CauseCircle -->
+        <article class="rounded-2xl bg-ink text-white p-8 md:p-10 flex flex-col gap-6 relative overflow-hidden">
+          <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-warm/20 blur-3xl" aria-hidden="true"></div>
+          <div class="relative flex flex-col gap-6 h-full">
+            <div class="flex items-center gap-3 pb-5 border-b border-white/10">
+              <span class="w-9 h-9 rounded-full bg-warm text-white flex items-center justify-center font-bold text-sm">B</span>
+              <h3 class="font-display text-xl font-bold m-0">Already have a CauseCircle profile?</h3>
+            </div>
+            <div class="flex-1 flex flex-col justify-center">
+              <p class="text-white/90 text-lg leading-relaxed mb-6">You can skip straight to the Spotlight form.</p>
+              <a href="#spotlight-form" class="inline-flex items-center gap-2 self-start rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-6 py-3 text-base transition shadow-sm">
+                Submit Your Spotlight
+                <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            </div>
+            <p class="text-sm text-white/60 m-0 pt-5 border-t border-white/10">That&rsquo;s it. <span class="text-warm font-semibold">Selected nonprofits will be notified during the first week of November.</span></p>
+          </div>
+        </article>
+      </div>
+
+      <p class="text-center text-sm text-gray-500 mt-10">Questions about participating? Email <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmDark font-semibold">hello@causecircle.org</a>.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 3 — WHY PARTICIPATE (5 value props) ════════════ -->
+  <section class="py-20 lg:py-28 bg-paper border-y border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-5 leading-tight" style="letter-spacing:-0.9px;">A few minutes could put your mission in front of more people.</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-2">This isn&rsquo;t a contest to see who can write the best application.</p>
+        <p class="text-base text-gray-600 leading-relaxed">It&rsquo;s an opportunity to recognize the work nonprofits are already doing &mdash; and help more people discover it.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-3">
+          <div class="w-11 h-11 rounded-lg bg-warm/15 text-warm flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2"/><polyline points="17 2 12 7 7 2"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink m-0 leading-snug">National media spotlight</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Selected nonprofits will receive <strong class="text-ink">sponsored features across major national media outlets</strong>, helping bring greater awareness to their mission, impact, and community.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-3">
+          <div class="w-11 h-11 rounded-lg bg-warm/15 text-warm flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><polyline points="12 12 15 15"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink m-0 leading-snug">Send people where support matters</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0 mb-2">Your spotlight can direct readers straight to your:</p>
+          <ul class="list-none p-0 m-0 space-y-1.5 text-sm text-gray-600">
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>GivingTuesday campaign</li>
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>Donation page</li>
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>Volunteer opportunity</li>
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>Website</li>
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>Program or campaign</li>
+            <li class="flex gap-2 items-start"><span class="text-warm">&bull;</span>Any other resource you want to amplify</li>
+          </ul>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-3">
+          <div class="w-11 h-11 rounded-lg bg-warm/15 text-warm flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink m-0 leading-snug">CauseCircle amplification</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">We&rsquo;ll also highlight selected nonprofits across <strong class="text-ink">CauseCircle&rsquo;s communications, social channels, and growing nonprofit community.</strong></p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-3">
+          <div class="w-11 h-11 rounded-lg bg-warm/15 text-warm flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink m-0 leading-snug">A feature you can share</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Use your spotlight across your own newsletters, social media, donor communications, GivingTuesday outreach, and community updates.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-3">
+          <div class="w-11 h-11 rounded-lg bg-warm/15 text-warm flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 24 24" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 class="font-display text-lg font-semibold text-ink m-0 leading-snug">Completely free</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">There is <strong class="text-ink">no application fee and no cost to be selected or featured.</strong></p>
+        </article>
+        <article class="rounded-2xl bg-gradient-to-br from-warm to-warmDark text-white p-7 flex flex-col justify-center gap-4">
+          <p class="font-display text-xl font-bold leading-snug m-0">Ready when you are.</p>
+          <p class="text-white/90 text-base leading-relaxed m-0">Submit your Spotlight in a few minutes. Selected nonprofits notified first week of November.</p>
+          <a href="#spotlight-form" class="inline-flex items-center gap-2 rounded-lg bg-white text-warmDark hover:bg-gray-100 font-semibold px-5 py-2.5 text-sm transition self-start mt-2">
+            Participate now
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 4 — EMOTIONAL ANCHOR ("celebrate the work") ════════════ -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-8 leading-tight" style="letter-spacing:-0.9px;">We want to celebrate the work behind the mission.</h2>
+
+      <p class="text-lg text-gray-700 leading-relaxed mb-5">Some of the most important nonprofit work never makes the headlines.</p>
+
+      <div class="border-l-4 border-warm/40 pl-6 py-2 mb-5 space-y-3">
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed m-0">It happens when a volunteer stays late.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed m-0">When a family gets the support it needed.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed m-0">When a program reaches one more community.</p>
+        <p class="text-base md:text-lg text-gray-700 leading-relaxed m-0">When a team finds a way forward despite limited resources, growing needs, and difficult circumstances.</p>
+      </div>
+
+      <p class="text-base text-gray-700 leading-relaxed mb-5">National Philanthropy Day is an opportunity to recognize the organizations behind those moments.</p>
+
+      <p class="font-display text-xl md:text-2xl text-ink font-semibold leading-snug mb-3" style="letter-spacing:-0.3px;">Tell us what your nonprofit made possible this year.</p>
+
+      <p class="text-base text-gray-600 leading-relaxed">We&rsquo;ll help selected organizations bring that work to a bigger audience.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 5 — WHAT TO SHARE (5 prompts) ════════════ -->
+  <section class="py-20 lg:py-28 bg-gradient-to-b from-paper via-warm/[0.04] to-paper">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-12">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-5 leading-tight" style="letter-spacing:-0.9px;">What should you share?</h2>
+        <p class="text-lg text-gray-700 leading-relaxed mb-3">You don&rsquo;t need a perfectly polished story or a major national campaign.</p>
+        <p class="text-base text-gray-700 leading-relaxed">We want to hear about <strong class="text-ink">real work and real impact.</strong></p>
+      </div>
+
+      <p class="text-sm uppercase tracking-[0.14em] font-semibold text-warm mb-6">You might tell us about:</p>
+
+      <div class="space-y-5">
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+          <h3 class="font-display text-lg md:text-xl font-semibold text-ink m-0 mb-2">A community you reached</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Did your organization expand into a new neighborhood, serve more people, or reach a group that previously lacked access?</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+          <h3 class="font-display text-lg md:text-xl font-semibold text-ink m-0 mb-2">A program that made a difference</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Did you launch something new, grow an existing program, or see a meaningful outcome from your work?</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+          <h3 class="font-display text-lg md:text-xl font-semibold text-ink m-0 mb-2">A challenge your organization took on</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">What problem is becoming more urgent &mdash; and what is your team doing about it?</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+          <h3 class="font-display text-lg md:text-xl font-semibold text-ink m-0 mb-2">A milestone worth celebrating</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Maybe you mobilized volunteers, expanded services, reached a fundraising goal, helped more families, or achieved something your team has worked toward for years.</p>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-6 md:p-7">
+          <h3 class="font-display text-lg md:text-xl font-semibold text-ink m-0 mb-2">A moment that reminded you why the work matters</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Sometimes one person, one family, one volunteer, or one community moment says more about your mission than a dozen statistics.</p>
+        </article>
+      </div>
+
+      <p class="text-center font-display text-xl text-warm font-semibold mt-10" style="letter-spacing:-0.3px;">If it mattered to your community, we want to hear about it.</p>
+    </div>
+  </section>
+
+  <!-- ════════════ 6 — READY TO PARTICIPATE (compact path reminder) ════════════ -->
+  <section class="py-16 lg:py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-10">
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-ink leading-tight" style="letter-spacing:-0.6px;">Ready to participate?</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="rounded-2xl border border-gray-200 bg-paper p-7 text-center md:text-left">
+          <h3 class="font-display text-lg font-semibold text-ink m-0 mb-2">New to CauseCircle?</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0 mb-4">Add your nonprofit first, then complete the short Spotlight form below.</p>
+          <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 rounded-lg border-2 border-warm text-warm hover:bg-warm hover:text-white font-semibold px-5 py-2.5 text-sm transition">
+            Add Your Nonprofit — It&rsquo;s Free
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </div>
+        <div class="rounded-2xl border border-gray-200 bg-paper p-7 text-center md:text-left">
+          <h3 class="font-display text-lg font-semibold text-ink m-0 mb-2">Already on CauseCircle?</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0 mb-4">You&rsquo;re ready to submit.</p>
+          <a href="#spotlight-form" class="inline-flex items-center gap-1.5 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-5 py-2.5 text-sm transition">
+            Jump to the Spotlight Form
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════ 7 — SPOTLIGHT FORM (ANCHOR AT BOTTOM) ════════════
+       Zoho NonprofitApplicationForm embedded via supplied HTML. Field
+       names preserved exactly (Name_First, Name_Last, Email, SingleLine,
+       SingleLine1, MultiLine, MultiLine1, MultiLine2, MultiLine3, Website)
+       — Zoho drops empty values when field names don't match its schema.
+       Styled with Tailwind over the dark panel, warm accents. Submission
+       tagged zf_referrer_name=philanthropy-day-2026 for Zoho attribution. -->
+  <section id="spotlight-form" class="py-20 lg:py-28 bg-gradient-to-br from-ink via-royalDark to-ink text-white relative overflow-hidden scroll-mt-20">
+    <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-80 h-80 rounded-full bg-warm/20 blur-3xl" aria-hidden="true"></div>
+    <div class="absolute bottom-10 right-10 w-72 h-72 rounded-full bg-warm/15 blur-3xl" aria-hidden="true"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="text-center mb-10">
+        <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
+          <span class="w-8 h-px bg-warm"></span>
+          Spotlight application form
+        </span>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Tell us about the work you&rsquo;re doing.</h2>
+        <p class="text-base md:text-lg text-white/85 leading-relaxed mb-3"><strong class="text-white">No long application. No complicated nomination process.</strong></p>
+        <p class="text-base md:text-lg text-white/80 leading-relaxed">Share a little about your nonprofit, the impact you&rsquo;ve made this year, and the work you want more people to know about.</p>
+      </div>
+
+      <form
+        action="https://forms.zohopublic.com/zestyio/form/NonprofitApplicationForm/formperma/JfqLlMa7XCIQG7UzucQtrMHQY2KVPN3W28q7Q26KY58/htmlRecords/submit"
+        name="form"
+        id="form"
+        method="POST"
+        accept-charset="UTF-8"
+        enctype="multipart/form-data"
+        class="rounded-2xl bg-white/[0.05] border border-white/10 p-6 md:p-8 backdrop-blur"
+      >
+        <input type="hidden" name="zf_referrer_name" value="philanthropy-day-2026">
+        <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=spotlight&source=philanthropy-day-2026">
+        <input type="hidden" name="zc_gad" value="">
+
+        <!-- Name row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">First name <span class="text-warm">*</span></span>
+            <input type="text" name="Name_First" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">Last name <span class="text-warm">*</span></span>
+            <input type="text" name="Name_Last" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+        </div>
+
+        <!-- Email -->
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Email <span class="text-warm">*</span></span>
+          <input type="email" name="Email" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="you@organization.org" />
+          <span class="block text-xs text-white/55 mt-2">We&rsquo;ll use this to contact you if your nonprofit is selected.</span>
+        </label>
+
+        <!-- Org + Title row -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">Nonprofit organization <span class="text-warm">*</span></span>
+            <input type="text" name="SingleLine" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+          <label class="block">
+            <span class="block text-sm font-semibold text-white/90 mb-2">Your title <span class="text-warm">*</span></span>
+            <input type="text" name="SingleLine1" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
+          </label>
+        </div>
+
+        <!-- What does your nonprofit do? -->
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">What does your nonprofit do? <span class="text-warm">*</span></span>
+          <span class="block text-xs text-white/60 mb-2">Give us the quick version of your mission. Who do you serve? What problem are you working to solve?</span>
+          <textarea name="MultiLine" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
+        </label>
+
+        <!-- Impact this year -->
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">What impact did your nonprofit make this year? <span class="text-warm">*</span></span>
+          <span class="block text-xs text-white/60 mb-2">People served, a program launched, a community reached, funds raised, volunteers mobilized, a milestone achieved. The smallest to the biggest impact stories — everything matters.</span>
+          <textarea name="MultiLine1" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
+        </label>
+
+        <!-- Biggest challenge -->
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">What&rsquo;s one of the biggest challenges you face &mdash; and how are you addressing it? <span class="text-warm">*</span></span>
+          <span class="block text-xs text-white/60 mb-2">What need is growing? What has become harder? What barrier are you trying to remove? What is your team doing about it?</span>
+          <textarea name="MultiLine2" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
+        </label>
+
+        <!-- CauseCircle use -->
+        <label class="block mb-5">
+          <span class="block text-sm font-semibold text-white/90 mb-2">How are you using CauseCircle &mdash; or what are you excited to use it for? <span class="text-warm">*</span></span>
+          <span class="block text-xs text-white/60 mb-2">Already using CauseCircle? Tell us how it supports your work. New to CauseCircle? Tell us what you&rsquo;re excited to use it for.</span>
+          <textarea name="MultiLine3" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
+        </label>
+
+        <!-- Website / Resource URL -->
+        <label class="block mb-6">
+          <span class="block text-sm font-semibold text-white/90 mb-2">Where would you like us to send people if you&rsquo;re selected? <span class="text-warm">*</span></span>
+          <span class="block text-xs text-white/60 mb-2">GivingTuesday campaign, donation page, volunteer page, website, program page, or another way to support your mission.</span>
+          <input type="url" name="Website" required maxlength="2083" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="https://" />
+        </label>
+
+        <!-- Consent copy + submit -->
+        <p class="text-xs text-white/60 mb-6 leading-relaxed">By submitting, you give CauseCircle permission to contact you about the National Philanthropy Spotlight and, if selected, work with you to prepare your nonprofit&rsquo;s feature.</p>
+
+        <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-8 py-3.5 transition shadow">
+          Submit my Spotlight
+          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+
+        <p class="text-xs text-white/60 mt-6 leading-relaxed">Selected nonprofits will be notified during the <strong class="text-white">first week of November</strong>. Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold">hello@causecircle.org</a></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ════════════ 8 — EXPLORE MORE (CauseCircle + StoryHub + Content.One) ════════════ -->
+  <section class="py-20 lg:py-28 bg-paper border-t border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mb-14">
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-4 leading-tight" style="letter-spacing:-0.9px;">Explore more from CauseCircle + Content.One</h2>
+        <p class="text-lg text-gray-700 leading-relaxed">More ways to collect your impact, tell your story, and strengthen your nonprofit&rsquo;s digital presence.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-4 border-t-4 border-t-warm">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-warm m-0">CauseCircle</p>
+          <h3 class="font-display text-xl font-semibold text-ink m-0 leading-snug">Collect the stories your community is already creating.</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Give staff, volunteers, donors, supporters, and community members an easy way to contribute photos, videos, testimonials, reviews, and field stories. Keep authentic community content organized in one place your nonprofit can access, own, and use.</p>
+          <p class="text-xs text-gray-500 m-0"><strong class="text-ink">Best for:</strong> Community stories, testimonials, event content, supporter-generated content, and building an ongoing library of authentic impact.</p>
+          <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-sm font-semibold text-warm hover:text-warmDark mt-2">
+            Explore CauseCircle
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-4 border-t-4 border-t-royalLite">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-royalDark m-0">StoryHub by Content.One</p>
+          <h3 class="font-display text-xl font-semibold text-ink m-0 leading-snug">Bring community storytelling directly into your digital experience.</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Collect authentic stories, photo stories, video testimonials, and other community content through a branded experience that integrates with your existing website, CMS, or digital ecosystem. Turn community participation into content your organization can use across fundraising, marketing, advocacy, and campaigns.</p>
+          <p class="text-xs text-gray-500 m-0"><strong class="text-ink">Best for:</strong> Organizations that want a branded, integrated way to collect and activate community stories at scale.</p>
+          <a href="/solutions/story-hub/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark mt-2">
+            Explore StoryHub
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+        <article class="rounded-2xl border border-gray-200 bg-white p-7 flex flex-col gap-4 border-t-4 border-t-royal">
+          <p class="text-xs font-semibold uppercase tracking-[0.14em] text-royal m-0">Content.One for Nonprofits</p>
+          <h3 class="font-display text-xl font-semibold text-ink m-0 leading-snug">Build a stronger digital foundation for your mission.</h3>
+          <p class="text-gray-600 text-base leading-relaxed m-0">Manage websites, content, teams, regions, and digital experiences from one platform while giving teams the autonomy to publish faster. Reduce fragmented systems, improve digital operations, strengthen discoverability, and create better experiences for donors and supporters.</p>
+          <p class="text-xs text-gray-500 m-0"><strong class="text-ink">Best for:</strong> Nonprofit websites, multisite organizations, digital operations, content governance, SEO, and scalable publishing.</p>
+          <a href="/cms-for-non-profits/" class="inline-flex items-center gap-1.5 text-sm font-semibold text-royal hover:text-royalDark mt-2">
+            Explore Content.One for Nonprofits
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CauseCircle-forward footer. Content.One attribution kept visible. -->
+<footer class="bg-ink text-white py-14 border-t border-white/10">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-3xl mb-10">
+      <div class="flex items-center gap-3 mb-5">
+        <img src="https://hj5v68xn.media.zestyio.com/2.png" width="40" height="40" alt="CauseCircle" class="h-10 w-auto" />
+        <span class="font-display text-xl font-bold">CauseCircle <span class="text-white/50 text-sm font-normal">&mdash; powered by Content.One</span></span>
+      </div>
+      <p class="text-white/80 text-base leading-relaxed">CauseCircle helps nonprofits collect authentic stories and content from the people closest to their mission &mdash; and turn everyday moments into proof of impact they can use across fundraising, grants, campaigns, donor communications, and more.</p>
+      <p class="text-white/70 text-sm mt-5">Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold">hello@causecircle.org</a></p>
+    </div>
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-8 border-t border-white/10">
+      <span class="text-sm text-white/60">&copy; 2026 CauseCircle, powered by Content.One.</span>
+      <div class="flex items-center gap-5 text-sm text-white/70">
+        <a href="https://www.causecircle.org" target="_blank" rel="noopener" class="hover:text-white">CauseCircle</a>
+        <a href="/cms-for-non-profits/" class="hover:text-white">For Nonprofits</a>
+        <a href="/contact-us/" class="hover:text-white">Contact Content.One</a>
+        <a href="/privacy-policy/" class="hover:text-white">Privacy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

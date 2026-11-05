@@ -4,7 +4,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xl:gap-20">
                 <div class="xl:pr-12">
                     <div class="mb-8">
-                        <h1 class="font-display text-[2.43rem] md:text-[3.04rem] font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Demo</h1>
+                        <h1 class="font-display text-[2.43rem] md:text-[3.04rem] font-bold tracking-tight mb-4 leading-[1.05]">Book a Personalized Discovery Call</h1>
                         <p class="text-lg leading-relaxed mb-8">Here&rsquo;s what to expect next.</p>
 
                         <!-- 3 steps, icon + title (royal) + subtitle (gray-600) per kaya's reference -->

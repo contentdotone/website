@@ -4,8 +4,8 @@
             <div class="lg:col-span-5">
                 <div class="text-center lg:text-left mb-12 lg:mb-0" data-cues="slideInDown">
                     <div class="mb-4">
-                        <h1 class="mb-5 text-4xl md:text-5xl font-display font-bold text-white">{{this.title}}</h1>
-                        <p class="m-0 text-white text-lg">{{this.title_followup_text}}</p>
+                        <h1 class="mb-5 text-4xl md:text-5xl font-display font-bold text-white" data-basic-page-title>{{this.title}}</h1>
+                        <p class="m-0 text-white text-lg" data-basic-page-subtitle>{{this.title_followup_text}}</p>
                     </div>
                 </div>
             </div>
@@ -20,6 +20,25 @@
     </div>
 </section>
 
+<!-- Zoho Bookings inline widget — only renders when the page is hit with
+     ?type=demo (i.e. landed here from the /contact-us/ demo form). Other
+     thank-you contexts (?type=spotlight for the philanthropy page, bare
+     /thank-you/, etc.) see the normal CMS body only. Gating happens
+     client-side because the Zesty view layer doesn't expose query params
+     cleanly to Parsley. Lazy-loads embed.js so non-demo visitors don't
+     pay for Zoho's script. -->
+<section id="demo-booking-widget" class="bg-paper border-y border-gray-100 hidden">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div class="max-w-3xl mx-auto text-center mb-8">
+            <p class="text-xs font-semibold uppercase tracking-[0.18em] text-royal mb-3">Step 2 of 2</p>
+            <h2 class="text-2xl md:text-3xl font-display font-bold text-ink mb-3">Pick a time that works for you.</h2>
+            <p class="text-gray-600 text-base leading-relaxed">We'll walk you through the platform, answer anything specific to your setup, and point you at the fastest next step.</p>
+        </div>
+        <div id="zoho-bookings-inline" class="rounded-2xl overflow-hidden border border-gray-200 bg-white shadow-sm" style="min-height:640px;"></div>
+        <p class="text-center text-sm text-gray-500 mt-4">Having trouble loading the calendar? <a href="https://zesty.zohobookings.com/YmQ1OTNmNg" target="_blank" rel="noopener" class="text-royal hover:text-royalDark font-semibold underline">Book directly here</a>.</p>
+    </div>
+</section>
+
 <section>
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="content prose prose-slate max-w-none">
@@ -27,5 +46,39 @@
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('type') !== 'demo') return;
+
+    // Hero copy swap — the CMS title/subtitle stays "Thank you, we will
+    // reach out..." which no longer fits when the user CAN self-book
+    // below. Replace in place so CMS-side content stays agnostic.
+    var titleEl = document.querySelector('[data-basic-page-title]');
+    var subtitleEl = document.querySelector('[data-basic-page-subtitle]');
+    if (titleEl) titleEl.textContent = 'Book a 20-minute call now.';
+    if (subtitleEl) subtitleEl.textContent = "Thanks for reaching out. Pick a time below and we'll walk you through Content.One, together.";
+
+    // Reveal the booking widget section.
+    var widget = document.getElementById('demo-booking-widget');
+    if (widget) widget.classList.remove('hidden');
+
+    // Lazy-load Zoho's embed script, then mount the inline widget.
+    var s = document.createElement('script');
+    s.src = 'https://bookings.nimbuspop.com/assets/embed.js';
+    s.async = true;
+    s.onload = function () {
+        if (window.Bookings && typeof Bookings.inlineEmbed === 'function') {
+            Bookings.inlineEmbed({
+                url: 'https://zesty.zohobookings.com/portal-embed#/YmQ1OTNmNg',
+                parent: '#zoho-bookings-inline',
+                height: '640px'
+            });
+        }
+    };
+    document.head.appendChild(s);
+})();
+</script>
 
 <script> gtag('event', 'conversion', { 'send_to': 'AW-955374362/XaLWCJ3Cwr0bEJq2x8cD', 'value': 1.0, 'currency': 'USD' }); </script>
