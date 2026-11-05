@@ -1147,6 +1147,42 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-11-05T00:44:58Z",
                 "createdAt": "2026-11-05T00:44:58Z"
+            },
+            "/components/cms-pricing-estimator.html": {
+                "zuid": "11-80a49af2f7-mgfbx8",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/page_html/cms-pricing/adobe-experience-manager-pricing.html": {
+                "zuid": "11-aac7bf90f9-b2rsq4",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/page_html/cms-pricing/contentful-pricing.html": {
+                "zuid": "11-9cd29ffcf9-jhz74k",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/page_html/cms-pricing/index.html": {
+                "zuid": "11-e8b6a8effa-65m79q",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/page_html/cms-pricing/optimizely-cms-pricing.html": {
+                "zuid": "11-b6ecb0dcfb-r2r8xs",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/page_html/cms-pricing/sitecore-pricing.html": {
+                "zuid": "11-eac3a4d9fc-6v7cms",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:42:37Z",
+                "createdAt": "2026-11-05T09:42:37Z"
             }
         },
         "styles": {
