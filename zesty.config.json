@@ -1183,6 +1183,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-11-05T09:42:37Z",
                 "createdAt": "2026-11-05T09:42:37Z"
+            },
+            "/kentico-vs-content-one.html": {
+                "zuid": "11-94b7d9e9c8-qgnnt6",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-05T09:43:22Z",
+                "createdAt": "2026-11-05T09:43:22Z"
             }
         },
         "styles": {
