@@ -338,10 +338,28 @@
   </section>
 
   <!-- ════════════ 7 — SPOTLIGHT FORM (ANCHOR AT BOTTOM) ════════════
-       Zoho NonprofitApplicationForm embedded via supplied HTML. Field
-       names preserved exactly (Name_First, Name_Last, Email, SingleLine,
-       SingleLine1, MultiLine, MultiLine1, MultiLine2, MultiLine3, Website)
-       — Zoho drops empty values when field names don't match its schema.
+       Zoho NonprofitApplicationForm v2 (updated 2026-11-09, sam):
+       MultiLine2 ("biggest challenges") field removed per updated Zoho
+       schema. MultiLine3 (CauseCircle use) relaxed from required to
+       optional per the same update.
+
+       Field names preserved exactly (Name_First, Name_Last, Email,
+       SingleLine, SingleLine1, MultiLine, MultiLine1, MultiLine3,
+       Website) — Zoho drops empty values when field names don't match
+       its schema.
+
+       ADA pass (2026-11-09):
+       • Labels bumped text-sm (14px) -> text-base (16px, WCAG min)
+       • Help text bumped text-xs (12px) -> text-sm (14px)
+       • Help text contrast lifted white/60 -> white/75 (≥4.5:1 on ink bg)
+       • Input touch-target padding py-3 (12px) -> py-3.5 (14px) = 48px min
+       • Explicit `for`/`id` binding on every label/input
+       • `aria-describedby` on inputs → their help-text IDs
+       • `aria-required="true"` on required fields alongside `required`
+       • Required-asterisk accompanied by `aria-hidden` sr-only " (required)"
+       • Form wrapped in fieldset/legend for screen reader grouping
+       • Placeholder opacity lifted placeholder-white/40 -> /55
+
        Styled with Tailwind over the dark panel, warm accents. Submission
        tagged zf_referrer_name=philanthropy-day-2026 for Zoho attribution. -->
   <section id="spotlight-form" class="py-20 lg:py-28 bg-gradient-to-br from-ink via-royalDark to-ink text-white relative overflow-hidden scroll-mt-20">
@@ -351,11 +369,11 @@
       <div class="text-center mb-10">
         <span class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.18em] text-warm mb-4">
           <span class="w-8 h-px bg-warm"></span>
-          Spotlight application form
+          Spotlight application
         </span>
-        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Tell us about the work you&rsquo;re doing.</h2>
-        <p class="text-base md:text-lg text-white/85 leading-relaxed mb-3"><strong class="text-white">No long application. No complicated nomination process.</strong></p>
-        <p class="text-base md:text-lg text-white/80 leading-relaxed">Share a little about your nonprofit, the impact you&rsquo;ve made this year, and the work you want more people to know about.</p>
+        <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight" style="letter-spacing:-0.9px;">Tell us about your work.</h2>
+        <p class="text-lg md:text-xl text-white/90 leading-relaxed mb-3"><strong class="text-white">Short form. Real answers. No complicated process.</strong></p>
+        <p class="text-base md:text-lg text-white/85 leading-relaxed">Share your mission, the impact you&rsquo;ve made this year, and where you&rsquo;d like your spotlight to send people.</p>
       </div>
 
       <form
@@ -366,86 +384,85 @@
         accept-charset="UTF-8"
         enctype="multipart/form-data"
         class="rounded-2xl bg-white/[0.05] border border-white/10 p-6 md:p-8 backdrop-blur"
+        aria-labelledby="spotlight-form-legend"
+        novalidate
       >
-        <input type="hidden" name="zf_referrer_name" value="philanthropy-day-2026">
-        <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=spotlight&source=philanthropy-day-2026">
-        <input type="hidden" name="zc_gad" value="">
+        <fieldset class="border-0 p-0 m-0">
+          <legend id="spotlight-form-legend" class="sr-only">National Philanthropy Spotlight application</legend>
 
-        <!-- Name row -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-          <label class="block">
-            <span class="block text-sm font-semibold text-white/90 mb-2">First name <span class="text-warm">*</span></span>
-            <input type="text" name="Name_First" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold text-white/90 mb-2">Last name <span class="text-warm">*</span></span>
-            <input type="text" name="Name_Last" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
-          </label>
-        </div>
+          <input type="hidden" name="zf_referrer_name" value="philanthropy-day-2026">
+          <input type="hidden" name="zf_redirect_url" value="https://www.content.one/thank-you/?type=spotlight&source=philanthropy-day-2026">
+          <input type="hidden" name="zc_gad" value="">
 
-        <!-- Email -->
-        <label class="block mb-5">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Email <span class="text-warm">*</span></span>
-          <input type="email" name="Email" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="you@organization.org" />
-          <span class="block text-xs text-white/55 mt-2">We&rsquo;ll use this to contact you if your nonprofit is selected.</span>
-        </label>
+          <!-- Name row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div>
+              <label for="spotlight-first-name" class="block text-base font-semibold text-white mb-2">First name <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+              <input id="spotlight-first-name" type="text" name="Name_First" required aria-required="true" maxlength="255" autocomplete="given-name" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" />
+            </div>
+            <div>
+              <label for="spotlight-last-name" class="block text-base font-semibold text-white mb-2">Last name <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+              <input id="spotlight-last-name" type="text" name="Name_Last" required aria-required="true" maxlength="255" autocomplete="family-name" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" />
+            </div>
+          </div>
 
-        <!-- Org + Title row -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
-          <label class="block">
-            <span class="block text-sm font-semibold text-white/90 mb-2">Nonprofit organization <span class="text-warm">*</span></span>
-            <input type="text" name="SingleLine" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
-          </label>
-          <label class="block">
-            <span class="block text-sm font-semibold text-white/90 mb-2">Your title <span class="text-warm">*</span></span>
-            <input type="text" name="SingleLine1" required maxlength="255" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" />
-          </label>
-        </div>
+          <!-- Email -->
+          <div class="mb-6">
+            <label for="spotlight-email" class="block text-base font-semibold text-white mb-2">Email <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+            <input id="spotlight-email" type="email" name="Email" required aria-required="true" aria-describedby="spotlight-email-help" maxlength="255" autocomplete="email" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" placeholder="you@organization.org" />
+            <p id="spotlight-email-help" class="text-sm text-white/75 mt-2 leading-relaxed">We&rsquo;ll only use this to reach you if your nonprofit is selected.</p>
+          </div>
 
-        <!-- What does your nonprofit do? -->
-        <label class="block mb-5">
-          <span class="block text-sm font-semibold text-white/90 mb-2">What does your nonprofit do? <span class="text-warm">*</span></span>
-          <span class="block text-xs text-white/60 mb-2">Give us the quick version of your mission. Who do you serve? What problem are you working to solve?</span>
-          <textarea name="MultiLine" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
-        </label>
+          <!-- Org + Title row -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-6">
+            <div>
+              <label for="spotlight-org" class="block text-base font-semibold text-white mb-2">Nonprofit organization <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+              <input id="spotlight-org" type="text" name="SingleLine" required aria-required="true" maxlength="255" autocomplete="organization" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" />
+            </div>
+            <div>
+              <label for="spotlight-title" class="block text-base font-semibold text-white mb-2">Your title <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+              <input id="spotlight-title" type="text" name="SingleLine1" required aria-required="true" maxlength="255" autocomplete="organization-title" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" />
+            </div>
+          </div>
 
-        <!-- Impact this year -->
-        <label class="block mb-5">
-          <span class="block text-sm font-semibold text-white/90 mb-2">What impact did your nonprofit make this year? <span class="text-warm">*</span></span>
-          <span class="block text-xs text-white/60 mb-2">People served, a program launched, a community reached, funds raised, volunteers mobilized, a milestone achieved. The smallest to the biggest impact stories — everything matters.</span>
-          <textarea name="MultiLine1" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
-        </label>
+          <!-- What does your nonprofit do? -->
+          <div class="mb-6">
+            <label for="spotlight-mission" class="block text-base font-semibold text-white mb-2">What does your nonprofit do? <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+            <p id="spotlight-mission-help" class="text-sm text-white/75 mb-2 leading-relaxed">The quick version of your mission. Who do you serve? What problem are you solving?</p>
+            <textarea id="spotlight-mission" name="MultiLine" required aria-required="true" aria-describedby="spotlight-mission-help" maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition resize-y"></textarea>
+          </div>
 
-        <!-- Biggest challenge -->
-        <label class="block mb-5">
-          <span class="block text-sm font-semibold text-white/90 mb-2">What&rsquo;s one of the biggest challenges you face &mdash; and how are you addressing it? <span class="text-warm">*</span></span>
-          <span class="block text-xs text-white/60 mb-2">What need is growing? What has become harder? What barrier are you trying to remove? What is your team doing about it?</span>
-          <textarea name="MultiLine2" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
-        </label>
+          <!-- Impact this year -->
+          <div class="mb-6">
+            <label for="spotlight-impact" class="block text-base font-semibold text-white mb-2">What impact did you make this year? <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+            <p id="spotlight-impact-help" class="text-sm text-white/75 mb-2 leading-relaxed">Something your team is proud of &mdash; big or small. People served, programs launched, volunteers mobilized, milestones reached.</p>
+            <textarea id="spotlight-impact" name="MultiLine1" required aria-required="true" aria-describedby="spotlight-impact-help" maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition resize-y"></textarea>
+          </div>
 
-        <!-- CauseCircle use -->
-        <label class="block mb-5">
-          <span class="block text-sm font-semibold text-white/90 mb-2">How are you using CauseCircle &mdash; or what are you excited to use it for? <span class="text-warm">*</span></span>
-          <span class="block text-xs text-white/60 mb-2">Already using CauseCircle? Tell us how it supports your work. New to CauseCircle? Tell us what you&rsquo;re excited to use it for.</span>
-          <textarea name="MultiLine3" required maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition resize-y"></textarea>
-        </label>
+          <!-- CauseCircle use (OPTIONAL per Zoho v2) -->
+          <div class="mb-6">
+            <label for="spotlight-causecircle" class="block text-base font-semibold text-white mb-2">How are you using CauseCircle? <span class="text-white/60 font-normal text-sm ml-1">(optional)</span></label>
+            <p id="spotlight-causecircle-help" class="text-sm text-white/75 mb-2 leading-relaxed">Already using CauseCircle? Tell us how. New to it? Tell us what you&rsquo;re excited about.</p>
+            <textarea id="spotlight-causecircle" name="MultiLine3" aria-describedby="spotlight-causecircle-help" maxlength="65535" rows="4" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition resize-y"></textarea>
+          </div>
 
-        <!-- Website / Resource URL -->
-        <label class="block mb-6">
-          <span class="block text-sm font-semibold text-white/90 mb-2">Where would you like us to send people if you&rsquo;re selected? <span class="text-warm">*</span></span>
-          <span class="block text-xs text-white/60 mb-2">GivingTuesday campaign, donation page, volunteer page, website, program page, or another way to support your mission.</span>
-          <input type="url" name="Website" required maxlength="2083" class="w-full rounded-lg bg-white/10 border border-white/15 text-white placeholder-white/40 px-4 py-3 focus:bg-white/15 focus:border-white/40 focus:outline-none transition" placeholder="https://" />
-        </label>
+          <!-- Website / Resource URL -->
+          <div class="mb-7">
+            <label for="spotlight-url" class="block text-base font-semibold text-white mb-2">Where should we send people? <span class="text-warm" aria-hidden="true">*</span><span class="sr-only"> (required)</span></label>
+            <p id="spotlight-url-help" class="text-sm text-white/75 mb-2 leading-relaxed">The one link most valuable for people discovering you &mdash; GivingTuesday page, donation page, volunteer sign-up, website, or program.</p>
+            <input id="spotlight-url" type="url" name="Website" required aria-required="true" aria-describedby="spotlight-url-help" maxlength="2083" autocomplete="url" class="w-full rounded-lg bg-white/10 border border-white/20 text-white text-base placeholder-white/55 px-4 py-3.5 focus:bg-white/15 focus:border-warm focus:outline-none focus:ring-2 focus:ring-warm/30 transition" placeholder="https://" />
+          </div>
 
-        <!-- Consent copy + submit -->
-        <p class="text-xs text-white/60 mb-6 leading-relaxed">By submitting, you give CauseCircle permission to contact you about the National Philanthropy Spotlight and, if selected, work with you to prepare your nonprofit&rsquo;s feature.</p>
+          <!-- Consent copy + submit -->
+          <p class="text-sm text-white/75 mb-6 leading-relaxed">By submitting, you give CauseCircle permission to contact you about the National Philanthropy Spotlight and, if selected, work with you to prepare your feature.</p>
 
-        <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-8 py-3.5 transition shadow">
-          Submit my Spotlight
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </button>
+          <button type="submit" class="w-full md:w-auto inline-flex items-center justify-center gap-2 rounded-lg bg-warm hover:bg-warmDark focus:outline-none focus-visible:ring-2 focus-visible:ring-warm/50 focus-visible:ring-offset-2 focus-visible:ring-offset-ink text-white text-base font-semibold px-8 py-4 transition shadow">
+            Submit my Spotlight
+            <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
 
-        <p class="text-xs text-white/60 mt-6 leading-relaxed">Selected nonprofits will be notified during the <strong class="text-white">first week of November</strong>. Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold">hello@causecircle.org</a></p>
+          <p class="text-sm text-white/75 mt-6 leading-relaxed">Selected nonprofits will be notified during the <strong class="text-white">first week of November</strong>. Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold underline decoration-warm/40">hello@causecircle.org</a></p>
+        </fieldset>
       </form>
     </div>
   </section>
