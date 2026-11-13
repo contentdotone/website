@@ -1189,6 +1189,12 @@
                 "type": "ajax-json",
                 "updatedAt": "2026-11-05T09:43:22Z",
                 "createdAt": "2026-11-05T09:43:22Z"
+            },
+            "/afp-san-diego-2026.html": {
+                "zuid": "11-b8fadfecab-m2vx8p",
+                "type": "ajax-json",
+                "updatedAt": "2026-11-13T02:31:11Z",
+                "createdAt": "2026-11-13T02:31:11Z"
             }
         },
         "styles": {
