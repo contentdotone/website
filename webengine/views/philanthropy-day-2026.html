@@ -1,17 +1,18 @@
 <!-- View auto-create trigger 2026-10-22 — sam's CauseCircle National
      Philanthropy Spotlight landing. Standalone top-level view (full head,
-     nav, footer in this file). Event: National Philanthropy Day, Nov 15,
-     2026. CauseCircle-branded (warm palette), Content.One attribution,
-     embedded Zoho NonprofitApplicationForm. -->
+     nav, footer in this file). Timing (updated 2026-11-18): applications
+     throughout National Philanthropy Month (Nov–Dec 2026); selected
+     nonprofit features roll out in 2027. CauseCircle-branded (warm
+     palette), Content.One attribution, embedded Zoho NonprofitApplicationForm. -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>National Philanthropy Spotlight 2026 — CauseCircle, powered by Content.One</title>
-  <meta name="description" content="For National Philanthropy Day on November 15, CauseCircle is spotlighting nonprofits making a difference. Selected nonprofits receive sponsored features across major national media outlets. Free to participate." />
+  <meta name="description" content="This National Philanthropy Month, CauseCircle is spotlighting nonprofits making a difference. Applications open November–December 2026; selected nonprofits receive sponsored features in major national media outlets in 2027. Free to participate." />
   <meta property="og:title" content="National Philanthropy Spotlight 2026 — CauseCircle" />
-  <meta property="og:description" content="Your work deserves a bigger spotlight. In honor of National Philanthropy Day on Nov 15, CauseCircle is spotlighting nonprofits making a meaningful difference." />
+  <meta property="og:description" content="Big impact doesn’t always make big headlines. This National Philanthropy Month, CauseCircle is celebrating nonprofits doing remarkable work. Applications: Nov–Dec 2026. Features: 2027." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://hj5v68xn.media.zestyio.com/2.png" />
   <link rel="canonical" href="https://www.content.one/philanthropy-day-2026.html" />
@@ -78,42 +79,79 @@
 <main>
 
   <!-- ════════════ 1 — HERO ════════════
-       CauseCircle-forward hero. Warm gradient background. Logo + eyebrow,
-       H1, event date hook (Nov 15), lead paragraphs, primary CTA scrolls
-       to spotlight form at bottom. -->
+       CauseCircle-forward hero. Warm gradient background.
+
+       Two-column layout: text (eyebrow, H1, lead paras, CTA) on the left,
+       national-media coverage image on the right as a framed asset card.
+       Image = the clearest social-proof signal on the page (what a
+       Business Insider / Yahoo Finance / USA Today sponsored feature
+       actually looks like) — so it lives above the fold next to the H1.
+
+       Mobile: image stacks first (prominent proof), then eyebrow + text. -->
   <section class="pt-14 lg:pt-20 pb-14 lg:pb-20 bg-gradient-to-br from-warm/[0.08] via-warmLite/[0.15] to-white relative overflow-hidden">
     <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-warm/15 blur-3xl" aria-hidden="true"></div>
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-      <!-- Event eyebrow -->
-      <div class="inline-flex items-center gap-3 mb-8">
-        <img src="https://hj5v68xn.media.zestyio.com/2.png" width="48" height="48" alt="CauseCircle logo" class="h-12 w-auto" />
-        <div class="flex flex-col leading-tight">
-          <span class="text-xs font-semibold uppercase tracking-[0.14em] text-warm">CauseCircle National Philanthropy Spotlight 2026</span>
-          <span class="text-sm text-gray-600">Celebrating the nonprofits making a difference in their communities.</span>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+
+        <!-- Left: eyebrow + H1 + body + CTA -->
+        <div class="lg:col-span-7 order-2 lg:order-1">
+          <!-- Event eyebrow -->
+          <div class="inline-flex items-center gap-3 mb-8">
+            <img src="https://hj5v68xn.media.zestyio.com/2.png" width="48" height="48" alt="CauseCircle logo" class="h-12 w-auto" />
+            <div class="flex flex-col leading-tight">
+              <span class="text-xs font-semibold uppercase tracking-[0.14em] text-warm">CauseCircle National Philanthropy Spotlight 2026</span>
+              <span class="text-sm text-gray-600">Celebrating the nonprofits making a difference in their communities.</span>
+            </div>
+          </div>
+
+          <h1 class="font-display text-4xl md:text-5xl lg:text-[3.5rem] font-bold tracking-tight text-ink mb-6 leading-[1.05]" style="letter-spacing:-1px;">Your work deserves a bigger spotlight.</h1>
+
+          <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-5"><strong class="text-ink">Big impact doesn&rsquo;t always make big headlines.</strong> We&rsquo;re here to change that.</p>
+
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">This <strong class="text-ink">National Philanthropy Month</strong>, CauseCircle is celebrating nonprofits doing remarkable work in their communities&mdash;and helping their stories reach a national audience.</p>
+
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-5">Selected nonprofits will have the opportunity to be featured through <strong class="text-ink">sponsored stories in major national media outlets</strong>, CauseCircle communications, and our nonprofit community.</p>
+
+          <p class="text-base md:text-lg text-gray-700 leading-relaxed mb-8"><strong class="text-ink">Applications are open November&ndash;December 2026</strong>, with selected stories making headlines in <strong class="text-ink">2027</strong>!</p>
+
+          <div class="inline-flex items-center gap-2 rounded-full bg-warm/10 border border-warm/30 px-4 py-2 mb-8">
+            <svg viewBox="0 0 24 24" class="w-4 h-4 text-warm" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-sm font-semibold text-warmDark">Free to participate. Simple to submit.</span>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+            <a href="#spotlight-form" class="inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
+              Participate in the National Philanthropy Spotlight
+              <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <p class="text-sm text-gray-500 m-0">Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmDark font-semibold">hello@causecircle.org</a></p>
+          </div>
         </div>
-      </div>
 
-      <h1 class="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold tracking-tight text-ink mb-6 leading-[1.05] max-w-4xl" style="letter-spacing:-1px;">Your work deserves a bigger spotlight.</h1>
+        <!-- Right: national-media coverage visual (mobile: order-first = above
+             fold proof; desktop: order-2 = right column balancing the text). -->
+        <figure class="lg:col-span-5 order-1 lg:order-2 m-0">
+          <div class="relative">
+            <!-- Floating "as seen in" badge anchored to top-left of card -->
+            <span class="absolute -top-3 left-4 lg:-left-3 z-10 inline-flex items-center gap-2 bg-ink text-white text-[11px] uppercase tracking-[0.14em] font-semibold px-3 py-1.5 rounded-full shadow-lg">
+              <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 text-warm" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 22 12 18.56 5.82 22 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Featured coverage
+            </span>
+            <div class="rounded-2xl overflow-hidden shadow-2xl ring-1 ring-warm/20 bg-white">
+              <img
+                src="https://hj5v68xn.media.zestyio.com/Nonprofit-Spotlight_-Business-Insider--Yahoo-Finance-and-USA-Today.png"
+                alt="Example of a CauseCircle Nonprofit Spotlight feature appearing across national media — Business Insider, Yahoo Finance, and USA Today"
+                width="1200"
+                height="800"
+                fetchpriority="high"
+                decoding="async"
+                class="w-full h-auto block"
+              />
+            </div>
+            <figcaption class="text-xs md:text-sm text-gray-500 mt-4 leading-relaxed text-center max-w-md mx-auto">Selected nonprofits receive sponsored features across national outlets like <strong class="text-ink font-semibold">Business Insider</strong>, <strong class="text-ink font-semibold">Yahoo Finance</strong>, and <strong class="text-ink font-semibold">USA Today</strong>.</figcaption>
+          </div>
+        </figure>
 
-      <p class="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mb-5">Every day, nonprofits are solving hard problems, strengthening communities, and creating change that deserves to be seen.</p>
-
-      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-5">In honor of <strong class="text-ink">National Philanthropy Day on November 15</strong>, CauseCircle is spotlighting nonprofits making a meaningful difference in the communities they serve.</p>
-
-      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-5">Selected nonprofits will be featured through CauseCircle&rsquo;s National Philanthropy campaign, including <strong class="text-ink">sponsored features across major national media outlets</strong>, CauseCircle communications, and our nonprofit community.</p>
-
-      <p class="text-base md:text-lg text-gray-700 leading-relaxed max-w-3xl mb-8">And because awareness should lead somewhere meaningful, your feature can point readers directly to your <strong class="text-ink">GivingTuesday campaign, donation page, volunteer opportunity, website, or another resource you want more people to discover.</strong></p>
-
-      <div class="inline-flex items-center gap-2 rounded-full bg-warm/10 border border-warm/30 px-4 py-2 mb-8">
-        <svg viewBox="0 0 24 24" class="w-4 h-4 text-warm" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-        <span class="text-sm font-semibold text-warmDark">Free to participate. Simple to submit.</span>
-      </div>
-
-      <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-        <a href="#spotlight-form" class="inline-flex items-center gap-2 rounded-lg bg-warm hover:bg-warmDark text-white font-semibold px-7 py-4 text-base transition shadow-sm">
-          Participate in the National Philanthropy Spotlight
-          <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <p class="text-sm text-gray-500 m-0">Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmDark font-semibold">hello@causecircle.org</a></p>
       </div>
     </div>
   </section>
@@ -124,8 +162,19 @@
        so visitors can self-identify at a glance. -->
   <section class="py-20 lg:py-28 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center max-w-3xl mx-auto mb-14">
+      <div class="text-center max-w-3xl mx-auto mb-10">
         <h2 class="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-ink mb-4 leading-tight" style="letter-spacing:-0.9px;">Participate in 2 Simple Steps</h2>
+      </div>
+
+      <!-- Timeline callout: Nov–Dec 2026 applications / 2027 features. -->
+      <div class="max-w-3xl mx-auto mb-12 rounded-2xl border border-warm/25 bg-gradient-to-br from-warm/[0.06] to-white p-6 md:p-7 flex flex-col sm:flex-row items-start sm:items-center gap-5">
+        <span class="w-12 h-12 rounded-xl bg-warm/15 text-warm flex items-center justify-center shrink-0">
+          <svg viewBox="0 0 24 24" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </span>
+        <div class="flex-1">
+          <p class="text-ink font-display font-semibold text-base md:text-lg leading-snug m-0 mb-1.5">Applications accepted throughout November and December.</p>
+          <p class="text-gray-700 text-sm md:text-base leading-relaxed m-0">Selected nonprofits will be contacted with next steps. <strong class="text-ink">Spotlight features will begin rolling out in 2027.</strong></p>
+        </div>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -176,7 +225,7 @@
                 <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
             </div>
-            <p class="text-sm text-white/60 m-0 pt-5 border-t border-white/10">That&rsquo;s it. <span class="text-warm font-semibold">Selected nonprofits will be notified during the first week of November.</span></p>
+            <p class="text-sm text-white/60 m-0 pt-5 border-t border-white/10">That&rsquo;s it. <span class="text-warm font-semibold">Selected nonprofits will be contacted with next steps.</span></p>
           </div>
         </article>
       </div>
@@ -240,7 +289,7 @@
         </article>
         <article class="rounded-2xl bg-gradient-to-br from-warm to-warmDark text-white p-7 flex flex-col justify-center gap-4">
           <p class="font-display text-xl font-bold leading-snug m-0">Ready when you are.</p>
-          <p class="text-white/90 text-base leading-relaxed m-0">Submit your Spotlight in a few minutes. Selected nonprofits notified first week of November.</p>
+          <p class="text-white/90 text-base leading-relaxed m-0">Applications accepted through November and December 2026. Selected nonprofits will be contacted with next steps &mdash; features roll out in 2027.</p>
           <a href="#spotlight-form" class="inline-flex items-center gap-2 rounded-lg bg-white text-warmDark hover:bg-gray-100 font-semibold px-5 py-2.5 text-sm transition self-start mt-2">
             Participate now
             <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
@@ -264,7 +313,7 @@
         <p class="text-base md:text-lg text-gray-700 leading-relaxed m-0">When a team finds a way forward despite limited resources, growing needs, and difficult circumstances.</p>
       </div>
 
-      <p class="text-base text-gray-700 leading-relaxed mb-5">National Philanthropy Day is an opportunity to recognize the organizations behind those moments.</p>
+      <p class="text-base text-gray-700 leading-relaxed mb-5">National Philanthropy Month is an opportunity to recognize the organizations behind those moments.</p>
 
       <p class="font-display text-xl md:text-2xl text-ink font-semibold leading-snug mb-3" style="letter-spacing:-0.3px;">Tell us what your nonprofit made possible this year.</p>
 
@@ -461,7 +510,7 @@
             <svg viewBox="0 0 24 24" class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </button>
 
-          <p class="text-sm text-white/75 mt-6 leading-relaxed">Selected nonprofits will be notified during the <strong class="text-white">first week of November</strong>. Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold underline decoration-warm/40">hello@causecircle.org</a></p>
+          <p class="text-sm text-white/75 mt-6 leading-relaxed">Applications accepted <strong class="text-white">throughout November and December 2026</strong>. Selected nonprofits will be contacted with next steps; features begin rolling out in <strong class="text-white">2027</strong>. Questions? <a href="mailto:hello@causecircle.org" class="text-warm hover:text-warmLite font-semibold underline decoration-warm/40">hello@causecircle.org</a></p>
         </fieldset>
       </form>
     </div>
